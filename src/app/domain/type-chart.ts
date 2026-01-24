@@ -1,24 +1,27 @@
-export const POKEMON_TYPES = [
-	'normal',
-	'fire',
-	'water',
-	'electric',
-	'grass',
-	'ice',
-	'fighting',
-	'poison',
-	'ground',
-	'flying',
-	'psychic',
-	'bug',
-	'rock',
-	'ghost',
-	'dragon',
-	'steel',
-	'fairy',
-] as const;
+export const POKEMON_TYPES_MAP: Record<string, string> = {
+	normal: 'ノーマル',
+	fire: 'ほのお',
+	water: 'みず',
+	electric: 'でんき',
+	grass: 'くさ',
+	ice: 'こおり',
+	fighting: 'かくとう',
+	poison: 'どく',
+	ground: 'じめん',
+	flying: 'ひこう',
+	psychic: 'エスパー',
+	bug: 'むし',
+	rock: 'いわ',
+	ghost: 'ゴースト',
+	dragon: 'ドラゴン',
+	dark: 'あく',
+	steel: 'はがね',
+	fairy: 'フェアリー',
+};
 
-export type PokemonType = (typeof POKEMON_TYPES)[number];
+export const POKEMON_TYPES = Object.keys(POKEMON_TYPES_MAP);
+
+export type PokemonType = keyof typeof POKEMON_TYPES_MAP;
 
 export const TYPE_CHART: Record<PokemonType, Partial<Record<PokemonType, number>>> = {
 	normal: { rock: 0.5, ghost: 0, steel: 0.5 },
@@ -89,7 +92,7 @@ export const TYPE_CHART: Record<PokemonType, Partial<Record<PokemonType, number>
 	dark: { fighting: 0.5, psychic: 2, ghost: 2, dark: 0.5, fairy: 0.5 },
 	steel: { fire: 0.5, water: 0.5, electric: 0.5, ice: 2, rock: 2, steel: 0.5, fairy: 2 },
 	fairy: { fire: 0.5, fighting: 2, poison: 0.5, dragon: 2, dark: 2, steel: 0.5 },
-} as any;
+};
 
 export function getEffectiveness(attackType: PokemonType, defenseTypes: string[]): number {
 	let multiplier = 1;

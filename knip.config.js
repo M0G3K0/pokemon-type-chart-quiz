@@ -1,17 +1,8 @@
 /** @type {import('knip').KnipConfig} */
 module.exports = {
-	entry: ['src/main.ts'],
-	project: ['src/**/*.ts'],
-	ignore: ['src/**/*.spec.ts'],
+	ignore: ['src/**/*.spec.ts', 'guards/**/*', 'src/app/domain/type-chart.ts', 'scripts/download-icons.js'],
 	ignoreDependencies: [
-		'@angular-devkit/build-angular',
-		'@angular/cli',
-		'@angular/compiler-cli',
-		'typescript',
 		'eslint-plugin-tailwindcss',
 		'lint-staged',
-		'@tailwindcss/postcss',
-		'postcss',
-		'vitest',
 	],
 };

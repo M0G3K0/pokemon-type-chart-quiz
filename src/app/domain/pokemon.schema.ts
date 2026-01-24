@@ -3,7 +3,9 @@ import { z } from 'zod';
 export const PokemonSchema = z.object({
 	id: z.number(),
 	name: z.string(),
+	enName: z.string(),
 	types: z.array(z.string()),
+	jaTypes: z.array(z.string()),
 	imageUrl: z.string().url(),
 });
 

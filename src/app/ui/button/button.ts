@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ButtonComponent {
   @Input() variant: 'primary' | 'secondary' | 'danger' = 'primary';
+  @Input() disabled: boolean = false;
   @Output() onClick = new EventEmitter<MouseEvent>();
 
   get classes() {
@@ -26,6 +27,7 @@ export class ButtonComponent {
       secondary: 'bg-secondary text-white hover:opacity-90 focus:ring-secondary',
       danger: 'bg-danger text-white hover:opacity-90 focus:ring-danger',
     };
-    return `${base} ${variants[this.variant]}`;
+    const state = this.disabled ? 'opacity-50 cursor-not-allowed pointer-events-none' : '';
+    return `${base} ${variants[this.variant]} ${state}`;
   }
 }
