@@ -28,37 +28,73 @@ git push origin <branch-name>
 
 `write_to_file` ツールで `pr-body.md` を作成します。
 
-### 必須セクション（すべて必須！）
+### テンプレート（`.github/pull_request_template.md` と同じ）
 
 ```markdown
 ## 💡 概要
-<!-- このPRで何をしたか、なぜ必要か -->
+<!-- このPRで何を実現するか、簡潔に説明してください -->
 
 ## 📝 変更内容
-<!-- 具体的な変更点をリスト形式で -->
-- 変更点1
-- 変更点2
+<!-- 主な変更点をリストアップしてください -->
 
 ## 🔗 関連Issue
-Closes #<issue-number>
+<!-- 
+このPRで解決するIssueがあればリンクしてください
+例: Closes #5 (PRマージ時に自動でIssue #5がクローズされます)
+-->
 
 ## 📷 スクリーンショット（該当する場合）
-<!-- UI変更がある場合は画像を添付、なければ N/A -->
+<!-- UI変更がある場合は、スクリーンショットを添付してください -->
 
 ## ✅ チェックリスト
-- [ ] コードがプロジェクトのスタイルガイドラインに従っている
-- [ ] 変更に対してセルフレビューを実施した
-- [ ] ローカルで動作確認済み
+<!-- 該当する項目にチェックを入れてください -->
+- [ ] ビルドが成功する（`npm run build`）
+- [ ] Lintエラーがない（`npm run lint`）
+- [ ] テストが通る（`npm run test`）
+- [ ] コミットメッセージが規約に従っている（`feat:`, `fix:`, `chore:`など）
+- [ ] ブランチ名が規約に従っている（`feature/`, `fix/`, `chore/`など）
+- [ ] 必要に応じてドキュメントを更新した
+
 
 ## 📌 補足事項
-<!-- レビュアーへのメモ、注意点など -->
+<!-- その他、レビュワーに伝えたいことがあれば記載してください -->
+
+--- 
 
 ## 📝 PRタイトルの命名規則:
-<!-- 参考用。削除可 -->
-`✨ feat: add xxx` / `🐛 fix: resolve xxx` / `♻️ chore: update xxx`
+- [type]: [description]の形式にすること
+
+タイプ一覧:
+- ✨ feat: 新機能
+- 🐛 fix: バグ修正
+- 📚 docs: ドキュメント
+- 🎨 style: スタイル変更
+- ♻️ refactor: リファクタリング
+- ⚡ perf: パフォーマンス改善
+- 🧪 test: テスト
+- 🏗️ build: ビルド
+- 👷 ci: CI/CD
+- 🔧 chore: その他
+
+説明の書き方: 
+- 英語で書くこと
+- 1行で説明すること
+- すべて小文字で書くこと
+
+例: feat: add sound effects and toggle switch
 
 ## 📖 レビュー用語集
-<!-- 専門用語の説明があれば -->
+<!-- レビュー時によく使う用語の意味 -->
+
+| 用語 | 意味 | 説明 |
+|------|------|------|
+| **LGTM** | Looks Good To Me | 良いと思います |
+| **WIP** | Work In Progress | 対応中 |
+| **FYI** | For Your Information | 参考までに |
+| **must** | must | 必須 |
+| **want** | want | できれば |
+| **imo** | in my opinion | 私の意見では |
+| **nits** | nitpick | 些細な指摘（重箱の隅をつつくの意味） |
 ```
 
 ---
@@ -81,11 +117,11 @@ npm test
 gh pr create --title "✨ feat: add new feature" --body-file pr-body.md
 ```
 
-**タイトルの形式（英語で記述）:**
+**タイトルの形式（英語、小文字で記述）:**
 - 新機能: `✨ feat: add xxx`
 - バグ修正: `🐛 fix: resolve xxx`
 - リファクタリング: `♻️ refactor: improve xxx`
-- 基盤作業: `♻️ chore: update xxx`
+- 基盤作業: `🔧 chore: update xxx`
 
 ---
 
@@ -103,5 +139,6 @@ gh pr checks
 
 | 内容 | ファイル |
 |------|----------|
+| PRテンプレート | `.github/pull_request_template.md` |
 | PR検証ルール | `guards/process/rules/pr-format.rules.js` |
 | ガードレール | `guards/process/guard/pr-format.guard.md` |
