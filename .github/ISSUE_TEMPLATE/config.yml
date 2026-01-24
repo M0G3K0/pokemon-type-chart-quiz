@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "💬 質問・議論"
+    url: "https://github.com/M0G3K0/pokemon-type-chart-quiz/discussions"
+    about: "バグや機能提案以外の、一般的な質問や議論はこちらで行ってください。"
