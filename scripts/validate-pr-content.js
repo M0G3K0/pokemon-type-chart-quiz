@@ -8,17 +8,17 @@ console.log(`🛡️ Validating PR: "${prTitle}"`);
 
 /**
  * 1. PR Title Validation
- * Must be [emoji] [type]: [description] OR [type]: [description]
+ * Must be [emoji] [type]: [description]
  * [type] must be shorthand (feat, fix, etc.)
+ * Emoji is mandatory!
  */
 console.log("   - Checking title format...");
-const titleRegex = /^(?:[\u2700-\u27bf\ud83c\udce0-\ud83c\udfff\ud83d\udc00-\ud83d\udfff\ud83e\udd00-\ud83e\udfff]\s*)?(feat|fix|docs|style|refactor|perf|test|build|ci|chore): [a-z0-9].+$/;
+const titleRegex = /^(?:[\u2700-\u27bf\ud83c\udce0-\ud83c\udfff\ud83d\udc00-\ud83d\udfff\ud83e\udd00-\ud83e\udfff]\s+)(feat|fix|docs|style|refactor|perf|test|build|ci|chore): [a-z0-9].+$/;
 
 if (!titleRegex.test(prTitle)) {
 	errors.push(`PR Title "${prTitle}" is invalid.
-    Correct format: "[type]: [description]" or "✨ [type]: [description]"
-    Allowed types: feat, fix, docs, style, refactor, perf, test, build, ci, chore
-    Description: Must start with lowercase letter or number.`);
+    Correct format: "✨ [type]: [description]" (Emoji + Space + Type!)
+    Allowed types: feat, fix, docs, style, refactor, perf, test, build, ci, chore`);
 }
 
 /**
