@@ -1,64 +1,65 @@
 {
-	"$description": "Tier 1: Primitive Spacing Tokens - Raw spacing values",
+	"$description": "Tier 1: Primitive Spacing Tokens - Raw spacing values. 4px grid system.",
 	"space": {
 		"0": {
 			"value": "0",
-			"type": "spacing"
+			"type": "spacing",
+			"$description": "0px - 余白なし"
 		},
 		"1": {
 			"value": "0.25rem",
 			"type": "spacing",
-			"$description": "4px"
+			"$description": "4px - 最小単位。アイコンとテキストの間隔など"
 		},
 		"2": {
 			"value": "0.5rem",
 			"type": "spacing",
-			"$description": "8px"
+			"$description": "8px - コンパクトな要素間の余白"
 		},
 		"3": {
 			"value": "0.75rem",
 			"type": "spacing",
-			"$description": "12px"
+			"$description": "12px - やや狭めの余白"
 		},
 		"4": {
 			"value": "1rem",
 			"type": "spacing",
-			"$description": "16px"
+			"$description": "16px - 標準的な余白。多くの場面で使用"
 		},
 		"5": {
 			"value": "1.25rem",
 			"type": "spacing",
-			"$description": "20px"
+			"$description": "20px - やや広めの余白"
 		},
 		"6": {
 			"value": "1.5rem",
 			"type": "spacing",
-			"$description": "24px"
+			"$description": "24px - セクション内の余白に適する"
 		},
 		"8": {
 			"value": "2rem",
 			"type": "spacing",
-			"$description": "32px"
+			"$description": "32px - 明確な区切りを示す余白"
 		},
 		"10": {
 			"value": "2.5rem",
 			"type": "spacing",
-			"$description": "40px"
+			"$description": "40px - 大きなセクション間の余白"
 		},
 		"12": {
 			"value": "3rem",
 			"type": "spacing",
-			"$description": "48px"
+			"$description": "48px - 主要セクション間の余白"
 		},
 		"16": {
 			"value": "4rem",
 			"type": "spacing",
-			"$description": "64px"
+			"$description": "64px - ページレベルの大きな余白"
 		},
 		"20": {
 			"value": "5rem",
 			"type": "spacing",
-			"$description": "80px"
+			"$description": "80px - 最大レベルの余白。ヒーローセクション等"
 		}
 	}
 }

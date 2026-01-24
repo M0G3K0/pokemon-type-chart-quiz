@@ -1,88 +1,101 @@
 {
-	"$description": "Tier 1: Primitive Typography Tokens",
+	"$description": "Tier 1: Primitive Typography Tokens - Raw font values",
 	"font": {
 		"family": {
+			"$description": "Font stack definitions",
 			"sans": {
 				"value": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
-				"type": "fontFamily"
+				"type": "fontFamily",
+				"$description": "システムサンセリフフォント。本文・UI用"
 			},
 			"mono": {
 				"value": "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace",
-				"type": "fontFamily"
+				"type": "fontFamily",
+				"$description": "等幅フォント。コード・数値表示用"
 			}
 		},
 		"size": {
+			"$description": "Font size scale",
 			"xs": {
 				"value": "0.75rem",
 				"type": "fontSize",
-				"$description": "12px"
+				"$description": "12px - 非常に小さい。注釈やラベル"
 			},
 			"sm": {
 				"value": "0.875rem",
 				"type": "fontSize",
-				"$description": "14px"
+				"$description": "14px - 小さい。キャプションやメタ情報"
 			},
 			"md": {
 				"value": "1rem",
 				"type": "fontSize",
-				"$description": "16px - base"
+				"$description": "16px - 基準サイズ。本文テキスト"
 			},
 			"lg": {
 				"value": "1.125rem",
 				"type": "fontSize",
-				"$description": "18px"
+				"$description": "18px - やや大きい。リード文や強調"
 			},
 			"xl": {
 				"value": "1.25rem",
 				"type": "fontSize",
-				"$description": "20px"
+				"$description": "20px - 大きい。小見出し"
 			},
 			"2xl": {
 				"value": "1.5rem",
 				"type": "fontSize",
-				"$description": "24px"
+				"$description": "24px - かなり大きい。セクション見出し"
 			},
 			"3xl": {
 				"value": "1.875rem",
 				"type": "fontSize",
-				"$description": "30px"
+				"$description": "30px - 大見出し"
 			},
 			"4xl": {
 				"value": "2.25rem",
 				"type": "fontSize",
-				"$description": "36px"
+				"$description": "36px - ページタイトル級"
 			}
 		},
 		"weight": {
+			"$description": "Font weight values",
 			"normal": {
 				"value": "400",
-				"type": "fontWeight"
+				"type": "fontWeight",
+				"$description": "通常。本文テキスト用"
 			},
 			"medium": {
 				"value": "500",
-				"type": "fontWeight"
+				"type": "fontWeight",
+				"$description": "中間。ラベルや軽い強調"
 			},
 			"semibold": {
 				"value": "600",
-				"type": "fontWeight"
+				"type": "fontWeight",
+				"$description": "やや太い。見出しや強調"
 			},
 			"bold": {
 				"value": "700",
-				"type": "fontWeight"
+				"type": "fontWeight",
+				"$description": "太字。重要な見出し"
 			}
 		},
 		"lineHeight": {
+			"$description": "Line height values",
 			"tight": {
 				"value": "1.25",
-				"type": "lineHeight"
+				"type": "lineHeight",
+				"$description": "詰まった行間。見出しやボタン"
 			},
 			"normal": {
 				"value": "1.5",
-				"type": "lineHeight"
+				"type": "lineHeight",
+				"$description": "標準行間。本文テキスト"
 			},
 			"relaxed": {
 				"value": "1.75",
-				"type": "lineHeight"
+				"type": "lineHeight",
+				"$description": "ゆったり行間。長文の可読性向上"
 			}
 		}
 	}

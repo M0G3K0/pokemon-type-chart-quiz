@@ -60,97 +60,119 @@
 			}
 		},
 		"lime": {
-			"$description": "Lime green scale",
+			"$description": "Lime green scale. Yellow-green hue for positive feedback.",
 			"50": {
 				"value": "#f7fee7",
-				"type": "color"
+				"type": "color",
+				"$description": "最も明るいライム。ほぼ白に近い。背景用。"
 			},
 			"100": {
 				"value": "#ecfccb",
-				"type": "color"
+				"type": "color",
+				"$description": "非常に明るいライム。薄い背景用。"
 			},
 			"200": {
 				"value": "#d9f99d",
-				"type": "color"
+				"type": "color",
+				"$description": "明るいライム。アクセント背景用。"
 			},
 			"300": {
 				"value": "#bef264",
-				"type": "color"
+				"type": "color",
+				"$description": "中明度のライム。視認性が高い。"
 			},
 			"400": {
 				"value": "#a3e635",
-				"type": "color"
+				"type": "color",
+				"$description": "鮮やかなライム。アクセントに適する。"
 			},
 			"500": {
 				"value": "#84cc16",
-				"type": "color"
+				"type": "color",
+				"$description": "標準ライム。白背景上で十分なコントラスト。"
 			},
 			"600": {
 				"value": "#65a30d",
-				"type": "color"
+				"type": "color",
+				"$description": "やや暗いライム。高コントラスト(4.5:1以上)確保可能。"
 			},
 			"700": {
 				"value": "#4d7c0f",
-				"type": "color"
+				"type": "color",
+				"$description": "暗いライム。白文字との対比で使用可能。"
 			},
 			"800": {
 				"value": "#3f6212",
-				"type": "color"
+				"type": "color",
+				"$description": "非常に暗いライム。"
 			},
 			"900": {
 				"value": "#365314",
-				"type": "color"
+				"type": "color",
+				"$description": "ほぼ黒に近いライム。"
 			},
 			"950": {
 				"value": "#1a2e05",
-				"type": "color"
+				"type": "color",
+				"$description": "最も暗いライム。"
 			}
 		},
 		"red": {
-			"$description": "Red scale",
+			"$description": "Red scale. Warm red for negative feedback or alerts.",
 			"50": {
 				"value": "#fef2f2",
-				"type": "color"
+				"type": "color",
+				"$description": "最も明るいレッド。ほぼ白に近い。エラー背景用。"
 			},
 			"100": {
 				"value": "#fee2e2",
-				"type": "color"
+				"type": "color",
+				"$description": "非常に明るいレッド。薄い警告背景用。"
 			},
 			"200": {
 				"value": "#fecaca",
-				"type": "color"
+				"type": "color",
+				"$description": "明るいレッド。アクセント背景用。"
 			},
 			"300": {
 				"value": "#fca5a5",
-				"type": "color"
+				"type": "color",
+				"$description": "中明度のレッド。視認性が高い。"
 			},
 			"400": {
 				"value": "#f87171",
-				"type": "color"
+				"type": "color",
+				"$description": "鮮やかなレッド。アクセントに適する。"
 			},
 			"500": {
 				"value": "#ef4444",
-				"type": "color"
+				"type": "color",
+				"$description": "標準レッド。白背景上で十分なコントラスト。"
 			},
 			"600": {
 				"value": "#dc2626",
-				"type": "color"
+				"type": "color",
+				"$description": "やや暗いレッド。高コントラスト(4.5:1以上)確保可能。"
 			},
 			"700": {
 				"value": "#b91c1c",
-				"type": "color"
+				"type": "color",
+				"$description": "暗いレッド。白文字との対比で使用可能。"
 			},
 			"800": {
 				"value": "#991b1b",
-				"type": "color"
+				"type": "color",
+				"$description": "非常に暗いレッド。"
 			},
 			"900": {
 				"value": "#7f1d1d",
-				"type": "color"
+				"type": "color",
+				"$description": "ほぼ黒に近いレッド。"
 			},
 			"950": {
 				"value": "#450a0a",
-				"type": "color"
+				"type": "color",
+				"$description": "最も暗いレッド。"
 			}
 		},
 		"white": {

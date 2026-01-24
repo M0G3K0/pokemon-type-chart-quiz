@@ -1,64 +1,76 @@
 {
-	"$description": "Tier 3: Card Component Tokens",
+	"$description": "Tier 3: Card Component Tokens. Describes WHERE each token applies.",
 	"card": {
-		"$description": "Card container tokens",
+		"$description": "Card container tokens for grouping content",
 		"bg": {
 			"default": {
 				"value": "{color.surface.card}",
-				"type": "color"
+				"type": "color",
+				"$description": "カードの背景色。`background-color`に適用。"
 			},
 			"hover": {
 				"value": "{color.surface.hovered}",
-				"type": "color"
+				"type": "color",
+				"$description": "ホバー時の背景色。クリック可能なカード用。"
 			}
 		},
 		"border": {
 			"default": {
 				"value": "{color.border.subtle}",
-				"type": "color"
+				"type": "color",
+				"$description": "カードの枠線色。`border-color`に適用。"
 			}
 		},
 		"text": {
 			"title": {
 				"value": "{color.text.primary}",
-				"type": "color"
+				"type": "color",
+				"$description": "カード見出しの色。`color`に適用。"
 			},
 			"body": {
 				"value": "{color.text.secondary}",
-				"type": "color"
+				"type": "color",
+				"$description": "カード本文の色。見出しより控えめ。"
 			}
 		},
 		"shadow": {
 			"flat": {
 				"value": "{elevation.none}",
-				"type": "shadow"
+				"type": "shadow",
+				"$description": "影なし。フラットなカード。`box-shadow`に適用。"
 			},
 			"raised": {
 				"value": "{elevation.raised}",
-				"type": "shadow"
+				"type": "shadow",
+				"$description": "浮き上がった影。通常のカード。"
 			},
 			"overlay": {
 				"value": "{elevation.overlay}",
-				"type": "shadow"
+				"type": "shadow",
+				"$description": "強い影。モーダル/ドロップダウン用。"
 			}
 		},
 		"padding": {
 			"sm": {
 				"value": "{spacing.content.sm}",
-				"type": "spacing"
+				"type": "spacing",
+				"$description": "小サイズの内側余白。`padding`に適用。"
 			},
 			"md": {
 				"value": "{spacing.content.md}",
-				"type": "spacing"
+				"type": "spacing",
+				"$description": "中サイズの内側余白。標準。"
 			},
 			"lg": {
 				"value": "{spacing.content.lg}",
-				"type": "spacing"
+				"type": "spacing",
+				"$description": "大サイズの内側余白。広々としたレイアウト用。"
 			}
 		},
 		"radius": {
 			"value": "{semantic-border.radius.lg}",
-			"type": "borderRadius"
+			"type": "borderRadius",
+			"$description": "角丸の大きさ。`border-radius`に適用。"
 		}
 	}
 }

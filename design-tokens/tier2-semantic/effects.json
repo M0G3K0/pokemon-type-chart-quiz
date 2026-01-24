@@ -1,114 +1,119 @@
 {
-	"$description": "Tier 2: Semantic Effect Tokens (Elevation, Motion)",
+	"$description": "Tier 2: Semantic Effect Tokens - Use these for UI implementation",
 	"elevation": {
 		"$description": "Elevation levels for visual hierarchy",
 		"none": {
 			"value": "{shadow.none}",
 			"type": "boxShadow",
-			"$description": "No elevation"
+			"$description": "【用途】フラットな要素。浮き上がり不要な場合。"
 		},
 		"raised": {
 			"value": "{shadow.sm}",
 			"type": "boxShadow",
-			"$description": "Slightly raised (cards)"
+			"$description": "【用途】軽く浮いた要素。カードのデフォルト状態。"
 		},
 		"overlay": {
 			"value": "{shadow.md}",
 			"type": "boxShadow",
-			"$description": "Overlapping elements (dropdowns)"
+			"$description": "【用途】重なる要素。ドロップダウン、ポップオーバー。"
 		},
 		"modal": {
 			"value": "{shadow.xl}",
 			"type": "boxShadow",
-			"$description": "Modal dialogs"
+			"$description": "【用途】モーダルダイアログ。最前面の要素。"
 		},
 		"toast": {
 			"value": "{shadow.lg}",
 			"type": "boxShadow",
-			"$description": "Toast notifications"
+			"$description": "【用途】通知トースト。注目を引く浮遊要素。"
 		}
 	},
 	"semantic-border": {
-		"$description": "Border styles",
+		"$description": "Border styles for UI elements",
 		"radius": {
 			"none": {
 				"value": "{radius.none}",
-				"type": "borderRadius"
+				"type": "borderRadius",
+				"$description": "【用途】角丸なし。シャープなデザイン。"
 			},
 			"sm": {
 				"value": "{radius.sm}",
 				"type": "borderRadius",
-				"$description": "Small elements (badges)"
+				"$description": "【用途】小さい要素。バッジ、チップ。"
 			},
 			"md": {
 				"value": "{radius.md}",
 				"type": "borderRadius",
-				"$description": "Default (buttons, inputs)"
+				"$description": "【用途】標準要素。ボタン、入力欄。"
 			},
 			"lg": {
 				"value": "{radius.lg}",
 				"type": "borderRadius",
-				"$description": "Large elements (cards)"
+				"$description": "【用途】大きな要素。カード、パネル。"
 			},
 			"pill": {
 				"value": "{radius.full}",
 				"type": "borderRadius",
-				"$description": "Pill shape"
+				"$description": "【用途】ピル形状。タグ、ステータスバッジ。"
 			}
 		},
 		"width": {
 			"none": {
 				"value": "0",
-				"type": "borderWidth"
+				"type": "borderWidth",
+				"$description": "【用途】枠線なし。"
 			},
 			"default": {
 				"value": "1px",
-				"type": "borderWidth"
+				"type": "borderWidth",
+				"$description": "【用途】標準枠線。入力欄、カード。"
 			},
 			"thick": {
 				"value": "2px",
-				"type": "borderWidth"
+				"type": "borderWidth",
+				"$description": "【用途】太い枠線。フォーカス状態、強調。"
 			}
 		}
 	},
 	"motion": {
-		"$description": "Animation timing",
+		"$description": "Animation timing for interactions",
 		"duration": {
 			"instant": {
 				"value": "{duration.fast}",
 				"type": "duration",
-				"$description": "Micro-interactions"
+				"$description": "【用途】マイクロインタラクション。hover時の色変化等。"
 			},
 			"quick": {
 				"value": "{duration.normal}",
 				"type": "duration",
-				"$description": "Default transitions"
+				"$description": "【用途】通常のトランジション。ボタン、リンク。"
 			},
 			"moderate": {
 				"value": "{duration.slow}",
 				"type": "duration",
-				"$description": "Larger animations"
+				"$description": "【用途】やや長い変化。パネルの展開等。"
 			},
 			"deliberate": {
 				"value": "{duration.slower}",
 				"type": "duration",
-				"$description": "Complex animations"
+				"$description": "【用途】意図的にゆっくり。モーダル表示等。"
 			}
 		},
 		"easing": {
 			"default": {
 				"value": "{easing.default}",
-				"type": "cubicBezier"
+				"type": "cubicBezier",
+				"$description": "【用途】標準イージング。ほとんどの場合に適用。"
 			},
 			"enter": {
 				"value": "{easing.out}",
 				"type": "cubicBezier",
-				"$description": "Element entering"
+				"$description": "【用途】要素の登場。急に始まり減速。"
 			},
 			"exit": {
 				"value": "{easing.in}",
 				"type": "cubicBezier",
-				"$description": "Element exiting"
+				"$description": "【用途】要素の退場。ゆっくり始まり加速。"
 			}
 		}
 	}

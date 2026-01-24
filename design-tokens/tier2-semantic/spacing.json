@@ -6,27 +6,27 @@
 			"xs": {
 				"value": "{space.1}",
 				"type": "spacing",
-				"$description": "Tight spacing (4px)"
+				"$description": "【用途】非常に狭い余白。アイコンとテキストの間隔。"
 			},
 			"sm": {
 				"value": "{space.2}",
 				"type": "spacing",
-				"$description": "Small spacing (8px)"
+				"$description": "【用途】狭い余白。バッジやチップのパディング。"
 			},
 			"md": {
 				"value": "{space.4}",
 				"type": "spacing",
-				"$description": "Medium spacing (16px)"
+				"$description": "【用途】標準余白。ボタン、入力欄のパディング。"
 			},
 			"lg": {
 				"value": "{space.6}",
 				"type": "spacing",
-				"$description": "Large spacing (24px)"
+				"$description": "【用途】広い余白。カードのパディング。"
 			},
 			"xl": {
 				"value": "{space.8}",
 				"type": "spacing",
-				"$description": "Extra large spacing (32px)"
+				"$description": "【用途】非常に広い余白。大きなカードやセクション。"
 			}
 		},
 		"layout": {
@@ -34,31 +34,35 @@
 			"section": {
 				"value": "{space.12}",
 				"type": "spacing",
-				"$description": "Section gap (48px)"
+				"$description": "【用途】セクション間の区切り。ページ内の大きなブロック。"
 			},
 			"page": {
 				"value": "{space.16}",
 				"type": "spacing",
-				"$description": "Page padding (64px)"
+				"$description": "【用途】ページ全体の余白。コンテナの左右パディング。"
 			}
 		},
 		"gap": {
 			"$description": "Gap between elements in flex/grid",
 			"xs": {
 				"value": "{space.1}",
-				"type": "spacing"
+				"type": "spacing",
+				"$description": "【用途】非常に狭いギャップ。インラインアイコン等。"
 			},
 			"sm": {
 				"value": "{space.2}",
-				"type": "spacing"
+				"type": "spacing",
+				"$description": "【用途】狭いギャップ。タグリスト、小さなボタン群。"
 			},
 			"md": {
 				"value": "{space.4}",
-				"type": "spacing"
+				"type": "spacing",
+				"$description": "【用途】標準ギャップ。カードグリッド、ボタン群。"
 			},
 			"lg": {
 				"value": "{space.6}",
-				"type": "spacing"
+				"type": "spacing",
+				"$description": "【用途】広いギャップ。セクション内のカード間。"
 			}
 		}
 	}

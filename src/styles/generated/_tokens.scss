@@ -12,28 +12,28 @@ $pt-color-gray-700: #374151; // 暗いグレー。白文字との対比で十分
 $pt-color-gray-800: #1f2937; // 非常に暗いグレー。白文字との対比でAAA基準(7:1)に近い。
 $pt-color-gray-900: #111827; // ほぼ黒に近いグレー。わずかに青みを帯びる。
 $pt-color-gray-950: #030712; // 最も暗いグレー。純黒に非常に近い。
-$pt-color-lime-50: #f7fee7;
-$pt-color-lime-100: #ecfccb;
-$pt-color-lime-200: #d9f99d;
-$pt-color-lime-300: #bef264;
-$pt-color-lime-400: #a3e635;
-$pt-color-lime-500: #84cc16;
-$pt-color-lime-600: #65a30d;
-$pt-color-lime-700: #4d7c0f;
-$pt-color-lime-800: #3f6212;
-$pt-color-lime-900: #365314;
-$pt-color-lime-950: #1a2e05;
-$pt-color-red-50: #fef2f2;
-$pt-color-red-100: #fee2e2;
-$pt-color-red-200: #fecaca;
-$pt-color-red-300: #fca5a5;
-$pt-color-red-400: #f87171;
-$pt-color-red-500: #ef4444;
-$pt-color-red-600: #dc2626;
-$pt-color-red-700: #b91c1c;
-$pt-color-red-800: #991b1b;
-$pt-color-red-900: #7f1d1d;
-$pt-color-red-950: #450a0a;
+$pt-color-lime-50: #f7fee7; // 最も明るいライム。ほぼ白に近い。背景用。
+$pt-color-lime-100: #ecfccb; // 非常に明るいライム。薄い背景用。
+$pt-color-lime-200: #d9f99d; // 明るいライム。アクセント背景用。
+$pt-color-lime-300: #bef264; // 中明度のライム。視認性が高い。
+$pt-color-lime-400: #a3e635; // 鮮やかなライム。アクセントに適する。
+$pt-color-lime-500: #84cc16; // 標準ライム。白背景上で十分なコントラスト。
+$pt-color-lime-600: #65a30d; // やや暗いライム。高コントラスト(4.5:1以上)確保可能。
+$pt-color-lime-700: #4d7c0f; // 暗いライム。白文字との対比で使用可能。
+$pt-color-lime-800: #3f6212; // 非常に暗いライム。
+$pt-color-lime-900: #365314; // ほぼ黒に近いライム。
+$pt-color-lime-950: #1a2e05; // 最も暗いライム。
+$pt-color-red-50: #fef2f2; // 最も明るいレッド。ほぼ白に近い。エラー背景用。
+$pt-color-red-100: #fee2e2; // 非常に明るいレッド。薄い警告背景用。
+$pt-color-red-200: #fecaca; // 明るいレッド。アクセント背景用。
+$pt-color-red-300: #fca5a5; // 中明度のレッド。視認性が高い。
+$pt-color-red-400: #f87171; // 鮮やかなレッド。アクセントに適する。
+$pt-color-red-500: #ef4444; // 標準レッド。白背景上で十分なコントラスト。
+$pt-color-red-600: #dc2626; // やや暗いレッド。高コントラスト(4.5:1以上)確保可能。
+$pt-color-red-700: #b91c1c; // 暗いレッド。白文字との対比で使用可能。
+$pt-color-red-800: #991b1b; // 非常に暗いレッド。
+$pt-color-red-900: #7f1d1d; // ほぼ黒に近いレッド。
+$pt-color-red-950: #450a0a; // 最も暗いレッド。
 $pt-color-white: #ffffff;
 $pt-color-black: #000000;
 $pt-color-pokemon-normal-50: #f6f6f2;
@@ -234,69 +234,69 @@ $pt-color-pokemon-fairy-700: #805068;
 $pt-color-pokemon-fairy-800: #563545;
 $pt-color-pokemon-fairy-900: #2b1b23;
 $pt-color-pokemon-fairy-950: #150d11;
-$pt-radius-none: 0;
-$pt-radius-sm: 0.25rem; // 4px
-$pt-radius-md: 0.5rem; // 8px
-$pt-radius-lg: 0.75rem; // 12px
-$pt-radius-xl: 1rem; // 16px
-$pt-radius-2xl: 1.5rem; // 24px
-$pt-radius-full: 9999px;
-$pt-border-width-none: 0;
-$pt-border-width-sm: 1px;
-$pt-border-width-md: 2px;
-$pt-border-width-lg: 4px;
-$pt-shadow-none: none;
-$pt-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-$pt-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-$pt-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-$pt-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-$pt-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-$pt-duration-fast: 100ms;
-$pt-duration-normal: 200ms;
-$pt-duration-slow: 300ms;
-$pt-duration-slower: 500ms;
-$pt-easing-default: cubic-bezier(0.4, 0, 0.2, 1);
-$pt-easing-in: cubic-bezier(0.4, 0, 1, 1);
-$pt-easing-out: cubic-bezier(0, 0, 0.2, 1);
-$pt-easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-$pt-space-0: 0;
-$pt-space-1: 0.25rem; // 4px
-$pt-space-2: 0.5rem; // 8px
-$pt-space-3: 0.75rem; // 12px
-$pt-space-4: 1rem; // 16px
-$pt-space-5: 1.25rem; // 20px
-$pt-space-6: 1.5rem; // 24px
-$pt-space-8: 2rem; // 32px
-$pt-space-10: 2.5rem; // 40px
-$pt-space-12: 3rem; // 48px
-$pt-space-16: 4rem; // 64px
-$pt-space-20: 5rem; // 80px
-$pt-font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
-$pt-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
-$pt-font-size-xs: 0.75rem; // 12px
-$pt-font-size-sm: 0.875rem; // 14px
-$pt-font-size-md: 1rem; // 16px - base
-$pt-font-size-lg: 1.125rem; // 18px
-$pt-font-size-xl: 1.25rem; // 20px
-$pt-font-size-2xl: 1.5rem; // 24px
-$pt-font-size-3xl: 1.875rem; // 30px
-$pt-font-size-4xl: 2.25rem; // 36px
-$pt-font-weight-normal: 400;
-$pt-font-weight-medium: 500;
-$pt-font-weight-semibold: 600;
-$pt-font-weight-bold: 700;
-$pt-font-line-height-tight: 1.25;
-$pt-font-line-height-normal: 1.5;
-$pt-font-line-height-relaxed: 1.75;
-$pt-semantic-border-width-none: 0;
-$pt-semantic-border-width-default: 1px;
-$pt-semantic-border-width-thick: 2px;
-$pt-button-primary-border-default: rgba(0, 0, 0, 0);
-$pt-button-secondary-bg-default: rgba(0, 0, 0, 0);
-$pt-button-secondary-bg-disabled: rgba(0, 0, 0, 0);
-$pt-button-ghost-bg-default: rgba(0, 0, 0, 0);
-$pt-button-ghost-bg-disabled: rgba(0, 0, 0, 0);
-$pt-button-ghost-border-default: rgba(0, 0, 0, 0);
+$pt-radius-none: 0; // 0px - 角丸なし。シャープな印象
+$pt-radius-sm: 0.25rem; // 4px - 微細な角丸。ボタンやバッジ向け
+$pt-radius-md: 0.5rem; // 8px - 標準的な角丸。カードなど
+$pt-radius-lg: 0.75rem; // 12px - やや大きめの角丸。モダンな印象
+$pt-radius-xl: 1rem; // 16px - 大きな角丸。強調したい要素
+$pt-radius-2xl: 1.5rem; // 24px - 非常に大きな角丸。フレンドリーな印象
+$pt-radius-full: 9999px; // 完全な円形。ピルボタンやアバター
+$pt-border-width-none: 0; // 枠線なし
+$pt-border-width-sm: 1px; // 1px - 標準的な細い枠線
+$pt-border-width-md: 2px; // 2px - やや太い枠線。強調用
+$pt-border-width-lg: 4px; // 4px - 太い枠線。アクセント用
+$pt-shadow-none: none; // 影なし。フラットなデザイン
+$pt-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05); // 非常に薄い影。わずかな浮き上がり
+$pt-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); // 標準的な影。カード等の通常状態
+$pt-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); // 大きめの影。ホバー状態やドロップダウン
+$pt-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); // 大きな影。モーダルやポップオーバー
+$pt-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25); // 最大の影。フローティング要素
+$pt-duration-fast: 100ms; // 高速。即座のフィードバック感
+$pt-duration-normal: 200ms; // 標準速度。ほとんどのインタラクション
+$pt-duration-slow: 300ms; // やや遅め。目立つ変化の表現
+$pt-duration-slower: 500ms; // 遅め。入退場アニメーション等
+$pt-easing-default: cubic-bezier(0.4, 0, 0.2, 1); // 標準イージング。自然な加減速
+$pt-easing-in: cubic-bezier(0.4, 0, 1, 1); // ease-in。ゆっくり始まり加速
+$pt-easing-out: cubic-bezier(0, 0, 0.2, 1); // ease-out。急に始まり減速
+$pt-easing-in-out: cubic-bezier(0.4, 0, 0.2, 1); // ease-in-out。両端で緩やか
+$pt-space-0: 0; // 0px - 余白なし
+$pt-space-1: 0.25rem; // 4px - 最小単位。アイコンとテキストの間隔など
+$pt-space-2: 0.5rem; // 8px - コンパクトな要素間の余白
+$pt-space-3: 0.75rem; // 12px - やや狭めの余白
+$pt-space-4: 1rem; // 16px - 標準的な余白。多くの場面で使用
+$pt-space-5: 1.25rem; // 20px - やや広めの余白
+$pt-space-6: 1.5rem; // 24px - セクション内の余白に適する
+$pt-space-8: 2rem; // 32px - 明確な区切りを示す余白
+$pt-space-10: 2.5rem; // 40px - 大きなセクション間の余白
+$pt-space-12: 3rem; // 48px - 主要セクション間の余白
+$pt-space-16: 4rem; // 64px - ページレベルの大きな余白
+$pt-space-20: 5rem; // 80px - 最大レベルの余白。ヒーローセクション等
+$pt-font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; // システムサンセリフフォント。本文・UI用
+$pt-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; // 等幅フォント。コード・数値表示用
+$pt-font-size-xs: 0.75rem; // 12px - 非常に小さい。注釈やラベル
+$pt-font-size-sm: 0.875rem; // 14px - 小さい。キャプションやメタ情報
+$pt-font-size-md: 1rem; // 16px - 基準サイズ。本文テキスト
+$pt-font-size-lg: 1.125rem; // 18px - やや大きい。リード文や強調
+$pt-font-size-xl: 1.25rem; // 20px - 大きい。小見出し
+$pt-font-size-2xl: 1.5rem; // 24px - かなり大きい。セクション見出し
+$pt-font-size-3xl: 1.875rem; // 30px - 大見出し
+$pt-font-size-4xl: 2.25rem; // 36px - ページタイトル級
+$pt-font-weight-normal: 400; // 通常。本文テキスト用
+$pt-font-weight-medium: 500; // 中間。ラベルや軽い強調
+$pt-font-weight-semibold: 600; // やや太い。見出しや強調
+$pt-font-weight-bold: 700; // 太字。重要な見出し
+$pt-font-line-height-tight: 1.25; // 詰まった行間。見出しやボタン
+$pt-font-line-height-normal: 1.5; // 標準行間。本文テキスト
+$pt-font-line-height-relaxed: 1.75; // ゆったり行間。長文の可読性向上
+$pt-semantic-border-width-none: 0; // 【用途】枠線なし。
+$pt-semantic-border-width-default: 1px; // 【用途】標準枠線。入力欄、カード。
+$pt-semantic-border-width-thick: 2px; // 【用途】太い枠線。フォーカス状態、強調。
+$pt-button-primary-border-default: rgba(0, 0, 0, 0); // ボタンの枠線色。Primaryは枠なし。
+$pt-button-secondary-bg-default: rgba(0, 0, 0, 0); // 背景色。Secondaryは透明で枠線を強調。
+$pt-button-secondary-bg-disabled: rgba(0, 0, 0, 0); // 無効時の背景色。透明のまま。
+$pt-button-ghost-bg-default: rgba(0, 0, 0, 0); // 背景色。完全透明。
+$pt-button-ghost-bg-disabled: rgba(0, 0, 0, 0); // 無効時の背景色。透明のまま。
+$pt-button-ghost-border-default: rgba(0, 0, 0, 0); // 枠線色。Ghostは枠なし。
 $pt-color-pokemon-type-normal: $pt-color-pokemon-normal-500; // 【用途】ノーマルタイプのバッジ・アイコン背景。
 $pt-color-pokemon-type-fire: $pt-color-pokemon-fire-500; // 【用途】ほのおタイプのバッジ・アイコン背景。
 $pt-color-pokemon-type-water: $pt-color-pokemon-water-500; // 【用途】みずタイプのバッジ・アイコン背景。
@@ -369,34 +369,34 @@ $pt-color-text-inverse: $pt-color-white; // 【用途】暗い背景上のテキ
 $pt-color-border-default: $pt-color-gray-200; // 【用途】標準の境界線。カード、入力欄、区切り線に使用。控えめだが認識できる程度。
 $pt-color-border-subtle: $pt-color-gray-100; // 【用途】控えめな境界線。defaultより目立たせたくない場合。ほのかな区切りに使用。
 $pt-color-border-focused: $pt-color-gray-600; // 【用途】フォーカスリング。キーボード操作時のフォーカス表示。アクセシビリティ上重要。
-$pt-elevation-none: $pt-shadow-none; // No elevation
-$pt-elevation-raised: $pt-shadow-sm; // Slightly raised (cards)
-$pt-elevation-overlay: $pt-shadow-md; // Overlapping elements (dropdowns)
-$pt-elevation-modal: $pt-shadow-xl; // Modal dialogs
-$pt-elevation-toast: $pt-shadow-lg; // Toast notifications
-$pt-semantic-border-radius-none: $pt-radius-none;
-$pt-semantic-border-radius-sm: $pt-radius-sm; // Small elements (badges)
-$pt-semantic-border-radius-md: $pt-radius-md; // Default (buttons, inputs)
-$pt-semantic-border-radius-lg: $pt-radius-lg; // Large elements (cards)
-$pt-semantic-border-radius-pill: $pt-radius-full; // Pill shape
-$pt-motion-duration-instant: $pt-duration-fast; // Micro-interactions
-$pt-motion-duration-quick: $pt-duration-normal; // Default transitions
-$pt-motion-duration-moderate: $pt-duration-slow; // Larger animations
-$pt-motion-duration-deliberate: $pt-duration-slower; // Complex animations
-$pt-motion-easing-default: $pt-easing-default;
-$pt-motion-easing-enter: $pt-easing-out; // Element entering
-$pt-motion-easing-exit: $pt-easing-in; // Element exiting
-$pt-spacing-content-xs: $pt-space-1; // Tight spacing (4px)
-$pt-spacing-content-sm: $pt-space-2; // Small spacing (8px)
-$pt-spacing-content-md: $pt-space-4; // Medium spacing (16px)
-$pt-spacing-content-lg: $pt-space-6; // Large spacing (24px)
-$pt-spacing-content-xl: $pt-space-8; // Extra large spacing (32px)
-$pt-spacing-layout-section: $pt-space-12; // Section gap (48px)
-$pt-spacing-layout-page: $pt-space-16; // Page padding (64px)
-$pt-spacing-gap-xs: $pt-space-1;
-$pt-spacing-gap-sm: $pt-space-2;
-$pt-spacing-gap-md: $pt-space-4;
-$pt-spacing-gap-lg: $pt-space-6;
+$pt-elevation-none: $pt-shadow-none; // 【用途】フラットな要素。浮き上がり不要な場合。
+$pt-elevation-raised: $pt-shadow-sm; // 【用途】軽く浮いた要素。カードのデフォルト状態。
+$pt-elevation-overlay: $pt-shadow-md; // 【用途】重なる要素。ドロップダウン、ポップオーバー。
+$pt-elevation-modal: $pt-shadow-xl; // 【用途】モーダルダイアログ。最前面の要素。
+$pt-elevation-toast: $pt-shadow-lg; // 【用途】通知トースト。注目を引く浮遊要素。
+$pt-semantic-border-radius-none: $pt-radius-none; // 【用途】角丸なし。シャープなデザイン。
+$pt-semantic-border-radius-sm: $pt-radius-sm; // 【用途】小さい要素。バッジ、チップ。
+$pt-semantic-border-radius-md: $pt-radius-md; // 【用途】標準要素。ボタン、入力欄。
+$pt-semantic-border-radius-lg: $pt-radius-lg; // 【用途】大きな要素。カード、パネル。
+$pt-semantic-border-radius-pill: $pt-radius-full; // 【用途】ピル形状。タグ、ステータスバッジ。
+$pt-motion-duration-instant: $pt-duration-fast; // 【用途】マイクロインタラクション。hover時の色変化等。
+$pt-motion-duration-quick: $pt-duration-normal; // 【用途】通常のトランジション。ボタン、リンク。
+$pt-motion-duration-moderate: $pt-duration-slow; // 【用途】やや長い変化。パネルの展開等。
+$pt-motion-duration-deliberate: $pt-duration-slower; // 【用途】意図的にゆっくり。モーダル表示等。
+$pt-motion-easing-default: $pt-easing-default; // 【用途】標準イージング。ほとんどの場合に適用。
+$pt-motion-easing-enter: $pt-easing-out; // 【用途】要素の登場。急に始まり減速。
+$pt-motion-easing-exit: $pt-easing-in; // 【用途】要素の退場。ゆっくり始まり加速。
+$pt-spacing-content-xs: $pt-space-1; // 【用途】非常に狭い余白。アイコンとテキストの間隔。
+$pt-spacing-content-sm: $pt-space-2; // 【用途】狭い余白。バッジやチップのパディング。
+$pt-spacing-content-md: $pt-space-4; // 【用途】標準余白。ボタン、入力欄のパディング。
+$pt-spacing-content-lg: $pt-space-6; // 【用途】広い余白。カードのパディング。
+$pt-spacing-content-xl: $pt-space-8; // 【用途】非常に広い余白。大きなカードやセクション。
+$pt-spacing-layout-section: $pt-space-12; // 【用途】セクション間の区切り。ページ内の大きなブロック。
+$pt-spacing-layout-page: $pt-space-16; // 【用途】ページ全体の余白。コンテナの左右パディング。
+$pt-spacing-gap-xs: $pt-space-1; // 【用途】非常に狭いギャップ。インラインアイコン等。
+$pt-spacing-gap-sm: $pt-space-2; // 【用途】狭いギャップ。タグリスト、小さなボタン群。
+$pt-spacing-gap-md: $pt-space-4; // 【用途】標準ギャップ。カードグリッド、ボタン群。
+$pt-spacing-gap-lg: $pt-space-6; // 【用途】広いギャップ。セクション内のカード間。
 $pt-typography-heading-xl-font-family: $pt-font-family-sans;
 $pt-typography-heading-xl-font-size: $pt-font-size-4xl;
 $pt-typography-heading-xl-font-weight: $pt-font-weight-bold;
@@ -429,43 +429,43 @@ $pt-typography-code-default-font-family: $pt-font-family-mono;
 $pt-typography-code-default-font-size: $pt-font-size-sm;
 $pt-typography-code-default-font-weight: $pt-font-weight-normal;
 $pt-typography-code-default-line-height: $pt-font-line-height-normal;
-$pt-button-primary-bg-default: $pt-color-gray-800;
-$pt-button-primary-bg-hover: $pt-color-gray-700;
-$pt-button-primary-bg-pressed: $pt-color-gray-900;
-$pt-button-primary-bg-disabled: $pt-color-gray-200;
-$pt-button-secondary-border-hover: $pt-color-gray-600;
-$pt-badge-neutral-bg: $pt-color-surface-hovered;
-$pt-badge-neutral-text: $pt-color-text-primary;
-$pt-badge-win-bg: $pt-color-result-win-subtle;
-$pt-badge-win-text: $pt-color-result-win-strong;
-$pt-badge-lose-bg: $pt-color-result-lose-subtle;
-$pt-badge-lose-text: $pt-color-result-lose-strong;
-$pt-badge-padding-x: $pt-spacing-content-sm;
-$pt-badge-padding-y: $pt-spacing-content-xs;
-$pt-badge-radius: $pt-semantic-border-radius-sm;
-$pt-button-primary-text-default: $pt-color-text-inverse;
-$pt-button-primary-text-disabled: $pt-color-text-disabled;
-$pt-button-primary-border-focus: $pt-color-border-focused;
-$pt-button-secondary-bg-hover: $pt-color-surface-hovered;
-$pt-button-secondary-bg-pressed: $pt-color-surface-pressed;
-$pt-button-secondary-text-default: $pt-color-text-primary;
-$pt-button-secondary-text-disabled: $pt-color-text-disabled;
-$pt-button-secondary-border-default: $pt-color-border-default;
-$pt-button-secondary-border-focus: $pt-color-border-focused;
-$pt-button-ghost-bg-hover: $pt-color-surface-hovered;
-$pt-button-ghost-bg-pressed: $pt-color-surface-pressed;
-$pt-button-ghost-text-default: $pt-color-text-primary;
-$pt-button-ghost-text-disabled: $pt-color-text-disabled;
-$pt-button-ghost-border-focus: $pt-color-border-focused;
-$pt-card-bg-default: $pt-color-surface-card;
-$pt-card-bg-hover: $pt-color-surface-hovered;
-$pt-card-border-default: $pt-color-border-subtle;
-$pt-card-text-title: $pt-color-text-primary;
-$pt-card-text-body: $pt-color-text-secondary;
-$pt-card-shadow-flat: $pt-elevation-none;
-$pt-card-shadow-raised: $pt-elevation-raised;
-$pt-card-shadow-overlay: $pt-elevation-overlay;
-$pt-card-padding-sm: $pt-spacing-content-sm;
-$pt-card-padding-md: $pt-spacing-content-md;
-$pt-card-padding-lg: $pt-spacing-content-lg;
-$pt-card-radius: $pt-semantic-border-radius-lg;
+$pt-button-primary-bg-default: $pt-color-gray-800; // ボタンの背景色。`background-color`に適用。
+$pt-button-primary-bg-hover: $pt-color-gray-700; // ホバー時の背景色。defaultより一段明るくして反応を示す。
+$pt-button-primary-bg-pressed: $pt-color-gray-900; // 押下時の背景色。defaultより一段暗くして押し込み感を表現。
+$pt-button-primary-bg-disabled: $pt-color-gray-200; // 無効時の背景色。操作不可を視覚的に示す。
+$pt-button-secondary-border-hover: $pt-color-gray-600; // ホバー時の枠線色。一段濃くして強調。
+$pt-badge-neutral-bg: $pt-color-surface-hovered; // バッジの背景色。`background-color`に適用。
+$pt-badge-neutral-text: $pt-color-text-primary; // バッジのラベル色。`color`に適用。
+$pt-badge-win-bg: $pt-color-result-win-subtle; // 正解バッジの背景色。薄いライム。
+$pt-badge-win-text: $pt-color-result-win-strong; // 正解バッジのラベル色。濃いライムで高コントラスト。
+$pt-badge-lose-bg: $pt-color-result-lose-subtle; // 不正解バッジの背景色。薄いレッド。
+$pt-badge-lose-text: $pt-color-result-lose-strong; // 不正解バッジのラベル色。濃いレッドで高コントラスト。
+$pt-badge-padding-x: $pt-spacing-content-sm; // 左右の内側余白。`padding-left/right`に適用。
+$pt-badge-padding-y: $pt-spacing-content-xs; // 上下の内側余白。`padding-top/bottom`に適用。
+$pt-badge-radius: $pt-semantic-border-radius-sm; // 角丸の大きさ。`border-radius`に適用。
+$pt-button-primary-text-default: $pt-color-text-inverse; // ボタンのラベル色。`color`に適用。暗い背景上で白文字。
+$pt-button-primary-text-disabled: $pt-color-text-disabled; // 無効時のラベル色。コントラストを下げて操作不可を示す。
+$pt-button-primary-border-focus: $pt-color-border-focused; // フォーカスリングの色。`outline`に適用。アクセシビリティ用。
+$pt-button-secondary-bg-hover: $pt-color-surface-hovered; // ホバー時の背景色。薄いグレーで反応を示す。
+$pt-button-secondary-bg-pressed: $pt-color-surface-pressed; // 押下時の背景色。hoverより一段暗い。
+$pt-button-secondary-text-default: $pt-color-text-primary; // ラベル色。通常テキスト色を使用。
+$pt-button-secondary-text-disabled: $pt-color-text-disabled; // 無効時のラベル色。
+$pt-button-secondary-border-default: $pt-color-border-default; // 枠線色。`border-color`に適用。
+$pt-button-secondary-border-focus: $pt-color-border-focused; // フォーカスリングの色。
+$pt-button-ghost-bg-hover: $pt-color-surface-hovered; // ホバー時の背景色。薄いグレーで存在を示す。
+$pt-button-ghost-bg-pressed: $pt-color-surface-pressed; // 押下時の背景色。
+$pt-button-ghost-text-default: $pt-color-text-primary; // ラベル色。通常テキスト色。
+$pt-button-ghost-text-disabled: $pt-color-text-disabled; // 無効時のラベル色。
+$pt-button-ghost-border-focus: $pt-color-border-focused; // フォーカスリングの色。
+$pt-card-bg-default: $pt-color-surface-card; // カードの背景色。`background-color`に適用。
+$pt-card-bg-hover: $pt-color-surface-hovered; // ホバー時の背景色。クリック可能なカード用。
+$pt-card-border-default: $pt-color-border-subtle; // カードの枠線色。`border-color`に適用。
+$pt-card-text-title: $pt-color-text-primary; // カード見出しの色。`color`に適用。
+$pt-card-text-body: $pt-color-text-secondary; // カード本文の色。見出しより控えめ。
+$pt-card-shadow-flat: $pt-elevation-none; // 影なし。フラットなカード。`box-shadow`に適用。
+$pt-card-shadow-raised: $pt-elevation-raised; // 浮き上がった影。通常のカード。
+$pt-card-shadow-overlay: $pt-elevation-overlay; // 強い影。モーダル/ドロップダウン用。
+$pt-card-padding-sm: $pt-spacing-content-sm; // 小サイズの内側余白。`padding`に適用。
+$pt-card-padding-md: $pt-spacing-content-md; // 中サイズの内側余白。標準。
+$pt-card-padding-lg: $pt-spacing-content-lg; // 大サイズの内側余白。広々としたレイアウト用。
+$pt-card-radius: $pt-semantic-border-radius-lg; // 角丸の大きさ。`border-radius`に適用。

@@ -1,52 +1,62 @@
 {
-	"$description": "Tier 3: Badge Component Tokens",
+	"$description": "Tier 3: Badge Component Tokens. Describes WHERE each token applies.",
 	"badge": {
 		"$description": "Badge/chip tokens for status indicators",
 		"neutral": {
+			"$description": "Default badge variant",
 			"bg": {
 				"value": "{color.surface.hovered}",
-				"type": "color"
+				"type": "color",
+				"$description": "バッジの背景色。`background-color`に適用。"
 			},
 			"text": {
 				"value": "{color.text.primary}",
-				"type": "color"
+				"type": "color",
+				"$description": "バッジのラベル色。`color`に適用。"
 			}
 		},
 		"win": {
 			"$description": "Correct answer badge",
 			"bg": {
 				"value": "{color.result.win.subtle}",
-				"type": "color"
+				"type": "color",
+				"$description": "正解バッジの背景色。薄いライム。"
 			},
 			"text": {
 				"value": "{color.result.win.strong}",
-				"type": "color"
+				"type": "color",
+				"$description": "正解バッジのラベル色。濃いライムで高コントラスト。"
 			}
 		},
 		"lose": {
 			"$description": "Incorrect answer badge",
 			"bg": {
 				"value": "{color.result.lose.subtle}",
-				"type": "color"
+				"type": "color",
+				"$description": "不正解バッジの背景色。薄いレッド。"
 			},
 			"text": {
 				"value": "{color.result.lose.strong}",
-				"type": "color"
+				"type": "color",
+				"$description": "不正解バッジのラベル色。濃いレッドで高コントラスト。"
 			}
 		},
 		"padding": {
 			"x": {
 				"value": "{spacing.content.sm}",
-				"type": "spacing"
+				"type": "spacing",
+				"$description": "左右の内側余白。`padding-left/right`に適用。"
 			},
 			"y": {
 				"value": "{spacing.content.xs}",
-				"type": "spacing"
+				"type": "spacing",
+				"$description": "上下の内側余白。`padding-top/bottom`に適用。"
 			}
 		},
 		"radius": {
 			"value": "{semantic-border.radius.sm}",
-			"type": "borderRadius"
+			"type": "borderRadius",
+			"$description": "角丸の大きさ。`border-radius`に適用。"
 		}
 	}
 }
