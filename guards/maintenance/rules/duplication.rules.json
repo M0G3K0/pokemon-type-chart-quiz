@@ -1,0 +1,21 @@
+{
+	"threshold": 5,
+	"minLines": 5,
+	"minTokens": 50,
+	"ignore": [
+		"**/*.spec.ts",
+		"**/assets/**",
+		"**/dist/**",
+		"**/node_modules/**",
+		"**/guards/**",
+		"**/*.json",
+		"**/*.html",
+		"**/*.scss"
+	],
+	"reporters": [
+		"console",
+		"json"
+	],
+	"output": "./report/jscpd",
+	"mode": "strict"
+}
