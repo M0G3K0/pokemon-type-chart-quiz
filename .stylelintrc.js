@@ -3,17 +3,21 @@
  *
  * ガードレールのルールを統合:
  * - guards/design/rules/design-consistency.rules.js
+ * - guards/design/rules/token-naming.rules.js
  *
  * @see guards/design/guard/design-consistency.guard.md
+ * @see guards/design/guard/token-naming.guard.md
  */
 
 const designConsistencyRules = require('./guards/design/rules/design-consistency.rules.js');
+const tokenNamingRules = require('./guards/design/rules/token-naming.rules.js');
 
 module.exports = {
 	extends: ['stylelint-config-standard'],
 	rules: {
 		// === ガードレールから統合されたルール ===
 		...designConsistencyRules,
+		...tokenNamingRules.rules,
 
 		// === プロジェクト固有の設定 ===
 		'at-rule-no-unknown': [
@@ -34,6 +38,7 @@ module.exports = {
 				'color-no-hex': null,
 				'color-named': null,
 				'function-disallowed-list': null,
+				'declaration-property-value-disallowed-list': null,
 			},
 		},
 	],
