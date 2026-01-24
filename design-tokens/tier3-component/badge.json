@@ -1,0 +1,52 @@
+{
+	"$description": "Tier 3: Badge Component Tokens",
+	"badge": {
+		"$description": "Badge/chip tokens for status indicators",
+		"neutral": {
+			"bg": {
+				"value": "{color.surface.hovered}",
+				"type": "color"
+			},
+			"text": {
+				"value": "{color.text.primary}",
+				"type": "color"
+			}
+		},
+		"win": {
+			"$description": "Correct answer badge",
+			"bg": {
+				"value": "{color.result.win.subtle}",
+				"type": "color"
+			},
+			"text": {
+				"value": "{color.result.win.strong}",
+				"type": "color"
+			}
+		},
+		"lose": {
+			"$description": "Incorrect answer badge",
+			"bg": {
+				"value": "{color.result.lose.subtle}",
+				"type": "color"
+			},
+			"text": {
+				"value": "{color.result.lose.strong}",
+				"type": "color"
+			}
+		},
+		"padding": {
+			"x": {
+				"value": "{spacing.content.sm}",
+				"type": "spacing"
+			},
+			"y": {
+				"value": "{spacing.content.xs}",
+				"type": "spacing"
+			}
+		},
+		"radius": {
+			"value": "{semantic-border.radius.sm}",
+			"type": "borderRadius"
+		}
+	}
+}
