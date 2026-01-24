@@ -1,33 +1,36 @@
 ## 💡 概要
-CIでテストが実行されていなかったため、ユニットテスト基盤を整備してCI上で自動テストを有効化します。
+
+Vercelデプロイメントのセットアップと依存関係の競合を解決しました。
 
 ## 📝 変更内容
-- Vitest + jsdom によるユニットテスト環境のセットアップ
-- `vitest.config.ts` の作成（jsdom環境設定）
-- `src/test-setup.ts` でAngular TestBed環境の初期化
-- 基本的なスモークテストを追加（`app.spec.ts`, `type-chart.spec.ts`）
-- `.github/workflows/pr-validation.yml` のテストステップを再有効化
-- 必要な依存関係を追加（`@testing-library/angular`, `@testing-library/dom`, `jsdom` など）
-- Huskyのpre-commitをWindows互換のエンコーディングに修正
+
+- Vercelプロジェクトの作成とGitHubリポジトリ接続
+- `eslint-plugin-tailwindcss` を削除（Tailwind v4非対応のため）
+- Node.jsエンジンバージョンを `>=22.0.0` に設定
+- READMEにデプロイURLとバッジを追加
+- `.gitignore` に `.vercel` ディレクトリを追加
 
 ## 🔗 関連Issue
-Closes #4
+
+Closes #7
 
 ## 📷 スクリーンショット（該当する場合）
-N/A
+
+N/A - インフラ変更のみ
 
 ## ✅ チェックリスト
+
 - [x] ビルドが成功する（`npm run build`）
 - [x] Lintエラーがない（`npm run lint`）
 - [x] テストが通る（`npm run test`）
 - [x] コミットメッセージが規約に従っている（`feat:`, `fix:`, `chore:`など）
 - [x] ブランチ名が規約に従っている（`feature/`, `fix/`, `chore/`など）
-- [ ] 必要に応じてドキュメントを更新した
+- [x] 必要に応じてドキュメントを更新した
 
 ## 📌 補足事項
-- 現在は基本的なスモークテストのみ追加しています
-- 詳細なコンポーネントテストやE2Eテストは別のIssueで対応予定
-- jsdomを採用した理由：軽量で高速なため、CIでの実行に適している
+
+- Vercel Production URL: https://pokemon-type-chart-quiz.vercel.app
+- `eslint-plugin-tailwindcss` はTailwind v4対応版がリリースされたら再追加予定
 
 --- 
 

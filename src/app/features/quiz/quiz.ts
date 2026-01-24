@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 import { PokemonService } from '../../domain/pokemon.service';
 import { Pokemon } from '../../domain/pokemon.schema';
 import { CardComponent } from '../../ui/card/card';
-import { BadgeComponent } from '../../ui/badge/badge';
-import { ButtonComponent } from '../../ui/button/button';
+import { TypeBadgeComponent } from './components/type-badge';
+import { ButtonComponent } from '../../ui/pt-button/pt-button';
 import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from '../../domain/type-chart';
 
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule, CardComponent, BadgeComponent, ButtonComponent],
+  imports: [CommonModule, CardComponent, TypeBadgeComponent, ButtonComponent],
   template: `
     <div class="max-w-xl mx-auto py-8 px-4">
       <app-card *ngIf="currentPokemon() as pokemon">
@@ -60,9 +60,9 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
                 <div class="text-left">
                   <h2 class="text-xl font-extrabold">{{ pokemon.name }}</h2>
                   <div class="flex gap-1.5 mt-1">
-                    <app-badge *ngFor="let t of pokemon.types; let i = index" [type]="t" class="scale-90 origin-left">
+                    <app-type-badge *ngFor="let t of pokemon.types; let i = index" [type]="t" class="scale-90 origin-left">
                       {{ pokemon.jaTypes[i] }}
-                    </app-badge>
+                    </app-type-badge>
                   </div>
                 </div>
               </div>
@@ -104,14 +104,14 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
 
           <!-- Actions -->
           <div class="h-14">
-            <app-button 
+            <pt-button 
               *ngIf="isChecked()" 
               variant="primary" 
-              (onClick)="next()"
+              (buttonClick)="next()"
               class="w-full"
             >
               つぎの問題へ
-            </app-button>
+            </pt-button>
           </div>
         </div>
       </app-card>
