@@ -2,7 +2,6 @@
 	"$description": "Tier 1: Primitive Color Tokens - Raw color values. Describe physical properties, not usage.",
 	"color": {
 		"gray": {
-			"$description": "Neutral gray scale. Slightly cool-toned for modern appearance.",
 			"50": {
 				"value": "#f9fafb",
 				"type": "color",
@@ -57,10 +56,10 @@
 				"value": "#030712",
 				"type": "color",
 				"$description": "最も暗いグレー。純黒に非常に近い。"
-			}
+			},
+			"$description": "Neutral gray scale. Slightly cool-toned for modern appearance."
 		},
 		"lime": {
-			"$description": "Lime green scale. Yellow-green hue for positive feedback.",
 			"50": {
 				"value": "#f7fee7",
 				"type": "color",
@@ -115,10 +114,10 @@
 				"value": "#1a2e05",
 				"type": "color",
 				"$description": "最も暗いライム。"
-			}
+			},
+			"$description": "Lime green scale. Yellow-green hue for positive feedback."
 		},
 		"red": {
-			"$description": "Red scale. Warm red for negative feedback or alerts.",
 			"50": {
 				"value": "#fef2f2",
 				"type": "color",
@@ -173,845 +172,1064 @@
 				"value": "#450a0a",
 				"type": "color",
 				"$description": "最も暗いレッド。"
-			}
+			},
+			"$description": "Red scale. Warm red for negative feedback or alerts."
 		},
 		"white": {
 			"value": "#ffffff",
-			"type": "color"
+			"type": "color",
+			"$description": "物理的な純白。#FFFFFF。最大輝度。"
 		},
 		"black": {
 			"value": "#000000",
-			"type": "color"
+			"type": "color",
+			"$description": "物理的な純黒。#000000。最小輝度。"
 		},
 		"pokemon": {
-			"$description": "Pokemon type colors with full scale",
+			"$description": "Pokemon type colors with full 11-step scale. Physical color values only.",
 			"normal": {
 				"50": {
 					"value": "#f6f6f2",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なノーマルタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#ecece4",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なノーマルタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#d8d7c6",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なノーマルタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#c4c3a9",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なノーマルタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#b0af8b",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なノーマルタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#A8A77A",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なノーマルタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#868662",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なノーマルタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#656449",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なノーマルタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#434331",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なノーマルタイプの極暗色。"
 				},
 				"900": {
 					"value": "#222118",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なノーマルタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#11110c",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なノーマルタイプの最暗色。"
+				},
+				"$description": "ノーマルタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"fire": {
 				"50": {
 					"value": "#fef2ea",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なほのおタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#fce6d5",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なほのおタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#f9ccac",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なほのおタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#f5b282",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なほのおタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#f29959",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なほのおタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#EE8130",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なほのおタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#be6726",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なほのおタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#8f4d1d",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なほのおタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#5f3413",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なほのおタイプの極暗色。"
 				},
 				"900": {
 					"value": "#301a0a",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なほのおタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#180d05",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なほのおタイプの最暗色。"
+				},
+				"$description": "ほのおタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"water": {
 				"50": {
 					"value": "#eff4fe",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なみずタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#e0e9fc",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なみずタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#c1d2fa",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なみずタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#a1bcf7",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なみずタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#82a6f4",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なみずタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#6390F0",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なみずタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#4f73c0",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なみずタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#3b5690",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なみずタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#283a60",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なみずタイプの極暗色。"
 				},
 				"900": {
 					"value": "#141d30",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なみずタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#0a0e18",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なみずタイプの最暗色。"
+				},
+				"$description": "みずタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"electric": {
 				"50": {
 					"value": "#fefbea",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なでんきタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#fef6d5",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なでんきタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#fdecaa",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なでんきタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#fce280",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なでんきタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#fad956",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なでんきタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#F7D02C",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なでんきタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#c6a623",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なでんきタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#947d1a",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なでんきタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#635312",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なでんきタイプの極暗色。"
 				},
 				"900": {
 					"value": "#312a09",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なでんきタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#191504",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なでんきタイプの最暗色。"
+				},
+				"$description": "でんきタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"grass": {
 				"50": {
 					"value": "#f2f9ed",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なくさタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#e4f4db",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なくさタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#c9e9b8",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なくさタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#aede94",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なくさタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#94d371",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なくさタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#7AC74C",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なくさタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#629f3d",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なくさタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#49772e",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なくさタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#314f1e",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なくさタイプの極暗色。"
 				},
 				"900": {
 					"value": "#18280f",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なくさタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#0c1408",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なくさタイプの最暗色。"
+				},
+				"$description": "くさタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"ice": {
 				"50": {
 					"value": "#f4fbfb",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なこおりタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#eaf7f7",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なこおりタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#d5efee",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なこおりタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#c0e7e5",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なこおりタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#abe0dd",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なこおりタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#96D9D6",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なこおりタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#78aeab",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なこおりタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#5a8280",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なこおりタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#3c5756",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なこおりタイプの極暗色。"
 				},
 				"900": {
 					"value": "#1e2b2b",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なこおりタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#0f1616",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なこおりタイプの最暗色。"
+				},
+				"$description": "こおりタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"fighting": {
 				"50": {
 					"value": "#f9eaeb",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なかくとうタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#f3d5d6",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なかくとうタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#e7abad",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なかくとうタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#db8285",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なかくとうタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#cf585c",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なかくとうタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#C22E28",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なかくとうタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#9b2520",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なかくとうタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#741c18",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なかくとうタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#4e1210",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なかくとうタイプの極暗色。"
 				},
 				"900": {
 					"value": "#270908",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なかくとうタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#130504",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なかくとうタイプの最暗色。"
+				},
+				"$description": "かくとうタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"poison": {
 				"50": {
 					"value": "#f6ecf6",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的などくタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#edd8ec",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的などくタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#dbb2da",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的などくタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#c98cc7",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的などくタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#b765b5",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的などくタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#A33EA1",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的などくタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#823281",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的などくタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#622561",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的などくタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#411940",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的などくタイプの極暗色。"
 				},
 				"900": {
 					"value": "#210c20",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的などくタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#100610",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的などくタイプの最暗色。"
+				},
+				"$description": "どくタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"ground": {
 				"50": {
 					"value": "#fcf9f0",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なじめんタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#f9f2e0",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なじめんタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#f3e6c1",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なじめんタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#edd9a3",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なじめんタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#e7cd84",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なじめんタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#E2BF65",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なじめんタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#b59951",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なじめんタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#88733d",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なじめんタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#5a4c28",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なじめんタイプの極暗色。"
 				},
 				"900": {
 					"value": "#2d2614",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なじめんタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#17130a",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なじめんタイプの最暗色。"
+				},
+				"$description": "じめんタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"flying": {
 				"50": {
 					"value": "#f6f4fe",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なひこうタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#ede9fc",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なひこうタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#dbd2f9",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なひこうタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#c9bcf6",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なひこうタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#b7a5f3",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なひこうタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#A98FF3",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なひこうタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#8772c2",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なひこうタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#655692",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なひこうタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#443961",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なひこうタイプの極暗色。"
 				},
 				"900": {
 					"value": "#221d31",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なひこうタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#110e18",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なひこうタイプの最暗色。"
+				},
+				"$description": "ひこうタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"psychic": {
 				"50": {
 					"value": "#ffeef3",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なエスパータイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#ffdde7",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なエスパータイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#ffbbce",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なエスパータイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#ff99b6",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なエスパータイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#fb779e",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なエスパータイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#F95587",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なエスパータイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#c7446c",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なエスパータイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#953351",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なエスパータイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#642236",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なエスパータイプの極暗色。"
 				},
 				"900": {
 					"value": "#32111b",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なエスパータイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#19080d",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なエスパータイプの最暗色。"
+				},
+				"$description": "エスパータイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"bug": {
 				"50": {
 					"value": "#f6f8e8",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なむしタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#edf1d1",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なむしタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#dce4a3",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なむしタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#cad676",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なむしタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#b8c948",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なむしタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#A6B91A",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なむしタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#859415",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なむしタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#646f10",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なむしタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#424a0b",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なむしタイプの極暗色。"
 				},
 				"900": {
 					"value": "#212505",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なむしタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#101203",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なむしタイプの最暗色。"
+				},
+				"$description": "むしタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"rock": {
 				"50": {
 					"value": "#f8f6eb",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的ないわタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#f1ecd7",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的ないわタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#e3d9af",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的ないわタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#d5c687",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的ないわタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#c6b35e",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的ないわタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#B6A136",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的ないわタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#92812b",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的ないわタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#6d6120",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的ないわタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#494016",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的ないわタイプの極暗色。"
 				},
 				"900": {
 					"value": "#24200b",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的ないわタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#121005",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的ないわタイプの最暗色。"
+				},
+				"$description": "いわタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"ghost": {
 				"50": {
 					"value": "#f1eef5",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なゴーストタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#e3deeb",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なゴーストタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#c7bdd6",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なゴーストタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#ab9cc2",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なゴーストタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#8f7bad",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なゴーストタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#735797",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なゴーストタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#5c4679",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なゴーストタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#45345b",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なゴーストタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#2e233c",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なゴーストタイプの極暗色。"
 				},
 				"900": {
 					"value": "#17111e",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なゴーストタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#0b090f",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なゴーストタイプの最暗色。"
+				},
+				"$description": "ゴーストタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"dragon": {
 				"50": {
 					"value": "#f1ebfe",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なドラゴンタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#e2d7fe",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なドラゴンタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#c6affd",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なドラゴンタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#a986fc",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なドラゴンタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#8d5dfc",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なドラゴンタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#6F35FC",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なドラゴンタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#592aca",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なドラゴンタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#431f97",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なドラゴンタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#2c1565",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なドラゴンタイプの極暗色。"
 				},
 				"900": {
 					"value": "#160b32",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なドラゴンタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#0b0519",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なドラゴンタイプの最暗色。"
+				},
+				"$description": "ドラゴンタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"steel": {
 				"50": {
 					"value": "#f8f8fa",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なはがねタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#f1f1f5",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なはがねタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#e2e2eb",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なはがねタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#d4d4e1",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なはがねタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#c5c5d8",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なはがねタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#B7B7CE",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なはがねタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#9292a5",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なはがねタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#6e6e7c",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なはがねタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#494952",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なはがねタイプの極暗色。"
 				},
 				"900": {
 					"value": "#252529",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なはがねタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#121215",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なはがねタイプの最暗色。"
+				},
+				"$description": "はがねタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"dark": {
 				"50": {
 					"value": "#f1eeed",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なあくタイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#e3dedb",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なあくタイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#c6bcb7",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なあくタイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#a99b93",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なあくタイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#8d796e",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なあくタイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#705746",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なあくタイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#5a4638",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なあくタイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#43342a",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なあくタイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#2d231c",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なあくタイプの極暗色。"
 				},
 				"900": {
 					"value": "#16110e",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なあくタイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#0b0907",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なあくタイプの最暗色。"
+				},
+				"$description": "あくタイプのカラースケール。公式ゲームカラーベース。"
 			},
 			"fairy": {
 				"50": {
 					"value": "#fbf3f7",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なフェアリータイプの最明色。背景用。ほぼ白に近い。"
 				},
 				"100": {
 					"value": "#f7e7ee",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なフェアリータイプの極明色。薄い背景用。"
 				},
 				"200": {
 					"value": "#efcedd",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なフェアリータイプの明色。アクセント背景用。"
 				},
 				"300": {
 					"value": "#e7b6cc",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なフェアリータイプの中明色。視認性あり。"
 				},
 				"400": {
 					"value": "#df9dba",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なフェアリータイプの鮮色。アクセントに適する。"
 				},
 				"500": {
 					"value": "#D685AD",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なフェアリータイプの基準色。バッジやアイコン用。"
 				},
 				"600": {
 					"value": "#ab6a8a",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なフェアリータイプのやや暗色。高コントラスト確保可能。"
 				},
 				"700": {
 					"value": "#805068",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なフェアリータイプの暗色。テキスト用。白背景上で高コントラスト。"
 				},
 				"800": {
 					"value": "#563545",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なフェアリータイプの極暗色。"
 				},
 				"900": {
 					"value": "#2b1b23",
-					"type": "color"
+					"type": "color",
+					"$description": "物理的なフェアリータイプのほぼ黒。"
 				},
 				"950": {
 					"value": "#150d11",
-					"type": "color"
-				}
+					"type": "color",
+					"$description": "物理的なフェアリータイプの最暗色。"
+				},
+				"$description": "フェアリータイプのカラースケール。公式ゲームカラーベース。"
 			}
 		}
 	}

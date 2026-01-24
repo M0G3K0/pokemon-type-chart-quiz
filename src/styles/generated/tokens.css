@@ -36,206 +36,206 @@
   --pt-color-red-800: #991b1b; /** 非常に暗いレッド。 */
   --pt-color-red-900: #7f1d1d; /** ほぼ黒に近いレッド。 */
   --pt-color-red-950: #450a0a; /** 最も暗いレッド。 */
-  --pt-color-white: #ffffff;
-  --pt-color-black: #000000;
-  --pt-color-pokemon-normal-50: #f6f6f2;
-  --pt-color-pokemon-normal-100: #ecece4;
-  --pt-color-pokemon-normal-200: #d8d7c6;
-  --pt-color-pokemon-normal-300: #c4c3a9;
-  --pt-color-pokemon-normal-400: #b0af8b;
-  --pt-color-pokemon-normal-500: #a8a77a;
-  --pt-color-pokemon-normal-600: #868662;
-  --pt-color-pokemon-normal-700: #656449;
-  --pt-color-pokemon-normal-800: #434331;
-  --pt-color-pokemon-normal-900: #222118;
-  --pt-color-pokemon-normal-950: #11110c;
-  --pt-color-pokemon-fire-50: #fef2ea;
-  --pt-color-pokemon-fire-100: #fce6d5;
-  --pt-color-pokemon-fire-200: #f9ccac;
-  --pt-color-pokemon-fire-300: #f5b282;
-  --pt-color-pokemon-fire-400: #f29959;
-  --pt-color-pokemon-fire-500: #ee8130;
-  --pt-color-pokemon-fire-600: #be6726;
-  --pt-color-pokemon-fire-700: #8f4d1d;
-  --pt-color-pokemon-fire-800: #5f3413;
-  --pt-color-pokemon-fire-900: #301a0a;
-  --pt-color-pokemon-fire-950: #180d05;
-  --pt-color-pokemon-water-50: #eff4fe;
-  --pt-color-pokemon-water-100: #e0e9fc;
-  --pt-color-pokemon-water-200: #c1d2fa;
-  --pt-color-pokemon-water-300: #a1bcf7;
-  --pt-color-pokemon-water-400: #82a6f4;
-  --pt-color-pokemon-water-500: #6390f0;
-  --pt-color-pokemon-water-600: #4f73c0;
-  --pt-color-pokemon-water-700: #3b5690;
-  --pt-color-pokemon-water-800: #283a60;
-  --pt-color-pokemon-water-900: #141d30;
-  --pt-color-pokemon-water-950: #0a0e18;
-  --pt-color-pokemon-electric-50: #fefbea;
-  --pt-color-pokemon-electric-100: #fef6d5;
-  --pt-color-pokemon-electric-200: #fdecaa;
-  --pt-color-pokemon-electric-300: #fce280;
-  --pt-color-pokemon-electric-400: #fad956;
-  --pt-color-pokemon-electric-500: #f7d02c;
-  --pt-color-pokemon-electric-600: #c6a623;
-  --pt-color-pokemon-electric-700: #947d1a;
-  --pt-color-pokemon-electric-800: #635312;
-  --pt-color-pokemon-electric-900: #312a09;
-  --pt-color-pokemon-electric-950: #191504;
-  --pt-color-pokemon-grass-50: #f2f9ed;
-  --pt-color-pokemon-grass-100: #e4f4db;
-  --pt-color-pokemon-grass-200: #c9e9b8;
-  --pt-color-pokemon-grass-300: #aede94;
-  --pt-color-pokemon-grass-400: #94d371;
-  --pt-color-pokemon-grass-500: #7ac74c;
-  --pt-color-pokemon-grass-600: #629f3d;
-  --pt-color-pokemon-grass-700: #49772e;
-  --pt-color-pokemon-grass-800: #314f1e;
-  --pt-color-pokemon-grass-900: #18280f;
-  --pt-color-pokemon-grass-950: #0c1408;
-  --pt-color-pokemon-ice-50: #f4fbfb;
-  --pt-color-pokemon-ice-100: #eaf7f7;
-  --pt-color-pokemon-ice-200: #d5efee;
-  --pt-color-pokemon-ice-300: #c0e7e5;
-  --pt-color-pokemon-ice-400: #abe0dd;
-  --pt-color-pokemon-ice-500: #96d9d6;
-  --pt-color-pokemon-ice-600: #78aeab;
-  --pt-color-pokemon-ice-700: #5a8280;
-  --pt-color-pokemon-ice-800: #3c5756;
-  --pt-color-pokemon-ice-900: #1e2b2b;
-  --pt-color-pokemon-ice-950: #0f1616;
-  --pt-color-pokemon-fighting-50: #f9eaeb;
-  --pt-color-pokemon-fighting-100: #f3d5d6;
-  --pt-color-pokemon-fighting-200: #e7abad;
-  --pt-color-pokemon-fighting-300: #db8285;
-  --pt-color-pokemon-fighting-400: #cf585c;
-  --pt-color-pokemon-fighting-500: #c22e28;
-  --pt-color-pokemon-fighting-600: #9b2520;
-  --pt-color-pokemon-fighting-700: #741c18;
-  --pt-color-pokemon-fighting-800: #4e1210;
-  --pt-color-pokemon-fighting-900: #270908;
-  --pt-color-pokemon-fighting-950: #130504;
-  --pt-color-pokemon-poison-50: #f6ecf6;
-  --pt-color-pokemon-poison-100: #edd8ec;
-  --pt-color-pokemon-poison-200: #dbb2da;
-  --pt-color-pokemon-poison-300: #c98cc7;
-  --pt-color-pokemon-poison-400: #b765b5;
-  --pt-color-pokemon-poison-500: #a33ea1;
-  --pt-color-pokemon-poison-600: #823281;
-  --pt-color-pokemon-poison-700: #622561;
-  --pt-color-pokemon-poison-800: #411940;
-  --pt-color-pokemon-poison-900: #210c20;
-  --pt-color-pokemon-poison-950: #100610;
-  --pt-color-pokemon-ground-50: #fcf9f0;
-  --pt-color-pokemon-ground-100: #f9f2e0;
-  --pt-color-pokemon-ground-200: #f3e6c1;
-  --pt-color-pokemon-ground-300: #edd9a3;
-  --pt-color-pokemon-ground-400: #e7cd84;
-  --pt-color-pokemon-ground-500: #e2bf65;
-  --pt-color-pokemon-ground-600: #b59951;
-  --pt-color-pokemon-ground-700: #88733d;
-  --pt-color-pokemon-ground-800: #5a4c28;
-  --pt-color-pokemon-ground-900: #2d2614;
-  --pt-color-pokemon-ground-950: #17130a;
-  --pt-color-pokemon-flying-50: #f6f4fe;
-  --pt-color-pokemon-flying-100: #ede9fc;
-  --pt-color-pokemon-flying-200: #dbd2f9;
-  --pt-color-pokemon-flying-300: #c9bcf6;
-  --pt-color-pokemon-flying-400: #b7a5f3;
-  --pt-color-pokemon-flying-500: #a98ff3;
-  --pt-color-pokemon-flying-600: #8772c2;
-  --pt-color-pokemon-flying-700: #655692;
-  --pt-color-pokemon-flying-800: #443961;
-  --pt-color-pokemon-flying-900: #221d31;
-  --pt-color-pokemon-flying-950: #110e18;
-  --pt-color-pokemon-psychic-50: #ffeef3;
-  --pt-color-pokemon-psychic-100: #ffdde7;
-  --pt-color-pokemon-psychic-200: #ffbbce;
-  --pt-color-pokemon-psychic-300: #ff99b6;
-  --pt-color-pokemon-psychic-400: #fb779e;
-  --pt-color-pokemon-psychic-500: #f95587;
-  --pt-color-pokemon-psychic-600: #c7446c;
-  --pt-color-pokemon-psychic-700: #953351;
-  --pt-color-pokemon-psychic-800: #642236;
-  --pt-color-pokemon-psychic-900: #32111b;
-  --pt-color-pokemon-psychic-950: #19080d;
-  --pt-color-pokemon-bug-50: #f6f8e8;
-  --pt-color-pokemon-bug-100: #edf1d1;
-  --pt-color-pokemon-bug-200: #dce4a3;
-  --pt-color-pokemon-bug-300: #cad676;
-  --pt-color-pokemon-bug-400: #b8c948;
-  --pt-color-pokemon-bug-500: #a6b91a;
-  --pt-color-pokemon-bug-600: #859415;
-  --pt-color-pokemon-bug-700: #646f10;
-  --pt-color-pokemon-bug-800: #424a0b;
-  --pt-color-pokemon-bug-900: #212505;
-  --pt-color-pokemon-bug-950: #101203;
-  --pt-color-pokemon-rock-50: #f8f6eb;
-  --pt-color-pokemon-rock-100: #f1ecd7;
-  --pt-color-pokemon-rock-200: #e3d9af;
-  --pt-color-pokemon-rock-300: #d5c687;
-  --pt-color-pokemon-rock-400: #c6b35e;
-  --pt-color-pokemon-rock-500: #b6a136;
-  --pt-color-pokemon-rock-600: #92812b;
-  --pt-color-pokemon-rock-700: #6d6120;
-  --pt-color-pokemon-rock-800: #494016;
-  --pt-color-pokemon-rock-900: #24200b;
-  --pt-color-pokemon-rock-950: #121005;
-  --pt-color-pokemon-ghost-50: #f1eef5;
-  --pt-color-pokemon-ghost-100: #e3deeb;
-  --pt-color-pokemon-ghost-200: #c7bdd6;
-  --pt-color-pokemon-ghost-300: #ab9cc2;
-  --pt-color-pokemon-ghost-400: #8f7bad;
-  --pt-color-pokemon-ghost-500: #735797;
-  --pt-color-pokemon-ghost-600: #5c4679;
-  --pt-color-pokemon-ghost-700: #45345b;
-  --pt-color-pokemon-ghost-800: #2e233c;
-  --pt-color-pokemon-ghost-900: #17111e;
-  --pt-color-pokemon-ghost-950: #0b090f;
-  --pt-color-pokemon-dragon-50: #f1ebfe;
-  --pt-color-pokemon-dragon-100: #e2d7fe;
-  --pt-color-pokemon-dragon-200: #c6affd;
-  --pt-color-pokemon-dragon-300: #a986fc;
-  --pt-color-pokemon-dragon-400: #8d5dfc;
-  --pt-color-pokemon-dragon-500: #6f35fc;
-  --pt-color-pokemon-dragon-600: #592aca;
-  --pt-color-pokemon-dragon-700: #431f97;
-  --pt-color-pokemon-dragon-800: #2c1565;
-  --pt-color-pokemon-dragon-900: #160b32;
-  --pt-color-pokemon-dragon-950: #0b0519;
-  --pt-color-pokemon-steel-50: #f8f8fa;
-  --pt-color-pokemon-steel-100: #f1f1f5;
-  --pt-color-pokemon-steel-200: #e2e2eb;
-  --pt-color-pokemon-steel-300: #d4d4e1;
-  --pt-color-pokemon-steel-400: #c5c5d8;
-  --pt-color-pokemon-steel-500: #b7b7ce;
-  --pt-color-pokemon-steel-600: #9292a5;
-  --pt-color-pokemon-steel-700: #6e6e7c;
-  --pt-color-pokemon-steel-800: #494952;
-  --pt-color-pokemon-steel-900: #252529;
-  --pt-color-pokemon-steel-950: #121215;
-  --pt-color-pokemon-dark-50: #f1eeed;
-  --pt-color-pokemon-dark-100: #e3dedb;
-  --pt-color-pokemon-dark-200: #c6bcb7;
-  --pt-color-pokemon-dark-300: #a99b93;
-  --pt-color-pokemon-dark-400: #8d796e;
-  --pt-color-pokemon-dark-500: #705746;
-  --pt-color-pokemon-dark-600: #5a4638;
-  --pt-color-pokemon-dark-700: #43342a;
-  --pt-color-pokemon-dark-800: #2d231c;
-  --pt-color-pokemon-dark-900: #16110e;
-  --pt-color-pokemon-dark-950: #0b0907;
-  --pt-color-pokemon-fairy-50: #fbf3f7;
-  --pt-color-pokemon-fairy-100: #f7e7ee;
-  --pt-color-pokemon-fairy-200: #efcedd;
-  --pt-color-pokemon-fairy-300: #e7b6cc;
-  --pt-color-pokemon-fairy-400: #df9dba;
-  --pt-color-pokemon-fairy-500: #d685ad;
-  --pt-color-pokemon-fairy-600: #ab6a8a;
-  --pt-color-pokemon-fairy-700: #805068;
-  --pt-color-pokemon-fairy-800: #563545;
-  --pt-color-pokemon-fairy-900: #2b1b23;
-  --pt-color-pokemon-fairy-950: #150d11;
+  --pt-color-white: #ffffff; /** 物理的な純白。#FFFFFF。最大輝度。 */
+  --pt-color-black: #000000; /** 物理的な純黒。#000000。最小輝度。 */
+  --pt-color-pokemon-normal-50: #f6f6f2; /** 物理的なノーマルタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-normal-100: #ecece4; /** 物理的なノーマルタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-normal-200: #d8d7c6; /** 物理的なノーマルタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-normal-300: #c4c3a9; /** 物理的なノーマルタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-normal-400: #b0af8b; /** 物理的なノーマルタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-normal-500: #a8a77a; /** 物理的なノーマルタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-normal-600: #868662; /** 物理的なノーマルタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-normal-700: #656449; /** 物理的なノーマルタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-normal-800: #434331; /** 物理的なノーマルタイプの極暗色。 */
+  --pt-color-pokemon-normal-900: #222118; /** 物理的なノーマルタイプのほぼ黒。 */
+  --pt-color-pokemon-normal-950: #11110c; /** 物理的なノーマルタイプの最暗色。 */
+  --pt-color-pokemon-fire-50: #fef2ea; /** 物理的なほのおタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-fire-100: #fce6d5; /** 物理的なほのおタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-fire-200: #f9ccac; /** 物理的なほのおタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-fire-300: #f5b282; /** 物理的なほのおタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-fire-400: #f29959; /** 物理的なほのおタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-fire-500: #ee8130; /** 物理的なほのおタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-fire-600: #be6726; /** 物理的なほのおタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-fire-700: #8f4d1d; /** 物理的なほのおタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-fire-800: #5f3413; /** 物理的なほのおタイプの極暗色。 */
+  --pt-color-pokemon-fire-900: #301a0a; /** 物理的なほのおタイプのほぼ黒。 */
+  --pt-color-pokemon-fire-950: #180d05; /** 物理的なほのおタイプの最暗色。 */
+  --pt-color-pokemon-water-50: #eff4fe; /** 物理的なみずタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-water-100: #e0e9fc; /** 物理的なみずタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-water-200: #c1d2fa; /** 物理的なみずタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-water-300: #a1bcf7; /** 物理的なみずタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-water-400: #82a6f4; /** 物理的なみずタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-water-500: #6390f0; /** 物理的なみずタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-water-600: #4f73c0; /** 物理的なみずタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-water-700: #3b5690; /** 物理的なみずタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-water-800: #283a60; /** 物理的なみずタイプの極暗色。 */
+  --pt-color-pokemon-water-900: #141d30; /** 物理的なみずタイプのほぼ黒。 */
+  --pt-color-pokemon-water-950: #0a0e18; /** 物理的なみずタイプの最暗色。 */
+  --pt-color-pokemon-electric-50: #fefbea; /** 物理的なでんきタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-electric-100: #fef6d5; /** 物理的なでんきタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-electric-200: #fdecaa; /** 物理的なでんきタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-electric-300: #fce280; /** 物理的なでんきタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-electric-400: #fad956; /** 物理的なでんきタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-electric-500: #f7d02c; /** 物理的なでんきタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-electric-600: #c6a623; /** 物理的なでんきタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-electric-700: #947d1a; /** 物理的なでんきタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-electric-800: #635312; /** 物理的なでんきタイプの極暗色。 */
+  --pt-color-pokemon-electric-900: #312a09; /** 物理的なでんきタイプのほぼ黒。 */
+  --pt-color-pokemon-electric-950: #191504; /** 物理的なでんきタイプの最暗色。 */
+  --pt-color-pokemon-grass-50: #f2f9ed; /** 物理的なくさタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-grass-100: #e4f4db; /** 物理的なくさタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-grass-200: #c9e9b8; /** 物理的なくさタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-grass-300: #aede94; /** 物理的なくさタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-grass-400: #94d371; /** 物理的なくさタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-grass-500: #7ac74c; /** 物理的なくさタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-grass-600: #629f3d; /** 物理的なくさタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-grass-700: #49772e; /** 物理的なくさタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-grass-800: #314f1e; /** 物理的なくさタイプの極暗色。 */
+  --pt-color-pokemon-grass-900: #18280f; /** 物理的なくさタイプのほぼ黒。 */
+  --pt-color-pokemon-grass-950: #0c1408; /** 物理的なくさタイプの最暗色。 */
+  --pt-color-pokemon-ice-50: #f4fbfb; /** 物理的なこおりタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-ice-100: #eaf7f7; /** 物理的なこおりタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-ice-200: #d5efee; /** 物理的なこおりタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-ice-300: #c0e7e5; /** 物理的なこおりタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-ice-400: #abe0dd; /** 物理的なこおりタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-ice-500: #96d9d6; /** 物理的なこおりタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-ice-600: #78aeab; /** 物理的なこおりタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-ice-700: #5a8280; /** 物理的なこおりタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-ice-800: #3c5756; /** 物理的なこおりタイプの極暗色。 */
+  --pt-color-pokemon-ice-900: #1e2b2b; /** 物理的なこおりタイプのほぼ黒。 */
+  --pt-color-pokemon-ice-950: #0f1616; /** 物理的なこおりタイプの最暗色。 */
+  --pt-color-pokemon-fighting-50: #f9eaeb; /** 物理的なかくとうタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-fighting-100: #f3d5d6; /** 物理的なかくとうタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-fighting-200: #e7abad; /** 物理的なかくとうタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-fighting-300: #db8285; /** 物理的なかくとうタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-fighting-400: #cf585c; /** 物理的なかくとうタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-fighting-500: #c22e28; /** 物理的なかくとうタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-fighting-600: #9b2520; /** 物理的なかくとうタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-fighting-700: #741c18; /** 物理的なかくとうタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-fighting-800: #4e1210; /** 物理的なかくとうタイプの極暗色。 */
+  --pt-color-pokemon-fighting-900: #270908; /** 物理的なかくとうタイプのほぼ黒。 */
+  --pt-color-pokemon-fighting-950: #130504; /** 物理的なかくとうタイプの最暗色。 */
+  --pt-color-pokemon-poison-50: #f6ecf6; /** 物理的などくタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-poison-100: #edd8ec; /** 物理的などくタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-poison-200: #dbb2da; /** 物理的などくタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-poison-300: #c98cc7; /** 物理的などくタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-poison-400: #b765b5; /** 物理的などくタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-poison-500: #a33ea1; /** 物理的などくタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-poison-600: #823281; /** 物理的などくタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-poison-700: #622561; /** 物理的などくタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-poison-800: #411940; /** 物理的などくタイプの極暗色。 */
+  --pt-color-pokemon-poison-900: #210c20; /** 物理的などくタイプのほぼ黒。 */
+  --pt-color-pokemon-poison-950: #100610; /** 物理的などくタイプの最暗色。 */
+  --pt-color-pokemon-ground-50: #fcf9f0; /** 物理的なじめんタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-ground-100: #f9f2e0; /** 物理的なじめんタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-ground-200: #f3e6c1; /** 物理的なじめんタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-ground-300: #edd9a3; /** 物理的なじめんタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-ground-400: #e7cd84; /** 物理的なじめんタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-ground-500: #e2bf65; /** 物理的なじめんタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-ground-600: #b59951; /** 物理的なじめんタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-ground-700: #88733d; /** 物理的なじめんタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-ground-800: #5a4c28; /** 物理的なじめんタイプの極暗色。 */
+  --pt-color-pokemon-ground-900: #2d2614; /** 物理的なじめんタイプのほぼ黒。 */
+  --pt-color-pokemon-ground-950: #17130a; /** 物理的なじめんタイプの最暗色。 */
+  --pt-color-pokemon-flying-50: #f6f4fe; /** 物理的なひこうタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-flying-100: #ede9fc; /** 物理的なひこうタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-flying-200: #dbd2f9; /** 物理的なひこうタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-flying-300: #c9bcf6; /** 物理的なひこうタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-flying-400: #b7a5f3; /** 物理的なひこうタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-flying-500: #a98ff3; /** 物理的なひこうタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-flying-600: #8772c2; /** 物理的なひこうタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-flying-700: #655692; /** 物理的なひこうタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-flying-800: #443961; /** 物理的なひこうタイプの極暗色。 */
+  --pt-color-pokemon-flying-900: #221d31; /** 物理的なひこうタイプのほぼ黒。 */
+  --pt-color-pokemon-flying-950: #110e18; /** 物理的なひこうタイプの最暗色。 */
+  --pt-color-pokemon-psychic-50: #ffeef3; /** 物理的なエスパータイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-psychic-100: #ffdde7; /** 物理的なエスパータイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-psychic-200: #ffbbce; /** 物理的なエスパータイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-psychic-300: #ff99b6; /** 物理的なエスパータイプの中明色。視認性あり。 */
+  --pt-color-pokemon-psychic-400: #fb779e; /** 物理的なエスパータイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-psychic-500: #f95587; /** 物理的なエスパータイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-psychic-600: #c7446c; /** 物理的なエスパータイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-psychic-700: #953351; /** 物理的なエスパータイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-psychic-800: #642236; /** 物理的なエスパータイプの極暗色。 */
+  --pt-color-pokemon-psychic-900: #32111b; /** 物理的なエスパータイプのほぼ黒。 */
+  --pt-color-pokemon-psychic-950: #19080d; /** 物理的なエスパータイプの最暗色。 */
+  --pt-color-pokemon-bug-50: #f6f8e8; /** 物理的なむしタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-bug-100: #edf1d1; /** 物理的なむしタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-bug-200: #dce4a3; /** 物理的なむしタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-bug-300: #cad676; /** 物理的なむしタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-bug-400: #b8c948; /** 物理的なむしタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-bug-500: #a6b91a; /** 物理的なむしタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-bug-600: #859415; /** 物理的なむしタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-bug-700: #646f10; /** 物理的なむしタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-bug-800: #424a0b; /** 物理的なむしタイプの極暗色。 */
+  --pt-color-pokemon-bug-900: #212505; /** 物理的なむしタイプのほぼ黒。 */
+  --pt-color-pokemon-bug-950: #101203; /** 物理的なむしタイプの最暗色。 */
+  --pt-color-pokemon-rock-50: #f8f6eb; /** 物理的ないわタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-rock-100: #f1ecd7; /** 物理的ないわタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-rock-200: #e3d9af; /** 物理的ないわタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-rock-300: #d5c687; /** 物理的ないわタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-rock-400: #c6b35e; /** 物理的ないわタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-rock-500: #b6a136; /** 物理的ないわタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-rock-600: #92812b; /** 物理的ないわタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-rock-700: #6d6120; /** 物理的ないわタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-rock-800: #494016; /** 物理的ないわタイプの極暗色。 */
+  --pt-color-pokemon-rock-900: #24200b; /** 物理的ないわタイプのほぼ黒。 */
+  --pt-color-pokemon-rock-950: #121005; /** 物理的ないわタイプの最暗色。 */
+  --pt-color-pokemon-ghost-50: #f1eef5; /** 物理的なゴーストタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-ghost-100: #e3deeb; /** 物理的なゴーストタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-ghost-200: #c7bdd6; /** 物理的なゴーストタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-ghost-300: #ab9cc2; /** 物理的なゴーストタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-ghost-400: #8f7bad; /** 物理的なゴーストタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-ghost-500: #735797; /** 物理的なゴーストタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-ghost-600: #5c4679; /** 物理的なゴーストタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-ghost-700: #45345b; /** 物理的なゴーストタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-ghost-800: #2e233c; /** 物理的なゴーストタイプの極暗色。 */
+  --pt-color-pokemon-ghost-900: #17111e; /** 物理的なゴーストタイプのほぼ黒。 */
+  --pt-color-pokemon-ghost-950: #0b090f; /** 物理的なゴーストタイプの最暗色。 */
+  --pt-color-pokemon-dragon-50: #f1ebfe; /** 物理的なドラゴンタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-dragon-100: #e2d7fe; /** 物理的なドラゴンタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-dragon-200: #c6affd; /** 物理的なドラゴンタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-dragon-300: #a986fc; /** 物理的なドラゴンタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-dragon-400: #8d5dfc; /** 物理的なドラゴンタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-dragon-500: #6f35fc; /** 物理的なドラゴンタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-dragon-600: #592aca; /** 物理的なドラゴンタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-dragon-700: #431f97; /** 物理的なドラゴンタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-dragon-800: #2c1565; /** 物理的なドラゴンタイプの極暗色。 */
+  --pt-color-pokemon-dragon-900: #160b32; /** 物理的なドラゴンタイプのほぼ黒。 */
+  --pt-color-pokemon-dragon-950: #0b0519; /** 物理的なドラゴンタイプの最暗色。 */
+  --pt-color-pokemon-steel-50: #f8f8fa; /** 物理的なはがねタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-steel-100: #f1f1f5; /** 物理的なはがねタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-steel-200: #e2e2eb; /** 物理的なはがねタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-steel-300: #d4d4e1; /** 物理的なはがねタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-steel-400: #c5c5d8; /** 物理的なはがねタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-steel-500: #b7b7ce; /** 物理的なはがねタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-steel-600: #9292a5; /** 物理的なはがねタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-steel-700: #6e6e7c; /** 物理的なはがねタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-steel-800: #494952; /** 物理的なはがねタイプの極暗色。 */
+  --pt-color-pokemon-steel-900: #252529; /** 物理的なはがねタイプのほぼ黒。 */
+  --pt-color-pokemon-steel-950: #121215; /** 物理的なはがねタイプの最暗色。 */
+  --pt-color-pokemon-dark-50: #f1eeed; /** 物理的なあくタイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-dark-100: #e3dedb; /** 物理的なあくタイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-dark-200: #c6bcb7; /** 物理的なあくタイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-dark-300: #a99b93; /** 物理的なあくタイプの中明色。視認性あり。 */
+  --pt-color-pokemon-dark-400: #8d796e; /** 物理的なあくタイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-dark-500: #705746; /** 物理的なあくタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-dark-600: #5a4638; /** 物理的なあくタイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-dark-700: #43342a; /** 物理的なあくタイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-dark-800: #2d231c; /** 物理的なあくタイプの極暗色。 */
+  --pt-color-pokemon-dark-900: #16110e; /** 物理的なあくタイプのほぼ黒。 */
+  --pt-color-pokemon-dark-950: #0b0907; /** 物理的なあくタイプの最暗色。 */
+  --pt-color-pokemon-fairy-50: #fbf3f7; /** 物理的なフェアリータイプの最明色。背景用。ほぼ白に近い。 */
+  --pt-color-pokemon-fairy-100: #f7e7ee; /** 物理的なフェアリータイプの極明色。薄い背景用。 */
+  --pt-color-pokemon-fairy-200: #efcedd; /** 物理的なフェアリータイプの明色。アクセント背景用。 */
+  --pt-color-pokemon-fairy-300: #e7b6cc; /** 物理的なフェアリータイプの中明色。視認性あり。 */
+  --pt-color-pokemon-fairy-400: #df9dba; /** 物理的なフェアリータイプの鮮色。アクセントに適する。 */
+  --pt-color-pokemon-fairy-500: #d685ad; /** 物理的なフェアリータイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-fairy-600: #ab6a8a; /** 物理的なフェアリータイプのやや暗色。高コントラスト確保可能。 */
+  --pt-color-pokemon-fairy-700: #805068; /** 物理的なフェアリータイプの暗色。テキスト用。白背景上で高コントラスト。 */
+  --pt-color-pokemon-fairy-800: #563545; /** 物理的なフェアリータイプの極暗色。 */
+  --pt-color-pokemon-fairy-900: #2b1b23; /** 物理的なフェアリータイプのほぼ黒。 */
+  --pt-color-pokemon-fairy-950: #150d11; /** 物理的なフェアリータイプの最暗色。 */
   --pt-radius-none: 0; /** 0px - 角丸なし。シャープな印象 */
   --pt-radius-sm: 0.25rem; /** 4px - 微細な角丸。ボタンやバッジ向け */
   --pt-radius-md: 0.5rem; /** 8px - 標準的な角丸。カードなど */
