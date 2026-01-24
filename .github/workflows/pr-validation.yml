@@ -31,5 +31,5 @@ jobs:
         run: npm run unused-check
       - name: Build
         run: npm run build
-      # - name: Test
-      #   run: npm test -- --watch=false --browsers=ChromeHeadless
+      - name: Test
+        run: npm test
