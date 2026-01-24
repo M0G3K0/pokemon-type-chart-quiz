@@ -6,7 +6,10 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <span [class]="classes">
+    <span 
+      [class]="classes" 
+      [style.background-color]="'var(--color-type-' + type.toLowerCase() + ')'"
+    >
       <img 
         *ngIf="type" 
         [src]="'/icons/' + type.toLowerCase() + '.svg'" 
@@ -21,8 +24,6 @@ export class BadgeComponent {
   @Input() type: string = 'normal';
 
   get classes() {
-    const base = 'px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wider shadow-sm';
-    const typeClass = `bg-type-${this.type.toLowerCase()}`;
-    return `${base} ${typeClass}`;
+    return 'px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wider shadow-sm transition-colors duration-200';
   }
 }
