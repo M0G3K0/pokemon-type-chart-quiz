@@ -261,18 +261,18 @@
   --pt-easing-in: cubic-bezier(0.4, 0, 1, 1); /** ease-in。ゆっくり始まり加速 */
   --pt-easing-out: cubic-bezier(0, 0, 0.2, 1); /** ease-out。急に始まり減速 */
   --pt-easing-in-out: cubic-bezier(0.4, 0, 0.2, 1); /** ease-in-out。両端で緩やか */
-  --pt-space-0: 0; /** 0px - 余白なし */
-  --pt-space-1: 0.25rem; /** 4px - 最小単位。アイコンとテキストの間隔など */
-  --pt-space-2: 0.5rem; /** 8px - コンパクトな要素間の余白 */
-  --pt-space-3: 0.75rem; /** 12px - やや狭めの余白 */
-  --pt-space-4: 1rem; /** 16px - 標準的な余白。多くの場面で使用 */
-  --pt-space-5: 1.25rem; /** 20px - やや広めの余白 */
-  --pt-space-6: 1.5rem; /** 24px - セクション内の余白に適する */
-  --pt-space-8: 2rem; /** 32px - 明確な区切りを示す余白 */
-  --pt-space-10: 2.5rem; /** 40px - 大きなセクション間の余白 */
-  --pt-space-12: 3rem; /** 48px - 主要セクション間の余白 */
-  --pt-space-16: 4rem; /** 64px - ページレベルの大きな余白 */
-  --pt-space-20: 5rem; /** 80px - 最大レベルの余白。ヒーローセクション等 */
+  --pt-space-0: 0; /** 物理的な0px。余白なしを明示する場合に使用。 */
+  --pt-space-1: 0.25rem; /** 物理的な4px。グリッドの最小単位。微細な調整用。 */
+  --pt-space-2: 0.5rem; /** 物理的な8px。グリッドの2倍。コンパクトなスペース。 */
+  --pt-space-3: 0.75rem; /** 物理的な12px。グリッドの3倍。やや狭めの余白。 */
+  --pt-space-4: 1rem; /** 物理的な16px。グリッドの4倍。標準的な余白の基本単位。 */
+  --pt-space-5: 1.25rem; /** 物理的な20px。グリッドの5倍。やや広めの余白。 */
+  --pt-space-6: 1.5rem; /** 物理的な24px。グリッドの6倍。セクション内の余白に適する。 */
+  --pt-space-8: 2rem; /** 物理的な32px。グリッドの8倍。明確な区切りを示す。 */
+  --pt-space-10: 2.5rem; /** 物理的な40px。グリッドの10倍。大きなセクション間。 */
+  --pt-space-12: 3rem; /** 物理的な48px。グリッドの12倍。主要セクション間。 */
+  --pt-space-16: 4rem; /** 物理的な64px。グリッドの16倍。ページレベルの大きな余白。 */
+  --pt-space-20: 5rem; /** 物理的な80px。グリッドの20倍。最大レベルの余白。 */
   --pt-font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; /** システムサンセリフフォント。本文・UI用 */
   --pt-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; /** 等幅フォント。コード・数値表示用 */
   --pt-font-size-xs: 0.75rem; /** 12px - 非常に小さい。注釈やラベル */
@@ -388,17 +388,17 @@
   --pt-motion-easing-default: var(--pt-easing-default); /** 【用途】標準イージング。ほとんどの場合に適用。 */
   --pt-motion-easing-enter: var(--pt-easing-out); /** 【用途】要素の登場。急に始まり減速。 */
   --pt-motion-easing-exit: var(--pt-easing-in); /** 【用途】要素の退場。ゆっくり始まり加速。 */
-  --pt-spacing-content-xs: var(--pt-space-1); /** 【用途】非常に狭い余白。アイコンとテキストの間隔。 */
-  --pt-spacing-content-sm: var(--pt-space-2); /** 【用途】狭い余白。バッジやチップのパディング。 */
-  --pt-spacing-content-md: var(--pt-space-4); /** 【用途】標準余白。ボタン、入力欄のパディング。 */
-  --pt-spacing-content-lg: var(--pt-space-6); /** 【用途】広い余白。カードのパディング。 */
-  --pt-spacing-content-xl: var(--pt-space-8); /** 【用途】非常に広い余白。大きなカードやセクション。 */
-  --pt-spacing-layout-section: var(--pt-space-12); /** 【用途】セクション間の区切り。ページ内の大きなブロック。 */
-  --pt-spacing-layout-page: var(--pt-space-16); /** 【用途】ページ全体の余白。コンテナの左右パディング。 */
-  --pt-spacing-gap-xs: var(--pt-space-1); /** 【用途】非常に狭いギャップ。インラインアイコン等。 */
-  --pt-spacing-gap-sm: var(--pt-space-2); /** 【用途】狭いギャップ。タグリスト、小さなボタン群。 */
-  --pt-spacing-gap-md: var(--pt-space-4); /** 【用途】標準ギャップ。カードグリッド、ボタン群。 */
-  --pt-spacing-gap-lg: var(--pt-space-6); /** 【用途】広いギャップ。セクション内のカード間。 */
+  --pt-spacing-content-xs: var(--pt-space-1); /** コンポーネント内余白の目的で使用。密集したUI用。デフォルトより狭い。 */
+  --pt-spacing-content-sm: var(--pt-space-2); /** コンポーネント内余白の目的で使用。バッジやチップなどコンパクトな要素用。 */
+  --pt-spacing-content-md: var(--pt-space-4); /** コンポーネント内余白の目的で使用。デフォルトのパディング。ボタン、入力欄。 */
+  --pt-spacing-content-lg: var(--pt-space-6); /** コンポーネント内余白の目的で使用。カードなど広い内部空間を持つ要素用。 */
+  --pt-spacing-content-xl: var(--pt-space-8); /** コンポーネント内余白の目的で使用。大きなカードやセクション用。 */
+  --pt-spacing-layout-section: var(--pt-space-12); /** 独立したコンテンツブロック同士を縦に離す距離を表す。セクション間隔。 */
+  --pt-spacing-layout-page: var(--pt-space-16); /** ページ全体の左右余白を表す。コンテナのサイドパディング。 */
+  --pt-spacing-gap-xs: var(--pt-space-1); /** 隣接要素間の距離を表す。インラインアイコン等、非常に狭い間隔。 */
+  --pt-spacing-gap-sm: var(--pt-space-2); /** 隣接要素間の距離を表す。タグリスト、小さなボタン群の間隔。 */
+  --pt-spacing-gap-md: var(--pt-space-4); /** 隣接要素間の距離を表す。デフォルトのグリッドギャップ。カードリスト。 */
+  --pt-spacing-gap-lg: var(--pt-space-6); /** 隣接要素間の距離を表す。セクション内のカード間など広い間隔。 */
   --pt-typography-heading-xl-font-family: var(--pt-font-family-sans);
   --pt-typography-heading-xl-font-size: var(--pt-font-size-4xl);
   --pt-typography-heading-xl-font-weight: var(--pt-font-weight-bold);
@@ -459,16 +459,16 @@
   --pt-button-ghost-text-default: var(--pt-color-text-primary); /** ラベル色。通常テキスト色。 */
   --pt-button-ghost-text-disabled: var(--pt-color-text-disabled); /** 無効時のラベル色。 */
   --pt-button-ghost-border-focus: var(--pt-color-border-focused); /** フォーカスリングの色。 */
-  --pt-card-bg-default: var(--pt-color-surface-card); /** カードの背景色。`background-color`に適用。 */
-  --pt-card-bg-hover: var(--pt-color-surface-hovered); /** ホバー時の背景色。クリック可能なカード用。 */
-  --pt-card-border-default: var(--pt-color-border-subtle); /** カードの枠線色。`border-color`に適用。 */
-  --pt-card-text-title: var(--pt-color-text-primary); /** カード見出しの色。`color`に適用。 */
-  --pt-card-text-body: var(--pt-color-text-secondary); /** カード本文の色。見出しより控えめ。 */
-  --pt-card-shadow-flat: var(--pt-elevation-none); /** 影なし。フラットなカード。`box-shadow`に適用。 */
-  --pt-card-shadow-raised: var(--pt-elevation-raised); /** 浮き上がった影。通常のカード。 */
-  --pt-card-shadow-overlay: var(--pt-elevation-overlay); /** 強い影。モーダル/ドロップダウン用。 */
-  --pt-card-padding-sm: var(--pt-spacing-content-sm); /** 小サイズの内側余白。`padding`に適用。 */
-  --pt-card-padding-md: var(--pt-spacing-content-md); /** 中サイズの内側余白。標準。 */
-  --pt-card-padding-lg: var(--pt-spacing-content-lg); /** 大サイズの内側余白。広々としたレイアウト用。 */
-  --pt-card-radius: var(--pt-semantic-border-radius-lg); /** 角丸の大きさ。`border-radius`に適用。 */
+  --pt-card-bg-default: var(--pt-color-surface-card); /** background-colorプロパティに適用。カードコンポーネント専用。デフォルト状態。 */
+  --pt-card-bg-hover: var(--pt-color-surface-hovered); /** background-colorプロパティに適用。カードコンポーネント専用。ホバー状態。クリック可能なカード用。 */
+  --pt-card-border-default: var(--pt-color-border-subtle); /** border-colorプロパティに適用。カードコンポーネント専用。控えめな境界線。 */
+  --pt-card-text-title: var(--pt-color-text-primary); /** colorプロパティに適用。カードコンポーネント専用。見出しテキスト。 */
+  --pt-card-text-body: var(--pt-color-text-secondary); /** colorプロパティに適用。カードコンポーネント専用。本文テキスト。見出しより控えめ。 */
+  --pt-card-shadow-flat: var(--pt-elevation-none); /** box-shadowプロパティに適用。カードコンポーネント専用。影なし、フラットスタイル。 */
+  --pt-card-shadow-raised: var(--pt-elevation-raised); /** box-shadowプロパティに適用。カードコンポーネント専用。デフォルトの浮き上がり。 */
+  --pt-card-shadow-overlay: var(--pt-elevation-overlay); /** box-shadowプロパティに適用。カードコンポーネント専用。モーダル/ドロップダウン用の強い影。 */
+  --pt-card-padding-sm: var(--pt-spacing-content-sm); /** paddingプロパティに適用。カードコンポーネント専用。コンパクトな内部余白。 */
+  --pt-card-padding-md: var(--pt-spacing-content-md); /** paddingプロパティに適用。カードコンポーネント専用。デフォルトの内部余白。 */
+  --pt-card-padding-lg: var(--pt-spacing-content-lg); /** paddingプロパティに適用。カードコンポーネント専用。広々とした内部余白。 */
+  --pt-card-radius: var(--pt-semantic-border-radius-lg); /** border-radiusプロパティに適用。カードコンポーネント専用。overflow: hiddenとセットで使用。 */
 }
