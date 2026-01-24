@@ -1,0 +1,16 @@
+/**
+ * @what Z-indexトークン定義
+ * @why 一貫したレイヤリングを保証し、z-index戦争を防ぐ
+ * @failure 非定義z-indexの使用はStylelintで検出される
+ */
+
+@theme {
+	--z-base: 0;
+	--z-dropdown: 100;
+	--z-sticky: 200;
+	--z-fixed: 300;
+	--z-modal-backdrop: 400;
+	--z-modal: 500;
+	--z-popover: 600;
+	--z-tooltip: 700;
+}

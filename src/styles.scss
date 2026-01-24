@@ -1,60 +1,26 @@
+/**
+ * @what グローバルスタイルのエントリーポイント
+ * @why すべてのトークンとベーススタイルを一元管理する
+ */
+
 @import url("tailwindcss");
 
-@theme {
-  --color-primary: #3b82f6;
-  --color-secondary: #10b981;
-  --color-danger: #ef4444;
-  --color-warning: #f59e0b;
-  --color-background: #f8fafc;
-  --color-surface: #fff;
-  --color-text-primary: #1e293b;
-  --color-text-secondary: #64748b;
-
-  /* Pokemon Type Colors */
-  --color-type-normal: #a8a77a;
-  --color-type-fire: #ee8130;
-  --color-type-water: #6390f0;
-  --color-type-electric: #f7d02c;
-  --color-type-grass: #7ac74c;
-  --color-type-ice: #96d9d6;
-  --color-type-fighting: #c22e28;
-  --color-type-poison: #a33ea1;
-  --color-type-ground: #e2bf65;
-  --color-type-flying: #a98ff3;
-  --color-type-psychic: #f95587;
-  --color-type-bug: #a6b91a;
-  --color-type-rock: #b6a136;
-  --color-type-ghost: #735797;
-  --color-type-dragon: #6f35fc;
-  --color-type-dark: #705746;
-  --color-type-steel: #b7b7ce;
-  --color-type-fairy: #d685ad;
-
-  /* Type Text Colors */
-  --color-text-type-normal: #67664a;
-  --color-text-type-fire: #9c4c0d;
-  --color-text-type-water: #1552e1;
-  --color-text-type-electric: #8a7304;
-  --color-text-type-grass: #3e6d23;
-  --color-text-type-ice: #33a7a2;
-  --color-text-type-fighting: #771d19;
-  --color-text-type-poison: #572156;
-  --color-text-type-ground: #8e6c1e;
-  --color-text-type-flying: #4b23c4;
-  --color-text-type-psychic: #b90540;
-  --color-text-type-bug: #5e690f;
-  --color-text-type-rock: #695d1f;
-  --color-text-type-ghost: #3a2c4d;
-  --color-text-type-dragon: #3405a3;
-  --color-text-type-dark: #3a3328;
-  --color-text-type-steel: #5f5f7e;
-  --color-text-type-fairy: #963865;
-}
+/* Design System Tokens */
+@import url("./styles/tokens/colors");
+@import url("./styles/tokens/typography");
+@import url("./styles/tokens/spacing");
+@import url("./styles/tokens/border");
+@import url("./styles/tokens/elevation");
+@import url("./styles/tokens/sizing");
+@import url("./styles/tokens/motion");
+@import url("./styles/tokens/z-index");
 
 @layer base {
   body {
     background-color: var(--color-background);
     color: var(--color-text-primary);
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-normal);
   }
 }

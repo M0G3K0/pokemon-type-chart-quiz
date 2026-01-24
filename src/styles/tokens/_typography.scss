@@ -1,0 +1,48 @@
+/**
+ * @what タイポグラフィトークン定義
+ * @why 一貫した文字表現を保証し、アクセシビリティを確保する
+ * @failure ハードコードされたフォントサイズはStylelintで検出される
+ */
+
+@theme {
+	/* Font Family */
+	--font-family-sans: ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif;
+	--font-family-mono: ui-monospace, sfmono-regular, "SF Mono", menlo, consolas, "Liberation Mono", monospace;
+
+	/* Font Size (rem-based for accessibility) */
+	--font-size-xs: 0.75rem;
+
+	/* 12px */
+	--font-size-sm: 0.875rem;
+
+	/* 14px */
+	--font-size-md: 1rem;
+
+	/* 16px - base */
+	--font-size-lg: 1.125rem;
+
+	/* 18px */
+	--font-size-xl: 1.25rem;
+
+	/* 20px */
+	--font-size-2xl: 1.5rem;
+
+	/* 24px */
+	--font-size-3xl: 1.875rem;
+
+	/* 30px */
+	--font-size-4xl: 2.25rem;
+
+	/* 36px */
+
+	/* Font Weight */
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+
+	/* Line Height */
+	--line-height-tight: 1.25;
+	--line-height-normal: 1.5;
+	--line-height-relaxed: 1.75;
+}
