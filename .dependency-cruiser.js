@@ -1,27 +1,7 @@
+const forbidden = require('./guards/architecture/rules/layer-boundaries.rules.js');
+
 module.exports = {
-	forbidden: [
-		{
-			name: 'domain-no-ui-features',
-			comment: 'Domain layer should not depend on UI or Features layers',
-			severity: 'error',
-			from: { path: '^src/app/domain' },
-			to: { path: '^src/app/ui|^src/app/features' },
-		},
-		{
-			name: 'ui-no-features',
-			comment: 'UI layer should not depend on Features layer',
-			severity: 'error',
-			from: { path: '^src/app/ui' },
-			to: { path: '^src/app/features' },
-		},
-		{
-			name: 'no-circular-dependencies',
-			comment: 'Circular dependencies are not allowed',
-			severity: 'error',
-			from: {},
-			to: { circular: true },
-		},
-	],
+	forbidden: forbidden,
 	options: {
 		doNotFollow: {
 			path: 'node_modules',
