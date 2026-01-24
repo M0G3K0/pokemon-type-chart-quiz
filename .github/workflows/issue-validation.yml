@@ -1,0 +1,102 @@
+name: Issue Validation
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Validate Issue Content
+        id: validate
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
+        run: |
+          OUTPUT=$(node scripts/validate-issue-content.js 2>&1) || EXIT_CODE=$?
+          echo "$OUTPUT"
+          
+          # Extract comment body if validation failed
+          if echo "$OUTPUT" | grep -q "COMMENT_BODY"; then
+            COMMENT_BODY=$(echo "$OUTPUT" | sed -n '/--- COMMENT_BODY ---/,/--- END_COMMENT_BODY ---/p' | sed '1d;$d')
+            echo "COMMENT_BODY<<EOF" >> $GITHUB_ENV
+            echo "$COMMENT_BODY" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
+            echo "VALIDATION_FAILED=true" >> $GITHUB_ENV
+          else
+            echo "VALIDATION_FAILED=false" >> $GITHUB_ENV
+          fi
+          
+          exit ${EXIT_CODE:-0}
+        continue-on-error: true
+      
+      - name: Post validation failure comment
+        if: env.VALIDATION_FAILED == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const commentBody = process.env.COMMENT_BODY;
+            
+            // Check if we already posted a validation comment
+            const comments = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            
+            const botComment = comments.data.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('このIssueはテンプレートの必須項目が不足しています')
+            );
+            
+            if (botComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: commentBody
+              });
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: commentBody
+              });
+            }
+      
+      - name: Post validation success comment
+        if: env.VALIDATION_FAILED == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Check if there's an existing validation failure comment
+            const comments = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            
+            const botComment = comments.data.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('このIssueはテンプレートの必須項目が不足しています')
+            );
+            
+            if (botComment) {
+              // Update to success message
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: '✅ **Issueのバリデーションに成功しました！**\n\n必須項目がすべて揃っています。'
+              });
+            }
