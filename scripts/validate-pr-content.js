@@ -8,22 +8,23 @@ console.log(`🛡️ Validating PR: "${prTitle}"`);
 
 /**
  * 1. PR Title Validation
- * Must be [emoji] [type]: [description]
- * [type] must be shorthand (feat, fix, etc.)
- * Emoji is mandatory!
+ * Must start with an emoji, followed by a space and a shorthand type.
+ * e.g., "✨ feat: implement something"
  */
 console.log("   - Checking title format...");
-const titleRegex = /^(?:[\u2700-\u27bf\ud83c\udce0-\ud83c\udfff\ud83d\udc00-\ud83d\udfff\ud83e\udd00-\ud83e\udfff]\s+)(feat|fix|docs|style|refactor|perf|test|build|ci|chore): [a-z0-9].+$/;
 
-if (!titleRegex.test(prTitle)) {
+// Simple emoji check: looks for non-ascii characters at the start
+const hasEmojiAtStart = /^[^\x00-\x7F]/.test(prTitle);
+const typeMatch = prTitle.match(/^(?:[^\x00-\x7F]+\s+)(feat|fix|docs|style|refactor|perf|test|build|ci|chore): [a-z0-9].+$/);
+
+if (!hasEmojiAtStart || !typeMatch) {
 	errors.push(`PR Title "${prTitle}" is invalid.
-    Correct format: "✨ [type]: [description]" (Emoji + Space + Type!)
+    Correct format: "✨ [type]: [description]" (Emoji is mandatory!)
     Allowed types: feat, fix, docs, style, refactor, perf, test, build, ci, chore`);
 }
 
 /**
  * 2. PR Body Validation
- * All mandatory sections from pull_request_template.md must exist.
  */
 console.log("   - Checking body sections...");
 for (const section of REQUIRED_SECTIONS) {
