@@ -9,11 +9,12 @@ import { CommonModule } from '@angular/common';
     <span 
       [class]="classes" 
       [style.background-color]="'var(--color-type-' + type.toLowerCase() + ')'"
+      class="inline-flex items-center px-2.5 py-1 rounded-lg text-[10px] font-black text-white uppercase tracking-wider shadow-sm border border-white/10"
     >
       <img 
         *ngIf="type" 
         [src]="'/icons/' + type.toLowerCase() + '.svg'" 
-        class="w-3 h-3 mr-1.5 inline-block brightness-0 invert"
+        class="w-3.5 h-3.5 mr-1.5 brightness-0 invert"
       >
       <ng-content></ng-content>
     </span>
@@ -24,6 +25,6 @@ export class BadgeComponent {
   @Input() type: string = 'normal';
 
   get classes() {
-    return 'px-3 py-1 rounded-full text-xs font-bold text-white uppercase tracking-wider shadow-sm transition-colors duration-200';
+    return 'transition-all duration-200';
   }
 }
