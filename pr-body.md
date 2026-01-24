@@ -1,18 +1,20 @@
 ## 💡 概要
-プロジェクトのデプロイ基盤、エディタ設定、およびGitHubでの開発プロセスを支える基盤（PRテンプレートとバリデーション）を構築しました。
+CIでテストが実行されていなかったため、ユニットテスト基盤を整備してCI上で自動テストを有効化します。
 
 ## 📝 変更内容
-- Vercelデプロイ設定 (`vercel.json`) の追加
-- エディタ設定の統一 (`.editorconfig`)
-- PRテンプレート (`.github/pull_request_template.md`) の導入
-- PRのタイトルと本文を自動検証するカスタムガードレールの実装 (`scripts/validate-pr-content.js`)
-- GitHub ActionsでのCI統合
+- Vitest + jsdom によるユニットテスト環境のセットアップ
+- `vitest.config.ts` の作成（jsdom環境設定）
+- `src/test-setup.ts` でAngular TestBed環境の初期化
+- 基本的なスモークテストを追加（`app.spec.ts`, `type-chart.spec.ts`）
+- `.github/workflows/pr-validation.yml` のテストステップを再有効化
+- 必要な依存関係を追加（`@testing-library/angular`, `@testing-library/dom`, `jsdom` など）
+- Huskyのpre-commitをWindows互換のエンコーディングに修正
 
 ## 🔗 関連Issue
-Closes #0 (Initial Setup)
+Closes #4
 
 ## 📷 スクリーンショット（該当する場合）
-N/A (CUI/Infrastructure only)
+N/A
 
 ## ✅ チェックリスト
 - [x] ビルドが成功する（`npm run build`）
@@ -20,11 +22,12 @@ N/A (CUI/Infrastructure only)
 - [x] テストが通る（`npm run test`）
 - [x] コミットメッセージが規約に従っている（`feat:`, `fix:`, `chore:`など）
 - [x] ブランチ名が規約に従っている（`feature/`, `fix/`, `chore/`など）
-- [x] 必要に応じてドキュメントを更新した
-
+- [ ] 必要に応じてドキュメントを更新した
 
 ## 📌 補足事項
-今回導入したカスタムガードレールにより、今後作成されるPRの本文に特定のセクションが欠けている場合、CIが自動的に失敗するようになります。
+- 現在は基本的なスモークテストのみ追加しています
+- 詳細なコンポーネントテストやE2Eテストは別のIssueで対応予定
+- jsdomを採用した理由：軽量で高速なため、CIでの実行に適している
 
 --- 
 
@@ -51,7 +54,6 @@ N/A (CUI/Infrastructure only)
 例: feat: add sound effects and toggle switch
 
 ## 📖 レビュー用語集
-<!-- レビュー時によく使う用語の意味 -->
 
 | 用語 | 意味 | 説明 |
 |------|------|------|

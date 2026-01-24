@@ -3,6 +3,8 @@ module.exports = {
 	ignore: ['src/**/*.spec.ts', 'guards/**/*', 'src/app/domain/type-chart.ts', 'scripts/download-icons.js'],
 	ignoreDependencies: [
 		'eslint-plugin-tailwindcss',
-		'lint-staged',
+		'@testing-library/angular',
+		'@testing-library/dom',
+		'@testing-library/user-event',
 	],
 };
