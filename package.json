@@ -6,7 +6,19 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "prepare": "husky",
+    "lint:css": "stylelint \"src/**/*.{css,scss}\"",
+    "dep-check": "depcruise src --config .dependency-cruiser.js",
+    "unused-check": "knip"
+  },
+  "lint-staged": {
+    "src/**/*.{css,scss}": [
+      "npm run lint:css"
+    ],
+    "src/app/**/*.ts": [
+      "npm run dep-check"
+    ]
   },
   "prettier": {
     "printWidth": 100,
@@ -37,8 +49,14 @@
     "@angular/cli": "^21.1.1",
     "@angular/compiler-cli": "^21.1.0",
     "@tailwindcss/postcss": "^4.1.12",
+    "dependency-cruiser": "^17.3.7",
+    "husky": "^9.1.7",
     "jsdom": "^27.1.0",
+    "knip": "^5.82.1",
+    "lint-staged": "^16.2.7",
     "postcss": "^8.5.3",
+    "stylelint": "^17.0.0",
+    "stylelint-config-standard": "^40.0.0",
     "tailwindcss": "^4.1.12",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
