@@ -17,13 +17,16 @@ const BUG_REPORT_SECTIONS = REQUIRED_SECTIONS;
 const FEATURE_REQUEST_SECTIONS = REQUIRED_SECTIONS;
 const REFACTOR_TASK_SECTIONS = REQUIRED_SECTIONS;
 
+const GUARDRAIL_PATH = "guards/process/guard/issue-format.guard.md";
+
 module.exports = {
 	REQUIRED_SECTIONS,
+	GUARDRAIL_PATH,
 	// 後方互換性
 	BUG_REPORT_SECTIONS,
 	FEATURE_REQUEST_SECTIONS,
 	REFACTOR_TASK_SECTIONS,
-	...withGuardrail("guards/process/guard/issue-format.guard.md", [
+	...withGuardrail(GUARDRAIL_PATH, [
 		{
 			name: "issue-must-contain-template-sections",
 			comment: "Issue template items are mandatory",

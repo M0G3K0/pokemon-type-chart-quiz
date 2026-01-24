@@ -11,7 +11,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { REQUIRED_SECTIONS } = require("../guards/process/rules/issue-format.rules");
+const { REQUIRED_SECTIONS, GUARDRAIL_PATH } = require("../guards/process/rules/issue-format.rules");
 
 const ISSUE_BODY_PATH = path.join(process.cwd(), 'issue-body.md');
 
@@ -51,9 +51,11 @@ console.log('');
 if (missingSections.length > 0) {
 	console.error('❌ 検証失敗！不足しているセクションがあります。');
 	console.log('');
+	console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 	console.log('💡 ヒント:');
 	console.log('   - テンプレートを確認: .github/ISSUE_TEMPLATE/task.md');
-	console.log('   - ガードレール: guards/process/guard/issue-format.guard.md');
+	console.log(`   - ガードレール: ${GUARDRAIL_PATH}`);
+	console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 	process.exit(1);
 }
 
