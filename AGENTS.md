@@ -27,6 +27,15 @@
 1. PR/Issue作成時は必ず `--body-file` を使用すること（文字化け防止）。
 2. 本文ファイル名は **`pr-body.md`** または **`issue-body.md`** に固定すること。`issue-body-01.md` 等の別名は禁止。
 3. ファイルは毎回 **上書き** して使用すること。
+4. **Issue/PR作成後は必ず警告コメントを確認すること**:
+   ```bash
+   # Issue作成後
+   node scripts/check-issue-warnings.js <issue-number>
+   
+   # またはコメント直接確認
+   gh issue view <issue-number> --comments
+   ```
+5. 警告コメント（github-actions bot からの「テンプレート不足」等）があれば、修正してから次の作業に進むこと。
 
 
 ## 📚 参照ドキュメント

@@ -14,7 +14,9 @@
     "fetch-data": "node scripts/fetch-pokemons.js",
     "validate-data": "tsx scripts/validate-data.ts",
     "prebuild": "npm run fetch-data && npm run validate-data",
-    "guards:validate": "node guards/meta/rules/guardrail-format.rules.js"
+    "guards:validate": "node guards/meta/rules/guardrail-format.rules.js",
+    "issue:validate": "node scripts/validate-issue-local.js",
+    "issue:check": "node scripts/check-issue-warnings.js"
   },
   "lint-staged": {
     "src/**/*.{css,scss}": [
