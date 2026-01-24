@@ -1,55 +1,49 @@
 ## 💡 概要
 
-AGENTS.md / Skills / Workflows の責務を明確化し、3層アーキテクチャとして整理しました。
+ガードレール違反が発生した際のエラーメッセージを改善し、関連する `.guard.md` ファイルへの直接リンクを表示するようにしました。
 
 ## 📝 変更内容
 
-### Workflows（新規作成）
-- `.agent/workflows/issue.md` - Issue作成の定型手順（`/issue` で呼び出し）
-- `.agent/workflows/pr.md` - PR作成の定型手順（`/pr` で呼び出し）
-
-### AGENTS.md（リファクタリング）
-- AIの性格・グローバル禁止事項に限定
-- 3つの仕組みの責務分担を明文化
-- 詳細な手順はWorkflowsに移譲
-
-### Skills（整理）
-- `issue-creator` Skill を削除（Workflowに統合）
-
-### ドキュメント
-- CONTRIBUTING.md に3つの仕組みの説明を追加
-- Issue/PRテンプレート遵守の重要性とガードレール参照を追加
+- `guards/process/rules/*.rules.js` に `GUARDRAIL_PATH` 定数を追加・エクスポート
+- バリデーションスクリプトでCI環境ではGitHub URL形式でリンクを表示
+- エラーメッセージを構造化して読みやすく改善
+- 全バリデーションスクリプト間で一貫した出力フォーマット
 
 ## 🔗 関連Issue
 
-Closes #20
+Closes #5
 
 ## 📷 スクリーンショット（該当する場合）
 
-N/A（ドキュメント変更のみ）
+N/A（コンソール出力の改善）
 
 ## ✅ チェックリスト
 
-- [x] コードがプロジェクトのスタイルガイドラインに従っている
-- [x] 変更に対してセルフレビューを実施した
-- [x] ローカルで動作確認済み
+- [x] ビルドが成功する（`npm run build`）
+- [x] Lintエラーがない（`npm run lint:css`）
+- [x] テストが通る（`npm run test`）
+- [x] コミットメッセージが規約に従っている
+- [x] ブランチ名が規約に従っている
+- [x] 必要に応じてドキュメントを更新した
 
 ## 📌 補足事項
 
-### 3つの仕組みの責務分担
+### 変更されたファイル
 
-| 仕組み | 強制力 | 用途 | 例 |
-|--------|--------|------|-----|
-| **AGENTS.md** | 低（任意参照） | AIの性格・禁止事項 | PowerShell禁止 |
-| **Skills** | 低（AI判断） | 複雑タスクの知識 | (今後追加予定) |
-| **Workflows** | 高（人間が呼び出し） | 定型作業の強制手順 | `/issue`, `/pr` |
+| ファイル | 変更内容 |
+|----------|----------|
+| `guards/process/rules/pr-format.rules.js` | `GUARDRAIL_PATH` エクスポート追加 |
+| `guards/process/rules/issue-format.rules.js` | `GUARDRAIL_PATH` エクスポート追加 |
+| `scripts/validate-pr-content.js` | エラーメッセージ強化、CIでGitHub URL表示 |
+| `scripts/validate-issue-content.js` | エラーメッセージ強化、CIでGitHub URL表示 |
+| `scripts/validate-pr-local.js` | `GUARDRAIL_PATH` 使用 |
+| `scripts/validate-issue-local.js` | `GUARDRAIL_PATH` 使用 |
 
 ## 📝 PRタイトルの命名規則:
 
-`♻️ chore: organize AGENTS.md, Skills, and Workflows`
+`🔧 chore: enhance guardrail violation feedback with links`
 
 ## 📖 レビュー用語集
 
-- **AGENTS.md**: AIエージェントがグローバルに参照する指示ファイル
-- **Skills**: 複雑タスクに関する知識をまとめたもの
-- **Workflows**: 定型作業の手順書（スラッシュコマンドで呼び出し）
+- **GUARDRAIL_PATH**: ガードレールドキュメントへの相対パス
+- **CI**: GitHub Actions等の継続的インテグレーション環境
