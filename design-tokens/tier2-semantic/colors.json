@@ -1,0 +1,231 @@
+{
+	"$description": "Tier 2: Semantic Color Tokens - Use these for UI implementation",
+	"color": {
+		"action": {
+			"$description": "Interactive element colors",
+			"primary": {
+				"default": {
+					"value": "{color.blue.500}",
+					"type": "color",
+					"$description": "Primary action (buttons, links)"
+				},
+				"hover": {
+					"value": "{color.blue.600}",
+					"type": "color"
+				},
+				"pressed": {
+					"value": "{color.blue.700}",
+					"type": "color"
+				}
+			},
+			"secondary": {
+				"default": {
+					"value": "{color.green.500}",
+					"type": "color",
+					"$description": "Secondary action"
+				},
+				"hover": {
+					"value": "{color.green.600}",
+					"type": "color"
+				},
+				"pressed": {
+					"value": "{color.green.700}",
+					"type": "color"
+				}
+			}
+		},
+		"feedback": {
+			"$description": "Feedback and status colors",
+			"success": {
+				"default": {
+					"value": "{color.green.500}",
+					"type": "color",
+					"$description": "Success messages, positive feedback"
+				},
+				"subtle": {
+					"value": "{color.green.100}",
+					"type": "color"
+				}
+			},
+			"warning": {
+				"default": {
+					"value": "{color.amber.500}",
+					"type": "color",
+					"$description": "Warning messages, caution states"
+				},
+				"subtle": {
+					"value": "{color.amber.100}",
+					"type": "color"
+				}
+			},
+			"error": {
+				"default": {
+					"value": "{color.red.500}",
+					"type": "color",
+					"$description": "Error messages, destructive actions"
+				},
+				"subtle": {
+					"value": "{color.red.100}",
+					"type": "color"
+				}
+			},
+			"info": {
+				"default": {
+					"value": "{color.blue.500}",
+					"type": "color",
+					"$description": "Informational messages"
+				},
+				"subtle": {
+					"value": "{color.blue.100}",
+					"type": "color"
+				}
+			}
+		},
+		"surface": {
+			"$description": "Background surface colors",
+			"page": {
+				"value": "{color.slate.50}",
+				"type": "color",
+				"$description": "Page background"
+			},
+			"card": {
+				"value": "{color.white}",
+				"type": "color",
+				"$description": "Card/panel background"
+			},
+			"elevated": {
+				"value": "{color.white}",
+				"type": "color",
+				"$description": "Elevated surface (modals, dropdowns)"
+			},
+			"hovered": {
+				"value": "{color.slate.100}",
+				"type": "color",
+				"$description": "Surface on hover"
+			},
+			"pressed": {
+				"value": "{color.slate.200}",
+				"type": "color",
+				"$description": "Surface on press"
+			}
+		},
+		"text": {
+			"$description": "Text colors",
+			"primary": {
+				"value": "{color.slate.800}",
+				"type": "color",
+				"$description": "Primary text, headings"
+			},
+			"secondary": {
+				"value": "{color.slate.500}",
+				"type": "color",
+				"$description": "Secondary text, captions"
+			},
+			"disabled": {
+				"value": "{color.slate.400}",
+				"type": "color",
+				"$description": "Disabled text"
+			},
+			"inverse": {
+				"value": "{color.white}",
+				"type": "color",
+				"$description": "Text on dark backgrounds"
+			}
+		},
+		"border": {
+			"$description": "Border colors",
+			"default": {
+				"value": "{color.slate.200}",
+				"type": "color",
+				"$description": "Default border"
+			},
+			"subtle": {
+				"value": "{color.slate.100}",
+				"type": "color",
+				"$description": "Subtle border"
+			},
+			"focused": {
+				"value": "{color.blue.500}",
+				"type": "color",
+				"$description": "Focus ring"
+			}
+		},
+		"pokemon": {
+			"$description": "Pokemon type badge colors - Use for type-specific UI elements",
+			"type": {
+				"normal": {
+					"value": "{color.pokemon.normal}",
+					"type": "color"
+				},
+				"fire": {
+					"value": "{color.pokemon.fire}",
+					"type": "color"
+				},
+				"water": {
+					"value": "{color.pokemon.water}",
+					"type": "color"
+				},
+				"electric": {
+					"value": "{color.pokemon.electric}",
+					"type": "color"
+				},
+				"grass": {
+					"value": "{color.pokemon.grass}",
+					"type": "color"
+				},
+				"ice": {
+					"value": "{color.pokemon.ice}",
+					"type": "color"
+				},
+				"fighting": {
+					"value": "{color.pokemon.fighting}",
+					"type": "color"
+				},
+				"poison": {
+					"value": "{color.pokemon.poison}",
+					"type": "color"
+				},
+				"ground": {
+					"value": "{color.pokemon.ground}",
+					"type": "color"
+				},
+				"flying": {
+					"value": "{color.pokemon.flying}",
+					"type": "color"
+				},
+				"psychic": {
+					"value": "{color.pokemon.psychic}",
+					"type": "color"
+				},
+				"bug": {
+					"value": "{color.pokemon.bug}",
+					"type": "color"
+				},
+				"rock": {
+					"value": "{color.pokemon.rock}",
+					"type": "color"
+				},
+				"ghost": {
+					"value": "{color.pokemon.ghost}",
+					"type": "color"
+				},
+				"dragon": {
+					"value": "{color.pokemon.dragon}",
+					"type": "color"
+				},
+				"dark": {
+					"value": "{color.pokemon.dark}",
+					"type": "color"
+				},
+				"steel": {
+					"value": "{color.pokemon.steel}",
+					"type": "color"
+				},
+				"fairy": {
+					"value": "{color.pokemon.fairy}",
+					"type": "color"
+				}
+			}
+		}
+	}
+}

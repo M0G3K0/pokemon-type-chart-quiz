@@ -5,22 +5,15 @@
 
 @import url("tailwindcss");
 
-/* Design System Tokens */
-@import url("./styles/tokens/colors");
-@import url("./styles/tokens/typography");
-@import url("./styles/tokens/spacing");
-@import url("./styles/tokens/border");
-@import url("./styles/tokens/elevation");
-@import url("./styles/tokens/sizing");
-@import url("./styles/tokens/motion");
-@import url("./styles/tokens/z-index");
+/* Style Dictionary generated tokens */
+@import url("./styles/generated/tokens.css");
 
 @layer base {
   body {
-    background-color: var(--color-background);
+    background-color: var(--color-surface-page);
     color: var(--color-text-primary);
     font-family: var(--font-family-sans);
     font-size: var(--font-size-md);
-    line-height: var(--line-height-normal);
+    line-height: var(--font-line-height-normal);
   }
 }

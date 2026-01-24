@@ -1,0 +1,120 @@
+{
+	"$description": "Tier 1: Primitive Border & Elevation Tokens",
+	"radius": {
+		"none": {
+			"value": "0",
+			"type": "borderRadius"
+		},
+		"sm": {
+			"value": "0.25rem",
+			"type": "borderRadius",
+			"$description": "4px"
+		},
+		"md": {
+			"value": "0.5rem",
+			"type": "borderRadius",
+			"$description": "8px"
+		},
+		"lg": {
+			"value": "0.75rem",
+			"type": "borderRadius",
+			"$description": "12px"
+		},
+		"xl": {
+			"value": "1rem",
+			"type": "borderRadius",
+			"$description": "16px"
+		},
+		"2xl": {
+			"value": "1.5rem",
+			"type": "borderRadius",
+			"$description": "24px"
+		},
+		"full": {
+			"value": "9999px",
+			"type": "borderRadius"
+		}
+	},
+	"border": {
+		"width": {
+			"none": {
+				"value": "0",
+				"type": "borderWidth"
+			},
+			"sm": {
+				"value": "1px",
+				"type": "borderWidth"
+			},
+			"md": {
+				"value": "2px",
+				"type": "borderWidth"
+			},
+			"lg": {
+				"value": "4px",
+				"type": "borderWidth"
+			}
+		}
+	},
+	"shadow": {
+		"none": {
+			"value": "none",
+			"type": "boxShadow"
+		},
+		"sm": {
+			"value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+			"type": "boxShadow"
+		},
+		"md": {
+			"value": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+			"type": "boxShadow"
+		},
+		"lg": {
+			"value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+			"type": "boxShadow"
+		},
+		"xl": {
+			"value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+			"type": "boxShadow"
+		},
+		"2xl": {
+			"value": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+			"type": "boxShadow"
+		}
+	},
+	"duration": {
+		"fast": {
+			"value": "100ms",
+			"type": "duration"
+		},
+		"normal": {
+			"value": "200ms",
+			"type": "duration"
+		},
+		"slow": {
+			"value": "300ms",
+			"type": "duration"
+		},
+		"slower": {
+			"value": "500ms",
+			"type": "duration"
+		}
+	},
+	"easing": {
+		"default": {
+			"value": "cubic-bezier(0.4, 0, 0.2, 1)",
+			"type": "cubicBezier"
+		},
+		"in": {
+			"value": "cubic-bezier(0.4, 0, 1, 1)",
+			"type": "cubicBezier"
+		},
+		"out": {
+			"value": "cubic-bezier(0, 0, 0.2, 1)",
+			"type": "cubicBezier"
+		},
+		"in-out": {
+			"value": "cubic-bezier(0.4, 0, 0.2, 1)",
+			"type": "cubicBezier"
+		}
+	}
+}

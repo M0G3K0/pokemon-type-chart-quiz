@@ -1,0 +1,65 @@
+{
+  "$description": "Tier 2: Semantic Typography Tokens",
+  "typography": {
+    "heading": {
+      "$description": "Heading text styles",
+      "xl": { 
+        "fontFamily": { "value": "{font.family.sans}" },
+        "fontSize": { "value": "{font.size.4xl}" },
+        "fontWeight": { "value": "{font.weight.bold}" },
+        "lineHeight": { "value": "{font.lineHeight.tight}" }
+      },
+      "lg": {
+        "fontFamily": { "value": "{font.family.sans}" },
+        "fontSize": { "value": "{font.size.2xl}" },
+        "fontWeight": { "value": "{font.weight.semibold}" },
+        "lineHeight": { "value": "{font.lineHeight.tight}" }
+      },
+      "md": {
+        "fontFamily": { "value": "{font.family.sans}" },
+        "fontSize": { "value": "{font.size.xl}" },
+        "fontWeight": { "value": "{font.weight.semibold}" },
+        "lineHeight": { "value": "{font.lineHeight.normal}" }
+      },
+      "sm": {
+        "fontFamily": { "value": "{font.family.sans}" },
+        "fontSize": { "value": "{font.size.lg}" },
+        "fontWeight": { "value": "{font.weight.medium}" },
+        "lineHeight": { "value": "{font.lineHeight.normal}" }
+      }
+    },
+    "body": {
+      "$description": "Body text styles",
+      "default": {
+        "fontFamily": { "value": "{font.family.sans}" },
+        "fontSize": { "value": "{font.size.md}" },
+        "fontWeight": { "value": "{font.weight.normal}" },
+        "lineHeight": { "value": "{font.lineHeight.normal}" }
+      },
+      "small": {
+        "fontFamily": { "value": "{font.family.sans}" },
+        "fontSize": { "value": "{font.size.sm}" },
+        "fontWeight": { "value": "{font.weight.normal}" },
+        "lineHeight": { "value": "{font.lineHeight.normal}" }
+      }
+    },
+    "label": {
+      "$description": "Label and caption text styles",
+      "default": {
+        "fontFamily": { "value": "{font.family.sans}" },
+        "fontSize": { "value": "{font.size.sm}" },
+        "fontWeight": { "value": "{font.weight.medium}" },
+        "lineHeight": { "value": "{font.lineHeight.tight}" }
+      }
+    },
+    "code": {
+      "$description": "Code text style",
+      "default": {
+        "fontFamily": { "value": "{font.family.mono}" },
+        "fontSize": { "value": "{font.size.sm}" },
+        "fontWeight": { "value": "{font.weight.normal}" },
+        "lineHeight": { "value": "{font.lineHeight.normal}" }
+      }
+    }
+  }
+}

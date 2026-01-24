@@ -1,0 +1,115 @@
+{
+	"$description": "Tier 2: Semantic Effect Tokens (Elevation, Motion)",
+	"elevation": {
+		"$description": "Elevation levels for visual hierarchy",
+		"none": {
+			"value": "{shadow.none}",
+			"type": "boxShadow",
+			"$description": "No elevation"
+		},
+		"raised": {
+			"value": "{shadow.sm}",
+			"type": "boxShadow",
+			"$description": "Slightly raised (cards)"
+		},
+		"overlay": {
+			"value": "{shadow.md}",
+			"type": "boxShadow",
+			"$description": "Overlapping elements (dropdowns)"
+		},
+		"modal": {
+			"value": "{shadow.xl}",
+			"type": "boxShadow",
+			"$description": "Modal dialogs"
+		},
+		"toast": {
+			"value": "{shadow.lg}",
+			"type": "boxShadow",
+			"$description": "Toast notifications"
+		}
+	},
+	"semantic-border": {
+		"$description": "Border styles",
+		"radius": {
+			"none": {
+				"value": "{radius.none}",
+				"type": "borderRadius"
+			},
+			"sm": {
+				"value": "{radius.sm}",
+				"type": "borderRadius",
+				"$description": "Small elements (badges)"
+			},
+			"md": {
+				"value": "{radius.md}",
+				"type": "borderRadius",
+				"$description": "Default (buttons, inputs)"
+			},
+			"lg": {
+				"value": "{radius.lg}",
+				"type": "borderRadius",
+				"$description": "Large elements (cards)"
+			},
+			"pill": {
+				"value": "{radius.full}",
+				"type": "borderRadius",
+				"$description": "Pill shape"
+			}
+		},
+		"width": {
+			"none": {
+				"value": "0",
+				"type": "borderWidth"
+			},
+			"default": {
+				"value": "1px",
+				"type": "borderWidth"
+			},
+			"thick": {
+				"value": "2px",
+				"type": "borderWidth"
+			}
+		}
+	},
+	"motion": {
+		"$description": "Animation timing",
+		"duration": {
+			"instant": {
+				"value": "{duration.fast}",
+				"type": "duration",
+				"$description": "Micro-interactions"
+			},
+			"quick": {
+				"value": "{duration.normal}",
+				"type": "duration",
+				"$description": "Default transitions"
+			},
+			"moderate": {
+				"value": "{duration.slow}",
+				"type": "duration",
+				"$description": "Larger animations"
+			},
+			"deliberate": {
+				"value": "{duration.slower}",
+				"type": "duration",
+				"$description": "Complex animations"
+			}
+		},
+		"easing": {
+			"default": {
+				"value": "{easing.default}",
+				"type": "cubicBezier"
+			},
+			"enter": {
+				"value": "{easing.out}",
+				"type": "cubicBezier",
+				"$description": "Element entering"
+			},
+			"exit": {
+				"value": "{easing.in}",
+				"type": "cubicBezier",
+				"$description": "Element exiting"
+			}
+		}
+	}
+}

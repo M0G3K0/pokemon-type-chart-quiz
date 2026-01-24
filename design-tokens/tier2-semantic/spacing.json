@@ -1,0 +1,65 @@
+{
+	"$description": "Tier 2: Semantic Spacing Tokens - Use these for UI implementation",
+	"spacing": {
+		"content": {
+			"$description": "Content spacing within components",
+			"xs": {
+				"value": "{space.1}",
+				"type": "spacing",
+				"$description": "Tight spacing (4px)"
+			},
+			"sm": {
+				"value": "{space.2}",
+				"type": "spacing",
+				"$description": "Small spacing (8px)"
+			},
+			"md": {
+				"value": "{space.4}",
+				"type": "spacing",
+				"$description": "Medium spacing (16px)"
+			},
+			"lg": {
+				"value": "{space.6}",
+				"type": "spacing",
+				"$description": "Large spacing (24px)"
+			},
+			"xl": {
+				"value": "{space.8}",
+				"type": "spacing",
+				"$description": "Extra large spacing (32px)"
+			}
+		},
+		"layout": {
+			"$description": "Layout spacing between sections",
+			"section": {
+				"value": "{space.12}",
+				"type": "spacing",
+				"$description": "Section gap (48px)"
+			},
+			"page": {
+				"value": "{space.16}",
+				"type": "spacing",
+				"$description": "Page padding (64px)"
+			}
+		},
+		"gap": {
+			"$description": "Gap between elements in flex/grid",
+			"xs": {
+				"value": "{space.1}",
+				"type": "spacing"
+			},
+			"sm": {
+				"value": "{space.2}",
+				"type": "spacing"
+			},
+			"md": {
+				"value": "{space.4}",
+				"type": "spacing"
+			},
+			"lg": {
+				"value": "{space.6}",
+				"type": "spacing"
+			}
+		}
+	}
+}
