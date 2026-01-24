@@ -17,7 +17,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { REQUIRED_SECTIONS } = require("../guards/process/rules/pr-format.rules");
+const { REQUIRED_SECTIONS, GUARDRAIL_PATH } = require("../guards/process/rules/pr-format.rules");
 
 const PR_BODY_PATH = path.join(process.cwd(), 'pr-body.md');
 
@@ -57,9 +57,11 @@ console.log('');
 if (missingSections.length > 0) {
 	console.error('❌ 検証失敗！不足しているセクションがあります。');
 	console.log('');
+	console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 	console.log('💡 ヒント:');
 	console.log('   - テンプレートを確認: .github/pull_request_template.md');
-	console.log('   - ガードレール: guards/process/guard/pr-format.guard.md');
+	console.log(`   - ガードレール: ${GUARDRAIL_PATH}`);
+	console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
 	process.exit(1);
 }
 
