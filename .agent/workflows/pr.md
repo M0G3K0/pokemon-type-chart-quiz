@@ -4,7 +4,7 @@ description: GitHub Pull Requestを作成する手順
 
 # PR 作成ワークフロー
 
-このワークフローは `/create-pr` コマンドで呼び出されます。
+このワークフローは `/pr` コマンドで呼び出されます。
 
 ## 🚨 重要なルール
 
@@ -18,7 +18,7 @@ description: GitHub Pull Requestを作成する手順
 
 ```bash
 git add <files>
-git commit -m "feat: 変更内容"
+git commit -m "feat: add xxx"
 git push origin <branch-name>
 ```
 
@@ -76,14 +76,14 @@ npm test
 ## Step 4: PR を作成
 
 ```bash
-gh pr create --title "✨ feat: タイトル" --body-file pr-body.md
+gh pr create --title "✨ feat: add new feature" --body-file pr-body.md
 ```
 
-**タイトルの形式:**
-- 新機能: `✨ feat: 説明`
-- バグ修正: `🐛 fix: 説明`
-- リファクタリング: `♻️ refactor: 説明`
-- 基盤作業: `♻️ chore: 説明`
+**タイトルの形式（英語で記述）:**
+- 新機能: `✨ feat: add xxx`
+- バグ修正: `🐛 fix: resolve xxx`
+- リファクタリング: `♻️ refactor: improve xxx`
+- 基盤作業: `♻️ chore: update xxx`
 
 ---
 

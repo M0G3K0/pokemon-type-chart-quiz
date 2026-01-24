@@ -34,6 +34,23 @@
 6.  CI（自動テスト・リント）がパスすることを確認。
 7.  マージ！
 
+## Issue/PR テンプレートの遵守
+
+⚠️ **Issue や PR はテンプレートに従って作成する必要があります。**
+
+テンプレートから外れた形式で作成すると、CIで自動検証が行われエラーになります。
+また、作成後に GitHub Actions が警告コメントを投稿する場合があります。
+
+### 関連するガードレール
+
+| 内容 | ガードレール | 検証ルール |
+|------|-------------|-----------|
+| Issue形式 | `guards/process/guard/issue-format.guard.md` | `guards/process/rules/issue-format.rules.js` |
+| PR形式 | `guards/process/guard/pr-format.guard.md` | `guards/process/rules/pr-format.rules.js` |
+| 作成後チェック | `guards/process/guard/post-creation-check.guard.md` | - |
+
+AIエージェントがIssue/PRを作成する際は、必ず `/issue` または `/pr` ワークフローを使用してください。
+
 ---
 
 ## AIエージェント向けの仕組み
@@ -56,5 +73,5 @@ AIエージェントがグローバルに参照する指示。禁止事項（Pow
 
 ### Workflows
 
-定型作業の手順書。スラッシュコマンド（`/create-issue`, `/create-pr`）で呼び出し可能。
+定型作業の手順書。スラッシュコマンド（`/issue`, `/pr`）で呼び出し可能。
 **人間がAIに作業を依頼する際はWorkflowを指定することで、一貫した手順での作業を強制できる。**

@@ -33,8 +33,8 @@ PR/Issue作成時にインラインで本文を指定すると文字化けの原
 |------|------------------|
 | ファイル作成/編集 | AIツール（`write_to_file`等） |
 | Git操作 | GitHub CLI (`gh`) |
-| PR作成 | `/create-pr` ワークフロー |
-| Issue作成 | `/create-issue` ワークフロー |
+| PR作成 | `/pr` ワークフロー |
+| Issue作成 | `/issue` ワークフロー |
 
 ---
 
@@ -44,8 +44,8 @@ PR/Issue作成時にインラインで本文を指定すると文字化けの原
 |------|----------|
 | 開発規約（詳細） | `CONTRIBUTING.md` |
 | ガードレール | `guards/README.md` |
-| Issue作成手順 | `.agent/workflows/create-issue.md` |
-| PR作成手順 | `.agent/workflows/create-pr.md` |
+| Issue作成手順 | `.agent/workflows/issue.md` |
+| PR作成手順 | `.agent/workflows/pr.md` |
 
 ---
 

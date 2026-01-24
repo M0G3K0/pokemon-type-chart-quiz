@@ -4,7 +4,7 @@ description: GitHub Issueを作成する手順
 
 # Issue 作成ワークフロー
 
-このワークフローは `/create-issue` コマンドで呼び出されます。
+このワークフローは `/issue` コマンドで呼び出されます。
 
 ## 🚨 重要なルール
 
@@ -58,14 +58,14 @@ node scripts/validate-issue-local.js
 ## Step 3: Issue を作成
 
 ```bash
-gh issue create --title "✨ feat: タイトル" --body-file issue-body.md
+gh issue create --title "✨ feat: add new feature" --body-file issue-body.md
 ```
 
-**タイトルの形式:**
-- 新機能: `✨ feat: 説明`
-- バグ修正: `🐛 fix: 説明`
-- リファクタリング: `♻️ refactor: 説明`
-- 基盤作業: `♻️ chore: 説明`
+**タイトルの形式（英語で記述）:**
+- 新機能: `✨ feat: add xxx`
+- バグ修正: `🐛 fix: resolve xxx`
+- リファクタリング: `♻️ refactor: improve xxx`
+- 基盤作業: `♻️ chore: update xxx`
 
 ---
 
