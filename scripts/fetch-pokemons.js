@@ -15,7 +15,7 @@ async function fetchPokemons() {
 			id: data.id,
 			name: data.name,
 			types: data.types.map((t) => t.type.name),
-			imageUrl: data.sprites.other['official-artwork'].front_default,
+			imageUrl: data.sprites.front_default,
 		});
 
 		if (i % 50 === 0) console.log(`Fetched ${i} pokemons...`);

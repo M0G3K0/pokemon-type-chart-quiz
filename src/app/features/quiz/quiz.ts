@@ -21,7 +21,7 @@ import { ButtonComponent } from '../../ui/button/button';
             <img 
               [src]="pokemon.imageUrl" 
               [alt]="pokemon.name"
-              class="w-48 h-48 mx-auto object-contain transition-transform group-hover:scale-110"
+              class="w-48 h-48 mx-auto object-contain transition-transform group-hover:scale-110 [image-rendering:pixelated]"
             >
           </div>
 
