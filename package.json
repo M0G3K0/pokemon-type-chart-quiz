@@ -13,7 +13,8 @@
     "unused-check": "knip",
     "fetch-data": "node scripts/fetch-pokemons.js",
     "validate-data": "tsx scripts/validate-data.ts",
-    "prebuild": "npm run fetch-data && npm run validate-data"
+    "prebuild": "npm run fetch-data && npm run validate-data",
+    "guards:validate": "node guards/meta/rules/guardrail-format.rules.js"
   },
   "lint-staged": {
     "src/**/*.{css,scss}": [

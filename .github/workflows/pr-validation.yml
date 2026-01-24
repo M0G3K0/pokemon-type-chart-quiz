@@ -19,6 +19,8 @@ jobs:
         run: npm run lint:css
       - name: Dependency check
         run: npm run dep-check
+      - name: Guardrails check
+        run: npm run guards:validate
       - name: Unused code check
         run: npm run unused-check
       - name: Test
