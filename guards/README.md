@@ -103,9 +103,11 @@ guards/
 │       └── coding-standards.rules.js            # ルール定義
 ├── design/                                      # デザインの憲法
 │   ├── guard/
-│   │   └── design-consistency.guard.md          # ドキュメント
+│   │   ├── design-consistency.guard.md          # CSS品質ドキュメント
+│   │   └── token-naming.guard.md                # トークン命名規則
 │   └── rules/
-│       └── design-consistency.rules.js          # ルール定義
+│       ├── design-consistency.rules.js          # CSS品質ルール
+│       └── token-naming.rules.js                # トークン命名ルール
 ├── maintenance/                                 # 保守の憲法
 │   ├── guard/
 │   │   ├── cleanliness.guard.md                 # デッドコード禁止
