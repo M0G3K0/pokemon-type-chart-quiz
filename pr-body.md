@@ -1,66 +1,59 @@
 ## 💡 概要
-CIでテストが実行されていなかったため、ユニットテスト基盤を整備してCI上で自動テストを有効化します。
+
+Issue作成プロセスを簡略化し、テンプレート違反を検出しやすくしました。
 
 ## 📝 変更内容
-- Vitest + jsdom によるユニットテスト環境のセットアップ
-- `vitest.config.ts` の作成（jsdom環境設定）
-- `src/test-setup.ts` でAngular TestBed環境の初期化
-- 基本的なスモークテストを追加（`app.spec.ts`, `type-chart.spec.ts`）
-- `.github/workflows/pr-validation.yml` のテストステップを再有効化
-- 必要な依存関係を追加（`@testing-library/angular`, `@testing-library/dom`, `jsdom` など）
-- Huskyのpre-commitをWindows互換のエンコーディングに修正
+
+### テンプレート統合
+- 3つのテンプレート（bug_report, feature_request, refactor_task）を1つに統合
+- 新しい `task.md` テンプレートを作成
+- 必須セクションを「💡 概要」「✅ やることリスト」の2つに簡略化
+
+### ローカル検証スクリプト
+- `scripts/validate-issue-local.js` - issue-body.md をローカルで検証
+- `scripts/check-issue-warnings.js` - Issue作成後に警告コメントを確認
+
+### ガードレール・ドキュメント
+- `guards/process/rules/issue-format.rules.js` を統一テンプレート用に更新
+- `guards/process/guard/post-creation-check.guard.md` 新規作成
+- Skill `issue-creator` を作成（参照用）
+- AGENTS.md にIssue作成後の確認ルールを追加
 
 ## 🔗 関連Issue
-Closes #4
+
+- Closes #11
 
 ## 📷 スクリーンショット（該当する場合）
-N/A
+
+N/A - テンプレートとスクリプトの変更のみ
 
 ## ✅ チェックリスト
-- [x] ビルドが成功する（`npm run build`）
-- [x] Lintエラーがない（`npm run lint`）
-- [x] テストが通る（`npm run test`）
-- [x] コミットメッセージが規約に従っている（`feat:`, `fix:`, `chore:`など）
-- [x] ブランチ名が規約に従っている（`feature/`, `fix/`, `chore/`など）
-- [ ] 必要に応じてドキュメントを更新した
+
+- [x] テンプレート動作確認
+- [x] ローカル検証スクリプト動作確認
+- [x] Issue作成後の警告確認スクリプト動作確認
 
 ## 📌 補足事項
-- 現在は基本的なスモークテストのみ追加しています
-- 詳細なコンポーネントテストやE2Eテストは別のIssueで対応予定
-- jsdomを採用した理由：軽量で高速なため、CIでの実行に適している
 
---- 
+### Before (3テンプレート)
+```
+.github/ISSUE_TEMPLATE/
+├── bug_report.md       # バグ用
+├── feature_request.md  # 機能用
+└── refactor_task.md    # リファクタ用
+```
+
+### After (1テンプレート)
+```
+.github/ISSUE_TEMPLATE/
+└── task.md  # 汎用（必須: 概要 + やることリスト）
+```
 
 ## 📝 PRタイトルの命名規則:
-- [type]: [description]の形式にすること
 
-タイプ一覧:
-- ✨ feat: 新機能
-- 🐛 fix: バグ修正
-- 📚 docs: ドキュメント
-- 🎨 style: スタイル変更
-- ♻️ refactor: リファクタリング
-- ⚡ perf: パフォーマンス改善
-- 🧪 test: テスト
-- 🏗️ build: ビルド
-- 👷 ci: CI/CD
-- 🔧 chore: その他
-
-説明の書き方: 
-- 英語で書くこと
-- 1行で説明すること
-- すべて小文字で書くこと
-
-例: feat: add sound effects and toggle switch
+`♻️ chore: unify issue templates and add local validation`
 
 ## 📖 レビュー用語集
 
-| 用語 | 意味 | 説明 |
-|------|------|------|
-| **LGTM** | Looks Good To Me | 良いと思います |
-| **WIP** | Work In Progress | 対応中 |
-| **FYI** | For Your Information | 参考までに |
-| **must** | must | 必須 |
-| **want** | want | できれば |
-| **imo** | in my opinion | 私の意見では |
-| **nits** | nitpick | 些細な指摘（重箱の隅をつつくの意味） |
+- **Skill**: AI向けの複雑タスク手順書（参照は任意）
+- **Workflow**: 強制力のある作業手順（今後実装予定）
