@@ -24,40 +24,24 @@ gh issue create --body "..."
 
 ### Step 2: テンプレートに従う
 
-`issue-body.md` には以下のセクションが必須です：
+`issue-body.md` には以下のセクションが**必須**です：
 
-#### Feature Request の場合
 ```markdown
 ## 💡 概要
-（内容）
-
-## 📝 実装イメージ
-（内容）
+<!-- 何をするのか、なぜ必要なのか -->
 
 ## ✅ やることリスト
 - [ ] タスク1
 - [ ] タスク2
 ```
 
-#### Bug Report の場合
+オプションで追加可能：
 ```markdown
-## 💡 概要
-（内容）
+## 📝 詳細
+<!-- 実装イメージ、再現手順、変更範囲など -->
 
-## 📝 再現手順
-（内容）
-
-## 📌 期待される挙動
-（内容）
-```
-
-#### Refactor/Chore の場合
-```markdown
-## 💡 概要
-（内容）
-
-## ✅ やることリスト
-- [ ] タスク1
+## 📷 参考資料
+<!-- スクリーンショットや参考URL -->
 ```
 
 ### Step 3: ローカルで検証（推奨）
@@ -69,7 +53,7 @@ node scripts/validate-issue-local.js
 ### Step 4: Issueを作成
 
 ```bash
-gh issue create --title "✨ feat: タイトル" --body-file issue-body.md --label "enhancement"
+gh issue create --title "✨ feat: タイトル" --body-file issue-body.md
 ```
 
 ### Step 5: 警告コメントを確認（必須！）
@@ -80,17 +64,10 @@ gh issue create --title "✨ feat: タイトル" --body-file issue-body.md --lab
 node scripts/check-issue-warnings.js <issue-number>
 ```
 
-または:
-```bash
-gh issue view <issue-number> --comments
-```
-
-`github-actions` botから警告コメントがあれば、修正してから次の作業に進むこと。
-
 ---
 
 ## 参照
 
-- テンプレートルール: `guards/process/rules/issue-format.rules.js`
+- テンプレート: `.github/ISSUE_TEMPLATE/task.md`
+- ルール: `guards/process/rules/issue-format.rules.js`
 - ガードレール: `guards/process/guard/issue-format.guard.md`
-- 作成後チェック: `guards/process/guard/post-creation-check.guard.md`
