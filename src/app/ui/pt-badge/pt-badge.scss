@@ -11,14 +11,14 @@
 .pt-badge {
 	display: inline-flex;
 	align-items: center;
-	gap: var(--spacing-content-xs);
-	font-family: var(--font-family-sans);
-	font-weight: var(--font-weight-bold);
+	gap: var(--pt-spacing-content-xs);
+	font-family: var(--pt-font-family-sans);
+	font-weight: var(--pt-font-weight-bold);
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
-	border-radius: var(--semantic-border-radius-sm);
-	transition: all var(--motion-duration-quick) var(--motion-easing-default);
-	box-shadow: var(--elevation-raised);
+	border-radius: var(--pt-semantic-border-radius-sm);
+	transition: all var(--pt-motion-duration-quick) var(--pt-motion-easing-default);
+	box-shadow: var(--pt-elevation-raised);
 	border: 1px solid rgb(255 255 255 / 10%);
 
 	/* === Size variants === */
@@ -28,12 +28,12 @@
 	}
 
 	&--md {
-		padding: var(--spacing-content-xs) var(--spacing-content-sm);
-		font-size: var(--font-size-xs);
+		padding: var(--pt-spacing-content-xs) var(--pt-spacing-content-sm);
+		font-size: var(--pt-font-size-xs);
 	}
 
 	&--lg {
-		padding: var(--spacing-content-sm) var(--spacing-content-md);
-		font-size: var(--font-size-sm);
+		padding: var(--pt-spacing-content-sm) var(--pt-spacing-content-md);
+		font-size: var(--pt-font-size-sm);
 	}
 }

@@ -3,235 +3,235 @@
  */
 
 :root {
-  --color-blue-50: #eff6ff;
-  --color-blue-100: #dbeafe;
-  --color-blue-200: #bfdbfe;
-  --color-blue-300: #93c5fd;
-  --color-blue-400: #60a5fa;
-  --color-blue-500: #3b82f6;
-  --color-blue-600: #2563eb;
-  --color-blue-700: #1d4ed8;
-  --color-blue-800: #1e40af;
-  --color-blue-900: #1e3a8a;
-  --color-green-50: #f0fdf4;
-  --color-green-100: #dcfce7;
-  --color-green-200: #bbf7d0;
-  --color-green-300: #86efac;
-  --color-green-400: #4ade80;
-  --color-green-500: #22c55e;
-  --color-green-600: #16a34a;
-  --color-green-700: #15803d;
-  --color-green-800: #166534;
-  --color-green-900: #14532d;
-  --color-red-50: #fef2f2;
-  --color-red-100: #fee2e2;
-  --color-red-200: #fecaca;
-  --color-red-300: #fca5a5;
-  --color-red-400: #f87171;
-  --color-red-500: #ef4444;
-  --color-red-600: #dc2626;
-  --color-red-700: #b91c1c;
-  --color-red-800: #991b1b;
-  --color-red-900: #7f1d1d;
-  --color-amber-50: #fffbeb;
-  --color-amber-100: #fef3c7;
-  --color-amber-200: #fde68a;
-  --color-amber-300: #fcd34d;
-  --color-amber-400: #fbbf24;
-  --color-amber-500: #f59e0b;
-  --color-amber-600: #d97706;
-  --color-amber-700: #b45309;
-  --color-amber-800: #92400e;
-  --color-amber-900: #78350f;
-  --color-slate-50: #f8fafc;
-  --color-slate-100: #f1f5f9;
-  --color-slate-200: #e2e8f0;
-  --color-slate-300: #cbd5e1;
-  --color-slate-400: #94a3b8;
-  --color-slate-500: #64748b;
-  --color-slate-600: #475569;
-  --color-slate-700: #334155;
-  --color-slate-800: #1e293b;
-  --color-slate-900: #0f172a;
-  --color-white: #fff;
-  --color-black: #000;
-  --color-pokemon-normal: #a8a77a;
-  --color-pokemon-fire: #ee8130;
-  --color-pokemon-water: #6390f0;
-  --color-pokemon-electric: #f7d02c;
-  --color-pokemon-grass: #7ac74c;
-  --color-pokemon-ice: #96d9d6;
-  --color-pokemon-fighting: #c22e28;
-  --color-pokemon-poison: #a33ea1;
-  --color-pokemon-ground: #e2bf65;
-  --color-pokemon-flying: #a98ff3;
-  --color-pokemon-psychic: #f95587;
-  --color-pokemon-bug: #a6b91a;
-  --color-pokemon-rock: #b6a136;
-  --color-pokemon-ghost: #735797;
-  --color-pokemon-dragon: #6f35fc;
-  --color-pokemon-dark: #705746;
-  --color-pokemon-steel: #b7b7ce;
-  --color-pokemon-fairy: #d685ad;
-  --radius-none: 0;
-  --radius-sm: 0.25rem; /** 4px */
-  --radius-md: 0.5rem; /** 8px */
-  --radius-lg: 0.75rem; /** 12px */
-  --radius-xl: 1rem; /** 16px */
-  --radius-2xl: 1.5rem; /** 24px */
-  --radius-full: 9999px;
-  --border-width-none: 0;
-  --border-width-sm: 1px;
-  --border-width-md: 2px;
-  --border-width-lg: 4px;
-  --shadow-none: none;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 5%);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 10px -6px rgb(0 0 0 / 10%);
-  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 25%);
-  --duration-fast: 100ms;
-  --duration-normal: 200ms;
-  --duration-slow: 300ms;
-  --duration-slower: 500ms;
-  --easing-default: cubic-bezier(0.4, 0, 0.2, 1);
-  --easing-in: cubic-bezier(0.4, 0, 1, 1);
-  --easing-out: cubic-bezier(0, 0, 0.2, 1);
-  --easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-  --space-0: 0;
-  --space-1: 0.25rem; /** 4px */
-  --space-2: 0.5rem; /** 8px */
-  --space-3: 0.75rem; /** 12px */
-  --space-4: 1rem; /** 16px */
-  --space-5: 1.25rem; /** 20px */
-  --space-6: 1.5rem; /** 24px */
-  --space-8: 2rem; /** 32px */
-  --space-10: 2.5rem; /** 40px */
-  --space-12: 3rem; /** 48px */
-  --space-16: 4rem; /** 64px */
-  --space-20: 5rem; /** 80px */
-  --font-family-sans: ui-sans-serif, system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', arial, 'Noto Sans', sans-serif;
-  --font-family-mono: ui-monospace, sfmono-regular, 'SF Mono', menlo, consolas, 'Liberation Mono', monospace;
-  --font-size-xs: 0.75rem; /** 12px */
-  --font-size-sm: 0.875rem; /** 14px */
-  --font-size-md: 1rem; /** 16px - base */
-  --font-size-lg: 1.125rem; /** 18px */
-  --font-size-xl: 1.25rem; /** 20px */
-  --font-size-2xl: 1.5rem; /** 24px */
-  --font-size-3xl: 1.875rem; /** 30px */
-  --font-size-4xl: 2.25rem; /** 36px */
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  --font-line-height-tight: 1.25;
-  --font-line-height-normal: 1.5;
-  --font-line-height-relaxed: 1.75;
-  --semantic-border-width-none: 0;
-  --semantic-border-width-default: 1px;
-  --semantic-border-width-thick: 2px;
-  --color-pokemon-type-normal: var(--color-pokemon-normal);
-  --color-pokemon-type-fire: var(--color-pokemon-fire);
-  --color-pokemon-type-water: var(--color-pokemon-water);
-  --color-pokemon-type-electric: var(--color-pokemon-electric);
-  --color-pokemon-type-grass: var(--color-pokemon-grass);
-  --color-pokemon-type-ice: var(--color-pokemon-ice);
-  --color-pokemon-type-fighting: var(--color-pokemon-fighting);
-  --color-pokemon-type-poison: var(--color-pokemon-poison);
-  --color-pokemon-type-ground: var(--color-pokemon-ground);
-  --color-pokemon-type-flying: var(--color-pokemon-flying);
-  --color-pokemon-type-psychic: var(--color-pokemon-psychic);
-  --color-pokemon-type-bug: var(--color-pokemon-bug);
-  --color-pokemon-type-rock: var(--color-pokemon-rock);
-  --color-pokemon-type-ghost: var(--color-pokemon-ghost);
-  --color-pokemon-type-dragon: var(--color-pokemon-dragon);
-  --color-pokemon-type-dark: var(--color-pokemon-dark);
-  --color-pokemon-type-steel: var(--color-pokemon-steel);
-  --color-pokemon-type-fairy: var(--color-pokemon-fairy);
-  --color-action-primary-default: var(--color-blue-500); /** Primary action (buttons, links) */
-  --color-action-primary-hover: var(--color-blue-600);
-  --color-action-primary-pressed: var(--color-blue-700);
-  --color-action-secondary-default: var(--color-green-500); /** Secondary action */
-  --color-action-secondary-hover: var(--color-green-600);
-  --color-action-secondary-pressed: var(--color-green-700);
-  --color-feedback-success-default: var(--color-green-500); /** Success messages, positive feedback */
-  --color-feedback-success-subtle: var(--color-green-100);
-  --color-feedback-warning-default: var(--color-amber-500); /** Warning messages, caution states */
-  --color-feedback-warning-subtle: var(--color-amber-100);
-  --color-feedback-error-default: var(--color-red-500); /** Error messages, destructive actions */
-  --color-feedback-error-subtle: var(--color-red-100);
-  --color-feedback-info-default: var(--color-blue-500); /** Informational messages */
-  --color-feedback-info-subtle: var(--color-blue-100);
-  --color-surface-page: var(--color-slate-50); /** Page background */
-  --color-surface-card: var(--color-white); /** Card/panel background */
-  --color-surface-elevated: var(--color-white); /** Elevated surface (modals, dropdowns) */
-  --color-surface-hovered: var(--color-slate-100); /** Surface on hover */
-  --color-surface-pressed: var(--color-slate-200); /** Surface on press */
-  --color-text-primary: var(--color-slate-800); /** Primary text, headings */
-  --color-text-secondary: var(--color-slate-500); /** Secondary text, captions */
-  --color-text-disabled: var(--color-slate-400); /** Disabled text */
-  --color-text-inverse: var(--color-white); /** Text on dark backgrounds */
-  --color-border-default: var(--color-slate-200); /** Default border */
-  --color-border-subtle: var(--color-slate-100); /** Subtle border */
-  --color-border-focused: var(--color-blue-500); /** Focus ring */
-  --elevation-none: var(--shadow-none); /** No elevation */
-  --elevation-raised: var(--shadow-sm); /** Slightly raised (cards) */
-  --elevation-overlay: var(--shadow-md); /** Overlapping elements (dropdowns) */
-  --elevation-modal: var(--shadow-xl); /** Modal dialogs */
-  --elevation-toast: var(--shadow-lg); /** Toast notifications */
-  --semantic-border-radius-none: var(--radius-none);
-  --semantic-border-radius-sm: var(--radius-sm); /** Small elements (badges) */
-  --semantic-border-radius-md: var(--radius-md); /** Default (buttons, inputs) */
-  --semantic-border-radius-lg: var(--radius-lg); /** Large elements (cards) */
-  --semantic-border-radius-pill: var(--radius-full); /** Pill shape */
-  --motion-duration-instant: var(--duration-fast); /** Micro-interactions */
-  --motion-duration-quick: var(--duration-normal); /** Default transitions */
-  --motion-duration-moderate: var(--duration-slow); /** Larger animations */
-  --motion-duration-deliberate: var(--duration-slower); /** Complex animations */
-  --motion-easing-default: var(--easing-default);
-  --motion-easing-enter: var(--easing-out); /** Element entering */
-  --motion-easing-exit: var(--easing-in); /** Element exiting */
-  --spacing-content-xs: var(--space-1); /** Tight spacing (4px) */
-  --spacing-content-sm: var(--space-2); /** Small spacing (8px) */
-  --spacing-content-md: var(--space-4); /** Medium spacing (16px) */
-  --spacing-content-lg: var(--space-6); /** Large spacing (24px) */
-  --spacing-content-xl: var(--space-8); /** Extra large spacing (32px) */
-  --spacing-layout-section: var(--space-12); /** Section gap (48px) */
-  --spacing-layout-page: var(--space-16); /** Page padding (64px) */
-  --spacing-gap-xs: var(--space-1);
-  --spacing-gap-sm: var(--space-2);
-  --spacing-gap-md: var(--space-4);
-  --spacing-gap-lg: var(--space-6);
-  --typography-heading-xl-font-family: var(--font-family-sans);
-  --typography-heading-xl-font-size: var(--font-size-4xl);
-  --typography-heading-xl-font-weight: var(--font-weight-bold);
-  --typography-heading-xl-line-height: var(--font-line-height-tight);
-  --typography-heading-lg-font-family: var(--font-family-sans);
-  --typography-heading-lg-font-size: var(--font-size-2xl);
-  --typography-heading-lg-font-weight: var(--font-weight-semibold);
-  --typography-heading-lg-line-height: var(--font-line-height-tight);
-  --typography-heading-md-font-family: var(--font-family-sans);
-  --typography-heading-md-font-size: var(--font-size-xl);
-  --typography-heading-md-font-weight: var(--font-weight-semibold);
-  --typography-heading-md-line-height: var(--font-line-height-normal);
-  --typography-heading-sm-font-family: var(--font-family-sans);
-  --typography-heading-sm-font-size: var(--font-size-lg);
-  --typography-heading-sm-font-weight: var(--font-weight-medium);
-  --typography-heading-sm-line-height: var(--font-line-height-normal);
-  --typography-body-default-font-family: var(--font-family-sans);
-  --typography-body-default-font-size: var(--font-size-md);
-  --typography-body-default-font-weight: var(--font-weight-normal);
-  --typography-body-default-line-height: var(--font-line-height-normal);
-  --typography-body-small-font-family: var(--font-family-sans);
-  --typography-body-small-font-size: var(--font-size-sm);
-  --typography-body-small-font-weight: var(--font-weight-normal);
-  --typography-body-small-line-height: var(--font-line-height-normal);
-  --typography-label-default-font-family: var(--font-family-sans);
-  --typography-label-default-font-size: var(--font-size-sm);
-  --typography-label-default-font-weight: var(--font-weight-medium);
-  --typography-label-default-line-height: var(--font-line-height-tight);
-  --typography-code-default-font-family: var(--font-family-mono);
-  --typography-code-default-font-size: var(--font-size-sm);
-  --typography-code-default-font-weight: var(--font-weight-normal);
-  --typography-code-default-line-height: var(--font-line-height-normal);
+  --pt-color-blue-50: #eff6ff;
+  --pt-color-blue-100: #dbeafe;
+  --pt-color-blue-200: #bfdbfe;
+  --pt-color-blue-300: #93c5fd;
+  --pt-color-blue-400: #60a5fa;
+  --pt-color-blue-500: #3b82f6;
+  --pt-color-blue-600: #2563eb;
+  --pt-color-blue-700: #1d4ed8;
+  --pt-color-blue-800: #1e40af;
+  --pt-color-blue-900: #1e3a8a;
+  --pt-color-green-50: #f0fdf4;
+  --pt-color-green-100: #dcfce7;
+  --pt-color-green-200: #bbf7d0;
+  --pt-color-green-300: #86efac;
+  --pt-color-green-400: #4ade80;
+  --pt-color-green-500: #22c55e;
+  --pt-color-green-600: #16a34a;
+  --pt-color-green-700: #15803d;
+  --pt-color-green-800: #166534;
+  --pt-color-green-900: #14532d;
+  --pt-color-red-50: #fef2f2;
+  --pt-color-red-100: #fee2e2;
+  --pt-color-red-200: #fecaca;
+  --pt-color-red-300: #fca5a5;
+  --pt-color-red-400: #f87171;
+  --pt-color-red-500: #ef4444;
+  --pt-color-red-600: #dc2626;
+  --pt-color-red-700: #b91c1c;
+  --pt-color-red-800: #991b1b;
+  --pt-color-red-900: #7f1d1d;
+  --pt-color-amber-50: #fffbeb;
+  --pt-color-amber-100: #fef3c7;
+  --pt-color-amber-200: #fde68a;
+  --pt-color-amber-300: #fcd34d;
+  --pt-color-amber-400: #fbbf24;
+  --pt-color-amber-500: #f59e0b;
+  --pt-color-amber-600: #d97706;
+  --pt-color-amber-700: #b45309;
+  --pt-color-amber-800: #92400e;
+  --pt-color-amber-900: #78350f;
+  --pt-color-slate-50: #f8fafc;
+  --pt-color-slate-100: #f1f5f9;
+  --pt-color-slate-200: #e2e8f0;
+  --pt-color-slate-300: #cbd5e1;
+  --pt-color-slate-400: #94a3b8;
+  --pt-color-slate-500: #64748b;
+  --pt-color-slate-600: #475569;
+  --pt-color-slate-700: #334155;
+  --pt-color-slate-800: #1e293b;
+  --pt-color-slate-900: #0f172a;
+  --pt-color-white: #ffffff;
+  --pt-color-black: #000000;
+  --pt-color-pokemon-normal: #a8a77a;
+  --pt-color-pokemon-fire: #ee8130;
+  --pt-color-pokemon-water: #6390f0;
+  --pt-color-pokemon-electric: #f7d02c;
+  --pt-color-pokemon-grass: #7ac74c;
+  --pt-color-pokemon-ice: #96d9d6;
+  --pt-color-pokemon-fighting: #c22e28;
+  --pt-color-pokemon-poison: #a33ea1;
+  --pt-color-pokemon-ground: #e2bf65;
+  --pt-color-pokemon-flying: #a98ff3;
+  --pt-color-pokemon-psychic: #f95587;
+  --pt-color-pokemon-bug: #a6b91a;
+  --pt-color-pokemon-rock: #b6a136;
+  --pt-color-pokemon-ghost: #735797;
+  --pt-color-pokemon-dragon: #6f35fc;
+  --pt-color-pokemon-dark: #705746;
+  --pt-color-pokemon-steel: #b7b7ce;
+  --pt-color-pokemon-fairy: #d685ad;
+  --pt-radius-none: 0;
+  --pt-radius-sm: 0.25rem; /** 4px */
+  --pt-radius-md: 0.5rem; /** 8px */
+  --pt-radius-lg: 0.75rem; /** 12px */
+  --pt-radius-xl: 1rem; /** 16px */
+  --pt-radius-2xl: 1.5rem; /** 24px */
+  --pt-radius-full: 9999px;
+  --pt-border-width-none: 0;
+  --pt-border-width-sm: 1px;
+  --pt-border-width-md: 2px;
+  --pt-border-width-lg: 4px;
+  --pt-shadow-none: none;
+  --pt-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --pt-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --pt-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --pt-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --pt-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --pt-duration-fast: 100ms;
+  --pt-duration-normal: 200ms;
+  --pt-duration-slow: 300ms;
+  --pt-duration-slower: 500ms;
+  --pt-easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --pt-easing-in: cubic-bezier(0.4, 0, 1, 1);
+  --pt-easing-out: cubic-bezier(0, 0, 0.2, 1);
+  --pt-easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --pt-space-0: 0;
+  --pt-space-1: 0.25rem; /** 4px */
+  --pt-space-2: 0.5rem; /** 8px */
+  --pt-space-3: 0.75rem; /** 12px */
+  --pt-space-4: 1rem; /** 16px */
+  --pt-space-5: 1.25rem; /** 20px */
+  --pt-space-6: 1.5rem; /** 24px */
+  --pt-space-8: 2rem; /** 32px */
+  --pt-space-10: 2.5rem; /** 40px */
+  --pt-space-12: 3rem; /** 48px */
+  --pt-space-16: 4rem; /** 64px */
+  --pt-space-20: 5rem; /** 80px */
+  --pt-font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --pt-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  --pt-font-size-xs: 0.75rem; /** 12px */
+  --pt-font-size-sm: 0.875rem; /** 14px */
+  --pt-font-size-md: 1rem; /** 16px - base */
+  --pt-font-size-lg: 1.125rem; /** 18px */
+  --pt-font-size-xl: 1.25rem; /** 20px */
+  --pt-font-size-2xl: 1.5rem; /** 24px */
+  --pt-font-size-3xl: 1.875rem; /** 30px */
+  --pt-font-size-4xl: 2.25rem; /** 36px */
+  --pt-font-weight-normal: 400;
+  --pt-font-weight-medium: 500;
+  --pt-font-weight-semibold: 600;
+  --pt-font-weight-bold: 700;
+  --pt-font-line-height-tight: 1.25;
+  --pt-font-line-height-normal: 1.5;
+  --pt-font-line-height-relaxed: 1.75;
+  --pt-semantic-border-width-none: 0;
+  --pt-semantic-border-width-default: 1px;
+  --pt-semantic-border-width-thick: 2px;
+  --pt-color-pokemon-type-normal: var(--pt-color-pokemon-normal);
+  --pt-color-pokemon-type-fire: var(--pt-color-pokemon-fire);
+  --pt-color-pokemon-type-water: var(--pt-color-pokemon-water);
+  --pt-color-pokemon-type-electric: var(--pt-color-pokemon-electric);
+  --pt-color-pokemon-type-grass: var(--pt-color-pokemon-grass);
+  --pt-color-pokemon-type-ice: var(--pt-color-pokemon-ice);
+  --pt-color-pokemon-type-fighting: var(--pt-color-pokemon-fighting);
+  --pt-color-pokemon-type-poison: var(--pt-color-pokemon-poison);
+  --pt-color-pokemon-type-ground: var(--pt-color-pokemon-ground);
+  --pt-color-pokemon-type-flying: var(--pt-color-pokemon-flying);
+  --pt-color-pokemon-type-psychic: var(--pt-color-pokemon-psychic);
+  --pt-color-pokemon-type-bug: var(--pt-color-pokemon-bug);
+  --pt-color-pokemon-type-rock: var(--pt-color-pokemon-rock);
+  --pt-color-pokemon-type-ghost: var(--pt-color-pokemon-ghost);
+  --pt-color-pokemon-type-dragon: var(--pt-color-pokemon-dragon);
+  --pt-color-pokemon-type-dark: var(--pt-color-pokemon-dark);
+  --pt-color-pokemon-type-steel: var(--pt-color-pokemon-steel);
+  --pt-color-pokemon-type-fairy: var(--pt-color-pokemon-fairy);
+  --pt-color-action-primary-default: var(--pt-color-blue-500); /** Primary action (buttons, links) */
+  --pt-color-action-primary-hover: var(--pt-color-blue-600);
+  --pt-color-action-primary-pressed: var(--pt-color-blue-700);
+  --pt-color-action-secondary-default: var(--pt-color-green-500); /** Secondary action */
+  --pt-color-action-secondary-hover: var(--pt-color-green-600);
+  --pt-color-action-secondary-pressed: var(--pt-color-green-700);
+  --pt-color-feedback-success-default: var(--pt-color-green-500); /** Success messages, positive feedback */
+  --pt-color-feedback-success-subtle: var(--pt-color-green-100);
+  --pt-color-feedback-warning-default: var(--pt-color-amber-500); /** Warning messages, caution states */
+  --pt-color-feedback-warning-subtle: var(--pt-color-amber-100);
+  --pt-color-feedback-error-default: var(--pt-color-red-500); /** Error messages, destructive actions */
+  --pt-color-feedback-error-subtle: var(--pt-color-red-100);
+  --pt-color-feedback-info-default: var(--pt-color-blue-500); /** Informational messages */
+  --pt-color-feedback-info-subtle: var(--pt-color-blue-100);
+  --pt-color-surface-page: var(--pt-color-slate-50); /** Page background */
+  --pt-color-surface-card: var(--pt-color-white); /** Card/panel background */
+  --pt-color-surface-elevated: var(--pt-color-white); /** Elevated surface (modals, dropdowns) */
+  --pt-color-surface-hovered: var(--pt-color-slate-100); /** Surface on hover */
+  --pt-color-surface-pressed: var(--pt-color-slate-200); /** Surface on press */
+  --pt-color-text-primary: var(--pt-color-slate-800); /** Primary text, headings */
+  --pt-color-text-secondary: var(--pt-color-slate-500); /** Secondary text, captions */
+  --pt-color-text-disabled: var(--pt-color-slate-400); /** Disabled text */
+  --pt-color-text-inverse: var(--pt-color-white); /** Text on dark backgrounds */
+  --pt-color-border-default: var(--pt-color-slate-200); /** Default border */
+  --pt-color-border-subtle: var(--pt-color-slate-100); /** Subtle border */
+  --pt-color-border-focused: var(--pt-color-blue-500); /** Focus ring */
+  --pt-elevation-none: var(--pt-shadow-none); /** No elevation */
+  --pt-elevation-raised: var(--pt-shadow-sm); /** Slightly raised (cards) */
+  --pt-elevation-overlay: var(--pt-shadow-md); /** Overlapping elements (dropdowns) */
+  --pt-elevation-modal: var(--pt-shadow-xl); /** Modal dialogs */
+  --pt-elevation-toast: var(--pt-shadow-lg); /** Toast notifications */
+  --pt-semantic-border-radius-none: var(--pt-radius-none);
+  --pt-semantic-border-radius-sm: var(--pt-radius-sm); /** Small elements (badges) */
+  --pt-semantic-border-radius-md: var(--pt-radius-md); /** Default (buttons, inputs) */
+  --pt-semantic-border-radius-lg: var(--pt-radius-lg); /** Large elements (cards) */
+  --pt-semantic-border-radius-pill: var(--pt-radius-full); /** Pill shape */
+  --pt-motion-duration-instant: var(--pt-duration-fast); /** Micro-interactions */
+  --pt-motion-duration-quick: var(--pt-duration-normal); /** Default transitions */
+  --pt-motion-duration-moderate: var(--pt-duration-slow); /** Larger animations */
+  --pt-motion-duration-deliberate: var(--pt-duration-slower); /** Complex animations */
+  --pt-motion-easing-default: var(--pt-easing-default);
+  --pt-motion-easing-enter: var(--pt-easing-out); /** Element entering */
+  --pt-motion-easing-exit: var(--pt-easing-in); /** Element exiting */
+  --pt-spacing-content-xs: var(--pt-space-1); /** Tight spacing (4px) */
+  --pt-spacing-content-sm: var(--pt-space-2); /** Small spacing (8px) */
+  --pt-spacing-content-md: var(--pt-space-4); /** Medium spacing (16px) */
+  --pt-spacing-content-lg: var(--pt-space-6); /** Large spacing (24px) */
+  --pt-spacing-content-xl: var(--pt-space-8); /** Extra large spacing (32px) */
+  --pt-spacing-layout-section: var(--pt-space-12); /** Section gap (48px) */
+  --pt-spacing-layout-page: var(--pt-space-16); /** Page padding (64px) */
+  --pt-spacing-gap-xs: var(--pt-space-1);
+  --pt-spacing-gap-sm: var(--pt-space-2);
+  --pt-spacing-gap-md: var(--pt-space-4);
+  --pt-spacing-gap-lg: var(--pt-space-6);
+  --pt-typography-heading-xl-font-family: var(--pt-font-family-sans);
+  --pt-typography-heading-xl-font-size: var(--pt-font-size-4xl);
+  --pt-typography-heading-xl-font-weight: var(--pt-font-weight-bold);
+  --pt-typography-heading-xl-line-height: var(--pt-font-line-height-tight);
+  --pt-typography-heading-lg-font-family: var(--pt-font-family-sans);
+  --pt-typography-heading-lg-font-size: var(--pt-font-size-2xl);
+  --pt-typography-heading-lg-font-weight: var(--pt-font-weight-semibold);
+  --pt-typography-heading-lg-line-height: var(--pt-font-line-height-tight);
+  --pt-typography-heading-md-font-family: var(--pt-font-family-sans);
+  --pt-typography-heading-md-font-size: var(--pt-font-size-xl);
+  --pt-typography-heading-md-font-weight: var(--pt-font-weight-semibold);
+  --pt-typography-heading-md-line-height: var(--pt-font-line-height-normal);
+  --pt-typography-heading-sm-font-family: var(--pt-font-family-sans);
+  --pt-typography-heading-sm-font-size: var(--pt-font-size-lg);
+  --pt-typography-heading-sm-font-weight: var(--pt-font-weight-medium);
+  --pt-typography-heading-sm-line-height: var(--pt-font-line-height-normal);
+  --pt-typography-body-default-font-family: var(--pt-font-family-sans);
+  --pt-typography-body-default-font-size: var(--pt-font-size-md);
+  --pt-typography-body-default-font-weight: var(--pt-font-weight-normal);
+  --pt-typography-body-default-line-height: var(--pt-font-line-height-normal);
+  --pt-typography-body-small-font-family: var(--pt-font-family-sans);
+  --pt-typography-body-small-font-size: var(--pt-font-size-sm);
+  --pt-typography-body-small-font-weight: var(--pt-font-weight-normal);
+  --pt-typography-body-small-line-height: var(--pt-font-line-height-normal);
+  --pt-typography-label-default-font-family: var(--pt-font-family-sans);
+  --pt-typography-label-default-font-size: var(--pt-font-size-sm);
+  --pt-typography-label-default-font-weight: var(--pt-font-weight-medium);
+  --pt-typography-label-default-line-height: var(--pt-font-line-height-tight);
+  --pt-typography-code-default-font-family: var(--pt-font-family-mono);
+  --pt-typography-code-default-font-size: var(--pt-font-size-sm);
+  --pt-typography-code-default-font-weight: var(--pt-font-weight-normal);
+  --pt-typography-code-default-line-height: var(--pt-font-line-height-normal);
 }

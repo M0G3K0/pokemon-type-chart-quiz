@@ -16,6 +16,7 @@ const config = {
 	platforms: {
 		css: {
 			transformGroup: 'css',
+			prefix: 'pt',
 			buildPath: 'src/styles/generated/',
 			files: [
 				{
@@ -29,6 +30,7 @@ const config = {
 		},
 		scss: {
 			transformGroup: 'scss',
+			prefix: 'pt',
 			buildPath: 'src/styles/generated/',
 			files: [
 				{
@@ -42,6 +44,7 @@ const config = {
 		},
 		ts: {
 			transformGroup: 'js',
+			prefix: 'pt',
 			buildPath: 'src/design-system/',
 			files: [
 				{

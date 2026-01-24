@@ -58,19 +58,19 @@ export class BadgeComponent {
     }
 
     const colorMap: Record<string, string> = {
-      primary: 'var(--color-action-primary-default)',
-      secondary: 'var(--color-action-secondary-default)',
-      success: 'var(--color-feedback-success-default)',
-      warning: 'var(--color-feedback-warning-default)',
-      error: 'var(--color-feedback-error-default)',
-      info: 'var(--color-feedback-info-default)',
-      neutral: 'var(--color-slate-500)',
+      primary: 'var(--pt-color-action-primary-default)',
+      secondary: 'var(--pt-color-action-secondary-default)',
+      success: 'var(--pt-color-feedback-success-default)',
+      warning: 'var(--pt-color-feedback-warning-default)',
+      error: 'var(--pt-color-feedback-error-default)',
+      info: 'var(--pt-color-feedback-info-default)',
+      neutral: 'var(--pt-color-slate-500)',
     };
 
     return colorMap[this.color] ?? colorMap['neutral'];
   }
 
   get textColor(): string {
-    return 'var(--color-text-inverse)';
+    return 'var(--pt-color-text-inverse)';
   }
 }

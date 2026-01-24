@@ -12,17 +12,17 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	gap: var(--spacing-content-xs);
-	font-family: var(--font-family-sans);
-	font-weight: var(--font-weight-medium);
-	border-radius: var(--semantic-border-radius-md);
+	gap: var(--pt-spacing-content-xs);
+	font-family: var(--pt-font-family-sans);
+	font-weight: var(--pt-font-weight-medium);
+	border-radius: var(--pt-semantic-border-radius-md);
 	border: none;
 	cursor: pointer;
-	transition: all var(--motion-duration-quick) var(--motion-easing-default);
+	transition: all var(--pt-motion-duration-quick) var(--pt-motion-easing-default);
 
 	/* Focus styles */
 	&:focus-visible {
-		outline: 2px solid var(--color-border-focused);
+		outline: 2px solid var(--pt-color-border-focused);
 		outline-offset: 2px;
 	}
 
@@ -39,73 +39,73 @@
 
 	/* === Size variants === */
 	&--sm {
-		padding: var(--spacing-content-xs) var(--spacing-content-sm);
-		font-size: var(--font-size-sm);
+		padding: var(--pt-spacing-content-xs) var(--pt-spacing-content-sm);
+		font-size: var(--pt-font-size-sm);
 		min-height: 32px;
 	}
 
 	&--md {
-		padding: var(--spacing-content-sm) var(--spacing-content-md);
-		font-size: var(--font-size-md);
+		padding: var(--pt-spacing-content-sm) var(--pt-spacing-content-md);
+		font-size: var(--pt-font-size-md);
 		min-height: 40px;
 	}
 
 	&--lg {
-		padding: var(--spacing-content-md) var(--spacing-content-lg);
-		font-size: var(--font-size-lg);
+		padding: var(--pt-spacing-content-md) var(--pt-spacing-content-lg);
+		font-size: var(--pt-font-size-lg);
 		min-height: 48px;
 	}
 
 	/* === Color variants === */
 	&--primary {
-		background-color: var(--color-action-primary-default);
-		color: var(--color-text-inverse);
+		background-color: var(--pt-color-action-primary-default);
+		color: var(--pt-color-text-inverse);
 
 		&:hover:not(:disabled) {
-			background-color: var(--color-action-primary-hover);
+			background-color: var(--pt-color-action-primary-hover);
 		}
 
 		&:active:not(:disabled) {
-			background-color: var(--color-action-primary-pressed);
+			background-color: var(--pt-color-action-primary-pressed);
 		}
 	}
 
 	&--secondary {
-		background-color: var(--color-action-secondary-default);
-		color: var(--color-text-inverse);
+		background-color: var(--pt-color-action-secondary-default);
+		color: var(--pt-color-text-inverse);
 
 		&:hover:not(:disabled) {
-			background-color: var(--color-action-secondary-hover);
+			background-color: var(--pt-color-action-secondary-hover);
 		}
 
 		&:active:not(:disabled) {
-			background-color: var(--color-action-secondary-pressed);
+			background-color: var(--pt-color-action-secondary-pressed);
 		}
 	}
 
 	&--danger {
-		background-color: var(--color-feedback-error-default);
-		color: var(--color-text-inverse);
+		background-color: var(--pt-color-feedback-error-default);
+		color: var(--pt-color-text-inverse);
 
 		&:hover:not(:disabled) {
-			background-color: var(--color-red-600);
+			background-color: var(--pt-color-red-600);
 		}
 
 		&:active:not(:disabled) {
-			background-color: var(--color-red-700);
+			background-color: var(--pt-color-red-700);
 		}
 	}
 
 	&--ghost {
 		background-color: transparent;
-		color: var(--color-text-primary);
+		color: var(--pt-color-text-primary);
 
 		&:hover:not(:disabled) {
-			background-color: var(--color-surface-hovered);
+			background-color: var(--pt-color-surface-hovered);
 		}
 
 		&:active:not(:disabled) {
-			background-color: var(--color-surface-pressed);
+			background-color: var(--pt-color-surface-pressed);
 		}
 	}
 }

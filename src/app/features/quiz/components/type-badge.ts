@@ -33,6 +33,6 @@ export class TypeBadgeComponent {
 	@Input() size: 'sm' | 'md' | 'lg' = 'md';
 
 	get typeColor(): string {
-		return `var(--color-pokemon-type-${this.type.toLowerCase()})`;
+		return `var(--pt-color-pokemon-type-${this.type.toLowerCase()})`;
 	}
 }

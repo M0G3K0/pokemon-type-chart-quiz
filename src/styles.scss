@@ -10,10 +10,10 @@
 
 @layer base {
   body {
-    background-color: var(--color-surface-page);
-    color: var(--color-text-primary);
-    font-family: var(--font-family-sans);
-    font-size: var(--font-size-md);
-    line-height: var(--font-line-height-normal);
+    background-color: var(--pt-color-surface-page);
+    color: var(--pt-color-text-primary);
+    font-family: var(--pt-font-family-sans);
+    font-size: var(--pt-font-size-md);
+    line-height: var(--pt-font-line-height-normal);
   }
 }
