@@ -1,25 +1,28 @@
 /**
- * バッジコンポーネントのスタイル定義
- * 
- * ステータス、カテゴリ、ラベルを視覚的に表現するために使用。
+ * @what バッジコンポーネントのスタイル定義
+ * @why ステータス、カテゴリ、ラベルを視覚的に表現
  */
+
+@use '../../../styles/mixins/common' as mixins;
 
 :host {
 	display: inline-block;
 }
 
 .pt-badge {
+	/* Layout */
 	display: inline-flex;
 	align-items: center;
 	gap: var(--pt-spacing-content-xs);
-	font-family: var(--pt-font-family-sans);
-	font-weight: var(--pt-font-weight-bold);
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
+
+	/* Typography - font-familyはbodyから継承 */
+	@include mixins.text-label;
+
+	/* Visual */
 	border-radius: var(--pt-semantic-border-radius-sm);
 	transition: all var(--pt-motion-duration-quick) var(--pt-motion-easing-default);
-	box-shadow: var(--pt-elevation-raised);
-	border: 1px solid rgb(255 255 255 / 10%);
+
+	@include mixins.elevated-card;
 
 	/* === Size variants === */
 	&--sm {

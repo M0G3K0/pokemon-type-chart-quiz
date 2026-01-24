@@ -1,0 +1,47 @@
+/**
+ * @what カードコンポーネントのスタイル定義
+ * @why コンテンツをグループ化するコンテナ
+ */
+
+@use '../../../styles/mixins/common' as mixins;
+
+:host {
+	display: block;
+}
+
+.pt-card {
+	/* Layout */
+	overflow: hidden;
+
+	/* Visual */
+	background-color: var(--pt-color-surface-card);
+	border-radius: var(--pt-semantic-border-radius-lg);
+	border: 1px solid var(--pt-color-border-subtle);
+	box-shadow: var(--pt-elevation-raised);
+
+	/* === Size variants === */
+	&--sm {
+		padding: var(--pt-spacing-content-sm);
+	}
+
+	&--md {
+		padding: var(--pt-spacing-content-md);
+	}
+
+	&--lg {
+		padding: var(--pt-spacing-content-lg);
+	}
+
+	/* === Elevation variants === */
+	&--flat {
+		box-shadow: none;
+	}
+
+	&--raised {
+		box-shadow: var(--pt-elevation-raised);
+	}
+
+	&--overlay {
+		box-shadow: var(--pt-elevation-overlay);
+	}
+}

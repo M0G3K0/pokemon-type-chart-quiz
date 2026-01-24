@@ -1,0 +1,86 @@
+/**
+ * @what 共通Mixin定義
+ * @why DRY原則に従い、共通パターンを一元管理
+ */
+
+/* ==================================================
+   Focus Ring
+   フォーカス状態の視覚的フィードバック
+   ================================================== */
+@mixin focus-ring {
+	&:focus-visible {
+		outline: 2px solid var(--pt-color-border-focused);
+		outline-offset: 2px;
+	}
+}
+
+/* ==================================================
+   Typography Presets
+   テキストスタイルセットを一括適用
+   ================================================== */
+
+@mixin text-body {
+	font-size: var(--pt-font-size-md);
+	line-height: var(--pt-font-line-height-normal);
+	font-weight: var(--pt-font-weight-normal);
+}
+
+@mixin text-body-small {
+	font-size: var(--pt-font-size-sm);
+	line-height: var(--pt-font-line-height-normal);
+	font-weight: var(--pt-font-weight-normal);
+}
+
+@mixin text-button {
+	font-weight: var(--pt-font-weight-medium);
+	letter-spacing: 0.02em;
+}
+
+@mixin text-label {
+	font-size: var(--pt-font-size-xs);
+	font-weight: var(--pt-font-weight-bold);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+@mixin text-heading-lg {
+	font-size: var(--pt-font-size-2xl);
+	font-weight: var(--pt-font-weight-semibold);
+	line-height: var(--pt-font-line-height-tight);
+}
+
+@mixin text-heading-md {
+	font-size: var(--pt-font-size-xl);
+	font-weight: var(--pt-font-weight-semibold);
+	line-height: var(--pt-font-line-height-normal);
+}
+
+/* ==================================================
+   Interactive States
+   ホバー・アクティブ状態の振る舞い
+   ================================================== */
+
+@mixin interactive-scale {
+	transition: transform var(--pt-motion-duration-quick) var(--pt-motion-easing-default);
+
+	&:active:not(:disabled) {
+		transform: scale(0.97);
+	}
+}
+
+@mixin disabled-state {
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+}
+
+/* ==================================================
+   Elevation
+   影のパターン
+   ================================================== */
+
+@mixin elevated-card {
+	box-shadow: var(--pt-elevation-raised);
+	border: 1px solid rgb(255 255 255 / 10%);
+}

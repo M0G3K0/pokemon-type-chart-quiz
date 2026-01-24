@@ -2,7 +2,7 @@ import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PokemonService } from '../../domain/pokemon.service';
 import { Pokemon } from '../../domain/pokemon.schema';
-import { CardComponent } from '../../ui/card/card';
+import { CardComponent } from '../../ui/pt-card/pt-card';
 import { TypeBadgeComponent } from './components/type-badge';
 import { ButtonComponent } from '../../ui/pt-button/pt-button';
 import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from '../../domain/type-chart';
@@ -13,7 +13,7 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
   imports: [CommonModule, CardComponent, TypeBadgeComponent, ButtonComponent],
   template: `
     <div class="max-w-xl mx-auto py-8 px-4">
-      <app-card *ngIf="currentPokemon() as pokemon">
+      <pt-card *ngIf="currentPokemon() as pokemon">
         <div class="text-center">
           <div class="flex justify-between items-center mb-4">
             <span class="text-text-secondary text-xs font-bold uppercase tracking-widest italic">Phase 0: Battle Trial</span>
@@ -114,7 +114,7 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
             </pt-button>
           </div>
         </div>
-      </app-card>
+      </pt-card>
 
       <!-- Skeleton / Loading -->
       <div *ngIf="!currentPokemon()" class="flex flex-col justify-center items-center h-80">

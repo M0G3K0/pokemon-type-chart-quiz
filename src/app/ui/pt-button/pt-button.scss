@@ -1,41 +1,36 @@
 /**
  * @what ボタンコンポーネントのスタイル定義
- * @why デザイントークンを使用して一貫したスタイルを保証
+ * @why デザイントークンとMixinを使用して一貫したスタイルを保証
  */
+
+@use '../../../styles/mixins/common' as mixins;
 
 :host {
 	display: inline-block;
 }
 
 .pt-button {
-	/* Base styles */
+	/* Layout */
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	gap: var(--pt-spacing-content-xs);
-	font-family: var(--pt-font-family-sans);
-	font-weight: var(--pt-font-weight-medium);
-	border-radius: var(--pt-semantic-border-radius-md);
 	border: none;
 	cursor: pointer;
+
+	/* Typography - font-familyはbodyから継承 */
+	@include mixins.text-button;
+
+	/* Border */
+	border-radius: var(--pt-semantic-border-radius-md);
+
+	/* Transitions */
 	transition: all var(--pt-motion-duration-quick) var(--pt-motion-easing-default);
 
-	/* Focus styles */
-	&:focus-visible {
-		outline: 2px solid var(--pt-color-border-focused);
-		outline-offset: 2px;
-	}
-
-	/* Active state */
-	&:active:not(:disabled) {
-		transform: scale(0.97);
-	}
-
-	/* Disabled state */
-	&:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
+	/* Common behaviors */
+	@include mixins.focus-ring;
+	@include mixins.interactive-scale;
+	@include mixins.disabled-state;
 
 	/* === Size variants === */
 	&--sm {

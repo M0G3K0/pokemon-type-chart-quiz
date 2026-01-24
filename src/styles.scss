@@ -3,17 +3,49 @@
  * @why すべてのトークンとベーススタイルを一元管理する
  */
 
-@import url("tailwindcss");
+@import "tailwindcss";
 
 /* Style Dictionary generated tokens */
-@import url("./styles/generated/tokens.css");
+@import "./styles/generated/tokens.css";
 
-@layer base {
-  body {
-    background-color: var(--pt-color-surface-page);
-    color: var(--pt-color-text-primary);
-    font-family: var(--pt-font-family-sans);
-    font-size: var(--pt-font-size-md);
-    line-height: var(--pt-font-line-height-normal);
+/* ==================================================
+   Global Reset & Base Styles
+   全コンポーネントに継承されるベーススタイル
+   ================================================== */
+
+/* Box-sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Base typography - すべてのコンポーネントに継承 */
+body {
+  margin: 0;
+  background-color: var(--pt-color-surface-page);
+  color: var(--pt-color-text-primary);
+  font-family: var(--pt-font-family-sans);
+  font-size: var(--pt-font-size-md);
+  line-height: var(--pt-font-line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Button reset - ブラウザデフォルトスタイルを削除 */
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+/* Link reset */
+a {
+  color: var(--pt-color-action-primary-default);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
