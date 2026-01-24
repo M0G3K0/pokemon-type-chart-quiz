@@ -18,29 +18,9 @@ description: GitHub Issueを作成する手順
 
 `write_to_file` ツールで `issue-body.md` を作成します。
 
-### 必須セクション
+**⚠️ テンプレートは `.github/ISSUE_TEMPLATE/task.md` を参照してください。**
 
-```markdown
-## 💡 概要
-<!-- 何をするのか、なぜ必要なのか -->
-
-## ✅ やることリスト
-- [ ] タスク1
-- [ ] タスク2
-```
-
-### オプションセクション
-
-```markdown
-## 📝 詳細
-<!-- 実装イメージ、再現手順、変更範囲など -->
-
-## 📷 参考資料
-<!-- スクリーンショットや参考URL -->
-
-## 🔗 関連
-<!-- 関連するIssueやPR -->
-```
+全ての必須セクションが必要です。省略するとCIでエラーになります。
 
 ---
 
@@ -79,8 +59,9 @@ node scripts/check-issue-warnings.js <issue-number>
 ```
 
 **警告があれば:**
-1. `gh issue edit <issue-number> --body-file issue-body.md` で修正
-2. 再度 `check-issue-warnings.js` を実行
+1. `issue-body.md` を修正
+2. `gh issue edit <issue-number> --body-file issue-body.md` で更新
+3. 再度 `check-issue-warnings.js` を実行
 
 ---
 
@@ -88,6 +69,6 @@ node scripts/check-issue-warnings.js <issue-number>
 
 | 内容 | ファイル |
 |------|----------|
-| テンプレート | `.github/ISSUE_TEMPLATE/task.md` |
+| **Issueテンプレート（必読）** | `.github/ISSUE_TEMPLATE/task.md` |
 | 検証ルール | `guards/process/rules/issue-format.rules.js` |
 | ガードレール | `guards/process/guard/issue-format.guard.md` |
