@@ -1,5 +1,9 @@
 # PokemonTypeChartQuiz
 
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)](https://pokemon-type-chart-quiz.vercel.app)
+
+🎮 **Live Demo**: https://pokemon-type-chart-quiz.vercel.app
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.1.
 
 ## Development server
