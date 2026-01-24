@@ -36,9 +36,16 @@ git push origin <branch-name>
 
 ## Step 3: ローカルで検証
 
+### 3-1: PR本文の検証
 // turbo
 ```bash
-npm run lint
+npm run pr:validate
+```
+
+### 3-2: コードの検証
+// turbo
+```bash
+npm run lint:css
 npm test
 ```
 
