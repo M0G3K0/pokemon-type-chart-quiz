@@ -1,229 +1,391 @@
 {
-	"$description": "Tier 2: Semantic Color Tokens - Use these for UI implementation",
+	"$description": "Tier 2: Semantic Color Tokens - Use these for UI implementation. Each token describes WHEN to use it.",
 	"color": {
-		"action": {
-			"$description": "Interactive element colors",
-			"primary": {
+		"result": {
+			"$description": "Quiz result feedback colors. Use ONLY for showing quiz/game results.",
+			"win": {
 				"default": {
-					"value": "{color.blue.500}",
+					"value": "{color.lime.500}",
 					"type": "color",
-					"$description": "Primary action (buttons, links)"
-				},
-				"hover": {
-					"value": "{color.blue.600}",
-					"type": "color"
-				},
-				"pressed": {
-					"value": "{color.blue.700}",
-					"type": "color"
-				}
-			},
-			"secondary": {
-				"default": {
-					"value": "{color.green.500}",
-					"type": "color",
-					"$description": "Secondary action"
-				},
-				"hover": {
-					"value": "{color.green.600}",
-					"type": "color"
-				},
-				"pressed": {
-					"value": "{color.green.700}",
-					"type": "color"
-				}
-			}
-		},
-		"feedback": {
-			"$description": "Feedback and status colors",
-			"success": {
-				"default": {
-					"value": "{color.green.500}",
-					"type": "color",
-					"$description": "Success messages, positive feedback"
+					"$description": "【用途】正解・勝利を示す。クイズの正解表示、ポジティブな結果のみに使用。通常UIには使わない。"
 				},
 				"subtle": {
-					"value": "{color.green.100}",
-					"type": "color"
-				}
-			},
-			"warning": {
-				"default": {
-					"value": "{color.amber.500}",
+					"value": "{color.lime.100}",
 					"type": "color",
-					"$description": "Warning messages, caution states"
+					"$description": "【用途】正解状態の背景色。カードやエリア全体を正解として強調する場合に使用。"
 				},
-				"subtle": {
-					"value": "{color.amber.100}",
-					"type": "color"
+				"strong": {
+					"value": "{color.lime.700}",
+					"type": "color",
+					"$description": "【用途】正解状態のテキスト色。subtle背景上で十分なコントラストを確保したテキスト用。"
 				}
 			},
-			"error": {
+			"lose": {
 				"default": {
 					"value": "{color.red.500}",
 					"type": "color",
-					"$description": "Error messages, destructive actions"
+					"$description": "【用途】不正解・敗北を示す。クイズの不正解表示、ネガティブな結果のみに使用。エラーUIとは別。"
 				},
 				"subtle": {
 					"value": "{color.red.100}",
-					"type": "color"
-				}
-			},
-			"info": {
-				"default": {
-					"value": "{color.blue.500}",
 					"type": "color",
-					"$description": "Informational messages"
+					"$description": "【用途】不正解状態の背景色。カードやエリア全体を不正解として強調する場合に使用。"
 				},
-				"subtle": {
-					"value": "{color.blue.100}",
-					"type": "color"
+				"strong": {
+					"value": "{color.red.700}",
+					"type": "color",
+					"$description": "【用途】不正解状態のテキスト色。subtle背景上で十分なコントラストを確保したテキスト用。"
 				}
 			}
 		},
 		"surface": {
-			"$description": "Background surface colors",
+			"$description": "Background surface colors. Define visual hierarchy through background.",
 			"page": {
-				"value": "{color.slate.50}",
+				"value": "{color.gray.50}",
 				"type": "color",
-				"$description": "Page background"
+				"$description": "【用途】ページ全体の背景。最も広いエリアに使用。他の要素はこの上に乗る。"
 			},
 			"card": {
 				"value": "{color.white}",
 				"type": "color",
-				"$description": "Card/panel background"
+				"$description": "【用途】カード・パネルの背景。page背景との差で浮いて見せる。コンテンツをグループ化する。"
 			},
 			"elevated": {
 				"value": "{color.white}",
 				"type": "color",
-				"$description": "Elevated surface (modals, dropdowns)"
+				"$description": "【用途】モーダル・ドロップダウンの背景。shadowと組み合わせて浮遊感を出す。"
 			},
 			"hovered": {
-				"value": "{color.slate.100}",
+				"value": "{color.gray.100}",
 				"type": "color",
-				"$description": "Surface on hover"
+				"$description": "【用途】ホバー状態の背景色。インタラクション可能な要素にマウスが乗った時に適用。"
 			},
 			"pressed": {
-				"value": "{color.slate.200}",
+				"value": "{color.gray.200}",
 				"type": "color",
-				"$description": "Surface on press"
+				"$description": "【用途】押下状態の背景色。hoveredより一段暗くして押し込み感を表現。"
 			}
 		},
 		"text": {
-			"$description": "Text colors",
+			"$description": "Text colors. Define reading hierarchy.",
 			"primary": {
-				"value": "{color.slate.800}",
+				"value": "{color.gray.800}",
 				"type": "color",
-				"$description": "Primary text, headings"
+				"$description": "【用途】主要テキスト。見出し、本文、ラベル。最も重要な読ませたい内容に使用。"
 			},
 			"secondary": {
-				"value": "{color.slate.500}",
+				"value": "{color.gray.500}",
 				"type": "color",
-				"$description": "Secondary text, captions"
+				"$description": "【用途】補助テキスト。キャプション、説明文、メタ情報。primaryより視覚的優先度を下げる。"
 			},
 			"disabled": {
-				"value": "{color.slate.400}",
+				"value": "{color.gray.400}",
 				"type": "color",
-				"$description": "Disabled text"
+				"$description": "【用途】無効化状態のテキスト。操作不可であることを視覚的に示す。コントラストは意図的に低い。"
 			},
 			"inverse": {
 				"value": "{color.white}",
 				"type": "color",
-				"$description": "Text on dark backgrounds"
+				"$description": "【用途】暗い背景上のテキスト。gray-700以上の暗い背景で使用し、十分なコントラストを確保。"
 			}
 		},
 		"border": {
-			"$description": "Border colors",
+			"$description": "Border colors. Define element boundaries.",
 			"default": {
-				"value": "{color.slate.200}",
+				"value": "{color.gray.200}",
 				"type": "color",
-				"$description": "Default border"
+				"$description": "【用途】標準の境界線。カード、入力欄、区切り線に使用。控えめだが認識できる程度。"
 			},
 			"subtle": {
-				"value": "{color.slate.100}",
+				"value": "{color.gray.100}",
 				"type": "color",
-				"$description": "Subtle border"
+				"$description": "【用途】控えめな境界線。defaultより目立たせたくない場合。ほのかな区切りに使用。"
 			},
 			"focused": {
-				"value": "{color.blue.500}",
+				"value": "{color.gray.600}",
 				"type": "color",
-				"$description": "Focus ring"
+				"$description": "【用途】フォーカスリング。キーボード操作時のフォーカス表示。アクセシビリティ上重要。"
 			}
 		},
 		"pokemon": {
-			"$description": "Pokemon type badge colors - Use for type-specific UI elements",
+			"$description": "Pokemon type semantic colors. Use for type-specific UI elements.",
 			"type": {
+				"$description": "Base colors for badges and icons. Use 500 scale - standard saturation.",
 				"normal": {
-					"value": "{color.pokemon.normal}",
-					"type": "color"
+					"value": "{color.pokemon.normal.500}",
+					"type": "color",
+					"$description": "【用途】ノーマルタイプのバッジ・アイコン背景。"
 				},
 				"fire": {
-					"value": "{color.pokemon.fire}",
-					"type": "color"
+					"value": "{color.pokemon.fire.500}",
+					"type": "color",
+					"$description": "【用途】ほのおタイプのバッジ・アイコン背景。"
 				},
 				"water": {
-					"value": "{color.pokemon.water}",
-					"type": "color"
+					"value": "{color.pokemon.water.500}",
+					"type": "color",
+					"$description": "【用途】みずタイプのバッジ・アイコン背景。"
 				},
 				"electric": {
-					"value": "{color.pokemon.electric}",
-					"type": "color"
+					"value": "{color.pokemon.electric.500}",
+					"type": "color",
+					"$description": "【用途】でんきタイプのバッジ・アイコン背景。"
 				},
 				"grass": {
-					"value": "{color.pokemon.grass}",
-					"type": "color"
+					"value": "{color.pokemon.grass.500}",
+					"type": "color",
+					"$description": "【用途】くさタイプのバッジ・アイコン背景。"
 				},
 				"ice": {
-					"value": "{color.pokemon.ice}",
-					"type": "color"
+					"value": "{color.pokemon.ice.500}",
+					"type": "color",
+					"$description": "【用途】こおりタイプのバッジ・アイコン背景。"
 				},
 				"fighting": {
-					"value": "{color.pokemon.fighting}",
-					"type": "color"
+					"value": "{color.pokemon.fighting.500}",
+					"type": "color",
+					"$description": "【用途】かくとうタイプのバッジ・アイコン背景。"
 				},
 				"poison": {
-					"value": "{color.pokemon.poison}",
-					"type": "color"
+					"value": "{color.pokemon.poison.500}",
+					"type": "color",
+					"$description": "【用途】どくタイプのバッジ・アイコン背景。"
 				},
 				"ground": {
-					"value": "{color.pokemon.ground}",
-					"type": "color"
+					"value": "{color.pokemon.ground.500}",
+					"type": "color",
+					"$description": "【用途】じめんタイプのバッジ・アイコン背景。"
 				},
 				"flying": {
-					"value": "{color.pokemon.flying}",
-					"type": "color"
+					"value": "{color.pokemon.flying.500}",
+					"type": "color",
+					"$description": "【用途】ひこうタイプのバッジ・アイコン背景。"
 				},
 				"psychic": {
-					"value": "{color.pokemon.psychic}",
-					"type": "color"
+					"value": "{color.pokemon.psychic.500}",
+					"type": "color",
+					"$description": "【用途】エスパータイプのバッジ・アイコン背景。"
 				},
 				"bug": {
-					"value": "{color.pokemon.bug}",
-					"type": "color"
+					"value": "{color.pokemon.bug.500}",
+					"type": "color",
+					"$description": "【用途】むしタイプのバッジ・アイコン背景。"
 				},
 				"rock": {
-					"value": "{color.pokemon.rock}",
-					"type": "color"
+					"value": "{color.pokemon.rock.500}",
+					"type": "color",
+					"$description": "【用途】いわタイプのバッジ・アイコン背景。"
 				},
 				"ghost": {
-					"value": "{color.pokemon.ghost}",
-					"type": "color"
+					"value": "{color.pokemon.ghost.500}",
+					"type": "color",
+					"$description": "【用途】ゴーストタイプのバッジ・アイコン背景。"
 				},
 				"dragon": {
-					"value": "{color.pokemon.dragon}",
-					"type": "color"
+					"value": "{color.pokemon.dragon.500}",
+					"type": "color",
+					"$description": "【用途】ドラゴンタイプのバッジ・アイコン背景。"
 				},
 				"dark": {
-					"value": "{color.pokemon.dark}",
-					"type": "color"
+					"value": "{color.pokemon.dark.500}",
+					"type": "color",
+					"$description": "【用途】あくタイプのバッジ・アイコン背景。"
 				},
 				"steel": {
-					"value": "{color.pokemon.steel}",
-					"type": "color"
+					"value": "{color.pokemon.steel.500}",
+					"type": "color",
+					"$description": "【用途】はがねタイプのバッジ・アイコン背景。"
 				},
 				"fairy": {
-					"value": "{color.pokemon.fairy}",
-					"type": "color"
+					"value": "{color.pokemon.fairy.500}",
+					"type": "color",
+					"$description": "【用途】フェアリータイプのバッジ・アイコン背景。"
+				}
+			},
+			"bg": {
+				"$description": "Subtle backgrounds for type-themed areas. Use 50 scale - very light.",
+				"normal": {
+					"value": "{color.pokemon.normal.50}",
+					"type": "color",
+					"$description": "【用途】ノーマルタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"fire": {
+					"value": "{color.pokemon.fire.50}",
+					"type": "color",
+					"$description": "【用途】ほのおタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"water": {
+					"value": "{color.pokemon.water.50}",
+					"type": "color",
+					"$description": "【用途】みずタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"electric": {
+					"value": "{color.pokemon.electric.50}",
+					"type": "color",
+					"$description": "【用途】でんきタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"grass": {
+					"value": "{color.pokemon.grass.50}",
+					"type": "color",
+					"$description": "【用途】くさタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"ice": {
+					"value": "{color.pokemon.ice.50}",
+					"type": "color",
+					"$description": "【用途】こおりタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"fighting": {
+					"value": "{color.pokemon.fighting.50}",
+					"type": "color",
+					"$description": "【用途】かくとうタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"poison": {
+					"value": "{color.pokemon.poison.50}",
+					"type": "color",
+					"$description": "【用途】どくタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"ground": {
+					"value": "{color.pokemon.ground.50}",
+					"type": "color",
+					"$description": "【用途】じめんタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"flying": {
+					"value": "{color.pokemon.flying.50}",
+					"type": "color",
+					"$description": "【用途】ひこうタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"psychic": {
+					"value": "{color.pokemon.psychic.50}",
+					"type": "color",
+					"$description": "【用途】エスパータイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"bug": {
+					"value": "{color.pokemon.bug.50}",
+					"type": "color",
+					"$description": "【用途】むしタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"rock": {
+					"value": "{color.pokemon.rock.50}",
+					"type": "color",
+					"$description": "【用途】いわタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"ghost": {
+					"value": "{color.pokemon.ghost.50}",
+					"type": "color",
+					"$description": "【用途】ゴーストタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"dragon": {
+					"value": "{color.pokemon.dragon.50}",
+					"type": "color",
+					"$description": "【用途】ドラゴンタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"dark": {
+					"value": "{color.pokemon.dark.50}",
+					"type": "color",
+					"$description": "【用途】あくタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"steel": {
+					"value": "{color.pokemon.steel.50}",
+					"type": "color",
+					"$description": "【用途】はがねタイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				},
+				"fairy": {
+					"value": "{color.pokemon.fairy.50}",
+					"type": "color",
+					"$description": "【用途】フェアリータイプのカード・エリア背景。薄い色で広範囲に使用可能。"
+				}
+			},
+			"text": {
+				"$description": "Text colors for type content. Use 700 scale - dark enough for good contrast.",
+				"normal": {
+					"value": "{color.pokemon.normal.700}",
+					"type": "color",
+					"$description": "【用途】ノーマルタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"fire": {
+					"value": "{color.pokemon.fire.700}",
+					"type": "color",
+					"$description": "【用途】ほのおタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"water": {
+					"value": "{color.pokemon.water.700}",
+					"type": "color",
+					"$description": "【用途】みずタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"electric": {
+					"value": "{color.pokemon.electric.700}",
+					"type": "color",
+					"$description": "【用途】でんきタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"grass": {
+					"value": "{color.pokemon.grass.700}",
+					"type": "color",
+					"$description": "【用途】くさタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"ice": {
+					"value": "{color.pokemon.ice.700}",
+					"type": "color",
+					"$description": "【用途】こおりタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"fighting": {
+					"value": "{color.pokemon.fighting.700}",
+					"type": "color",
+					"$description": "【用途】かくとうタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"poison": {
+					"value": "{color.pokemon.poison.700}",
+					"type": "color",
+					"$description": "【用途】どくタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"ground": {
+					"value": "{color.pokemon.ground.700}",
+					"type": "color",
+					"$description": "【用途】じめんタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"flying": {
+					"value": "{color.pokemon.flying.700}",
+					"type": "color",
+					"$description": "【用途】ひこうタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"psychic": {
+					"value": "{color.pokemon.psychic.700}",
+					"type": "color",
+					"$description": "【用途】エスパータイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"bug": {
+					"value": "{color.pokemon.bug.700}",
+					"type": "color",
+					"$description": "【用途】むしタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"rock": {
+					"value": "{color.pokemon.rock.700}",
+					"type": "color",
+					"$description": "【用途】いわタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"ghost": {
+					"value": "{color.pokemon.ghost.700}",
+					"type": "color",
+					"$description": "【用途】ゴーストタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"dragon": {
+					"value": "{color.pokemon.dragon.700}",
+					"type": "color",
+					"$description": "【用途】ドラゴンタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"dark": {
+					"value": "{color.pokemon.dark.700}",
+					"type": "color",
+					"$description": "【用途】あくタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"steel": {
+					"value": "{color.pokemon.steel.700}",
+					"type": "color",
+					"$description": "【用途】はがねタイプのテキスト。bg上で十分なコントラストを確保。"
+				},
+				"fairy": {
+					"value": "{color.pokemon.fairy.700}",
+					"type": "color",
+					"$description": "【用途】フェアリータイプのテキスト。bg上で十分なコントラストを確保。"
 				}
 			}
 		}

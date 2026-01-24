@@ -2,22 +2,22 @@
 	"$description": "Tier 3: Button Component Tokens",
 	"button": {
 		"primary": {
-			"$description": "Primary button - main CTA",
+			"$description": "Primary button - main CTA, uses gray for neutral look",
 			"bg": {
 				"default": {
-					"value": "{color.action.primary.default}",
+					"value": "{color.gray.800}",
 					"type": "color"
 				},
 				"hover": {
-					"value": "{color.action.primary.hover}",
+					"value": "{color.gray.700}",
 					"type": "color"
 				},
 				"pressed": {
-					"value": "{color.action.primary.pressed}",
+					"value": "{color.gray.900}",
 					"type": "color"
 				},
 				"disabled": {
-					"value": "{color.surface.pressed}",
+					"value": "{color.gray.200}",
 					"type": "color"
 				}
 			},
@@ -43,7 +43,7 @@
 			}
 		},
 		"secondary": {
-			"$description": "Secondary button - less emphasis",
+			"$description": "Secondary button - outlined style",
 			"bg": {
 				"default": {
 					"value": "transparent",
@@ -64,7 +64,7 @@
 			},
 			"text": {
 				"default": {
-					"value": "{color.action.primary.default}",
+					"value": "{color.text.primary}",
 					"type": "color"
 				},
 				"disabled": {
@@ -78,7 +78,7 @@
 					"type": "color"
 				},
 				"hover": {
-					"value": "{color.action.primary.default}",
+					"value": "{color.gray.600}",
 					"type": "color"
 				},
 				"focus": {
@@ -124,47 +124,6 @@
 				},
 				"focus": {
 					"value": "{color.border.focused}",
-					"type": "color"
-				}
-			}
-		},
-		"danger": {
-			"$description": "Danger button - destructive actions",
-			"bg": {
-				"default": {
-					"value": "{color.feedback.error.default}",
-					"type": "color"
-				},
-				"hover": {
-					"value": "{color.red.600}",
-					"type": "color"
-				},
-				"pressed": {
-					"value": "{color.red.700}",
-					"type": "color"
-				},
-				"disabled": {
-					"value": "{color.surface.pressed}",
-					"type": "color"
-				}
-			},
-			"text": {
-				"default": {
-					"value": "{color.text.inverse}",
-					"type": "color"
-				},
-				"disabled": {
-					"value": "{color.text.disabled}",
-					"type": "color"
-				}
-			},
-			"border": {
-				"default": {
-					"value": "transparent",
-					"type": "color"
-				},
-				"focus": {
-					"value": "{color.feedback.error.default}",
 					"type": "color"
 				}
 			}

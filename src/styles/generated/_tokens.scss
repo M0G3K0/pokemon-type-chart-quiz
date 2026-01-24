@@ -1,26 +1,28 @@
 
 // Do not edit directly, this file was auto-generated.
 
-$pt-color-blue-50: #eff6ff;
-$pt-color-blue-100: #dbeafe;
-$pt-color-blue-200: #bfdbfe;
-$pt-color-blue-300: #93c5fd;
-$pt-color-blue-400: #60a5fa;
-$pt-color-blue-500: #3b82f6;
-$pt-color-blue-600: #2563eb;
-$pt-color-blue-700: #1d4ed8;
-$pt-color-blue-800: #1e40af;
-$pt-color-blue-900: #1e3a8a;
-$pt-color-green-50: #f0fdf4;
-$pt-color-green-100: #dcfce7;
-$pt-color-green-200: #bbf7d0;
-$pt-color-green-300: #86efac;
-$pt-color-green-400: #4ade80;
-$pt-color-green-500: #22c55e;
-$pt-color-green-600: #16a34a;
-$pt-color-green-700: #15803d;
-$pt-color-green-800: #166534;
-$pt-color-green-900: #14532d;
+$pt-color-gray-50: #f9fafb; // 最も明るいグレー。ほぼ白に近い。背景として十分な明度を持つ。
+$pt-color-gray-100: #f3f4f6; // 非常に明るいグレー。50との差がわずかに認識できる程度。
+$pt-color-gray-200: #e5e7eb; // 明るいグレー。白背景上で境界線として認識可能。
+$pt-color-gray-300: #d1d5db; // 中明度の明るいグレー。白背景上で明確に視認できる。
+$pt-color-gray-400: #9ca3af; // 中間グレー。白・黒どちらの背景でも視認可能だがコントラストは低め。
+$pt-color-gray-500: #6b7280; // 標準グレー。白背景上で十分なコントラスト(3:1以上)を確保。
+$pt-color-gray-600: #4b5563; // やや暗いグレー。白背景上で高コントラスト(4.5:1以上)確保可能。
+$pt-color-gray-700: #374151; // 暗いグレー。白文字との対比で十分なコントラスト確保可能。
+$pt-color-gray-800: #1f2937; // 非常に暗いグレー。白文字との対比でAAA基準(7:1)に近い。
+$pt-color-gray-900: #111827; // ほぼ黒に近いグレー。わずかに青みを帯びる。
+$pt-color-gray-950: #030712; // 最も暗いグレー。純黒に非常に近い。
+$pt-color-lime-50: #f7fee7;
+$pt-color-lime-100: #ecfccb;
+$pt-color-lime-200: #d9f99d;
+$pt-color-lime-300: #bef264;
+$pt-color-lime-400: #a3e635;
+$pt-color-lime-500: #84cc16;
+$pt-color-lime-600: #65a30d;
+$pt-color-lime-700: #4d7c0f;
+$pt-color-lime-800: #3f6212;
+$pt-color-lime-900: #365314;
+$pt-color-lime-950: #1a2e05;
 $pt-color-red-50: #fef2f2;
 $pt-color-red-100: #fee2e2;
 $pt-color-red-200: #fecaca;
@@ -31,46 +33,207 @@ $pt-color-red-600: #dc2626;
 $pt-color-red-700: #b91c1c;
 $pt-color-red-800: #991b1b;
 $pt-color-red-900: #7f1d1d;
-$pt-color-amber-50: #fffbeb;
-$pt-color-amber-100: #fef3c7;
-$pt-color-amber-200: #fde68a;
-$pt-color-amber-300: #fcd34d;
-$pt-color-amber-400: #fbbf24;
-$pt-color-amber-500: #f59e0b;
-$pt-color-amber-600: #d97706;
-$pt-color-amber-700: #b45309;
-$pt-color-amber-800: #92400e;
-$pt-color-amber-900: #78350f;
-$pt-color-slate-50: #f8fafc;
-$pt-color-slate-100: #f1f5f9;
-$pt-color-slate-200: #e2e8f0;
-$pt-color-slate-300: #cbd5e1;
-$pt-color-slate-400: #94a3b8;
-$pt-color-slate-500: #64748b;
-$pt-color-slate-600: #475569;
-$pt-color-slate-700: #334155;
-$pt-color-slate-800: #1e293b;
-$pt-color-slate-900: #0f172a;
+$pt-color-red-950: #450a0a;
 $pt-color-white: #ffffff;
 $pt-color-black: #000000;
-$pt-color-pokemon-normal: #a8a77a;
-$pt-color-pokemon-fire: #ee8130;
-$pt-color-pokemon-water: #6390f0;
-$pt-color-pokemon-electric: #f7d02c;
-$pt-color-pokemon-grass: #7ac74c;
-$pt-color-pokemon-ice: #96d9d6;
-$pt-color-pokemon-fighting: #c22e28;
-$pt-color-pokemon-poison: #a33ea1;
-$pt-color-pokemon-ground: #e2bf65;
-$pt-color-pokemon-flying: #a98ff3;
-$pt-color-pokemon-psychic: #f95587;
-$pt-color-pokemon-bug: #a6b91a;
-$pt-color-pokemon-rock: #b6a136;
-$pt-color-pokemon-ghost: #735797;
-$pt-color-pokemon-dragon: #6f35fc;
-$pt-color-pokemon-dark: #705746;
-$pt-color-pokemon-steel: #b7b7ce;
-$pt-color-pokemon-fairy: #d685ad;
+$pt-color-pokemon-normal-50: #f6f6f2;
+$pt-color-pokemon-normal-100: #ecece4;
+$pt-color-pokemon-normal-200: #d8d7c6;
+$pt-color-pokemon-normal-300: #c4c3a9;
+$pt-color-pokemon-normal-400: #b0af8b;
+$pt-color-pokemon-normal-500: #a8a77a;
+$pt-color-pokemon-normal-600: #868662;
+$pt-color-pokemon-normal-700: #656449;
+$pt-color-pokemon-normal-800: #434331;
+$pt-color-pokemon-normal-900: #222118;
+$pt-color-pokemon-normal-950: #11110c;
+$pt-color-pokemon-fire-50: #fef2ea;
+$pt-color-pokemon-fire-100: #fce6d5;
+$pt-color-pokemon-fire-200: #f9ccac;
+$pt-color-pokemon-fire-300: #f5b282;
+$pt-color-pokemon-fire-400: #f29959;
+$pt-color-pokemon-fire-500: #ee8130;
+$pt-color-pokemon-fire-600: #be6726;
+$pt-color-pokemon-fire-700: #8f4d1d;
+$pt-color-pokemon-fire-800: #5f3413;
+$pt-color-pokemon-fire-900: #301a0a;
+$pt-color-pokemon-fire-950: #180d05;
+$pt-color-pokemon-water-50: #eff4fe;
+$pt-color-pokemon-water-100: #e0e9fc;
+$pt-color-pokemon-water-200: #c1d2fa;
+$pt-color-pokemon-water-300: #a1bcf7;
+$pt-color-pokemon-water-400: #82a6f4;
+$pt-color-pokemon-water-500: #6390f0;
+$pt-color-pokemon-water-600: #4f73c0;
+$pt-color-pokemon-water-700: #3b5690;
+$pt-color-pokemon-water-800: #283a60;
+$pt-color-pokemon-water-900: #141d30;
+$pt-color-pokemon-water-950: #0a0e18;
+$pt-color-pokemon-electric-50: #fefbea;
+$pt-color-pokemon-electric-100: #fef6d5;
+$pt-color-pokemon-electric-200: #fdecaa;
+$pt-color-pokemon-electric-300: #fce280;
+$pt-color-pokemon-electric-400: #fad956;
+$pt-color-pokemon-electric-500: #f7d02c;
+$pt-color-pokemon-electric-600: #c6a623;
+$pt-color-pokemon-electric-700: #947d1a;
+$pt-color-pokemon-electric-800: #635312;
+$pt-color-pokemon-electric-900: #312a09;
+$pt-color-pokemon-electric-950: #191504;
+$pt-color-pokemon-grass-50: #f2f9ed;
+$pt-color-pokemon-grass-100: #e4f4db;
+$pt-color-pokemon-grass-200: #c9e9b8;
+$pt-color-pokemon-grass-300: #aede94;
+$pt-color-pokemon-grass-400: #94d371;
+$pt-color-pokemon-grass-500: #7ac74c;
+$pt-color-pokemon-grass-600: #629f3d;
+$pt-color-pokemon-grass-700: #49772e;
+$pt-color-pokemon-grass-800: #314f1e;
+$pt-color-pokemon-grass-900: #18280f;
+$pt-color-pokemon-grass-950: #0c1408;
+$pt-color-pokemon-ice-50: #f4fbfb;
+$pt-color-pokemon-ice-100: #eaf7f7;
+$pt-color-pokemon-ice-200: #d5efee;
+$pt-color-pokemon-ice-300: #c0e7e5;
+$pt-color-pokemon-ice-400: #abe0dd;
+$pt-color-pokemon-ice-500: #96d9d6;
+$pt-color-pokemon-ice-600: #78aeab;
+$pt-color-pokemon-ice-700: #5a8280;
+$pt-color-pokemon-ice-800: #3c5756;
+$pt-color-pokemon-ice-900: #1e2b2b;
+$pt-color-pokemon-ice-950: #0f1616;
+$pt-color-pokemon-fighting-50: #f9eaeb;
+$pt-color-pokemon-fighting-100: #f3d5d6;
+$pt-color-pokemon-fighting-200: #e7abad;
+$pt-color-pokemon-fighting-300: #db8285;
+$pt-color-pokemon-fighting-400: #cf585c;
+$pt-color-pokemon-fighting-500: #c22e28;
+$pt-color-pokemon-fighting-600: #9b2520;
+$pt-color-pokemon-fighting-700: #741c18;
+$pt-color-pokemon-fighting-800: #4e1210;
+$pt-color-pokemon-fighting-900: #270908;
+$pt-color-pokemon-fighting-950: #130504;
+$pt-color-pokemon-poison-50: #f6ecf6;
+$pt-color-pokemon-poison-100: #edd8ec;
+$pt-color-pokemon-poison-200: #dbb2da;
+$pt-color-pokemon-poison-300: #c98cc7;
+$pt-color-pokemon-poison-400: #b765b5;
+$pt-color-pokemon-poison-500: #a33ea1;
+$pt-color-pokemon-poison-600: #823281;
+$pt-color-pokemon-poison-700: #622561;
+$pt-color-pokemon-poison-800: #411940;
+$pt-color-pokemon-poison-900: #210c20;
+$pt-color-pokemon-poison-950: #100610;
+$pt-color-pokemon-ground-50: #fcf9f0;
+$pt-color-pokemon-ground-100: #f9f2e0;
+$pt-color-pokemon-ground-200: #f3e6c1;
+$pt-color-pokemon-ground-300: #edd9a3;
+$pt-color-pokemon-ground-400: #e7cd84;
+$pt-color-pokemon-ground-500: #e2bf65;
+$pt-color-pokemon-ground-600: #b59951;
+$pt-color-pokemon-ground-700: #88733d;
+$pt-color-pokemon-ground-800: #5a4c28;
+$pt-color-pokemon-ground-900: #2d2614;
+$pt-color-pokemon-ground-950: #17130a;
+$pt-color-pokemon-flying-50: #f6f4fe;
+$pt-color-pokemon-flying-100: #ede9fc;
+$pt-color-pokemon-flying-200: #dbd2f9;
+$pt-color-pokemon-flying-300: #c9bcf6;
+$pt-color-pokemon-flying-400: #b7a5f3;
+$pt-color-pokemon-flying-500: #a98ff3;
+$pt-color-pokemon-flying-600: #8772c2;
+$pt-color-pokemon-flying-700: #655692;
+$pt-color-pokemon-flying-800: #443961;
+$pt-color-pokemon-flying-900: #221d31;
+$pt-color-pokemon-flying-950: #110e18;
+$pt-color-pokemon-psychic-50: #ffeef3;
+$pt-color-pokemon-psychic-100: #ffdde7;
+$pt-color-pokemon-psychic-200: #ffbbce;
+$pt-color-pokemon-psychic-300: #ff99b6;
+$pt-color-pokemon-psychic-400: #fb779e;
+$pt-color-pokemon-psychic-500: #f95587;
+$pt-color-pokemon-psychic-600: #c7446c;
+$pt-color-pokemon-psychic-700: #953351;
+$pt-color-pokemon-psychic-800: #642236;
+$pt-color-pokemon-psychic-900: #32111b;
+$pt-color-pokemon-psychic-950: #19080d;
+$pt-color-pokemon-bug-50: #f6f8e8;
+$pt-color-pokemon-bug-100: #edf1d1;
+$pt-color-pokemon-bug-200: #dce4a3;
+$pt-color-pokemon-bug-300: #cad676;
+$pt-color-pokemon-bug-400: #b8c948;
+$pt-color-pokemon-bug-500: #a6b91a;
+$pt-color-pokemon-bug-600: #859415;
+$pt-color-pokemon-bug-700: #646f10;
+$pt-color-pokemon-bug-800: #424a0b;
+$pt-color-pokemon-bug-900: #212505;
+$pt-color-pokemon-bug-950: #101203;
+$pt-color-pokemon-rock-50: #f8f6eb;
+$pt-color-pokemon-rock-100: #f1ecd7;
+$pt-color-pokemon-rock-200: #e3d9af;
+$pt-color-pokemon-rock-300: #d5c687;
+$pt-color-pokemon-rock-400: #c6b35e;
+$pt-color-pokemon-rock-500: #b6a136;
+$pt-color-pokemon-rock-600: #92812b;
+$pt-color-pokemon-rock-700: #6d6120;
+$pt-color-pokemon-rock-800: #494016;
+$pt-color-pokemon-rock-900: #24200b;
+$pt-color-pokemon-rock-950: #121005;
+$pt-color-pokemon-ghost-50: #f1eef5;
+$pt-color-pokemon-ghost-100: #e3deeb;
+$pt-color-pokemon-ghost-200: #c7bdd6;
+$pt-color-pokemon-ghost-300: #ab9cc2;
+$pt-color-pokemon-ghost-400: #8f7bad;
+$pt-color-pokemon-ghost-500: #735797;
+$pt-color-pokemon-ghost-600: #5c4679;
+$pt-color-pokemon-ghost-700: #45345b;
+$pt-color-pokemon-ghost-800: #2e233c;
+$pt-color-pokemon-ghost-900: #17111e;
+$pt-color-pokemon-ghost-950: #0b090f;
+$pt-color-pokemon-dragon-50: #f1ebfe;
+$pt-color-pokemon-dragon-100: #e2d7fe;
+$pt-color-pokemon-dragon-200: #c6affd;
+$pt-color-pokemon-dragon-300: #a986fc;
+$pt-color-pokemon-dragon-400: #8d5dfc;
+$pt-color-pokemon-dragon-500: #6f35fc;
+$pt-color-pokemon-dragon-600: #592aca;
+$pt-color-pokemon-dragon-700: #431f97;
+$pt-color-pokemon-dragon-800: #2c1565;
+$pt-color-pokemon-dragon-900: #160b32;
+$pt-color-pokemon-dragon-950: #0b0519;
+$pt-color-pokemon-steel-50: #f8f8fa;
+$pt-color-pokemon-steel-100: #f1f1f5;
+$pt-color-pokemon-steel-200: #e2e2eb;
+$pt-color-pokemon-steel-300: #d4d4e1;
+$pt-color-pokemon-steel-400: #c5c5d8;
+$pt-color-pokemon-steel-500: #b7b7ce;
+$pt-color-pokemon-steel-600: #9292a5;
+$pt-color-pokemon-steel-700: #6e6e7c;
+$pt-color-pokemon-steel-800: #494952;
+$pt-color-pokemon-steel-900: #252529;
+$pt-color-pokemon-steel-950: #121215;
+$pt-color-pokemon-dark-50: #f1eeed;
+$pt-color-pokemon-dark-100: #e3dedb;
+$pt-color-pokemon-dark-200: #c6bcb7;
+$pt-color-pokemon-dark-300: #a99b93;
+$pt-color-pokemon-dark-400: #8d796e;
+$pt-color-pokemon-dark-500: #705746;
+$pt-color-pokemon-dark-600: #5a4638;
+$pt-color-pokemon-dark-700: #43342a;
+$pt-color-pokemon-dark-800: #2d231c;
+$pt-color-pokemon-dark-900: #16110e;
+$pt-color-pokemon-dark-950: #0b0907;
+$pt-color-pokemon-fairy-50: #fbf3f7;
+$pt-color-pokemon-fairy-100: #f7e7ee;
+$pt-color-pokemon-fairy-200: #efcedd;
+$pt-color-pokemon-fairy-300: #e7b6cc;
+$pt-color-pokemon-fairy-400: #df9dba;
+$pt-color-pokemon-fairy-500: #d685ad;
+$pt-color-pokemon-fairy-600: #ab6a8a;
+$pt-color-pokemon-fairy-700: #805068;
+$pt-color-pokemon-fairy-800: #563545;
+$pt-color-pokemon-fairy-900: #2b1b23;
+$pt-color-pokemon-fairy-950: #150d11;
 $pt-radius-none: 0;
 $pt-radius-sm: 0.25rem; // 4px
 $pt-radius-md: 0.5rem; // 8px
@@ -134,51 +297,78 @@ $pt-button-secondary-bg-disabled: rgba(0, 0, 0, 0);
 $pt-button-ghost-bg-default: rgba(0, 0, 0, 0);
 $pt-button-ghost-bg-disabled: rgba(0, 0, 0, 0);
 $pt-button-ghost-border-default: rgba(0, 0, 0, 0);
-$pt-button-danger-border-default: rgba(0, 0, 0, 0);
-$pt-color-pokemon-type-normal: $pt-color-pokemon-normal;
-$pt-color-pokemon-type-fire: $pt-color-pokemon-fire;
-$pt-color-pokemon-type-water: $pt-color-pokemon-water;
-$pt-color-pokemon-type-electric: $pt-color-pokemon-electric;
-$pt-color-pokemon-type-grass: $pt-color-pokemon-grass;
-$pt-color-pokemon-type-ice: $pt-color-pokemon-ice;
-$pt-color-pokemon-type-fighting: $pt-color-pokemon-fighting;
-$pt-color-pokemon-type-poison: $pt-color-pokemon-poison;
-$pt-color-pokemon-type-ground: $pt-color-pokemon-ground;
-$pt-color-pokemon-type-flying: $pt-color-pokemon-flying;
-$pt-color-pokemon-type-psychic: $pt-color-pokemon-psychic;
-$pt-color-pokemon-type-bug: $pt-color-pokemon-bug;
-$pt-color-pokemon-type-rock: $pt-color-pokemon-rock;
-$pt-color-pokemon-type-ghost: $pt-color-pokemon-ghost;
-$pt-color-pokemon-type-dragon: $pt-color-pokemon-dragon;
-$pt-color-pokemon-type-dark: $pt-color-pokemon-dark;
-$pt-color-pokemon-type-steel: $pt-color-pokemon-steel;
-$pt-color-pokemon-type-fairy: $pt-color-pokemon-fairy;
-$pt-color-action-primary-default: $pt-color-blue-500; // Primary action (buttons, links)
-$pt-color-action-primary-hover: $pt-color-blue-600;
-$pt-color-action-primary-pressed: $pt-color-blue-700;
-$pt-color-action-secondary-default: $pt-color-green-500; // Secondary action
-$pt-color-action-secondary-hover: $pt-color-green-600;
-$pt-color-action-secondary-pressed: $pt-color-green-700;
-$pt-color-feedback-success-default: $pt-color-green-500; // Success messages, positive feedback
-$pt-color-feedback-success-subtle: $pt-color-green-100;
-$pt-color-feedback-warning-default: $pt-color-amber-500; // Warning messages, caution states
-$pt-color-feedback-warning-subtle: $pt-color-amber-100;
-$pt-color-feedback-error-default: $pt-color-red-500; // Error messages, destructive actions
-$pt-color-feedback-error-subtle: $pt-color-red-100;
-$pt-color-feedback-info-default: $pt-color-blue-500; // Informational messages
-$pt-color-feedback-info-subtle: $pt-color-blue-100;
-$pt-color-surface-page: $pt-color-slate-50; // Page background
-$pt-color-surface-card: $pt-color-white; // Card/panel background
-$pt-color-surface-elevated: $pt-color-white; // Elevated surface (modals, dropdowns)
-$pt-color-surface-hovered: $pt-color-slate-100; // Surface on hover
-$pt-color-surface-pressed: $pt-color-slate-200; // Surface on press
-$pt-color-text-primary: $pt-color-slate-800; // Primary text, headings
-$pt-color-text-secondary: $pt-color-slate-500; // Secondary text, captions
-$pt-color-text-disabled: $pt-color-slate-400; // Disabled text
-$pt-color-text-inverse: $pt-color-white; // Text on dark backgrounds
-$pt-color-border-default: $pt-color-slate-200; // Default border
-$pt-color-border-subtle: $pt-color-slate-100; // Subtle border
-$pt-color-border-focused: $pt-color-blue-500; // Focus ring
+$pt-color-pokemon-type-normal: $pt-color-pokemon-normal-500; // 【用途】ノーマルタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-fire: $pt-color-pokemon-fire-500; // 【用途】ほのおタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-water: $pt-color-pokemon-water-500; // 【用途】みずタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-electric: $pt-color-pokemon-electric-500; // 【用途】でんきタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-grass: $pt-color-pokemon-grass-500; // 【用途】くさタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-ice: $pt-color-pokemon-ice-500; // 【用途】こおりタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-fighting: $pt-color-pokemon-fighting-500; // 【用途】かくとうタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-poison: $pt-color-pokemon-poison-500; // 【用途】どくタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-ground: $pt-color-pokemon-ground-500; // 【用途】じめんタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-flying: $pt-color-pokemon-flying-500; // 【用途】ひこうタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-psychic: $pt-color-pokemon-psychic-500; // 【用途】エスパータイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-bug: $pt-color-pokemon-bug-500; // 【用途】むしタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-rock: $pt-color-pokemon-rock-500; // 【用途】いわタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-ghost: $pt-color-pokemon-ghost-500; // 【用途】ゴーストタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-dragon: $pt-color-pokemon-dragon-500; // 【用途】ドラゴンタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-dark: $pt-color-pokemon-dark-500; // 【用途】あくタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-steel: $pt-color-pokemon-steel-500; // 【用途】はがねタイプのバッジ・アイコン背景。
+$pt-color-pokemon-type-fairy: $pt-color-pokemon-fairy-500; // 【用途】フェアリータイプのバッジ・アイコン背景。
+$pt-color-pokemon-bg-normal: $pt-color-pokemon-normal-50; // 【用途】ノーマルタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-fire: $pt-color-pokemon-fire-50; // 【用途】ほのおタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-water: $pt-color-pokemon-water-50; // 【用途】みずタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-electric: $pt-color-pokemon-electric-50; // 【用途】でんきタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-grass: $pt-color-pokemon-grass-50; // 【用途】くさタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-ice: $pt-color-pokemon-ice-50; // 【用途】こおりタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-fighting: $pt-color-pokemon-fighting-50; // 【用途】かくとうタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-poison: $pt-color-pokemon-poison-50; // 【用途】どくタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-ground: $pt-color-pokemon-ground-50; // 【用途】じめんタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-flying: $pt-color-pokemon-flying-50; // 【用途】ひこうタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-psychic: $pt-color-pokemon-psychic-50; // 【用途】エスパータイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-bug: $pt-color-pokemon-bug-50; // 【用途】むしタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-rock: $pt-color-pokemon-rock-50; // 【用途】いわタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-ghost: $pt-color-pokemon-ghost-50; // 【用途】ゴーストタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-dragon: $pt-color-pokemon-dragon-50; // 【用途】ドラゴンタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-dark: $pt-color-pokemon-dark-50; // 【用途】あくタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-steel: $pt-color-pokemon-steel-50; // 【用途】はがねタイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-bg-fairy: $pt-color-pokemon-fairy-50; // 【用途】フェアリータイプのカード・エリア背景。薄い色で広範囲に使用可能。
+$pt-color-pokemon-text-normal: $pt-color-pokemon-normal-700; // 【用途】ノーマルタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-fire: $pt-color-pokemon-fire-700; // 【用途】ほのおタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-water: $pt-color-pokemon-water-700; // 【用途】みずタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-electric: $pt-color-pokemon-electric-700; // 【用途】でんきタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-grass: $pt-color-pokemon-grass-700; // 【用途】くさタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-ice: $pt-color-pokemon-ice-700; // 【用途】こおりタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-fighting: $pt-color-pokemon-fighting-700; // 【用途】かくとうタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-poison: $pt-color-pokemon-poison-700; // 【用途】どくタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-ground: $pt-color-pokemon-ground-700; // 【用途】じめんタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-flying: $pt-color-pokemon-flying-700; // 【用途】ひこうタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-psychic: $pt-color-pokemon-psychic-700; // 【用途】エスパータイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-bug: $pt-color-pokemon-bug-700; // 【用途】むしタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-rock: $pt-color-pokemon-rock-700; // 【用途】いわタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-ghost: $pt-color-pokemon-ghost-700; // 【用途】ゴーストタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-dragon: $pt-color-pokemon-dragon-700; // 【用途】ドラゴンタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-dark: $pt-color-pokemon-dark-700; // 【用途】あくタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-steel: $pt-color-pokemon-steel-700; // 【用途】はがねタイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-pokemon-text-fairy: $pt-color-pokemon-fairy-700; // 【用途】フェアリータイプのテキスト。bg上で十分なコントラストを確保。
+$pt-color-result-win-default: $pt-color-lime-500; // 【用途】正解・勝利を示す。クイズの正解表示、ポジティブな結果のみに使用。通常UIには使わない。
+$pt-color-result-win-subtle: $pt-color-lime-100; // 【用途】正解状態の背景色。カードやエリア全体を正解として強調する場合に使用。
+$pt-color-result-win-strong: $pt-color-lime-700; // 【用途】正解状態のテキスト色。subtle背景上で十分なコントラストを確保したテキスト用。
+$pt-color-result-lose-default: $pt-color-red-500; // 【用途】不正解・敗北を示す。クイズの不正解表示、ネガティブな結果のみに使用。エラーUIとは別。
+$pt-color-result-lose-subtle: $pt-color-red-100; // 【用途】不正解状態の背景色。カードやエリア全体を不正解として強調する場合に使用。
+$pt-color-result-lose-strong: $pt-color-red-700; // 【用途】不正解状態のテキスト色。subtle背景上で十分なコントラストを確保したテキスト用。
+$pt-color-surface-page: $pt-color-gray-50; // 【用途】ページ全体の背景。最も広いエリアに使用。他の要素はこの上に乗る。
+$pt-color-surface-card: $pt-color-white; // 【用途】カード・パネルの背景。page背景との差で浮いて見せる。コンテンツをグループ化する。
+$pt-color-surface-elevated: $pt-color-white; // 【用途】モーダル・ドロップダウンの背景。shadowと組み合わせて浮遊感を出す。
+$pt-color-surface-hovered: $pt-color-gray-100; // 【用途】ホバー状態の背景色。インタラクション可能な要素にマウスが乗った時に適用。
+$pt-color-surface-pressed: $pt-color-gray-200; // 【用途】押下状態の背景色。hoveredより一段暗くして押し込み感を表現。
+$pt-color-text-primary: $pt-color-gray-800; // 【用途】主要テキスト。見出し、本文、ラベル。最も重要な読ませたい内容に使用。
+$pt-color-text-secondary: $pt-color-gray-500; // 【用途】補助テキスト。キャプション、説明文、メタ情報。primaryより視覚的優先度を下げる。
+$pt-color-text-disabled: $pt-color-gray-400; // 【用途】無効化状態のテキスト。操作不可であることを視覚的に示す。コントラストは意図的に低い。
+$pt-color-text-inverse: $pt-color-white; // 【用途】暗い背景上のテキスト。gray-700以上の暗い背景で使用し、十分なコントラストを確保。
+$pt-color-border-default: $pt-color-gray-200; // 【用途】標準の境界線。カード、入力欄、区切り線に使用。控えめだが認識できる程度。
+$pt-color-border-subtle: $pt-color-gray-100; // 【用途】控えめな境界線。defaultより目立たせたくない場合。ほのかな区切りに使用。
+$pt-color-border-focused: $pt-color-gray-600; // 【用途】フォーカスリング。キーボード操作時のフォーカス表示。アクセシビリティ上重要。
 $pt-elevation-none: $pt-shadow-none; // No elevation
 $pt-elevation-raised: $pt-shadow-sm; // Slightly raised (cards)
 $pt-elevation-overlay: $pt-shadow-md; // Overlapping elements (dropdowns)
@@ -239,45 +429,34 @@ $pt-typography-code-default-font-family: $pt-font-family-mono;
 $pt-typography-code-default-font-size: $pt-font-size-sm;
 $pt-typography-code-default-font-weight: $pt-font-weight-normal;
 $pt-typography-code-default-line-height: $pt-font-line-height-normal;
-$pt-badge-success-text: $pt-color-green-700;
-$pt-badge-warning-text: $pt-color-amber-700;
-$pt-badge-error-text: $pt-color-red-700;
-$pt-badge-info-text: $pt-color-blue-700;
-$pt-button-danger-bg-hover: $pt-color-red-600;
-$pt-button-danger-bg-pressed: $pt-color-red-700;
+$pt-button-primary-bg-default: $pt-color-gray-800;
+$pt-button-primary-bg-hover: $pt-color-gray-700;
+$pt-button-primary-bg-pressed: $pt-color-gray-900;
+$pt-button-primary-bg-disabled: $pt-color-gray-200;
+$pt-button-secondary-border-hover: $pt-color-gray-600;
 $pt-badge-neutral-bg: $pt-color-surface-hovered;
 $pt-badge-neutral-text: $pt-color-text-primary;
-$pt-badge-success-bg: $pt-color-feedback-success-subtle;
-$pt-badge-warning-bg: $pt-color-feedback-warning-subtle;
-$pt-badge-error-bg: $pt-color-feedback-error-subtle;
-$pt-badge-info-bg: $pt-color-feedback-info-subtle;
+$pt-badge-win-bg: $pt-color-result-win-subtle;
+$pt-badge-win-text: $pt-color-result-win-strong;
+$pt-badge-lose-bg: $pt-color-result-lose-subtle;
+$pt-badge-lose-text: $pt-color-result-lose-strong;
 $pt-badge-padding-x: $pt-spacing-content-sm;
 $pt-badge-padding-y: $pt-spacing-content-xs;
 $pt-badge-radius: $pt-semantic-border-radius-sm;
-$pt-button-primary-bg-default: $pt-color-action-primary-default;
-$pt-button-primary-bg-hover: $pt-color-action-primary-hover;
-$pt-button-primary-bg-pressed: $pt-color-action-primary-pressed;
-$pt-button-primary-bg-disabled: $pt-color-surface-pressed;
 $pt-button-primary-text-default: $pt-color-text-inverse;
 $pt-button-primary-text-disabled: $pt-color-text-disabled;
 $pt-button-primary-border-focus: $pt-color-border-focused;
 $pt-button-secondary-bg-hover: $pt-color-surface-hovered;
 $pt-button-secondary-bg-pressed: $pt-color-surface-pressed;
-$pt-button-secondary-text-default: $pt-color-action-primary-default;
+$pt-button-secondary-text-default: $pt-color-text-primary;
 $pt-button-secondary-text-disabled: $pt-color-text-disabled;
 $pt-button-secondary-border-default: $pt-color-border-default;
-$pt-button-secondary-border-hover: $pt-color-action-primary-default;
 $pt-button-secondary-border-focus: $pt-color-border-focused;
 $pt-button-ghost-bg-hover: $pt-color-surface-hovered;
 $pt-button-ghost-bg-pressed: $pt-color-surface-pressed;
 $pt-button-ghost-text-default: $pt-color-text-primary;
 $pt-button-ghost-text-disabled: $pt-color-text-disabled;
 $pt-button-ghost-border-focus: $pt-color-border-focused;
-$pt-button-danger-bg-default: $pt-color-feedback-error-default;
-$pt-button-danger-bg-disabled: $pt-color-surface-pressed;
-$pt-button-danger-text-default: $pt-color-text-inverse;
-$pt-button-danger-text-disabled: $pt-color-text-disabled;
-$pt-button-danger-border-focus: $pt-color-feedback-error-default;
 $pt-card-bg-default: $pt-color-surface-card;
 $pt-card-bg-hover: $pt-color-surface-hovered;
 $pt-card-border-default: $pt-color-border-subtle;

@@ -12,43 +12,25 @@
 				"type": "color"
 			}
 		},
-		"success": {
+		"win": {
+			"$description": "Correct answer badge",
 			"bg": {
-				"value": "{color.feedback.success.subtle}",
+				"value": "{color.result.win.subtle}",
 				"type": "color"
 			},
 			"text": {
-				"value": "{color.green.700}",
+				"value": "{color.result.win.strong}",
 				"type": "color"
 			}
 		},
-		"warning": {
+		"lose": {
+			"$description": "Incorrect answer badge",
 			"bg": {
-				"value": "{color.feedback.warning.subtle}",
+				"value": "{color.result.lose.subtle}",
 				"type": "color"
 			},
 			"text": {
-				"value": "{color.amber.700}",
-				"type": "color"
-			}
-		},
-		"error": {
-			"bg": {
-				"value": "{color.feedback.error.subtle}",
-				"type": "color"
-			},
-			"text": {
-				"value": "{color.red.700}",
-				"type": "color"
-			}
-		},
-		"info": {
-			"bg": {
-				"value": "{color.feedback.info.subtle}",
-				"type": "color"
-			},
-			"text": {
-				"value": "{color.blue.700}",
+				"value": "{color.result.lose.strong}",
 				"type": "color"
 			}
 		},
