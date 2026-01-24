@@ -1,0 +1,70 @@
+{
+	"$description": "Tier 3: Badge Component Tokens",
+	"badge": {
+		"$description": "Badge/chip tokens for status indicators",
+		"neutral": {
+			"bg": {
+				"value": "{color.surface.hovered}",
+				"type": "color"
+			},
+			"text": {
+				"value": "{color.text.primary}",
+				"type": "color"
+			}
+		},
+		"success": {
+			"bg": {
+				"value": "{color.feedback.success.subtle}",
+				"type": "color"
+			},
+			"text": {
+				"value": "{color.green.700}",
+				"type": "color"
+			}
+		},
+		"warning": {
+			"bg": {
+				"value": "{color.feedback.warning.subtle}",
+				"type": "color"
+			},
+			"text": {
+				"value": "{color.amber.700}",
+				"type": "color"
+			}
+		},
+		"error": {
+			"bg": {
+				"value": "{color.feedback.error.subtle}",
+				"type": "color"
+			},
+			"text": {
+				"value": "{color.red.700}",
+				"type": "color"
+			}
+		},
+		"info": {
+			"bg": {
+				"value": "{color.feedback.info.subtle}",
+				"type": "color"
+			},
+			"text": {
+				"value": "{color.blue.700}",
+				"type": "color"
+			}
+		},
+		"padding": {
+			"x": {
+				"value": "{spacing.content.sm}",
+				"type": "spacing"
+			},
+			"y": {
+				"value": "{spacing.content.xs}",
+				"type": "spacing"
+			}
+		},
+		"radius": {
+			"value": "{semantic-border.radius.sm}",
+			"type": "borderRadius"
+		}
+	}
+}

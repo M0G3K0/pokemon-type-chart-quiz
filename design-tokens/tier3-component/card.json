@@ -1,0 +1,64 @@
+{
+	"$description": "Tier 3: Card Component Tokens",
+	"card": {
+		"$description": "Card container tokens",
+		"bg": {
+			"default": {
+				"value": "{color.surface.card}",
+				"type": "color"
+			},
+			"hover": {
+				"value": "{color.surface.hovered}",
+				"type": "color"
+			}
+		},
+		"border": {
+			"default": {
+				"value": "{color.border.subtle}",
+				"type": "color"
+			}
+		},
+		"text": {
+			"title": {
+				"value": "{color.text.primary}",
+				"type": "color"
+			},
+			"body": {
+				"value": "{color.text.secondary}",
+				"type": "color"
+			}
+		},
+		"shadow": {
+			"flat": {
+				"value": "{elevation.none}",
+				"type": "shadow"
+			},
+			"raised": {
+				"value": "{elevation.raised}",
+				"type": "shadow"
+			},
+			"overlay": {
+				"value": "{elevation.overlay}",
+				"type": "shadow"
+			}
+		},
+		"padding": {
+			"sm": {
+				"value": "{spacing.content.sm}",
+				"type": "spacing"
+			},
+			"md": {
+				"value": "{spacing.content.md}",
+				"type": "spacing"
+			},
+			"lg": {
+				"value": "{spacing.content.lg}",
+				"type": "spacing"
+			}
+		},
+		"radius": {
+			"value": "{semantic-border.radius.lg}",
+			"type": "borderRadius"
+		}
+	}
+}

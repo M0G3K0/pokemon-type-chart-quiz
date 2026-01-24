@@ -1,0 +1,173 @@
+{
+	"$description": "Tier 3: Button Component Tokens",
+	"button": {
+		"primary": {
+			"$description": "Primary button - main CTA",
+			"bg": {
+				"default": {
+					"value": "{color.action.primary.default}",
+					"type": "color"
+				},
+				"hover": {
+					"value": "{color.action.primary.hover}",
+					"type": "color"
+				},
+				"pressed": {
+					"value": "{color.action.primary.pressed}",
+					"type": "color"
+				},
+				"disabled": {
+					"value": "{color.surface.pressed}",
+					"type": "color"
+				}
+			},
+			"text": {
+				"default": {
+					"value": "{color.text.inverse}",
+					"type": "color"
+				},
+				"disabled": {
+					"value": "{color.text.disabled}",
+					"type": "color"
+				}
+			},
+			"border": {
+				"default": {
+					"value": "transparent",
+					"type": "color"
+				},
+				"focus": {
+					"value": "{color.border.focused}",
+					"type": "color"
+				}
+			}
+		},
+		"secondary": {
+			"$description": "Secondary button - less emphasis",
+			"bg": {
+				"default": {
+					"value": "transparent",
+					"type": "color"
+				},
+				"hover": {
+					"value": "{color.surface.hovered}",
+					"type": "color"
+				},
+				"pressed": {
+					"value": "{color.surface.pressed}",
+					"type": "color"
+				},
+				"disabled": {
+					"value": "transparent",
+					"type": "color"
+				}
+			},
+			"text": {
+				"default": {
+					"value": "{color.action.primary.default}",
+					"type": "color"
+				},
+				"disabled": {
+					"value": "{color.text.disabled}",
+					"type": "color"
+				}
+			},
+			"border": {
+				"default": {
+					"value": "{color.border.default}",
+					"type": "color"
+				},
+				"hover": {
+					"value": "{color.action.primary.default}",
+					"type": "color"
+				},
+				"focus": {
+					"value": "{color.border.focused}",
+					"type": "color"
+				}
+			}
+		},
+		"ghost": {
+			"$description": "Ghost button - minimal emphasis",
+			"bg": {
+				"default": {
+					"value": "transparent",
+					"type": "color"
+				},
+				"hover": {
+					"value": "{color.surface.hovered}",
+					"type": "color"
+				},
+				"pressed": {
+					"value": "{color.surface.pressed}",
+					"type": "color"
+				},
+				"disabled": {
+					"value": "transparent",
+					"type": "color"
+				}
+			},
+			"text": {
+				"default": {
+					"value": "{color.text.primary}",
+					"type": "color"
+				},
+				"disabled": {
+					"value": "{color.text.disabled}",
+					"type": "color"
+				}
+			},
+			"border": {
+				"default": {
+					"value": "transparent",
+					"type": "color"
+				},
+				"focus": {
+					"value": "{color.border.focused}",
+					"type": "color"
+				}
+			}
+		},
+		"danger": {
+			"$description": "Danger button - destructive actions",
+			"bg": {
+				"default": {
+					"value": "{color.feedback.error.default}",
+					"type": "color"
+				},
+				"hover": {
+					"value": "{color.red.600}",
+					"type": "color"
+				},
+				"pressed": {
+					"value": "{color.red.700}",
+					"type": "color"
+				},
+				"disabled": {
+					"value": "{color.surface.pressed}",
+					"type": "color"
+				}
+			},
+			"text": {
+				"default": {
+					"value": "{color.text.inverse}",
+					"type": "color"
+				},
+				"disabled": {
+					"value": "{color.text.disabled}",
+					"type": "color"
+				}
+			},
+			"border": {
+				"default": {
+					"value": "transparent",
+					"type": "color"
+				},
+				"focus": {
+					"value": "{color.feedback.error.default}",
+					"type": "color"
+				}
+			}
+		}
+	}
+}
