@@ -72,6 +72,22 @@ export const components = {
         "default": "#00000000",
         "focus": "#4b5563"
       }
+    },
+    "danger": {
+      "bg": {
+        "default": "#ef4444",
+        "hover": "#dc2626",
+        "pressed": "#b91c1c",
+        "disabled": "#e5e7eb"
+      },
+      "text": {
+        "default": "#ffffff",
+        "disabled": "#9ca3af"
+      },
+      "border": {
+        "default": "#00000000",
+        "focus": "#4b5563"
+      }
     }
   },
   "card": {

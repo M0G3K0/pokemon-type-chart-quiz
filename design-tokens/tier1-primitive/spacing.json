@@ -6,6 +6,11 @@
 			"type": "spacing",
 			"$description": "物理的な0px。余白なしを明示する場合に使用。"
 		},
+		"05": {
+			"value": "0.125rem",
+			"type": "spacing",
+			"$description": "物理的な2px。グリッドの半分。特に小さいコンポーネント用の例外的な値。"
+		},
 		"1": {
 			"value": "0.25rem",
 			"type": "spacing",

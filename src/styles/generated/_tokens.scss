@@ -271,6 +271,7 @@ $pt-space-10: 2.5rem; // 物理的な40px。グリッドの10倍。大きなセ�
 $pt-space-12: 3rem; // 物理的な48px。グリッドの12倍。主要セクション間。
 $pt-space-16: 4rem; // 物理的な64px。グリッドの16倍。ページレベルの大きな余白。
 $pt-space-20: 5rem; // 物理的な80px。グリッドの20倍。最大レベルの余白。
+$pt-space-05: 0.125rem; // 物理的な2px。グリッドの半分。特に小さいコンポーネント用の例外的な値。
 $pt-font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; // システムサンセリフフォント。本文・UI用
 $pt-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; // 等幅フォント。コード・数値表示用
 $pt-font-size-xs: 0.75rem; // 12px - 非常に小さい。注釈やラベル
@@ -297,6 +298,7 @@ $pt-button-secondary-bg-disabled: rgba(0, 0, 0, 0); // 無効時の背景色。�
 $pt-button-ghost-bg-default: rgba(0, 0, 0, 0); // 背景色。完全透明。
 $pt-button-ghost-bg-disabled: rgba(0, 0, 0, 0); // 無効時の背景色。透明のまま。
 $pt-button-ghost-border-default: rgba(0, 0, 0, 0); // 枠線色。Ghostは枠なし。
+$pt-button-danger-border-default: rgba(0, 0, 0, 0); // 枠線色。Dangerは枠なし。
 $pt-color-pokemon-type-normal: $pt-color-pokemon-normal-500; // 【用途】ノーマルタイプのバッジ・アイコン背景。
 $pt-color-pokemon-type-fire: $pt-color-pokemon-fire-500; // 【用途】ほのおタイプのバッジ・アイコン背景。
 $pt-color-pokemon-type-water: $pt-color-pokemon-water-500; // 【用途】みずタイプのバッジ・アイコン背景。
@@ -446,6 +448,9 @@ $pt-button-primary-bg-hover: $pt-color-gray-700; // ホバー時の背景色。d
 $pt-button-primary-bg-pressed: $pt-color-gray-900; // 押下時の背景色。defaultより一段暗くして押し込み感を表現。
 $pt-button-primary-bg-disabled: $pt-color-gray-200; // 無効時の背景色。操作不可を視覚的に示す。
 $pt-button-secondary-border-hover: $pt-color-gray-600; // ホバー時の枠線色。一段濃くして強調。
+$pt-button-danger-bg-hover: $pt-color-red-600; // ホバー時の背景色。defaultより一段暗く。
+$pt-button-danger-bg-pressed: $pt-color-red-700; // 押下時の背景色。hoverより一段暗く。
+$pt-button-danger-bg-disabled: $pt-color-gray-200; // 無効時の背景色。操作不可を視覚的に示す。
 $pt-badge-neutral-bg: $pt-color-surface-hovered; // バッジの背景色。`background-color`に適用。
 $pt-badge-neutral-text: $pt-color-text-primary; // バッジのラベル色。`color`に適用。
 $pt-badge-win-bg: $pt-color-result-win-subtle; // 正解バッジの背景色。薄いライム。
@@ -469,6 +474,10 @@ $pt-button-ghost-bg-pressed: $pt-color-surface-pressed; // 押下時の背景色
 $pt-button-ghost-text-default: $pt-color-text-primary; // ラベル色。通常テキスト色。
 $pt-button-ghost-text-disabled: $pt-color-text-disabled; // 無効時のラベル色。
 $pt-button-ghost-border-focus: $pt-color-border-focused; // フォーカスリングの色。
+$pt-button-danger-bg-default: $pt-color-result-lose-default; // 背景色。危険・破壊的アクション用の赤。
+$pt-button-danger-text-default: $pt-color-text-inverse; // ラベル色。赤背景上で白文字。
+$pt-button-danger-text-disabled: $pt-color-text-disabled; // 無効時のラベル色。
+$pt-button-danger-border-focus: $pt-color-border-focused; // フォーカスリングの色。
 $pt-card-bg-default: $pt-color-surface-card; // background-colorプロパティに適用。カードコンポーネント専用。デフォルト状態。
 $pt-card-bg-hover: $pt-color-surface-hovered; // background-colorプロパティに適用。カードコンポーネント専用。ホバー状態。クリック可能なカード用。
 $pt-card-border-default: $pt-color-border-subtle; // border-colorプロパティに適用。カードコンポーネント専用。控えめな境界線。

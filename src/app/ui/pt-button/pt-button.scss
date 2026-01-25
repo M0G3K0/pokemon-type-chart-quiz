@@ -79,15 +79,15 @@
 	}
 
 	&--danger {
-		background-color: var(--pt-color-feedback-error-default);
-		color: var(--pt-color-text-inverse);
+		background-color: var(--pt-button-danger-bg-default);
+		color: var(--pt-button-danger-text-default);
 
 		&:hover:not(:disabled) {
-			background-color: var(--pt-color-red-600);
+			background-color: var(--pt-button-danger-bg-hover);
 		}
 
 		&:active:not(:disabled) {
-			background-color: var(--pt-color-red-700);
+			background-color: var(--pt-button-danger-bg-pressed);
 		}
 	}
 
