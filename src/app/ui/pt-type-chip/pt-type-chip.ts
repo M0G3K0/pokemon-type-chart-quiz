@@ -35,6 +35,12 @@ import { PokemonType } from '../../domain/type-chart';
       <ng-content></ng-content>
     </pt-chip>
   `,
+	styles: [`
+    :host {
+      display: inline-block;
+      line-height: 0;
+    }
+  `],
 })
 export class TypeChipComponent {
 	/**
