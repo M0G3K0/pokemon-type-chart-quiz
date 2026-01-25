@@ -1,10 +1,10 @@
 {
-  "$description": "Tier 2: Semantic Typography Tokens - Composite tokens for text styles",
+  "$description": "Tier 2: Semantic Typography Tokens - Composite tokens for text styles. AIへの指示: fontSize等を個別指定せず、このComposite Tokenをセットで使用すること。",
   "typography": {
     "heading": {
-      "$description": "Heading text styles",
+      "$description": "【カテゴリ: 誘引】視線を集め、ページ構造を示す見出し。高ジャンプ率・太字・詰め字間が特徴。",
       "xl": {
-        "$description": "【用途】ページの主要タイトル。ヒーローセクション。",
+        "$description": "【用途】ページの主要タイトル。ヒーローセクション。1ページに1回のみ使用。【禁止】本文中や繰り返し要素には使わない。",
         "fontFamily": {
           "value": "{font.family.sans}"
         },
@@ -19,7 +19,7 @@
         }
       },
       "lg": {
-        "$description": "【用途】セクション見出し。主要な区切り。",
+        "$description": "【用途】セクション見出し。主要な区切り。H2相当。【禁止】カード内やリストアイテムには大きすぎる。",
         "fontFamily": {
           "value": "{font.family.sans}"
         },
@@ -34,7 +34,7 @@
         }
       },
       "md": {
-        "$description": "【用途】サブセクション見出し。カードのタイトル。",
+        "$description": "【用途】サブセクション見出し。カードのタイトル。H3相当。【禁止】ページタイトルには小さすぎる。",
         "fontFamily": {
           "value": "{font.family.sans}"
         },
@@ -49,7 +49,7 @@
         }
       },
       "sm": {
-        "$description": "【用途】小見出し。リストアイテムのタイトル等。",
+        "$description": "【用途】小見出し。リストアイテムのタイトル。H4相当。【禁止】メインの区切りには弱すぎる。",
         "fontFamily": {
           "value": "{font.family.sans}"
         },
@@ -65,9 +65,24 @@
       }
     },
     "body": {
-      "$description": "Body text styles",
-      "default": {
-        "$description": "【用途】標準本文テキスト。記事、説明文。",
+      "$description": "【カテゴリ: 読解】ストレスなく長文を読ませる本文。低ジャンプ率・広い行間が特徴。",
+      "lg": {
+        "$description": "【用途】リードパラグラフ。記事の導入部。強調したい説明文。【禁止】長文の連続使用は避ける。",
+        "fontFamily": {
+          "value": "{font.family.sans}"
+        },
+        "fontSize": {
+          "value": "{font.size.lg}"
+        },
+        "fontWeight": {
+          "value": "{font.weight.normal}"
+        },
+        "lineHeight": {
+          "value": "{font.lineHeight.relaxed}"
+        }
+      },
+      "md": {
+        "$description": "【用途】標準本文テキスト。記事、説明文。デフォルトの選択肢。【禁止】見出しやUIラベルには使わない。",
         "fontFamily": {
           "value": "{font.family.sans}"
         },
@@ -81,8 +96,8 @@
           "value": "{font.lineHeight.normal}"
         }
       },
-      "small": {
-        "$description": "【用途】小さな本文。注釈、メタ情報。",
+      "sm": {
+        "$description": "【用途】小さな本文。注釈、メタ情報、補足説明。【禁止】メインコンテンツには小さすぎる。",
         "fontFamily": {
           "value": "{font.family.sans}"
         },
@@ -98,9 +113,9 @@
       }
     },
     "label": {
-      "$description": "Label and caption text styles",
-      "default": {
-        "$description": "【用途】フォームラベル、ボタンテキスト、タグ。",
+      "$description": "【カテゴリ: 機能】UI操作を補助するラベル。視認性重視・広げる字間が特徴。",
+      "md": {
+        "$description": "【用途】標準ボタンテキスト、フォームラベル、ナビゲーション。【禁止】本文や見出しには使わない。",
         "fontFamily": {
           "value": "{font.family.sans}"
         },
@@ -113,12 +128,42 @@
         "lineHeight": {
           "value": "{font.lineHeight.tight}"
         }
+      },
+      "sm": {
+        "$description": "【用途】小さめのタグ、バッジ、キャプション。【禁止】主要なアクションボタンには小さすぎる。",
+        "fontFamily": {
+          "value": "{font.family.sans}"
+        },
+        "fontSize": {
+          "value": "{font.size.xs}"
+        },
+        "fontWeight": {
+          "value": "{font.weight.medium}"
+        },
+        "lineHeight": {
+          "value": "{font.lineHeight.tight}"
+        }
+      },
+      "xs": {
+        "$description": "【用途】メタデータ、タイムスタンプ、ステータス表示。最小のUI文字。【禁止】読ませたい文には使わない。",
+        "fontFamily": {
+          "value": "{font.family.sans}"
+        },
+        "fontSize": {
+          "value": "{font.size.xs}"
+        },
+        "fontWeight": {
+          "value": "{font.weight.normal}"
+        },
+        "lineHeight": {
+          "value": "{font.lineHeight.tight}"
+        }
       }
     },
     "code": {
-      "$description": "Code text style",
-      "default": {
-        "$description": "【用途】コードブロック、技術的な表示。",
+      "$description": "【カテゴリ: 技術】コードや等幅フォントが必要な表示。",
+      "md": {
+        "$description": "【用途】コードブロック、技術的な表示、数値の整列。【禁止】通常のUIテキストには使わない。",
         "fontFamily": {
           "value": "{font.family.mono}"
         },

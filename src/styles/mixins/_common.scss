@@ -15,43 +15,153 @@
 }
 
 /* ==================================================
-   Typography Presets
+   Typography Presets (Composite Token Mixins)
    テキストスタイルセットを一括適用
+   ※ Primitive token (--pt-font-size-* 等) を直接使わず、
+     これらのMixinを使用すること
    ================================================== */
 
-@mixin text-body {
-	font-size: var(--pt-font-size-md);
-	line-height: var(--pt-font-line-height-normal);
-	font-weight: var(--pt-font-weight-normal);
-}
+/* --------------------------------------------------
+   Heading: 誘引カテゴリ
+   視線を集め、ページ構造を示す見出し
+   -------------------------------------------------- */
 
-@mixin text-body-small {
-	font-size: var(--pt-font-size-sm);
-	line-height: var(--pt-font-line-height-normal);
-	font-weight: var(--pt-font-weight-normal);
-}
-
-@mixin text-button {
-	font-weight: var(--pt-font-weight-medium);
-	letter-spacing: 0.02em;
-}
-
-@mixin text-label {
-	font-size: var(--pt-font-size-xs);
+/// @what text-heading-xl - ページ主要タイトル用
+/// @why 1ページに1回のみ。最大のジャンプ率で視線を集める
+@mixin text-heading-xl {
+	font-family: var(--pt-font-family-sans);
+	font-size: var(--pt-font-size-4xl);
 	font-weight: var(--pt-font-weight-bold);
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
+	line-height: var(--pt-font-line-height-tight);
 }
 
+/// @what text-heading-lg - セクション見出し用
+/// @why H2相当。主要な区切りに使用
 @mixin text-heading-lg {
+	font-family: var(--pt-font-family-sans);
 	font-size: var(--pt-font-size-2xl);
 	font-weight: var(--pt-font-weight-semibold);
 	line-height: var(--pt-font-line-height-tight);
 }
 
+/// @what text-heading-md - サブセクション見出し用
+/// @why H3相当。カードのタイトル等
 @mixin text-heading-md {
+	font-family: var(--pt-font-family-sans);
 	font-size: var(--pt-font-size-xl);
 	font-weight: var(--pt-font-weight-semibold);
+	line-height: var(--pt-font-line-height-normal);
+}
+
+/// @what text-heading-sm - 小見出し用
+/// @why H4相当。リストアイテムのタイトル等
+@mixin text-heading-sm {
+	font-family: var(--pt-font-family-sans);
+	font-size: var(--pt-font-size-lg);
+	font-weight: var(--pt-font-weight-medium);
+	line-height: var(--pt-font-line-height-normal);
+}
+
+/* --------------------------------------------------
+   Body: 読解カテゴリ
+   ストレスなく長文を読ませる本文
+   -------------------------------------------------- */
+
+/// @what text-body-lg - リードパラグラフ用
+/// @why 記事の導入部や強調したい説明文
+@mixin text-body-lg {
+	font-family: var(--pt-font-family-sans);
+	font-size: var(--pt-font-size-lg);
+	font-weight: var(--pt-font-weight-normal);
+	line-height: var(--pt-font-line-height-relaxed);
+}
+
+/// @what text-body-md - 標準本文用 (デフォルト)
+/// @why 記事、説明文。迷ったらこれを使う
+@mixin text-body-md {
+	font-family: var(--pt-font-family-sans);
+	font-size: var(--pt-font-size-md);
+	font-weight: var(--pt-font-weight-normal);
+	line-height: var(--pt-font-line-height-normal);
+}
+
+// 後方互換エイリアス
+@mixin text-body {
+	@include text-body-md;
+}
+
+/// @what text-body-sm - 小さな本文用
+/// @why 注釈、メタ情報、補足説明
+@mixin text-body-sm {
+	font-family: var(--pt-font-family-sans);
+	font-size: var(--pt-font-size-sm);
+	font-weight: var(--pt-font-weight-normal);
+	line-height: var(--pt-font-line-height-normal);
+}
+
+// 後方互換エイリアス
+@mixin text-body-small {
+	@include text-body-sm;
+}
+
+/* --------------------------------------------------
+   Label: 機能カテゴリ
+   UI操作を補助するラベル
+   -------------------------------------------------- */
+
+/// @what text-label-md - 標準UIラベル用
+/// @why ボタンテキスト、フォームラベル、ナビゲーション
+@mixin text-label-md {
+	font-family: var(--pt-font-family-sans);
+	font-size: var(--pt-font-size-sm);
+	font-weight: var(--pt-font-weight-medium);
+	line-height: var(--pt-font-line-height-tight);
+}
+
+/// @what text-label-sm - 小さめラベル用
+/// @why タグ、バッジ、キャプション
+@mixin text-label-sm {
+	font-family: var(--pt-font-family-sans);
+	font-size: var(--pt-font-size-xs);
+	font-weight: var(--pt-font-weight-medium);
+	line-height: var(--pt-font-line-height-tight);
+}
+
+/// @what text-label-xs - 最小ラベル用
+/// @why メタデータ、タイムスタンプ、ステータス表示
+@mixin text-label-xs {
+	font-family: var(--pt-font-family-sans);
+	font-size: var(--pt-font-size-xs);
+	font-weight: var(--pt-font-weight-normal);
+	line-height: var(--pt-font-line-height-tight);
+}
+
+// 後方互換: 旧 text-label (uppercase版) - 新規使用は非推奨
+@mixin text-label {
+	@include text-label-sm;
+
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+// 後方互換: 旧 text-button - 今後は text-label-md を使用推奨
+@mixin text-button {
+	@include text-label-md;
+
+	letter-spacing: 0.02em;
+}
+
+/* --------------------------------------------------
+   Code: 技術カテゴリ
+   等幅フォントが必要な表示
+   -------------------------------------------------- */
+
+/// @what text-code-md - コードブロック用
+/// @why コード、技術的な表示、数値の整列
+@mixin text-code-md {
+	font-family: var(--pt-font-family-mono);
+	font-size: var(--pt-font-size-sm);
+	font-weight: var(--pt-font-weight-normal);
 	line-height: var(--pt-font-line-height-normal);
 }
 
