@@ -285,15 +285,15 @@ export class TypeChipComponent {
 ## 移行計画
 
 ### Phase 1: pt-chip の実装
-- [ ] pt-chip コンポーネントの基本実装
-- [ ] サイズ、rounded、色のバリアント
-- [ ] アイコン対応（leading/trailing）
-- [ ] ドキュメント作成
+- [x] pt-chip コンポーネントの基本実装
+- [x] サイズ、rounded、色のバリアント
+- [x] アイコン対応（leading/trailing）
+- [x] ドキュメント作成
 
 ### Phase 2: pt-type-chip の実装
-- [ ] pt-type-chip (Semantic Wrapper) の実装
-- [ ] Pokemon Type専用のロジック統合
-- [ ] ドキュメント作成
+- [x] pt-type-chip (Semantic Wrapper) の実装
+- [x] Pokemon Type専用のロジック統合
+- [x] ドキュメント作成
 
 ### Phase 3: 既存コンポーネントの置き換え
 - [ ] Quiz画面のpt-type-iconをpt-type-chipに置き換え
