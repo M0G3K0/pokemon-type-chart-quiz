@@ -25,5 +25,8 @@ module.exports = {
 		'@testing-library/user-event',
 		// Angular testing用（vitest直接実行のため明示的importなし）
 		'@angular/platform-browser-dynamic',
+		// Commitlint (Issue #31: Commit message validation via husky hook)
+		'@commitlint/cli',
+		'@commitlint/config-conventional',
 	],
 };

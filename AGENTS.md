@@ -27,6 +27,31 @@ PR/Issue作成時にインラインで本文を指定すると文字化けの原
 
 ---
 
+## 📝 言語ルール
+
+### タイトル・コミットメッセージは英語 🇬🇧
+
+| 対象 | 言語 |
+|------|------|
+| Issue タイトル | 英語 |
+| PR タイトル | 英語 |
+| コミットメッセージ | 英語 |
+| 本文・コメント | 日本語OK |
+
+**形式**: Conventional Commits 形式（`type: description`）
+
+```
+feat: add type effectiveness display
+fix: correct damage calculation for dual types
+chore: update dependencies
+```
+
+**理由**: 
+- タイトルやコミットメッセージはGitログや自動化ツールで解析されるため、ASCII互換の英語が安定
+- commitlint による自動検証で形式を強制
+
+---
+
 ## ✅ 優先ツール
 
 | 操作 | 使用すべきツール |

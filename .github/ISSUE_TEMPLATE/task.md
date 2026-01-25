@@ -1,10 +1,12 @@
 ---
 name: "📋 タスク"
 about: "機能追加、バグ修正、リファクタリングなど、すべてのタスクはこちら"
-title: "[タイプを選択: ✨ feat / 🐛 fix / ♻️ chore]: [タスク名]"
+title: "type: description (英語で記述)"
 labels: ""
 assignees: ""
 ---
+
+> ⚠️ **タイトルは英語で書いてください** (`feat: xxx`, `fix: xxx`, `chore: xxx` 等)
 
 ## 💡 概要
 <!-- 何をするのか、なぜ必要なのかを説明してください -->
