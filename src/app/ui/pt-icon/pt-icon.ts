@@ -2,14 +2,15 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 /**
- * Icon component for displaying SVG or image-based icons
+ * Icon component for displaying icons
  * 
  * @example
- * <pt-icon [src]="'/icons/fire.svg'" size="md" [bgColor]="'red'" [rounded]="true"></pt-icon>
+ * <pt-icon [src]="'/icons/fire.svg'" size="md"></pt-icon>
  * 
  * @reference
- * - GitHub Primer: https://primer.style/design/components/icon
- * - Material Design 3: https://m3.material.io/styles/icons/overview
+ * - Atomic Design: Atom (Generic component)
+ * - GitHub Primer: https://primer.style/components/icon
+ * - SmartHR Design System: https://smarthr.design/products/components/icon/
  */
 @Component({
   selector: 'pt-icon',
@@ -20,14 +21,9 @@ import { CommonModule } from '@angular/common';
 })
 export class IconComponent {
   /**
-   * Icon name for SVG library (future implementation)
-   */
-  @Input() name?: string;
-
-  /**
    * Image URL for icon
    */
-  @Input() src?: string;
+  @Input({ required: true }) src!: string;
 
   /**
    * Size of the icon
@@ -36,18 +32,8 @@ export class IconComponent {
   @Input() size: 'sm' | 'md' | 'lg' = 'md';
 
   /**
-   * Icon color (for SVG icons)
+   * Alternative text for accessibility
+   * @default '' (decorative icon)
    */
-  @Input() color?: string;
-
-  /**
-   * Background color
-   */
-  @Input() bgColor?: string;
-
-  /**
-   * Make background circular
-   * @default false
-   */
-  @Input() rounded = false;
+  @Input() alt = '';
 }

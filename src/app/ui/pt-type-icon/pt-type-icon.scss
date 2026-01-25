@@ -1,0 +1,33 @@
+/**
+ * @what Type Icon component styles
+ * @why Provide Pokemon type-specific icon display with background color
+ */
+
+.pt-type-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	flex-shrink: 0;
+
+	// Invert icon colors for better contrast on colored backgrounds
+	pt-icon {
+		filter: brightness(0) invert(1);
+	}
+
+	// Size variants
+	&--sm {
+		width: var(--pt-space-4); // 16px
+		height: var(--pt-space-4);
+	}
+
+	&--md {
+		width: var(--pt-space-12); // 48px
+		height: var(--pt-space-12);
+	}
+
+	&--lg {
+		width: var(--pt-space-16); // 64px
+		height: var(--pt-space-16);
+	}
+}
