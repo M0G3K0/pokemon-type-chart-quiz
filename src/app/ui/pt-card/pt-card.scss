@@ -32,6 +32,13 @@
 		padding: var(--pt-spacing-content-lg);
 	}
 
+	/* Compound Components使用時はカード自体のpadding無効化 */
+	&:has(pt-card-header),
+	&:has(pt-card-content),
+	&:has(pt-card-footer) {
+		padding: 0;
+	}
+
 	/* === Elevation variants === */
 	&--flat {
 		box-shadow: none;
