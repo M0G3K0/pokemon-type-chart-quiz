@@ -1,0 +1,21 @@
+<div class="pt-chip" [class.pt-chip--sm]="size === 'sm'" [class.pt-chip--md]="size === 'md'"
+	[class.pt-chip--lg]="size === 'lg'" [class.pt-chip--rounded-none]="rounded === 'none'"
+	[class.pt-chip--rounded-sm]="rounded === 'sm'" [class.pt-chip--rounded-md]="rounded === 'md'"
+	[class.pt-chip--rounded-full]="rounded === 'full'" [class.pt-chip--clickable]="clickable"
+	[style.background-color]="bgColor" [style.color]="textColor">
+	<!-- Leading Icon -->
+	<pt-icon *ngIf="icon" [src]="icon" [size]="computedIconSize"></pt-icon>
+
+	<!-- Text Content -->
+	<span class="pt-chip__text">
+		<ng-content></ng-content>
+	</span>
+
+	<!-- Trailing Icon (optional) -->
+	<pt-icon *ngIf="trailingIcon" [src]="trailingIcon" size="sm"></pt-icon>
+
+	<!-- Remove Button (optional) -->
+	<button *ngIf="removable" (click)="remove.emit()" class="pt-chip__remove" type="button" aria-label="Remove">
+		<pt-icon src="/icons/close.svg" size="sm"></pt-icon>
+	</button>
+</div>
