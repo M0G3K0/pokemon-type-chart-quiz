@@ -2,7 +2,7 @@ import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PokemonService } from '../../domain/pokemon.service';
 import { Pokemon } from '../../domain/pokemon.schema';
-import { CardComponent } from '../../ui/pt-card/pt-card';
+import { CardComponent, CardHeaderComponent, CardContentComponent, CardFooterComponent } from '../../ui/pt-card';
 import { TypeBadgeComponent } from './components/type-badge';
 import { ButtonComponent } from '../../ui/pt-button/pt-button';
 import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from '../../domain/type-chart';
@@ -10,15 +10,17 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule, CardComponent, TypeBadgeComponent, ButtonComponent],
+  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, CardFooterComponent, TypeBadgeComponent, ButtonComponent],
   template: `
     <div class="max-w-xl mx-auto py-8 px-4">
       <pt-card *ngIf="currentPokemon() as pokemon">
-        <div class="text-center">
-          <div class="flex justify-between items-center mb-4">
+        <pt-card-header>
+          <div class="flex justify-between items-center">
             <span class="text-text-secondary text-xs font-bold uppercase tracking-widest italic">Phase 0: Battle Trial</span>
             <span class="text-primary font-black">Lv. 100</span>
           </div>
+        </pt-card-header>
+        <pt-card-content class="text-center">
           
           <div class="flex flex-col sm:flex-row items-center gap-6 mb-8 justify-center bg-slate-50/50 p-6 rounded-3xl border border-slate-100">
             <!-- Attacker -->
@@ -102,18 +104,16 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
             </p>
           </div>
 
-          <!-- Actions -->
-          <div class="h-14">
-            <pt-button 
-              *ngIf="isChecked()" 
-              variant="primary" 
-              (buttonClick)="next()"
-              class="w-full"
-            >
-              つぎの問題へ
-            </pt-button>
-          </div>
-        </div>
+        </pt-card-content>
+        <pt-card-footer *ngIf="isChecked()">
+          <pt-button 
+            variant="primary" 
+            (buttonClick)="next()"
+            class="w-full"
+          >
+            つぎの問題へ
+          </pt-button>
+        </pt-card-footer>
       </pt-card>
 
       <!-- Skeleton / Loading -->
