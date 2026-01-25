@@ -17,6 +17,8 @@ jobs:
         run: npm ci --legacy-peer-deps
       - name: Lint CSS
         run: npm run lint:css
+      - name: Lint TypeScript
+        run: npm run lint
       - name: Dependency check
         run: npm run dep-check
       - name: Guardrails check

@@ -1,49 +1,26 @@
 ## 💡 概要
-
-ガードレール違反が発生した際のエラーメッセージを改善し、関連する `.guard.md` ファイルへの直接リンクを表示するようにしました。
+コード品質を事前に担保するためのガードレールを追加しました。
 
 ## 📝 変更内容
-
-- `guards/process/rules/*.rules.js` に `GUARDRAIL_PATH` 定数を追加・エクスポート
-- バリデーションスクリプトでCI環境ではGitHub URL形式でリンクを表示
-- エラーメッセージを構造化して読みやすく改善
-- 全バリデーションスクリプト間で一貫した出力フォーマット
+- ESLint `max-lines` ルールを追加（300行制限）
+- commitlint をインストール・設定（Conventional Commits 形式を強制）
+- husky `commit-msg` フックを追加
+- AGENTS.md に言語ルールを明記（タイトル・コミットメッセージは英語）
+- Issue/PR テンプレートにルール注記を追加（絵文字は任意化）
+- 未使用 import と `any` 型を修正（ESLint エラー解消）
 
 ## 🔗 関連Issue
-
-Closes #5
-
-## 📷 スクリーンショット（該当する場合）
-
-N/A（コンソール出力の改善）
+Closes #31
 
 ## ✅ チェックリスト
-
 - [x] ビルドが成功する（`npm run build`）
-- [x] Lintエラーがない（`npm run lint:css`）
+- [x] Lintエラーがない（`npm run lint`）
 - [x] テストが通る（`npm run test`）
-- [x] コミットメッセージが規約に従っている
-- [x] ブランチ名が規約に従っている
+- [x] コミットメッセージが規約に従っている（`feat:`, `fix:`, `chore:`など）
+- [x] ブランチ名が規約に従っている（`feature/`, `fix/`, `chore/`など）
 - [x] 必要に応じてドキュメントを更新した
 
 ## 📌 補足事項
-
-### 変更されたファイル
-
-| ファイル | 変更内容 |
-|----------|----------|
-| `guards/process/rules/pr-format.rules.js` | `GUARDRAIL_PATH` エクスポート追加 |
-| `guards/process/rules/issue-format.rules.js` | `GUARDRAIL_PATH` エクスポート追加 |
-| `scripts/validate-pr-content.js` | エラーメッセージ強化、CIでGitHub URL表示 |
-| `scripts/validate-issue-content.js` | エラーメッセージ強化、CIでGitHub URL表示 |
-| `scripts/validate-pr-local.js` | `GUARDRAIL_PATH` 使用 |
-| `scripts/validate-issue-local.js` | `GUARDRAIL_PATH` 使用 |
-
-## 📝 PRタイトルの命名規則:
-
-`🔧 chore: enhance guardrail violation feedback with links`
-
-## 📖 レビュー用語集
-
-- **GUARDRAIL_PATH**: ガードレールドキュメントへの相対パス
-- **CI**: GitHub Actions等の継続的インテグレーション環境
+- ESLint ルールは `eslint.config.mjs`（Flat Config）で定義
+- テストファイル、design-system、domain、features ディレクトリはマジックナンバールールを緩和
+- commitlint は Conventional Commits 形式を検証（`type: description`）
