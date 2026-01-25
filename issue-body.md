@@ -1,30 +1,54 @@
-> ⚠️ **タイトルは英語で書いてください** (`feat: xxx`, `fix: xxx`, `chore: xxx` 等)
-
 ## 💡 概要
-タイプアイコンを最新のもの（Generation IX - Scarlet/Violet）に更新します。現在のアイコンは古いバージョンのものを使用しているため、PokeAPI公式スプライトから最新版を取得します。
+
+NgDocを導入し、全コンポーネントの全バリエーションを一覧表示できるドキュメントサイトを構築し、品質担保に役立てる。
 
 ## 📝 詳細
-**現在の状況:**
-- `scripts/download-icons.js` が GitHub の `duiker101/pokemon-type-svg-icons` から古いアイコンを取得している
-- これは古いデザインで、最新世代（スカーレット・バイオレット）のアイコンではない
 
-**解決策:**
-- PokeAPI公式のタイプスプライトエンドポイントから最新アイコンを取得
-- URL: `https://pokeapi.co/api/v2/type/{type-id}`
-- 最新アイコンは `sprites.generation-ix.scarlet-violet.name_icon` から取得可能
+### 背景
 
-**例（ほのおタイプ）:**
-```
-https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-ix/scarlet-violet/10.png
-```
+現状、コンポーネントの見た目を確認するにはローカル環境で実際に使う必要がある。以下の問題がある:
+- 全バリエーションを一度に確認できない
+- デザイナーやPMがレビューしにくい
+- リグレッションに気づきにくい
+
+### 実装イメージ
+
+1. **NgDoc導入**
+   - `npm install @ng-doc/...`
+   - 設定ファイル作成
+
+2. **各コンポーネントのページ作成**
+   - Props一覧
+   - 全サイズバリエーション
+   - 全カラーバリエーション
+   - インタラクティブプレイグラウンド
+
+3. **CI/CDでのデプロイ**
+   - GitHub Pagesまたは別のホスティング
+   - PRごとにプレビュー環境
+
+### 表示したいコンポーネント
+
+- `pt-icon`
+- `pt-chip`
+- `pt-type-chip`
+- `pt-button`
+- `pt-card`
+- その他全て
+
+### 優先度
+
+高（全コンポーネント作成後に優先的に実施）
 
 ## ✅ やることリスト
-- [ ] `scripts/download-icons.js` を更新して PokeAPI から最新アイコンを取得
-- [ ] 全18タイプのアイコンをGeneration IX版に置き換え
-- [ ] SVG形式が利用できない場合はPNGをSVGに変換、またはPNGのまま使用する方法を検討
-- [ ] `public/icons/` のアイコンファイルを更新
-- [ ] ローカルで表示確認
+
+- [ ] NgDocの調査・選定
+- [ ] 導入・初期設定
+- [ ] 1つのコンポーネントで試作
+- [ ] 全コンポーネントをドキュメント化
+- [ ] デプロイ設定
 
 ## 📷 参考資料（任意）
-- PokeAPI Type エンドポイント: https://pokeapi.co/api/v2/type/
-- PokeAPI スプライトリポジトリ: https://github.com/PokeAPI/sprites
+
+- [NgDoc](https://ng-doc.com/)
+- [Storybook for Angular](https://storybook.js.org/docs/angular/get-started/introduction)

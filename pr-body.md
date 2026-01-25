@@ -1,66 +1,63 @@
 ## 💡 概要
-デザインシステム Tier 1 Primitive として `pt-spinner` コンポーネントを実装し、コンポーネントドキュメント作成ワークフローを確立します。
+
+pt-chip / pt-type-chip のUI改善と、SV/ZA（スカーレット・バイオレット）風のタイプアイコン・カラーへの更新を行う。
 
 ## 📝 変更内容
-- `pt-spinner` コンポーネントの実装
-  - サイズバリアント: `sm` / `md` / `lg`
-  - 色バリアント: `primary` / `secondary`
-  - アクセシビリティ: `role="status"`, `aria-label`
-- `docs/components/pt-spinner.md` ドキュメント作成
-  - GitHub Primer, Material Design 3 をベンチマーク
-  - When to use / Anti-patterns / Design Patterns を文書化
-- `docs/README.md` 追加
-  - コンポーネント一覧とステータス
-  - NgDoc導入計画（Phase 5）のロードマップ
-- `/component-doc` ワークフローの追加（NgDoc導入までの暫定対応）
-- `.gemini/plans/design-system-implementation.md` の削除（Knowledge Item が SSOT）
+
+### 🎨 SVGアイコン
+- Pokemon GO風からSV/ZA風のアイコンに全18タイプを更新
+- 背景円を削除し、白抜きアイコンのみに変更
+- ソース: partywhale/pokemon-type-icons (MIT License)
+
+### 🎨 デザイントークン
+- 全18タイプのカラーを公式SV/ZAカラーパレットに更新
+- 500レベル（基準色）を変更
+
+### 🔧 pt-chip / pt-icon 改善
+- `:host`スタイルでラッパーサイズを適正化
+- padding調整（sm=4px, md=4px, lg=4px）
+- アイコンサイズ調整（sm=20px, md=32px, lg=48px）
+- テキストのline-heightを修正してテキスト高さを正常化
+- セマンティックトークン名を修正（border-radius）
+
+### ♻️ Quiz画面リファクタ
+- pt-type-icon → pt-type-chip に置き換え
+- app-type-badge → pt-type-chip に置き換え
+- 不要なクラス（mb-2）を削除
 
 ## 🔗 関連Issue
-Closes #6 (部分対応: Phase 4 の新規 Atoms コンポーネント実装)
+
+Closes #47
 
 ## 📷 スクリーンショット（該当する場合）
-N/A（UIコンポーネント単体、実画面への統合は別Issue）
+
+攻撃側タイプとポケモンタイプ表示がSV風のアイコン・カラーになりました。
 
 ## ✅ チェックリスト
+
 - [x] ビルドが成功する（`npm run build`）
 - [x] Lintエラーがない（`npm run lint`）
-- [x] テストが通る（`npm run test`）※ pt-spinnerは `it.todo()` でPhase 3まで保留
+- [x] テストが通る（`npm run test`）
 - [x] コミットメッセージが規約に従っている（`feat:`, `fix:`, `chore:`など）
 - [x] ブランチ名が規約に従っている（`feature/`, `fix/`, `chore/`など）
 - [x] 必要に応じてドキュメントを更新した
 
 ## 📌 補足事項
-- **テストについて**: 現在の `vitest.config.ts` は `environment: 'node'` のため、Angular コンポーネントのインポートが JIT コンパイラを要求しテストが失敗します。Phase 3（コンポーネントテスト環境整備）まで `it.todo()` として保留しています。
-- **ドキュメントワークフロー**: NgDoc(Phase 5)導入まで、`docs/components/` に Markdown ドキュメントを手動作成する暫定運用です。
 
---- 
+### 今後の課題（Issueとして別途登録済み）
+- #54: コンポーネント構成ファイル完全性チェック
+- #55: CSSトークン存在確認
+- #56: トークン使用の検証
+- #57: 共通スタイルの保守性
+- #58: コンポーネント作成のガードレール
+- #59: NgDoc導入
 
 ## 📝 PRタイトルの命名規則:
-- `type: description` の形式にすること（Conventional Commits）
-- **英語で書くこと**（commitlint で検証されます）
 
-タイプ一覧（絵文字は任意）:
-- ✨ feat: 新機能
-- 🐛 fix: バグ修正
-- 📚 docs: ドキュメント
-- 🎨 style: スタイル変更
-- ♻️ refactor: リファクタリング
-- ⚡ perf: パフォーマンス改善
-- 🧪 test: テスト
-- 🏗️ build: ビルド
-- 👷 ci: CI/CD
-- 🔧 chore: その他
-
-例: `feat: add sound effects and toggle switch`
+`feat: improve pt-chip styling and update to SV/ZA icons`
 
 ## 📖 レビュー用語集
 
 | 用語 | 意味 | 説明 |
 |------|------|------|
 | **LGTM** | Looks Good To Me | 良いと思います |
-| **WIP** | Work In Progress | 対応中 |
-| **FYI** | For Your Information | 参考までに |
-| **must** | must | 必須 |
-| **want** | want | できれば |
-| **imo** | in my opinion | 私の意見では |
-| **nits** | nitpick | 些細な指摘（重箱の隅をつつくの意味） |
