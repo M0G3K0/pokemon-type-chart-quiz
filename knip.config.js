@@ -7,9 +7,6 @@ module.exports = {
 		'scripts/download-icons.js',
 		// TODO: Remove when first component imports tokens (see Issue #34)
 		'src/design-system/tokens/**/*',
-		// TODO: Remove when quiz.ts uses compound components
-		'src/app/ui/pt-card/pt-card-*.ts',
-		'src/app/ui/pt-card/index.ts',
 		'src/styles/generated/**/*',
 	],
 	ignoreDependencies: [
