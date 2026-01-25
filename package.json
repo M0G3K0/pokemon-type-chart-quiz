@@ -15,7 +15,10 @@
     "validate-data": "tsx scripts/validate-data.ts",
     "tokens:build": "node style-dictionary.config.mjs",
     "prebuild": "npm run fetch-data && npm run validate-data",
-    "guards:validate": "node guards/meta/rules/guardrail-format.rules.js"
+    "guards:validate": "node guards/meta/rules/guardrail-format.rules.js",
+    "issue:validate": "node scripts/validate-issue-local.js",
+    "issue:check": "node scripts/check-issue-warnings.js",
+    "pr:validate": "node scripts/validate-pr-local.js"
   },
   "lint-staged": {
     "src/**/*.{css,scss}": [

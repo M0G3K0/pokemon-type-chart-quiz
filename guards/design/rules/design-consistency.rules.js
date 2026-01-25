@@ -20,14 +20,6 @@ module.exports = {
 			ignoreProperties: ["/theme-/", "/content-/"], // AngularやTailwindなどで使う特殊プロパティを除外
 		},
 	],
-	// SCSS特有のルール
-	"scss/at-rule-no-unknown": [
-		true,
-		{
-			ignoreAtRules: ["tailwind", "apply", "variants", "responsive", "screen"], // Tailwind CSS用
-		},
-	],
-
 	// 色指定の厳格化（デザインシステム強制）
 	"color-no-hex": true,
 	"color-named": "never",
