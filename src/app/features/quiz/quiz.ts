@@ -117,6 +117,7 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
       </pt-card>
 
       <!-- Skeleton / Loading -->
+      <!-- TODO: 将来的に pt-skeleton に置き換え（現在はローディング時間が短いため不要）-->
       <div *ngIf="!currentPokemon()" class="flex flex-col justify-center items-center h-80">
         <div class="animate-spin rounded-full h-10 w-10 border-4 border-primary border-t-transparent mb-4"></div>
       </div>

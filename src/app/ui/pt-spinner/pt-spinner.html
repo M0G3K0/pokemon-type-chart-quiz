@@ -1,0 +1,11 @@
+<div 
+  class="pt-spinner"
+  [class.pt-spinner--sm]="size === 'sm'"
+  [class.pt-spinner--md]="size === 'md'"
+  [class.pt-spinner--lg]="size === 'lg'"
+  [class.pt-spinner--primary]="variant === 'primary'"
+  [class.pt-spinner--secondary]="variant === 'secondary'"
+  role="status"
+  [attr.aria-label]="ariaLabel">
+  <div class="pt-spinner__circle"></div>
+</div>

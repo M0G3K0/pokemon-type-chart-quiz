@@ -17,6 +17,8 @@ module.exports = {
 		// TODO(Issue #34): Remove when first component imports tokens
 		'src/design-system/tokens/**/*',
 		'src/styles/generated/**/*',
+		// TODO: Remove when pt-spinner is integrated into game screen
+		'src/app/ui/pt-spinner/pt-spinner.ts',
 	],
 	ignoreDependencies: [
 		// Testing Library系はテストで使用（将来的に）
@@ -25,8 +27,5 @@ module.exports = {
 		'@testing-library/user-event',
 		// Angular testing用（vitest直接実行のため明示的importなし）
 		'@angular/platform-browser-dynamic',
-		// Commitlint (Issue #31: Commit message validation via husky hook)
-		'@commitlint/cli',
-		'@commitlint/config-conventional',
 	],
 };
