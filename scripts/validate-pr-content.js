@@ -8,18 +8,19 @@ console.log(`🛡️ Validating PR: "${prTitle}"`);
 
 /**
  * 1. PR Title Validation
- * Must start with an emoji, followed by a space and a shorthand type.
- * e.g., "✨ feat: implement something"
+ * Format: "[emoji (optional)] type: description"
+ * e.g., "✨ feat: implement something" or "feat: implement something"
  */
 console.log("   - Checking title format...");
 
-// Simple emoji check: looks for non-ascii characters at the start
-const hasEmojiAtStart = /^[^\x00-\x7F]/.test(prTitle);
-const typeMatch = prTitle.match(/^(?:[^\x00-\x7F]+\s+)(feat|fix|docs|style|refactor|perf|test|build|ci|chore): [a-z0-9].+$/);
+// Emoji is optional: match with or without emoji prefix
+// Pattern: (optional emoji + space) + type + ": " + description (lowercase start)
+const typeMatch = prTitle.match(/^(?:[^\x00-\x7F]+\s+)?(feat|fix|docs|style|refactor|perf|test|build|ci|chore): [a-z0-9].+$/);
 
-if (!hasEmojiAtStart || !typeMatch) {
+if (!typeMatch) {
 	errors.push(`PR Title "${prTitle}" is invalid.
-    Correct format: "✨ [type]: [description]" (Emoji is mandatory!)
+    Correct format: "[emoji] type: description" (emoji is optional)
+    Example: "feat: add new feature" or "✨ feat: add new feature"
     Allowed types: feat, fix, docs, style, refactor, perf, test, build, ci, chore`);
 }
 
