@@ -1,0 +1,189 @@
+{
+	"$description": "Tier 1: Primitive Color Tokens - Raw color values. Describe physical properties, not usage.",
+	"color": {
+		"gray": {
+			"50": {
+				"value": "#f9fafb",
+				"type": "color",
+				"$description": "最も明るいグレー。ほぼ白に近い。背景として十分な明度を持つ。"
+			},
+			"100": {
+				"value": "#f3f4f6",
+				"type": "color",
+				"$description": "非常に明るいグレー。50との差がわずかに認識できる程度。"
+			},
+			"200": {
+				"value": "#e5e7eb",
+				"type": "color",
+				"$description": "明るいグレー。白背景上で境界線として認識可能。"
+			},
+			"300": {
+				"value": "#d1d5db",
+				"type": "color",
+				"$description": "中明度の明るいグレー。白背景上で明確に視認できる。"
+			},
+			"400": {
+				"value": "#9ca3af",
+				"type": "color",
+				"$description": "中間グレー。白・黒どちらの背景でも視認可能だがコントラストは低め。"
+			},
+			"500": {
+				"value": "#6b7280",
+				"type": "color",
+				"$description": "標準グレー。白背景上で十分なコントラスト(3:1以上)を確保。"
+			},
+			"600": {
+				"value": "#4b5563",
+				"type": "color",
+				"$description": "やや暗いグレー。白背景上で高コントラスト(4.5:1以上)確保可能。"
+			},
+			"700": {
+				"value": "#374151",
+				"type": "color",
+				"$description": "暗いグレー。白文字との対比で十分なコントラスト確保可能。"
+			},
+			"800": {
+				"value": "#1f2937",
+				"type": "color",
+				"$description": "非常に暗いグレー。白文字との対比でAAA基準(7:1)に近い。"
+			},
+			"900": {
+				"value": "#111827",
+				"type": "color",
+				"$description": "ほぼ黒に近いグレー。わずかに青みを帯びる。"
+			},
+			"950": {
+				"value": "#030712",
+				"type": "color",
+				"$description": "最も暗いグレー。純黒に非常に近い。"
+			},
+			"$description": "Neutral gray scale. Slightly cool-toned for modern appearance."
+		},
+		"lime": {
+			"50": {
+				"value": "#f7fee7",
+				"type": "color",
+				"$description": "最も明るいライム。ほぼ白に近い。背景用。"
+			},
+			"100": {
+				"value": "#ecfccb",
+				"type": "color",
+				"$description": "非常に明るいライム。薄い背景用。"
+			},
+			"200": {
+				"value": "#d9f99d",
+				"type": "color",
+				"$description": "明るいライム。アクセント背景用。"
+			},
+			"300": {
+				"value": "#bef264",
+				"type": "color",
+				"$description": "中明度のライム。視認性が高い。"
+			},
+			"400": {
+				"value": "#a3e635",
+				"type": "color",
+				"$description": "鮮やかなライム。アクセントに適する。"
+			},
+			"500": {
+				"value": "#84cc16",
+				"type": "color",
+				"$description": "標準ライム。白背景上で十分なコントラスト。"
+			},
+			"600": {
+				"value": "#65a30d",
+				"type": "color",
+				"$description": "やや暗いライム。高コントラスト(4.5:1以上)確保可能。"
+			},
+			"700": {
+				"value": "#4d7c0f",
+				"type": "color",
+				"$description": "暗いライム。白文字との対比で使用可能。"
+			},
+			"800": {
+				"value": "#3f6212",
+				"type": "color",
+				"$description": "非常に暗いライム。"
+			},
+			"900": {
+				"value": "#365314",
+				"type": "color",
+				"$description": "ほぼ黒に近いライム。"
+			},
+			"950": {
+				"value": "#1a2e05",
+				"type": "color",
+				"$description": "最も暗いライム。"
+			},
+			"$description": "Lime green scale. Yellow-green hue for positive feedback."
+		},
+		"red": {
+			"50": {
+				"value": "#fef2f2",
+				"type": "color",
+				"$description": "最も明るいレッド。ほぼ白に近い。エラー背景用。"
+			},
+			"100": {
+				"value": "#fee2e2",
+				"type": "color",
+				"$description": "非常に明るいレッド。薄い警告背景用。"
+			},
+			"200": {
+				"value": "#fecaca",
+				"type": "color",
+				"$description": "明るいレッド。アクセント背景用。"
+			},
+			"300": {
+				"value": "#fca5a5",
+				"type": "color",
+				"$description": "中明度のレッド。視認性が高い。"
+			},
+			"400": {
+				"value": "#f87171",
+				"type": "color",
+				"$description": "鮮やかなレッド。アクセントに適する。"
+			},
+			"500": {
+				"value": "#ef4444",
+				"type": "color",
+				"$description": "標準レッド。白背景上で十分なコントラスト。"
+			},
+			"600": {
+				"value": "#dc2626",
+				"type": "color",
+				"$description": "やや暗いレッド。高コントラスト(4.5:1以上)確保可能。"
+			},
+			"700": {
+				"value": "#b91c1c",
+				"type": "color",
+				"$description": "暗いレッド。白文字との対比で使用可能。"
+			},
+			"800": {
+				"value": "#991b1b",
+				"type": "color",
+				"$description": "非常に暗いレッド。"
+			},
+			"900": {
+				"value": "#7f1d1d",
+				"type": "color",
+				"$description": "ほぼ黒に近いレッド。"
+			},
+			"950": {
+				"value": "#450a0a",
+				"type": "color",
+				"$description": "最も暗いレッド。"
+			},
+			"$description": "Red scale. Warm red for negative feedback or alerts."
+		},
+		"white": {
+			"value": "#ffffff",
+			"type": "color",
+			"$description": "物理的な純白。#FFFFFF。最大輝度。"
+		},
+		"black": {
+			"value": "#000000",
+			"type": "color",
+			"$description": "物理的な純黒。#000000。最小輝度。"
+		}
+	}
+}

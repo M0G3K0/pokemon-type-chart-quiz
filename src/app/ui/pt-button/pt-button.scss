@@ -1,0 +1,106 @@
+/**
+ * @what ボタンコンポーネントのスタイル定義
+ * @why デザイントークンとMixinを使用して一貫したスタイルを保証
+ */
+
+@use '../../../styles/mixins/common' as mixins;
+
+:host {
+	display: inline-block;
+}
+
+.pt-button {
+	/* Layout */
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--pt-spacing-content-xs);
+	border: none;
+	cursor: pointer;
+
+	/* Typography - font-familyはbodyから継承 */
+	@include mixins.text-button;
+
+	/* Border */
+	border-radius: var(--pt-semantic-border-radius-md);
+
+	/* Transitions */
+	transition: all var(--pt-motion-duration-quick) var(--pt-motion-easing-default);
+
+	/* Common behaviors */
+	@include mixins.focus-ring;
+	@include mixins.interactive-scale;
+	@include mixins.disabled-state;
+
+	/* === Size variants === */
+	&--sm {
+		padding: var(--pt-spacing-content-xs) var(--pt-spacing-content-sm);
+		font-size: var(--pt-font-size-sm);
+		min-height: 32px;
+	}
+
+	&--md {
+		padding: var(--pt-spacing-content-sm) var(--pt-spacing-content-md);
+		font-size: var(--pt-font-size-md);
+		min-height: 40px;
+	}
+
+	&--lg {
+		padding: var(--pt-spacing-content-md) var(--pt-spacing-content-lg);
+		font-size: var(--pt-font-size-lg);
+		min-height: 48px;
+	}
+
+	/* === Color variants === */
+	&--primary {
+		background-color: var(--pt-color-action-primary-default);
+		color: var(--pt-color-text-inverse);
+
+		&:hover:not(:disabled) {
+			background-color: var(--pt-color-action-primary-hover);
+		}
+
+		&:active:not(:disabled) {
+			background-color: var(--pt-color-action-primary-pressed);
+		}
+	}
+
+	&--secondary {
+		background-color: var(--pt-color-action-secondary-default);
+		color: var(--pt-color-text-inverse);
+
+		&:hover:not(:disabled) {
+			background-color: var(--pt-color-action-secondary-hover);
+		}
+
+		&:active:not(:disabled) {
+			background-color: var(--pt-color-action-secondary-pressed);
+		}
+	}
+
+	&--danger {
+		background-color: var(--pt-button-danger-bg-default);
+		color: var(--pt-button-danger-text-default);
+
+		&:hover:not(:disabled) {
+			background-color: var(--pt-button-danger-bg-hover);
+		}
+
+		&:active:not(:disabled) {
+			background-color: var(--pt-button-danger-bg-pressed);
+		}
+	}
+
+	&--ghost {
+		background-color: transparent;
+		color: var(--pt-color-text-primary);
+
+		&:hover:not(:disabled) {
+			background-color: var(--pt-color-surface-hovered);
+		}
+
+		&:active:not(:disabled) {
+			background-color: var(--pt-color-surface-pressed);
+		}
+	}
+}

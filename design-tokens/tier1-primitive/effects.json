@@ -1,0 +1,145 @@
+{
+	"$description": "Tier 1: Primitive Border, Elevation & Motion Tokens",
+	"radius": {
+		"$description": "Border radius values for rounded corners",
+		"none": {
+			"value": "0",
+			"type": "borderRadius",
+			"$description": "0px - 角丸なし。シャープな印象"
+		},
+		"sm": {
+			"value": "0.25rem",
+			"type": "borderRadius",
+			"$description": "4px - 微細な角丸。ボタンやバッジ向け"
+		},
+		"md": {
+			"value": "0.5rem",
+			"type": "borderRadius",
+			"$description": "8px - 標準的な角丸。カードなど"
+		},
+		"lg": {
+			"value": "0.75rem",
+			"type": "borderRadius",
+			"$description": "12px - やや大きめの角丸。モダンな印象"
+		},
+		"xl": {
+			"value": "1rem",
+			"type": "borderRadius",
+			"$description": "16px - 大きな角丸。強調したい要素"
+		},
+		"2xl": {
+			"value": "1.5rem",
+			"type": "borderRadius",
+			"$description": "24px - 非常に大きな角丸。フレンドリーな印象"
+		},
+		"full": {
+			"value": "9999px",
+			"type": "borderRadius",
+			"$description": "完全な円形。ピルボタンやアバター"
+		}
+	},
+	"border": {
+		"width": {
+			"$description": "Border width values",
+			"none": {
+				"value": "0",
+				"type": "borderWidth",
+				"$description": "枠線なし"
+			},
+			"sm": {
+				"value": "1px",
+				"type": "borderWidth",
+				"$description": "1px - 標準的な細い枠線"
+			},
+			"md": {
+				"value": "2px",
+				"type": "borderWidth",
+				"$description": "2px - やや太い枠線。強調用"
+			},
+			"lg": {
+				"value": "4px",
+				"type": "borderWidth",
+				"$description": "4px - 太い枠線。アクセント用"
+			}
+		}
+	},
+	"shadow": {
+		"$description": "Box shadow values for elevation",
+		"none": {
+			"value": "none",
+			"type": "boxShadow",
+			"$description": "影なし。フラットなデザイン"
+		},
+		"sm": {
+			"value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+			"type": "boxShadow",
+			"$description": "非常に薄い影。わずかな浮き上がり"
+		},
+		"md": {
+			"value": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+			"type": "boxShadow",
+			"$description": "標準的な影。カード等の通常状態"
+		},
+		"lg": {
+			"value": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+			"type": "boxShadow",
+			"$description": "大きめの影。ホバー状態やドロップダウン"
+		},
+		"xl": {
+			"value": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+			"type": "boxShadow",
+			"$description": "大きな影。モーダルやポップオーバー"
+		},
+		"2xl": {
+			"value": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+			"type": "boxShadow",
+			"$description": "最大の影。フローティング要素"
+		}
+	},
+	"duration": {
+		"$description": "Animation/transition duration values",
+		"fast": {
+			"value": "100ms",
+			"type": "duration",
+			"$description": "高速。即座のフィードバック感"
+		},
+		"normal": {
+			"value": "200ms",
+			"type": "duration",
+			"$description": "標準速度。ほとんどのインタラクション"
+		},
+		"slow": {
+			"value": "300ms",
+			"type": "duration",
+			"$description": "やや遅め。目立つ変化の表現"
+		},
+		"slower": {
+			"value": "500ms",
+			"type": "duration",
+			"$description": "遅め。入退場アニメーション等"
+		}
+	},
+	"easing": {
+		"$description": "Animation easing curves",
+		"default": {
+			"value": "cubic-bezier(0.4, 0, 0.2, 1)",
+			"type": "cubicBezier",
+			"$description": "標準イージング。自然な加減速"
+		},
+		"in": {
+			"value": "cubic-bezier(0.4, 0, 1, 1)",
+			"type": "cubicBezier",
+			"$description": "ease-in。ゆっくり始まり加速"
+		},
+		"out": {
+			"value": "cubic-bezier(0, 0, 0.2, 1)",
+			"type": "cubicBezier",
+			"$description": "ease-out。急に始まり減速"
+		},
+		"in-out": {
+			"value": "cubic-bezier(0.4, 0, 0.2, 1)",
+			"type": "cubicBezier",
+			"$description": "ease-in-out。両端で緩やか"
+		}
+	}
+}

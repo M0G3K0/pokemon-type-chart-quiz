@@ -14,22 +14,21 @@ console.log(`🛡️ Validating PR: "${prTitle}"`);
 
 /**
  * 1. PR Title Validation
- * Must start with an emoji, followed by a space and a shorthand type.
- * e.g., "✨ feat: implement something"
+ * Format: "[emoji (optional)] type[(scope)]: description"
+ * e.g., "✨ feat: implement something" or "feat(ui): add component"
  */
 console.log("   - Checking title format...");
 
-// Simple emoji check: looks for non-ascii characters at the start
-const hasEmojiAtStart = /^[^\x00-\x7F]/.test(prTitle);
-const typeMatch = prTitle.match(/^(?:[^\x00-\x7F]+\s+)(feat|fix|docs|style|refactor|perf|test|build|ci|chore): [a-z0-9].+$/);
+// Emoji is optional: match with or without emoji prefix
+// Pattern: (optional emoji + space) + type + (optional scope) + ": " + description (lowercase start)
+const typeMatch = prTitle.match(/^(?:[^\x00-\x7F]+\s+)?(feat|fix|docs|style|refactor|perf|test|build|ci|chore|release)(?:\([a-z0-9-]+\))?: [a-z0-9].+$/);
 
-if (!hasEmojiAtStart || !typeMatch) {
+if (!typeMatch) {
 	errors.push({
 		rule: "pr-title-format",
 		message: `PR Title "${prTitle}" is invalid.`,
-		hint: `正しい形式: "✨ [type]: [description]"
-    - 先頭に絵文字が必須です
-    - 許可されたtype: feat, fix, docs, style, refactor, perf, test, build, ci, chore
+		hint: `正しい形式: "[emoji] type[(scope)]: description" (絵文字はオプション)
+    - 許可されたtype: feat, fix, docs, style, refactor, perf, test, build, ci, chore, release
     - descriptionは英語・小文字で記述`
 	});
 }

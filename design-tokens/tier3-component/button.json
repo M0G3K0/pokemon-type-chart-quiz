@@ -1,0 +1,206 @@
+{
+	"$description": "Tier 3: Button Component Tokens. Describes WHERE each token applies.",
+	"button": {
+		"primary": {
+			"$description": "Primary button - main CTA, uses gray for neutral look",
+			"bg": {
+				"default": {
+					"value": "{color.gray.800}",
+					"type": "color",
+					"$description": "ボタンの背景色。`background-color`に適用。"
+				},
+				"hover": {
+					"value": "{color.gray.700}",
+					"type": "color",
+					"$description": "ホバー時の背景色。defaultより一段明るくして反応を示す。"
+				},
+				"pressed": {
+					"value": "{color.gray.900}",
+					"type": "color",
+					"$description": "押下時の背景色。defaultより一段暗くして押し込み感を表現。"
+				},
+				"disabled": {
+					"value": "{color.gray.200}",
+					"type": "color",
+					"$description": "無効時の背景色。操作不可を視覚的に示す。"
+				}
+			},
+			"text": {
+				"default": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "ボタンのラベル色。`color`に適用。暗い背景上で白文字。"
+				},
+				"disabled": {
+					"value": "{color.text.disabled}",
+					"type": "color",
+					"$description": "無効時のラベル色。コントラストを下げて操作不可を示す。"
+				}
+			},
+			"border": {
+				"default": {
+					"value": "transparent",
+					"type": "color",
+					"$description": "ボタンの枠線色。Primaryは枠なし。"
+				},
+				"focus": {
+					"value": "{color.border.focused}",
+					"type": "color",
+					"$description": "フォーカスリングの色。`outline`に適用。アクセシビリティ用。"
+				}
+			}
+		},
+		"secondary": {
+			"$description": "Secondary button - outlined style for less emphasis",
+			"bg": {
+				"default": {
+					"value": "transparent",
+					"type": "color",
+					"$description": "背景色。Secondaryは透明で枠線を強調。"
+				},
+				"hover": {
+					"value": "{color.surface.hovered}",
+					"type": "color",
+					"$description": "ホバー時の背景色。薄いグレーで反応を示す。"
+				},
+				"pressed": {
+					"value": "{color.surface.pressed}",
+					"type": "color",
+					"$description": "押下時の背景色。hoverより一段暗い。"
+				},
+				"disabled": {
+					"value": "transparent",
+					"type": "color",
+					"$description": "無効時の背景色。透明のまま。"
+				}
+			},
+			"text": {
+				"default": {
+					"value": "{color.text.primary}",
+					"type": "color",
+					"$description": "ラベル色。通常テキスト色を使用。"
+				},
+				"disabled": {
+					"value": "{color.text.disabled}",
+					"type": "color",
+					"$description": "無効時のラベル色。"
+				}
+			},
+			"border": {
+				"default": {
+					"value": "{color.border.default}",
+					"type": "color",
+					"$description": "枠線色。`border-color`に適用。"
+				},
+				"hover": {
+					"value": "{color.gray.600}",
+					"type": "color",
+					"$description": "ホバー時の枠線色。一段濃くして強調。"
+				},
+				"focus": {
+					"value": "{color.border.focused}",
+					"type": "color",
+					"$description": "フォーカスリングの色。"
+				}
+			}
+		},
+		"ghost": {
+			"$description": "Ghost button - minimal emphasis, no border",
+			"bg": {
+				"default": {
+					"value": "transparent",
+					"type": "color",
+					"$description": "背景色。完全透明。"
+				},
+				"hover": {
+					"value": "{color.surface.hovered}",
+					"type": "color",
+					"$description": "ホバー時の背景色。薄いグレーで存在を示す。"
+				},
+				"pressed": {
+					"value": "{color.surface.pressed}",
+					"type": "color",
+					"$description": "押下時の背景色。"
+				},
+				"disabled": {
+					"value": "transparent",
+					"type": "color",
+					"$description": "無効時の背景色。透明のまま。"
+				}
+			},
+			"text": {
+				"default": {
+					"value": "{color.text.primary}",
+					"type": "color",
+					"$description": "ラベル色。通常テキスト色。"
+				},
+				"disabled": {
+					"value": "{color.text.disabled}",
+					"type": "color",
+					"$description": "無効時のラベル色。"
+				}
+			},
+			"border": {
+				"default": {
+					"value": "transparent",
+					"type": "color",
+					"$description": "枠線色。Ghostは枠なし。"
+				},
+				"focus": {
+					"value": "{color.border.focused}",
+					"type": "color",
+					"$description": "フォーカスリングの色。"
+				}
+			}
+		},
+		"danger": {
+			"$description": "Danger button - destructive actions, uses red color",
+			"bg": {
+				"default": {
+					"value": "{color.result.lose.default}",
+					"type": "color",
+					"$description": "背景色。危険・破壊的アクション用の赤。"
+				},
+				"hover": {
+					"value": "{color.red.600}",
+					"type": "color",
+					"$description": "ホバー時の背景色。defaultより一段暗く。"
+				},
+				"pressed": {
+					"value": "{color.red.700}",
+					"type": "color",
+					"$description": "押下時の背景色。hoverより一段暗く。"
+				},
+				"disabled": {
+					"value": "{color.gray.200}",
+					"type": "color",
+					"$description": "無効時の背景色。操作不可を視覚的に示す。"
+				}
+			},
+			"text": {
+				"default": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "ラベル色。赤背景上で白文字。"
+				},
+				"disabled": {
+					"value": "{color.text.disabled}",
+					"type": "color",
+					"$description": "無効時のラベル色。"
+				}
+			},
+			"border": {
+				"default": {
+					"value": "transparent",
+					"type": "color",
+					"$description": "枠線色。Dangerは枠なし。"
+				},
+				"focus": {
+					"value": "{color.border.focused}",
+					"type": "color",
+					"$description": "フォーカスリングの色。"
+				}
+			}
+		}
+	}
+}

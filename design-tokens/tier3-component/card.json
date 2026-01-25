@@ -1,0 +1,76 @@
+{
+	"$description": "Tier 3: Card Component Tokens. Defines styling properties for card component.",
+	"card": {
+		"$description": "カードコンポーネント専用。コンテンツをグループ化するコンテナ。",
+		"bg": {
+			"default": {
+				"value": "{color.surface.card}",
+				"type": "color",
+				"$description": "background-colorプロパティに適用。カードコンポーネント専用。デフォルト状態。"
+			},
+			"hover": {
+				"value": "{color.surface.hovered}",
+				"type": "color",
+				"$description": "background-colorプロパティに適用。カードコンポーネント専用。ホバー状態。クリック可能なカード用。"
+			}
+		},
+		"border": {
+			"default": {
+				"value": "{color.border.subtle}",
+				"type": "color",
+				"$description": "border-colorプロパティに適用。カードコンポーネント専用。控えめな境界線。"
+			}
+		},
+		"text": {
+			"title": {
+				"value": "{color.text.primary}",
+				"type": "color",
+				"$description": "colorプロパティに適用。カードコンポーネント専用。見出しテキスト。"
+			},
+			"body": {
+				"value": "{color.text.secondary}",
+				"type": "color",
+				"$description": "colorプロパティに適用。カードコンポーネント専用。本文テキスト。見出しより控えめ。"
+			}
+		},
+		"shadow": {
+			"flat": {
+				"value": "{elevation.none}",
+				"type": "shadow",
+				"$description": "box-shadowプロパティに適用。カードコンポーネント専用。影なし、フラットスタイル。"
+			},
+			"raised": {
+				"value": "{elevation.raised}",
+				"type": "shadow",
+				"$description": "box-shadowプロパティに適用。カードコンポーネント専用。デフォルトの浮き上がり。"
+			},
+			"overlay": {
+				"value": "{elevation.overlay}",
+				"type": "shadow",
+				"$description": "box-shadowプロパティに適用。カードコンポーネント専用。モーダル/ドロップダウン用の強い影。"
+			}
+		},
+		"padding": {
+			"sm": {
+				"value": "{spacing.content.sm}",
+				"type": "spacing",
+				"$description": "paddingプロパティに適用。カードコンポーネント専用。コンパクトな内部余白。"
+			},
+			"md": {
+				"value": "{spacing.content.md}",
+				"type": "spacing",
+				"$description": "paddingプロパティに適用。カードコンポーネント専用。デフォルトの内部余白。"
+			},
+			"lg": {
+				"value": "{spacing.content.lg}",
+				"type": "spacing",
+				"$description": "paddingプロパティに適用。カードコンポーネント専用。広々とした内部余白。"
+			}
+		},
+		"radius": {
+			"value": "{semantic-border.radius.lg}",
+			"type": "borderRadius",
+			"$description": "border-radiusプロパティに適用。カードコンポーネント専用。overflow: hiddenとセットで使用。"
+		}
+	}
+}

@@ -1,0 +1,70 @@
+{
+	"$description": "Tier 1: Primitive Spacing Tokens - Raw spacing values. 4px grid system.",
+	"space": {
+		"0": {
+			"value": "0",
+			"type": "spacing",
+			"$description": "物理的な0px。余白なしを明示する場合に使用。"
+		},
+		"05": {
+			"value": "0.125rem",
+			"type": "spacing",
+			"$description": "物理的な2px。グリッドの半分。特に小さいコンポーネント用の例外的な値。"
+		},
+		"1": {
+			"value": "0.25rem",
+			"type": "spacing",
+			"$description": "物理的な4px。グリッドの最小単位。微細な調整用。"
+		},
+		"2": {
+			"value": "0.5rem",
+			"type": "spacing",
+			"$description": "物理的な8px。グリッドの2倍。コンパクトなスペース。"
+		},
+		"3": {
+			"value": "0.75rem",
+			"type": "spacing",
+			"$description": "物理的な12px。グリッドの3倍。やや狭めの余白。"
+		},
+		"4": {
+			"value": "1rem",
+			"type": "spacing",
+			"$description": "物理的な16px。グリッドの4倍。標準的な余白の基本単位。"
+		},
+		"5": {
+			"value": "1.25rem",
+			"type": "spacing",
+			"$description": "物理的な20px。グリッドの5倍。やや広めの余白。"
+		},
+		"6": {
+			"value": "1.5rem",
+			"type": "spacing",
+			"$description": "物理的な24px。グリッドの6倍。セクション内の余白に適する。"
+		},
+		"8": {
+			"value": "2rem",
+			"type": "spacing",
+			"$description": "物理的な32px。グリッドの8倍。明確な区切りを示す。"
+		},
+		"10": {
+			"value": "2.5rem",
+			"type": "spacing",
+			"$description": "物理的な40px。グリッドの10倍。大きなセクション間。"
+		},
+		"12": {
+			"value": "3rem",
+			"type": "spacing",
+			"$description": "物理的な48px。グリッドの12倍。主要セクション間。"
+		},
+		"16": {
+			"value": "4rem",
+			"type": "spacing",
+			"$description": "物理的な64px。グリッドの16倍。ページレベルの大きな余白。"
+		},
+		"20": {
+			"value": "5rem",
+			"type": "spacing",
+			"$description": "物理的な80px。グリッドの20倍。最大レベルの余白。"
+		}
+	}
+}
