@@ -26,8 +26,8 @@
 
 	/* === Size variants === */
 	&--sm {
-		padding: 2px 6px;
-		font-size: 10px;
+		padding: var(--pt-badge-size-sm-padding-y) var(--pt-badge-size-sm-padding-x);
+		font-size: var(--pt-badge-size-sm-font-size);
 	}
 
 	&--md {

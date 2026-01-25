@@ -293,12 +293,16 @@
   --pt-semantic-border-width-none: 0; /** 【用途】枠線なし。 */
   --pt-semantic-border-width-default: 1px; /** 【用途】標準枠線。入力欄、カード。 */
   --pt-semantic-border-width-thick: 2px; /** 【用途】太い枠線。フォーカス状態、強調。 */
+  --pt-badge-size-sm-padding-y: 2px; /** smサイズの上下余白。グリッド単位より小さい特殊値。 */
+  --pt-badge-size-sm-padding-x: 6px; /** smサイズの左右余白。グリッド単位より小さい特殊値。 */
+  --pt-badge-size-sm-font-size: 10px; /** smサイズのフォントサイズ。最小可読サイズ。 */
   --pt-button-primary-border-default: rgba(0, 0, 0, 0); /** ボタンの枠線色。Primaryは枠なし。 */
   --pt-button-secondary-bg-default: rgba(0, 0, 0, 0); /** 背景色。Secondaryは透明で枠線を強調。 */
   --pt-button-secondary-bg-disabled: rgba(0, 0, 0, 0); /** 無効時の背景色。透明のまま。 */
   --pt-button-ghost-bg-default: rgba(0, 0, 0, 0); /** 背景色。完全透明。 */
   --pt-button-ghost-bg-disabled: rgba(0, 0, 0, 0); /** 無効時の背景色。透明のまま。 */
   --pt-button-ghost-border-default: rgba(0, 0, 0, 0); /** 枠線色。Ghostは枠なし。 */
+  --pt-button-danger-border-default: rgba(0, 0, 0, 0); /** 枠線色。Dangerは枠なし。 */
   --pt-color-pokemon-type-normal: var(--pt-color-pokemon-normal-500); /** 【用途】ノーマルタイプのバッジ・アイコン背景。 */
   --pt-color-pokemon-type-fire: var(--pt-color-pokemon-fire-500); /** 【用途】ほのおタイプのバッジ・アイコン背景。 */
   --pt-color-pokemon-type-water: var(--pt-color-pokemon-water-500); /** 【用途】みずタイプのバッジ・アイコン背景。 */
@@ -448,14 +452,17 @@
   --pt-button-primary-bg-pressed: var(--pt-color-gray-900); /** 押下時の背景色。defaultより一段暗くして押し込み感を表現。 */
   --pt-button-primary-bg-disabled: var(--pt-color-gray-200); /** 無効時の背景色。操作不可を視覚的に示す。 */
   --pt-button-secondary-border-hover: var(--pt-color-gray-600); /** ホバー時の枠線色。一段濃くして強調。 */
+  --pt-button-danger-bg-hover: var(--pt-color-red-600); /** ホバー時の背景色。defaultより一段暗く。 */
+  --pt-button-danger-bg-pressed: var(--pt-color-red-700); /** 押下時の背景色。hoverより一段暗く。 */
+  --pt-button-danger-bg-disabled: var(--pt-color-gray-200); /** 無効時の背景色。操作不可を視覚的に示す。 */
   --pt-badge-neutral-bg: var(--pt-color-surface-hovered); /** バッジの背景色。`background-color`に適用。 */
   --pt-badge-neutral-text: var(--pt-color-text-primary); /** バッジのラベル色。`color`に適用。 */
   --pt-badge-win-bg: var(--pt-color-result-win-subtle); /** 正解バッジの背景色。薄いライム。 */
   --pt-badge-win-text: var(--pt-color-result-win-strong); /** 正解バッジのラベル色。濃いライムで高コントラスト。 */
   --pt-badge-lose-bg: var(--pt-color-result-lose-subtle); /** 不正解バッジの背景色。薄いレッド。 */
   --pt-badge-lose-text: var(--pt-color-result-lose-strong); /** 不正解バッジのラベル色。濃いレッドで高コントラスト。 */
-  --pt-badge-padding-x: var(--pt-spacing-content-sm); /** 左右の内側余白。`padding-left/right`に適用。 */
-  --pt-badge-padding-y: var(--pt-spacing-content-xs); /** 上下の内側余白。`padding-top/bottom`に適用。 */
+  --pt-badge-padding-x: var(--pt-spacing-content-sm); /** 左右の内側余白。`padding-left/right`に適用。mdサイズ用。 */
+  --pt-badge-padding-y: var(--pt-spacing-content-xs); /** 上下の内側余白。`padding-top/bottom`に適用。mdサイズ用。 */
   --pt-badge-radius: var(--pt-semantic-border-radius-sm); /** 角丸の大きさ。`border-radius`に適用。 */
   --pt-button-primary-text-default: var(--pt-color-text-inverse); /** ボタンのラベル色。`color`に適用。暗い背景上で白文字。 */
   --pt-button-primary-text-disabled: var(--pt-color-text-disabled); /** 無効時のラベル色。コントラストを下げて操作不可を示す。 */
@@ -471,6 +478,10 @@
   --pt-button-ghost-text-default: var(--pt-color-text-primary); /** ラベル色。通常テキスト色。 */
   --pt-button-ghost-text-disabled: var(--pt-color-text-disabled); /** 無効時のラベル色。 */
   --pt-button-ghost-border-focus: var(--pt-color-border-focused); /** フォーカスリングの色。 */
+  --pt-button-danger-bg-default: var(--pt-color-result-lose-default); /** 背景色。危険・破壊的アクション用の赤。 */
+  --pt-button-danger-text-default: var(--pt-color-text-inverse); /** ラベル色。赤背景上で白文字。 */
+  --pt-button-danger-text-disabled: var(--pt-color-text-disabled); /** 無効時のラベル色。 */
+  --pt-button-danger-border-focus: var(--pt-color-border-focused); /** フォーカスリングの色。 */
   --pt-card-bg-default: var(--pt-color-surface-card); /** background-colorプロパティに適用。カードコンポーネント専用。デフォルト状態。 */
   --pt-card-bg-hover: var(--pt-color-surface-hovered); /** background-colorプロパティに適用。カードコンポーネント専用。ホバー状態。クリック可能なカード用。 */
   --pt-card-border-default: var(--pt-color-border-subtle); /** border-colorプロパティに適用。カードコンポーネント専用。控えめな境界線。 */

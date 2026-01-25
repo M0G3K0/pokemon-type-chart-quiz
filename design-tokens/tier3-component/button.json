@@ -152,6 +152,55 @@
 					"$description": "フォーカスリングの色。"
 				}
 			}
+		},
+		"danger": {
+			"$description": "Danger button - destructive actions, uses red color",
+			"bg": {
+				"default": {
+					"value": "{color.result.lose.default}",
+					"type": "color",
+					"$description": "背景色。危険・破壊的アクション用の赤。"
+				},
+				"hover": {
+					"value": "{color.red.600}",
+					"type": "color",
+					"$description": "ホバー時の背景色。defaultより一段暗く。"
+				},
+				"pressed": {
+					"value": "{color.red.700}",
+					"type": "color",
+					"$description": "押下時の背景色。hoverより一段暗く。"
+				},
+				"disabled": {
+					"value": "{color.gray.200}",
+					"type": "color",
+					"$description": "無効時の背景色。操作不可を視覚的に示す。"
+				}
+			},
+			"text": {
+				"default": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "ラベル色。赤背景上で白文字。"
+				},
+				"disabled": {
+					"value": "{color.text.disabled}",
+					"type": "color",
+					"$description": "無効時のラベル色。"
+				}
+			},
+			"border": {
+				"default": {
+					"value": "transparent",
+					"type": "color",
+					"$description": "枠線色。Dangerは枠なし。"
+				},
+				"focus": {
+					"value": "{color.border.focused}",
+					"type": "color",
+					"$description": "フォーカスリングの色。"
+				}
+			}
 		}
 	}
 }
