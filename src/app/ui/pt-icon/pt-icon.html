@@ -1,0 +1,5 @@
+<div class="pt-icon" [class.pt-icon--sm]="size === 'sm'" [class.pt-icon--md]="size === 'md'"
+	[class.pt-icon--lg]="size === 'lg'" [class.pt-icon--rounded]="rounded" [class.pt-icon--with-bg]="!!bgColor"
+	[style.background-color]="bgColor || null">
+	<img *ngIf="src" [src]="src" [style.color]="color || null" class="pt-icon-image" alt="">
+</div>
