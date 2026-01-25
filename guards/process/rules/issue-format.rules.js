@@ -1,35 +1,32 @@
 /**
- * @what  Issue本文の必須セクションを定義（テンプレート別）
- * @why   各テンプレートに応じた必要情報が揃っていることを保証するため
+ * @what  Issue本文の必須セクションを定義（統一テンプレート）
+ * @why   どのタイプのIssueでも必要な情報が揃っていることを保証するため
  * @failure  不足している項目がある場合、Issueに自動コメントが投稿される
  */
 const { withGuardrail } = require("../../utils/rule-helper");
 
-// Bug Report Template
-const BUG_REPORT_SECTIONS = [
-	"## 💡 概要",
-	"## 📝 再現手順",
-	"## 📌 期待される挙動",
-];
-
-// Feature Request Template
-const FEATURE_REQUEST_SECTIONS = [
-	"## 💡 概要",
-	"## 📝 実装イメージ",
-	"## ✅ やることリスト",
-];
-
-// Refactor/Task Template
-const REFACTOR_TASK_SECTIONS = [
+// 統一テンプレート: すべてのIssueで必須のセクション
+const REQUIRED_SECTIONS = [
 	"## 💡 概要",
 	"## ✅ やることリスト",
 ];
+
+// 後方互換性のため、旧テンプレート定義も残す（非推奨）
+// これらは将来のバージョンで削除される可能性があります
+const BUG_REPORT_SECTIONS = REQUIRED_SECTIONS;
+const FEATURE_REQUEST_SECTIONS = REQUIRED_SECTIONS;
+const REFACTOR_TASK_SECTIONS = REQUIRED_SECTIONS;
+
+const GUARDRAIL_PATH = "guards/process/guard/issue-format.guard.md";
 
 module.exports = {
+	REQUIRED_SECTIONS,
+	GUARDRAIL_PATH,
+	// 後方互換性
 	BUG_REPORT_SECTIONS,
 	FEATURE_REQUEST_SECTIONS,
 	REFACTOR_TASK_SECTIONS,
-	...withGuardrail("guards/process/guard/issue-format.guard.md", [
+	...withGuardrail(GUARDRAIL_PATH, [
 		{
 			name: "issue-must-contain-template-sections",
 			comment: "Issue template items are mandatory",

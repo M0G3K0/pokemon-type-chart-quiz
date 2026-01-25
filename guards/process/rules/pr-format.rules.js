@@ -16,9 +16,12 @@ const REQUIRED_SECTIONS = [
 	"## 📖 レビュー用語集",
 ];
 
+const GUARDRAIL_PATH = "guards/process/guard/pr-format.guard.md";
+
 module.exports = {
 	REQUIRED_SECTIONS,
-	...withGuardrail("guards/process/guard/pr-format.guard.md", [
+	GUARDRAIL_PATH,
+	...withGuardrail(GUARDRAIL_PATH, [
 		{
 			name: "pr-must-contain-all-template-sections",
 			comment: "PR template items are mandatory",
