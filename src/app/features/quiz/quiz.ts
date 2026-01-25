@@ -3,15 +3,14 @@ import { CommonModule } from '@angular/common';
 import { PokemonService } from '../../domain/pokemon.service';
 import { Pokemon } from '../../domain/pokemon.schema';
 import { CardComponent, CardHeaderComponent, CardContentComponent, CardFooterComponent } from '../../ui/pt-card';
-import { TypeBadgeComponent } from './components/type-badge';
 import { ButtonComponent } from '../../ui/pt-button/pt-button';
-import { TypeIconComponent } from '../../ui/pt-type-icon/pt-type-icon';
+import { TypeChipComponent } from '../../ui/pt-type-chip/pt-type-chip';
 import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from '../../domain/type-chart';
 
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, CardFooterComponent, TypeBadgeComponent, ButtonComponent, TypeIconComponent],
+  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, CardFooterComponent, ButtonComponent, TypeChipComponent],
   template: `
     <div class="max-w-xl mx-auto py-8 px-4">
       <pt-card *ngIf="currentPokemon() as pokemon">
@@ -28,11 +27,13 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
             <div class="flex flex-col items-center">
               <span class="text-[10px] font-black uppercase text-slate-400 mb-2">こうげき側 (タイプ)</span>
               <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 min-w-32 text-center transform transition-transform hover:scale-105">
-                <pt-type-icon 
+                <pt-type-chip 
                   [type]="attackType()"
-                  size="md"
-                  class="mx-auto mb-2">
-                </pt-type-icon>
+                  [showIcon]="true"
+                  rounded="full"
+                  size="lg"
+                  class="mx-auto">
+                </pt-type-chip>
                 <span 
                   class="text-lg font-black"
                   [style.color]="'var(--color-text-type-' + attackType() + ')'"
@@ -62,9 +63,9 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
                 <div class="text-left">
                   <h2 class="text-xl font-extrabold">{{ pokemon.name }}</h2>
                   <div class="flex gap-1.5 mt-1">
-                    <app-type-badge *ngFor="let t of pokemon.types; let i = index" [type]="t" class="scale-90 origin-left">
+                    <pt-type-chip *ngFor="let t of pokemon.types; let i = index" [type]="t" size="sm" rounded="sm">
                       {{ pokemon.jaTypes[i] }}
-                    </app-type-badge>
+                    </pt-type-chip>
                   </div>
                 </div>
               </div>
