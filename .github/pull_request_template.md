@@ -29,9 +29,10 @@
 --- 
 
 ## 📝 PRタイトルの命名規則:
-- [type]: [description]の形式にすること
+- `type: description` の形式にすること（Conventional Commits）
+- **英語で書くこと**（commitlint で検証されます）
 
-タイプ一覧:
+タイプ一覧（絵文字は任意）:
 - ✨ feat: 新機能
 - 🐛 fix: バグ修正
 - 📚 docs: ドキュメント
@@ -43,12 +44,7 @@
 - 👷 ci: CI/CD
 - 🔧 chore: その他
 
-説明の書き方: 
-- 英語で書くこと
-- 1行で説明すること
-- すべて小文字で書くこと
-
-例: feat: add sound effects and toggle switch
+例: `feat: add sound effects and toggle switch`
 
 ## 📖 レビュー用語集
 <!-- レビュー時によく使う用語の意味 -->

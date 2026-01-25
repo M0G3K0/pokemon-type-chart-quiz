@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "vitest run",
+    "lint": "eslint src/**/*.ts",
     "prepare": "husky",
     "lint:css": "stylelint \"src/**/*.{css,scss}\" --ignore-pattern \"src/styles/generated/**\"",
     "dep-check": "depcruise src --config .dependency-cruiser.js",
@@ -24,8 +25,8 @@
     "src/**/*.{css,scss}": [
       "npm run lint:css"
     ],
-    "src/app/**/*.ts": [
-      "npm run dep-check"
+    "src/**/*.ts": [
+      "eslint"
     ]
   },
   "prettier": {
@@ -60,11 +61,15 @@
     "@angular/cli": "^21.1.1",
     "@angular/compiler-cli": "^21.1.0",
     "@angular/platform-browser-dynamic": "^21.1.1",
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
+    "@eslint/js": "^9.39.2",
     "@tailwindcss/postcss": "^4.1.12",
     "@testing-library/angular": "^19.0.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/user-event": "^14.6.1",
     "dependency-cruiser": "^17.3.7",
+    "eslint": "^9.39.2",
     "husky": "^9.1.7",
     "jsdom": "^27.4.0",
     "knip": "^5.82.1",
@@ -77,6 +82,7 @@
     "tailwindcss": "^4.1.12",
     "tsx": "^4.21.0",
     "typescript": "~5.9.2",
+    "typescript-eslint": "^8.53.1",
     "vitest": "^4.0.8"
   }
 }
