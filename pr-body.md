@@ -1,40 +1,18 @@
 ## 💡 概要
-
-pt-chip / pt-type-chip のUI改善と、SV/ZA（スカーレット・バイオレット）風のタイプアイコン・カラーへの更新を行う。
+コード品質を事前に担保するためのガードレールを追加しました。
 
 ## 📝 変更内容
-
-### 🎨 SVGアイコン
-- Pokemon GO風からSV/ZA風のアイコンに全18タイプを更新
-- 背景円を削除し、白抜きアイコンのみに変更
-- ソース: partywhale/pokemon-type-icons (MIT License)
-
-### 🎨 デザイントークン
-- 全18タイプのカラーを公式SV/ZAカラーパレットに更新
-- 500レベル（基準色）を変更
-
-### 🔧 pt-chip / pt-icon 改善
-- `:host`スタイルでラッパーサイズを適正化
-- padding調整（sm=4px, md=4px, lg=4px）
-- アイコンサイズ調整（sm=20px, md=32px, lg=48px）
-- テキストのline-heightを修正してテキスト高さを正常化
-- セマンティックトークン名を修正（border-radius）
-
-### ♻️ Quiz画面リファクタ
-- pt-type-icon → pt-type-chip に置き換え
-- app-type-badge → pt-type-chip に置き換え
-- 不要なクラス（mb-2）を削除
+- ESLint `max-lines` ルールを追加（300行制限）
+- commitlint をインストール・設定（Conventional Commits 形式を強制）
+- husky `commit-msg` フックを追加
+- AGENTS.md に言語ルールを明記（タイトル・コミットメッセージは英語）
+- Issue/PR テンプレートにルール注記を追加（絵文字は任意化）
+- 未使用 import と `any` 型を修正（ESLint エラー解消）
 
 ## 🔗 関連Issue
-
-Closes #47
-
-## 📷 スクリーンショット（該当する場合）
-
-攻撃側タイプとポケモンタイプ表示がSV風のアイコン・カラーになりました。
+Closes #31
 
 ## ✅ チェックリスト
-
 - [x] ビルドが成功する（`npm run build`）
 - [x] Lintエラーがない（`npm run lint`）
 - [x] テストが通る（`npm run test`）
@@ -43,21 +21,6 @@ Closes #47
 - [x] 必要に応じてドキュメントを更新した
 
 ## 📌 補足事項
-
-### 今後の課題（Issueとして別途登録済み）
-- #54: コンポーネント構成ファイル完全性チェック
-- #55: CSSトークン存在確認
-- #56: トークン使用の検証
-- #57: 共通スタイルの保守性
-- #58: コンポーネント作成のガードレール
-- #59: NgDoc導入
-
-## 📝 PRタイトルの命名規則:
-
-`feat: improve pt-chip styling and update to SV/ZA icons`
-
-## 📖 レビュー用語集
-
-| 用語 | 意味 | 説明 |
-|------|------|------|
-| **LGTM** | Looks Good To Me | 良いと思います |
+- ESLint ルールは `eslint.config.mjs`（Flat Config）で定義
+- テストファイル、design-system、domain、features ディレクトリはマジックナンバールールを緩和
+- commitlint は Conventional Commits 形式を検証（`type: description`）

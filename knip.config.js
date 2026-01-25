@@ -19,8 +19,6 @@ module.exports = {
 		'src/styles/generated/**/*',
 		// TODO: Remove when pt-spinner is integrated into game screen
 		'src/app/ui/pt-spinner/pt-spinner.ts',
-		// TODO: Remove when pt-icon is integrated into quiz screen
-		'src/app/ui/pt-icon/pt-icon.ts',
 	],
 	ignoreDependencies: [
 		// Testing Library系はテストで使用（将来的に）
