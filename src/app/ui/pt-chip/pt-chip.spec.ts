@@ -1,5 +1,16 @@
-import { describe, it, expect as _expect } from 'vitest';
-import { ChipComponent as _ChipComponent } from './pt-chip';
+/**
+ * ChipComponent Unit Tests
+ *
+ * @phase Phase 3: Component and Integration Testing
+ * @blocker Current `vitest.config.ts` uses `environment: 'node'`.
+ *          Importing Angular components triggers JIT compilation requirements.
+ *          Requires proper Angular test setup (TestBed, @angular/compiler).
+ *
+ * @todo When Phase 3 is ready:
+ *       1. Configure vitest with jsdom or Angular-specific environment
+ *       2. Set up @angular/platform-browser-dynamic for JIT
+ *       3. Restore TestBed-based component tests
+ */
 
 describe('ChipComponent', () => {
 	it.todo('should create');
