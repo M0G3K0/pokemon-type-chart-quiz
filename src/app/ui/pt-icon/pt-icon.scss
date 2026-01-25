@@ -3,23 +3,28 @@
  * @why Provide flexible icon display using Design Tokens
  */
 
-.pt-icon {
+:host {
 	display: inline-block;
-	vertical-align: middle;
+	line-height: 0;
+}
+
+.pt-icon {
+	display: block;
+	object-fit: contain;
 
 	// Size variants
 	&--sm {
-		width: var(--pt-space-3); // 12px
-		height: var(--pt-space-3);
+		width: var(--pt-space-5); // 20px
+		height: var(--pt-space-5);
 	}
 
 	&--md {
-		width: var(--pt-space-6); // 24px
-		height: var(--pt-space-6);
+		width: var(--pt-space-8); // 32px
+		height: var(--pt-space-8);
 	}
 
 	&--lg {
-		width: var(--pt-space-8); // 32px
-		height: var(--pt-space-8);
+		width: var(--pt-space-12); // 48px
+		height: var(--pt-space-12);
 	}
 }

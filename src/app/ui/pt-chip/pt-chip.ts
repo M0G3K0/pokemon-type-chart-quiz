@@ -6,8 +6,8 @@ import { IconComponent } from '../pt-icon/pt-icon';
  * Chip component for displaying compact information units
  * 
  * @example
- * <!-- Icon only -->
- * <pt-chip [icon]="'/icons/fire.svg'" [bgColor]="'var(--pt-color-pokemon-fire-500)'" rounded="full"></pt-chip>
+ * <!-- Icon only (square) -->
+ * <pt-chip [icon]="'/icons/fire.svg'" [bgColor]="'var(--pt-color-pokemon-fire-500)'" rounded="full" [iconOnly]="true"></pt-chip>
  * 
  * <!-- Text only -->
  * <pt-chip [bgColor]="'var(--pt-color-pokemon-fire-500)'" size="sm">ほのお</pt-chip>
@@ -83,6 +83,12 @@ export class ChipComponent {
 	@Input() removable = false;
 
 	/**
+	 * Icon-only mode (square chip with uniform padding)
+	 * @default false
+	 */
+	@Input() iconOnly = false;
+
+	/**
 	 * Remove event emitter
 	 */
 	@Output() remove = new EventEmitter<void>();
@@ -93,6 +99,18 @@ export class ChipComponent {
 	get computedIconSize(): 'sm' | 'md' | 'lg' {
 		if (this.iconSize) {
 			return this.iconSize;
+		}
+		// Icon-only mode uses larger icons
+		if (this.iconOnly) {
+			switch (this.size) {
+				case 'sm':
+					return 'sm';
+				case 'lg':
+					return 'lg';
+				case 'md':
+				default:
+					return 'md';
+			}
 		}
 		// Default icon sizes based on chip size
 		switch (this.size) {
