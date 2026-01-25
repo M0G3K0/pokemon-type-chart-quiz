@@ -5,12 +5,13 @@ import { Pokemon } from '../../domain/pokemon.schema';
 import { CardComponent, CardHeaderComponent, CardContentComponent, CardFooterComponent } from '../../ui/pt-card';
 import { ButtonComponent } from '../../ui/pt-button/pt-button';
 import { TypeChipComponent } from '../../ui/pt-type-chip/pt-type-chip';
+import { AvatarComponent } from '../../ui/pt-avatar/pt-avatar';
 import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from '../../domain/type-chart';
 
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, CardFooterComponent, ButtonComponent, TypeChipComponent],
+  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, CardFooterComponent, ButtonComponent, TypeChipComponent, AvatarComponent],
   template: `
     <div class="max-w-xl mx-auto py-8 px-4">
       <pt-card *ngIf="currentPokemon() as pokemon">
@@ -53,13 +54,15 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
             <div class="flex flex-col items-center">
                <span class="text-[10px] font-black uppercase text-slate-400 mb-2">ぼうぎょ側 (ポケモン)</span>
                <div class="flex items-center gap-4 bg-white p-4 pr-8 rounded-3xl shadow-sm border border-slate-100 transform transition-transform hover:scale-105">
-                <div class="bg-slate-50 rounded-xl p-1 shadow-inner">
-                  <img 
-                    [src]="pokemon.imageUrl" 
-                    [alt]="pokemon.name"
-                    class="w-20 h-20 object-contain [image-rendering:pixelated]"
-                  >
-                </div>
+                <pt-avatar
+                  [src]="pokemon.imageUrl"
+                  [alt]="pokemon.name"
+                  size="lg"
+                  shape="rounded"
+                  [pixelated]="true"
+                  bgColor="var(--pt-color-surface-secondary)"
+                  [shadow]="true">
+                </pt-avatar>
                 <div class="text-left">
                   <h2 class="text-xl font-extrabold">{{ pokemon.name }}</h2>
                   <div class="flex gap-1.5 mt-1">

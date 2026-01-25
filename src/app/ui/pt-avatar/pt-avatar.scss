@@ -1,0 +1,65 @@
+/**
+ * @what Avatar component styles
+ * @why Display images with consistent sizing and shapes using Design Tokens
+ */
+
+:host {
+	display: inline-block;
+	line-height: 0;
+}
+
+.pt-avatar {
+	display: inline-block;
+	overflow: hidden;
+	background-color: var(--pt-avatar-bg-color, transparent);
+
+	// Size variants
+	&--sm {
+		width: 32px;
+		height: 32px;
+	}
+
+	&--md {
+		width: 48px;
+		height: 48px;
+	}
+
+	&--lg {
+		width: 80px;
+		height: 80px;
+	}
+
+	&--xl {
+		width: 120px;
+		height: 120px;
+	}
+
+	// Shape variants
+	&--circle {
+		border-radius: var(--pt-radius-full);
+	}
+
+	&--rounded {
+		border-radius: var(--pt-radius-lg);
+	}
+
+	&--square {
+		border-radius: var(--pt-radius-sm);
+	}
+
+	// Modifiers
+	&--shadow {
+		box-shadow: var(--pt-shadow-inner);
+	}
+
+	// Image element
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+
+		&--pixelated {
+			image-rendering: pixelated;
+		}
+	}
+}
