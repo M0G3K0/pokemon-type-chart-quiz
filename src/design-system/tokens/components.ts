@@ -21,13 +21,6 @@ export const components = {
       "x": "0.5rem",
       "y": "0.25rem"
     },
-    "size": {
-      "sm": {
-        "padding-y": "2px",
-        "padding-x": "6px",
-        "font-size": "10px"
-      }
-    },
     "radius": "0.25rem"
   },
   "button": {

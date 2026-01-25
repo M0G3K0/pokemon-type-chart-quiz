@@ -271,6 +271,7 @@ $pt-space-10: 2.5rem; // 物理的な40px。グリッドの10倍。大きなセ�
 $pt-space-12: 3rem; // 物理的な48px。グリッドの12倍。主要セクション間。
 $pt-space-16: 4rem; // 物理的な64px。グリッドの16倍。ページレベルの大きな余白。
 $pt-space-20: 5rem; // 物理的な80px。グリッドの20倍。最大レベルの余白。
+$pt-space-05: 0.125rem; // 物理的な2px。グリッドの半分。特に小さいコンポーネント用の例外的な値。
 $pt-font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; // システムサンセリフフォント。本文・UI用
 $pt-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; // 等幅フォント。コード・数値表示用
 $pt-font-size-xs: 0.75rem; // 12px - 非常に小さい。注釈やラベル
@@ -291,9 +292,6 @@ $pt-font-line-height-relaxed: 1.75; // ゆったり行間。長文の可読性�
 $pt-semantic-border-width-none: 0; // 【用途】枠線なし。
 $pt-semantic-border-width-default: 1px; // 【用途】標準枠線。入力欄、カード。
 $pt-semantic-border-width-thick: 2px; // 【用途】太い枠線。フォーカス状態、強調。
-$pt-badge-size-sm-padding-y: 2px; // smサイズの上下余白。グリッド単位より小さい特殊値。
-$pt-badge-size-sm-padding-x: 6px; // smサイズの左右余白。グリッド単位より小さい特殊値。
-$pt-badge-size-sm-font-size: 10px; // smサイズのフォントサイズ。最小可読サイズ。
 $pt-button-primary-border-default: rgba(0, 0, 0, 0); // ボタンの枠線色。Primaryは枠なし。
 $pt-button-secondary-bg-default: rgba(0, 0, 0, 0); // 背景色。Secondaryは透明で枠線を強調。
 $pt-button-secondary-bg-disabled: rgba(0, 0, 0, 0); // 無効時の背景色。透明のまま。
@@ -459,8 +457,8 @@ $pt-badge-win-bg: $pt-color-result-win-subtle; // 正解バッジの背景色。
 $pt-badge-win-text: $pt-color-result-win-strong; // 正解バッジのラベル色。濃いライムで高コントラスト。
 $pt-badge-lose-bg: $pt-color-result-lose-subtle; // 不正解バッジの背景色。薄いレッド。
 $pt-badge-lose-text: $pt-color-result-lose-strong; // 不正解バッジのラベル色。濃いレッドで高コントラスト。
-$pt-badge-padding-x: $pt-spacing-content-sm; // 左右の内側余白。`padding-left/right`に適用。mdサイズ用。
-$pt-badge-padding-y: $pt-spacing-content-xs; // 上下の内側余白。`padding-top/bottom`に適用。mdサイズ用。
+$pt-badge-padding-x: $pt-spacing-content-sm; // 左右の内側余白。`padding-left/right`に適用。
+$pt-badge-padding-y: $pt-spacing-content-xs; // 上下の内側余白。`padding-top/bottom`に適用。
 $pt-badge-radius: $pt-semantic-border-radius-sm; // 角丸の大きさ。`border-radius`に適用。
 $pt-button-primary-text-default: $pt-color-text-inverse; // ボタンのラベル色。`color`に適用。暗い背景上で白文字。
 $pt-button-primary-text-disabled: $pt-color-text-disabled; // 無効時のラベル色。コントラストを下げて操作不可を示す。

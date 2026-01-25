@@ -45,32 +45,12 @@
 			"x": {
 				"value": "{spacing.content.sm}",
 				"type": "spacing",
-				"$description": "左右の内側余白。`padding-left/right`に適用。mdサイズ用。"
+				"$description": "左右の内側余白。`padding-left/right`に適用。"
 			},
 			"y": {
 				"value": "{spacing.content.xs}",
 				"type": "spacing",
-				"$description": "上下の内側余白。`padding-top/bottom`に適用。mdサイズ用。"
-			}
-		},
-		"size": {
-			"sm": {
-				"$description": "Smallest badge size - compact display",
-				"padding-y": {
-					"value": "2px",
-					"type": "spacing",
-					"$description": "smサイズの上下余白。グリッド単位より小さい特殊値。"
-				},
-				"padding-x": {
-					"value": "6px",
-					"type": "spacing",
-					"$description": "smサイズの左右余白。グリッド単位より小さい特殊値。"
-				},
-				"font-size": {
-					"value": "10px",
-					"type": "dimension",
-					"$description": "smサイズのフォントサイズ。最小可読サイズ。"
-				}
+				"$description": "上下の内側余白。`padding-top/bottom`に適用。"
 			}
 		},
 		"radius": {
