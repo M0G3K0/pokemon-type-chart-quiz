@@ -1,5 +1,4 @@
-import { describe, it, expect } from 'vitest';
-
+// globals: true なのでインポート不要
 describe('Basic Test', () => {
   it('should pass a simple test', () => {
     expect(1 + 1).toBe(2);
