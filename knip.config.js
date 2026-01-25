@@ -13,5 +13,6 @@ module.exports = {
 		'@testing-library/angular',
 		'@testing-library/dom',
 		'@testing-library/user-event',
+		'@angular/platform-browser-dynamic', // Used by Angular testing but not directly imported after test-setup.ts removal
 	],
 };
