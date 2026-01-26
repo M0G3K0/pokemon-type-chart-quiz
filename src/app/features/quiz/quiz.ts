@@ -200,14 +200,16 @@ export class QuizComponent implements OnInit {
     const isSelected = this.selectedChoice() === choice;
     const isActual = this.actualEffectiveness() === choice;
 
+    let result: RadioButtonFeedbackState = 'default';
     if (isSelected && isActual) {
-      return 'correct';
+      result = 'correct';
     } else if (isSelected && !isActual) {
-      return 'wrong';
+      result = 'wrong';
     } else if (isActual) {
-      return 'actual';
+      result = 'actual';
     }
 
-    return 'default';
+    console.log(`Choice ${choice}: isSelected=${isSelected}, isActual=${isActual}, result=${result}`);
+    return result;
   }
 }

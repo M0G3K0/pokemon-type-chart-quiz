@@ -75,29 +75,37 @@ export type RadioButtonFeedbackState = 'default' | 'correct' | 'wrong' | 'actual
       transform: scale(1.05);
       box-shadow: var(--pt-radio-button-shadow-selected);
     }
-    
-    /* Feedback states */
-    :host(.feedback-correct) {
+    /* Feedback states - disabled より優先度を高く */
+    :host(.feedback-correct),
+    :host(.feedback-correct.disabled) {
       background-color: var(--pt-radio-button-feedback-correct-bg);
       border-color: var(--pt-radio-button-feedback-correct-border);
       color: var(--pt-radio-button-feedback-correct-text);
+      opacity: 1;
+      cursor: default;
     }
     
-    :host(.feedback-wrong) {
+    :host(.feedback-wrong),
+    :host(.feedback-wrong.disabled) {
       background-color: var(--pt-radio-button-feedback-wrong-bg);
       border-color: var(--pt-radio-button-feedback-wrong-border);
       color: var(--pt-radio-button-feedback-wrong-text);
+      opacity: 1;
+      cursor: default;
     }
     
-    :host(.feedback-actual) {
+    :host(.feedback-actual),
+    :host(.feedback-actual.disabled) {
       background-color: var(--pt-radio-button-feedback-actual-bg);
       border-color: var(--pt-radio-button-feedback-actual-border);
       color: var(--pt-radio-button-feedback-actual-text);
       box-shadow: 0 0 0 4px var(--pt-radio-button-feedback-actual-ring);
+      opacity: 1;
+      cursor: default;
     }
     
-    /* Disabled state */
-    :host(.disabled) {
+    /* Disabled state - feedback がない場合のみ適用 */
+    :host(.disabled:not(.feedback-correct):not(.feedback-wrong):not(.feedback-actual)) {
       background-color: var(--pt-radio-button-disabled-bg);
       border-color: var(--pt-radio-button-disabled-border);
       color: var(--pt-radio-button-disabled-text);
@@ -138,6 +146,11 @@ export class PtRadioButtonComponent<T = unknown> {
 
 	@HostBinding('class.selected')
 	get isSelected(): boolean {
+		// feedbackState が設定されている場合は selected クラスを付けない
+		// （feedback スタイルが優先されるようにする）
+		if (this.feedbackState !== 'default') {
+			return false;
+		}
 		if (this.group) {
 			return this.group.value === this.value;
 		}
