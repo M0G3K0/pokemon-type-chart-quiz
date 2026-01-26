@@ -10,6 +10,7 @@ import { StackComponent } from '../../ui/pt-stack/pt-stack';
 import { SurfaceComponent } from '../../ui/pt-surface/pt-surface';
 import { GridComponent } from '../../ui/pt-grid/pt-grid';
 import { TextComponent } from '../../ui/pt-text/pt-text';
+import { PtRadioButtonComponent, RadioButtonFeedbackState } from '../../ui/pt-radio-button';
 import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from '../../domain/type-chart';
 
 /** 回答後に次の問題へ進むまでの遅延（ミリ秒） */
@@ -18,7 +19,20 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, TypeChipComponent, AvatarComponent, IconComponent, StackComponent, SurfaceComponent, GridComponent, TextComponent],
+  imports: [
+    CommonModule,
+    CardComponent,
+    CardHeaderComponent,
+    CardContentComponent,
+    TypeChipComponent,
+    AvatarComponent,
+    IconComponent,
+    StackComponent,
+    SurfaceComponent,
+    GridComponent,
+    TextComponent,
+    PtRadioButtonComponent,
+  ],
   template: `
     <pt-surface variant="ghost" padding="lg" class="quiz-container">
       <pt-card *ngIf="currentPokemon() as pokemon">
@@ -88,15 +102,17 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
 
             <!-- 選択肢 -->
             <pt-grid [columns]="2" [smColumns]="3" gap="md">
-              <button
+              <pt-radio-button
                 *ngFor="let choice of choices"
-                (click)="selectChoice(choice)"
-                [class]="getChoiceButtonClass(choice)"
+                [value]="choice"
+                [selected]="selectedChoice() === choice"
+                [feedbackState]="getChoiceFeedbackState(choice)"
                 [disabled]="isChecked()"
+                (radioSelect)="selectChoice(choice)"
               >
                 <pt-text variant="body-lg" weight="bold">{{ choice }}</pt-text>
                 <pt-text variant="label-xs" color="secondary">倍</pt-text>
-              </button>
+              </pt-radio-button>
             </pt-grid>
 
           </pt-stack>
@@ -124,66 +140,6 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
     
     .loading-placeholder {
       height: 20rem;
-    }
-    
-    /* 選択肢ボタン */
-    .choice-button {
-      display: flex;
-      flex-direction: row;
-      align-items: baseline;
-      justify-content: center;
-      padding: var(--pt-space-4) var(--pt-space-5);
-      border-radius: var(--pt-radius-xl);
-      border: 2px solid var(--pt-color-border-default);
-      background-color: var(--pt-color-surface-card);
-      color: var(--pt-color-text-primary);
-      cursor: pointer;
-      transition: all var(--pt-duration-normal) var(--pt-easing-default);
-      box-shadow: var(--pt-shadow-sm);
-    }
-    
-    .choice-button:hover:not(:disabled) {
-      border-color: var(--pt-color-gray-400);
-      background-color: var(--pt-color-surface-hovered);
-    }
-    
-    .choice-button:active:not(:disabled) {
-      transform: scale(0.95);
-    }
-    
-    .choice-button--selected {
-      background-color: var(--pt-color-gray-800);
-      border-color: var(--pt-color-gray-800);
-      color: var(--pt-color-text-inverse);
-      transform: scale(1.05);
-      box-shadow: var(--pt-shadow-lg);
-    }
-    
-    .choice-button--correct {
-      background-color: var(--pt-color-result-win-default);
-      border-color: var(--pt-color-result-win-default);
-      color: var(--pt-color-text-inverse);
-    }
-    
-    .choice-button--wrong {
-      background-color: var(--pt-color-result-lose-default);
-      border-color: var(--pt-color-result-lose-default);
-      color: var(--pt-color-text-inverse);
-    }
-    
-    .choice-button--actual {
-      background-color: var(--pt-color-surface-card);
-      border-color: var(--pt-color-result-win-default);
-      color: var(--pt-color-result-win-default);
-      box-shadow: 0 0 0 4px var(--pt-color-result-win-subtle);
-    }
-    
-    .choice-button--disabled {
-      background-color: var(--pt-color-surface-hovered);
-      border-color: var(--pt-color-border-subtle);
-      color: var(--pt-color-text-disabled);
-      opacity: 0.5;
-      cursor: not-allowed;
     }
   `],
 })
@@ -232,25 +188,28 @@ export class QuizComponent implements OnInit {
     }, AUTO_ADVANCE_DELAY_MS);
   }
 
-  getChoiceButtonClass(choice: number) {
-    const isSelected = this.selectedChoice() === choice;
-    const classes = ['choice-button'];
-
-    if (this.isChecked()) {
-      const isActual = this.actualEffectiveness() === choice;
-      if (isSelected && isActual) {
-        classes.push('choice-button--correct');
-      } else if (isSelected && !isActual) {
-        classes.push('choice-button--wrong');
-      } else if (isActual) {
-        classes.push('choice-button--actual');
-      } else {
-        classes.push('choice-button--disabled');
-      }
-    } else if (isSelected) {
-      classes.push('choice-button--selected');
+  /**
+   * 選択肢のフィードバック状態を取得
+   * pt-radio-button の feedbackState に渡す値を決定
+   */
+  getChoiceFeedbackState(choice: number): RadioButtonFeedbackState {
+    if (!this.isChecked()) {
+      return 'default';
     }
 
-    return classes.join(' ');
+    const isSelected = this.selectedChoice() === choice;
+    const isActual = this.actualEffectiveness() === choice;
+
+    let result: RadioButtonFeedbackState = 'default';
+    if (isSelected && isActual) {
+      result = 'correct';
+    } else if (isSelected && !isActual) {
+      result = 'wrong';
+    } else if (isActual) {
+      result = 'actual';
+    }
+
+    console.log(`Choice ${choice}: isSelected=${isSelected}, isActual=${isActual}, result=${result}`);
+    return result;
   }
 }

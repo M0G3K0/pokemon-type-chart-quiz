@@ -476,6 +476,10 @@
   --pt-heading-accent-radius: var(--pt-radius-full); /** アクセントバーの角丸。pill形状にする。 */
   --pt-heading-accent-gap: var(--pt-space-2); /** アクセントバーとテキスト間のギャップ。 */
   --pt-heading-accent-color: var(--pt-color-gray-800); /** アクセントバーの色。プライマリカラー（ボタンと同じ）。 */
+  --pt-radio-button-hover-border: var(--pt-color-gray-400); /** ホバー時の枠線色。defaultより一段濃くして反応を示す。 */
+  --pt-radio-button-selected-bg: var(--pt-color-gray-800); /** 選択時の背景色。暗い色で選択状態を強調。 */
+  --pt-radio-button-selected-border: var(--pt-color-gray-800); /** 選択時の枠線色。背景と同色。 */
+  --pt-radio-button-border-width: var(--pt-semantic-border-width-thick); /** 枠線の太さ。`border-width`に適用。 */
   --pt-surface-border-width: var(--pt-semantic-border-width-default); /** ボーダー幅。 */
   --pt-badge-neutral-bg: var(--pt-color-surface-hovered); /** バッジの背景色。`background-color`に適用。 */
   --pt-badge-neutral-text: var(--pt-color-text-primary); /** バッジのラベル色。`color`に適用。 */
@@ -520,6 +524,30 @@
   --pt-grid-gap-md: var(--pt-spacing-gap-md); /** 中ギャップ。標準グリッド。デフォルト値。 */
   --pt-grid-gap-lg: var(--pt-spacing-gap-lg); /** 大ギャップ。ゆったりしたグリッド。 */
   --pt-heading-text-color: var(--pt-color-text-primary); /** 見出しテキストの色 */
+  --pt-radio-button-default-bg: var(--pt-color-surface-card); /** 未選択時の背景色。`background-color`に適用。 */
+  --pt-radio-button-default-border: var(--pt-color-border-default); /** 未選択時の枠線色。`border-color`に適用。 */
+  --pt-radio-button-default-text: var(--pt-color-text-primary); /** 未選択時のラベル色。`color`に適用。 */
+  --pt-radio-button-hover-bg: var(--pt-color-surface-hovered); /** ホバー時の背景色。インタラクション可能を示す。 */
+  --pt-radio-button-selected-text: var(--pt-color-text-inverse); /** 選択時のラベル色。暗い背景上で白文字。 */
+  --pt-radio-button-disabled-bg: var(--pt-color-surface-hovered); /** 無効時の背景色。操作不可を視覚的に示す。 */
+  --pt-radio-button-disabled-border: var(--pt-color-border-subtle); /** 無効時の枠線色。控えめな境界線。 */
+  --pt-radio-button-disabled-text: var(--pt-color-text-disabled); /** 無効時のラベル色。コントラストを下げて操作不可を示す。 */
+  --pt-radio-button-feedback-correct-bg: var(--pt-color-result-win-default); /** 正解時の背景色。正解・勝利を示す緑。 */
+  --pt-radio-button-feedback-correct-border: var(--pt-color-result-win-default); /** 正解時の枠線色。背景と同色。 */
+  --pt-radio-button-feedback-correct-text: var(--pt-color-text-inverse); /** 正解時のラベル色。緑背景上で白文字。 */
+  --pt-radio-button-feedback-wrong-bg: var(--pt-color-result-lose-default); /** 不正解時の背景色。不正解・敗北を示す赤。 */
+  --pt-radio-button-feedback-wrong-border: var(--pt-color-result-lose-default); /** 不正解時の枠線色。背景と同色。 */
+  --pt-radio-button-feedback-wrong-text: var(--pt-color-text-inverse); /** 不正解時のラベル色。赤背景上で白文字。 */
+  --pt-radio-button-feedback-actual-bg: var(--pt-color-surface-card); /** 正解表示時の背景色。Card背景のまま。 */
+  --pt-radio-button-feedback-actual-border: var(--pt-color-result-win-default); /** 正解表示時の枠線色。緑の枠で正解を示す。 */
+  --pt-radio-button-feedback-actual-text: var(--pt-color-result-win-default); /** 正解表示時のラベル色。緑テキストで強調。 */
+  --pt-radio-button-feedback-actual-ring: var(--pt-color-result-win-subtle); /** 正解表示時のリング色。box-shadowで外側に薄緑リング。 */
+  --pt-radio-button-focus-ring: var(--pt-color-border-focused); /** フォーカスリングの色。`outline`に適用。アクセシビリティ用。 */
+  --pt-radio-button-padding-x: var(--pt-spacing-content-md); /** 水平方向の内側余白。`padding-inline`に適用。 */
+  --pt-radio-button-padding-y: var(--pt-spacing-content-md); /** 垂直方向の内側余白。`padding-block`に適用。 */
+  --pt-radio-button-radius: var(--pt-semantic-border-radius-xl); /** 角丸。`border-radius`に適用。大きめで柔らかい印象。 */
+  --pt-radio-button-shadow-default: var(--pt-elevation-raised); /** デフォルト時の影。軽く浮いた印象。 */
+  --pt-radio-button-shadow-selected: var(--pt-elevation-overlay); /** 選択時の影。より強調された浮き上がり。 */
   --pt-stack-gap-xs: var(--pt-spacing-gap-xs); /** 極小ギャップ。アイコンとラベルなど密接な要素間。 */
   --pt-stack-gap-sm: var(--pt-spacing-gap-sm); /** 小ギャップ。関連性の高い要素間。 */
   --pt-stack-gap-md: var(--pt-spacing-gap-md); /** 中ギャップ。標準的な要素間。デフォルト値。 */
