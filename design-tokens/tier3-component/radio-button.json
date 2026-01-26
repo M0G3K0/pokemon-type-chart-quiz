@@ -1,0 +1,178 @@
+{
+	"$description": "Tier 3: Radio Button Component Tokens. Describes WHERE each token applies for radio button selection UI.",
+	"radioButton": {
+		"$description": "汎用ラジオボタン選択コンポーネント用トークン。Quiz選択肢などで使用。",
+		"default": {
+			"$description": "Default state - unselected radio button",
+			"bg": {
+				"value": "{color.surface.card}",
+				"type": "color",
+				"$description": "未選択時の背景色。`background-color`に適用。"
+			},
+			"border": {
+				"value": "{color.border.default}",
+				"type": "color",
+				"$description": "未選択時の枠線色。`border-color`に適用。"
+			},
+			"text": {
+				"value": "{color.text.primary}",
+				"type": "color",
+				"$description": "未選択時のラベル色。`color`に適用。"
+			}
+		},
+		"hover": {
+			"$description": "Hover state - mouse over unselected button",
+			"bg": {
+				"value": "{color.surface.hovered}",
+				"type": "color",
+				"$description": "ホバー時の背景色。インタラクション可能を示す。"
+			},
+			"border": {
+				"value": "{color.gray.400}",
+				"type": "color",
+				"$description": "ホバー時の枠線色。defaultより一段濃くして反応を示す。"
+			}
+		},
+		"selected": {
+			"$description": "Selected state - currently chosen option",
+			"bg": {
+				"value": "{color.gray.800}",
+				"type": "color",
+				"$description": "選択時の背景色。暗い色で選択状態を強調。"
+			},
+			"border": {
+				"value": "{color.gray.800}",
+				"type": "color",
+				"$description": "選択時の枠線色。背景と同色。"
+			},
+			"text": {
+				"value": "{color.text.inverse}",
+				"type": "color",
+				"$description": "選択時のラベル色。暗い背景上で白文字。"
+			}
+		},
+		"disabled": {
+			"$description": "Disabled state - non-interactive button",
+			"bg": {
+				"value": "{color.surface.hovered}",
+				"type": "color",
+				"$description": "無効時の背景色。操作不可を視覚的に示す。"
+			},
+			"border": {
+				"value": "{color.border.subtle}",
+				"type": "color",
+				"$description": "無効時の枠線色。控えめな境界線。"
+			},
+			"text": {
+				"value": "{color.text.disabled}",
+				"type": "color",
+				"$description": "無効時のラベル色。コントラストを下げて操作不可を示す。"
+			}
+		},
+		"feedback": {
+			"$description": "Feedback states for quiz/game result display",
+			"correct": {
+				"$description": "Correct answer feedback",
+				"bg": {
+					"value": "{color.result.win.default}",
+					"type": "color",
+					"$description": "正解時の背景色。正解・勝利を示す緑。"
+				},
+				"border": {
+					"value": "{color.result.win.default}",
+					"type": "color",
+					"$description": "正解時の枠線色。背景と同色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "正解時のラベル色。緑背景上で白文字。"
+				}
+			},
+			"wrong": {
+				"$description": "Wrong answer feedback",
+				"bg": {
+					"value": "{color.result.lose.default}",
+					"type": "color",
+					"$description": "不正解時の背景色。不正解・敗北を示す赤。"
+				},
+				"border": {
+					"value": "{color.result.lose.default}",
+					"type": "color",
+					"$description": "不正解時の枠線色。背景と同色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "不正解時のラベル色。赤背景上で白文字。"
+				}
+			},
+			"actual": {
+				"$description": "Actual correct answer indication (when user selected wrong)",
+				"bg": {
+					"value": "{color.surface.card}",
+					"type": "color",
+					"$description": "正解表示時の背景色。Card背景のまま。"
+				},
+				"border": {
+					"value": "{color.result.win.default}",
+					"type": "color",
+					"$description": "正解表示時の枠線色。緑の枠で正解を示す。"
+				},
+				"text": {
+					"value": "{color.result.win.default}",
+					"type": "color",
+					"$description": "正解表示時のラベル色。緑テキストで強調。"
+				},
+				"ring": {
+					"value": "{color.result.win.subtle}",
+					"type": "color",
+					"$description": "正解表示時のリング色。box-shadowで外側に薄緑リング。"
+				}
+			}
+		},
+		"focus": {
+			"$description": "Focus state for keyboard navigation",
+			"ring": {
+				"value": "{color.border.focused}",
+				"type": "color",
+				"$description": "フォーカスリングの色。`outline`に適用。アクセシビリティ用。"
+			}
+		},
+		"padding": {
+			"$description": "Internal spacing for radio button",
+			"x": {
+				"value": "{spacing.content.md}",
+				"type": "spacing",
+				"$description": "水平方向の内側余白。`padding-inline`に適用。"
+			},
+			"y": {
+				"value": "{spacing.content.md}",
+				"type": "spacing",
+				"$description": "垂直方向の内側余白。`padding-block`に適用。"
+			}
+		},
+		"radius": {
+			"value": "{semantic-border.radius.xl}",
+			"type": "borderRadius",
+			"$description": "角丸。`border-radius`に適用。大きめで柔らかい印象。"
+		},
+		"borderWidth": {
+			"value": "{semantic-border.width.thick}",
+			"type": "borderWidth",
+			"$description": "枠線の太さ。`border-width`に適用。"
+		},
+		"shadow": {
+			"default": {
+				"value": "{elevation.raised}",
+				"type": "boxShadow",
+				"$description": "デフォルト時の影。軽く浮いた印象。"
+			},
+			"selected": {
+				"value": "{elevation.overlay}",
+				"type": "boxShadow",
+				"$description": "選択時の影。より強調された浮き上がり。"
+			}
+		}
+	}
+}
