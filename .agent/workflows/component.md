@@ -12,16 +12,25 @@ description: コンポーネント実装のE2Eワークフロー（設計〜PR�
 
 **⚠️ 必読: Quiz画面リファクタリングのブランチ戦略**
 
-`.gemini/plans/quiz-refactor-plan.md` に従い、Quiz画面で使用するコンポーネントは以下のルールで作業する：
+```
+main
+ └── feature/quiz-refactor (親ブランチ)
+      ├── feature/quiz-refactor/pt-icon → PR → feature/quiz-refactor
+      ├── feature/quiz-refactor/pt-avatar → PR → feature/quiz-refactor
+      ├── feature/quiz-refactor/pt-heading → PR → feature/quiz-refactor
+      └── ...
+ 全コンポーネント完成後 → feature/quiz-refactor → main へPR
+```
 
-1. **作業ブランチ**: `feature/quiz-refactor` （mainから分岐）
-2. **個別のPRは作成しない**: 全てのコンポーネント（pt-icon, pt-chip, pt-alert等）を同一ブランチで実装
-3. **mainへのマージ**: 全コンポーネント完成後に、`feature/quiz-refactor` → `main` のPRを1つ作成
+**作業フロー:**
+1. **コンポーネントごとにブランチを作成**: `feature/quiz-refactor/pt-{name}`
+2. **親ブランチへPR**: `feature/quiz-refactor/pt-{name}` → `feature/quiz-refactor`
+3. **全コンポーネント完成後**: `feature/quiz-refactor` → `main` のPRを作成
 
 **理由**:
-- コンポーネント間の依存関係がある
-- 中途半端な状態でmainを汚したくない
-- レビューを一括で行える
+- コンポーネント単位でレビューできる
+- 中途半端な状態でmainを汚さない
+- 親ブランチで統合テストできる
 
 ### ファイル構成
 
@@ -66,14 +75,16 @@ description: コンポーネント実装のE2Eワークフロー（設計〜PR�
 
 ## Step 2: 実装フェーズ
 
-### 2-1: ブランチ確認
+### 2-1: ブランチ作成
 
-// turbo
 ```bash
-git branch
-```
+# 親ブランチを最新化
+git checkout feature/quiz-refactor
+git pull origin feature/quiz-refactor
 
-`feature/quiz-refactor` ブランチにいることを確認。
+# コンポーネント用ブランチを作成
+git checkout -b feature/quiz-refactor/pt-{name}
+```
 
 ### 2-2: ファイル作成
 
@@ -147,20 +158,37 @@ docs/components/pt-{name}.md
 
 ---
 
-## Step 6: コミット
-
-コンポーネント単位でコミット：
+## Step 6: ローカル確認
 
 ```bash
-git add src/app/ui/pt-{name}/ docs/components/pt-{name}.md
-git commit -m "feat(ui): add pt-{name} component with docs"
+npm run start
 ```
 
-**注意**: 個別のPRは作成しない！`feature/quiz-refactor` ブランチに積み重ねる。
+http://localhost:4200/ でコンポーネントの動作を確認。
 
 ---
 
-## Step 7: 全コンポーネント完成後
+## Step 7: コミット & プッシュ
+
+```bash
+git add src/app/ui/pt-{name}/ docs/components/pt-{name}.md .gemini/plans/pt-{name}-spec.md
+git commit -m "feat(ui): add pt-{name} component with docs"
+git push origin feature/quiz-refactor/pt-{name}
+```
+
+---
+
+## Step 8: PRを作成（親ブランチへ）
+
+```bash
+gh pr create --base feature/quiz-refactor --title "✨ feat(ui): add pt-{name} component" --body-file pr-body.md
+```
+
+**注意**: PRは `feature/quiz-refactor` ブランチに向ける（mainではない）
+
+---
+
+## Step 9: 全コンポーネント完成後
 
 全てのコンポーネントが完成したら：
 
@@ -174,12 +202,13 @@ git commit -m "feat(ui): add pt-{name} component with docs"
 
 | ステップ | コマンド/アクション |
 |----------|---------------------|
+| ブランチ作成 | `git checkout -b feature/quiz-refactor/pt-{name}` |
 | ベンチマーク | Web検索、デザインシステム調査 |
 | 実装 | ファイル作成、コード記述 |
+| 検証 | `npm run lint:css && npm run lint && npm test && npm run build` |
 | ドキュメント | `/component-doc` |
-| リファクタ | テンプレート置換、旧コンポーネント削除 |
-| 確認 | `npm run dev` |
-| PR | `/pr` (全コンポーネント完成後のみ) |
+| ローカル確認 | `npm run start` |
+| PR作成 | `gh pr create --base feature/quiz-refactor` |
 
 ---
 
