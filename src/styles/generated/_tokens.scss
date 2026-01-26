@@ -292,6 +292,10 @@ $pt-font-line-height-relaxed: 1.75; // ゆったり行間。長文の可読性�
 $pt-semantic-border-width-none: 0; // 【用途】枠線なし。
 $pt-semantic-border-width-default: 1px; // 【用途】標準枠線。入力欄、カード。
 $pt-semantic-border-width-thick: 2px; // 【用途】太い枠線。フォーカス状態、強調。
+$pt-avatar-size-sm: 32px; // 小サイズ。リスト内のアイコンなどに使用。
+$pt-avatar-size-md: 48px; // 中サイズ。標準的なアバター表示に使用。
+$pt-avatar-size-lg: 80px; // 大サイズ。カード内メイン画像などに使用。
+$pt-avatar-size-xl: 120px; // 特大サイズ。プロフィール画面などに使用。
 $pt-button-primary-border-default: rgba(0, 0, 0, 0); // ボタンの枠線色。Primaryは枠なし。
 $pt-button-secondary-bg-default: rgba(0, 0, 0, 0); // 背景色。Secondaryは透明で枠線を強調。
 $pt-button-secondary-bg-disabled: rgba(0, 0, 0, 0); // 無効時の背景色。透明のまま。
@@ -443,6 +447,9 @@ $pt-typography-code-md-font-family: $pt-font-family-mono;
 $pt-typography-code-md-font-size: $pt-font-size-sm;
 $pt-typography-code-md-font-weight: $pt-font-weight-normal;
 $pt-typography-code-md-line-height: $pt-font-line-height-normal;
+$pt-avatar-radius-circle: $pt-radius-full; // 完全な円形。ユーザーアバター用。
+$pt-avatar-radius-rounded: $pt-radius-lg; // 角丸。サムネイル用。
+$pt-avatar-radius-square: $pt-radius-sm; // 小さい角丸。ピクセルアート用。
 $pt-button-primary-bg-default: $pt-color-gray-800; // ボタンの背景色。`background-color`に適用。
 $pt-button-primary-bg-hover: $pt-color-gray-700; // ホバー時の背景色。defaultより一段明るくして反応を示す。
 $pt-button-primary-bg-pressed: $pt-color-gray-900; // 押下時の背景色。defaultより一段暗くして押し込み感を表現。

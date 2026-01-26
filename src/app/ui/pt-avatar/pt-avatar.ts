@@ -10,6 +10,9 @@ export type AvatarShape = 'circle' | 'rounded' | 'square';
  * ユーザープロフィール画像、サムネイル、アイコン的な画像表示に使用。
  * 複数のサイズ・形状バリアントをサポートし、ピクセルアート表示にも対応。
  *
+ * 背景色やシャドウなどの装飾は、使用箇所で親要素を使って対応してください。
+ * 将来的に pt-surface / pt-paper コンポーネントを導入予定。
+ *
  * @example
  * ```html
  * <pt-avatar
@@ -45,10 +48,4 @@ export class AvatarComponent {
 
 	/** ピクセルアート用のレンダリング（レトロゲーム画像など） */
 	@Input() pixelated = false;
-
-	/** 背景色（CSSカスタムプロパティ推奨） */
-	@Input() bgColor?: string;
-
-	/** 影の有無 */
-	@Input() shadow = false;
 }

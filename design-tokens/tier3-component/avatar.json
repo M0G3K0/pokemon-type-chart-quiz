@@ -1,0 +1,45 @@
+{
+	"$description": "Tier 3: Avatar Component Tokens. Describes WHERE each token applies.",
+	"avatar": {
+		"$description": "Avatar component for displaying images with consistent sizing and shapes. Does NOT include background or shadow - use pt-paper for those.",
+		"size": {
+			"sm": {
+				"value": "32px",
+				"type": "sizing",
+				"$description": "小サイズ。リスト内のアイコンなどに使用。"
+			},
+			"md": {
+				"value": "48px",
+				"type": "sizing",
+				"$description": "中サイズ。標準的なアバター表示に使用。"
+			},
+			"lg": {
+				"value": "80px",
+				"type": "sizing",
+				"$description": "大サイズ。カード内メイン画像などに使用。"
+			},
+			"xl": {
+				"value": "120px",
+				"type": "sizing",
+				"$description": "特大サイズ。プロフィール画面などに使用。"
+			}
+		},
+		"radius": {
+			"circle": {
+				"value": "{radius.full}",
+				"type": "borderRadius",
+				"$description": "完全な円形。ユーザーアバター用。"
+			},
+			"rounded": {
+				"value": "{radius.lg}",
+				"type": "borderRadius",
+				"$description": "角丸。サムネイル用。"
+			},
+			"square": {
+				"value": "{radius.sm}",
+				"type": "borderRadius",
+				"$description": "小さい角丸。ピクセルアート用。"
+			}
+		}
+	}
+}

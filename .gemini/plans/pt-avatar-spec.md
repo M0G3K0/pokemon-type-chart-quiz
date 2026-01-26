@@ -2,22 +2,23 @@
 
 ## 概要
 
-画像を表示するためのアバターコンポーネント。ポケモンのスプライト、ユーザープロフィール画像などに使用。
+画像を表示するためのアバターコンポーネント。ユーザープロフィール画像、サムネイル、アイコン的な画像表示に使用。
+
+**責務**: 画像のサイズ・形状・ピクセルアート対応のみ
+**責務外**: 背景色・シャドウなどの装飾（→ 将来の pt-paper で対応）
 
 ## ベンチマーク調査
 
 ### GitHub Primer Avatar
 - **Props**: `src`, `alt`, `size` (number), `square` (boolean)
-- **サイズ**: 16px〜64px（base-4/base-8スケール）
+- **サイズ**: 16px〜64px
 - **形状**: Circle（人物）/ Square（組織・Bot）
-- **特徴**: シンプルで最小限のAPI
+- **背景色・シャドウ**: なし
 
-### Material Design 3
-- 明示的な Avatar コンポーネントはないが、Image + Container パターンを使用
-
-### 考慮事項
-- ポケモンスプライトはピクセルアートなので `image-rendering: pixelated` が必要
-- 背景色・影の有無で視認性を調整
+### Material Design
+- **Props**: `src`, `alt`, `variant` (circular/rounded/square)
+- **背景色**: Letter Avatarのみ
+- **シャドウ**: なし（Paperコンポーネントで対応）
 
 ---
 
@@ -30,8 +31,10 @@
 | `size` | `'sm' \| 'md' \| 'lg' \| 'xl'` | `'md'` | サイズバリアント |
 | `shape` | `'circle' \| 'rounded' \| 'square'` | `'circle'` | 形状 |
 | `pixelated` | `boolean` | `false` | ピクセルアート用のレンダリング |
-| `bgColor` | `string` | `undefined` | 背景色（CSSカスタムプロパティ推奨） |
-| `shadow` | `boolean` | `false` | 影の有無 |
+
+**削除されたProps** (責務分離のため):
+- ~~`bgColor`~~ → 使用箇所で親要素を使用
+- ~~`shadow`~~ → 将来の pt-paper で対応
 
 ---
 
@@ -41,7 +44,7 @@
 |------|------------|----------|
 | `sm` | 32x32px | アイコンサイズ、リスト内 |
 | `md` | 48x48px | 標準サイズ |
-| `lg` | 80x80px | カード内メイン画像（現在の Quiz 画面） |
+| `lg` | 80x80px | カード内メイン画像（Quiz 画面） |
 | `xl` | 120x120px | プロフィール画面など |
 
 ---
@@ -51,8 +54,8 @@
 | Shape | border-radius | Use Case |
 |-------|--------------|----------|
 | `circle` | 50% | ユーザーアバター |
-| `rounded` | `--pt-radius-lg` | カード内のサムネイル |
-| `square` | `--pt-radius-sm` | ピクセルアート、ドット絵 |
+| `rounded` | `--pt-radius-lg` | サムネイル |
+| `square` | `--pt-radius-sm` | ピクセルアート |
 
 ---
 
@@ -61,76 +64,71 @@
 ### 基本的な使用
 ```html
 <pt-avatar 
-  src="/sprites/pikachu.png" 
-  alt="ピカチュウ"
+  src="/images/user.png" 
+  alt="ユーザー名"
   size="lg"
-  shape="rounded"
-  [pixelated]="true">
+  shape="rounded">
 </pt-avatar>
 ```
 
-### Quiz 画面での使用（現在の実装を置換）
+### Quiz 画面での使用（装飾は親要素で）
 ```html
-<!-- Before -->
+<!-- 背景・シャドウは親要素で対応 (将来: pt-paper に置き換え) -->
 <div class="bg-slate-50 rounded-xl p-1 shadow-inner">
-  <img [src]="pokemon.imageUrl" [alt]="pokemon.name"
-       class="w-20 h-20 object-contain [image-rendering:pixelated]">
+  <pt-avatar 
+    [src]="pokemon.imageUrl" 
+    [alt]="pokemon.name"
+    size="lg"
+    shape="rounded"
+    [pixelated]="true">
+  </pt-avatar>
 </div>
-
-<!-- After -->
-<pt-avatar 
-  [src]="pokemon.imageUrl" 
-  [alt]="pokemon.name"
-  size="lg"
-  shape="rounded"
-  [pixelated]="true"
-  bgColor="var(--pt-color-surface-secondary)"
-  [shadow]="true">
-</pt-avatar>
 ```
 
 ---
 
 ## アクセシビリティ
 
-- `alt` 属性は必須（空文字列も許容するが、意味のあるテキストを推奨）
+- `alt` 属性は必須
 - 装飾的な画像の場合は `alt=""` を使用
-- フォーカス可能な要素ではない（単なる画像表示）
+- `loading="lazy"` によるパフォーマンス最適化
 
 ---
 
-## Design Tokens使用
+## Design Tokens
 
 ```scss
 // サイズ
---pt-size-avatar-sm: 32px;
---pt-size-avatar-md: 48px;
---pt-size-avatar-lg: 80px;
---pt-size-avatar-xl: 120px;
+--pt-avatar-size-sm: 32px
+--pt-avatar-size-md: 48px
+--pt-avatar-size-lg: 80px
+--pt-avatar-size-xl: 120px
 
 // 形状
---pt-radius-sm, --pt-radius-lg, --pt-radius-full
-
-// 背景・影
---pt-color-surface-secondary: 背景色
---pt-shadow-inner: インナーシャドウ
+--pt-avatar-radius-circle: var(--pt-radius-full)
+--pt-avatar-radius-rounded: var(--pt-radius-lg)
+--pt-avatar-radius-square: var(--pt-radius-sm)
 ```
 
 ---
 
-## ファイル構成
+## 将来の拡張: pt-paper
 
-```
-src/app/ui/pt-avatar/
-├── pt-avatar.ts        # Component class
-├── pt-avatar.html      # Template
-├── pt-avatar.scss      # Styles
-└── pt-avatar.spec.ts   # Unit tests
+背景色・シャドウ（elevation）は `pt-paper` コンポーネントで対応予定。
+MUIの[Paper](https://mui.com/material-ui/react-paper/)を参考に設計。
+
+```html
+<!-- 将来の実装イメージ -->
+<pt-paper elevation="sunken" rounded="lg">
+  <pt-avatar src="..." alt="..." size="lg">
+  </pt-avatar>
+</pt-paper>
 ```
 
 ---
 
 ## 関連コンポーネント
 
-- `pt-icon`: アイコン表示（SVG/画像）
+- `pt-icon`: アイコン表示（SVG）
 - `pt-chip`: アイコン+テキストのチップ
+- `pt-paper`: 背景色・シャドウ（将来追加）

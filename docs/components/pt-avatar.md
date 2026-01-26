@@ -4,11 +4,16 @@
 
 ユーザープロフィール画像、サムネイル、アイコン的な画像表示に使用します。
 
+**責務**: 画像のサイズ・形状・ピクセルアート対応のみ
+**責務外**: 背景色・シャドウ（→ 将来の pt-paper で対応）
+
 ---
 
 ## Overview
 
 `pt-avatar` は、画像を一貫したサイズ・形状で表示するための Molecule コンポーネントです。ピクセルアート表示にも対応し、レトロゲームのスプライトなどの表示に最適化されています。
+
+GitHub Primer や Material Design の Avatar を参考に、**コア機能のみに集中**しています。背景色やシャドウなどの装飾は、使用箇所の責任として親要素または将来の `pt-paper` コンポーネントで対応します。
 
 ---
 
@@ -24,7 +29,7 @@
 
 - 装飾的な背景画像 → 通常の `<img>` や CSS background を使用
 - アイコン（SVG）の表示 → `pt-icon` を使用
-- 複雑なメディア表示 → 専用のメディアコンポーネントを検討
+- 背景色やシャドウが必要な場合 → 親要素で対応（将来: `pt-paper`）
 
 ---
 
@@ -39,8 +44,6 @@
 | `size` | `'sm' \| 'md' \| 'lg' \| 'xl'` | `'md'` | サイズバリアント |
 | `shape` | `'circle' \| 'rounded' \| 'square'` | `'circle'` | 形状 |
 | `pixelated` | `boolean` | `false` | ピクセルアート用のレンダリング |
-| `bgColor` | `string` | - | 背景色（CSSカスタムプロパティ推奨） |
-| `shadow` | `boolean` | `false` | 影の有無 |
 
 ### Size Variants
 
@@ -62,13 +65,16 @@
 ### Design Tokens
 
 ```scss
-// 形状
---pt-radius-full
---pt-radius-lg
---pt-radius-sm
+// サイズ
+--pt-avatar-size-sm
+--pt-avatar-size-md
+--pt-avatar-size-lg
+--pt-avatar-size-xl
 
-// 影
---pt-shadow-inner
+// 形状
+--pt-avatar-radius-circle
+--pt-avatar-radius-rounded
+--pt-avatar-radius-square
 ```
 
 ---
@@ -94,18 +100,19 @@
 </pt-avatar>
 ```
 
-### ピクセルアート表示
+### ピクセルアート表示（背景は親要素で）
 
 ```html
-<pt-avatar 
-  src="/sprites/character.png" 
-  alt="キャラクター"
-  size="lg"
-  shape="rounded"
-  [pixelated]="true"
-  bgColor="var(--pt-color-surface-secondary)"
-  [shadow]="true">
-</pt-avatar>
+<!-- 背景・シャドウは親要素で対応 (将来: pt-paper に置き換え) -->
+<div class="bg-slate-50 rounded-xl p-1 shadow-inner">
+  <pt-avatar 
+    src="/sprites/character.png" 
+    alt="キャラクター"
+    size="lg"
+    shape="rounded"
+    [pixelated]="true">
+  </pt-avatar>
+</div>
 ```
 
 ### サイズ比較
@@ -121,25 +128,18 @@
 
 ## Design Patterns
 
-### プロフィールカード内
+### 将来: pt-paper との組み合わせ
 
 ```html
-<pt-card>
-  <pt-card-header>
-    <div class="flex items-center gap-4">
-      <pt-avatar 
-        src="/images/user.png" 
-        alt="田中太郎"
-        size="lg"
-        shape="circle">
-      </pt-avatar>
-      <div>
-        <h3>田中太郎</h3>
-        <p>開発者</p>
-      </div>
-    </div>
-  </pt-card-header>
-</pt-card>
+<!-- pt-paper 導入後のイメージ -->
+<pt-paper elevation="sunken" rounded="lg">
+  <pt-avatar 
+    src="/images/user.png" 
+    alt="田中太郎"
+    size="lg"
+    shape="rounded">
+  </pt-avatar>
+</pt-paper>
 ```
 
 ---
@@ -148,10 +148,11 @@
 
 - [pt-icon](./pt-icon.md) - SVGアイコン表示
 - [pt-chip](./pt-chip.md) - アイコン+テキストのチップ
+- **pt-paper** - 背景色・シャドウ（将来追加）
 
 ---
 
 ## References
 
 - [GitHub Primer Avatar](https://primer.style/components/avatar)
-- [Material Design 3 - Images](https://m3.material.io/)
+- [Material UI Paper](https://mui.com/material-ui/react-paper/)
