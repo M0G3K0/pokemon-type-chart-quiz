@@ -1,63 +1,39 @@
-## 💡 概要
+## 概要 / Summary
 
-pt-chip / pt-type-chip のUI改善と、SV/ZA（スカーレット・バイオレット）風のタイプアイコン・カラーへの更新を行う。
+`pt-heading` コンポーネントを追加し、Quiz 画面で使用していたカスタム見出し実装を置き換えました。
 
-## 📝 変更内容
+## 変更内容 / Changes
 
-### 🎨 SVGアイコン
-- Pokemon GO風からSV/ZA風のアイコンに全18タイプを更新
-- 背景円を削除し、白抜きアイコンのみに変更
-- ソース: partywhale/pokemon-type-icons (MIT License)
+### 新規追加
+- `src/app/ui/pt-heading/` - Heading コンポーネント（Atom）
+  - `level` prop: セマンティックな見出しレベル（h1-h6）
+  - `size` prop: 視覚的サイズ（xl/lg/md/sm）、levelから自動推論
+  - `accent` prop: アクセントバー（左側の縦棒）表示
+- `design-tokens/tier3-component/heading.json` - Tier 3 トークン
+- `docs/components/pt-heading.md` - コンポーネントドキュメント
+- `.gemini/plans/pt-heading-spec.md` - 設計書
 
-### 🎨 デザイントークン
-- 全18タイプのカラーを公式SV/ZAカラーパレットに更新
-- 500レベル（基準色）を変更
+### 変更
+- `src/app/features/quiz/quiz.ts` - カスタム見出しを `pt-heading` に置き換え
+- `style-dictionary.config.mjs` - heading トークンを出力対象に追加
 
-### 🔧 pt-chip / pt-icon 改善
-- `:host`スタイルでラッパーサイズを適正化
-- padding調整（sm=4px, md=4px, lg=4px）
-- アイコンサイズ調整（sm=20px, md=32px, lg=48px）
-- テキストのline-heightを修正してテキスト高さを正常化
-- セマンティックトークン名を修正（border-radius）
+## ベンチマーク / Benchmarks
 
-### ♻️ Quiz画面リファクタ
-- pt-type-icon → pt-type-chip に置き換え
-- app-type-badge → pt-type-chip に置き換え
-- 不要なクラス（mb-2）を削除
+- [GitHub Primer Heading](https://primer.style/components/heading) - `as` + `size` の分離
+- [SmartHR Heading](https://smarthr.design/products/components/heading/) - 用途別の種類分け
+- [Adobe Spectrum Heading](https://spectrum.adobe.com/page/heading/) - T-shirt sizing
 
-## 🔗 関連Issue
+## テスト / Testing
 
-Closes #47
+- [x] `npm run lint:css` - StyleLint パス
+- [x] `npm run lint` - ESLint パス
+- [x] `npm test` - Vitest パス（todo テスト追加）
+- [x] `npm run build` - ビルド成功
 
-## 📷 スクリーンショット（該当する場合）
+## スクリーンショット / Screenshots
 
-攻撃側タイプとポケモンタイプ表示がSV風のアイコン・カラーになりました。
+ローカル環境で http://localhost:4200 にアクセスし、「わざのダメージ倍率は？」の見出しにアクセントバーが表示されることを確認してください。
 
-## ✅ チェックリスト
+## 関連 Issue / Related Issues
 
-- [x] ビルドが成功する（`npm run build`）
-- [x] Lintエラーがない（`npm run lint`）
-- [x] テストが通る（`npm run test`）
-- [x] コミットメッセージが規約に従っている（`feat:`, `fix:`, `chore:`など）
-- [x] ブランチ名が規約に従っている（`feature/`, `fix/`, `chore/`など）
-- [x] 必要に応じてドキュメントを更新した
-
-## 📌 補足事項
-
-### 今後の課題（Issueとして別途登録済み）
-- #54: コンポーネント構成ファイル完全性チェック
-- #55: CSSトークン存在確認
-- #56: トークン使用の検証
-- #57: 共通スタイルの保守性
-- #58: コンポーネント作成のガードレール
-- #59: NgDoc導入
-
-## 📝 PRタイトルの命名規則:
-
-`feat: improve pt-chip styling and update to SV/ZA icons`
-
-## 📖 レビュー用語集
-
-| 用語 | 意味 | 説明 |
-|------|------|------|
-| **LGTM** | Looks Good To Me | 良いと思います |
+Quiz画面リファクタリングの一環（`feature/quiz-refactor` 親ブランチへのPR）

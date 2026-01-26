@@ -76,11 +76,7 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
             </div>
           </div>
 
-          <div class="mb-8 pl-1">
-            <p class="text-text-primary font-black text-xl mb-6 flex items-center gap-2">
-              <span class="w-1.5 h-6 bg-primary rounded-full"></span>
-              わざのダメージ倍率は？
-            </p>
+          <div class="mb-8">
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 px-2">
               <button
                 *ngFor="let choice of choices"

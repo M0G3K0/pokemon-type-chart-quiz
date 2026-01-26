@@ -305,6 +305,7 @@
   --pt-button-ghost-bg-disabled: rgba(0, 0, 0, 0); /** 無効時の背景色。透明のまま。 */
   --pt-button-ghost-border-default: rgba(0, 0, 0, 0); /** 枠線色。Ghostは枠なし。 */
   --pt-button-danger-border-default: rgba(0, 0, 0, 0); /** 枠線色。Dangerは枠なし。 */
+  --pt-heading-accent-width: 6px; /** アクセントバーの幅。視覚的なアクセントとしては十分かつ控えめなサイズ。 */
   --pt-color-pokemon-type-normal: var(--pt-color-pokemon-normal-500); /** 【用途】ノーマルタイプのバッジ・アイコン背景。 */
   --pt-color-pokemon-type-fire: var(--pt-color-pokemon-fire-500); /** 【用途】ほのおタイプのバッジ・アイコン背景。 */
   --pt-color-pokemon-type-water: var(--pt-color-pokemon-water-500); /** 【用途】みずタイプのバッジ・アイコン背景。 */
@@ -460,6 +461,10 @@
   --pt-button-danger-bg-hover: var(--pt-color-red-600); /** ホバー時の背景色。defaultより一段暗く。 */
   --pt-button-danger-bg-pressed: var(--pt-color-red-700); /** 押下時の背景色。hoverより一段暗く。 */
   --pt-button-danger-bg-disabled: var(--pt-color-gray-200); /** 無効時の背景色。操作不可を視覚的に示す。 */
+  --pt-heading-accent-height: var(--pt-space-6); /** アクセントバーの高さ。テキストの行高さに合わせた値。 */
+  --pt-heading-accent-radius: var(--pt-radius-full); /** アクセントバーの角丸。pill形状にする。 */
+  --pt-heading-accent-gap: var(--pt-space-2); /** アクセントバーとテキスト間のギャップ。 */
+  --pt-heading-accent-color: var(--pt-color-gray-800); /** アクセントバーの色。プライマリカラー（ボタンと同じ）。 */
   --pt-badge-neutral-bg: var(--pt-color-surface-hovered); /** バッジの背景色。`background-color`に適用。 */
   --pt-badge-neutral-text: var(--pt-color-text-primary); /** バッジのラベル色。`color`に適用。 */
   --pt-badge-win-bg: var(--pt-color-result-win-subtle); /** 正解バッジの背景色。薄いライム。 */
@@ -499,4 +504,5 @@
   --pt-card-padding-md: var(--pt-spacing-content-md); /** paddingプロパティに適用。カードコンポーネント専用。デフォルトの内部余白。 */
   --pt-card-padding-lg: var(--pt-spacing-content-lg); /** paddingプロパティに適用。カードコンポーネント専用。広々とした内部余白。 */
   --pt-card-radius: var(--pt-semantic-border-radius-lg); /** border-radiusプロパティに適用。カードコンポーネント専用。overflow: hiddenとセットで使用。 */
+  --pt-heading-text-color: var(--pt-color-text-primary); /** 見出しテキストの色 */
 }
