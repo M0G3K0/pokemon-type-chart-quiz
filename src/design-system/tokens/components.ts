@@ -126,6 +126,14 @@ export const components = {
       "lg": "1.5rem"
     },
     "radius": "0.75rem"
+  },
+  "heading": {
+    "accent": {
+      "width": "6px",
+      "height": "1.5rem",
+      "radius": "9999px",
+      "gap": "0.5rem"
+    }
   }
 } as const;
 

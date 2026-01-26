@@ -1,0 +1,58 @@
+/**
+ * @what pt-heading component styles
+ * @why セマンティックな見出しに一貫したタイポグラフィを適用
+ */
+
+:host {
+	display: block;
+}
+
+.pt-heading {
+	margin: 0;
+	color: var(--pt-color-text-primary);
+
+	// Size variants - Typography composite tokens を使用
+	&--xl {
+		font-family: var(--pt-typography-heading-xl-font-family);
+		font-size: var(--pt-typography-heading-xl-font-size);
+		font-weight: var(--pt-typography-heading-xl-font-weight);
+		line-height: var(--pt-typography-heading-xl-line-height);
+	}
+
+	&--lg {
+		font-family: var(--pt-typography-heading-lg-font-family);
+		font-size: var(--pt-typography-heading-lg-font-size);
+		font-weight: var(--pt-typography-heading-lg-font-weight);
+		line-height: var(--pt-typography-heading-lg-line-height);
+	}
+
+	&--md {
+		font-family: var(--pt-typography-heading-md-font-family);
+		font-size: var(--pt-typography-heading-md-font-size);
+		font-weight: var(--pt-typography-heading-md-font-weight);
+		line-height: var(--pt-typography-heading-md-line-height);
+	}
+
+	&--sm {
+		font-family: var(--pt-typography-heading-sm-font-family);
+		font-size: var(--pt-typography-heading-sm-font-size);
+		font-weight: var(--pt-typography-heading-sm-font-weight);
+		line-height: var(--pt-typography-heading-sm-line-height);
+	}
+
+	// Accent variant - アクセントバー付き
+	&--accent {
+		display: flex;
+		align-items: center;
+		gap: var(--pt-heading-accent-gap);
+	}
+
+	// Accent bar element
+	&__accent {
+		flex-shrink: 0;
+		width: var(--pt-heading-accent-width);
+		height: var(--pt-heading-accent-height);
+		background-color: var(--pt-color-action-primary-default);
+		border-radius: var(--pt-heading-accent-radius);
+	}
+}
