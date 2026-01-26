@@ -6,6 +6,9 @@ import { CardComponent, CardHeaderComponent, CardContentComponent } from '../../
 import { TypeChipComponent } from '../../ui/pt-type-chip/pt-type-chip';
 import { AvatarComponent } from '../../ui/pt-avatar/pt-avatar';
 import { IconComponent } from '../../ui/pt-icon/pt-icon';
+import { StackComponent } from '../../ui/pt-stack/pt-stack';
+import { SurfaceComponent } from '../../ui/pt-surface/pt-surface';
+import { GridComponent } from '../../ui/pt-grid/pt-grid';
 import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from '../../domain/type-chart';
 
 /** 回答後に次の問題へ進むまでの遅延（ミリ秒） */
@@ -14,89 +17,217 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, TypeChipComponent, AvatarComponent, IconComponent],
+  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, TypeChipComponent, AvatarComponent, IconComponent, StackComponent, SurfaceComponent, GridComponent],
   template: `
-    <div class="max-w-xl mx-auto py-8 px-4">
+    <pt-surface variant="ghost" padding="lg" class="quiz-container">
       <pt-card *ngIf="currentPokemon() as pokemon">
         <pt-card-header>
-          <div class="flex justify-between items-center">
-            <span class="text-text-secondary text-xs font-bold uppercase tracking-widest italic">Phase 0: Battle Trial</span>
-            <span class="text-primary font-black">Lv. 100</span>
-          </div>
+          <pt-stack direction="horizontal" justify="between" align="center">
+            <span class="quiz-phase-label">Phase 0: Battle Trial</span>
+            <span class="quiz-level">Lv. 100</span>
+          </pt-stack>
         </pt-card-header>
-        <pt-card-content class="text-center">
-          
-          <div class="flex flex-col sm:flex-row items-center gap-6 mb-8 justify-center bg-slate-50/50 p-6 rounded-3xl border border-slate-100">
-            <!-- Attacker -->
-            <div class="flex flex-col items-center">
-              <span class="text-[10px] font-black uppercase text-slate-400 mb-2">こうげき側 (タイプ)</span>
-              <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 min-w-32 text-center transform transition-transform hover:scale-105">
-                <pt-type-chip 
-                  [type]="attackType()"
-                  [showIcon]="true"
-                  rounded="full"
-                  size="lg"
-                  class="mx-auto">
-                </pt-type-chip>
-                <span 
-                  class="text-lg font-black"
-                  [style.color]="'var(--color-text-type-' + attackType() + ')'"
-                >
-                  {{ typeMap[attackType()] }}
-                </span>
-              </div>
-            </div>
+        <pt-card-content>
+          <pt-stack direction="vertical" gap="lg" align="stretch">
             
-            <pt-icon src="/icons/arrow-right-double.svg" size="lg" class="text-slate-200"></pt-icon>
+            <!-- 攻撃側・防御側エリア -->
+            <pt-surface variant="subtle" padding="lg" radius="xl" [border]="true">
+              <pt-stack direction="responsive" gap="lg" align="center" justify="center">
+                <!-- Attacker -->
+                <pt-stack direction="vertical" gap="sm" align="center">
+                  <span class="quiz-section-label">こうげき側 (タイプ)</span>
+                  <pt-surface variant="card" padding="lg" radius="xl" [border]="true" class="attacker-card">
+                    <pt-stack direction="vertical" gap="sm" align="center">
+                      <pt-type-chip 
+                        [type]="attackType()"
+                        [showIcon]="true"
+                        rounded="full"
+                        size="lg">
+                      </pt-type-chip>
+                      <span 
+                        class="type-name"
+                        [style.color]="'var(--pt-color-pokemon-text-' + attackType() + ')'"
+                      >
+                        {{ typeMap[attackType()] }}
+                      </span>
+                    </pt-stack>
+                  </pt-surface>
+                </pt-stack>
+                
+                <pt-icon src="/icons/arrow-right-double.svg" size="lg" class="arrow-icon"></pt-icon>
 
-            <!-- Defender -->
-            <div class="flex flex-col items-center">
-               <span class="text-[10px] font-black uppercase text-slate-400 mb-2">ぼうぎょ側 (ポケモン)</span>
-               <div class="flex items-center gap-4 bg-white p-4 pr-8 rounded-3xl shadow-sm border border-slate-100 transform transition-transform hover:scale-105">
-                <!-- TODO: pt-paper導入後に置き換え -->
-                <div class="bg-slate-50 rounded-xl p-1 shadow-inner">
-                  <pt-avatar
-                    [src]="pokemon.imageUrl"
-                    [alt]="pokemon.name"
-                    size="lg"
-                    shape="rounded"
-                    [pixelated]="true">
-                  </pt-avatar>
-                </div>
-                <div class="text-left">
-                  <h2 class="text-xl font-extrabold">{{ pokemon.name }}</h2>
-                  <div class="flex gap-1.5 mt-1">
-                    <pt-type-chip *ngFor="let t of pokemon.types; let i = index" [type]="t" size="sm" rounded="sm">
-                      {{ pokemon.jaTypes[i] }}
-                    </pt-type-chip>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                <!-- Defender -->
+                <pt-stack direction="vertical" gap="sm" align="center">
+                  <span class="quiz-section-label">ぼうぎょ側 (ポケモン)</span>
+                  <pt-surface variant="card" padding="md" radius="xl" [border]="true">
+                    <pt-stack direction="horizontal" gap="md" align="center">
+                      <pt-surface variant="subtle" padding="sm" radius="lg">
+                        <pt-avatar
+                          [src]="pokemon.imageUrl"
+                          [alt]="pokemon.name"
+                          size="lg"
+                          shape="rounded"
+                          [pixelated]="true">
+                        </pt-avatar>
+                      </pt-surface>
+                      <pt-stack direction="vertical" gap="xs" align="start">
+                        <span class="pokemon-name">{{ pokemon.name }}</span>
+                        <pt-stack direction="horizontal" gap="xs">
+                          <pt-type-chip *ngFor="let t of pokemon.types; let i = index" [type]="t" size="sm" rounded="sm">
+                            {{ pokemon.jaTypes[i] }}
+                          </pt-type-chip>
+                        </pt-stack>
+                      </pt-stack>
+                    </pt-stack>
+                  </pt-surface>
+                </pt-stack>
+              </pt-stack>
+            </pt-surface>
 
-          <div class="mb-8">
-            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 px-2">
+            <!-- 選択肢 -->
+            <pt-grid [columns]="2" [smColumns]="3" gap="md">
               <button
                 *ngFor="let choice of choices"
                 (click)="selectChoice(choice)"
                 [class]="getChoiceButtonClass(choice)"
                 [disabled]="isChecked()"
               >
-                <span class="text-3xl font-black">{{ choice }}</span>
-                <span class="text-xs font-bold ml-1 opacity-70">倍</span>
+                <span class="choice-value">{{ choice }}</span>
+                <span class="choice-unit">倍</span>
               </button>
-            </div>
-          </div>
+            </pt-grid>
 
+          </pt-stack>
         </pt-card-content>
       </pt-card>
 
-      <!-- ローディング状態: 現在は瞬時に完了するため空表示（300ms以上かかる場合のみスピナーを検討） -->
-      <div *ngIf="!currentPokemon()" class="h-80"></div>
-    </div>
+      <!-- ローディング状態 -->
+      <pt-surface *ngIf="!currentPokemon()" variant="ghost" class="loading-placeholder"></pt-surface>
+    </pt-surface>
   `,
-  styles: [],
+  styles: [`
+    .quiz-container {
+      max-width: 36rem;
+      margin-inline: auto;
+    }
+    
+    .quiz-phase-label {
+      font-size: var(--pt-font-size-xs);
+      font-weight: var(--pt-font-weight-bold);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-style: italic;
+      color: var(--pt-color-text-secondary);
+    }
+    
+    .quiz-level {
+      font-weight: var(--pt-font-weight-bold);
+      color: var(--pt-color-text-primary);
+    }
+    
+    .quiz-section-label {
+      font-size: 0.625rem; /* 10px - 極小ラベル */
+      font-weight: var(--pt-font-weight-bold);
+      text-transform: uppercase;
+      color: var(--pt-color-text-secondary);
+    }
+    
+    .attacker-card {
+      min-width: 8rem;
+      text-align: center;
+    }
+    
+    .type-name {
+      font-size: var(--pt-font-size-lg);
+      font-weight: var(--pt-font-weight-bold);
+    }
+    
+    .arrow-icon {
+      color: var(--pt-color-text-disabled);
+    }
+    
+    .pokemon-name {
+      font-size: var(--pt-font-size-xl);
+      font-weight: var(--pt-font-weight-bold);
+      color: var(--pt-color-text-primary);
+    }
+    
+    .choice-value {
+      font-size: var(--pt-font-size-3xl);
+      font-weight: var(--pt-font-weight-bold);
+    }
+    
+    .choice-unit {
+      font-size: var(--pt-font-size-xs);
+      font-weight: var(--pt-font-weight-bold);
+      margin-inline-start: var(--pt-space-1);
+      opacity: 0.7;
+    }
+    
+    .loading-placeholder {
+      height: 20rem;
+    }
+    
+    /* 選択肢ボタン */
+    .choice-button {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: center;
+      padding: var(--pt-space-4) var(--pt-space-5);
+      border-radius: var(--pt-radius-xl);
+      border: 2px solid var(--pt-color-border-default);
+      background-color: var(--pt-color-surface-card);
+      color: var(--pt-color-text-primary);
+      cursor: pointer;
+      transition: all var(--pt-duration-normal) var(--pt-easing-default);
+      box-shadow: var(--pt-shadow-sm);
+    }
+    
+    .choice-button:hover:not(:disabled) {
+      border-color: var(--pt-color-gray-400);
+      background-color: var(--pt-color-surface-hovered);
+    }
+    
+    .choice-button:active:not(:disabled) {
+      transform: scale(0.95);
+    }
+    
+    .choice-button--selected {
+      background-color: var(--pt-color-gray-800);
+      border-color: var(--pt-color-gray-800);
+      color: var(--pt-color-text-inverse);
+      transform: scale(1.05);
+      box-shadow: var(--pt-shadow-lg);
+    }
+    
+    .choice-button--correct {
+      background-color: var(--pt-color-result-win-default);
+      border-color: var(--pt-color-result-win-default);
+      color: var(--pt-color-text-inverse);
+    }
+    
+    .choice-button--wrong {
+      background-color: var(--pt-color-result-lose-default);
+      border-color: var(--pt-color-result-lose-default);
+      color: var(--pt-color-text-inverse);
+    }
+    
+    .choice-button--actual {
+      background-color: var(--pt-color-surface-card);
+      border-color: var(--pt-color-result-win-default);
+      color: var(--pt-color-result-win-default);
+      box-shadow: 0 0 0 4px var(--pt-color-result-win-subtle);
+    }
+    
+    .choice-button--disabled {
+      background-color: var(--pt-color-surface-hovered);
+      border-color: var(--pt-color-border-subtle);
+      color: var(--pt-color-text-disabled);
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  `],
 })
 export class QuizComponent implements OnInit {
   currentPokemon = signal<Pokemon | null>(null);
@@ -145,18 +276,23 @@ export class QuizComponent implements OnInit {
 
   getChoiceButtonClass(choice: number) {
     const isSelected = this.selectedChoice() === choice;
-    const base = 'flex flex-row items-baseline justify-center px-4 py-5 rounded-2xl transition-all shadow-sm border-2 cursor-pointer active:scale-95';
+    const classes = ['choice-button'];
 
     if (this.isChecked()) {
       const isActual = this.actualEffectiveness() === choice;
-      if (isSelected && isActual) return `${base} bg-secondary border-secondary text-white shadow-secondary/20`;
-      if (isSelected && !isActual) return `${base} bg-danger border-danger text-white shadow-danger/20`;
-      if (isActual) return `${base} bg-white border-secondary text-secondary ring-4 ring-secondary/10`;
-      return `${base} bg-slate-50 border-slate-100 text-slate-300 opacity-50`;
+      if (isSelected && isActual) {
+        classes.push('choice-button--correct');
+      } else if (isSelected && !isActual) {
+        classes.push('choice-button--wrong');
+      } else if (isActual) {
+        classes.push('choice-button--actual');
+      } else {
+        classes.push('choice-button--disabled');
+      }
+    } else if (isSelected) {
+      classes.push('choice-button--selected');
     }
 
-    return isSelected
-      ? `${base} bg-primary border-primary text-white scale-105 shadow-lg shadow-primary/20`
-      : `${base} bg-white border-slate-100 text-slate-700 hover:border-primary/50 hover:bg-slate-50`;
+    return classes.join(' ');
   }
 }

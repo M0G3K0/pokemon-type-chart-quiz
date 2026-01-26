@@ -305,7 +305,16 @@
   --pt-button-ghost-bg-disabled: rgba(0, 0, 0, 0); /** 無効時の背景色。透明のまま。 */
   --pt-button-ghost-border-default: rgba(0, 0, 0, 0); /** 枠線色。Ghostは枠なし。 */
   --pt-button-danger-border-default: rgba(0, 0, 0, 0); /** 枠線色。Dangerは枠なし。 */
+  --pt-grid-columns-1: 1; /** 1カラム。モバイルでの単一カラム表示。 */
+  --pt-grid-columns-2: 2; /** 2カラム。選択肢表示のデフォルト。 */
+  --pt-grid-columns-3: 3; /** 3カラム。sm以上での選択肢表示。 */
+  --pt-grid-columns-4: 4; /** 4カラム。ギャラリー表示など。 */
+  --pt-grid-columns-6: 6; /** 6カラム。高密度レイアウト。 */
+  --pt-grid-gap-none: 0; /** ギャップなし。 */
   --pt-heading-accent-width: 6px; /** アクセントバーの幅。視覚的なアクセントとしては十分かつ控えめなサイズ。 */
+  --pt-stack-gap-none: 0; /** ギャップなし。要素同士を密着させる場合に使用。 */
+  --pt-surface-variant-ghost-background: rgba(0, 0, 0, 0); /** 透明背景。親要素の背景を透過。 */
+  --pt-surface-padding-none: 0; /** パディングなし。 */
   --pt-color-pokemon-type-normal: var(--pt-color-pokemon-normal-500); /** 【用途】ノーマルタイプのバッジ・アイコン背景。 */
   --pt-color-pokemon-type-fire: var(--pt-color-pokemon-fire-500); /** 【用途】ほのおタイプのバッジ・アイコン背景。 */
   --pt-color-pokemon-type-water: var(--pt-color-pokemon-water-500); /** 【用途】みずタイプのバッジ・アイコン背景。 */
@@ -387,6 +396,7 @@
   --pt-semantic-border-radius-sm: var(--pt-radius-sm); /** 【用途】小さい要素。バッジ、チップ。 */
   --pt-semantic-border-radius-md: var(--pt-radius-md); /** 【用途】標準要素。ボタン、入力欄。 */
   --pt-semantic-border-radius-lg: var(--pt-radius-lg); /** 【用途】大きな要素。カード、パネル。 */
+  --pt-semantic-border-radius-xl: var(--pt-radius-xl); /** 【用途】特大コンテナ。モーダル、大きなサーフェス。 */
   --pt-semantic-border-radius-pill: var(--pt-radius-full); /** 【用途】ピル形状。タグ、ステータスバッジ。 */
   --pt-motion-duration-instant: var(--pt-duration-fast); /** 【用途】マイクロインタラクション。hover時の色変化等。 */
   --pt-motion-duration-quick: var(--pt-duration-normal); /** 【用途】通常のトランジション。ボタン、リンク。 */
@@ -406,6 +416,7 @@
   --pt-spacing-gap-sm: var(--pt-space-2); /** 隣接要素間の距離を表す。タグリスト、小さなボタン群の間隔。 */
   --pt-spacing-gap-md: var(--pt-space-4); /** 隣接要素間の距離を表す。デフォルトのグリッドギャップ。カードリスト。 */
   --pt-spacing-gap-lg: var(--pt-space-6); /** 隣接要素間の距離を表す。セクション内のカード間など広い間隔。 */
+  --pt-spacing-gap-xl: var(--pt-space-8); /** 隣接要素間の距離を表す。セクション間の明確な分割など特大の間隔。 */
   --pt-typography-heading-xl-font-family: var(--pt-font-family-sans);
   --pt-typography-heading-xl-font-size: var(--pt-font-size-4xl);
   --pt-typography-heading-xl-font-weight: var(--pt-font-weight-bold);
@@ -465,6 +476,7 @@
   --pt-heading-accent-radius: var(--pt-radius-full); /** アクセントバーの角丸。pill形状にする。 */
   --pt-heading-accent-gap: var(--pt-space-2); /** アクセントバーとテキスト間のギャップ。 */
   --pt-heading-accent-color: var(--pt-color-gray-800); /** アクセントバーの色。プライマリカラー（ボタンと同じ）。 */
+  --pt-surface-border-width: var(--pt-semantic-border-width-default); /** ボーダー幅。 */
   --pt-badge-neutral-bg: var(--pt-color-surface-hovered); /** バッジの背景色。`background-color`に適用。 */
   --pt-badge-neutral-text: var(--pt-color-text-primary); /** バッジのラベル色。`color`に適用。 */
   --pt-badge-win-bg: var(--pt-color-result-win-subtle); /** 正解バッジの背景色。薄いライム。 */
@@ -504,5 +516,27 @@
   --pt-card-padding-md: var(--pt-spacing-content-md); /** paddingプロパティに適用。カードコンポーネント専用。デフォルトの内部余白。 */
   --pt-card-padding-lg: var(--pt-spacing-content-lg); /** paddingプロパティに適用。カードコンポーネント専用。広々とした内部余白。 */
   --pt-card-radius: var(--pt-semantic-border-radius-lg); /** border-radiusプロパティに適用。カードコンポーネント専用。overflow: hiddenとセットで使用。 */
+  --pt-grid-gap-sm: var(--pt-spacing-gap-sm); /** 小ギャップ。コンパクトなグリッド。 */
+  --pt-grid-gap-md: var(--pt-spacing-gap-md); /** 中ギャップ。標準グリッド。デフォルト値。 */
+  --pt-grid-gap-lg: var(--pt-spacing-gap-lg); /** 大ギャップ。ゆったりしたグリッド。 */
   --pt-heading-text-color: var(--pt-color-text-primary); /** 見出しテキストの色 */
+  --pt-stack-gap-xs: var(--pt-spacing-gap-xs); /** 極小ギャップ。アイコンとラベルなど密接な要素間。 */
+  --pt-stack-gap-sm: var(--pt-spacing-gap-sm); /** 小ギャップ。関連性の高い要素間。 */
+  --pt-stack-gap-md: var(--pt-spacing-gap-md); /** 中ギャップ。標準的な要素間。デフォルト値。 */
+  --pt-stack-gap-lg: var(--pt-spacing-gap-lg); /** 大ギャップ。セクション内の区切り。 */
+  --pt-stack-gap-xl: var(--pt-spacing-gap-xl); /** 特大ギャップ。セクション間の明確な分割。 */
+  --pt-surface-variant-default-background: var(--pt-color-surface-card); /** デフォルト背景。白色ベース。 */
+  --pt-surface-variant-subtle-background: var(--pt-color-surface-page); /** 控えめな背景。セクション区分けに使用。 */
+  --pt-surface-variant-card-background: var(--pt-color-surface-card); /** カード背景。elevationと併用。 */
+  --pt-surface-variant-card-elevation: var(--pt-elevation-raised); /** カードの影。軽く浮いた状態。 */
+  --pt-surface-padding-sm: var(--pt-spacing-content-sm); /** 小パディング。コンパクトなコンテナ。 */
+  --pt-surface-padding-md: var(--pt-spacing-content-md); /** 中パディング。標準的なコンテナ。デフォルト値。 */
+  --pt-surface-padding-lg: var(--pt-spacing-content-lg); /** 大パディング。ゆったりしたコンテナ。 */
+  --pt-surface-radius-none: var(--pt-semantic-border-radius-none); /** 角丸なし。 */
+  --pt-surface-radius-sm: var(--pt-semantic-border-radius-sm); /** 小角丸。 */
+  --pt-surface-radius-md: var(--pt-semantic-border-radius-md); /** 中角丸。デフォルト値。 */
+  --pt-surface-radius-lg: var(--pt-semantic-border-radius-lg); /** 大角丸。 */
+  --pt-surface-radius-xl: var(--pt-semantic-border-radius-xl); /** 特大角丸。大きなコンテナやモーダル。 */
+  --pt-surface-radius-full: var(--pt-semantic-border-radius-pill); /** 完全円形/ピル形状。 */
+  --pt-surface-border-color: var(--pt-color-border-default); /** ボーダー色。 */
 }

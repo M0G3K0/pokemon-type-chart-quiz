@@ -54,6 +54,7 @@ export const effects = {
       "sm": "0.25rem",
       "md": "0.5rem",
       "lg": "0.75rem",
+      "xl": "1rem",
       "pill": "9999px"
     },
     "width": {

@@ -1,0 +1,84 @@
+/**
+ * @what Stack component styles - Flexbox layout primitive
+ * @why Provide consistent spacing and alignment via Design Tokens
+ */
+
+.pt-stack {
+	display: flex;
+
+	// Direction variants
+	&--vertical {
+		flex-direction: column;
+	}
+
+	&--horizontal {
+		flex-direction: row;
+	}
+
+	&--responsive {
+		flex-direction: column;
+
+		@media (width >=40rem) {
+			flex-direction: row;
+		}
+	}
+
+	// Gap variants
+	&--gap-none {
+		gap: var(--pt-stack-gap-none);
+	}
+
+	&--gap-xs {
+		gap: var(--pt-stack-gap-xs);
+	}
+
+	&--gap-sm {
+		gap: var(--pt-stack-gap-sm);
+	}
+
+	&--gap-md {
+		gap: var(--pt-stack-gap-md);
+	}
+
+	&--gap-lg {
+		gap: var(--pt-stack-gap-lg);
+	}
+
+	&--gap-xl {
+		gap: var(--pt-stack-gap-xl);
+	}
+
+	// Align variants (cross axis)
+	&--align-start {
+		align-items: flex-start;
+	}
+
+	&--align-center {
+		align-items: center;
+	}
+
+	&--align-end {
+		align-items: flex-end;
+	}
+
+	&--align-stretch {
+		align-items: stretch;
+	}
+
+	// Justify variants (main axis)
+	&--justify-start {
+		justify-content: flex-start;
+	}
+
+	&--justify-center {
+		justify-content: center;
+	}
+
+	&--justify-end {
+		justify-content: flex-end;
+	}
+
+	&--justify-between {
+		justify-content: space-between;
+	}
+}
