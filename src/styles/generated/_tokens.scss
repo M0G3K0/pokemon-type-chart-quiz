@@ -303,7 +303,16 @@ $pt-button-ghost-bg-default: rgba(0, 0, 0, 0); // 背景色。完全透明。
 $pt-button-ghost-bg-disabled: rgba(0, 0, 0, 0); // 無効時の背景色。透明のまま。
 $pt-button-ghost-border-default: rgba(0, 0, 0, 0); // 枠線色。Ghostは枠なし。
 $pt-button-danger-border-default: rgba(0, 0, 0, 0); // 枠線色。Dangerは枠なし。
+$pt-grid-columns-1: 1; // 1カラム。モバイルでの単一カラム表示。
+$pt-grid-columns-2: 2; // 2カラム。選択肢表示のデフォルト。
+$pt-grid-columns-3: 3; // 3カラム。sm以上での選択肢表示。
+$pt-grid-columns-4: 4; // 4カラム。ギャラリー表示など。
+$pt-grid-columns-6: 6; // 6カラム。高密度レイアウト。
+$pt-grid-gap-none: 0; // ギャップなし。
 $pt-heading-accent-width: 6px; // アクセントバーの幅。視覚的なアクセントとしては十分かつ控えめなサイズ。
+$pt-stack-gap-none: 0; // ギャップなし。要素同士を密着させる場合に使用。
+$pt-surface-variant-ghost-background: rgba(0, 0, 0, 0); // 透明背景。親要素の背景を透過。
+$pt-surface-padding-none: 0; // パディングなし。
 $pt-color-pokemon-type-normal: $pt-color-pokemon-normal-500; // 【用途】ノーマルタイプのバッジ・アイコン背景。
 $pt-color-pokemon-type-fire: $pt-color-pokemon-fire-500; // 【用途】ほのおタイプのバッジ・アイコン背景。
 $pt-color-pokemon-type-water: $pt-color-pokemon-water-500; // 【用途】みずタイプのバッジ・アイコン背景。
@@ -385,6 +394,7 @@ $pt-semantic-border-radius-none: $pt-radius-none; // 【用途】角丸なし。
 $pt-semantic-border-radius-sm: $pt-radius-sm; // 【用途】小さい要素。バッジ、チップ。
 $pt-semantic-border-radius-md: $pt-radius-md; // 【用途】標準要素。ボタン、入力欄。
 $pt-semantic-border-radius-lg: $pt-radius-lg; // 【用途】大きな要素。カード、パネル。
+$pt-semantic-border-radius-xl: $pt-radius-xl; // 【用途】特大コンテナ。モーダル、大きなサーフェス。
 $pt-semantic-border-radius-pill: $pt-radius-full; // 【用途】ピル形状。タグ、ステータスバッジ。
 $pt-motion-duration-instant: $pt-duration-fast; // 【用途】マイクロインタラクション。hover時の色変化等。
 $pt-motion-duration-quick: $pt-duration-normal; // 【用途】通常のトランジション。ボタン、リンク。
@@ -404,6 +414,7 @@ $pt-spacing-gap-xs: $pt-space-1; // 隣接要素間の距離を表す。イン�
 $pt-spacing-gap-sm: $pt-space-2; // 隣接要素間の距離を表す。タグリスト、小さなボタン群の間隔。
 $pt-spacing-gap-md: $pt-space-4; // 隣接要素間の距離を表す。デフォルトのグリッドギャップ。カードリスト。
 $pt-spacing-gap-lg: $pt-space-6; // 隣接要素間の距離を表す。セクション内のカード間など広い間隔。
+$pt-spacing-gap-xl: $pt-space-8; // 隣接要素間の距離を表す。セクション間の明確な分割など特大の間隔。
 $pt-typography-heading-xl-font-family: $pt-font-family-sans;
 $pt-typography-heading-xl-font-size: $pt-font-size-4xl;
 $pt-typography-heading-xl-font-weight: $pt-font-weight-bold;
@@ -463,6 +474,7 @@ $pt-heading-accent-height: $pt-space-6; // アクセントバーの高さ。テ�
 $pt-heading-accent-radius: $pt-radius-full; // アクセントバーの角丸。pill形状にする。
 $pt-heading-accent-gap: $pt-space-2; // アクセントバーとテキスト間のギャップ。
 $pt-heading-accent-color: $pt-color-gray-800; // アクセントバーの色。プライマリカラー（ボタンと同じ）。
+$pt-surface-border-width: $pt-semantic-border-width-default; // ボーダー幅。
 $pt-badge-neutral-bg: $pt-color-surface-hovered; // バッジの背景色。`background-color`に適用。
 $pt-badge-neutral-text: $pt-color-text-primary; // バッジのラベル色。`color`に適用。
 $pt-badge-win-bg: $pt-color-result-win-subtle; // 正解バッジの背景色。薄いライム。
@@ -502,4 +514,26 @@ $pt-card-padding-sm: $pt-spacing-content-sm; // paddingプロパティに適用�
 $pt-card-padding-md: $pt-spacing-content-md; // paddingプロパティに適用。カードコンポーネント専用。デフォルトの内部余白。
 $pt-card-padding-lg: $pt-spacing-content-lg; // paddingプロパティに適用。カードコンポーネント専用。広々とした内部余白。
 $pt-card-radius: $pt-semantic-border-radius-lg; // border-radiusプロパティに適用。カードコンポーネント専用。overflow: hiddenとセットで使用。
+$pt-grid-gap-sm: $pt-spacing-gap-sm; // 小ギャップ。コンパクトなグリッド。
+$pt-grid-gap-md: $pt-spacing-gap-md; // 中ギャップ。標準グリッド。デフォルト値。
+$pt-grid-gap-lg: $pt-spacing-gap-lg; // 大ギャップ。ゆったりしたグリッド。
 $pt-heading-text-color: $pt-color-text-primary; // 見出しテキストの色
+$pt-stack-gap-xs: $pt-spacing-gap-xs; // 極小ギャップ。アイコンとラベルなど密接な要素間。
+$pt-stack-gap-sm: $pt-spacing-gap-sm; // 小ギャップ。関連性の高い要素間。
+$pt-stack-gap-md: $pt-spacing-gap-md; // 中ギャップ。標準的な要素間。デフォルト値。
+$pt-stack-gap-lg: $pt-spacing-gap-lg; // 大ギャップ。セクション内の区切り。
+$pt-stack-gap-xl: $pt-spacing-gap-xl; // 特大ギャップ。セクション間の明確な分割。
+$pt-surface-variant-default-background: $pt-color-surface-card; // デフォルト背景。白色ベース。
+$pt-surface-variant-subtle-background: $pt-color-surface-page; // 控えめな背景。セクション区分けに使用。
+$pt-surface-variant-card-background: $pt-color-surface-card; // カード背景。elevationと併用。
+$pt-surface-variant-card-elevation: $pt-elevation-raised; // カードの影。軽く浮いた状態。
+$pt-surface-padding-sm: $pt-spacing-content-sm; // 小パディング。コンパクトなコンテナ。
+$pt-surface-padding-md: $pt-spacing-content-md; // 中パディング。標準的なコンテナ。デフォルト値。
+$pt-surface-padding-lg: $pt-spacing-content-lg; // 大パディング。ゆったりしたコンテナ。
+$pt-surface-radius-none: $pt-semantic-border-radius-none; // 角丸なし。
+$pt-surface-radius-sm: $pt-semantic-border-radius-sm; // 小角丸。
+$pt-surface-radius-md: $pt-semantic-border-radius-md; // 中角丸。デフォルト値。
+$pt-surface-radius-lg: $pt-semantic-border-radius-lg; // 大角丸。
+$pt-surface-radius-xl: $pt-semantic-border-radius-xl; // 特大角丸。大きなコンテナやモーダル。
+$pt-surface-radius-full: $pt-semantic-border-radius-pill; // 完全円形/ピル形状。
+$pt-surface-border-color: $pt-color-border-default; // ボーダー色。

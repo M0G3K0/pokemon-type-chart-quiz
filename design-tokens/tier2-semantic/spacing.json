@@ -63,6 +63,11 @@
 				"value": "{space.6}",
 				"type": "spacing",
 				"$description": "隣接要素間の距離を表す。セクション内のカード間など広い間隔。"
+			},
+			"xl": {
+				"value": "{space.8}",
+				"type": "spacing",
+				"$description": "隣接要素間の距離を表す。セクション間の明確な分割など特大の間隔。"
 			}
 		}
 	}

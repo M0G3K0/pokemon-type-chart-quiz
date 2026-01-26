@@ -1,0 +1,76 @@
+/**
+ * @what Surface component styles - Container styling primitive
+ * @why Provide consistent container appearance via Design Tokens
+ */
+
+.pt-surface {
+	display: block;
+
+	// Variant: default (white background)
+	&--default {
+		background-color: var(--pt-color-surface);
+	}
+
+	// Variant: subtle (light gray)
+	&--subtle {
+		background-color: var(--pt-color-surface-subtle, rgb(248 250 252 / 50%));
+	}
+
+	// Variant: card (white with shadow)
+	&--card {
+		background-color: var(--pt-color-surface);
+		box-shadow: var(--pt-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 5%));
+	}
+
+	// Variant: ghost (transparent)
+	&--ghost {
+		background-color: transparent;
+	}
+
+	// Padding variants
+	&--padding-none {
+		padding: var(--pt-surface-padding-none);
+	}
+
+	&--padding-sm {
+		padding: var(--pt-surface-padding-sm);
+	}
+
+	&--padding-md {
+		padding: var(--pt-surface-padding-md);
+	}
+
+	&--padding-lg {
+		padding: var(--pt-surface-padding-lg);
+	}
+
+	// Radius variants
+	&--radius-none {
+		border-radius: var(--pt-surface-radius-none);
+	}
+
+	&--radius-sm {
+		border-radius: var(--pt-surface-radius-sm);
+	}
+
+	&--radius-md {
+		border-radius: var(--pt-surface-radius-md);
+	}
+
+	&--radius-lg {
+		border-radius: var(--pt-surface-radius-lg);
+	}
+
+	&--radius-xl {
+		border-radius: var(--pt-surface-radius-xl);
+	}
+
+	&--radius-full {
+		border-radius: var(--pt-surface-radius-full);
+	}
+
+	// Border
+	&--border {
+		border: var(--pt-surface-border-width) solid var(--pt-surface-border-color);
+	}
+}

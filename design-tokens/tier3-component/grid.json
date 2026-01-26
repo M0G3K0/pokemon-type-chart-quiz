@@ -1,0 +1,57 @@
+{
+	"$description": "Tier 3: Grid Component Tokens. CSS Grid layout primitive for consistent column-based layouts.",
+	"grid": {
+		"$description": "Grid component for arranging elements in responsive column layouts.",
+		"columns": {
+			"$description": "Available column counts. Represents layout density options.",
+			"1": {
+				"value": 1,
+				"type": "number",
+				"$description": "1カラム。モバイルでの単一カラム表示。"
+			},
+			"2": {
+				"value": 2,
+				"type": "number",
+				"$description": "2カラム。選択肢表示のデフォルト。"
+			},
+			"3": {
+				"value": 3,
+				"type": "number",
+				"$description": "3カラム。sm以上での選択肢表示。"
+			},
+			"4": {
+				"value": 4,
+				"type": "number",
+				"$description": "4カラム。ギャラリー表示など。"
+			},
+			"6": {
+				"value": 6,
+				"type": "number",
+				"$description": "6カラム。高密度レイアウト。"
+			}
+		},
+		"gap": {
+			"$description": "Grid items間のギャップサイズ。spacing.gap tokens を参照。",
+			"none": {
+				"value": "0",
+				"type": "spacing",
+				"$description": "ギャップなし。"
+			},
+			"sm": {
+				"value": "{spacing.gap.sm}",
+				"type": "spacing",
+				"$description": "小ギャップ。コンパクトなグリッド。"
+			},
+			"md": {
+				"value": "{spacing.gap.md}",
+				"type": "spacing",
+				"$description": "中ギャップ。標準グリッド。デフォルト値。"
+			},
+			"lg": {
+				"value": "{spacing.gap.lg}",
+				"type": "spacing",
+				"$description": "大ギャップ。ゆったりしたグリッド。"
+			}
+		}
+	}
+}

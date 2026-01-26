@@ -1,0 +1,39 @@
+{
+	"$description": "Tier 3: Stack Component Tokens. Flexbox-based layout primitive for consistent spacing and alignment.",
+	"stack": {
+		"$description": "Stack component for arranging elements vertically or horizontally with consistent spacing.",
+		"gap": {
+			"$description": "Gap sizes between stack items. References semantic spacing.gap tokens.",
+			"none": {
+				"value": "0",
+				"type": "spacing",
+				"$description": "ギャップなし。要素同士を密着させる場合に使用。"
+			},
+			"xs": {
+				"value": "{spacing.gap.xs}",
+				"type": "spacing",
+				"$description": "極小ギャップ。アイコンとラベルなど密接な要素間。"
+			},
+			"sm": {
+				"value": "{spacing.gap.sm}",
+				"type": "spacing",
+				"$description": "小ギャップ。関連性の高い要素間。"
+			},
+			"md": {
+				"value": "{spacing.gap.md}",
+				"type": "spacing",
+				"$description": "中ギャップ。標準的な要素間。デフォルト値。"
+			},
+			"lg": {
+				"value": "{spacing.gap.lg}",
+				"type": "spacing",
+				"$description": "大ギャップ。セクション内の区切り。"
+			},
+			"xl": {
+				"value": "{spacing.gap.xl}",
+				"type": "spacing",
+				"$description": "特大ギャップ。セクション間の明確な分割。"
+			}
+		}
+	}
+}

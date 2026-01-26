@@ -1,0 +1,110 @@
+{
+	"$description": "Tier 3: Surface Component Tokens. Container styling primitive for backgrounds, borders, and radii.",
+	"surface": {
+		"$description": "Surface component for consistent container styling. Provides visual containment for content.",
+		"variant": {
+			"$description": "Background variants. default/subtle/card/ghost correspond to different visual hierarchy levels.",
+			"default": {
+				"background": {
+					"value": "{color.surface.card}",
+					"type": "color",
+					"$description": "デフォルト背景。白色ベース。"
+				}
+			},
+			"subtle": {
+				"background": {
+					"value": "{color.surface.page}",
+					"type": "color",
+					"$description": "控えめな背景。セクション区分けに使用。"
+				}
+			},
+			"card": {
+				"background": {
+					"value": "{color.surface.card}",
+					"type": "color",
+					"$description": "カード背景。elevationと併用。"
+				},
+				"elevation": {
+					"value": "{elevation.raised}",
+					"type": "boxShadow",
+					"$description": "カードの影。軽く浮いた状態。"
+				}
+			},
+			"ghost": {
+				"background": {
+					"value": "transparent",
+					"type": "color",
+					"$description": "透明背景。親要素の背景を透過。"
+				}
+			}
+		},
+		"padding": {
+			"$description": "内側の余白サイズ。spacing.content tokens を参照。",
+			"none": {
+				"value": "0",
+				"type": "spacing",
+				"$description": "パディングなし。"
+			},
+			"sm": {
+				"value": "{spacing.content.sm}",
+				"type": "spacing",
+				"$description": "小パディング。コンパクトなコンテナ。"
+			},
+			"md": {
+				"value": "{spacing.content.md}",
+				"type": "spacing",
+				"$description": "中パディング。標準的なコンテナ。デフォルト値。"
+			},
+			"lg": {
+				"value": "{spacing.content.lg}",
+				"type": "spacing",
+				"$description": "大パディング。ゆったりしたコンテナ。"
+			}
+		},
+		"radius": {
+			"$description": "角丸サイズ。semantic-border.radius tokens を参照。",
+			"none": {
+				"value": "{semantic-border.radius.none}",
+				"type": "borderRadius",
+				"$description": "角丸なし。"
+			},
+			"sm": {
+				"value": "{semantic-border.radius.sm}",
+				"type": "borderRadius",
+				"$description": "小角丸。"
+			},
+			"md": {
+				"value": "{semantic-border.radius.md}",
+				"type": "borderRadius",
+				"$description": "中角丸。デフォルト値。"
+			},
+			"lg": {
+				"value": "{semantic-border.radius.lg}",
+				"type": "borderRadius",
+				"$description": "大角丸。"
+			},
+			"xl": {
+				"value": "{semantic-border.radius.xl}",
+				"type": "borderRadius",
+				"$description": "特大角丸。大きなコンテナやモーダル。"
+			},
+			"full": {
+				"value": "{semantic-border.radius.pill}",
+				"type": "borderRadius",
+				"$description": "完全円形/ピル形状。"
+			}
+		},
+		"border": {
+			"color": {
+				"value": "{color.border.default}",
+				"type": "color",
+				"$description": "ボーダー色。"
+			},
+			"width": {
+				"value": "{semantic-border.width.default}",
+				"type": "borderWidth",
+				"$description": "ボーダー幅。"
+			}
+		}
+	}
+}
