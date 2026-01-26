@@ -2,16 +2,19 @@ import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PokemonService } from '../../domain/pokemon.service';
 import { Pokemon } from '../../domain/pokemon.schema';
-import { CardComponent, CardHeaderComponent, CardContentComponent, CardFooterComponent } from '../../ui/pt-card';
-import { ButtonComponent } from '../../ui/pt-button/pt-button';
+import { CardComponent, CardHeaderComponent, CardContentComponent } from '../../ui/pt-card';
 import { TypeChipComponent } from '../../ui/pt-type-chip/pt-type-chip';
 import { AvatarComponent } from '../../ui/pt-avatar/pt-avatar';
+import { IconComponent } from '../../ui/pt-icon/pt-icon';
 import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from '../../domain/type-chart';
+
+/** 回答後に次の問題へ進むまでの遅延（ミリ秒） */
+const AUTO_ADVANCE_DELAY_MS = 1000;
 
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, CardFooterComponent, ButtonComponent, TypeChipComponent, AvatarComponent],
+  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, TypeChipComponent, AvatarComponent, IconComponent],
   template: `
     <div class="max-w-xl mx-auto py-8 px-4">
       <pt-card *ngIf="currentPokemon() as pokemon">
@@ -44,11 +47,7 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
               </div>
             </div>
             
-            <div class="text-slate-200">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-              </svg>
-            </div>
+            <pt-icon src="/icons/arrow-right-double.svg" size="lg" class="text-slate-200"></pt-icon>
 
             <!-- Defender -->
             <div class="flex flex-col items-center">
@@ -90,38 +89,11 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
             </div>
           </div>
 
-          <!-- Result Feedback -->
-          <div *ngIf="isChecked()" class="mb-8 p-6 rounded-3xl animate-in fade-in zoom-in duration-300 border-2" 
-               [ngClass]="isCorrect() ? 'bg-secondary/5 border-secondary/20' : 'bg-danger/5 border-danger/20'">
-            <div class="flex items-center justify-center gap-3 mb-1">
-              <span class="text-4xl" [innerHtml]="isCorrect() ? '⭕' : '❌'"></span>
-              <p class="text-3xl font-black" [ngClass]="isCorrect() ? 'text-secondary' : 'text-danger'">
-                {{ isCorrect() ? '正解！' : '残念...' }}
-              </p>
-            </div>
-            <p class="text-sm font-bold text-slate-500">
-               {{ attackTypeMap[attackType()] }}わざ は {{ pokemon.name }} に対して 
-               <span class="text-text-primary underline decoration-primary decoration-2 underline-offset-4">{{ actualEffectiveness() }}倍</span> です
-            </p>
-          </div>
-
         </pt-card-content>
-        <pt-card-footer *ngIf="isChecked()">
-          <pt-button 
-            variant="primary" 
-            (buttonClick)="next()"
-            class="w-full"
-          >
-            つぎの問題へ
-          </pt-button>
-        </pt-card-footer>
       </pt-card>
 
-      <!-- Skeleton / Loading -->
-      <!-- TODO: 将来的に pt-skeleton に置き換え（現在はローディング時間が短いため不要）-->
-      <div *ngIf="!currentPokemon()" class="flex flex-col justify-center items-center h-80">
-        <div class="animate-spin rounded-full h-10 w-10 border-4 border-primary border-t-transparent mb-4"></div>
-      </div>
+      <!-- ローディング状態: 現在は瞬時に完了するため空表示（300ms以上かかる場合のみスピナーを検討） -->
+      <div *ngIf="!currentPokemon()" class="h-80"></div>
     </div>
   `,
   styles: [],
@@ -164,6 +136,11 @@ export class QuizComponent implements OnInit {
     this.selectedChoice.set(choice);
     this.isCorrect.set(choice === this.actualEffectiveness());
     this.isChecked.set(true);
+
+    // 自動進行: 1秒後に次の問題へ
+    setTimeout(() => {
+      this.next();
+    }, AUTO_ADVANCE_DELAY_MS);
   }
 
   getChoiceButtonClass(choice: number) {
