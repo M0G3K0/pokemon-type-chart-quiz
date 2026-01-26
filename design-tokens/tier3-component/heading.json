@@ -2,6 +2,13 @@
 	"$description": "Tier 3: Heading Component Tokens. pt-heading コンポーネント専用トークン。",
 	"heading": {
 		"$description": "Heading typography コンポーネント。セマンティックな見出し要素を出力し、セクションの階層を定義する。",
+		"text": {
+			"color": {
+				"value": "{color.text.primary}",
+				"type": "color",
+				"$description": "見出しテキストの色"
+			}
+		},
 		"accent": {
 			"width": {
 				"value": "6px",
@@ -22,6 +29,11 @@
 				"value": "{space.2}",
 				"type": "spacing",
 				"$description": "アクセントバーとテキスト間のギャップ。"
+			},
+			"color": {
+				"value": "{color.gray.800}",
+				"type": "color",
+				"$description": "アクセントバーの色。プライマリカラー（ボタンと同じ）。"
 			}
 		}
 	}

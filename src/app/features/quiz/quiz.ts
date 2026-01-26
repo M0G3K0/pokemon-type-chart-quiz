@@ -6,13 +6,12 @@ import { CardComponent, CardHeaderComponent, CardContentComponent, CardFooterCom
 import { ButtonComponent } from '../../ui/pt-button/pt-button';
 import { TypeChipComponent } from '../../ui/pt-type-chip/pt-type-chip';
 import { AvatarComponent } from '../../ui/pt-avatar/pt-avatar';
-import { HeadingComponent } from '../../ui/pt-heading/pt-heading';
 import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from '../../domain/type-chart';
 
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, CardFooterComponent, ButtonComponent, TypeChipComponent, AvatarComponent, HeadingComponent],
+  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, CardFooterComponent, ButtonComponent, TypeChipComponent, AvatarComponent],
   template: `
     <div class="max-w-xl mx-auto py-8 px-4">
       <pt-card *ngIf="currentPokemon() as pokemon">
@@ -77,10 +76,7 @@ import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from 
             </div>
           </div>
 
-          <div class="mb-8 pl-1">
-            <pt-heading [level]="3" [accent]="true" class="mb-6">
-              わざのダメージ倍率は？
-            </pt-heading>
+          <div class="mb-8">
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 px-2">
               <button
                 *ngFor="let choice of choices"

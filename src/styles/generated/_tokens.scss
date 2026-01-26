@@ -462,6 +462,7 @@ $pt-button-danger-bg-disabled: $pt-color-gray-200; // 無効時の背景色。�
 $pt-heading-accent-height: $pt-space-6; // アクセントバーの高さ。テキストの行高さに合わせた値。
 $pt-heading-accent-radius: $pt-radius-full; // アクセントバーの角丸。pill形状にする。
 $pt-heading-accent-gap: $pt-space-2; // アクセントバーとテキスト間のギャップ。
+$pt-heading-accent-color: $pt-color-gray-800; // アクセントバーの色。プライマリカラー（ボタンと同じ）。
 $pt-badge-neutral-bg: $pt-color-surface-hovered; // バッジの背景色。`background-color`に適用。
 $pt-badge-neutral-text: $pt-color-text-primary; // バッジのラベル色。`color`に適用。
 $pt-badge-win-bg: $pt-color-result-win-subtle; // 正解バッジの背景色。薄いライム。
@@ -501,3 +502,4 @@ $pt-card-padding-sm: $pt-spacing-content-sm; // paddingプロパティに適用�
 $pt-card-padding-md: $pt-spacing-content-md; // paddingプロパティに適用。カードコンポーネント専用。デフォルトの内部余白。
 $pt-card-padding-lg: $pt-spacing-content-lg; // paddingプロパティに適用。カードコンポーネント専用。広々とした内部余白。
 $pt-card-radius: $pt-semantic-border-radius-lg; // border-radiusプロパティに適用。カードコンポーネント専用。overflow: hiddenとセットで使用。
+$pt-heading-text-color: $pt-color-text-primary; // 見出しテキストの色

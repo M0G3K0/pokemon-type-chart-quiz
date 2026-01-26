@@ -1,54 +1,41 @@
+> ⚠️ **タイトルは英語で書いてください** (`feat: xxx`, `fix: xxx`, `chore: xxx` 等)
+
 ## 💡 概要
 
-NgDocを導入し、全コンポーネントの全バリエーションを一覧表示できるドキュメントサイトを構築し、品質担保に役立てる。
+Angular の非推奨ディレクティブ構文（`*ngIf`, `*ngFor` 等）を新しい制御フロー構文（`@if`, `@for` 等）に移行し、ガードレールで強制する。
+
+**背景**:
+- Angular 17+ で新しい制御フロー構文 (`@if`, `@for`, `@switch`) が導入された
+- 従来の `*ngIf`, `*ngFor`, `*ngSwitch` は非推奨（将来的に削除される可能性）
+- 新構文はテンプレートのパフォーマンスと可読性が向上
 
 ## 📝 詳細
 
-### 背景
+### Phase 1: 調査
+非推奨ディレクティブの一覧と新構文への対応表を作成:
 
-現状、コンポーネントの見た目を確認するにはローカル環境で実際に使う必要がある。以下の問題がある:
-- 全バリエーションを一度に確認できない
-- デザイナーやPMがレビューしにくい
-- リグレッションに気づきにくい
+| 非推奨 | 新構文 | 備考 |
+|--------|--------|------|
+| `*ngIf` | `@if` | `else` も `@else` に |
+| `*ngFor` | `@for` | `trackBy` → `track` |
+| `*ngSwitch` | `@switch` | |
+| `[ngClass]` | `[class]` / `@if` | 条件付きクラスの場合 |
 
-### 実装イメージ
+### Phase 2: ガードレール作成
+ESLint ルールを追加して、非推奨構文の使用を検出:
+- `@angular-eslint/template/prefer-control-flow` (Angular ESLint v17+)
 
-1. **NgDoc導入**
-   - `npm install @ng-doc/...`
-   - 設定ファイル作成
-
-2. **各コンポーネントのページ作成**
-   - Props一覧
-   - 全サイズバリエーション
-   - 全カラーバリエーション
-   - インタラクティブプレイグラウンド
-
-3. **CI/CDでのデプロイ**
-   - GitHub Pagesまたは別のホスティング
-   - PRごとにプレビュー環境
-
-### 表示したいコンポーネント
-
-- `pt-icon`
-- `pt-chip`
-- `pt-type-chip`
-- `pt-button`
-- `pt-card`
-- その他全て
-
-### 優先度
-
-高（全コンポーネント作成後に優先的に実施）
+### Phase 3: リファクタリング
+既存コードを新構文に移行。
 
 ## ✅ やることリスト
-
-- [ ] NgDocの調査・選定
-- [ ] 導入・初期設定
-- [ ] 1つのコンポーネントで試作
-- [ ] 全コンポーネントをドキュメント化
-- [ ] デプロイ設定
+- [ ] Angular 17+ 制御フロー構文の調査と対応表作成
+- [ ] `/guard` でガードレールを作成（ESLint ルール追加）
+- [ ] CI で新構文を強制（lint エラー化）
+- [ ] 既存コードのリファクタリング（`*ngIf` → `@if` 等）
+- [ ] ドキュメント更新
 
 ## 📷 参考資料（任意）
 
-- [NgDoc](https://ng-doc.com/)
-- [Storybook for Angular](https://storybook.js.org/docs/angular/get-started/introduction)
+- [Angular Built-in Control Flow](https://angular.dev/guide/templates/control-flow)
+- [Angular ESLint prefer-control-flow](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/prefer-control-flow.md)

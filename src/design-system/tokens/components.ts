@@ -128,11 +128,15 @@ export const components = {
     "radius": "0.75rem"
   },
   "heading": {
+    "text": {
+      "color": "#1f2937"
+    },
     "accent": {
       "width": "6px",
       "height": "1.5rem",
       "radius": "9999px",
-      "gap": "0.5rem"
+      "gap": "0.5rem",
+      "color": "#1f2937"
     }
   }
 } as const;
