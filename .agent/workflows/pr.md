@@ -28,9 +28,17 @@ git push origin <branch-name>
 
 `write_to_file` ツールで `pr-body.md` を作成します。
 
-**⚠️ テンプレートは `.github/pull_request_template.md` を参照してください。**
+**⚠️ 重要: テンプレートを完全にコピーすること**
 
-全てのセクションが必須です。省略するとCIでエラーになります。
+1. まず `.github/pull_request_template.md` を `view_file` で読む
+2. **全てのセクションをコピー**（省略厳禁）
+3. 各セクションの内容を埋める
+
+**🚨 特に注意: 以下のセクションも必須**
+- `## 📝 PRタイトルの命名規則:` ← 参考情報に見えるが必須
+- `## 📖 レビュー用語集` ← 参考情報に見えるが必須
+
+省略すると `npm run pr:validate` でエラーになります。
 
 ---
 
