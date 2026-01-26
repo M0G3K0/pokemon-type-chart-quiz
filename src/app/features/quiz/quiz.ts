@@ -9,6 +9,7 @@ import { IconComponent } from '../../ui/pt-icon/pt-icon';
 import { StackComponent } from '../../ui/pt-stack/pt-stack';
 import { SurfaceComponent } from '../../ui/pt-surface/pt-surface';
 import { GridComponent } from '../../ui/pt-grid/pt-grid';
+import { TextComponent } from '../../ui/pt-text/pt-text';
 import { POKEMON_TYPES, POKEMON_TYPES_MAP, getEffectiveness, PokemonType } from '../../domain/type-chart';
 
 /** 回答後に次の問題へ進むまでの遅延（ミリ秒） */
@@ -17,14 +18,14 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, TypeChipComponent, AvatarComponent, IconComponent, StackComponent, SurfaceComponent, GridComponent],
+  imports: [CommonModule, CardComponent, CardHeaderComponent, CardContentComponent, TypeChipComponent, AvatarComponent, IconComponent, StackComponent, SurfaceComponent, GridComponent, TextComponent],
   template: `
     <pt-surface variant="ghost" padding="lg" class="quiz-container">
       <pt-card *ngIf="currentPokemon() as pokemon">
         <pt-card-header>
           <pt-stack direction="horizontal" justify="between" align="center">
-            <span class="quiz-phase-label">Phase 0: Battle Trial</span>
-            <span class="quiz-level">Lv. 100</span>
+            <pt-text variant="label-xs" color="secondary" transform="uppercase" [italic]="true">Phase 0: Battle Trial</pt-text>
+            <pt-text variant="label-md" weight="bold">Lv. 100</pt-text>
           </pt-stack>
         </pt-card-header>
         <pt-card-content>
@@ -35,7 +36,7 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
               <pt-stack direction="responsive" gap="lg" align="center" justify="center">
                 <!-- Attacker -->
                 <pt-stack direction="vertical" gap="sm" align="center">
-                  <span class="quiz-section-label">こうげき側 (タイプ)</span>
+                  <pt-text variant="label-xs" color="secondary" transform="uppercase">こうげき側 (タイプ)</pt-text>
                   <pt-surface variant="card" padding="lg" radius="xl" [border]="true" class="attacker-card">
                     <pt-stack direction="vertical" gap="sm" align="center">
                       <pt-type-chip 
@@ -44,12 +45,13 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
                         rounded="full"
                         size="lg">
                       </pt-type-chip>
-                      <span 
-                        class="type-name"
+                      <pt-text 
+                        variant="body-lg" 
+                        weight="bold"
                         [style.color]="'var(--pt-color-pokemon-text-' + attackType() + ')'"
                       >
                         {{ typeMap[attackType()] }}
-                      </span>
+                      </pt-text>
                     </pt-stack>
                   </pt-surface>
                 </pt-stack>
@@ -58,7 +60,7 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
 
                 <!-- Defender -->
                 <pt-stack direction="vertical" gap="sm" align="center">
-                  <span class="quiz-section-label">ぼうぎょ側 (ポケモン)</span>
+                  <pt-text variant="label-xs" color="secondary" transform="uppercase">ぼうぎょ側 (ポケモン)</pt-text>
                   <pt-surface variant="card" padding="md" radius="xl" [border]="true">
                     <pt-stack direction="horizontal" gap="md" align="center">
                       <pt-surface variant="subtle" padding="sm" radius="lg">
@@ -71,7 +73,7 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
                         </pt-avatar>
                       </pt-surface>
                       <pt-stack direction="vertical" gap="xs" align="start">
-                        <span class="pokemon-name">{{ pokemon.name }}</span>
+                        <pt-text variant="body-lg" weight="bold">{{ pokemon.name }}</pt-text>
                         <pt-stack direction="horizontal" gap="xs">
                           <pt-type-chip *ngFor="let t of pokemon.types; let i = index" [type]="t" size="sm" rounded="sm">
                             {{ pokemon.jaTypes[i] }}
@@ -92,8 +94,8 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
                 [class]="getChoiceButtonClass(choice)"
                 [disabled]="isChecked()"
               >
-                <span class="choice-value">{{ choice }}</span>
-                <span class="choice-unit">倍</span>
+                <pt-text variant="body-lg" weight="bold">{{ choice }}</pt-text>
+                <pt-text variant="label-xs" color="secondary">倍</pt-text>
               </button>
             </pt-grid>
 
@@ -111,57 +113,13 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
       margin-inline: auto;
     }
     
-    .quiz-phase-label {
-      font-size: var(--pt-font-size-xs);
-      font-weight: var(--pt-font-weight-bold);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-style: italic;
-      color: var(--pt-color-text-secondary);
-    }
-    
-    .quiz-level {
-      font-weight: var(--pt-font-weight-bold);
-      color: var(--pt-color-text-primary);
-    }
-    
-    .quiz-section-label {
-      font-size: 0.625rem; /* 10px - 極小ラベル */
-      font-weight: var(--pt-font-weight-bold);
-      text-transform: uppercase;
-      color: var(--pt-color-text-secondary);
-    }
-    
     .attacker-card {
       min-width: 8rem;
       text-align: center;
     }
     
-    .type-name {
-      font-size: var(--pt-font-size-lg);
-      font-weight: var(--pt-font-weight-bold);
-    }
-    
     .arrow-icon {
       color: var(--pt-color-text-disabled);
-    }
-    
-    .pokemon-name {
-      font-size: var(--pt-font-size-xl);
-      font-weight: var(--pt-font-weight-bold);
-      color: var(--pt-color-text-primary);
-    }
-    
-    .choice-value {
-      font-size: var(--pt-font-size-3xl);
-      font-weight: var(--pt-font-weight-bold);
-    }
-    
-    .choice-unit {
-      font-size: var(--pt-font-size-xs);
-      font-weight: var(--pt-font-weight-bold);
-      margin-inline-start: var(--pt-space-1);
-      opacity: 0.7;
     }
     
     .loading-placeholder {
