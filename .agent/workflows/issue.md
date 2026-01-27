@@ -11,6 +11,25 @@ description: GitHub Issueを作成する手順
 - **`--body "..."` で直接本文を書くことは禁止**（文字化け防止）
 - **ファイル名は `issue-body.md` に固定**
 - **作成後は必ず警告コメントを確認**
+- **絵文字は `.agent/emoji-prefixes.json` から取得**（AI出力の揺れによる文字化け防止）
+
+---
+
+## Step 0: タイプを選択
+
+**Issueで使用するタイプ（この中から選択）:**
+
+| タイプ | 用途 |
+|--------|------|
+| `feat` | 新機能リクエスト |
+| `bug` | バグ報告 |
+| `question` | 質問・議論 |
+| `docs` | ドキュメント改善 |
+| `perf` | パフォーマンス問題 |
+
+**⚠️ AIは絵文字を直接タイプせず、Node.jsで取得すること！**
+
+**🚫 上記以外のprefixを使わないこと！**
 
 ---
 
@@ -37,15 +56,21 @@ node scripts/validate-issue-local.js
 
 ## Step 3: Issue を作成
 
+**⚠️ 絵文字はNode.jsで取得すること（文字化け防止）:**
+
 ```bash
-gh issue create --title "✨ feat: add new feature" --body-file issue-body.md
+# TYPE を選んだタイプに置き換え（例: feat, bug, question）
+EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.TYPE") && gh issue create --title "${EMOJI} TYPE: description here" --body-file issue-body.md
 ```
 
-**タイトルの形式（英語で記述）:**
-- 新機能: `✨ feat: add xxx`
-- バグ修正: `🐛 fix: resolve xxx`
-- リファクタリング: `♻️ refactor: improve xxx`
-- 基盤作業: `♻️ chore: update xxx`
+**例:**
+```bash
+# feat
+EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.feat") && gh issue create --title "${EMOJI} feat: add sound effects" --body-file issue-body.md
+
+# bug
+EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.bug") && gh issue create --title "${EMOJI} bug: button not responding" --body-file issue-body.md
+```
 
 ---
 
