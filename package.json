@@ -16,7 +16,10 @@
     "validate-data": "tsx scripts/validate-data.ts",
     "tokens:build": "node style-dictionary.config.mjs",
     "prebuild": "npm run fetch-data && npm run validate-data",
-    "guards:validate": "node guards/meta/rules/guardrail-format.rules.js && node guards/design/rules/no-raw-tailwind.rules.js",
+    "guard:component-structure": "node guards/code-quality/rules/component-structure.rules.js",
+    "guard:token-existence": "node guards/design/rules/token-existence.rules.js",
+    "guard:component-standards": "node guards/code-quality/rules/component-standards.rules.js",
+    "guards:validate": "node guards/meta/rules/guardrail-format.rules.js && node guards/design/rules/no-raw-tailwind.rules.js && node guards/code-quality/rules/component-structure.rules.js && node guards/design/rules/token-existence.rules.js && node guards/code-quality/rules/component-standards.rules.js",
     "issue:validate": "node scripts/validate-issue-local.js",
     "issue:check": "node scripts/check-issue-warnings.js",
     "pr:validate": "node scripts/validate-pr-local.js"

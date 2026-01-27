@@ -8,18 +8,18 @@
 
 	// Variant: default (white background)
 	&--default {
-		background-color: var(--pt-color-surface);
+		background-color: var(--pt-surface-variant-default-background);
 	}
 
 	// Variant: subtle (light gray)
 	&--subtle {
-		background-color: var(--pt-color-surface-subtle, rgb(248 250 252 / 50%));
+		background-color: var(--pt-surface-variant-subtle-background);
 	}
 
 	// Variant: card (white with shadow)
 	&--card {
-		background-color: var(--pt-color-surface);
-		box-shadow: var(--pt-shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 5%));
+		background-color: var(--pt-surface-variant-card-background);
+		box-shadow: var(--pt-surface-variant-card-elevation);
 	}
 
 	// Variant: ghost (transparent)

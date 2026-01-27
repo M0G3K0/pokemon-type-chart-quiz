@@ -98,17 +98,23 @@ guards/
 │       └── layer-boundaries.rules.js            # ルール定義
 ├── code-quality/                                # コード品質の憲法
 │   ├── guard/
-│   │   └── coding-standards.guard.md            # ドキュメント
+│   │   ├── coding-standards.guard.md            # コーディング規約
+│   │   ├── component-standards.guard.md         # コンポーネント作成標準 (NEW)
+│   │   └── component-structure.guard.md         # ファイル構成完全性 (NEW)
 │   └── rules/
-│       └── coding-standards.rules.js            # ルール定義
+│       ├── coding-standards.rules.js            # コーディング規約ルール
+│       ├── component-standards.rules.js         # コンポーネント標準検査 (NEW)
+│       └── component-structure.rules.js         # ファイル完全性検査 (NEW)
 ├── design/                                      # デザインの憲法
 │   ├── guard/
 │   │   ├── design-consistency.guard.md          # CSS品質ドキュメント
 │   │   ├── no-raw-tailwind.guard.md             # Tailwind直接使用禁止
+│   │   ├── token-existence.guard.md             # トークン存在確認 (NEW)
 │   │   └── token-naming.guard.md                # トークン命名規則
 │   └── rules/
 │       ├── design-consistency.rules.js          # CSS品質ルール
 │       ├── no-raw-tailwind.rules.js             # Tailwind検出スクリプト
+│       ├── token-existence.rules.js             # トークン存在検査 (NEW)
 │       └── token-naming.rules.js                # トークン命名ルール
 ├── maintenance/                                 # 保守の憲法
 │   ├── guard/
