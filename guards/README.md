@@ -104,9 +104,11 @@ guards/
 ├── design/                                      # デザインの憲法
 │   ├── guard/
 │   │   ├── design-consistency.guard.md          # CSS品質ドキュメント
+│   │   ├── no-raw-tailwind.guard.md             # Tailwind直接使用禁止
 │   │   └── token-naming.guard.md                # トークン命名規則
 │   └── rules/
 │       ├── design-consistency.rules.js          # CSS品質ルール
+│       ├── no-raw-tailwind.rules.js             # Tailwind検出スクリプト
 │       └── token-naming.rules.js                # トークン命名ルール
 ├── maintenance/                                 # 保守の憲法
 │   ├── guard/
