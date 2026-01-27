@@ -53,28 +53,28 @@
 
 	/* === Color variants === */
 	&--primary {
-		background-color: var(--pt-color-action-primary-default);
-		color: var(--pt-color-text-inverse);
+		background-color: var(--pt-button-primary-bg-default);
+		color: var(--pt-button-primary-text-default);
 
 		&:hover:not(:disabled) {
-			background-color: var(--pt-color-action-primary-hover);
+			background-color: var(--pt-button-primary-bg-hover);
 		}
 
 		&:active:not(:disabled) {
-			background-color: var(--pt-color-action-primary-pressed);
+			background-color: var(--pt-button-primary-bg-pressed);
 		}
 	}
 
 	&--secondary {
-		background-color: var(--pt-color-action-secondary-default);
-		color: var(--pt-color-text-inverse);
+		background-color: var(--pt-button-secondary-bg-default);
+		color: var(--pt-button-secondary-text-default);
 
 		&:hover:not(:disabled) {
-			background-color: var(--pt-color-action-secondary-hover);
+			background-color: var(--pt-button-secondary-bg-hover);
 		}
 
 		&:active:not(:disabled) {
-			background-color: var(--pt-color-action-secondary-pressed);
+			background-color: var(--pt-button-secondary-bg-pressed);
 		}
 	}
 

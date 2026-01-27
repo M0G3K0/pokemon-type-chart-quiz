@@ -1,41 +1,50 @@
-> ⚠️ **タイトルは英語で書いてください** (`feat: xxx`, `fix: xxx`, `chore: xxx` 等)
-
 ## 💡 概要
 
-Angular の非推奨ディレクティブ構文（`*ngIf`, `*ngFor` 等）を新しい制御フロー構文（`@if`, `@for` 等）に移行し、ガードレールで強制する。
-
-**背景**:
-- Angular 17+ で新しい制御フロー構文 (`@if`, `@for`, `@switch`) が導入された
-- 従来の `*ngIf`, `*ngFor`, `*ngSwitch` は非推奨（将来的に削除される可能性）
-- 新構文はテンプレートのパフォーマンスと可読性が向上
+Design System コンポーネントの import が barrel file (`index.ts`) 経由ではなく、直接ファイル参照になっている箇所を修正する。
 
 ## 📝 詳細
 
-### Phase 1: 調査
-非推奨ディレクティブの一覧と新構文への対応表を作成:
+### 現状の問題
 
-| 非推奨 | 新構文 | 備考 |
-|--------|--------|------|
-| `*ngIf` | `@if` | `else` も `@else` に |
-| `*ngFor` | `@for` | `trackBy` → `track` |
-| `*ngSwitch` | `@switch` | |
-| `[ngClass]` | `[class]` / `@if` | 条件付きクラスの場合 |
+```typescript
+// ❌ 直接参照（現状）
+import { StackComponent } from '../../ui/pt-stack/pt-stack';
 
-### Phase 2: ガードレール作成
-ESLint ルールを追加して、非推奨構文の使用を検出:
-- `@angular-eslint/template/prefer-control-flow` (Angular ESLint v17+)
+// ✅ barrel 経由（理想）
+import { StackComponent } from '../../ui/pt-stack';
+```
 
-### Phase 3: リファクタリング
-既存コードを新構文に移行。
+### 影響範囲
+
+以下のファイルで直接参照を使用中（計10件）:
+
+**quiz.container.ts (4件)**
+- `pt-stack/pt-stack`
+- `pt-surface/pt-surface`
+- `pt-grid/pt-grid`
+- `pt-text/pt-text`
+
+**battle-card.ts (6件)**
+- `pt-type-chip/pt-type-chip`
+- `pt-avatar/pt-avatar`
+- `pt-icon/pt-icon`
+- `pt-stack/pt-stack`
+- `pt-surface/pt-surface`
+- `pt-text/pt-text`
+
+### 必要な対応
+
+1. 各 `pt-*` ディレクトリに `index.ts` (barrel file) を作成/確認
+2. import パスを barrel 経由に変更
+3. ガードレールを追加して今後の直接参照を防止
 
 ## ✅ やることリスト
-- [ ] Angular 17+ 制御フロー構文の調査と対応表作成
-- [ ] `/guard` でガードレールを作成（ESLint ルール追加）
-- [ ] CI で新構文を強制（lint エラー化）
-- [ ] 既存コードのリファクタリング（`*ngIf` → `@if` 等）
-- [ ] ドキュメント更新
+
+- [ ] 不足している `index.ts` の作成
+- [ ] `quiz.container.ts` の import 修正
+- [ ] `battle-card.ts` の import 修正
+- [ ] （任意）ESLint ルールで直接参照を禁止
 
 ## 📷 参考資料（任意）
 
-- [Angular Built-in Control Flow](https://angular.dev/guide/templates/control-flow)
-- [Angular ESLint prefer-control-flow](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/prefer-control-flow.md)
+- https://basarat.gitbook.io/typescript/main-1/barrel

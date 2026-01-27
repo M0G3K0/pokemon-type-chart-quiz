@@ -14,8 +14,8 @@ const GUARDRAIL_PATH = "guards/code-quality/guard/component-standards.guard.md";
 const UI_DIR = path.join(__dirname, "../../../src/app/ui");
 const DOCS_DIR = path.join(__dirname, "../../../docs/components");
 
-// テストケースの検出パターン
-const TEST_CASE_PATTERN = /\b(it|test)\s*\(/g;
+// テストケースの検出パターン（it, test, it.todo, test.todo を認識）
+const TEST_CASE_PATTERN = /\b(it|test)(\.todo)?\s*\(/g;
 
 /**
  * pt-*ディレクトリを取得

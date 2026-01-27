@@ -1,39 +1,58 @@
-## 概要 / Summary
+## 💡 概要
 
-`pt-heading` コンポーネントを追加し、Quiz 画面で使用していたカスタム見出し実装を置き換えました。
+コンポーネント品質を保証するための3つのガードレールを追加。
 
-## 変更内容 / Changes
+## 📝 変更内容
 
-### 新規追加
-- `src/app/ui/pt-heading/` - Heading コンポーネント（Atom）
-  - `level` prop: セマンティックな見出しレベル（h1-h6）
-  - `size` prop: 視覚的サイズ（xl/lg/md/sm）、levelから自動推論
-  - `accent` prop: アクセントバー（左側の縦棒）表示
-- `design-tokens/tier3-component/heading.json` - Tier 3 トークン
-- `docs/components/pt-heading.md` - コンポーネントドキュメント
-- `.gemini/plans/pt-heading-spec.md` - 設計書
+### 新規ガードレール
 
-### 変更
-- `src/app/features/quiz/quiz.ts` - カスタム見出しを `pt-heading` に置き換え
-- `style-dictionary.config.mjs` - heading トークンを出力対象に追加
+| ガードレール | 検査内容 | Issue |
+|-------------|---------|-------|
+| `component-structure` | pt-*コンポーネントの必須ファイル（ts/spec.ts）存在確認 | #54 |
+| `token-existence` | SCSSで使用されている`--pt-*`変数が定義されているか確認 | #55 |
+| `component-standards` | 上記 + ドキュメント存在 + テスト内容の統合検査 | #58 |
 
-## ベンチマーク / Benchmarks
+### 追加されたnpmスクリプト
 
-- [GitHub Primer Heading](https://primer.style/components/heading) - `as` + `size` の分離
-- [SmartHR Heading](https://smarthr.design/products/components/heading/) - 用途別の種類分け
-- [Adobe Spectrum Heading](https://spectrum.adobe.com/page/heading/) - T-shirt sizing
+```bash
+npm run guard:component-structure  # ファイル完全性チェック
+npm run guard:token-existence      # トークン存在チェック
+npm run guard:component-standards  # 統合チェック
+```
 
-## テスト / Testing
+### 検出される違反例
 
-- [x] `npm run lint:css` - StyleLint パス
-- [x] `npm run lint` - ESLint パス
-- [x] `npm test` - Vitest パス（todo テスト追加）
-- [x] `npm run build` - ビルド成功
+- `pt-button.spec.ts` が存在しない
+- `--pt-border-radius-sm` を使用しているが、正しいトークン名は `--pt-semantic-border-radius-sm`
+- `docs/components/pt-card.md` が存在しない
+- `spec.ts` ファイルにテストケース（it/test）がない
 
-## スクリーンショット / Screenshots
+## ✅ チェックリスト
 
-ローカル環境で http://localhost:4200 にアクセスし、「わざのダメージ倍率は？」の見出しにアクセントバーが表示されることを確認してください。
+- [x] `npm run guards:validate` 通過
+- [x] 各スクリプトの動作確認済み
+- [x] `guards/README.md` 更新済み
 
-## 関連 Issue / Related Issues
+## 📷 動作確認
 
-Quiz画面リファクタリングの一環（`feature/quiz-refactor` 親ブランチへのPR）
+```
+🛡️ Checking component creation standards...
+
+📦 Found 14 pt-* component(s)
+
+❌ Component standards violations found:
+
+📁 Missing Required Files:
+   - Missing required file: pt-badge.ts
+   ...
+
+📄 Missing Documentation:
+   - Missing documentation: docs/components/pt-button.md
+   ...
+
+🧪 Empty Test Files:
+   - No test cases found in: pt-avatar.spec.ts
+   ...
+```
+
+Closes #54, Closes #55, Closes #58
