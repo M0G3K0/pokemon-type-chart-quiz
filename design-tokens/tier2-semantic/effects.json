@@ -51,6 +51,11 @@
 				"type": "borderRadius",
 				"$description": "【用途】大きな要素。カード、パネル。"
 			},
+			"xl": {
+				"value": "{radius.xl}",
+				"type": "borderRadius",
+				"$description": "【用途】特大コンテナ。モーダル、大きなサーフェス。"
+			},
 			"pill": {
 				"value": "{radius.full}",
 				"type": "borderRadius",

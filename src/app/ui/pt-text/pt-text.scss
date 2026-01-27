@@ -1,0 +1,127 @@
+/**
+ * @what pt-text component styles
+ * @why 一貫したタイポグラフィを本文・ラベル・補助テキストに適用
+ *
+ * Typography は Tier 2 composite token を直接使用。
+ * Color は Tier 2 semantic color tokens を使用。
+ */
+
+:host {
+	display: inline; // span/label はインライン、p/div ではブロック
+}
+
+.pt-text {
+	// Reset
+	margin: 0;
+	padding: 0;
+
+	// Variant: body - Tier 2 typography tokens を直接参照
+	&--body-lg {
+		font-family: var(--pt-typography-body-lg-font-family);
+		font-size: var(--pt-typography-body-lg-font-size);
+		font-weight: var(--pt-typography-body-lg-font-weight);
+		line-height: var(--pt-typography-body-lg-line-height);
+	}
+
+	&--body-md {
+		font-family: var(--pt-typography-body-md-font-family);
+		font-size: var(--pt-typography-body-md-font-size);
+		font-weight: var(--pt-typography-body-md-font-weight);
+		line-height: var(--pt-typography-body-md-line-height);
+	}
+
+	&--body-sm {
+		font-family: var(--pt-typography-body-sm-font-family);
+		font-size: var(--pt-typography-body-sm-font-size);
+		font-weight: var(--pt-typography-body-sm-font-weight);
+		line-height: var(--pt-typography-body-sm-line-height);
+	}
+
+	// Variant: label - Tier 2 typography tokens を直接参照
+	&--label-md {
+		font-family: var(--pt-typography-label-md-font-family);
+		font-size: var(--pt-typography-label-md-font-size);
+		font-weight: var(--pt-typography-label-md-font-weight);
+		line-height: var(--pt-typography-label-md-line-height);
+	}
+
+	&--label-sm {
+		font-family: var(--pt-typography-label-sm-font-family);
+		font-size: var(--pt-typography-label-sm-font-size);
+		font-weight: var(--pt-typography-label-sm-font-weight);
+		line-height: var(--pt-typography-label-sm-line-height);
+	}
+
+	&--label-xs {
+		font-family: var(--pt-typography-label-xs-font-family);
+		font-size: var(--pt-typography-label-xs-font-size);
+		font-weight: var(--pt-typography-label-xs-font-weight);
+		line-height: var(--pt-typography-label-xs-line-height);
+	}
+
+	// Color (Tier 2 semantic color tokens)
+	&--color-primary {
+		color: var(--pt-color-text-primary);
+	}
+
+	&--color-secondary {
+		color: var(--pt-color-text-secondary);
+	}
+
+	&--color-disabled {
+		color: var(--pt-color-text-disabled);
+	}
+
+	&--color-inverse {
+		color: var(--pt-color-text-inverse);
+	}
+
+	&--color-danger {
+		color: var(--pt-color-result-lose-default);
+	}
+
+	// Weight overrides
+	&--weight-normal {
+		font-weight: var(--pt-font-weight-normal);
+	}
+
+	&--weight-medium {
+		font-weight: var(--pt-font-weight-medium);
+	}
+
+	&--weight-bold {
+		font-weight: var(--pt-font-weight-bold);
+	}
+
+	&--weight-black {
+		font-weight: var(--pt-font-weight-black);
+	}
+
+	// Transform
+	&--transform-uppercase {
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	&--transform-lowercase {
+		text-transform: lowercase;
+	}
+
+	&--transform-capitalize {
+		text-transform: capitalize;
+	}
+
+	// Italic
+	&--italic {
+		font-style: italic;
+	}
+
+	// Align
+	&--align-center {
+		text-align: center;
+	}
+
+	&--align-end {
+		text-align: end;
+	}
+}

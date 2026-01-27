@@ -1,0 +1,69 @@
+/**
+ * @what Grid component styles - CSS Grid layout primitive
+ * @why Provide consistent grid layouts via Design Tokens
+ */
+
+.pt-grid {
+	display: grid;
+
+	// Column variants (default/mobile)
+	&--cols-1 {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+
+	&--cols-2 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	&--cols-3 {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	&--cols-4 {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+
+	&--cols-6 {
+		grid-template-columns: repeat(6, minmax(0, 1fr));
+	}
+
+	// Column variants at sm breakpoint (640px+)
+	@media (width >=40rem) {
+		&--sm-cols-1 {
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+		}
+
+		&--sm-cols-2 {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		&--sm-cols-3 {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+
+		&--sm-cols-4 {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+		}
+
+		&--sm-cols-6 {
+			grid-template-columns: repeat(6, minmax(0, 1fr));
+		}
+	}
+
+	// Gap variants
+	&--gap-none {
+		gap: var(--pt-grid-gap-none);
+	}
+
+	&--gap-sm {
+		gap: var(--pt-grid-gap-sm);
+	}
+
+	&--gap-md {
+		gap: var(--pt-grid-gap-md);
+	}
+
+	&--gap-lg {
+		gap: var(--pt-grid-gap-lg);
+	}
+}

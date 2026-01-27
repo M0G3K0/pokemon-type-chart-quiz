@@ -4,6 +4,19 @@
  */
 
 export const components = {
+  "avatar": {
+    "size": {
+      "sm": "32px",
+      "md": "48px",
+      "lg": "80px",
+      "xl": "120px"
+    },
+    "radius": {
+      "circle": "9999px",
+      "rounded": "0.75rem",
+      "square": "0.25rem"
+    }
+  },
   "badge": {
     "neutral": {
       "bg": "#f3f4f6",
@@ -113,6 +126,18 @@ export const components = {
       "lg": "1.5rem"
     },
     "radius": "0.75rem"
+  },
+  "heading": {
+    "text": {
+      "color": "#1f2937"
+    },
+    "accent": {
+      "width": "6px",
+      "height": "1.5rem",
+      "radius": "9999px",
+      "gap": "0.5rem",
+      "color": "#1f2937"
+    }
   }
 } as const;
 

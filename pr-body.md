@@ -1,26 +1,39 @@
-## 💡 概要
-コード品質を事前に担保するためのガードレールを追加しました。
+## 概要 / Summary
 
-## 📝 変更内容
-- ESLint `max-lines` ルールを追加（300行制限）
-- commitlint をインストール・設定（Conventional Commits 形式を強制）
-- husky `commit-msg` フックを追加
-- AGENTS.md に言語ルールを明記（タイトル・コミットメッセージは英語）
-- Issue/PR テンプレートにルール注記を追加（絵文字は任意化）
-- 未使用 import と `any` 型を修正（ESLint エラー解消）
+`pt-heading` コンポーネントを追加し、Quiz 画面で使用していたカスタム見出し実装を置き換えました。
 
-## 🔗 関連Issue
-Closes #31
+## 変更内容 / Changes
 
-## ✅ チェックリスト
-- [x] ビルドが成功する（`npm run build`）
-- [x] Lintエラーがない（`npm run lint`）
-- [x] テストが通る（`npm run test`）
-- [x] コミットメッセージが規約に従っている（`feat:`, `fix:`, `chore:`など）
-- [x] ブランチ名が規約に従っている（`feature/`, `fix/`, `chore/`など）
-- [x] 必要に応じてドキュメントを更新した
+### 新規追加
+- `src/app/ui/pt-heading/` - Heading コンポーネント（Atom）
+  - `level` prop: セマンティックな見出しレベル（h1-h6）
+  - `size` prop: 視覚的サイズ（xl/lg/md/sm）、levelから自動推論
+  - `accent` prop: アクセントバー（左側の縦棒）表示
+- `design-tokens/tier3-component/heading.json` - Tier 3 トークン
+- `docs/components/pt-heading.md` - コンポーネントドキュメント
+- `.gemini/plans/pt-heading-spec.md` - 設計書
 
-## 📌 補足事項
-- ESLint ルールは `eslint.config.mjs`（Flat Config）で定義
-- テストファイル、design-system、domain、features ディレクトリはマジックナンバールールを緩和
-- commitlint は Conventional Commits 形式を検証（`type: description`）
+### 変更
+- `src/app/features/quiz/quiz.ts` - カスタム見出しを `pt-heading` に置き換え
+- `style-dictionary.config.mjs` - heading トークンを出力対象に追加
+
+## ベンチマーク / Benchmarks
+
+- [GitHub Primer Heading](https://primer.style/components/heading) - `as` + `size` の分離
+- [SmartHR Heading](https://smarthr.design/products/components/heading/) - 用途別の種類分け
+- [Adobe Spectrum Heading](https://spectrum.adobe.com/page/heading/) - T-shirt sizing
+
+## テスト / Testing
+
+- [x] `npm run lint:css` - StyleLint パス
+- [x] `npm run lint` - ESLint パス
+- [x] `npm test` - Vitest パス（todo テスト追加）
+- [x] `npm run build` - ビルド成功
+
+## スクリーンショット / Screenshots
+
+ローカル環境で http://localhost:4200 にアクセスし、「わざのダメージ倍率は？」の見出しにアクセントバーが表示されることを確認してください。
+
+## 関連 Issue / Related Issues
+
+Quiz画面リファクタリングの一環（`feature/quiz-refactor` 親ブランチへのPR）

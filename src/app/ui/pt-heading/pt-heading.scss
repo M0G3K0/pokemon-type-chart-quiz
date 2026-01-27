@@ -1,0 +1,63 @@
+/**
+ * @what pt-heading component styles
+ * @why セマンティックな見出しに一貫したタイポグラフィを適用
+ *
+ * Tier 3 準拠: color は heading.text.color, heading.accent.color を参照。
+ * Typography は Tier 2 composite token を使用（Tier 3 エイリアスはコリジョンを避けるため未定義）。
+ */
+
+:host {
+	display: block;
+}
+
+.pt-heading {
+	margin: 0;
+	color: var(--pt-heading-text-color);
+
+	// Size variants - Typography composite tokens を使用
+	// Note: typography.heading.* は Tier 2 だが、Tier 3 へのエイリアス化は
+	// Style Dictionary のパス衝突を避けるため見送り（heading.xl と typography.heading.xl が衝突）
+	&--xl {
+		font-family: var(--pt-typography-heading-xl-font-family);
+		font-size: var(--pt-typography-heading-xl-font-size);
+		font-weight: var(--pt-typography-heading-xl-font-weight);
+		line-height: var(--pt-typography-heading-xl-line-height);
+	}
+
+	&--lg {
+		font-family: var(--pt-typography-heading-lg-font-family);
+		font-size: var(--pt-typography-heading-lg-font-size);
+		font-weight: var(--pt-typography-heading-lg-font-weight);
+		line-height: var(--pt-typography-heading-lg-line-height);
+	}
+
+	&--md {
+		font-family: var(--pt-typography-heading-md-font-family);
+		font-size: var(--pt-typography-heading-md-font-size);
+		font-weight: var(--pt-typography-heading-md-font-weight);
+		line-height: var(--pt-typography-heading-md-line-height);
+	}
+
+	&--sm {
+		font-family: var(--pt-typography-heading-sm-font-family);
+		font-size: var(--pt-typography-heading-sm-font-size);
+		font-weight: var(--pt-typography-heading-sm-font-weight);
+		line-height: var(--pt-typography-heading-sm-line-height);
+	}
+
+	// Accent variant - アクセントバー付き
+	&--accent {
+		display: flex;
+		align-items: center;
+		gap: var(--pt-heading-accent-gap);
+	}
+
+	// Accent bar element
+	&__accent {
+		flex-shrink: 0;
+		width: var(--pt-heading-accent-width);
+		height: var(--pt-heading-accent-height);
+		background-color: var(--pt-heading-accent-color);
+		border-radius: var(--pt-heading-accent-radius);
+	}
+}

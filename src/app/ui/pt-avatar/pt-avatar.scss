@@ -1,0 +1,61 @@
+/**
+ * @what Avatar component styles
+ * @why Display images with consistent sizing and shapes using Design Tokens
+ *
+ * 背景色やシャドウは使用箇所で親要素を使って対応してください。
+ */
+
+:host {
+	display: inline-block;
+	line-height: 0;
+}
+
+.pt-avatar {
+	display: inline-block;
+	overflow: hidden;
+
+	// Size variants
+	&--sm {
+		width: var(--pt-avatar-size-sm);
+		height: var(--pt-avatar-size-sm);
+	}
+
+	&--md {
+		width: var(--pt-avatar-size-md);
+		height: var(--pt-avatar-size-md);
+	}
+
+	&--lg {
+		width: var(--pt-avatar-size-lg);
+		height: var(--pt-avatar-size-lg);
+	}
+
+	&--xl {
+		width: var(--pt-avatar-size-xl);
+		height: var(--pt-avatar-size-xl);
+	}
+
+	// Shape variants
+	&--circle {
+		border-radius: var(--pt-avatar-radius-circle);
+	}
+
+	&--rounded {
+		border-radius: var(--pt-avatar-radius-rounded);
+	}
+
+	&--square {
+		border-radius: var(--pt-avatar-radius-square);
+	}
+
+	// Image element
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+
+		&--pixelated {
+			image-rendering: pixelated;
+		}
+	}
+}

@@ -8,7 +8,7 @@
   --pt-color-pokemon-normal-200: #d8d7c6; /** 物理的なノーマルタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-normal-300: #c4c3a9; /** 物理的なノーマルタイプの中明色。視認性あり。 */
   --pt-color-pokemon-normal-400: #b0af8b; /** 物理的なノーマルタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-normal-500: #a8a77a; /** 物理的なノーマルタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-normal-500: #828282; /** 物理的なノーマルタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-normal-600: #868662; /** 物理的なノーマルタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-normal-700: #656449; /** 物理的なノーマルタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-normal-800: #434331; /** 物理的なノーマルタイプの極暗色。 */
@@ -19,7 +19,7 @@
   --pt-color-pokemon-fire-200: #f9ccac; /** 物理的なほのおタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-fire-300: #f5b282; /** 物理的なほのおタイプの中明色。視認性あり。 */
   --pt-color-pokemon-fire-400: #f29959; /** 物理的なほのおタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-fire-500: #ee8130; /** 物理的なほのおタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-fire-500: #e4613e; /** 物理的なほのおタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-fire-600: #be6726; /** 物理的なほのおタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-fire-700: #8f4d1d; /** 物理的なほのおタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-fire-800: #5f3413; /** 物理的なほのおタイプの極暗色。 */
@@ -30,7 +30,7 @@
   --pt-color-pokemon-water-200: #c1d2fa; /** 物理的なみずタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-water-300: #a1bcf7; /** 物理的なみずタイプの中明色。視認性あり。 */
   --pt-color-pokemon-water-400: #82a6f4; /** 物理的なみずタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-water-500: #6390f0; /** 物理的なみずタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-water-500: #3a9de2; /** 物理的なみずタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-water-600: #4f73c0; /** 物理的なみずタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-water-700: #3b5690; /** 物理的なみずタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-water-800: #283a60; /** 物理的なみずタイプの極暗色。 */
@@ -41,7 +41,7 @@
   --pt-color-pokemon-electric-200: #fdecaa; /** 物理的なでんきタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-electric-300: #fce280; /** 物理的なでんきタイプの中明色。視認性あり。 */
   --pt-color-pokemon-electric-400: #fad956; /** 物理的なでんきタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-electric-500: #f7d02c; /** 物理的なでんきタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-electric-500: #dfbc28; /** 物理的なでんきタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-electric-600: #c6a623; /** 物理的なでんきタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-electric-700: #947d1a; /** 物理的なでんきタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-electric-800: #635312; /** 物理的なでんきタイプの極暗色。 */
@@ -52,7 +52,7 @@
   --pt-color-pokemon-grass-200: #c9e9b8; /** 物理的なくさタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-grass-300: #aede94; /** 物理的なくさタイプの中明色。視認性あり。 */
   --pt-color-pokemon-grass-400: #94d371; /** 物理的なくさタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-grass-500: #7ac74c; /** 物理的なくさタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-grass-500: #439837; /** 物理的なくさタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-grass-600: #629f3d; /** 物理的なくさタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-grass-700: #49772e; /** 物理的なくさタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-grass-800: #314f1e; /** 物理的なくさタイプの極暗色。 */
@@ -63,7 +63,7 @@
   --pt-color-pokemon-ice-200: #d5efee; /** 物理的なこおりタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-ice-300: #c0e7e5; /** 物理的なこおりタイプの中明色。視認性あり。 */
   --pt-color-pokemon-ice-400: #abe0dd; /** 物理的なこおりタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-ice-500: #96d9d6; /** 物理的なこおりタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-ice-500: #47c8c8; /** 物理的なこおりタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-ice-600: #78aeab; /** 物理的なこおりタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-ice-700: #5a8280; /** 物理的なこおりタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-ice-800: #3c5756; /** 物理的なこおりタイプの極暗色。 */
@@ -74,7 +74,7 @@
   --pt-color-pokemon-fighting-200: #e7abad; /** 物理的なかくとうタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-fighting-300: #db8285; /** 物理的なかくとうタイプの中明色。視認性あり。 */
   --pt-color-pokemon-fighting-400: #cf585c; /** 物理的なかくとうタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-fighting-500: #c22e28; /** 物理的なかくとうタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-fighting-500: #e49021; /** 物理的なかくとうタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-fighting-600: #9b2520; /** 物理的なかくとうタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-fighting-700: #741c18; /** 物理的なかくとうタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-fighting-800: #4e1210; /** 物理的なかくとうタイプの極暗色。 */
@@ -85,7 +85,7 @@
   --pt-color-pokemon-poison-200: #dbb2da; /** 物理的などくタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-poison-300: #c98cc7; /** 物理的などくタイプの中明色。視認性あり。 */
   --pt-color-pokemon-poison-400: #b765b5; /** 物理的などくタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-poison-500: #a33ea1; /** 物理的などくタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-poison-500: #9354cb; /** 物理的などくタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-poison-600: #823281; /** 物理的などくタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-poison-700: #622561; /** 物理的などくタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-poison-800: #411940; /** 物理的などくタイプの極暗色。 */
@@ -96,7 +96,7 @@
   --pt-color-pokemon-ground-200: #f3e6c1; /** 物理的なじめんタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-ground-300: #edd9a3; /** 物理的なじめんタイプの中明色。視認性あり。 */
   --pt-color-pokemon-ground-400: #e7cd84; /** 物理的なじめんタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-ground-500: #e2bf65; /** 物理的なじめんタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-ground-500: #a4733c; /** 物理的なじめんタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-ground-600: #b59951; /** 物理的なじめんタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-ground-700: #88733d; /** 物理的なじめんタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-ground-800: #5a4c28; /** 物理的なじめんタイプの極暗色。 */
@@ -107,7 +107,7 @@
   --pt-color-pokemon-flying-200: #dbd2f9; /** 物理的なひこうタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-flying-300: #c9bcf6; /** 物理的なひこうタイプの中明色。視認性あり。 */
   --pt-color-pokemon-flying-400: #b7a5f3; /** 物理的なひこうタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-flying-500: #a98ff3; /** 物理的なひこうタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-flying-500: #74aad0; /** 物理的なひこうタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-flying-600: #8772c2; /** 物理的なひこうタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-flying-700: #655692; /** 物理的なひこうタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-flying-800: #443961; /** 物理的なひこうタイプの極暗色。 */
@@ -118,7 +118,7 @@
   --pt-color-pokemon-psychic-200: #ffbbce; /** 物理的なエスパータイプの明色。アクセント背景用。 */
   --pt-color-pokemon-psychic-300: #ff99b6; /** 物理的なエスパータイプの中明色。視認性あり。 */
   --pt-color-pokemon-psychic-400: #fb779e; /** 物理的なエスパータイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-psychic-500: #f95587; /** 物理的なエスパータイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-psychic-500: #e96c8c; /** 物理的なエスパータイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-psychic-600: #c7446c; /** 物理的なエスパータイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-psychic-700: #953351; /** 物理的なエスパータイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-psychic-800: #642236; /** 物理的なエスパータイプの極暗色。 */
@@ -129,7 +129,7 @@
   --pt-color-pokemon-bug-200: #dce4a3; /** 物理的なむしタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-bug-300: #cad676; /** 物理的なむしタイプの中明色。視認性あり。 */
   --pt-color-pokemon-bug-400: #b8c948; /** 物理的なむしタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-bug-500: #a6b91a; /** 物理的なむしタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-bug-500: #9f9f28; /** 物理的なむしタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-bug-600: #859415; /** 物理的なむしタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-bug-700: #646f10; /** 物理的なむしタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-bug-800: #424a0b; /** 物理的なむしタイプの極暗色。 */
@@ -140,7 +140,7 @@
   --pt-color-pokemon-rock-200: #e3d9af; /** 物理的ないわタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-rock-300: #d5c687; /** 物理的ないわタイプの中明色。視認性あり。 */
   --pt-color-pokemon-rock-400: #c6b35e; /** 物理的ないわタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-rock-500: #b6a136; /** 物理的ないわタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-rock-500: #a9a481; /** 物理的ないわタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-rock-600: #92812b; /** 物理的ないわタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-rock-700: #6d6120; /** 物理的ないわタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-rock-800: #494016; /** 物理的ないわタイプの極暗色。 */
@@ -151,7 +151,7 @@
   --pt-color-pokemon-ghost-200: #c7bdd6; /** 物理的なゴーストタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-ghost-300: #ab9cc2; /** 物理的なゴーストタイプの中明色。視認性あり。 */
   --pt-color-pokemon-ghost-400: #8f7bad; /** 物理的なゴーストタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-ghost-500: #735797; /** 物理的なゴーストタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-ghost-500: #6f4570; /** 物理的なゴーストタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-ghost-600: #5c4679; /** 物理的なゴーストタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-ghost-700: #45345b; /** 物理的なゴーストタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-ghost-800: #2e233c; /** 物理的なゴーストタイプの極暗色。 */
@@ -162,7 +162,7 @@
   --pt-color-pokemon-dragon-200: #c6affd; /** 物理的なドラゴンタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-dragon-300: #a986fc; /** 物理的なドラゴンタイプの中明色。視認性あり。 */
   --pt-color-pokemon-dragon-400: #8d5dfc; /** 物理的なドラゴンタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-dragon-500: #6f35fc; /** 物理的なドラゴンタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-dragon-500: #576fbc; /** 物理的なドラゴンタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-dragon-600: #592aca; /** 物理的なドラゴンタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-dragon-700: #431f97; /** 物理的なドラゴンタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-dragon-800: #2c1565; /** 物理的なドラゴンタイプの極暗色。 */
@@ -173,7 +173,7 @@
   --pt-color-pokemon-steel-200: #e2e2eb; /** 物理的なはがねタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-steel-300: #d4d4e1; /** 物理的なはがねタイプの中明色。視認性あり。 */
   --pt-color-pokemon-steel-400: #c5c5d8; /** 物理的なはがねタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-steel-500: #b7b7ce; /** 物理的なはがねタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-steel-500: #77b2cb; /** 物理的なはがねタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-steel-600: #9292a5; /** 物理的なはがねタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-steel-700: #6e6e7c; /** 物理的なはがねタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-steel-800: #494952; /** 物理的なはがねタイプの極暗色。 */
@@ -184,7 +184,7 @@
   --pt-color-pokemon-dark-200: #c6bcb7; /** 物理的なあくタイプの明色。アクセント背景用。 */
   --pt-color-pokemon-dark-300: #a99b93; /** 物理的なあくタイプの中明色。視認性あり。 */
   --pt-color-pokemon-dark-400: #8d796e; /** 物理的なあくタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-dark-500: #705746; /** 物理的なあくタイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-dark-500: #4f4747; /** 物理的なあくタイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-dark-600: #5a4638; /** 物理的なあくタイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-dark-700: #43342a; /** 物理的なあくタイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-dark-800: #2d231c; /** 物理的なあくタイプの極暗色。 */
@@ -195,7 +195,7 @@
   --pt-color-pokemon-fairy-200: #efcedd; /** 物理的なフェアリータイプの明色。アクセント背景用。 */
   --pt-color-pokemon-fairy-300: #e7b6cc; /** 物理的なフェアリータイプの中明色。視認性あり。 */
   --pt-color-pokemon-fairy-400: #df9dba; /** 物理的なフェアリータイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-fairy-500: #d685ad; /** 物理的なフェアリータイプの基準色。バッジやアイコン用。 */
+  --pt-color-pokemon-fairy-500: #e18ce1; /** 物理的なフェアリータイプの基準色。バッジやアイコン用。 */
   --pt-color-pokemon-fairy-600: #ab6a8a; /** 物理的なフェアリータイプのやや暗色。高コントラスト確保可能。 */
   --pt-color-pokemon-fairy-700: #805068; /** 物理的なフェアリータイプの暗色。テキスト用。白背景上で高コントラスト。 */
   --pt-color-pokemon-fairy-800: #563545; /** 物理的なフェアリータイプの極暗色。 */
@@ -294,6 +294,10 @@
   --pt-semantic-border-width-none: 0; /** 【用途】枠線なし。 */
   --pt-semantic-border-width-default: 1px; /** 【用途】標準枠線。入力欄、カード。 */
   --pt-semantic-border-width-thick: 2px; /** 【用途】太い枠線。フォーカス状態、強調。 */
+  --pt-avatar-size-sm: 32px; /** 小サイズ。リスト内のアイコンなどに使用。 */
+  --pt-avatar-size-md: 48px; /** 中サイズ。標準的なアバター表示に使用。 */
+  --pt-avatar-size-lg: 80px; /** 大サイズ。カード内メイン画像などに使用。 */
+  --pt-avatar-size-xl: 120px; /** 特大サイズ。プロフィール画面などに使用。 */
   --pt-button-primary-border-default: rgba(0, 0, 0, 0); /** ボタンの枠線色。Primaryは枠なし。 */
   --pt-button-secondary-bg-default: rgba(0, 0, 0, 0); /** 背景色。Secondaryは透明で枠線を強調。 */
   --pt-button-secondary-bg-disabled: rgba(0, 0, 0, 0); /** 無効時の背景色。透明のまま。 */
@@ -301,6 +305,16 @@
   --pt-button-ghost-bg-disabled: rgba(0, 0, 0, 0); /** 無効時の背景色。透明のまま。 */
   --pt-button-ghost-border-default: rgba(0, 0, 0, 0); /** 枠線色。Ghostは枠なし。 */
   --pt-button-danger-border-default: rgba(0, 0, 0, 0); /** 枠線色。Dangerは枠なし。 */
+  --pt-grid-columns-1: 1; /** 1カラム。モバイルでの単一カラム表示。 */
+  --pt-grid-columns-2: 2; /** 2カラム。選択肢表示のデフォルト。 */
+  --pt-grid-columns-3: 3; /** 3カラム。sm以上での選択肢表示。 */
+  --pt-grid-columns-4: 4; /** 4カラム。ギャラリー表示など。 */
+  --pt-grid-columns-6: 6; /** 6カラム。高密度レイアウト。 */
+  --pt-grid-gap-none: 0; /** ギャップなし。 */
+  --pt-heading-accent-width: 6px; /** アクセントバーの幅。視覚的なアクセントとしては十分かつ控えめなサイズ。 */
+  --pt-stack-gap-none: 0; /** ギャップなし。要素同士を密着させる場合に使用。 */
+  --pt-surface-variant-ghost-background: rgba(0, 0, 0, 0); /** 透明背景。親要素の背景を透過。 */
+  --pt-surface-padding-none: 0; /** パディングなし。 */
   --pt-color-pokemon-type-normal: var(--pt-color-pokemon-normal-500); /** 【用途】ノーマルタイプのバッジ・アイコン背景。 */
   --pt-color-pokemon-type-fire: var(--pt-color-pokemon-fire-500); /** 【用途】ほのおタイプのバッジ・アイコン背景。 */
   --pt-color-pokemon-type-water: var(--pt-color-pokemon-water-500); /** 【用途】みずタイプのバッジ・アイコン背景。 */
@@ -382,6 +396,7 @@
   --pt-semantic-border-radius-sm: var(--pt-radius-sm); /** 【用途】小さい要素。バッジ、チップ。 */
   --pt-semantic-border-radius-md: var(--pt-radius-md); /** 【用途】標準要素。ボタン、入力欄。 */
   --pt-semantic-border-radius-lg: var(--pt-radius-lg); /** 【用途】大きな要素。カード、パネル。 */
+  --pt-semantic-border-radius-xl: var(--pt-radius-xl); /** 【用途】特大コンテナ。モーダル、大きなサーフェス。 */
   --pt-semantic-border-radius-pill: var(--pt-radius-full); /** 【用途】ピル形状。タグ、ステータスバッジ。 */
   --pt-motion-duration-instant: var(--pt-duration-fast); /** 【用途】マイクロインタラクション。hover時の色変化等。 */
   --pt-motion-duration-quick: var(--pt-duration-normal); /** 【用途】通常のトランジション。ボタン、リンク。 */
@@ -401,6 +416,7 @@
   --pt-spacing-gap-sm: var(--pt-space-2); /** 隣接要素間の距離を表す。タグリスト、小さなボタン群の間隔。 */
   --pt-spacing-gap-md: var(--pt-space-4); /** 隣接要素間の距離を表す。デフォルトのグリッドギャップ。カードリスト。 */
   --pt-spacing-gap-lg: var(--pt-space-6); /** 隣接要素間の距離を表す。セクション内のカード間など広い間隔。 */
+  --pt-spacing-gap-xl: var(--pt-space-8); /** 隣接要素間の距離を表す。セクション間の明確な分割など特大の間隔。 */
   --pt-typography-heading-xl-font-family: var(--pt-font-family-sans);
   --pt-typography-heading-xl-font-size: var(--pt-font-size-4xl);
   --pt-typography-heading-xl-font-weight: var(--pt-font-weight-bold);
@@ -445,6 +461,9 @@
   --pt-typography-code-md-font-size: var(--pt-font-size-sm);
   --pt-typography-code-md-font-weight: var(--pt-font-weight-normal);
   --pt-typography-code-md-line-height: var(--pt-font-line-height-normal);
+  --pt-avatar-radius-circle: var(--pt-radius-full); /** 完全な円形。ユーザーアバター用。 */
+  --pt-avatar-radius-rounded: var(--pt-radius-lg); /** 角丸。サムネイル用。 */
+  --pt-avatar-radius-square: var(--pt-radius-sm); /** 小さい角丸。ピクセルアート用。 */
   --pt-button-primary-bg-default: var(--pt-color-gray-800); /** ボタンの背景色。`background-color`に適用。 */
   --pt-button-primary-bg-hover: var(--pt-color-gray-700); /** ホバー時の背景色。defaultより一段明るくして反応を示す。 */
   --pt-button-primary-bg-pressed: var(--pt-color-gray-900); /** 押下時の背景色。defaultより一段暗くして押し込み感を表現。 */
@@ -453,6 +472,15 @@
   --pt-button-danger-bg-hover: var(--pt-color-red-600); /** ホバー時の背景色。defaultより一段暗く。 */
   --pt-button-danger-bg-pressed: var(--pt-color-red-700); /** 押下時の背景色。hoverより一段暗く。 */
   --pt-button-danger-bg-disabled: var(--pt-color-gray-200); /** 無効時の背景色。操作不可を視覚的に示す。 */
+  --pt-heading-accent-height: var(--pt-space-6); /** アクセントバーの高さ。テキストの行高さに合わせた値。 */
+  --pt-heading-accent-radius: var(--pt-radius-full); /** アクセントバーの角丸。pill形状にする。 */
+  --pt-heading-accent-gap: var(--pt-space-2); /** アクセントバーとテキスト間のギャップ。 */
+  --pt-heading-accent-color: var(--pt-color-gray-800); /** アクセントバーの色。プライマリカラー（ボタンと同じ）。 */
+  --pt-radio-button-hover-border: var(--pt-color-gray-400); /** ホバー時の枠線色。defaultより一段濃くして反応を示す。 */
+  --pt-radio-button-selected-bg: var(--pt-color-gray-800); /** 選択時の背景色。暗い色で選択状態を強調。 */
+  --pt-radio-button-selected-border: var(--pt-color-gray-800); /** 選択時の枠線色。背景と同色。 */
+  --pt-radio-button-border-width: var(--pt-semantic-border-width-thick); /** 枠線の太さ。`border-width`に適用。 */
+  --pt-surface-border-width: var(--pt-semantic-border-width-default); /** ボーダー幅。 */
   --pt-badge-neutral-bg: var(--pt-color-surface-hovered); /** バッジの背景色。`background-color`に適用。 */
   --pt-badge-neutral-text: var(--pt-color-text-primary); /** バッジのラベル色。`color`に適用。 */
   --pt-badge-win-bg: var(--pt-color-result-win-subtle); /** 正解バッジの背景色。薄いライム。 */
@@ -492,4 +520,51 @@
   --pt-card-padding-md: var(--pt-spacing-content-md); /** paddingプロパティに適用。カードコンポーネント専用。デフォルトの内部余白。 */
   --pt-card-padding-lg: var(--pt-spacing-content-lg); /** paddingプロパティに適用。カードコンポーネント専用。広々とした内部余白。 */
   --pt-card-radius: var(--pt-semantic-border-radius-lg); /** border-radiusプロパティに適用。カードコンポーネント専用。overflow: hiddenとセットで使用。 */
+  --pt-grid-gap-sm: var(--pt-spacing-gap-sm); /** 小ギャップ。コンパクトなグリッド。 */
+  --pt-grid-gap-md: var(--pt-spacing-gap-md); /** 中ギャップ。標準グリッド。デフォルト値。 */
+  --pt-grid-gap-lg: var(--pt-spacing-gap-lg); /** 大ギャップ。ゆったりしたグリッド。 */
+  --pt-heading-text-color: var(--pt-color-text-primary); /** 見出しテキストの色 */
+  --pt-radio-button-default-bg: var(--pt-color-surface-card); /** 未選択時の背景色。`background-color`に適用。 */
+  --pt-radio-button-default-border: var(--pt-color-border-default); /** 未選択時の枠線色。`border-color`に適用。 */
+  --pt-radio-button-default-text: var(--pt-color-text-primary); /** 未選択時のラベル色。`color`に適用。 */
+  --pt-radio-button-hover-bg: var(--pt-color-surface-hovered); /** ホバー時の背景色。インタラクション可能を示す。 */
+  --pt-radio-button-selected-text: var(--pt-color-text-inverse); /** 選択時のラベル色。暗い背景上で白文字。 */
+  --pt-radio-button-disabled-bg: var(--pt-color-surface-hovered); /** 無効時の背景色。操作不可を視覚的に示す。 */
+  --pt-radio-button-disabled-border: var(--pt-color-border-subtle); /** 無効時の枠線色。控えめな境界線。 */
+  --pt-radio-button-disabled-text: var(--pt-color-text-disabled); /** 無効時のラベル色。コントラストを下げて操作不可を示す。 */
+  --pt-radio-button-feedback-correct-bg: var(--pt-color-result-win-default); /** 正解時の背景色。正解・勝利を示す緑。 */
+  --pt-radio-button-feedback-correct-border: var(--pt-color-result-win-default); /** 正解時の枠線色。背景と同色。 */
+  --pt-radio-button-feedback-correct-text: var(--pt-color-text-inverse); /** 正解時のラベル色。緑背景上で白文字。 */
+  --pt-radio-button-feedback-wrong-bg: var(--pt-color-result-lose-default); /** 不正解時の背景色。不正解・敗北を示す赤。 */
+  --pt-radio-button-feedback-wrong-border: var(--pt-color-result-lose-default); /** 不正解時の枠線色。背景と同色。 */
+  --pt-radio-button-feedback-wrong-text: var(--pt-color-text-inverse); /** 不正解時のラベル色。赤背景上で白文字。 */
+  --pt-radio-button-feedback-actual-bg: var(--pt-color-surface-card); /** 正解表示時の背景色。Card背景のまま。 */
+  --pt-radio-button-feedback-actual-border: var(--pt-color-result-win-default); /** 正解表示時の枠線色。緑の枠で正解を示す。 */
+  --pt-radio-button-feedback-actual-text: var(--pt-color-result-win-default); /** 正解表示時のラベル色。緑テキストで強調。 */
+  --pt-radio-button-feedback-actual-ring: var(--pt-color-result-win-subtle); /** 正解表示時のリング色。box-shadowで外側に薄緑リング。 */
+  --pt-radio-button-focus-ring: var(--pt-color-border-focused); /** フォーカスリングの色。`outline`に適用。アクセシビリティ用。 */
+  --pt-radio-button-padding-x: var(--pt-spacing-content-md); /** 水平方向の内側余白。`padding-inline`に適用。 */
+  --pt-radio-button-padding-y: var(--pt-spacing-content-md); /** 垂直方向の内側余白。`padding-block`に適用。 */
+  --pt-radio-button-radius: var(--pt-semantic-border-radius-xl); /** 角丸。`border-radius`に適用。大きめで柔らかい印象。 */
+  --pt-radio-button-shadow-default: var(--pt-elevation-raised); /** デフォルト時の影。軽く浮いた印象。 */
+  --pt-radio-button-shadow-selected: var(--pt-elevation-overlay); /** 選択時の影。より強調された浮き上がり。 */
+  --pt-stack-gap-xs: var(--pt-spacing-gap-xs); /** 極小ギャップ。アイコンとラベルなど密接な要素間。 */
+  --pt-stack-gap-sm: var(--pt-spacing-gap-sm); /** 小ギャップ。関連性の高い要素間。 */
+  --pt-stack-gap-md: var(--pt-spacing-gap-md); /** 中ギャップ。標準的な要素間。デフォルト値。 */
+  --pt-stack-gap-lg: var(--pt-spacing-gap-lg); /** 大ギャップ。セクション内の区切り。 */
+  --pt-stack-gap-xl: var(--pt-spacing-gap-xl); /** 特大ギャップ。セクション間の明確な分割。 */
+  --pt-surface-variant-default-background: var(--pt-color-surface-card); /** デフォルト背景。白色ベース。 */
+  --pt-surface-variant-subtle-background: var(--pt-color-surface-page); /** 控えめな背景。セクション区分けに使用。 */
+  --pt-surface-variant-card-background: var(--pt-color-surface-card); /** カード背景。elevationと併用。 */
+  --pt-surface-variant-card-elevation: var(--pt-elevation-raised); /** カードの影。軽く浮いた状態。 */
+  --pt-surface-padding-sm: var(--pt-spacing-content-sm); /** 小パディング。コンパクトなコンテナ。 */
+  --pt-surface-padding-md: var(--pt-spacing-content-md); /** 中パディング。標準的なコンテナ。デフォルト値。 */
+  --pt-surface-padding-lg: var(--pt-spacing-content-lg); /** 大パディング。ゆったりしたコンテナ。 */
+  --pt-surface-radius-none: var(--pt-semantic-border-radius-none); /** 角丸なし。 */
+  --pt-surface-radius-sm: var(--pt-semantic-border-radius-sm); /** 小角丸。 */
+  --pt-surface-radius-md: var(--pt-semantic-border-radius-md); /** 中角丸。デフォルト値。 */
+  --pt-surface-radius-lg: var(--pt-semantic-border-radius-lg); /** 大角丸。 */
+  --pt-surface-radius-xl: var(--pt-semantic-border-radius-xl); /** 特大角丸。大きなコンテナやモーダル。 */
+  --pt-surface-radius-full: var(--pt-semantic-border-radius-pill); /** 完全円形/ピル形状。 */
+  --pt-surface-border-color: var(--pt-color-border-default); /** ボーダー色。 */
 }

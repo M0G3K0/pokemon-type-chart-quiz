@@ -34,7 +34,8 @@
 
 タイプ一覧（絵文字は任意）:
 - ✨ feat: 新機能
-- 🐛 fix: バグ修正
+- 🩹 fix: バグ修正
+- 🐛 bug: バグ報告（Issue用）
 - 📚 docs: ドキュメント
 - 🎨 style: スタイル変更
 - ♻️ refactor: リファクタリング
@@ -43,6 +44,10 @@
 - 🏗️ build: ビルド
 - 👷 ci: CI/CD
 - 🔧 chore: その他
+- ❓ question: 質問・議論（Issue用）
+- ⏪ revert: 変更を元に戻す
+- 💥 breaking: 破壊的変更
+- 🚧 wip: 作業中
 
 例: `feat: add sound effects and toggle switch`
 

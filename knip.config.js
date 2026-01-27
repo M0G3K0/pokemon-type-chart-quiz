@@ -17,8 +17,16 @@ module.exports = {
 		// TODO(Issue #34): Remove when first component imports tokens
 		'src/design-system/tokens/**/*',
 		'src/styles/generated/**/*',
-		// TODO: Remove when pt-spinner is integrated into game screen
-		'src/app/ui/pt-spinner/pt-spinner.ts',
+
+		// ─────────────────────────────────────────────────────────────────────
+		// Design System コンポーネント (src/app/ui/pt-*)
+		// ─────────────────────────────────────────────────────────────────────
+		// Design System は「カタログ」として存在することに価値がある。
+		// 使用されるかどうかは判断基準にならない。
+		// 各コンポーネントは将来の機能追加で使用される可能性があるため、
+		// 未使用であっても削除しない。
+		// ─────────────────────────────────────────────────────────────────────
+		'src/app/ui/pt-*/**/*',
 	],
 	ignoreDependencies: [
 		// Testing Library系はテストで使用（将来的に）

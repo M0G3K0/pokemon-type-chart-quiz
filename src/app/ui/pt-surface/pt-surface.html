@@ -1,0 +1,10 @@
+<div class="pt-surface" [class.pt-surface--default]="variant === 'default'"
+	[class.pt-surface--subtle]="variant === 'subtle'" [class.pt-surface--card]="variant === 'card'"
+	[class.pt-surface--ghost]="variant === 'ghost'" [class.pt-surface--padding-none]="padding === 'none'"
+	[class.pt-surface--padding-sm]="padding === 'sm'" [class.pt-surface--padding-md]="padding === 'md'"
+	[class.pt-surface--padding-lg]="padding === 'lg'" [class.pt-surface--radius-none]="radius === 'none'"
+	[class.pt-surface--radius-sm]="radius === 'sm'" [class.pt-surface--radius-md]="radius === 'md'"
+	[class.pt-surface--radius-lg]="radius === 'lg'" [class.pt-surface--radius-xl]="radius === 'xl'"
+	[class.pt-surface--radius-full]="radius === 'full'" [class.pt-surface--border]="border">
+	<ng-content></ng-content>
+</div>
