@@ -9,7 +9,7 @@ import { GridComponent } from '../../ui/pt-grid/pt-grid';
 import { TextComponent } from '../../ui/pt-text/pt-text';
 import { PtRadioButtonComponent, RadioButtonFeedbackState } from '../../ui/pt-radio-button';
 import { POKEMON_TYPES, getEffectiveness, PokemonType } from '../../domain/type-chart';
-import { BattleCardComponent } from './components/battle-card';
+import { BattleCardComponent } from './components';
 
 /** 回答後に次の問題へ進むまでの遅延（ミリ秒） */
 const AUTO_ADVANCE_DELAY_MS = 1000;
