@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+/**
+ * @what NgDocドキュメント用グローバルスタイル
+ * @why トークンとデモ用共通スタイルを一元管理
+ */
+
+/* Design Tokens */
+@import "../../../src/styles/generated/tokens.css";
+
+/* ==================================================
+   Demo Component Common Styles
+   NgDocデモ内のコンポーネント共通スタイル
+   ================================================== */
+
+/* 
+ * NgDocのデモコンテナ内のデモコンポーネントに適用
+ * .ng-doc-demo > デモコンポーネント の構造
+ */
+.ng-doc-demo>* {
+	display: flex;
+	gap: var(--pt-space-3);
+	align-items: center;
+	flex-wrap: wrap;
+}
