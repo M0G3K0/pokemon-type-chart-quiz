@@ -1,58 +1,59 @@
 ## 💡 概要
-
-コンポーネント品質を保証するための3つのガードレールを追加。
+GitHub Pages デプロイワークフローのNode.jsバージョンをv22に更新。
 
 ## 📝 変更内容
+- `.github/workflows/deploy-docs.yml`: Node.js 20 → 22 に変更
 
-### 新規ガードレール
+## 🔗 関連Issue
+- Related: #98 (GitHub Pages deployment)
 
-| ガードレール | 検査内容 | Issue |
-|-------------|---------|-------|
-| `component-structure` | pt-*コンポーネントの必須ファイル（ts/spec.ts）存在確認 | #54 |
-| `token-existence` | SCSSで使用されている`--pt-*`変数が定義されているか確認 | #55 |
-| `component-standards` | 上記 + ドキュメント存在 + テスト内容の統合検査 | #58 |
-
-### 追加されたnpmスクリプト
-
-```bash
-npm run guard:component-structure  # ファイル完全性チェック
-npm run guard:token-existence      # トークン存在チェック
-npm run guard:component-standards  # 統合チェック
-```
-
-### 検出される違反例
-
-- `pt-button.spec.ts` が存在しない
-- `--pt-border-radius-sm` を使用しているが、正しいトークン名は `--pt-semantic-border-radius-sm`
-- `docs/components/pt-card.md` が存在しない
-- `spec.ts` ファイルにテストケース（it/test）がない
+## 📷 スクリーンショット（該当する場合）
+N/A
 
 ## ✅ チェックリスト
+- [x] ビルドが成功する（`npm run build`）
+- [x] Lintエラーがない（`npm run lint`）
+- [x] テストが通る（`npm run test`）
+- [x] コミットメッセージが規約に従っている（`feat:`, `fix:`, `chore:`など）
+- [x] ブランチ名が規約に従っている（`feature/`, `fix/`, `chore/`など）
+- [x] 必要に応じてドキュメントを更新した
 
-- [x] `npm run guards:validate` 通過
-- [x] 各スクリプトの動作確認済み
-- [x] `guards/README.md` 更新済み
+## 📌 補足事項
+package.json で `node >= 22.0.0` を要求しているため、ワークフローもv22に合わせる必要がある。
 
-## 📷 動作確認
+--- 
 
-```
-🛡️ Checking component creation standards...
+## 📝 PRタイトルの命名規則:
+- `type: description` の形式にすること（Conventional Commits）
+- **英語で書くこと**（commitlint で検証されます）
 
-📦 Found 14 pt-* component(s)
+タイプ一覧（絵文字は任意）:
+- ✨ feat: 新機能
+- 🩹 fix: バグ修正
+- 🐛 bug: バグ報告（Issue用）
+- 📚 docs: ドキュメント
+- 🎨 style: スタイル変更
+- ♻️ refactor: リファクタリング
+- ⚡ perf: パフォーマンス改善
+- 🧪 test: テスト
+- 🏗️ build: ビルド
+- 👷 ci: CI/CD
+- 🔧 chore: その他
+- ❓ question: 質問・議論（Issue用）
+- ⏪ revert: 変更を元に戻す
+- 💥 breaking: 破壊的変更
+- 🚧 wip: 作業中
 
-❌ Component standards violations found:
+例: `feat: add sound effects and toggle switch`
 
-📁 Missing Required Files:
-   - Missing required file: pt-badge.ts
-   ...
+## 📖 レビュー用語集
 
-📄 Missing Documentation:
-   - Missing documentation: docs/components/pt-button.md
-   ...
-
-🧪 Empty Test Files:
-   - No test cases found in: pt-avatar.spec.ts
-   ...
-```
-
-Closes #54, Closes #55, Closes #58
+| 用語 | 意味 | 説明 |
+|------|------|------|
+| **LGTM** | Looks Good To Me | 良いと思います |
+| **WIP** | Work In Progress | 対応中 |
+| **FYI** | For Your Information | 参考までに |
+| **must** | must | 必須 |
+| **want** | want | できれば |
+| **imo** | in my opinion | 私の意見では |
+| **nits** | nitpick | 些細な指摘（重箱の隅をつつくの意味） |
