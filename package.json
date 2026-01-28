@@ -7,6 +7,7 @@
     "build": "ng build",
     "docs:serve": "ng serve docs",
     "docs:build": "ng build docs",
+    "docs:build:ghpages": "ng build docs --base-href /pokemon-type-chart-quiz/",
     "watch": "ng build --watch --configuration development",
     "test": "vitest run",
     "lint": "eslint src/**/*.ts",
