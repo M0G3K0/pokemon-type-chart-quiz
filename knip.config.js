@@ -27,6 +27,8 @@ module.exports = {
 		// 未使用であっても削除しない。
 		// ─────────────────────────────────────────────────────────────────────
 		'src/app/ui/pt-*/**/*',
+		// NgDocドキュメントプロジェクト（別アプリとして独立）
+		'projects/docs/**/*',
 	],
 	ignoreDependencies: [
 		// Testing Library系はテストで使用（将来的に）
@@ -35,5 +37,8 @@ module.exports = {
 		'@testing-library/user-event',
 		// Angular testing用（vitest直接実行のため明示的importなし）
 		'@angular/platform-browser-dynamic',
+		// NgDoc用（アセット提供・ビルダー内部使用のため明示的importなし）
+		'@ng-doc/ui-kit',
+		'@ng-doc/core',
 	],
 };
