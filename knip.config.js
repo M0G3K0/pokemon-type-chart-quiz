@@ -37,7 +37,8 @@ module.exports = {
 		'@testing-library/user-event',
 		// Angular testing用（vitest直接実行のため明示的importなし）
 		'@angular/platform-browser-dynamic',
-		// NgDoc用（アセット提供のため明示的importなし）
+		// NgDoc用（アセット提供・ビルダー内部使用のため明示的importなし）
 		'@ng-doc/ui-kit',
+		'@ng-doc/core',
 	],
 };
