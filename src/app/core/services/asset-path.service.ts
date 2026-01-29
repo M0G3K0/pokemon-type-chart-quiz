@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { APP_BASE_HREF } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
 
 /**
  * Asset path resolver service
@@ -27,12 +27,11 @@ export class AssetPathService {
 	private readonly baseHref: string;
 
 	constructor() {
-		// Inject APP_BASE_HREF with a fallback to '/' for development
-		try {
-			this.baseHref = inject(APP_BASE_HREF, { optional: true }) || '/';
-		} catch {
-			this.baseHref = '/';
-		}
+		// Read base href from the <base> tag in the document
+		// This is automatically set by Angular when using --base-href option
+		const doc = inject(DOCUMENT);
+		const baseElement = doc.querySelector('base');
+		this.baseHref = baseElement?.getAttribute('href') || '/';
 	}
 
 	/**
