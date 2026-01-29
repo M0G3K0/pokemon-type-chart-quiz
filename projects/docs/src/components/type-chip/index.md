@@ -1,6 +1,5 @@
 ---
 title: Guidelines
-route: guidelines
 ---
 
 # Type Chip
