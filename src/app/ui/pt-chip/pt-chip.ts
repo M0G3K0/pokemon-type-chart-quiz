@@ -1,19 +1,20 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IconComponent } from '../pt-icon/pt-icon';
+import { IconComponent } from '@ui/pt-icon/pt-icon';
+import { AssetPathService } from '@app/core/services/asset-path.service';
 
 /**
  * Chip component for displaying compact information units
  * 
  * @example
  * <!-- Icon only (square) -->
- * <pt-chip [icon]="'/icons/fire.svg'" [bgColor]="'var(--pt-color-pokemon-fire-500)'" rounded="full" [iconOnly]="true"></pt-chip>
+ * <pt-chip [icon]="iconPath" [bgColor]="'var(--pt-color-pokemon-fire-500)'" rounded="full" [iconOnly]="true"></pt-chip>
  * 
  * <!-- Text only -->
  * <pt-chip [bgColor]="'var(--pt-color-pokemon-fire-500)'" size="sm">ほのお</pt-chip>
  * 
  * <!-- Icon + Text -->
- * <pt-chip [icon]="'/icons/fire.svg'" [bgColor]="'var(--pt-color-pokemon-fire-500)'" rounded="full">ほのお</pt-chip>
+ * <pt-chip [icon]="iconPath" [bgColor]="'var(--pt-color-pokemon-fire-500)'" rounded="full">ほのお</pt-chip>
  * 
  * <!-- Removable -->
  * <pt-chip [bgColor]="'var(--pt-color-slate-200)'" [removable]="true" (remove)="onRemove()">Filter</pt-chip>
@@ -32,6 +33,7 @@ import { IconComponent } from '../pt-icon/pt-icon';
 	styleUrls: ['./pt-chip.scss'],
 })
 export class ChipComponent {
+	private readonly assetPath = inject(AssetPathService);
 	/**
 	 * Chip size
 	 * @default 'md'
@@ -122,5 +124,12 @@ export class ChipComponent {
 			default:
 				return 'sm';
 		}
+	}
+
+	/**
+	 * Get the close icon path (for remove button)
+	 */
+	get closeIconPath(): string {
+		return this.assetPath.icon('close');
 	}
 }

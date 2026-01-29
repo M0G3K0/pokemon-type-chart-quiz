@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { ChipComponent } from '../pt-chip/pt-chip';
-import { PokemonType } from '../../domain/type-chart';
+import { Component, Input, inject } from '@angular/core';
+import { ChipComponent } from '@ui/pt-chip/pt-chip';
+import { PokemonType } from '@domain/type-chart';
+import { AssetPathService } from '@app/core/services/asset-path.service';
 
 /**
  * Pokemon Type Chip component (Semantic Wrapper)
@@ -43,6 +44,8 @@ import { PokemonType } from '../../domain/type-chart';
   `],
 })
 export class TypeChipComponent {
+	private readonly assetPath = inject(AssetPathService);
+
 	/**
 	 * Pokemon Type
 	 */
@@ -87,7 +90,7 @@ export class TypeChipComponent {
 	 * Get icon path for the Pokemon type
 	 */
 	get iconPath(): string {
-		return `/icons/${this.type}.svg`;
+		return this.assetPath.icon(this.type);
 	}
 
 	/**
@@ -97,3 +100,4 @@ export class TypeChipComponent {
 		return `var(--pt-color-pokemon-${this.type}-500)`;
 	}
 }
+

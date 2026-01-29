@@ -90,6 +90,39 @@ import { POKEMON_TYPES } from '@domain/type-chart';
 - `@ui/*` → `./src/app/ui/*`
 - `@domain/*` → `./src/app/domain/*`
 
+### 1.6 アセットパスの動的解決（重要）
+
+GitHub Pagesなどサブパスでホストされる環境では、アイコンなどのアセットパスを動的に解決する必要があります。
+
+**ハードコードされたパスは使用禁止**:
+
+```typescript
+// ❌ ハードコード（GitHub Pagesで404になる）
+get iconPath(): string {
+  return `/icons/${this.type}.svg`;
+}
+
+// ✅ AssetPathService を使用（base href を考慮）
+import { AssetPathService } from '@app/core/services/asset-path.service';
+
+private readonly assetPath = inject(AssetPathService);
+
+get iconPath(): string {
+  return this.assetPath.icon(this.type);  // → '/pokemon-type-chart-quiz/icons/fire.svg'
+}
+```
+
+**AssetPathService のAPI**:
+- `resolve(path)`: 任意のパスを解決（例: `resolve('/assets/image.png')`）
+- `icon(name)`: アイコンパスを解決（例: `icon('fire')` → `/icons/fire.svg`）
+
+**テンプレートでの使用**:
+
+```html
+<!-- コンポーネントのゲッターを通じて使用 -->
+<pt-icon [src]="iconPath"></pt-icon>
+```
+
 ---
 
 ## Step 2: カテゴリ作成（初回のみ）
