@@ -16,6 +16,6 @@
 
 	<!-- Remove Button (optional) -->
 	<button *ngIf="removable" (click)="remove.emit()" class="pt-chip__remove" type="button" aria-label="Remove">
-		<pt-icon src="/icons/close.svg" size="sm"></pt-icon>
+		<pt-icon [src]="closeIconPath" size="sm"></pt-icon>
 	</button>
 </div>
