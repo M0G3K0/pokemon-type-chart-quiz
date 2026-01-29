@@ -1,8 +1,8 @@
 ## 💡 概要
-GitHub Pages デプロイワークフローのNode.jsバージョンをv22に更新。
+package-lock.jsonを再生成してnpm ci失敗を修正。
 
 ## 📝 変更内容
-- `.github/workflows/deploy-docs.yml`: Node.js 20 → 22 に変更
+- `package-lock.json` を再生成（chokidar@3.6.0等の依存関係を同期）
 
 ## 🔗 関連Issue
 - Related: #98 (GitHub Pages deployment)
@@ -19,7 +19,7 @@ N/A
 - [x] 必要に応じてドキュメントを更新した
 
 ## 📌 補足事項
-package.json で `node >= 22.0.0` を要求しているため、ワークフローもv22に合わせる必要がある。
+GitHub Actionsでnpm ciが失敗していたため、package-lock.jsonを再生成。
 
 --- 
 
