@@ -30,10 +30,21 @@
 
 `angular.json` で定義されたバンドルサイズ制限。
 
+#### メインアプリ（pokemon-type-chart-quiz）
+
 - **Initial JS**: 500KB (warning) / 750KB (error)
 - **Component Style**: 50KB (warning) / 100KB (error)
 
 **現状の課題**: `styles.css` が1MBを超えており、Issue #34 でのリファクタリングが必要。
+
+#### NgDoc（docs）
+
+ドキュメントサイトはmermaid等の重いライブラリを含むため、メインアプリより緩い基準を適用。
+
+- **Initial JS**: 2MB (warning) / 5MB (error)
+- **Component Style**: 4KB (warning) / 8KB (error)
+
+**理由**: NgDocはユーザー向けプロダクションアプリではなく、開発者向けドキュメントサイトのため、パフォーマンス基準を緩和。
 
 ---
 

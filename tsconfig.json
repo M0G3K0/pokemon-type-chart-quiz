@@ -4,6 +4,15 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@domain/*": [
+        "./src/app/domain/*"
+      ],
+      "@ui/*": [
+        "./src/app/ui/*"
+      ],
       "@ng-doc/generated": [
         "./ng-doc/docs/index.ts"
       ],
