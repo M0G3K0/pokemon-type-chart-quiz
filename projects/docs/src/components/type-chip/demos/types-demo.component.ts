@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { TypeChipComponent } from '../../../../../../src/app/ui/pt-type-chip/pt-type-chip';
-import { POKEMON_TYPES, POKEMON_TYPES_MAP, PokemonType } from '../../../../../../src/app/domain/type-chart';
+import { TypeChipComponent } from '@ui/pt-type-chip/pt-type-chip';
+import { POKEMON_TYPES, POKEMON_TYPES_MAP, PokemonType } from '@domain/type-chart';
 
 @Component({
 	selector: 'type-chip-types-demo',

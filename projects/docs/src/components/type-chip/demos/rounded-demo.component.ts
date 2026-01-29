@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { TypeChipComponent } from '../../../../../../src/app/ui/pt-type-chip/pt-type-chip';
-import { CHIP_ROUNDED, ChipRounded } from '../../../../../../src/app/ui/pt-chip/pt-chip.types';
+import { TypeChipComponent } from '@ui/pt-type-chip/pt-type-chip';
+import { CHIP_ROUNDED, ChipRounded } from '@ui/pt-chip/pt-chip.types';
 
 @Component({
 	selector: 'type-chip-rounded-demo',
