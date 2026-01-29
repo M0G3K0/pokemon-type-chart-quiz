@@ -129,6 +129,11 @@
               {
                 "glob": "**/*",
                 "input": "projects/docs/public"
+              },
+              {
+                "glob": "**/*",
+                "input": "public/icons",
+                "output": "icons"
               }
             ],
             "styles": [

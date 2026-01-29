@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { TypeChipComponent } from '../../../../../../src/app/ui/pt-type-chip/pt-type-chip';
-import { CHIP_SIZES, ChipSize } from '../../../../../../src/app/ui/pt-chip/pt-chip.types';
+import { TypeChipComponent } from '@ui/pt-type-chip/pt-type-chip';
+import { CHIP_SIZES, ChipSize } from '@ui/pt-chip/pt-chip.types';
 
 @Component({
 	selector: 'type-chip-sizes-demo',

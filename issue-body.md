@@ -1,50 +1,63 @@
 ## 💡 概要
 
-Design System コンポーネントの import が barrel file (`index.ts`) 経由ではなく、直接ファイル参照になっている箇所を修正する。
+`pt-chip`の`bgColor`プロパティは任意のCSS値を受け付けるため、AIが色を選ぶ際に迷いやすい。より型安全で意図が明確なAPIに改善したい。
 
 ## 📝 詳細
 
 ### 現状の問題
 
 ```typescript
-// ❌ 直接参照（現状）
-import { StackComponent } from '../../ui/pt-stack/pt-stack';
-
-// ✅ barrel 経由（理想）
-import { StackComponent } from '../../ui/pt-stack';
+// 現在: 任意のCSS値を受け付ける
+[bgColor]="'var(--pt-color-pokemon-fire-500)'"
+[bgColor]="'var(--pt-color-gray-600)'"
+[bgColor]="'#FF0000'"  // 何でも入る
 ```
 
-### 影響範囲
+- AIが適切な色を選ぶ際に、全トークンから選択する必要があり迷う
+- タイポや存在しないトークン名を指定してもエラーにならない
+- 意図が不明確（なぜその色を選んだのか）
 
-以下のファイルで直接参照を使用中（計10件）:
+### 改善案
 
-**quiz.container.ts (4件)**
-- `pt-stack/pt-stack`
-- `pt-surface/pt-surface`
-- `pt-grid/pt-grid`
-- `pt-text/pt-text`
+#### Option A: Variant Preset Pattern
+```typescript
+// 定義済みのvariantから選択
+[variant]="'primary'"
+[variant]="'secondary'"
+[variant]="'success'"
+[variant]="'danger'"
+// bgColor/textColorは内部でvariantから自動解決
+```
 
-**battle-card.ts (6件)**
-- `pt-type-chip/pt-type-chip`
-- `pt-avatar/pt-avatar`
-- `pt-icon/pt-icon`
-- `pt-stack/pt-stack`
-- `pt-surface/pt-surface`
-- `pt-text/pt-text`
+#### Option B: Semantic Color Type
+```typescript
+// 許可される色の型を制限
+type ChipColor = 'gray' | 'primary' | 'success' | 'warning' | 'danger';
+[color]="'gray'"
+```
 
-### 必要な対応
+#### Option C: Component Token + Strict Typing
+```typescript
+// chip.jsonで定義されたトークンのみ許可
+// 実行時にトークン存在チェック
+```
 
-1. 各 `pt-*` ディレクトリに `index.ts` (barrel file) を作成/確認
-2. import パスを barrel 経由に変更
-3. ガードレールを追加して今後の直接参照を防止
+### 考慮事項
+
+- `pt-type-chip`は既に`type`プロパティでこのパターンを実装済み
+- `pt-chip`は汎用コンポーネントなので、ある程度の柔軟性も必要
+- デモでの使用を想定すると、意図が明確な方がAIにやさしい
 
 ## ✅ やることリスト
-
-- [ ] 不足している `index.ts` の作成
-- [ ] `quiz.container.ts` の import 修正
-- [ ] `battle-card.ts` の import 修正
-- [ ] （任意）ESLint ルールで直接参照を禁止
+- [ ] pt-chipのAPIデザインを再検討
+- [ ] variant/colorプロパティの導入を検討
+- [ ] bgColor/textColorを非推奨にするか、variantとの併用を許可するか決定
+- [ ] 破壊的変更の場合、マイグレーションガイドを作成
 
 ## 📷 参考資料（任意）
 
-- https://basarat.gitbook.io/typescript/main-1/barrel
+関連Issue: #94（pt-chipトークンハードコード問題）
+
+参考実装:
+- Material UI Chip: `color="primary" | "secondary" | "success" | "error"`
+- Chakra UI Tag: `colorScheme="gray" | "red" | "green" | ...`
