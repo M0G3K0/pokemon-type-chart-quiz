@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TypeChipComponent } from '../../../../../../src/app/ui/pt-type-chip/pt-type-chip';
+import { TypeChipComponent } from '@ui/pt-type-chip/pt-type-chip';
 
 @Component({
   selector: 'type-chip-variants-demo',

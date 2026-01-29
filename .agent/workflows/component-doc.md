@@ -72,6 +72,24 @@ export type ChipSize = (typeof CHIP_SIZES)[number];
 
 **アセットが見つからない場合（404）**: `angular.json` に上記のような設定を追加
 
+### 1.5 パスエイリアスの使用
+
+ドキュメントコンポーネントからメインアプリのコードをインポートする際は、パスエイリアスを使用：
+
+```typescript
+// ❌ 相対パスは深くなりすぎて保守が困難
+import { Component } from '../../../../../../src/app/ui/pt-chip/pt-chip';
+
+// ✅ パスエイリアスで簡潔に
+import { Component } from '@ui/pt-chip/pt-chip';
+import { POKEMON_TYPES } from '@domain/type-chart';
+```
+
+**利用可能なエイリアス** (`tsconfig.json` で定義):
+- `@app/*` → `./src/app/*`
+- `@ui/*` → `./src/app/ui/*`
+- `@domain/*` → `./src/app/domain/*`
+
 ---
 
 ## Step 2: カテゴリ作成（初回のみ）
@@ -144,8 +162,8 @@ export default ComponentNamePage;
 ```typescript
 // demos/types-demo.component.ts
 import { Component } from '@angular/core';
-import { ComponentName } from '../../../../../../src/app/ui/pt-[component]/pt-[component]';
-import { VARIANTS, VARIANTS_MAP } from '../../../../../../src/app/domain/[domain]';
+import { ComponentName } from '@ui/pt-[component]/pt-[component]';
+import { VARIANTS, VARIANTS_MAP } from '@domain/[domain]';
 
 @Component({
   selector: '[component]-types-demo',
@@ -173,8 +191,8 @@ export class TypesDemoComponent {
 ```typescript
 // demos/sizes-demo.component.ts
 import { Component } from '@angular/core';
-import { ComponentName } from '../../../../../../src/app/ui/pt-[component]/pt-[component]';
-import { COMPONENT_SIZES, ComponentSize } from '../../../../../../src/app/ui/pt-[component]/pt-[component].types';
+import { ComponentName } from '@ui/pt-[component]/pt-[component]';
+import { COMPONENT_SIZES, ComponentSize } from '@ui/pt-[component]/pt-[component].types';
 
 @Component({
   selector: '[component]-sizes-demo',
@@ -198,8 +216,8 @@ export class SizesDemoComponent {
 ```typescript
 // demos/playground.component.ts
 import { Component, Input } from '@angular/core';
-import { ComponentName } from '../../../../../../src/app/ui/pt-[component]/pt-[component]';
-import { VARIANTS_MAP } from '../../../../../../src/app/domain/[domain]';
+import { ComponentName } from '@ui/pt-[component]/pt-[component]';
+import { VARIANTS_MAP } from '@domain/[domain]';
 
 @Component({
   selector: '[component]-playground',

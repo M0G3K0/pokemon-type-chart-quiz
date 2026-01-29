@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { TypeChipComponent } from '../../../../../../src/app/ui/pt-type-chip/pt-type-chip';
-import { POKEMON_TYPES_MAP } from '../../../../../../src/app/domain/type-chart';
+import { TypeChipComponent } from '@ui/pt-type-chip/pt-type-chip';
+import { POKEMON_TYPES_MAP } from '@domain/type-chart';
 
 /**
  * Playground wrapper for TypeChipComponent

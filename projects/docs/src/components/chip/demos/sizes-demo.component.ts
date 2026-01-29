@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ChipComponent } from '../../../../../../src/app/ui/pt-chip/pt-chip';
-import { CHIP_SIZES, ChipSize } from '../../../../../../src/app/ui/pt-chip/pt-chip.types';
+import { ChipComponent } from '@ui/pt-chip/pt-chip';
+import { CHIP_SIZES, ChipSize } from '@ui/pt-chip/pt-chip.types';
 
 @Component({
-	selector: 'chip-sizes-demo',
-	standalone: true,
-	imports: [ChipComponent],
-	template: `
+  selector: 'chip-sizes-demo',
+  standalone: true,
+  imports: [ChipComponent],
+  template: `
     @for (size of sizes; track size) {
       <pt-chip 
         [size]="size"
@@ -19,5 +19,5 @@ import { CHIP_SIZES, ChipSize } from '../../../../../../src/app/ui/pt-chip/pt-ch
   `,
 })
 export class ChipSizesDemoComponent {
-	readonly sizes: ChipSize[] = CHIP_SIZES;
+  readonly sizes: ChipSize[] = CHIP_SIZES;
 }
