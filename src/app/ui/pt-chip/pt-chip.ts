@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IconComponent } from '../pt-icon/pt-icon';
-import { AssetPathService } from '../../core/services/asset-path.service';
+import { IconComponent } from '@ui/pt-icon/pt-icon';
+import { AssetPathService } from '@app/core/services/asset-path.service';
 
 /**
  * Chip component for displaying compact information units

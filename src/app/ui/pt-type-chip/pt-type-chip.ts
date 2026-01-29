@@ -1,7 +1,7 @@
 import { Component, Input, inject } from '@angular/core';
-import { ChipComponent } from '../pt-chip/pt-chip';
-import { PokemonType } from '../../domain/type-chart';
-import { AssetPathService } from '../../core/services/asset-path.service';
+import { ChipComponent } from '@ui/pt-chip/pt-chip';
+import { PokemonType } from '@domain/type-chart';
+import { AssetPathService } from '@app/core/services/asset-path.service';
 
 /**
  * Pokemon Type Chip component (Semantic Wrapper)

@@ -1,14 +1,14 @@
 import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Pokemon } from '../../../../domain/pokemon.schema';
-import { PokemonType, POKEMON_TYPES_MAP } from '../../../../domain/type-chart';
-import { TypeChipComponent } from '../../../../ui/pt-type-chip/pt-type-chip';
-import { AvatarComponent } from '../../../../ui/pt-avatar/pt-avatar';
-import { IconComponent } from '../../../../ui/pt-icon/pt-icon';
-import { StackComponent } from '../../../../ui/pt-stack/pt-stack';
-import { SurfaceComponent } from '../../../../ui/pt-surface/pt-surface';
-import { TextComponent } from '../../../../ui/pt-text/pt-text';
-import { AssetPathService } from '../../../../core/services/asset-path.service';
+import { Pokemon } from '@domain/pokemon.schema';
+import { PokemonType, POKEMON_TYPES_MAP } from '@domain/type-chart';
+import { TypeChipComponent } from '@ui/pt-type-chip/pt-type-chip';
+import { AvatarComponent } from '@ui/pt-avatar/pt-avatar';
+import { IconComponent } from '@ui/pt-icon/pt-icon';
+import { StackComponent } from '@ui/pt-stack/pt-stack';
+import { SurfaceComponent } from '@ui/pt-surface/pt-surface';
+import { TextComponent } from '@ui/pt-text/pt-text';
+import { AssetPathService } from '@app/core/services/asset-path.service';
 
 /**
  * Quiz画面のバトルカード（攻撃側・防御側エリア）
