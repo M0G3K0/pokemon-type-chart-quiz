@@ -12,7 +12,8 @@
 		border-radius: 50%;
 		animation: pt-spinner-rotate var(--pt-spinner-animation-duration) linear infinite;
 		border-style: solid;
-		border-color: transparent;
+		// ドーナツ状スピナー: トラック（薄い色）+ 回転部分（濃い色）
+		border-color: var(--pt-spinner-color-track);
 	}
 
 	// Size variants

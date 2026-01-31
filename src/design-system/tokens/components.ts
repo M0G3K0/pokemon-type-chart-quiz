@@ -206,7 +206,8 @@ export const components = {
     },
     "color": {
       "primary": "#1f2937",
-      "secondary": "#6b7280"
+      "secondary": "#6b7280",
+      "track": "#0000001a"
     },
     "animation": {
       "duration": "0.8s"

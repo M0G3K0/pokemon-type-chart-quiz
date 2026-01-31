@@ -1,19 +1,37 @@
 ## 💡 概要
-NgDocドキュメントサイトのバンドルサイズbudget制限を緩和し、CIビルドが通るようにする。
+
+Phase 2 のトークン修正を実施。Tier3コンポーネントトークンを追加し、コンポーネントSCSSをTier3トークン参照に更新しました。
 
 ## 📝 変更内容
-- **angular.json**: docs プロジェクトのbudgetを緩和
-  - Initial JS: 500kB/1MB → 2MB/5MB
-- **performance.guard.md**: NgDoc用の別基準を明文化
-  - メインアプリとドキュメントサイトの基準を分離
+
+### Tier3トークンファイル新規作成
+- `design-tokens/tier3-component/icon.json` - アイコンサイズと色トークン
+- `design-tokens/tier3-component/spinner.json` - スピナーサイズ、ボーダー幅、色、アニメーション時間
+- `design-tokens/tier3-component/text.json` - テキスト色トークン（Typographyは意図的にTier2直接参照）
+- `design-tokens/tier3-component/chip.json` - チップのパディング、ギャップ、フォント、角丸
+- `design-tokens/tier3-component/type-chip.json` - Pokemonタイプチップのテキスト色
+
+### コンポーネントSCSS更新
+- `pt-spinner.scss` - 無効なトークン参照（`--spacing-4`等）をTier3トークン参照に修正
+- `pt-icon.scss` - Tier3トークン参照に更新
+- `pt-chip.scss` - Tier3トークン参照に更新
+- `pt-text.scss` - 色をTier3トークン参照に更新
+
+### 設定ファイル更新
+- `style-dictionary.config.mjs` - TypeScript出力に新規コンポーネントを追加
 
 ## 🔗 関連Issue
-<!-- 該当なし -->
+
+Partially addresses:
+- #107 (standardize Tier3 token strategy)
+- #56 (validate design token usage)
 
 ## 📷 スクリーンショット（該当する場合）
-該当なし（設定変更のみ）
+
+UI変更なし（トークン参照の内部修正のみ）
 
 ## ✅ チェックリスト
+
 - [x] ビルドが成功する（`npm run build`）
 - [x] Lintエラーがない（`npm run lint`）
 - [x] テストが通る（`npm run test`）
@@ -22,11 +40,14 @@ NgDocドキュメントサイトのバンドルサイズbudget制限を緩和し
 - [x] 必要に応じてドキュメントを更新した
 
 ## 📌 補足事項
-NgDocはmermaid等の重いライブラリを含むため、メインアプリより大きなバンドルサイズになります。
 
-現在のバンドルサイズ: **1.63 MB**（緩和後の上限 5MB 以内）
+### トークン設計方針
+- **全てのUIコンポーネントにTier3トークンを作成する** という方針（`docs/decisions/token-strategy.md`参照）
+- `pt-text` はTypographyについてはTier2を直接参照（意図的な設計）、色のみTier3
 
-ドキュメントサイトはユーザー向けプロダクションアプリではなく開発者向けのため、パフォーマンス基準を緩和しても問題ありません。
+### 修正された問題
+- `pt-spinner` が参照していた `--spacing-4`, `--spacing-10`, `--spacing-16`, `--color-primary`, `--color-secondary` は存在しないトークンだった
+- これらを正しいTier3トークン `--pt-spinner-size-*`, `--pt-spinner-color-*` に修正
 
 --- 
 
