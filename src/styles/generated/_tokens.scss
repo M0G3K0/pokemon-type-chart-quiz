@@ -570,7 +570,7 @@ $pt-radio-button-feedback-actual-ring: $pt-color-result-win-subtle; // 正解表
 $pt-radio-button-focus-ring: $pt-color-border-focused; // フォーカスリングの色。`outline`に適用。アクセシビリティ用。
 $pt-radio-button-padding-x: $pt-spacing-content-md; // 水平方向の内側余白。`padding-inline`に適用。
 $pt-radio-button-padding-y: $pt-spacing-content-sm; // 垂直方向の内側余白。`padding-block`に適用。よりコンパクトに。
-$pt-radio-button-radius: $pt-semantic-border-radius-xl; // 角丸。`border-radius`に適用。大きめで柔らかい印象。
+$pt-radio-button-radius: $pt-semantic-border-radius-md; // 角丸。`border-radius`に適用。Buttonと統一。
 $pt-radio-button-shadow-default: $pt-elevation-raised; // デフォルト時の影。軽く浮いた印象。
 $pt-radio-button-shadow-selected: $pt-elevation-overlay; // 選択時の影。より強調された浮き上がり。
 $pt-spinner-color-primary: $pt-color-text-primary; // プライマリカラー。デフォルトのスピナー色。

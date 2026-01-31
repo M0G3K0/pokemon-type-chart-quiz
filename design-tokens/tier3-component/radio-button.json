@@ -153,9 +153,9 @@
 			}
 		},
 		"radius": {
-			"value": "{semantic-border.radius.xl}",
+			"value": "{semantic-border.radius.md}",
 			"type": "borderRadius",
-			"$description": "角丸。`border-radius`に適用。大きめで柔らかい印象。"
+			"$description": "角丸。`border-radius`に適用。Buttonと統一。"
 		},
 		"borderWidth": {
 			"value": "{semantic-border.width.thick}",
