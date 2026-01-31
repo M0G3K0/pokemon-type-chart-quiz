@@ -305,6 +305,8 @@
   --pt-button-ghost-bg-disabled: rgba(0, 0, 0, 0); /** 無効時の背景色。透明のまま。 */
   --pt-button-ghost-border-default: rgba(0, 0, 0, 0); /** 枠線色。Ghostは枠なし。 */
   --pt-button-danger-border-default: rgba(0, 0, 0, 0); /** 枠線色。Dangerは枠なし。 */
+  --pt-chip-radius-none: 0; /** 角丸なし。 */
+  --pt-chip-radius-full: 9999px; /** 完全な丸み（ピル形状）。 */
   --pt-grid-columns-1: 1; /** 1カラム。モバイルでの単一カラム表示。 */
   --pt-grid-columns-2: 2; /** 2カラム。選択肢表示のデフォルト。 */
   --pt-grid-columns-3: 3; /** 3カラム。sm以上での選択肢表示。 */
@@ -312,6 +314,10 @@
   --pt-grid-columns-6: 6; /** 6カラム。高密度レイアウト。 */
   --pt-grid-gap-none: 0; /** ギャップなし。 */
   --pt-heading-accent-width: 6px; /** アクセントバーの幅。視覚的なアクセントとしては十分かつ控えめなサイズ。 */
+  --pt-spinner-border-width-sm: 2px; /** 小サイズ時のボーダー幅。 */
+  --pt-spinner-border-width-md: 3px; /** 中サイズ時のボーダー幅。 */
+  --pt-spinner-border-width-lg: 4px; /** 大サイズ時のボーダー幅。 */
+  --pt-spinner-animation-duration: 0.8s; /** 1回転にかかる時間。 */
   --pt-stack-gap-none: 0; /** ギャップなし。要素同士を密着させる場合に使用。 */
   --pt-surface-variant-ghost-background: rgba(0, 0, 0, 0); /** 透明背景。親要素の背景を透過。 */
   --pt-surface-padding-none: 0; /** パディングなし。 */
@@ -472,14 +478,26 @@
   --pt-button-danger-bg-hover: var(--pt-color-red-600); /** ホバー時の背景色。defaultより一段暗く。 */
   --pt-button-danger-bg-pressed: var(--pt-color-red-700); /** 押下時の背景色。hoverより一段暗く。 */
   --pt-button-danger-bg-disabled: var(--pt-color-gray-200); /** 無効時の背景色。操作不可を視覚的に示す。 */
+  --pt-chip-font-size-sm: var(--pt-font-size-xs); /** 小サイズ時のフォントサイズ。 */
+  --pt-chip-font-size-md: var(--pt-font-size-sm); /** 中サイズ時のフォントサイズ。 */
+  --pt-chip-font-size-lg: var(--pt-font-size-md); /** 大サイズ時のフォントサイズ。 */
+  --pt-chip-font-weight: var(--pt-font-weight-medium); /** チップのフォントウェイト。 */
+  --pt-chip-font-line-height-tight: var(--pt-font-line-height-tight); /** 小サイズ時の行高。 */
+  --pt-chip-font-line-height-normal: var(--pt-font-line-height-normal); /** 中・大サイズ時の行高。 */
   --pt-heading-accent-height: var(--pt-space-6); /** アクセントバーの高さ。テキストの行高さに合わせた値。 */
   --pt-heading-accent-radius: var(--pt-radius-full); /** アクセントバーの角丸。pill形状にする。 */
   --pt-heading-accent-gap: var(--pt-space-2); /** アクセントバーとテキスト間のギャップ。 */
   --pt-heading-accent-color: var(--pt-color-gray-800); /** アクセントバーの色。プライマリカラー（ボタンと同じ）。 */
+  --pt-icon-size-sm: var(--pt-space-5); /** 小サイズ (20px)。インラインアイコン、ボタン内アイコンに使用。 */
+  --pt-icon-size-md: var(--pt-space-8); /** 中サイズ (32px)。標準的なアイコン表示に使用。 */
+  --pt-icon-size-lg: var(--pt-space-12); /** 大サイズ (48px)。強調表示、空状態アイコンに使用。 */
   --pt-radio-button-hover-border: var(--pt-color-gray-400); /** ホバー時の枠線色。defaultより一段濃くして反応を示す。 */
   --pt-radio-button-selected-bg: var(--pt-color-gray-800); /** 選択時の背景色。暗い色で選択状態を強調。 */
   --pt-radio-button-selected-border: var(--pt-color-gray-800); /** 選択時の枠線色。背景と同色。 */
   --pt-radio-button-border-width: var(--pt-semantic-border-width-thick); /** 枠線の太さ。`border-width`に適用。 */
+  --pt-spinner-size-sm: var(--pt-space-4); /** 小サイズ (16px)。インライン、ボタン内のローディングに使用。 */
+  --pt-spinner-size-md: var(--pt-space-10); /** 中サイズ (40px)。標準的なローディング表示に使用。 */
+  --pt-spinner-size-lg: var(--pt-space-16); /** 大サイズ (64px)。フルスクリーンローディングに使用。 */
   --pt-surface-border-width: var(--pt-semantic-border-width-default); /** ボーダー幅。 */
   --pt-badge-neutral-bg: var(--pt-color-surface-hovered); /** バッジの背景色。`background-color`に適用。 */
   --pt-badge-neutral-text: var(--pt-color-text-primary); /** バッジのラベル色。`color`に適用。 */
@@ -520,10 +538,18 @@
   --pt-card-padding-md: var(--pt-spacing-content-md); /** paddingプロパティに適用。カードコンポーネント専用。デフォルトの内部余白。 */
   --pt-card-padding-lg: var(--pt-spacing-content-lg); /** paddingプロパティに適用。カードコンポーネント専用。広々とした内部余白。 */
   --pt-card-radius: var(--pt-semantic-border-radius-lg); /** border-radiusプロパティに適用。カードコンポーネント専用。overflow: hiddenとセットで使用。 */
+  --pt-chip-padding: var(--pt-spacing-content-xs); /** 内側余白。`padding`に適用。 */
+  --pt-chip-gap: var(--pt-spacing-gap-sm); /** アイコンとテキスト間の隙間。`gap`に適用。 */
+  --pt-chip-radius-sm: var(--pt-semantic-border-radius-sm); /** 小さい角丸。 */
+  --pt-chip-radius-md: var(--pt-semantic-border-radius-md); /** 標準の角丸。 */
+  --pt-chip-interaction-transition: var(--pt-motion-duration-quick); /** インタラクション時のトランジション時間。 */
   --pt-grid-gap-sm: var(--pt-spacing-gap-sm); /** 小ギャップ。コンパクトなグリッド。 */
   --pt-grid-gap-md: var(--pt-spacing-gap-md); /** 中ギャップ。標準グリッド。デフォルト値。 */
   --pt-grid-gap-lg: var(--pt-spacing-gap-lg); /** 大ギャップ。ゆったりしたグリッド。 */
   --pt-heading-text-color: var(--pt-color-text-primary); /** 見出しテキストの色 */
+  --pt-icon-color-default: var(--pt-color-text-primary); /** デフォルトのアイコン色。`color`に適用。 */
+  --pt-icon-color-secondary: var(--pt-color-text-secondary); /** 控えめなアイコン色。装飾的な用途に使用。 */
+  --pt-icon-color-disabled: var(--pt-color-text-disabled); /** 無効状態のアイコン色。 */
   --pt-radio-button-default-bg: var(--pt-color-surface-card); /** 未選択時の背景色。`background-color`に適用。 */
   --pt-radio-button-default-border: var(--pt-color-border-default); /** 未選択時の枠線色。`border-color`に適用。 */
   --pt-radio-button-default-text: var(--pt-color-text-primary); /** 未選択時のラベル色。`color`に適用。 */
@@ -548,6 +574,8 @@
   --pt-radio-button-radius: var(--pt-semantic-border-radius-xl); /** 角丸。`border-radius`に適用。大きめで柔らかい印象。 */
   --pt-radio-button-shadow-default: var(--pt-elevation-raised); /** デフォルト時の影。軽く浮いた印象。 */
   --pt-radio-button-shadow-selected: var(--pt-elevation-overlay); /** 選択時の影。より強調された浮き上がり。 */
+  --pt-spinner-color-primary: var(--pt-color-text-primary); /** プライマリカラー。デフォルトのスピナー色。 */
+  --pt-spinner-color-secondary: var(--pt-color-text-secondary); /** セカンダリカラー。控えめなスピナー色。 */
   --pt-stack-gap-xs: var(--pt-spacing-gap-xs); /** 極小ギャップ。アイコンとラベルなど密接な要素間。 */
   --pt-stack-gap-sm: var(--pt-spacing-gap-sm); /** 小ギャップ。関連性の高い要素間。 */
   --pt-stack-gap-md: var(--pt-spacing-gap-md); /** 中ギャップ。標準的な要素間。デフォルト値。 */
@@ -567,4 +595,10 @@
   --pt-surface-radius-xl: var(--pt-semantic-border-radius-xl); /** 特大角丸。大きなコンテナやモーダル。 */
   --pt-surface-radius-full: var(--pt-semantic-border-radius-pill); /** 完全円形/ピル形状。 */
   --pt-surface-border-color: var(--pt-color-border-default); /** ボーダー色。 */
+  --pt-text-color-primary: var(--pt-color-text-primary); /** 主要テキスト色。`color`に適用。 */
+  --pt-text-color-secondary: var(--pt-color-text-secondary); /** 補助テキスト色。`color`に適用。 */
+  --pt-text-color-disabled: var(--pt-color-text-disabled); /** 無効化テキスト色。`color`に適用。 */
+  --pt-text-color-inverse: var(--pt-color-text-inverse); /** 反転テキスト色（暗い背景上）。`color`に適用。 */
+  --pt-text-color-danger: var(--pt-color-result-lose-default); /** 危険・エラーテキスト色。`color`に適用。 */
+  --pt-type-chip-color-text: var(--pt-color-text-inverse); /** タイプチップのデフォルトテキスト色。`color`に適用。 */
 }

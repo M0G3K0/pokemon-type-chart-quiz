@@ -104,7 +104,7 @@ StyleDictionary.registerFormat(
 	createCategoryFormat('effects', ['radius', 'border', 'shadow', 'duration', 'easing', 'elevation', 'semantic-border', 'motion'])
 );
 StyleDictionary.registerFormat(
-	createCategoryFormat('components', ['avatar', 'badge', 'button', 'card', 'heading'])
+	createCategoryFormat('components', ['avatar', 'badge', 'button', 'card', 'chip', 'grid', 'heading', 'icon', 'radio-button', 'spinner', 'stack', 'surface', 'text', 'type-chip'])
 );
 
 const config = {
