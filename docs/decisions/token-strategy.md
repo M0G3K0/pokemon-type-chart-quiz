@@ -96,16 +96,16 @@ Issue #56, #107, #108 の調査・方針決定ドキュメント
 | pt-avatar | ✅ avatar.json | OK |
 | pt-button | ✅ button.json | OK |
 | pt-card | ✅ card.json | OK |
-| pt-chip | ❌ なし | **要検討** |
+| pt-chip | ❌ なし | **Phase 2で作成** |
 | pt-grid | ✅ grid.json | OK |
 | pt-heading | ✅ heading.json | OK |
-| pt-icon | ❌ なし | **要検討** |
+| pt-icon | ❌ なし | **Phase 2で作成** |
 | pt-radio-button | ✅ radio-button.json | OK |
-| pt-spinner | ❌ なし | **要検討** |
+| pt-spinner | ❌ なし | **Phase 2で作成** |
 | pt-stack | ✅ stack.json | OK |
 | pt-surface | ✅ surface.json | OK |
-| pt-text | ❌ なし | **要検討** |
-| pt-type-chip | ❌ なし | **要検討** |
+| pt-text | ❌ なし | **Phase 2で作成** |
+| pt-type-chip | ❌ なし | **Phase 2で作成** |
 | pt-badge | ✅ badge.json | OK |
 
 ### 2.3 トークン使用の問題点
@@ -143,19 +143,39 @@ font-family: var(--pt-typography-body-lg-font-family);
 ### 3.1 Tier3トークン方針
 
 > [!IMPORTANT]
-> **方針: Tier3トークンは「意味のある抽象化」がある場合のみ作成する**
+> **方針: すべてのUIコンポーネントにTier3トークンを作成する**
 
-| コンポーネント | Tier3必要性 | 理由 |
-|---------------|-------------|------|
-| pt-icon | ❌ 不要 | サイズのみ、Tier2 spaceで十分 |
-| pt-spinner | ❌ 不要 | サイズ+色のみ、Tier2 space/colorで十分 |
-| pt-text | ❌ 不要 | Tier2 typographyを直接使用する設計（Typography Primitive Pattern） |
-| pt-chip | ⚠️ 要検討 | 複数のバリアント、padding、radius等があるため検討 |
-| pt-type-chip | ❌ 不要 | pt-chipを拡張、独自トークン不要 |
+**理由:**
+1. **NgDocドキュメント自動生成**: StyleタブがTier3トークンを参照して自動生成されるため、一貫性が向上
+2. **AI開発との親和性**: トークン構造が一貫していると、AIがドキュメント生成しやすい
+3. **将来の拡張性**: 今は単純でも、将来バリアント追加時に対応しやすい
+4. **変更の吸収**: Tier2変更時にTier3で吸収可能
 
-**Typography Primitive Pattern:**
-pt-text, pt-heading は Tier2 typography トークンを直接参照する設計。
-これは意図的であり、Tier3を挟む必要はない。
+> [!NOTE]
+> 他の主要デザインシステム（Material Design、Primer、Atlassian）は「選択的アプローチ」を採用しているが、
+> 本プロジェクトはNgDoc + AI自動生成ワークフローがあるため、一貫性を優先する。
+
+| コンポーネント | Tier3 | 方針 |
+|---------------|-------|------|
+| pt-icon | **作成する** | サイズトークンをTier3で定義（Tier2 spaceを参照） |
+| pt-spinner | **作成する** | サイズ・色トークンをTier3で定義 |
+| pt-text | **作成する** | TypographyトークンをTier3で定義（Tier2 typographyを参照） |
+| pt-chip | **作成する** | padding, radius, color等をTier3で定義 |
+| pt-type-chip | **作成する** | pt-chipを拡張したトークン定義 |
+
+**パススルートークンの例:**
+```json
+// icon.json - Tier2を参照するだけでもOK
+{
+  "icon": {
+    "size": {
+      "sm": { "$value": "{pt.space.5}" },
+      "md": { "$value": "{pt.space.8}" },
+      "lg": { "$value": "{pt.space.12}" }
+    }
+  }
+}
+```
 
 ### 3.2 Surface/Card/Paper責務分離
 
@@ -200,9 +220,10 @@ pt-text, pt-heading は Tier2 typography トークンを直接参照する設計
 ## 4. 次のステップ
 
 ### Phase 2: トークン修正
-1. pt-spinner の不正なトークン参照を修正
-2. 各コンポーネントのトークン使用を監査・修正
-3. 不要なTier3トークンファイルは作成しない
+1. 不足しているTier3トークンファイルを作成（icon, spinner, text, chip, type-chip）
+2. pt-spinner の不正なトークン参照を修正
+3. 各コンポーネントのトークン使用を監査・修正
+4. コンポーネントSCSSをTier3トークン参照に更新
 
 ### Phase 3: コンポーネント修正
 1. Icon/Spinner の表示問題修正
