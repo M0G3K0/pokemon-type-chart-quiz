@@ -1,34 +1,28 @@
 ## 💡 概要
 
-Phase 2 のトークン修正を実施。Tier3コンポーネントトークンを追加し、コンポーネントSCSSをTier3トークン参照に更新しました。
+Spinnerコンポーネントをイチョウ型からドーナツ状に改善。
+トラック色トークンを追加し、背景リングが見える形状に変更。
 
 ## 📝 変更内容
 
-### Tier3トークンファイル新規作成
-- `design-tokens/tier3-component/icon.json` - アイコンサイズと色トークン
-- `design-tokens/tier3-component/spinner.json` - スピナーサイズ、ボーダー幅、色、アニメーション時間
-- `design-tokens/tier3-component/text.json` - テキスト色トークン（Typographyは意図的にTier2直接参照）
-- `design-tokens/tier3-component/chip.json` - チップのパディング、ギャップ、フォント、角丸
-- `design-tokens/tier3-component/type-chip.json` - Pokemonタイプチップのテキスト色
+### Spinnerスタイル改善
+- **形状変更**: イチョウ型（1/4アーク）→ドーナツ状（フルリング）
+- **トラック色追加**: 背景リングとして薄いグレーを表示
 
-### コンポーネントSCSS更新
-- `pt-spinner.scss` - 無効なトークン参照（`--spacing-4`等）をTier3トークン参照に修正
-- `pt-icon.scss` - Tier3トークン参照に更新
-- `pt-chip.scss` - Tier3トークン参照に更新
-- `pt-text.scss` - 色をTier3トークン参照に更新
+### トークン追加
+- `--pt-spinner-color-track`: トラック色（rgba(0, 0, 0, 0.1)）
 
-### 設定ファイル更新
-- `style-dictionary.config.mjs` - TypeScript出力に新規コンポーネントを追加
+### 変更ファイル
+- `design-tokens/tier3-component/spinner.json`: トラック色トークン追加
+- `src/app/ui/pt-spinner/pt-spinner.scss`: ドーナツ状スタイルに変更
 
 ## 🔗 関連Issue
 
-Partially addresses:
-- #107 (standardize Tier3 token strategy)
-- #56 (validate design token usage)
+- Partially addresses #108 (comprehensive UI component quality review)
 
 ## 📷 スクリーンショット（該当する場合）
 
-UI変更なし（トークン参照の内部修正のみ）
+N/A（ドキュメントビルドで確認可能）
 
 ## ✅ チェックリスト
 
@@ -41,15 +35,9 @@ UI変更なし（トークン参照の内部修正のみ）
 
 ## 📌 補足事項
 
-### トークン設計方針
-- **全てのUIコンポーネントにTier3トークンを作成する** という方針（`docs/decisions/token-strategy.md`参照）
-- `pt-text` はTypographyについてはTier2を直接参照（意図的な設計）、色のみTier3
+Icon表示問題は、以前のPR（fix: use AssetPathService）で対応済みの可能性が高い。
 
-### 修正された問題
-- `pt-spinner` が参照していた `--spacing-4`, `--spacing-10`, `--spacing-16`, `--color-primary`, `--color-secondary` は存在しないトークンだった
-- これらを正しいTier3トークン `--pt-spinner-size-*`, `--pt-spinner-color-*` に修正
-
---- 
+---
 
 ## 📝 PRタイトルの命名規則:
 - `type: description` の形式にすること（Conventional Commits）
@@ -75,7 +63,6 @@ UI変更なし（トークン参照の内部修正のみ）
 例: `feat: add sound effects and toggle switch`
 
 ## 📖 レビュー用語集
-<!-- レビュー時によく使う用語の意味 -->
 
 | 用語 | 意味 | 説明 |
 |------|------|------|
