@@ -18,17 +18,18 @@ import { Component } from '@angular/core';
  * ```
  */
 @Component({
-	selector: 'pt-card-footer',
-	standalone: true,
-	template: `<ng-content></ng-content>`,
-	styles: `
+  selector: 'pt-card-footer',
+  standalone: true,
+  template: `<ng-content></ng-content>`,
+  styles: `
     :host {
       display: flex;
-      gap: var(--pt-space-sm);
-      padding: var(--pt-space-md);
-      border-top: 1px solid var(--pt-color-border-subtle);
+      gap: var(--pt-card-section-gap);
+      padding: var(--pt-card-section-padding);
+      border-top: 1px solid var(--pt-card-section-separator);
       justify-content: flex-end;
     }
   `,
 })
 export class CardFooterComponent { }
+

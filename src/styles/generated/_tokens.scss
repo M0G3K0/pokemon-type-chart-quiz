@@ -537,6 +537,9 @@ $pt-card-padding-sm: $pt-spacing-content-sm; // paddingプロパティに適用�
 $pt-card-padding-md: $pt-spacing-content-md; // paddingプロパティに適用。カードコンポーネント専用。デフォルトの内部余白。
 $pt-card-padding-lg: $pt-spacing-content-lg; // paddingプロパティに適用。カードコンポーネント専用。広々とした内部余白。
 $pt-card-radius: $pt-semantic-border-radius-lg; // border-radiusプロパティに適用。カードコンポーネント専用。overflow: hiddenとセットで使用。
+$pt-card-section-padding: $pt-spacing-content-md; // paddingプロパティに適用。header/content/footer各セクションの内部余白。
+$pt-card-section-gap: $pt-spacing-gap-sm; // gapプロパティに適用。footer内のボタン間隔など。
+$pt-card-section-separator: $pt-color-border-subtle; // border-colorプロパティに適用。header/footerとcontentの間の区切り線。
 $pt-chip-padding: $pt-spacing-content-xs; // 内側余白。`padding`に適用。
 $pt-chip-gap: $pt-spacing-gap-sm; // アイコンとテキスト間の隙間。`gap`に適用。
 $pt-chip-radius-sm: $pt-semantic-border-radius-sm; // 小さい角丸。

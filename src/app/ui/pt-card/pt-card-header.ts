@@ -17,15 +17,16 @@ import { Component } from '@angular/core';
  * ```
  */
 @Component({
-	selector: 'pt-card-header',
-	standalone: true,
-	template: `<ng-content></ng-content>`,
-	styles: `
+  selector: 'pt-card-header',
+  standalone: true,
+  template: `<ng-content></ng-content>`,
+  styles: `
     :host {
       display: block;
-      padding: var(--pt-space-md);
-      border-bottom: 1px solid var(--pt-color-border-subtle);
+      padding: var(--pt-card-section-padding);
+      border-bottom: 1px solid var(--pt-card-section-separator);
     }
   `,
 })
 export class CardHeaderComponent { }
+
