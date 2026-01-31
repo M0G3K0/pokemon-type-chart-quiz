@@ -68,9 +68,11 @@
 	&--secondary {
 		background-color: var(--pt-button-secondary-bg-default);
 		color: var(--pt-button-secondary-text-default);
+		border: 1px solid var(--pt-button-secondary-border-default);
 
 		&:hover:not(:disabled) {
 			background-color: var(--pt-button-secondary-bg-hover);
+			border-color: var(--pt-button-secondary-border-hover);
 		}
 
 		&:active:not(:disabled) {
