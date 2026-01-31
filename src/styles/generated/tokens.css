@@ -571,7 +571,7 @@
   --pt-radio-button-feedback-actual-ring: var(--pt-color-result-win-subtle); /** 正解表示時のリング色。box-shadowで外側に薄緑リング。 */
   --pt-radio-button-focus-ring: var(--pt-color-border-focused); /** フォーカスリングの色。`outline`に適用。アクセシビリティ用。 */
   --pt-radio-button-padding-x: var(--pt-spacing-content-md); /** 水平方向の内側余白。`padding-inline`に適用。 */
-  --pt-radio-button-padding-y: var(--pt-spacing-content-md); /** 垂直方向の内側余白。`padding-block`に適用。 */
+  --pt-radio-button-padding-y: var(--pt-spacing-content-sm); /** 垂直方向の内側余白。`padding-block`に適用。よりコンパクトに。 */
   --pt-radio-button-radius: var(--pt-semantic-border-radius-xl); /** 角丸。`border-radius`に適用。大きめで柔らかい印象。 */
   --pt-radio-button-shadow-default: var(--pt-elevation-raised); /** デフォルト時の影。軽く浮いた印象。 */
   --pt-radio-button-shadow-selected: var(--pt-elevation-overlay); /** 選択時の影。より強調された浮き上がり。 */
