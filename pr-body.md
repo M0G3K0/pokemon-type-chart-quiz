@@ -1,19 +1,31 @@
 ## 💡 概要
-NgDocドキュメントサイトのバンドルサイズbudget制限を緩和し、CIビルドが通るようにする。
+
+Spinnerコンポーネントをイチョウ型からドーナツ状に改善。
+トラック色トークンを追加し、背景リングが見える形状に変更。
 
 ## 📝 変更内容
-- **angular.json**: docs プロジェクトのbudgetを緩和
-  - Initial JS: 500kB/1MB → 2MB/5MB
-- **performance.guard.md**: NgDoc用の別基準を明文化
-  - メインアプリとドキュメントサイトの基準を分離
+
+### Spinnerスタイル改善
+- **形状変更**: イチョウ型（1/4アーク）→ドーナツ状（フルリング）
+- **トラック色追加**: 背景リングとして薄いグレーを表示
+
+### トークン追加
+- `--pt-spinner-color-track`: トラック色（rgba(0, 0, 0, 0.1)）
+
+### 変更ファイル
+- `design-tokens/tier3-component/spinner.json`: トラック色トークン追加
+- `src/app/ui/pt-spinner/pt-spinner.scss`: ドーナツ状スタイルに変更
 
 ## 🔗 関連Issue
-<!-- 該当なし -->
+
+- Partially addresses #108 (comprehensive UI component quality review)
 
 ## 📷 スクリーンショット（該当する場合）
-該当なし（設定変更のみ）
+
+N/A（ドキュメントビルドで確認可能）
 
 ## ✅ チェックリスト
+
 - [x] ビルドが成功する（`npm run build`）
 - [x] Lintエラーがない（`npm run lint`）
 - [x] テストが通る（`npm run test`）
@@ -22,13 +34,10 @@ NgDocドキュメントサイトのバンドルサイズbudget制限を緩和し
 - [x] 必要に応じてドキュメントを更新した
 
 ## 📌 補足事項
-NgDocはmermaid等の重いライブラリを含むため、メインアプリより大きなバンドルサイズになります。
 
-現在のバンドルサイズ: **1.63 MB**（緩和後の上限 5MB 以内）
+Icon表示問題は、以前のPR（fix: use AssetPathService）で対応済みの可能性が高い。
 
-ドキュメントサイトはユーザー向けプロダクションアプリではなく開発者向けのため、パフォーマンス基準を緩和しても問題ありません。
-
---- 
+---
 
 ## 📝 PRタイトルの命名規則:
 - `type: description` の形式にすること（Conventional Commits）
@@ -54,7 +63,6 @@ NgDocはmermaid等の重いライブラリを含むため、メインアプリ�
 例: `feat: add sound effects and toggle switch`
 
 ## 📖 レビュー用語集
-<!-- レビュー時によく使う用語の意味 -->
 
 | 用語 | 意味 | 説明 |
 |------|------|------|

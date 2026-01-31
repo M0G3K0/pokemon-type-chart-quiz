@@ -317,6 +317,7 @@
   --pt-spinner-border-width-sm: 2px; /** 小サイズ時のボーダー幅。 */
   --pt-spinner-border-width-md: 3px; /** 中サイズ時のボーダー幅。 */
   --pt-spinner-border-width-lg: 4px; /** 大サイズ時のボーダー幅。 */
+  --pt-spinner-color-track: rgba(0, 0, 0, 0.1); /** トラック色。ドーナツ状スピナーの背景リング。 */
   --pt-spinner-animation-duration: 0.8s; /** 1回転にかかる時間。 */
   --pt-stack-gap-none: 0; /** ギャップなし。要素同士を密着させる場合に使用。 */
   --pt-surface-variant-ghost-background: rgba(0, 0, 0, 0); /** 透明背景。親要素の背景を透過。 */

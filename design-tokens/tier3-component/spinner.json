@@ -48,6 +48,11 @@
 				"value": "{color.text.secondary}",
 				"type": "color",
 				"$description": "セカンダリカラー。控えめなスピナー色。"
+			},
+			"track": {
+				"value": "rgba(0, 0, 0, 0.1)",
+				"type": "color",
+				"$description": "トラック色。ドーナツ状スピナーの背景リング。"
 			}
 		},
 		"animation": {
