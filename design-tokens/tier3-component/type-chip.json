@@ -1,0 +1,15 @@
+{
+	"$description": "Tier 3: Type Chip Component Tokens. Pokemon type-specific chip tokens extending pt-chip.",
+	"type-chip": {
+		"$description": "Pokemon type chip component. Semantic wrapper with type-specific colors.",
+		"color": {
+			"$description": "Type chip uses Pokemon type semantic colors from Tier 2",
+			"text": {
+				"value": "{color.text.inverse}",
+				"type": "color",
+				"$description": "タイプチップのデフォルトテキスト色。`color`に適用。"
+			}
+		},
+		"$note": "Background colors are dynamically set based on Pokemon type using --pt-color-pokemon-{type}-500 from Tier 2."
+	}
+}

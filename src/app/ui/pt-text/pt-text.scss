@@ -2,8 +2,10 @@
  * @what pt-text component styles
  * @why 一貫したタイポグラフィを本文・ラベル・補助テキストに適用
  *
- * Typography は Tier 2 composite token を直接使用。
- * Color は Tier 2 semantic color tokens を使用。
+ * Typography は Tier 2 composite token を直接使用（意図的な設計）。
+ * Color は Tier 3 text tokens を使用。
+ *
+ * @tokens Tier 3: text.json (color only)
  */
 
 :host {
@@ -59,25 +61,25 @@
 		line-height: var(--pt-typography-label-xs-line-height);
 	}
 
-	// Color (Tier 2 semantic color tokens)
+	// Color (Tier 3 text tokens)
 	&--color-primary {
-		color: var(--pt-color-text-primary);
+		color: var(--pt-text-color-primary);
 	}
 
 	&--color-secondary {
-		color: var(--pt-color-text-secondary);
+		color: var(--pt-text-color-secondary);
 	}
 
 	&--color-disabled {
-		color: var(--pt-color-text-disabled);
+		color: var(--pt-text-color-disabled);
 	}
 
 	&--color-inverse {
-		color: var(--pt-color-text-inverse);
+		color: var(--pt-text-color-inverse);
 	}
 
 	&--color-danger {
-		color: var(--pt-color-result-lose-default);
+		color: var(--pt-text-color-danger);
 	}
 
 	// Weight overrides

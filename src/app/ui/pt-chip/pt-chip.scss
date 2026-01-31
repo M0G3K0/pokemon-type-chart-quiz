@@ -1,6 +1,8 @@
 /**
  * @what Chip component styles
  * @why Provide flexible compact information display using Design Tokens
+ *
+ * @tokens Tier 3: chip.json
  */
 
 :host {
@@ -10,45 +12,45 @@
 .pt-chip {
 	display: inline-flex;
 	align-items: center;
-	gap: var(--pt-space-2);
-	font-weight: var(--pt-font-weight-medium);
-	transition: opacity var(--pt-motion-duration-quick);
+	gap: var(--pt-chip-gap);
+	font-weight: var(--pt-chip-font-weight);
+	transition: opacity var(--pt-chip-interaction-transition);
 	white-space: nowrap;
 
 	// Size variants
 	&--sm {
-		padding: var(--pt-space-1);
-		font-size: var(--pt-font-size-xs);
-		line-height: var(--pt-font-line-height-tight);
+		padding: var(--pt-chip-padding);
+		font-size: var(--pt-chip-font-size-sm);
+		line-height: var(--pt-chip-font-line-height-tight);
 	}
 
 	&--md {
-		padding: var(--pt-space-1);
-		font-size: var(--pt-font-size-sm);
-		line-height: var(--pt-font-line-height-normal);
+		padding: var(--pt-chip-padding);
+		font-size: var(--pt-chip-font-size-md);
+		line-height: var(--pt-chip-font-line-height-normal);
 	}
 
 	&--lg {
-		padding: var(--pt-space-1);
-		font-size: var(--pt-font-size-md);
-		line-height: var(--pt-font-line-height-normal);
+		padding: var(--pt-chip-padding);
+		font-size: var(--pt-chip-font-size-lg);
+		line-height: var(--pt-chip-font-line-height-normal);
 	}
 
 	// Rounded variants
 	&--rounded-none {
-		border-radius: 0;
+		border-radius: var(--pt-chip-radius-none);
 	}
 
 	&--rounded-sm {
-		border-radius: var(--pt-semantic-border-radius-sm);
+		border-radius: var(--pt-chip-radius-sm);
 	}
 
 	&--rounded-md {
-		border-radius: var(--pt-semantic-border-radius-md);
+		border-radius: var(--pt-chip-radius-md);
 	}
 
 	&--rounded-full {
-		border-radius: 9999px;
+		border-radius: var(--pt-chip-radius-full);
 	}
 
 	// Clickable state
@@ -86,7 +88,7 @@
 		justify-content: center;
 		color: inherit;
 		opacity: 0.7;
-		transition: opacity var(--pt-motion-duration-quick);
+		transition: opacity var(--pt-chip-interaction-transition);
 
 		&:hover {
 			opacity: 1;
@@ -95,7 +97,7 @@
 		&:focus-visible {
 			outline: 2px solid currentcolor;
 			outline-offset: 2px;
-			border-radius: var(--pt-semantic-border-radius-sm);
+			border-radius: var(--pt-chip-radius-sm);
 		}
 	}
 }

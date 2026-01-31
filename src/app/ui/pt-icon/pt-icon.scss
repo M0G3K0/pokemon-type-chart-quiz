@@ -1,6 +1,8 @@
 /**
  * @what Icon component styles
  * @why Provide flexible icon display using Design Tokens
+ *
+ * @tokens Tier 3: icon.json
  */
 
 :host {
@@ -14,17 +16,17 @@
 
 	// Size variants
 	&--sm {
-		width: var(--pt-space-5); // 20px
-		height: var(--pt-space-5);
+		width: var(--pt-icon-size-sm);
+		height: var(--pt-icon-size-sm);
 	}
 
 	&--md {
-		width: var(--pt-space-8); // 32px
-		height: var(--pt-space-8);
+		width: var(--pt-icon-size-md);
+		height: var(--pt-icon-size-md);
 	}
 
 	&--lg {
-		width: var(--pt-space-12); // 48px
-		height: var(--pt-space-12);
+		width: var(--pt-icon-size-lg);
+		height: var(--pt-icon-size-lg);
 	}
 }

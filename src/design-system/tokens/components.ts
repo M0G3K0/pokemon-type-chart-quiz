@@ -127,6 +127,46 @@ export const components = {
     },
     "radius": "0.75rem"
   },
+  "chip": {
+    "padding": "0.25rem",
+    "gap": "0.5rem",
+    "font": {
+      "size": {
+        "sm": "0.75rem",
+        "md": "0.875rem",
+        "lg": "1rem"
+      },
+      "weight": "500",
+      "lineHeight": {
+        "tight": "1.25",
+        "normal": "1.5"
+      }
+    },
+    "radius": {
+      "none": "0",
+      "sm": "0.25rem",
+      "md": "0.5rem",
+      "full": "9999px"
+    },
+    "interaction": {
+      "transition": "200ms"
+    }
+  },
+  "grid": {
+    "columns": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "6": 6
+    },
+    "gap": {
+      "none": "0",
+      "sm": "0.5rem",
+      "md": "1rem",
+      "lg": "1.5rem"
+    }
+  },
   "heading": {
     "text": {
       "color": "#1f2937"
@@ -137,6 +177,98 @@ export const components = {
       "radius": "9999px",
       "gap": "0.5rem",
       "color": "#1f2937"
+    }
+  },
+  "icon": {
+    "size": {
+      "sm": "1.25rem",
+      "md": "2rem",
+      "lg": "3rem"
+    },
+    "color": {
+      "default": "#1f2937",
+      "secondary": "#6b7280",
+      "disabled": "#9ca3af"
+    }
+  },
+  "spinner": {
+    "size": {
+      "sm": "1rem",
+      "md": "2.5rem",
+      "lg": "4rem"
+    },
+    "border": {
+      "width": {
+        "sm": "2px",
+        "md": "3px",
+        "lg": "4px"
+      }
+    },
+    "color": {
+      "primary": "#1f2937",
+      "secondary": "#6b7280"
+    },
+    "animation": {
+      "duration": "0.8s"
+    }
+  },
+  "stack": {
+    "gap": {
+      "none": "0",
+      "xs": "0.25rem",
+      "sm": "0.5rem",
+      "md": "1rem",
+      "lg": "1.5rem",
+      "xl": "2rem"
+    }
+  },
+  "surface": {
+    "variant": {
+      "default": {
+        "background": "#ffffff"
+      },
+      "subtle": {
+        "background": "#f9fafb"
+      },
+      "card": {
+        "background": "#ffffff",
+        "elevation": "0 1px 2px 0 rgb(0 0 0 / 0.05)"
+      },
+      "ghost": {
+        "background": "#00000000"
+      }
+    },
+    "padding": {
+      "none": "0",
+      "sm": "0.5rem",
+      "md": "1rem",
+      "lg": "1.5rem"
+    },
+    "radius": {
+      "none": "0",
+      "sm": "0.25rem",
+      "md": "0.5rem",
+      "lg": "0.75rem",
+      "xl": "1rem",
+      "full": "9999px"
+    },
+    "border": {
+      "color": "#e5e7eb",
+      "width": "1px"
+    }
+  },
+  "text": {
+    "color": {
+      "primary": "#1f2937",
+      "secondary": "#6b7280",
+      "disabled": "#9ca3af",
+      "inverse": "#ffffff",
+      "danger": "#ef4444"
+    }
+  },
+  "type-chip": {
+    "color": {
+      "text": "#ffffff"
     }
   }
 } as const;

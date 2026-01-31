@@ -1,0 +1,61 @@
+{
+	"$description": "Tier 3: Spinner Component Tokens. Defines sizes and colors for pt-spinner.",
+	"spinner": {
+		"$description": "Spinner component for loading state feedback.",
+		"size": {
+			"sm": {
+				"value": "{space.4}",
+				"type": "sizing",
+				"$description": "小サイズ (16px)。インライン、ボタン内のローディングに使用。"
+			},
+			"md": {
+				"value": "{space.10}",
+				"type": "sizing",
+				"$description": "中サイズ (40px)。標準的なローディング表示に使用。"
+			},
+			"lg": {
+				"value": "{space.16}",
+				"type": "sizing",
+				"$description": "大サイズ (64px)。フルスクリーンローディングに使用。"
+			}
+		},
+		"border": {
+			"width": {
+				"sm": {
+					"value": "2px",
+					"type": "borderWidth",
+					"$description": "小サイズ時のボーダー幅。"
+				},
+				"md": {
+					"value": "3px",
+					"type": "borderWidth",
+					"$description": "中サイズ時のボーダー幅。"
+				},
+				"lg": {
+					"value": "4px",
+					"type": "borderWidth",
+					"$description": "大サイズ時のボーダー幅。"
+				}
+			}
+		},
+		"color": {
+			"primary": {
+				"value": "{color.text.primary}",
+				"type": "color",
+				"$description": "プライマリカラー。デフォルトのスピナー色。"
+			},
+			"secondary": {
+				"value": "{color.text.secondary}",
+				"type": "color",
+				"$description": "セカンダリカラー。控えめなスピナー色。"
+			}
+		},
+		"animation": {
+			"duration": {
+				"value": "0.8s",
+				"type": "duration",
+				"$description": "1回転にかかる時間。"
+			}
+		}
+	}
+}
