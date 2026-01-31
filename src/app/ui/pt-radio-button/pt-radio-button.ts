@@ -74,6 +74,11 @@ export type RadioButtonFeedbackState = 'default' | 'correct' | 'wrong' | 'actual
       color: var(--pt-radio-button-selected-text);
       transform: scale(1.05);
       box-shadow: var(--pt-radio-button-shadow-selected);
+      
+      /* 子要素（pt-textなど）にも色を継承させる */
+      ::ng-deep * {
+        color: inherit !important;
+      }
     }
     /* Feedback states - disabled より優先度を高く */
     :host(.feedback-correct),
@@ -83,6 +88,8 @@ export type RadioButtonFeedbackState = 'default' | 'correct' | 'wrong' | 'actual
       color: var(--pt-radio-button-feedback-correct-text);
       opacity: 1;
       cursor: default;
+      
+      ::ng-deep * { color: inherit !important; }
     }
     
     :host(.feedback-wrong),
@@ -92,6 +99,8 @@ export type RadioButtonFeedbackState = 'default' | 'correct' | 'wrong' | 'actual
       color: var(--pt-radio-button-feedback-wrong-text);
       opacity: 1;
       cursor: default;
+      
+      ::ng-deep * { color: inherit !important; }
     }
     
     :host(.feedback-actual),
@@ -102,6 +111,8 @@ export type RadioButtonFeedbackState = 'default' | 'correct' | 'wrong' | 'actual
       box-shadow: 0 0 0 4px var(--pt-radio-button-feedback-actual-ring);
       opacity: 1;
       cursor: default;
+      
+      ::ng-deep * { color: inherit !important; }
     }
     
     /* Disabled state - feedback がない場合のみ適用 */
