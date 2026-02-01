@@ -109,11 +109,13 @@ guards/
 │   ├── guard/
 │   │   ├── design-consistency.guard.md          # CSS品質ドキュメント
 │   │   ├── no-raw-tailwind.guard.md             # Tailwind直接使用禁止
+│   │   ├── tier3-only.guard.md                  # コンポーネントSCSS Tier3専用 (NEW)
 │   │   ├── token-existence.guard.md             # トークン存在確認 (NEW)
 │   │   └── token-naming.guard.md                # トークン命名規則
 │   └── rules/
 │       ├── design-consistency.rules.js          # CSS品質ルール
 │       ├── no-raw-tailwind.rules.js             # Tailwind検出スクリプト
+│       ├── tier3-only.rules.js                  # Tier3専用ルール (NEW)
 │       ├── token-existence.rules.js             # トークン存在検査 (NEW)
 │       └── token-naming.rules.js                # トークン命名ルール
 ├── maintenance/                                 # 保守の憲法

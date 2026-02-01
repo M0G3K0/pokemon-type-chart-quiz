@@ -4,13 +4,16 @@
  * ガードレールのルールを統合:
  * - guards/design/rules/design-consistency.rules.js
  * - guards/design/rules/token-naming.rules.js
+ * - guards/design/rules/tier3-only.rules.js (コンポーネントSCSS専用)
  *
  * @see guards/design/guard/design-consistency.guard.md
  * @see guards/design/guard/token-naming.guard.md
+ * @see guards/design/guard/tier3-only.guard.md
  */
 
 const designConsistencyRules = require('./guards/design/rules/design-consistency.rules.js');
 const tokenNamingRules = require('./guards/design/rules/token-naming.rules.js');
+const tier3OnlyRules = require('./guards/design/rules/tier3-only.rules.js');
 
 module.exports = {
 	extends: ['stylelint-config-standard'],
@@ -39,6 +42,13 @@ module.exports = {
 				'color-named': null,
 				'function-disallowed-list': null,
 				'declaration-property-value-disallowed-list': null,
+			},
+		},
+		{
+			// コンポーネントSCSSではTier3トークンのみ許可
+			files: ['src/app/ui/**/*.scss'],
+			rules: {
+				...tier3OnlyRules.rules,
 			},
 		},
 	],
