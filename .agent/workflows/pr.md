@@ -92,18 +92,20 @@ npm test
 
 **⚠️ 絵文字はNode.jsで取得すること（文字化け防止）:**
 
+**⚠️ TTY問題を回避するため `GH_FORCE_TTY=1` を付けること:**
+
 ```bash
 # TYPE を選んだタイプに置き換え（例: feat, fix, refactor）
-EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.TYPE") && gh pr create --title "${EMOJI} TYPE: description here" --body-file pr-body.md
+EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.TYPE") && GH_FORCE_TTY=1 gh pr create --title "${EMOJI} TYPE: description here" --body-file pr-body.md
 ```
 
 **例:**
 ```bash
 # feat
-EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.feat") && gh pr create --title "${EMOJI} feat: add sound effects" --body-file pr-body.md
+EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.feat") && GH_FORCE_TTY=1 gh pr create --title "${EMOJI} feat: add sound effects" --body-file pr-body.md
 
 # fix
-EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.fix") && gh pr create --title "${EMOJI} fix: resolve button issue" --body-file pr-body.md
+EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.fix") && GH_FORCE_TTY=1 gh pr create --title "${EMOJI} fix: resolve button issue" --body-file pr-body.md
 ```
 
 ---
