@@ -1,5 +1,4 @@
 import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { IconComponent } from '@ui/pt-icon';
 import { AssetPathService } from '@app/core/services/asset-path.service';
 
@@ -28,7 +27,7 @@ import { AssetPathService } from '@app/core/services/asset-path.service';
 @Component({
 	selector: 'pt-chip',
 	standalone: true,
-	imports: [CommonModule, IconComponent],
+	imports: [IconComponent],
 	templateUrl: './pt-chip.html',
 	styleUrls: ['./pt-chip.scss'],
 })

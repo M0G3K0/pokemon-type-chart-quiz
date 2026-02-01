@@ -1,5 +1,4 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { PokemonService } from '../../domain/pokemon.service';
 import { Pokemon } from '../../domain/pokemon.schema';
 import { CardComponent, CardHeaderComponent, CardContentComponent } from '@ui/pt-card';
@@ -18,7 +17,6 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
   selector: 'app-quiz',
   standalone: true,
   imports: [
-    CommonModule,
     CardComponent,
     CardHeaderComponent,
     CardContentComponent,
@@ -31,43 +29,46 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
   ],
   template: `
     <pt-surface variant="ghost" padding="lg" class="quiz-container">
-      <pt-card *ngIf="currentPokemon() as pokemon">
-        <pt-card-header>
-          <pt-stack direction="horizontal" justify="between" align="center">
-            <pt-text variant="label-xs" color="secondary" transform="uppercase" [italic]="true">Phase 0: Battle Trial</pt-text>
-            <pt-text variant="label-md" weight="bold">Lv. 100</pt-text>
-          </pt-stack>
-        </pt-card-header>
-        <pt-card-content>
-          <pt-stack direction="vertical" gap="lg" align="stretch">
-            
-            <!-- 攻撃側・防御側エリア -->
-            <quiz-battle-card 
-              [attackType]="attackType()" 
-              [pokemon]="pokemon">
-            </quiz-battle-card>
+      @if (currentPokemon(); as pokemon) {
+        <pt-card>
+          <pt-card-header>
+            <pt-stack direction="horizontal" justify="between" align="center">
+              <pt-text variant="label-xs" color="secondary" transform="uppercase" [italic]="true">Phase 0: Battle Trial</pt-text>
+              <pt-text variant="label-md" weight="bold">Lv. 100</pt-text>
+            </pt-stack>
+          </pt-card-header>
+          <pt-card-content>
+            <pt-stack direction="vertical" gap="lg" align="stretch">
+              
+              <!-- 攻撃側・防御側エリア -->
+              <quiz-battle-card 
+                [attackType]="attackType()" 
+                [pokemon]="pokemon">
+              </quiz-battle-card>
 
-            <!-- 選択肢 -->
-            <pt-grid [columns]="2" [smColumns]="3" gap="md">
-              <pt-radio-button
-                *ngFor="let choice of choices"
-                [value]="choice"
-                [selected]="selectedChoice() === choice"
-                [feedbackState]="getChoiceFeedbackState(choice)"
-                [disabled]="isChecked()"
-                (radioSelect)="selectChoice(choice)"
-              >
-                <pt-text variant="body-lg" weight="bold">{{ choice }}</pt-text>
-                <pt-text variant="label-xs" color="secondary">倍</pt-text>
-              </pt-radio-button>
-            </pt-grid>
+              <!-- 選択肢 -->
+              <pt-grid [columns]="2" [smColumns]="3" gap="md">
+                @for (choice of choices; track choice) {
+                  <pt-radio-button
+                    [value]="choice"
+                    [selected]="selectedChoice() === choice"
+                    [feedbackState]="getChoiceFeedbackState(choice)"
+                    [disabled]="isChecked()"
+                    (radioSelect)="selectChoice(choice)"
+                  >
+                    <pt-text variant="body-lg" weight="bold">{{ choice }}</pt-text>
+                    <pt-text variant="label-xs" color="secondary">倍</pt-text>
+                  </pt-radio-button>
+                }
+              </pt-grid>
 
-          </pt-stack>
-        </pt-card-content>
-      </pt-card>
-
-      <!-- ローディング状態 -->
-      <pt-surface *ngIf="!currentPokemon()" variant="ghost" class="loading-placeholder"></pt-surface>
+            </pt-stack>
+          </pt-card-content>
+        </pt-card>
+      } @else {
+        <!-- ローディング状態 -->
+        <pt-surface variant="ghost" class="loading-placeholder"></pt-surface>
+      }
     </pt-surface>
   `,
   styles: [`

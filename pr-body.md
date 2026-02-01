@@ -1,44 +1,52 @@
 ## 💡 概要
 
-Phase 3e の実装として、Avatar と Heading コンポーネントの設計ガイドラインを作成し、トークン参照の整合性を修正しました。
+UIコンポーネントの import を **エイリアス (`@ui/`) + Barrel file (`index.ts`)** 形式に統一し、将来のミスを防ぐガードレールを追加しました。
 
 ## 📝 変更内容
 
-- **avatar-heading-guide.md 新規作成**: Shape/Level/Size の使い分けガイドライン
-- **heading.json トークン参照修正**: `color.gray.800` → `color.text.primary` (セマンティック参照)
-- **ポケモン画像の推奨設定追加**: `shape="square"` + `pixelated="true"`
-- **Heading level/size 分離設計の意図を文書化**
+### Barrel file 作成（11ファイル）
+- `src/app/ui/pt-avatar/index.ts`
+- `src/app/ui/pt-button/index.ts`
+- `src/app/ui/pt-chip/index.ts`
+- `src/app/ui/pt-grid/index.ts`
+- `src/app/ui/pt-heading/index.ts`
+- `src/app/ui/pt-icon/index.ts`
+- `src/app/ui/pt-spinner/index.ts`
+- `src/app/ui/pt-stack/index.ts`
+- `src/app/ui/pt-surface/index.ts`
+- `src/app/ui/pt-text/index.ts`
+- `src/app/ui/pt-type-chip/index.ts`
+
+### Import 修正
+- `quiz.container.ts`: 相対パス → `@ui/<component>` 形式
+- `battle-card.ts`: 直接参照 → barrel 形式
+- `pt-chip.ts`, `pt-type-chip.ts`: 内部 import を barrel 形式に
+
+### ガードレール追加
+- `guards/architecture/guard/ui-import-standards.guard.md`
+- `guards/architecture/rules/ui-import-standards.rules.js`
+- ESLint に `no-restricted-imports` ルールを追加
 
 ## 🔗 関連Issue
 
-Partially addresses #108 (コンポーネント品質改善)
+Closes #89
 
 ## 📷 スクリーンショット（該当する場合）
 
-視覚的な変更はありません（トークン参照の修正とドキュメント追加のみ）
+N/A（コード品質改善のため）
 
 ## ✅ チェックリスト
 
 - [x] ビルドが成功する（`npm run build`）
 - [x] Lintエラーがない（`npm run lint`）
-- [x] テストが通る（`npm run test`）
+- [ ] テストが通る（`npm run test`）
 - [x] コミットメッセージが規約に従っている（`feat:`, `fix:`, `chore:`など）
 - [x] ブランチ名が規約に従っている（`feature/`, `fix/`, `chore/`など）
 - [x] 必要に応じてドキュメントを更新した
 
 ## 📌 補足事項
 
-### Avatar Shape ガイドライン
-
-| Shape | 推奨用途 |
-|-------|----------|
-| `circle` | 人物アイコン、SNSアバター |
-| `rounded` | サムネイル、写真 |
-| `square` | ピクセルアート、**ポケモン画像** |
-
-### Heading Level/Size 分離
-
-セマンティックレベル（アクセシビリティ）と視覚的サイズを分離し、柔軟なスタイリングが可能。
+今後、直接ファイル参照（`@ui/pt-xxx/pt-xxx`）や相対パス（`../../ui/pt-xxx`）を使用すると ESLint がエラーを出します。
 
 --- 
 
@@ -66,7 +74,6 @@ Partially addresses #108 (コンポーネント品質改善)
 例: `feat: add sound effects and toggle switch`
 
 ## 📖 レビュー用語集
-<!-- レビュー時によく使う用語の意味 -->
 
 | 用語 | 意味 | 説明 |
 |------|------|------|
