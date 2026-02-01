@@ -29,6 +29,88 @@ title: Guidelines
 | **単一要素** | Stackの意味がない | 直接スタイル |
 | **複雑なネスト** | 可読性が下がる | 適切なセクション分割 |
 
+---
+
+## Direction 選択ガイド
+
+| 方向 | 用途 |
+|------|------|
+| `column` | **縦積み**（デフォルト）。フォーム、カード内コンテンツ |
+| `row` | **横並び**。ボタン群、アイコン+テキスト、ナビゲーション |
+
+### 使用例
+
+```html
+<!-- 縦積み（デフォルト） -->
+<pt-stack direction="column" gap="md">
+  <pt-heading [level]="2">タイトル</pt-heading>
+  <pt-text>説明文...</pt-text>
+  <pt-button>アクション</pt-button>
+</pt-stack>
+
+<!-- 横並び -->
+<pt-stack direction="row" gap="sm" align="center">
+  <pt-icon [src]="iconPath" size="sm"></pt-icon>
+  <pt-text>ラベル</pt-text>
+</pt-stack>
+```
+
+---
+
+## Gap 選択ガイド
+
+| サイズ | 値 | 用途 |
+|--------|------|------|
+| `none` | 0 | ギャップなし |
+| `xs` | 4px | 密接した要素 |
+| `sm` | 8px | コンパクトなレイアウト |
+| `md` | 16px | 標準（デフォルト） |
+| `lg` | 24px | ゆったりしたレイアウト |
+| `xl` | 32px | セクション間の大きな間隔 |
+
+---
+
+## Align / Justify 選択ガイド
+
+### Align（交差軸方向の配置）
+
+| 値 | 用途 |
+|----|------|
+| `stretch` | 子要素を伸ばす（デフォルト） |
+| `start` | 上/左揃え |
+| `center` | 中央揃え |
+| `end` | 下/右揃え |
+
+### Justify（主軸方向の配置）
+
+| 値 | 用途 |
+|----|------|
+| `start` | 先頭揃え（デフォルト） |
+| `center` | 中央揃え |
+| `end` | 末尾揃え |
+| `between` | 両端揃え（間に均等スペース） |
+
+```html
+<!-- 中央揃えの横並び -->
+<pt-stack direction="row" align="center" justify="between">
+  <pt-text>左</pt-text>
+  <pt-button>右</pt-button>
+</pt-stack>
+```
+
+---
+
+## pt-grid との使い分け
+
+| 判断基準 | 選択 |
+|----------|------|
+| 縦/横の一列配置 | `pt-stack` |
+| 規則的なn列配置 | `pt-grid` |
+| 柔軟な配置制御 | `pt-stack` |
+| 均等幅のカード並べ | `pt-grid` |
+
+---
+
 ## Accessibility
 
 - スタック自体にはARIA属性不要

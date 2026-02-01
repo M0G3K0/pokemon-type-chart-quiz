@@ -125,7 +125,12 @@ export const components = {
       "md": "1rem",
       "lg": "1.5rem"
     },
-    "radius": "0.75rem"
+    "radius": "0.75rem",
+    "section": {
+      "padding": "1rem",
+      "gap": "0.5rem",
+      "separator": "#f3f4f6"
+    }
   },
   "chip": {
     "padding": "0.25rem",
@@ -170,6 +175,32 @@ export const components = {
   "heading": {
     "text": {
       "color": "#1f2937"
+    },
+    "font": {
+      "xl": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "2.25rem",
+        "fontWeight": "700",
+        "lineHeight": "1.25"
+      },
+      "lg": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "1.5rem",
+        "fontWeight": "600",
+        "lineHeight": "1.25"
+      },
+      "md": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5"
+      },
+      "sm": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "1.125rem",
+        "fontWeight": "500",
+        "lineHeight": "1.5"
+      }
     },
     "accent": {
       "width": "6px",
@@ -265,6 +296,46 @@ export const components = {
       "disabled": "#9ca3af",
       "inverse": "#ffffff",
       "danger": "#ef4444"
+    },
+    "font": {
+      "lg": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "1.125rem",
+        "fontWeight": "400",
+        "lineHeight": "1.75"
+      },
+      "md": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "1rem",
+        "fontWeight": "400",
+        "lineHeight": "1.5"
+      },
+      "sm": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "0.875rem",
+        "fontWeight": "400",
+        "lineHeight": "1.5"
+      }
+    },
+    "label": {
+      "md": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "0.875rem",
+        "fontWeight": "500",
+        "lineHeight": "1.25"
+      },
+      "sm": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "0.75rem",
+        "fontWeight": "500",
+        "lineHeight": "1.25"
+      },
+      "xs": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "0.75rem",
+        "fontWeight": "400",
+        "lineHeight": "1.25"
+      }
     }
   },
   "type-chip": {
