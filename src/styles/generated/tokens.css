@@ -3,427 +3,427 @@
  */
 
 :root {
-  --pt-color-pokemon-normal-50: #f6f6f2; /** 物理的なノーマルタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-normal-100: #ecece4; /** 物理的なノーマルタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-normal-200: #d8d7c6; /** 物理的なノーマルタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-normal-300: #c4c3a9; /** 物理的なノーマルタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-normal-400: #b0af8b; /** 物理的なノーマルタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-normal-500: #828282; /** 物理的なノーマルタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-normal-600: #868662; /** 物理的なノーマルタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-normal-700: #656449; /** 物理的なノーマルタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-normal-800: #434331; /** 物理的なノーマルタイプの極暗色。 */
-  --pt-color-pokemon-normal-900: #222118; /** 物理的なノーマルタイプのほぼ黒。 */
-  --pt-color-pokemon-normal-950: #11110c; /** 物理的なノーマルタイプの最暗色。 */
-  --pt-color-pokemon-fire-50: #fef2ea; /** 物理的なほのおタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-fire-100: #fce6d5; /** 物理的なほのおタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-fire-200: #f9ccac; /** 物理的なほのおタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-fire-300: #f5b282; /** 物理的なほのおタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-fire-400: #f29959; /** 物理的なほのおタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-fire-500: #e4613e; /** 物理的なほのおタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-fire-600: #be6726; /** 物理的なほのおタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-fire-700: #8f4d1d; /** 物理的なほのおタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-fire-800: #5f3413; /** 物理的なほのおタイプの極暗色。 */
-  --pt-color-pokemon-fire-900: #301a0a; /** 物理的なほのおタイプのほぼ黒。 */
-  --pt-color-pokemon-fire-950: #180d05; /** 物理的なほのおタイプの最暗色。 */
-  --pt-color-pokemon-water-50: #eff4fe; /** 物理的なみずタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-water-100: #e0e9fc; /** 物理的なみずタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-water-200: #c1d2fa; /** 物理的なみずタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-water-300: #a1bcf7; /** 物理的なみずタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-water-400: #82a6f4; /** 物理的なみずタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-water-500: #3a9de2; /** 物理的なみずタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-water-600: #4f73c0; /** 物理的なみずタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-water-700: #3b5690; /** 物理的なみずタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-water-800: #283a60; /** 物理的なみずタイプの極暗色。 */
-  --pt-color-pokemon-water-900: #141d30; /** 物理的なみずタイプのほぼ黒。 */
-  --pt-color-pokemon-water-950: #0a0e18; /** 物理的なみずタイプの最暗色。 */
-  --pt-color-pokemon-electric-50: #fefbea; /** 物理的なでんきタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-electric-100: #fef6d5; /** 物理的なでんきタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-electric-200: #fdecaa; /** 物理的なでんきタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-electric-300: #fce280; /** 物理的なでんきタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-electric-400: #fad956; /** 物理的なでんきタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-electric-500: #dfbc28; /** 物理的なでんきタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-electric-600: #c6a623; /** 物理的なでんきタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-electric-700: #947d1a; /** 物理的なでんきタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-electric-800: #635312; /** 物理的なでんきタイプの極暗色。 */
-  --pt-color-pokemon-electric-900: #312a09; /** 物理的なでんきタイプのほぼ黒。 */
-  --pt-color-pokemon-electric-950: #191504; /** 物理的なでんきタイプの最暗色。 */
-  --pt-color-pokemon-grass-50: #f2f9ed; /** 物理的なくさタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-grass-100: #e4f4db; /** 物理的なくさタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-grass-200: #c9e9b8; /** 物理的なくさタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-grass-300: #aede94; /** 物理的なくさタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-grass-400: #94d371; /** 物理的なくさタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-grass-500: #439837; /** 物理的なくさタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-grass-600: #629f3d; /** 物理的なくさタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-grass-700: #49772e; /** 物理的なくさタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-grass-800: #314f1e; /** 物理的なくさタイプの極暗色。 */
-  --pt-color-pokemon-grass-900: #18280f; /** 物理的なくさタイプのほぼ黒。 */
-  --pt-color-pokemon-grass-950: #0c1408; /** 物理的なくさタイプの最暗色。 */
-  --pt-color-pokemon-ice-50: #f4fbfb; /** 物理的なこおりタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-ice-100: #eaf7f7; /** 物理的なこおりタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-ice-200: #d5efee; /** 物理的なこおりタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-ice-300: #c0e7e5; /** 物理的なこおりタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-ice-400: #abe0dd; /** 物理的なこおりタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-ice-500: #47c8c8; /** 物理的なこおりタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-ice-600: #78aeab; /** 物理的なこおりタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-ice-700: #5a8280; /** 物理的なこおりタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-ice-800: #3c5756; /** 物理的なこおりタイプの極暗色。 */
-  --pt-color-pokemon-ice-900: #1e2b2b; /** 物理的なこおりタイプのほぼ黒。 */
-  --pt-color-pokemon-ice-950: #0f1616; /** 物理的なこおりタイプの最暗色。 */
-  --pt-color-pokemon-fighting-50: #f9eaeb; /** 物理的なかくとうタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-fighting-100: #f3d5d6; /** 物理的なかくとうタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-fighting-200: #e7abad; /** 物理的なかくとうタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-fighting-300: #db8285; /** 物理的なかくとうタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-fighting-400: #cf585c; /** 物理的なかくとうタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-fighting-500: #e49021; /** 物理的なかくとうタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-fighting-600: #9b2520; /** 物理的なかくとうタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-fighting-700: #741c18; /** 物理的なかくとうタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-fighting-800: #4e1210; /** 物理的なかくとうタイプの極暗色。 */
-  --pt-color-pokemon-fighting-900: #270908; /** 物理的なかくとうタイプのほぼ黒。 */
-  --pt-color-pokemon-fighting-950: #130504; /** 物理的なかくとうタイプの最暗色。 */
-  --pt-color-pokemon-poison-50: #f6ecf6; /** 物理的などくタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-poison-100: #edd8ec; /** 物理的などくタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-poison-200: #dbb2da; /** 物理的などくタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-poison-300: #c98cc7; /** 物理的などくタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-poison-400: #b765b5; /** 物理的などくタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-poison-500: #9354cb; /** 物理的などくタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-poison-600: #823281; /** 物理的などくタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-poison-700: #622561; /** 物理的などくタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-poison-800: #411940; /** 物理的などくタイプの極暗色。 */
-  --pt-color-pokemon-poison-900: #210c20; /** 物理的などくタイプのほぼ黒。 */
-  --pt-color-pokemon-poison-950: #100610; /** 物理的などくタイプの最暗色。 */
-  --pt-color-pokemon-ground-50: #fcf9f0; /** 物理的なじめんタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-ground-100: #f9f2e0; /** 物理的なじめんタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-ground-200: #f3e6c1; /** 物理的なじめんタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-ground-300: #edd9a3; /** 物理的なじめんタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-ground-400: #e7cd84; /** 物理的なじめんタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-ground-500: #a4733c; /** 物理的なじめんタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-ground-600: #b59951; /** 物理的なじめんタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-ground-700: #88733d; /** 物理的なじめんタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-ground-800: #5a4c28; /** 物理的なじめんタイプの極暗色。 */
-  --pt-color-pokemon-ground-900: #2d2614; /** 物理的なじめんタイプのほぼ黒。 */
-  --pt-color-pokemon-ground-950: #17130a; /** 物理的なじめんタイプの最暗色。 */
-  --pt-color-pokemon-flying-50: #f6f4fe; /** 物理的なひこうタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-flying-100: #ede9fc; /** 物理的なひこうタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-flying-200: #dbd2f9; /** 物理的なひこうタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-flying-300: #c9bcf6; /** 物理的なひこうタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-flying-400: #b7a5f3; /** 物理的なひこうタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-flying-500: #74aad0; /** 物理的なひこうタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-flying-600: #8772c2; /** 物理的なひこうタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-flying-700: #655692; /** 物理的なひこうタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-flying-800: #443961; /** 物理的なひこうタイプの極暗色。 */
-  --pt-color-pokemon-flying-900: #221d31; /** 物理的なひこうタイプのほぼ黒。 */
-  --pt-color-pokemon-flying-950: #110e18; /** 物理的なひこうタイプの最暗色。 */
-  --pt-color-pokemon-psychic-50: #ffeef3; /** 物理的なエスパータイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-psychic-100: #ffdde7; /** 物理的なエスパータイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-psychic-200: #ffbbce; /** 物理的なエスパータイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-psychic-300: #ff99b6; /** 物理的なエスパータイプの中明色。視認性あり。 */
-  --pt-color-pokemon-psychic-400: #fb779e; /** 物理的なエスパータイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-psychic-500: #e96c8c; /** 物理的なエスパータイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-psychic-600: #c7446c; /** 物理的なエスパータイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-psychic-700: #953351; /** 物理的なエスパータイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-psychic-800: #642236; /** 物理的なエスパータイプの極暗色。 */
-  --pt-color-pokemon-psychic-900: #32111b; /** 物理的なエスパータイプのほぼ黒。 */
-  --pt-color-pokemon-psychic-950: #19080d; /** 物理的なエスパータイプの最暗色。 */
-  --pt-color-pokemon-bug-50: #f6f8e8; /** 物理的なむしタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-bug-100: #edf1d1; /** 物理的なむしタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-bug-200: #dce4a3; /** 物理的なむしタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-bug-300: #cad676; /** 物理的なむしタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-bug-400: #b8c948; /** 物理的なむしタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-bug-500: #9f9f28; /** 物理的なむしタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-bug-600: #859415; /** 物理的なむしタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-bug-700: #646f10; /** 物理的なむしタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-bug-800: #424a0b; /** 物理的なむしタイプの極暗色。 */
-  --pt-color-pokemon-bug-900: #212505; /** 物理的なむしタイプのほぼ黒。 */
-  --pt-color-pokemon-bug-950: #101203; /** 物理的なむしタイプの最暗色。 */
-  --pt-color-pokemon-rock-50: #f8f6eb; /** 物理的ないわタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-rock-100: #f1ecd7; /** 物理的ないわタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-rock-200: #e3d9af; /** 物理的ないわタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-rock-300: #d5c687; /** 物理的ないわタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-rock-400: #c6b35e; /** 物理的ないわタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-rock-500: #a9a481; /** 物理的ないわタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-rock-600: #92812b; /** 物理的ないわタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-rock-700: #6d6120; /** 物理的ないわタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-rock-800: #494016; /** 物理的ないわタイプの極暗色。 */
-  --pt-color-pokemon-rock-900: #24200b; /** 物理的ないわタイプのほぼ黒。 */
-  --pt-color-pokemon-rock-950: #121005; /** 物理的ないわタイプの最暗色。 */
-  --pt-color-pokemon-ghost-50: #f1eef5; /** 物理的なゴーストタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-ghost-100: #e3deeb; /** 物理的なゴーストタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-ghost-200: #c7bdd6; /** 物理的なゴーストタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-ghost-300: #ab9cc2; /** 物理的なゴーストタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-ghost-400: #8f7bad; /** 物理的なゴーストタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-ghost-500: #6f4570; /** 物理的なゴーストタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-ghost-600: #5c4679; /** 物理的なゴーストタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-ghost-700: #45345b; /** 物理的なゴーストタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-ghost-800: #2e233c; /** 物理的なゴーストタイプの極暗色。 */
-  --pt-color-pokemon-ghost-900: #17111e; /** 物理的なゴーストタイプのほぼ黒。 */
-  --pt-color-pokemon-ghost-950: #0b090f; /** 物理的なゴーストタイプの最暗色。 */
-  --pt-color-pokemon-dragon-50: #f1ebfe; /** 物理的なドラゴンタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-dragon-100: #e2d7fe; /** 物理的なドラゴンタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-dragon-200: #c6affd; /** 物理的なドラゴンタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-dragon-300: #a986fc; /** 物理的なドラゴンタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-dragon-400: #8d5dfc; /** 物理的なドラゴンタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-dragon-500: #576fbc; /** 物理的なドラゴンタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-dragon-600: #592aca; /** 物理的なドラゴンタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-dragon-700: #431f97; /** 物理的なドラゴンタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-dragon-800: #2c1565; /** 物理的なドラゴンタイプの極暗色。 */
-  --pt-color-pokemon-dragon-900: #160b32; /** 物理的なドラゴンタイプのほぼ黒。 */
-  --pt-color-pokemon-dragon-950: #0b0519; /** 物理的なドラゴンタイプの最暗色。 */
-  --pt-color-pokemon-steel-50: #f8f8fa; /** 物理的なはがねタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-steel-100: #f1f1f5; /** 物理的なはがねタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-steel-200: #e2e2eb; /** 物理的なはがねタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-steel-300: #d4d4e1; /** 物理的なはがねタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-steel-400: #c5c5d8; /** 物理的なはがねタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-steel-500: #77b2cb; /** 物理的なはがねタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-steel-600: #9292a5; /** 物理的なはがねタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-steel-700: #6e6e7c; /** 物理的なはがねタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-steel-800: #494952; /** 物理的なはがねタイプの極暗色。 */
-  --pt-color-pokemon-steel-900: #252529; /** 物理的なはがねタイプのほぼ黒。 */
-  --pt-color-pokemon-steel-950: #121215; /** 物理的なはがねタイプの最暗色。 */
-  --pt-color-pokemon-dark-50: #f1eeed; /** 物理的なあくタイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-dark-100: #e3dedb; /** 物理的なあくタイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-dark-200: #c6bcb7; /** 物理的なあくタイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-dark-300: #a99b93; /** 物理的なあくタイプの中明色。視認性あり。 */
-  --pt-color-pokemon-dark-400: #8d796e; /** 物理的なあくタイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-dark-500: #4f4747; /** 物理的なあくタイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-dark-600: #5a4638; /** 物理的なあくタイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-dark-700: #43342a; /** 物理的なあくタイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-dark-800: #2d231c; /** 物理的なあくタイプの極暗色。 */
-  --pt-color-pokemon-dark-900: #16110e; /** 物理的なあくタイプのほぼ黒。 */
-  --pt-color-pokemon-dark-950: #0b0907; /** 物理的なあくタイプの最暗色。 */
-  --pt-color-pokemon-fairy-50: #fbf3f7; /** 物理的なフェアリータイプの最明色。背景用。ほぼ白に近い。 */
-  --pt-color-pokemon-fairy-100: #f7e7ee; /** 物理的なフェアリータイプの極明色。薄い背景用。 */
-  --pt-color-pokemon-fairy-200: #efcedd; /** 物理的なフェアリータイプの明色。アクセント背景用。 */
-  --pt-color-pokemon-fairy-300: #e7b6cc; /** 物理的なフェアリータイプの中明色。視認性あり。 */
-  --pt-color-pokemon-fairy-400: #df9dba; /** 物理的なフェアリータイプの鮮色。アクセントに適する。 */
-  --pt-color-pokemon-fairy-500: #e18ce1; /** 物理的なフェアリータイプの基準色。バッジやアイコン用。 */
-  --pt-color-pokemon-fairy-600: #ab6a8a; /** 物理的なフェアリータイプのやや暗色。高コントラスト確保可能。 */
-  --pt-color-pokemon-fairy-700: #805068; /** 物理的なフェアリータイプの暗色。テキスト用。白背景上で高コントラスト。 */
-  --pt-color-pokemon-fairy-800: #563545; /** 物理的なフェアリータイプの極暗色。 */
-  --pt-color-pokemon-fairy-900: #2b1b23; /** 物理的なフェアリータイプのほぼ黒。 */
-  --pt-color-pokemon-fairy-950: #150d11; /** 物理的なフェアリータイプの最暗色。 */
-  --pt-color-gray-50: #f9fafb; /** 最も明るいグレー。ほぼ白に近い。背景として十分な明度を持つ。 */
-  --pt-color-gray-100: #f3f4f6; /** 非常に明るいグレー。50との差がわずかに認識できる程度。 */
-  --pt-color-gray-200: #e5e7eb; /** 明るいグレー。白背景上で境界線として認識可能。 */
-  --pt-color-gray-300: #d1d5db; /** 中明度の明るいグレー。白背景上で明確に視認できる。 */
-  --pt-color-gray-400: #9ca3af; /** 中間グレー。白・黒どちらの背景でも視認可能だがコントラストは低め。 */
-  --pt-color-gray-500: #6b7280; /** 標準グレー。白背景上で十分なコントラスト(3:1以上)を確保。 */
-  --pt-color-gray-600: #4b5563; /** やや暗いグレー。白背景上で高コントラスト(4.5:1以上)確保可能。 */
-  --pt-color-gray-700: #374151; /** 暗いグレー。白文字との対比で十分なコントラスト確保可能。 */
-  --pt-color-gray-800: #1f2937; /** 非常に暗いグレー。白文字との対比でAAA基準(7:1)に近い。 */
-  --pt-color-gray-900: #111827; /** ほぼ黒に近いグレー。わずかに青みを帯びる。 */
-  --pt-color-gray-950: #030712; /** 最も暗いグレー。純黒に非常に近い。 */
-  --pt-color-lime-50: #f7fee7; /** 最も明るいライム。ほぼ白に近い。背景用。 */
-  --pt-color-lime-100: #ecfccb; /** 非常に明るいライム。薄い背景用。 */
-  --pt-color-lime-200: #d9f99d; /** 明るいライム。アクセント背景用。 */
-  --pt-color-lime-300: #bef264; /** 中明度のライム。視認性が高い。 */
-  --pt-color-lime-400: #a3e635; /** 鮮やかなライム。アクセントに適する。 */
-  --pt-color-lime-500: #84cc16; /** 標準ライム。白背景上で十分なコントラスト。 */
-  --pt-color-lime-600: #65a30d; /** やや暗いライム。高コントラスト(4.5:1以上)確保可能。 */
-  --pt-color-lime-700: #4d7c0f; /** 暗いライム。白文字との対比で使用可能。 */
-  --pt-color-lime-800: #3f6212; /** 非常に暗いライム。 */
-  --pt-color-lime-900: #365314; /** ほぼ黒に近いライム。 */
-  --pt-color-lime-950: #1a2e05; /** 最も暗いライム。 */
-  --pt-color-red-50: #fef2f2; /** 最も明るいレッド。ほぼ白に近い。エラー背景用。 */
-  --pt-color-red-100: #fee2e2; /** 非常に明るいレッド。薄い警告背景用。 */
-  --pt-color-red-200: #fecaca; /** 明るいレッド。アクセント背景用。 */
-  --pt-color-red-300: #fca5a5; /** 中明度のレッド。視認性が高い。 */
-  --pt-color-red-400: #f87171; /** 鮮やかなレッド。アクセントに適する。 */
-  --pt-color-red-500: #ef4444; /** 標準レッド。白背景上で十分なコントラスト。 */
-  --pt-color-red-600: #dc2626; /** やや暗いレッド。高コントラスト(4.5:1以上)確保可能。 */
-  --pt-color-red-700: #b91c1c; /** 暗いレッド。白文字との対比で使用可能。 */
-  --pt-color-red-800: #991b1b; /** 非常に暗いレッド。 */
-  --pt-color-red-900: #7f1d1d; /** ほぼ黒に近いレッド。 */
-  --pt-color-red-950: #450a0a; /** 最も暗いレッド。 */
-  --pt-color-white: #ffffff; /** 物理的な純白。#FFFFFF。最大輝度。 */
-  --pt-color-black: #000000; /** 物理的な純黒。#000000。最小輝度。 */
-  --pt-radius-none: 0; /** 0px - 角丸なし。シャープな印象 */
-  --pt-radius-sm: 0.25rem; /** 4px - 微細な角丸。ボタンやバッジ向け */
-  --pt-radius-md: 0.5rem; /** 8px - 標準的な角丸。カードなど */
-  --pt-radius-lg: 0.75rem; /** 12px - やや大きめの角丸。モダンな印象 */
-  --pt-radius-xl: 1rem; /** 16px - 大きな角丸。強調したい要素 */
-  --pt-radius-2xl: 1.5rem; /** 24px - 非常に大きな角丸。フレンドリーな印象 */
-  --pt-radius-full: 9999px; /** 完全な円形。ピルボタンやアバター */
-  --pt-border-width-none: 0; /** 枠線なし */
-  --pt-border-width-sm: 1px; /** 1px - 標準的な細い枠線 */
-  --pt-border-width-md: 2px; /** 2px - やや太い枠線。強調用 */
-  --pt-border-width-lg: 4px; /** 4px - 太い枠線。アクセント用 */
-  --pt-shadow-none: none; /** 影なし。フラットなデザイン */
-  --pt-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05); /** 非常に薄い影。わずかな浮き上がり */
-  --pt-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /** 標準的な影。カード等の通常状態 */
-  --pt-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /** 大きめの影。ホバー状態やドロップダウン */
-  --pt-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); /** 大きな影。モーダルやポップオーバー */
-  --pt-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25); /** 最大の影。フローティング要素 */
-  --pt-duration-fast: 100ms; /** 高速。即座のフィードバック感 */
-  --pt-duration-normal: 200ms; /** 標準速度。ほとんどのインタラクション */
-  --pt-duration-slow: 300ms; /** やや遅め。目立つ変化の表現 */
-  --pt-duration-slower: 500ms; /** 遅め。入退場アニメーション等 */
-  --pt-easing-default: cubic-bezier(0.4, 0, 0.2, 1); /** 標準イージング。自然な加減速 */
-  --pt-easing-in: cubic-bezier(0.4, 0, 1, 1); /** ease-in。ゆっくり始まり加速 */
-  --pt-easing-out: cubic-bezier(0, 0, 0.2, 1); /** ease-out。急に始まり減速 */
-  --pt-easing-in-out: cubic-bezier(0.4, 0, 0.2, 1); /** ease-in-out。両端で緩やか */
-  --pt-space-0: 0; /** 物理的な0px。余白なしを明示する場合に使用。 */
-  --pt-space-1: 0.25rem; /** 物理的な4px。グリッドの最小単位。微細な調整用。 */
-  --pt-space-2: 0.5rem; /** 物理的な8px。グリッドの2倍。コンパクトなスペース。 */
-  --pt-space-3: 0.75rem; /** 物理的な12px。グリッドの3倍。やや狭めの余白。 */
-  --pt-space-4: 1rem; /** 物理的な16px。グリッドの4倍。標準的な余白の基本単位。 */
-  --pt-space-5: 1.25rem; /** 物理的な20px。グリッドの5倍。やや広めの余白。 */
-  --pt-space-6: 1.5rem; /** 物理的な24px。グリッドの6倍。セクション内の余白に適する。 */
-  --pt-space-8: 2rem; /** 物理的な32px。グリッドの8倍。明確な区切りを示す。 */
-  --pt-space-10: 2.5rem; /** 物理的な40px。グリッドの10倍。大きなセクション間。 */
-  --pt-space-12: 3rem; /** 物理的な48px。グリッドの12倍。主要セクション間。 */
-  --pt-space-16: 4rem; /** 物理的な64px。グリッドの16倍。ページレベルの大きな余白。 */
-  --pt-space-20: 5rem; /** 物理的な80px。グリッドの20倍。最大レベルの余白。 */
-  --pt-space-05: 0.125rem; /** 物理的な2px。グリッドの半分。特に小さいコンポーネント用の例外的な値。 */
-  --pt-font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif; /** システムサンセリフフォント。本文・UI用 */
-  --pt-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; /** 等幅フォント。コード・数値表示用 */
-  --pt-font-size-xs: 0.75rem; /** 12px - 非常に小さい。注釈やラベル */
-  --pt-font-size-sm: 0.875rem; /** 14px - 小さい。キャプションやメタ情報 */
-  --pt-font-size-md: 1rem; /** 16px - 基準サイズ。本文テキスト */
-  --pt-font-size-lg: 1.125rem; /** 18px - やや大きい。リード文や強調 */
-  --pt-font-size-xl: 1.25rem; /** 20px - 大きい。小見出し */
-  --pt-font-size-2xl: 1.5rem; /** 24px - かなり大きい。セクション見出し */
-  --pt-font-size-3xl: 1.875rem; /** 30px - 大見出し */
-  --pt-font-size-4xl: 2.25rem; /** 36px - ページタイトル級 */
-  --pt-font-weight-normal: 400; /** 通常。本文テキスト用 */
-  --pt-font-weight-medium: 500; /** 中間。ラベルや軽い強調 */
-  --pt-font-weight-semibold: 600; /** やや太い。見出しや強調 */
-  --pt-font-weight-bold: 700; /** 太字。重要な見出し */
-  --pt-font-line-height-tight: 1.25; /** 詰まった行間。見出しやボタン */
-  --pt-font-line-height-normal: 1.5; /** 標準行間。本文テキスト */
-  --pt-font-line-height-relaxed: 1.75; /** ゆったり行間。長文の可読性向上 */
-  --pt-semantic-border-width-none: 0; /** 【用途】枠線なし。 */
-  --pt-semantic-border-width-default: 1px; /** 【用途】標準枠線。入力欄、カード。 */
-  --pt-semantic-border-width-thick: 2px; /** 【用途】太い枠線。フォーカス状態、強調。 */
-  --pt-avatar-size-sm: 32px; /** 小サイズ。リスト内のアイコンなどに使用。 */
-  --pt-avatar-size-md: 48px; /** 中サイズ。標準的なアバター表示に使用。 */
-  --pt-avatar-size-lg: 80px; /** 大サイズ。カード内メイン画像などに使用。 */
-  --pt-avatar-size-xl: 120px; /** 特大サイズ。プロフィール画面などに使用。 */
-  --pt-button-primary-border-default: rgba(0, 0, 0, 0); /** ボタンの枠線色。Primaryは枠なし。 */
-  --pt-button-secondary-bg-default: rgba(0, 0, 0, 0); /** 背景色。Secondaryは透明で枠線を強調。 */
-  --pt-button-secondary-bg-disabled: rgba(0, 0, 0, 0); /** 無効時の背景色。透明のまま。 */
-  --pt-button-ghost-bg-default: rgba(0, 0, 0, 0); /** 背景色。完全透明。 */
-  --pt-button-ghost-bg-disabled: rgba(0, 0, 0, 0); /** 無効時の背景色。透明のまま。 */
-  --pt-button-ghost-border-default: rgba(0, 0, 0, 0); /** 枠線色。Ghostは枠なし。 */
-  --pt-button-danger-border-default: rgba(0, 0, 0, 0); /** 枠線色。Dangerは枠なし。 */
-  --pt-chip-radius-none: 0; /** 角丸なし。 */
-  --pt-chip-radius-full: 9999px; /** 完全な丸み（ピル形状）。 */
-  --pt-grid-columns-1: 1; /** 1カラム。モバイルでの単一カラム表示。 */
-  --pt-grid-columns-2: 2; /** 2カラム。選択肢表示のデフォルト。 */
-  --pt-grid-columns-3: 3; /** 3カラム。sm以上での選択肢表示。 */
-  --pt-grid-columns-4: 4; /** 4カラム。ギャラリー表示など。 */
-  --pt-grid-columns-6: 6; /** 6カラム。高密度レイアウト。 */
-  --pt-grid-gap-none: 0; /** ギャップなし。 */
-  --pt-heading-accent-width: 6px; /** アクセントバーの幅。視覚的なアクセントとしては十分かつ控えめなサイズ。 */
-  --pt-spinner-border-width-sm: 2px; /** 小サイズ時のボーダー幅。 */
-  --pt-spinner-border-width-md: 3px; /** 中サイズ時のボーダー幅。 */
-  --pt-spinner-border-width-lg: 4px; /** 大サイズ時のボーダー幅。 */
-  --pt-spinner-color-track: rgba(0, 0, 0, 0.1); /** トラック色。ドーナツ状スピナーの背景リング。 */
-  --pt-spinner-animation-duration: 0.8s; /** 1回転にかかる時間。 */
-  --pt-stack-gap-none: 0; /** ギャップなし。要素同士を密着させる場合に使用。 */
-  --pt-surface-variant-ghost-background: rgba(0, 0, 0, 0); /** 透明背景。親要素の背景を透過。 */
-  --pt-surface-padding-none: 0; /** パディングなし。 */
-  --pt-color-pokemon-type-normal: var(--pt-color-pokemon-normal-500); /** 【用途】ノーマルタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-fire: var(--pt-color-pokemon-fire-500); /** 【用途】ほのおタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-water: var(--pt-color-pokemon-water-500); /** 【用途】みずタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-electric: var(--pt-color-pokemon-electric-500); /** 【用途】でんきタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-grass: var(--pt-color-pokemon-grass-500); /** 【用途】くさタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-ice: var(--pt-color-pokemon-ice-500); /** 【用途】こおりタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-fighting: var(--pt-color-pokemon-fighting-500); /** 【用途】かくとうタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-poison: var(--pt-color-pokemon-poison-500); /** 【用途】どくタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-ground: var(--pt-color-pokemon-ground-500); /** 【用途】じめんタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-flying: var(--pt-color-pokemon-flying-500); /** 【用途】ひこうタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-psychic: var(--pt-color-pokemon-psychic-500); /** 【用途】エスパータイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-bug: var(--pt-color-pokemon-bug-500); /** 【用途】むしタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-rock: var(--pt-color-pokemon-rock-500); /** 【用途】いわタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-ghost: var(--pt-color-pokemon-ghost-500); /** 【用途】ゴーストタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-dragon: var(--pt-color-pokemon-dragon-500); /** 【用途】ドラゴンタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-dark: var(--pt-color-pokemon-dark-500); /** 【用途】あくタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-steel: var(--pt-color-pokemon-steel-500); /** 【用途】はがねタイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-type-fairy: var(--pt-color-pokemon-fairy-500); /** 【用途】フェアリータイプのバッジ・アイコン背景。 */
-  --pt-color-pokemon-bg-normal: var(--pt-color-pokemon-normal-50); /** 【用途】ノーマルタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-fire: var(--pt-color-pokemon-fire-50); /** 【用途】ほのおタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-water: var(--pt-color-pokemon-water-50); /** 【用途】みずタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-electric: var(--pt-color-pokemon-electric-50); /** 【用途】でんきタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-grass: var(--pt-color-pokemon-grass-50); /** 【用途】くさタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-ice: var(--pt-color-pokemon-ice-50); /** 【用途】こおりタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-fighting: var(--pt-color-pokemon-fighting-50); /** 【用途】かくとうタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-poison: var(--pt-color-pokemon-poison-50); /** 【用途】どくタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-ground: var(--pt-color-pokemon-ground-50); /** 【用途】じめんタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-flying: var(--pt-color-pokemon-flying-50); /** 【用途】ひこうタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-psychic: var(--pt-color-pokemon-psychic-50); /** 【用途】エスパータイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-bug: var(--pt-color-pokemon-bug-50); /** 【用途】むしタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-rock: var(--pt-color-pokemon-rock-50); /** 【用途】いわタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-ghost: var(--pt-color-pokemon-ghost-50); /** 【用途】ゴーストタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-dragon: var(--pt-color-pokemon-dragon-50); /** 【用途】ドラゴンタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-dark: var(--pt-color-pokemon-dark-50); /** 【用途】あくタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-steel: var(--pt-color-pokemon-steel-50); /** 【用途】はがねタイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-bg-fairy: var(--pt-color-pokemon-fairy-50); /** 【用途】フェアリータイプのカード・エリア背景。薄い色で広範囲に使用可能。 */
-  --pt-color-pokemon-text-normal: var(--pt-color-pokemon-normal-700); /** 【用途】ノーマルタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-fire: var(--pt-color-pokemon-fire-700); /** 【用途】ほのおタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-water: var(--pt-color-pokemon-water-700); /** 【用途】みずタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-electric: var(--pt-color-pokemon-electric-700); /** 【用途】でんきタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-grass: var(--pt-color-pokemon-grass-700); /** 【用途】くさタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-ice: var(--pt-color-pokemon-ice-700); /** 【用途】こおりタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-fighting: var(--pt-color-pokemon-fighting-700); /** 【用途】かくとうタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-poison: var(--pt-color-pokemon-poison-700); /** 【用途】どくタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-ground: var(--pt-color-pokemon-ground-700); /** 【用途】じめんタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-flying: var(--pt-color-pokemon-flying-700); /** 【用途】ひこうタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-psychic: var(--pt-color-pokemon-psychic-700); /** 【用途】エスパータイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-bug: var(--pt-color-pokemon-bug-700); /** 【用途】むしタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-rock: var(--pt-color-pokemon-rock-700); /** 【用途】いわタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-ghost: var(--pt-color-pokemon-ghost-700); /** 【用途】ゴーストタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-dragon: var(--pt-color-pokemon-dragon-700); /** 【用途】ドラゴンタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-dark: var(--pt-color-pokemon-dark-700); /** 【用途】あくタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-steel: var(--pt-color-pokemon-steel-700); /** 【用途】はがねタイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-pokemon-text-fairy: var(--pt-color-pokemon-fairy-700); /** 【用途】フェアリータイプのテキスト。bg上で十分なコントラストを確保。 */
-  --pt-color-result-win-default: var(--pt-color-lime-500); /** 【用途】正解・勝利を示す。クイズの正解表示、ポジティブな結果のみに使用。通常UIには使わない。 */
-  --pt-color-result-win-subtle: var(--pt-color-lime-100); /** 【用途】正解状態の背景色。カードやエリア全体を正解として強調する場合に使用。 */
-  --pt-color-result-win-strong: var(--pt-color-lime-700); /** 【用途】正解状態のテキスト色。subtle背景上で十分なコントラストを確保したテキスト用。 */
-  --pt-color-result-lose-default: var(--pt-color-red-500); /** 【用途】不正解・敗北を示す。クイズの不正解表示、ネガティブな結果のみに使用。エラーUIとは別。 */
-  --pt-color-result-lose-subtle: var(--pt-color-red-100); /** 【用途】不正解状態の背景色。カードやエリア全体を不正解として強調する場合に使用。 */
-  --pt-color-result-lose-strong: var(--pt-color-red-700); /** 【用途】不正解状態のテキスト色。subtle背景上で十分なコントラストを確保したテキスト用。 */
-  --pt-color-surface-page: var(--pt-color-gray-50); /** 【用途】ページ全体の背景。最も広いエリアに使用。他の要素はこの上に乗る。 */
-  --pt-color-surface-card: var(--pt-color-white); /** 【用途】カード・パネルの背景。page背景との差で浮いて見せる。コンテンツをグループ化する。 */
-  --pt-color-surface-elevated: var(--pt-color-white); /** 【用途】モーダル・ドロップダウンの背景。shadowと組み合わせて浮遊感を出す。 */
-  --pt-color-surface-hovered: var(--pt-color-gray-100); /** 【用途】ホバー状態の背景色。インタラクション可能な要素にマウスが乗った時に適用。 */
-  --pt-color-surface-pressed: var(--pt-color-gray-200); /** 【用途】押下状態の背景色。hoveredより一段暗くして押し込み感を表現。 */
-  --pt-color-text-primary: var(--pt-color-gray-800); /** 【用途】主要テキスト。見出し、本文、ラベル。最も重要な読ませたい内容に使用。 */
-  --pt-color-text-secondary: var(--pt-color-gray-500); /** 【用途】補助テキスト。キャプション、説明文、メタ情報。primaryより視覚的優先度を下げる。 */
-  --pt-color-text-disabled: var(--pt-color-gray-400); /** 【用途】無効化状態のテキスト。操作不可であることを視覚的に示す。コントラストは意図的に低い。 */
-  --pt-color-text-inverse: var(--pt-color-white); /** 【用途】暗い背景上のテキスト。gray-700以上の暗い背景で使用し、十分なコントラストを確保。 */
-  --pt-color-border-default: var(--pt-color-gray-200); /** 【用途】標準の境界線。カード、入力欄、区切り線に使用。控えめだが認識できる程度。 */
-  --pt-color-border-subtle: var(--pt-color-gray-100); /** 【用途】控えめな境界線。defaultより目立たせたくない場合。ほのかな区切りに使用。 */
-  --pt-color-border-focused: var(--pt-color-gray-600); /** 【用途】フォーカスリング。キーボード操作時のフォーカス表示。アクセシビリティ上重要。 */
-  --pt-elevation-none: var(--pt-shadow-none); /** 【用途】フラットな要素。浮き上がり不要な場合。 */
-  --pt-elevation-raised: var(--pt-shadow-sm); /** 【用途】軽く浮いた要素。カードのデフォルト状態。 */
-  --pt-elevation-overlay: var(--pt-shadow-md); /** 【用途】重なる要素。ドロップダウン、ポップオーバー。 */
-  --pt-elevation-modal: var(--pt-shadow-xl); /** 【用途】モーダルダイアログ。最前面の要素。 */
-  --pt-elevation-toast: var(--pt-shadow-lg); /** 【用途】通知トースト。注目を引く浮遊要素。 */
-  --pt-semantic-border-radius-none: var(--pt-radius-none); /** 【用途】角丸なし。シャープなデザイン。 */
-  --pt-semantic-border-radius-sm: var(--pt-radius-sm); /** 【用途】小さい要素。バッジ、チップ。 */
-  --pt-semantic-border-radius-md: var(--pt-radius-md); /** 【用途】標準要素。ボタン、入力欄。 */
-  --pt-semantic-border-radius-lg: var(--pt-radius-lg); /** 【用途】大きな要素。カード、パネル。 */
-  --pt-semantic-border-radius-xl: var(--pt-radius-xl); /** 【用途】特大コンテナ。モーダル、大きなサーフェス。 */
-  --pt-semantic-border-radius-pill: var(--pt-radius-full); /** 【用途】ピル形状。タグ、ステータスバッジ。 */
-  --pt-motion-duration-instant: var(--pt-duration-fast); /** 【用途】マイクロインタラクション。hover時の色変化等。 */
-  --pt-motion-duration-quick: var(--pt-duration-normal); /** 【用途】通常のトランジション。ボタン、リンク。 */
-  --pt-motion-duration-moderate: var(--pt-duration-slow); /** 【用途】やや長い変化。パネルの展開等。 */
-  --pt-motion-duration-deliberate: var(--pt-duration-slower); /** 【用途】意図的にゆっくり。モーダル表示等。 */
-  --pt-motion-easing-default: var(--pt-easing-default); /** 【用途】標準イージング。ほとんどの場合に適用。 */
-  --pt-motion-easing-enter: var(--pt-easing-out); /** 【用途】要素の登場。急に始まり減速。 */
-  --pt-motion-easing-exit: var(--pt-easing-in); /** 【用途】要素の退場。ゆっくり始まり加速。 */
-  --pt-spacing-content-xs: var(--pt-space-1); /** コンポーネント内余白の目的で使用。密集したUI用。デフォルトより狭い。 */
-  --pt-spacing-content-sm: var(--pt-space-2); /** コンポーネント内余白の目的で使用。バッジやチップなどコンパクトな要素用。 */
-  --pt-spacing-content-md: var(--pt-space-4); /** コンポーネント内余白の目的で使用。デフォルトのパディング。ボタン、入力欄。 */
-  --pt-spacing-content-lg: var(--pt-space-6); /** コンポーネント内余白の目的で使用。カードなど広い内部空間を持つ要素用。 */
-  --pt-spacing-content-xl: var(--pt-space-8); /** コンポーネント内余白の目的で使用。大きなカードやセクション用。 */
-  --pt-spacing-layout-section: var(--pt-space-12); /** 独立したコンテンツブロック同士を縦に離す距離を表す。セクション間隔。 */
-  --pt-spacing-layout-page: var(--pt-space-16); /** ページ全体の左右余白を表す。コンテナのサイドパディング。 */
-  --pt-spacing-gap-xs: var(--pt-space-1); /** 隣接要素間の距離を表す。インラインアイコン等、非常に狭い間隔。 */
-  --pt-spacing-gap-sm: var(--pt-space-2); /** 隣接要素間の距離を表す。タグリスト、小さなボタン群の間隔。 */
-  --pt-spacing-gap-md: var(--pt-space-4); /** 隣接要素間の距離を表す。デフォルトのグリッドギャップ。カードリスト。 */
-  --pt-spacing-gap-lg: var(--pt-space-6); /** 隣接要素間の距離を表す。セクション内のカード間など広い間隔。 */
-  --pt-spacing-gap-xl: var(--pt-space-8); /** 隣接要素間の距離を表す。セクション間の明確な分割など特大の間隔。 */
+  --pt-color-pokemon-normal-50: #f6f6f2;
+  --pt-color-pokemon-normal-100: #ecece4;
+  --pt-color-pokemon-normal-200: #d8d7c6;
+  --pt-color-pokemon-normal-300: #c4c3a9;
+  --pt-color-pokemon-normal-400: #b0af8b;
+  --pt-color-pokemon-normal-500: #828282;
+  --pt-color-pokemon-normal-600: #868662;
+  --pt-color-pokemon-normal-700: #656449;
+  --pt-color-pokemon-normal-800: #434331;
+  --pt-color-pokemon-normal-900: #222118;
+  --pt-color-pokemon-normal-950: #11110c;
+  --pt-color-pokemon-fire-50: #fef2ea;
+  --pt-color-pokemon-fire-100: #fce6d5;
+  --pt-color-pokemon-fire-200: #f9ccac;
+  --pt-color-pokemon-fire-300: #f5b282;
+  --pt-color-pokemon-fire-400: #f29959;
+  --pt-color-pokemon-fire-500: #e4613e;
+  --pt-color-pokemon-fire-600: #be6726;
+  --pt-color-pokemon-fire-700: #8f4d1d;
+  --pt-color-pokemon-fire-800: #5f3413;
+  --pt-color-pokemon-fire-900: #301a0a;
+  --pt-color-pokemon-fire-950: #180d05;
+  --pt-color-pokemon-water-50: #eff4fe;
+  --pt-color-pokemon-water-100: #e0e9fc;
+  --pt-color-pokemon-water-200: #c1d2fa;
+  --pt-color-pokemon-water-300: #a1bcf7;
+  --pt-color-pokemon-water-400: #82a6f4;
+  --pt-color-pokemon-water-500: #3a9de2;
+  --pt-color-pokemon-water-600: #4f73c0;
+  --pt-color-pokemon-water-700: #3b5690;
+  --pt-color-pokemon-water-800: #283a60;
+  --pt-color-pokemon-water-900: #141d30;
+  --pt-color-pokemon-water-950: #0a0e18;
+  --pt-color-pokemon-electric-50: #fefbea;
+  --pt-color-pokemon-electric-100: #fef6d5;
+  --pt-color-pokemon-electric-200: #fdecaa;
+  --pt-color-pokemon-electric-300: #fce280;
+  --pt-color-pokemon-electric-400: #fad956;
+  --pt-color-pokemon-electric-500: #dfbc28;
+  --pt-color-pokemon-electric-600: #c6a623;
+  --pt-color-pokemon-electric-700: #947d1a;
+  --pt-color-pokemon-electric-800: #635312;
+  --pt-color-pokemon-electric-900: #312a09;
+  --pt-color-pokemon-electric-950: #191504;
+  --pt-color-pokemon-grass-50: #f2f9ed;
+  --pt-color-pokemon-grass-100: #e4f4db;
+  --pt-color-pokemon-grass-200: #c9e9b8;
+  --pt-color-pokemon-grass-300: #aede94;
+  --pt-color-pokemon-grass-400: #94d371;
+  --pt-color-pokemon-grass-500: #439837;
+  --pt-color-pokemon-grass-600: #629f3d;
+  --pt-color-pokemon-grass-700: #49772e;
+  --pt-color-pokemon-grass-800: #314f1e;
+  --pt-color-pokemon-grass-900: #18280f;
+  --pt-color-pokemon-grass-950: #0c1408;
+  --pt-color-pokemon-ice-50: #f4fbfb;
+  --pt-color-pokemon-ice-100: #eaf7f7;
+  --pt-color-pokemon-ice-200: #d5efee;
+  --pt-color-pokemon-ice-300: #c0e7e5;
+  --pt-color-pokemon-ice-400: #abe0dd;
+  --pt-color-pokemon-ice-500: #47c8c8;
+  --pt-color-pokemon-ice-600: #78aeab;
+  --pt-color-pokemon-ice-700: #5a8280;
+  --pt-color-pokemon-ice-800: #3c5756;
+  --pt-color-pokemon-ice-900: #1e2b2b;
+  --pt-color-pokemon-ice-950: #0f1616;
+  --pt-color-pokemon-fighting-50: #f9eaeb;
+  --pt-color-pokemon-fighting-100: #f3d5d6;
+  --pt-color-pokemon-fighting-200: #e7abad;
+  --pt-color-pokemon-fighting-300: #db8285;
+  --pt-color-pokemon-fighting-400: #cf585c;
+  --pt-color-pokemon-fighting-500: #e49021;
+  --pt-color-pokemon-fighting-600: #9b2520;
+  --pt-color-pokemon-fighting-700: #741c18;
+  --pt-color-pokemon-fighting-800: #4e1210;
+  --pt-color-pokemon-fighting-900: #270908;
+  --pt-color-pokemon-fighting-950: #130504;
+  --pt-color-pokemon-poison-50: #f6ecf6;
+  --pt-color-pokemon-poison-100: #edd8ec;
+  --pt-color-pokemon-poison-200: #dbb2da;
+  --pt-color-pokemon-poison-300: #c98cc7;
+  --pt-color-pokemon-poison-400: #b765b5;
+  --pt-color-pokemon-poison-500: #9354cb;
+  --pt-color-pokemon-poison-600: #823281;
+  --pt-color-pokemon-poison-700: #622561;
+  --pt-color-pokemon-poison-800: #411940;
+  --pt-color-pokemon-poison-900: #210c20;
+  --pt-color-pokemon-poison-950: #100610;
+  --pt-color-pokemon-ground-50: #fcf9f0;
+  --pt-color-pokemon-ground-100: #f9f2e0;
+  --pt-color-pokemon-ground-200: #f3e6c1;
+  --pt-color-pokemon-ground-300: #edd9a3;
+  --pt-color-pokemon-ground-400: #e7cd84;
+  --pt-color-pokemon-ground-500: #a4733c;
+  --pt-color-pokemon-ground-600: #b59951;
+  --pt-color-pokemon-ground-700: #88733d;
+  --pt-color-pokemon-ground-800: #5a4c28;
+  --pt-color-pokemon-ground-900: #2d2614;
+  --pt-color-pokemon-ground-950: #17130a;
+  --pt-color-pokemon-flying-50: #f6f4fe;
+  --pt-color-pokemon-flying-100: #ede9fc;
+  --pt-color-pokemon-flying-200: #dbd2f9;
+  --pt-color-pokemon-flying-300: #c9bcf6;
+  --pt-color-pokemon-flying-400: #b7a5f3;
+  --pt-color-pokemon-flying-500: #74aad0;
+  --pt-color-pokemon-flying-600: #8772c2;
+  --pt-color-pokemon-flying-700: #655692;
+  --pt-color-pokemon-flying-800: #443961;
+  --pt-color-pokemon-flying-900: #221d31;
+  --pt-color-pokemon-flying-950: #110e18;
+  --pt-color-pokemon-psychic-50: #ffeef3;
+  --pt-color-pokemon-psychic-100: #ffdde7;
+  --pt-color-pokemon-psychic-200: #ffbbce;
+  --pt-color-pokemon-psychic-300: #ff99b6;
+  --pt-color-pokemon-psychic-400: #fb779e;
+  --pt-color-pokemon-psychic-500: #e96c8c;
+  --pt-color-pokemon-psychic-600: #c7446c;
+  --pt-color-pokemon-psychic-700: #953351;
+  --pt-color-pokemon-psychic-800: #642236;
+  --pt-color-pokemon-psychic-900: #32111b;
+  --pt-color-pokemon-psychic-950: #19080d;
+  --pt-color-pokemon-bug-50: #f6f8e8;
+  --pt-color-pokemon-bug-100: #edf1d1;
+  --pt-color-pokemon-bug-200: #dce4a3;
+  --pt-color-pokemon-bug-300: #cad676;
+  --pt-color-pokemon-bug-400: #b8c948;
+  --pt-color-pokemon-bug-500: #9f9f28;
+  --pt-color-pokemon-bug-600: #859415;
+  --pt-color-pokemon-bug-700: #646f10;
+  --pt-color-pokemon-bug-800: #424a0b;
+  --pt-color-pokemon-bug-900: #212505;
+  --pt-color-pokemon-bug-950: #101203;
+  --pt-color-pokemon-rock-50: #f8f6eb;
+  --pt-color-pokemon-rock-100: #f1ecd7;
+  --pt-color-pokemon-rock-200: #e3d9af;
+  --pt-color-pokemon-rock-300: #d5c687;
+  --pt-color-pokemon-rock-400: #c6b35e;
+  --pt-color-pokemon-rock-500: #a9a481;
+  --pt-color-pokemon-rock-600: #92812b;
+  --pt-color-pokemon-rock-700: #6d6120;
+  --pt-color-pokemon-rock-800: #494016;
+  --pt-color-pokemon-rock-900: #24200b;
+  --pt-color-pokemon-rock-950: #121005;
+  --pt-color-pokemon-ghost-50: #f1eef5;
+  --pt-color-pokemon-ghost-100: #e3deeb;
+  --pt-color-pokemon-ghost-200: #c7bdd6;
+  --pt-color-pokemon-ghost-300: #ab9cc2;
+  --pt-color-pokemon-ghost-400: #8f7bad;
+  --pt-color-pokemon-ghost-500: #6f4570;
+  --pt-color-pokemon-ghost-600: #5c4679;
+  --pt-color-pokemon-ghost-700: #45345b;
+  --pt-color-pokemon-ghost-800: #2e233c;
+  --pt-color-pokemon-ghost-900: #17111e;
+  --pt-color-pokemon-ghost-950: #0b090f;
+  --pt-color-pokemon-dragon-50: #f1ebfe;
+  --pt-color-pokemon-dragon-100: #e2d7fe;
+  --pt-color-pokemon-dragon-200: #c6affd;
+  --pt-color-pokemon-dragon-300: #a986fc;
+  --pt-color-pokemon-dragon-400: #8d5dfc;
+  --pt-color-pokemon-dragon-500: #576fbc;
+  --pt-color-pokemon-dragon-600: #592aca;
+  --pt-color-pokemon-dragon-700: #431f97;
+  --pt-color-pokemon-dragon-800: #2c1565;
+  --pt-color-pokemon-dragon-900: #160b32;
+  --pt-color-pokemon-dragon-950: #0b0519;
+  --pt-color-pokemon-steel-50: #f8f8fa;
+  --pt-color-pokemon-steel-100: #f1f1f5;
+  --pt-color-pokemon-steel-200: #e2e2eb;
+  --pt-color-pokemon-steel-300: #d4d4e1;
+  --pt-color-pokemon-steel-400: #c5c5d8;
+  --pt-color-pokemon-steel-500: #77b2cb;
+  --pt-color-pokemon-steel-600: #9292a5;
+  --pt-color-pokemon-steel-700: #6e6e7c;
+  --pt-color-pokemon-steel-800: #494952;
+  --pt-color-pokemon-steel-900: #252529;
+  --pt-color-pokemon-steel-950: #121215;
+  --pt-color-pokemon-dark-50: #f1eeed;
+  --pt-color-pokemon-dark-100: #e3dedb;
+  --pt-color-pokemon-dark-200: #c6bcb7;
+  --pt-color-pokemon-dark-300: #a99b93;
+  --pt-color-pokemon-dark-400: #8d796e;
+  --pt-color-pokemon-dark-500: #4f4747;
+  --pt-color-pokemon-dark-600: #5a4638;
+  --pt-color-pokemon-dark-700: #43342a;
+  --pt-color-pokemon-dark-800: #2d231c;
+  --pt-color-pokemon-dark-900: #16110e;
+  --pt-color-pokemon-dark-950: #0b0907;
+  --pt-color-pokemon-fairy-50: #fbf3f7;
+  --pt-color-pokemon-fairy-100: #f7e7ee;
+  --pt-color-pokemon-fairy-200: #efcedd;
+  --pt-color-pokemon-fairy-300: #e7b6cc;
+  --pt-color-pokemon-fairy-400: #df9dba;
+  --pt-color-pokemon-fairy-500: #e18ce1;
+  --pt-color-pokemon-fairy-600: #ab6a8a;
+  --pt-color-pokemon-fairy-700: #805068;
+  --pt-color-pokemon-fairy-800: #563545;
+  --pt-color-pokemon-fairy-900: #2b1b23;
+  --pt-color-pokemon-fairy-950: #150d11;
+  --pt-color-gray-50: #f9fafb;
+  --pt-color-gray-100: #f3f4f6;
+  --pt-color-gray-200: #e5e7eb;
+  --pt-color-gray-300: #d1d5db;
+  --pt-color-gray-400: #9ca3af;
+  --pt-color-gray-500: #6b7280;
+  --pt-color-gray-600: #4b5563;
+  --pt-color-gray-700: #374151;
+  --pt-color-gray-800: #1f2937;
+  --pt-color-gray-900: #111827;
+  --pt-color-gray-950: #030712;
+  --pt-color-lime-50: #f7fee7;
+  --pt-color-lime-100: #ecfccb;
+  --pt-color-lime-200: #d9f99d;
+  --pt-color-lime-300: #bef264;
+  --pt-color-lime-400: #a3e635;
+  --pt-color-lime-500: #84cc16;
+  --pt-color-lime-600: #65a30d;
+  --pt-color-lime-700: #4d7c0f;
+  --pt-color-lime-800: #3f6212;
+  --pt-color-lime-900: #365314;
+  --pt-color-lime-950: #1a2e05;
+  --pt-color-red-50: #fef2f2;
+  --pt-color-red-100: #fee2e2;
+  --pt-color-red-200: #fecaca;
+  --pt-color-red-300: #fca5a5;
+  --pt-color-red-400: #f87171;
+  --pt-color-red-500: #ef4444;
+  --pt-color-red-600: #dc2626;
+  --pt-color-red-700: #b91c1c;
+  --pt-color-red-800: #991b1b;
+  --pt-color-red-900: #7f1d1d;
+  --pt-color-red-950: #450a0a;
+  --pt-color-white: #ffffff;
+  --pt-color-black: #000000;
+  --pt-radius-none: 0;
+  --pt-radius-sm: 0.25rem;
+  --pt-radius-md: 0.5rem;
+  --pt-radius-lg: 0.75rem;
+  --pt-radius-xl: 1rem;
+  --pt-radius-2xl: 1.5rem;
+  --pt-radius-full: 9999px;
+  --pt-border-width-none: 0;
+  --pt-border-width-sm: 1px;
+  --pt-border-width-md: 2px;
+  --pt-border-width-lg: 4px;
+  --pt-shadow-none: none;
+  --pt-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --pt-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --pt-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --pt-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --pt-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --pt-duration-fast: 100ms;
+  --pt-duration-normal: 200ms;
+  --pt-duration-slow: 300ms;
+  --pt-duration-slower: 500ms;
+  --pt-easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --pt-easing-in: cubic-bezier(0.4, 0, 1, 1);
+  --pt-easing-out: cubic-bezier(0, 0, 0.2, 1);
+  --pt-easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --pt-space-0: 0;
+  --pt-space-1: 0.25rem;
+  --pt-space-2: 0.5rem;
+  --pt-space-3: 0.75rem;
+  --pt-space-4: 1rem;
+  --pt-space-5: 1.25rem;
+  --pt-space-6: 1.5rem;
+  --pt-space-8: 2rem;
+  --pt-space-10: 2.5rem;
+  --pt-space-12: 3rem;
+  --pt-space-16: 4rem;
+  --pt-space-20: 5rem;
+  --pt-space-05: 0.125rem;
+  --pt-font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --pt-font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+  --pt-font-size-xs: 0.75rem;
+  --pt-font-size-sm: 0.875rem;
+  --pt-font-size-md: 1rem;
+  --pt-font-size-lg: 1.125rem;
+  --pt-font-size-xl: 1.25rem;
+  --pt-font-size-2xl: 1.5rem;
+  --pt-font-size-3xl: 1.875rem;
+  --pt-font-size-4xl: 2.25rem;
+  --pt-font-weight-normal: 400;
+  --pt-font-weight-medium: 500;
+  --pt-font-weight-semibold: 600;
+  --pt-font-weight-bold: 700;
+  --pt-font-line-height-tight: 1.25;
+  --pt-font-line-height-normal: 1.5;
+  --pt-font-line-height-relaxed: 1.75;
+  --pt-semantic-border-width-none: 0;
+  --pt-semantic-border-width-default: 1px;
+  --pt-semantic-border-width-thick: 2px;
+  --pt-avatar-size-sm: 32px;
+  --pt-avatar-size-md: 48px;
+  --pt-avatar-size-lg: 80px;
+  --pt-avatar-size-xl: 120px;
+  --pt-button-primary-border-default: rgba(0, 0, 0, 0);
+  --pt-button-secondary-bg-default: rgba(0, 0, 0, 0);
+  --pt-button-secondary-bg-disabled: rgba(0, 0, 0, 0);
+  --pt-button-ghost-bg-default: rgba(0, 0, 0, 0);
+  --pt-button-ghost-bg-disabled: rgba(0, 0, 0, 0);
+  --pt-button-ghost-border-default: rgba(0, 0, 0, 0);
+  --pt-button-danger-border-default: rgba(0, 0, 0, 0);
+  --pt-chip-radius-none: 0;
+  --pt-chip-radius-full: 9999px;
+  --pt-grid-columns-1: 1;
+  --pt-grid-columns-2: 2;
+  --pt-grid-columns-3: 3;
+  --pt-grid-columns-4: 4;
+  --pt-grid-columns-6: 6;
+  --pt-grid-gap-none: 0;
+  --pt-heading-accent-width: 6px;
+  --pt-spinner-border-width-sm: 2px;
+  --pt-spinner-border-width-md: 3px;
+  --pt-spinner-border-width-lg: 4px;
+  --pt-spinner-color-track: rgba(0, 0, 0, 0.1);
+  --pt-spinner-animation-duration: 0.8s;
+  --pt-stack-gap-none: 0;
+  --pt-surface-variant-ghost-background: rgba(0, 0, 0, 0);
+  --pt-surface-padding-none: 0;
+  --pt-color-pokemon-type-normal: var(--pt-color-pokemon-normal-500);
+  --pt-color-pokemon-type-fire: var(--pt-color-pokemon-fire-500);
+  --pt-color-pokemon-type-water: var(--pt-color-pokemon-water-500);
+  --pt-color-pokemon-type-electric: var(--pt-color-pokemon-electric-500);
+  --pt-color-pokemon-type-grass: var(--pt-color-pokemon-grass-500);
+  --pt-color-pokemon-type-ice: var(--pt-color-pokemon-ice-500);
+  --pt-color-pokemon-type-fighting: var(--pt-color-pokemon-fighting-500);
+  --pt-color-pokemon-type-poison: var(--pt-color-pokemon-poison-500);
+  --pt-color-pokemon-type-ground: var(--pt-color-pokemon-ground-500);
+  --pt-color-pokemon-type-flying: var(--pt-color-pokemon-flying-500);
+  --pt-color-pokemon-type-psychic: var(--pt-color-pokemon-psychic-500);
+  --pt-color-pokemon-type-bug: var(--pt-color-pokemon-bug-500);
+  --pt-color-pokemon-type-rock: var(--pt-color-pokemon-rock-500);
+  --pt-color-pokemon-type-ghost: var(--pt-color-pokemon-ghost-500);
+  --pt-color-pokemon-type-dragon: var(--pt-color-pokemon-dragon-500);
+  --pt-color-pokemon-type-dark: var(--pt-color-pokemon-dark-500);
+  --pt-color-pokemon-type-steel: var(--pt-color-pokemon-steel-500);
+  --pt-color-pokemon-type-fairy: var(--pt-color-pokemon-fairy-500);
+  --pt-color-pokemon-bg-normal: var(--pt-color-pokemon-normal-50);
+  --pt-color-pokemon-bg-fire: var(--pt-color-pokemon-fire-50);
+  --pt-color-pokemon-bg-water: var(--pt-color-pokemon-water-50);
+  --pt-color-pokemon-bg-electric: var(--pt-color-pokemon-electric-50);
+  --pt-color-pokemon-bg-grass: var(--pt-color-pokemon-grass-50);
+  --pt-color-pokemon-bg-ice: var(--pt-color-pokemon-ice-50);
+  --pt-color-pokemon-bg-fighting: var(--pt-color-pokemon-fighting-50);
+  --pt-color-pokemon-bg-poison: var(--pt-color-pokemon-poison-50);
+  --pt-color-pokemon-bg-ground: var(--pt-color-pokemon-ground-50);
+  --pt-color-pokemon-bg-flying: var(--pt-color-pokemon-flying-50);
+  --pt-color-pokemon-bg-psychic: var(--pt-color-pokemon-psychic-50);
+  --pt-color-pokemon-bg-bug: var(--pt-color-pokemon-bug-50);
+  --pt-color-pokemon-bg-rock: var(--pt-color-pokemon-rock-50);
+  --pt-color-pokemon-bg-ghost: var(--pt-color-pokemon-ghost-50);
+  --pt-color-pokemon-bg-dragon: var(--pt-color-pokemon-dragon-50);
+  --pt-color-pokemon-bg-dark: var(--pt-color-pokemon-dark-50);
+  --pt-color-pokemon-bg-steel: var(--pt-color-pokemon-steel-50);
+  --pt-color-pokemon-bg-fairy: var(--pt-color-pokemon-fairy-50);
+  --pt-color-pokemon-text-normal: var(--pt-color-pokemon-normal-700);
+  --pt-color-pokemon-text-fire: var(--pt-color-pokemon-fire-700);
+  --pt-color-pokemon-text-water: var(--pt-color-pokemon-water-700);
+  --pt-color-pokemon-text-electric: var(--pt-color-pokemon-electric-700);
+  --pt-color-pokemon-text-grass: var(--pt-color-pokemon-grass-700);
+  --pt-color-pokemon-text-ice: var(--pt-color-pokemon-ice-700);
+  --pt-color-pokemon-text-fighting: var(--pt-color-pokemon-fighting-700);
+  --pt-color-pokemon-text-poison: var(--pt-color-pokemon-poison-700);
+  --pt-color-pokemon-text-ground: var(--pt-color-pokemon-ground-700);
+  --pt-color-pokemon-text-flying: var(--pt-color-pokemon-flying-700);
+  --pt-color-pokemon-text-psychic: var(--pt-color-pokemon-psychic-700);
+  --pt-color-pokemon-text-bug: var(--pt-color-pokemon-bug-700);
+  --pt-color-pokemon-text-rock: var(--pt-color-pokemon-rock-700);
+  --pt-color-pokemon-text-ghost: var(--pt-color-pokemon-ghost-700);
+  --pt-color-pokemon-text-dragon: var(--pt-color-pokemon-dragon-700);
+  --pt-color-pokemon-text-dark: var(--pt-color-pokemon-dark-700);
+  --pt-color-pokemon-text-steel: var(--pt-color-pokemon-steel-700);
+  --pt-color-pokemon-text-fairy: var(--pt-color-pokemon-fairy-700);
+  --pt-color-result-win-default: var(--pt-color-lime-500);
+  --pt-color-result-win-subtle: var(--pt-color-lime-100);
+  --pt-color-result-win-strong: var(--pt-color-lime-700);
+  --pt-color-result-lose-default: var(--pt-color-red-500);
+  --pt-color-result-lose-subtle: var(--pt-color-red-100);
+  --pt-color-result-lose-strong: var(--pt-color-red-700);
+  --pt-color-surface-page: var(--pt-color-gray-50);
+  --pt-color-surface-card: var(--pt-color-white);
+  --pt-color-surface-elevated: var(--pt-color-white);
+  --pt-color-surface-hovered: var(--pt-color-gray-100);
+  --pt-color-surface-pressed: var(--pt-color-gray-200);
+  --pt-color-text-primary: var(--pt-color-gray-800);
+  --pt-color-text-secondary: var(--pt-color-gray-500);
+  --pt-color-text-disabled: var(--pt-color-gray-400);
+  --pt-color-text-inverse: var(--pt-color-white);
+  --pt-color-border-default: var(--pt-color-gray-200);
+  --pt-color-border-subtle: var(--pt-color-gray-100);
+  --pt-color-border-focused: var(--pt-color-gray-600);
+  --pt-elevation-none: var(--pt-shadow-none);
+  --pt-elevation-raised: var(--pt-shadow-sm);
+  --pt-elevation-overlay: var(--pt-shadow-md);
+  --pt-elevation-modal: var(--pt-shadow-xl);
+  --pt-elevation-toast: var(--pt-shadow-lg);
+  --pt-semantic-border-radius-none: var(--pt-radius-none);
+  --pt-semantic-border-radius-sm: var(--pt-radius-sm);
+  --pt-semantic-border-radius-md: var(--pt-radius-md);
+  --pt-semantic-border-radius-lg: var(--pt-radius-lg);
+  --pt-semantic-border-radius-xl: var(--pt-radius-xl);
+  --pt-semantic-border-radius-pill: var(--pt-radius-full);
+  --pt-motion-duration-instant: var(--pt-duration-fast);
+  --pt-motion-duration-quick: var(--pt-duration-normal);
+  --pt-motion-duration-moderate: var(--pt-duration-slow);
+  --pt-motion-duration-deliberate: var(--pt-duration-slower);
+  --pt-motion-easing-default: var(--pt-easing-default);
+  --pt-motion-easing-enter: var(--pt-easing-out);
+  --pt-motion-easing-exit: var(--pt-easing-in);
+  --pt-spacing-content-xs: var(--pt-space-1);
+  --pt-spacing-content-sm: var(--pt-space-2);
+  --pt-spacing-content-md: var(--pt-space-4);
+  --pt-spacing-content-lg: var(--pt-space-6);
+  --pt-spacing-content-xl: var(--pt-space-8);
+  --pt-spacing-layout-section: var(--pt-space-12);
+  --pt-spacing-layout-page: var(--pt-space-16);
+  --pt-spacing-gap-xs: var(--pt-space-1);
+  --pt-spacing-gap-sm: var(--pt-space-2);
+  --pt-spacing-gap-md: var(--pt-space-4);
+  --pt-spacing-gap-lg: var(--pt-space-6);
+  --pt-spacing-gap-xl: var(--pt-space-8);
   --pt-typography-heading-xl-font-family: var(--pt-font-family-sans);
   --pt-typography-heading-xl-font-size: var(--pt-font-size-4xl);
   --pt-typography-heading-xl-font-weight: var(--pt-font-weight-bold);
@@ -468,88 +468,88 @@
   --pt-typography-code-md-font-size: var(--pt-font-size-sm);
   --pt-typography-code-md-font-weight: var(--pt-font-weight-normal);
   --pt-typography-code-md-line-height: var(--pt-font-line-height-normal);
-  --pt-avatar-radius-circle: var(--pt-radius-full); /** 完全な円形。ユーザーアバター用。 */
-  --pt-avatar-radius-rounded: var(--pt-radius-lg); /** 角丸。サムネイル用。 */
-  --pt-avatar-radius-square: var(--pt-radius-sm); /** 小さい角丸。ピクセルアート用。 */
-  --pt-button-primary-bg-default: var(--pt-color-gray-800); /** ボタンの背景色。`background-color`に適用。 */
-  --pt-button-primary-bg-hover: var(--pt-color-gray-700); /** ホバー時の背景色。defaultより一段明るくして反応を示す。 */
-  --pt-button-primary-bg-pressed: var(--pt-color-gray-900); /** 押下時の背景色。defaultより一段暗くして押し込み感を表現。 */
-  --pt-button-primary-bg-disabled: var(--pt-color-gray-200); /** 無効時の背景色。操作不可を視覚的に示す。 */
-  --pt-button-secondary-border-hover: var(--pt-color-gray-600); /** ホバー時の枠線色。一段濃くして強調。 */
-  --pt-button-danger-bg-hover: var(--pt-color-red-600); /** ホバー時の背景色。defaultより一段暗く。 */
-  --pt-button-danger-bg-pressed: var(--pt-color-red-700); /** 押下時の背景色。hoverより一段暗く。 */
-  --pt-button-danger-bg-disabled: var(--pt-color-gray-200); /** 無効時の背景色。操作不可を視覚的に示す。 */
-  --pt-chip-font-size-sm: var(--pt-font-size-xs); /** 小サイズ時のフォントサイズ。 */
-  --pt-chip-font-size-md: var(--pt-font-size-sm); /** 中サイズ時のフォントサイズ。 */
-  --pt-chip-font-size-lg: var(--pt-font-size-md); /** 大サイズ時のフォントサイズ。 */
-  --pt-chip-font-weight: var(--pt-font-weight-medium); /** チップのフォントウェイト。 */
-  --pt-chip-font-line-height-tight: var(--pt-font-line-height-tight); /** 小サイズ時の行高。 */
-  --pt-chip-font-line-height-normal: var(--pt-font-line-height-normal); /** 中・大サイズ時の行高。 */
-  --pt-heading-accent-height: var(--pt-space-6); /** アクセントバーの高さ。テキストの行高さに合わせた値。 */
-  --pt-heading-accent-radius: var(--pt-radius-full); /** アクセントバーの角丸。pill形状にする。 */
-  --pt-heading-accent-gap: var(--pt-space-2); /** アクセントバーとテキスト間のギャップ。 */
-  --pt-icon-size-sm: var(--pt-space-5); /** 小サイズ (20px)。インラインアイコン、ボタン内アイコンに使用。 */
-  --pt-icon-size-md: var(--pt-space-8); /** 中サイズ (32px)。標準的なアイコン表示に使用。 */
-  --pt-icon-size-lg: var(--pt-space-12); /** 大サイズ (48px)。強調表示、空状態アイコンに使用。 */
-  --pt-radio-button-hover-border: var(--pt-color-gray-400); /** ホバー時の枠線色。defaultより一段濃くして反応を示す。 */
-  --pt-radio-button-selected-bg: var(--pt-color-gray-800); /** 選択時の背景色。暗い色で選択状態を強調。 */
-  --pt-radio-button-selected-border: var(--pt-color-gray-800); /** 選択時の枠線色。背景と同色。 */
-  --pt-radio-button-border-width: var(--pt-semantic-border-width-thick); /** 枠線の太さ。`border-width`に適用。 */
-  --pt-spinner-size-sm: var(--pt-space-4); /** 小サイズ (16px)。インライン、ボタン内のローディングに使用。 */
-  --pt-spinner-size-md: var(--pt-space-10); /** 中サイズ (40px)。標準的なローディング表示に使用。 */
-  --pt-spinner-size-lg: var(--pt-space-16); /** 大サイズ (64px)。フルスクリーンローディングに使用。 */
-  --pt-surface-border-width: var(--pt-semantic-border-width-default); /** ボーダー幅。 */
-  --pt-badge-neutral-bg: var(--pt-color-surface-hovered); /** バッジの背景色。`background-color`に適用。 */
-  --pt-badge-neutral-text: var(--pt-color-text-primary); /** バッジのラベル色。`color`に適用。 */
-  --pt-badge-win-bg: var(--pt-color-result-win-subtle); /** 正解バッジの背景色。薄いライム。 */
-  --pt-badge-win-text: var(--pt-color-result-win-strong); /** 正解バッジのラベル色。濃いライムで高コントラスト。 */
-  --pt-badge-lose-bg: var(--pt-color-result-lose-subtle); /** 不正解バッジの背景色。薄いレッド。 */
-  --pt-badge-lose-text: var(--pt-color-result-lose-strong); /** 不正解バッジのラベル色。濃いレッドで高コントラスト。 */
-  --pt-badge-padding-x: var(--pt-spacing-content-sm); /** 左右の内側余白。`padding-left/right`に適用。 */
-  --pt-badge-padding-y: var(--pt-spacing-content-xs); /** 上下の内側余白。`padding-top/bottom`に適用。 */
-  --pt-badge-radius: var(--pt-semantic-border-radius-sm); /** 角丸の大きさ。`border-radius`に適用。 */
-  --pt-button-primary-text-default: var(--pt-color-text-inverse); /** ボタンのラベル色。`color`に適用。暗い背景上で白文字。 */
-  --pt-button-primary-text-disabled: var(--pt-color-text-disabled); /** 無効時のラベル色。コントラストを下げて操作不可を示す。 */
-  --pt-button-primary-border-focus: var(--pt-color-border-focused); /** フォーカスリングの色。`outline`に適用。アクセシビリティ用。 */
-  --pt-button-secondary-bg-hover: var(--pt-color-surface-hovered); /** ホバー時の背景色。薄いグレーで反応を示す。 */
-  --pt-button-secondary-bg-pressed: var(--pt-color-surface-pressed); /** 押下時の背景色。hoverより一段暗い。 */
-  --pt-button-secondary-text-default: var(--pt-color-text-primary); /** ラベル色。通常テキスト色を使用。 */
-  --pt-button-secondary-text-disabled: var(--pt-color-text-disabled); /** 無効時のラベル色。 */
-  --pt-button-secondary-border-default: var(--pt-color-border-default); /** 枠線色。`border-color`に適用。 */
-  --pt-button-secondary-border-focus: var(--pt-color-border-focused); /** フォーカスリングの色。 */
-  --pt-button-ghost-bg-hover: var(--pt-color-surface-hovered); /** ホバー時の背景色。薄いグレーで存在を示す。 */
-  --pt-button-ghost-bg-pressed: var(--pt-color-surface-pressed); /** 押下時の背景色。 */
-  --pt-button-ghost-text-default: var(--pt-color-text-primary); /** ラベル色。通常テキスト色。 */
-  --pt-button-ghost-text-disabled: var(--pt-color-text-disabled); /** 無効時のラベル色。 */
-  --pt-button-ghost-border-focus: var(--pt-color-border-focused); /** フォーカスリングの色。 */
-  --pt-button-danger-bg-default: var(--pt-color-result-lose-default); /** 背景色。危険・破壊的アクション用の赤。 */
-  --pt-button-danger-text-default: var(--pt-color-text-inverse); /** ラベル色。赤背景上で白文字。 */
-  --pt-button-danger-text-disabled: var(--pt-color-text-disabled); /** 無効時のラベル色。 */
-  --pt-button-danger-border-focus: var(--pt-color-border-focused); /** フォーカスリングの色。 */
-  --pt-card-bg-default: var(--pt-color-surface-card); /** background-colorプロパティに適用。カードコンポーネント専用。デフォルト状態。 */
-  --pt-card-bg-hover: var(--pt-color-surface-hovered); /** background-colorプロパティに適用。カードコンポーネント専用。ホバー状態。クリック可能なカード用。 */
-  --pt-card-border-default: var(--pt-color-border-subtle); /** border-colorプロパティに適用。カードコンポーネント専用。控えめな境界線。 */
-  --pt-card-text-title: var(--pt-color-text-primary); /** colorプロパティに適用。カードコンポーネント専用。見出しテキスト。 */
-  --pt-card-text-body: var(--pt-color-text-secondary); /** colorプロパティに適用。カードコンポーネント専用。本文テキスト。見出しより控えめ。 */
-  --pt-card-shadow-flat: var(--pt-elevation-none); /** box-shadowプロパティに適用。カードコンポーネント専用。影なし、フラットスタイル。 */
-  --pt-card-shadow-raised: var(--pt-elevation-raised); /** box-shadowプロパティに適用。カードコンポーネント専用。デフォルトの浮き上がり。 */
-  --pt-card-shadow-overlay: var(--pt-elevation-overlay); /** box-shadowプロパティに適用。カードコンポーネント専用。モーダル/ドロップダウン用の強い影。 */
-  --pt-card-padding-sm: var(--pt-spacing-content-sm); /** paddingプロパティに適用。カードコンポーネント専用。コンパクトな内部余白。 */
-  --pt-card-padding-md: var(--pt-spacing-content-md); /** paddingプロパティに適用。カードコンポーネント専用。デフォルトの内部余白。 */
-  --pt-card-padding-lg: var(--pt-spacing-content-lg); /** paddingプロパティに適用。カードコンポーネント専用。広々とした内部余白。 */
-  --pt-card-radius: var(--pt-semantic-border-radius-lg); /** border-radiusプロパティに適用。カードコンポーネント専用。overflow: hiddenとセットで使用。 */
-  --pt-card-section-padding: var(--pt-spacing-content-md); /** paddingプロパティに適用。header/content/footer各セクションの内部余白。 */
-  --pt-card-section-gap: var(--pt-spacing-gap-sm); /** gapプロパティに適用。footer内のボタン間隔など。 */
-  --pt-card-section-separator: var(--pt-color-border-subtle); /** border-colorプロパティに適用。header/footerとcontentの間の区切り線。 */
-  --pt-chip-padding: var(--pt-spacing-content-xs); /** 内側余白。`padding`に適用。 */
-  --pt-chip-gap: var(--pt-spacing-gap-sm); /** アイコンとテキスト間の隙間。`gap`に適用。 */
-  --pt-chip-radius-sm: var(--pt-semantic-border-radius-sm); /** 小さい角丸。 */
-  --pt-chip-radius-md: var(--pt-semantic-border-radius-md); /** 標準の角丸。 */
-  --pt-chip-interaction-transition: var(--pt-motion-duration-quick); /** インタラクション時のトランジション時間。 */
-  --pt-grid-gap-sm: var(--pt-spacing-gap-sm); /** 小ギャップ。コンパクトなグリッド。 */
-  --pt-grid-gap-md: var(--pt-spacing-gap-md); /** 中ギャップ。標準グリッド。デフォルト値。 */
-  --pt-grid-gap-lg: var(--pt-spacing-gap-lg); /** 大ギャップ。ゆったりしたグリッド。 */
-  --pt-heading-text-color: var(--pt-color-text-primary); /** 見出しテキストの色 */
+  --pt-avatar-radius-circle: var(--pt-radius-full);
+  --pt-avatar-radius-rounded: var(--pt-radius-lg);
+  --pt-avatar-radius-square: var(--pt-radius-sm);
+  --pt-button-primary-bg-default: var(--pt-color-gray-800);
+  --pt-button-primary-bg-hover: var(--pt-color-gray-700);
+  --pt-button-primary-bg-pressed: var(--pt-color-gray-900);
+  --pt-button-primary-bg-disabled: var(--pt-color-gray-200);
+  --pt-button-secondary-border-hover: var(--pt-color-gray-600);
+  --pt-button-danger-bg-hover: var(--pt-color-red-600);
+  --pt-button-danger-bg-pressed: var(--pt-color-red-700);
+  --pt-button-danger-bg-disabled: var(--pt-color-gray-200);
+  --pt-chip-font-size-sm: var(--pt-font-size-xs);
+  --pt-chip-font-size-md: var(--pt-font-size-sm);
+  --pt-chip-font-size-lg: var(--pt-font-size-md);
+  --pt-chip-font-weight: var(--pt-font-weight-medium);
+  --pt-chip-font-line-height-tight: var(--pt-font-line-height-tight);
+  --pt-chip-font-line-height-normal: var(--pt-font-line-height-normal);
+  --pt-heading-accent-height: var(--pt-space-6);
+  --pt-heading-accent-radius: var(--pt-radius-full);
+  --pt-heading-accent-gap: var(--pt-space-2);
+  --pt-icon-size-sm: var(--pt-space-5);
+  --pt-icon-size-md: var(--pt-space-8);
+  --pt-icon-size-lg: var(--pt-space-12);
+  --pt-radio-button-hover-border: var(--pt-color-gray-400);
+  --pt-radio-button-selected-bg: var(--pt-color-gray-800);
+  --pt-radio-button-selected-border: var(--pt-color-gray-800);
+  --pt-radio-button-border-width: var(--pt-semantic-border-width-thick);
+  --pt-spinner-size-sm: var(--pt-space-4);
+  --pt-spinner-size-md: var(--pt-space-10);
+  --pt-spinner-size-lg: var(--pt-space-16);
+  --pt-surface-border-width: var(--pt-semantic-border-width-default);
+  --pt-badge-neutral-bg: var(--pt-color-surface-hovered);
+  --pt-badge-neutral-text: var(--pt-color-text-primary);
+  --pt-badge-win-bg: var(--pt-color-result-win-subtle);
+  --pt-badge-win-text: var(--pt-color-result-win-strong);
+  --pt-badge-lose-bg: var(--pt-color-result-lose-subtle);
+  --pt-badge-lose-text: var(--pt-color-result-lose-strong);
+  --pt-badge-padding-x: var(--pt-spacing-content-sm);
+  --pt-badge-padding-y: var(--pt-spacing-content-xs);
+  --pt-badge-radius: var(--pt-semantic-border-radius-sm);
+  --pt-button-primary-text-default: var(--pt-color-text-inverse);
+  --pt-button-primary-text-disabled: var(--pt-color-text-disabled);
+  --pt-button-primary-border-focus: var(--pt-color-border-focused);
+  --pt-button-secondary-bg-hover: var(--pt-color-surface-hovered);
+  --pt-button-secondary-bg-pressed: var(--pt-color-surface-pressed);
+  --pt-button-secondary-text-default: var(--pt-color-text-primary);
+  --pt-button-secondary-text-disabled: var(--pt-color-text-disabled);
+  --pt-button-secondary-border-default: var(--pt-color-border-default);
+  --pt-button-secondary-border-focus: var(--pt-color-border-focused);
+  --pt-button-ghost-bg-hover: var(--pt-color-surface-hovered);
+  --pt-button-ghost-bg-pressed: var(--pt-color-surface-pressed);
+  --pt-button-ghost-text-default: var(--pt-color-text-primary);
+  --pt-button-ghost-text-disabled: var(--pt-color-text-disabled);
+  --pt-button-ghost-border-focus: var(--pt-color-border-focused);
+  --pt-button-danger-bg-default: var(--pt-color-result-lose-default);
+  --pt-button-danger-text-default: var(--pt-color-text-inverse);
+  --pt-button-danger-text-disabled: var(--pt-color-text-disabled);
+  --pt-button-danger-border-focus: var(--pt-color-border-focused);
+  --pt-card-bg-default: var(--pt-color-surface-card);
+  --pt-card-bg-hover: var(--pt-color-surface-hovered);
+  --pt-card-border-default: var(--pt-color-border-subtle);
+  --pt-card-text-title: var(--pt-color-text-primary);
+  --pt-card-text-body: var(--pt-color-text-secondary);
+  --pt-card-shadow-flat: var(--pt-elevation-none);
+  --pt-card-shadow-raised: var(--pt-elevation-raised);
+  --pt-card-shadow-overlay: var(--pt-elevation-overlay);
+  --pt-card-padding-sm: var(--pt-spacing-content-sm);
+  --pt-card-padding-md: var(--pt-spacing-content-md);
+  --pt-card-padding-lg: var(--pt-spacing-content-lg);
+  --pt-card-radius: var(--pt-semantic-border-radius-lg);
+  --pt-card-section-padding: var(--pt-spacing-content-md);
+  --pt-card-section-gap: var(--pt-spacing-gap-sm);
+  --pt-card-section-separator: var(--pt-color-border-subtle);
+  --pt-chip-padding: var(--pt-spacing-content-xs);
+  --pt-chip-gap: var(--pt-spacing-gap-sm);
+  --pt-chip-radius-sm: var(--pt-semantic-border-radius-sm);
+  --pt-chip-radius-md: var(--pt-semantic-border-radius-md);
+  --pt-chip-interaction-transition: var(--pt-motion-duration-quick);
+  --pt-grid-gap-sm: var(--pt-spacing-gap-sm);
+  --pt-grid-gap-md: var(--pt-spacing-gap-md);
+  --pt-grid-gap-lg: var(--pt-spacing-gap-lg);
+  --pt-heading-text-color: var(--pt-color-text-primary);
   --pt-heading-font-xl-font-family: var(--pt-typography-heading-xl-font-family);
   --pt-heading-font-xl-font-size: var(--pt-typography-heading-xl-font-size);
   --pt-heading-font-xl-font-weight: var(--pt-typography-heading-xl-font-weight);
@@ -566,60 +566,60 @@
   --pt-heading-font-sm-font-size: var(--pt-typography-heading-sm-font-size);
   --pt-heading-font-sm-font-weight: var(--pt-typography-heading-sm-font-weight);
   --pt-heading-font-sm-line-height: var(--pt-typography-heading-sm-line-height);
-  --pt-heading-accent-color: var(--pt-color-text-primary); /** アクセントバーの色。primaryテキストと同じ色でブランド統一感を出す。 */
-  --pt-icon-color-default: var(--pt-color-text-primary); /** デフォルトのアイコン色。`color`に適用。 */
-  --pt-icon-color-secondary: var(--pt-color-text-secondary); /** 控えめなアイコン色。装飾的な用途に使用。 */
-  --pt-icon-color-disabled: var(--pt-color-text-disabled); /** 無効状態のアイコン色。 */
-  --pt-radio-button-default-bg: var(--pt-color-surface-card); /** 未選択時の背景色。`background-color`に適用。 */
-  --pt-radio-button-default-border: var(--pt-color-border-default); /** 未選択時の枠線色。`border-color`に適用。 */
-  --pt-radio-button-default-text: var(--pt-color-text-primary); /** 未選択時のラベル色。`color`に適用。 */
-  --pt-radio-button-hover-bg: var(--pt-color-surface-hovered); /** ホバー時の背景色。インタラクション可能を示す。 */
-  --pt-radio-button-selected-text: var(--pt-color-text-inverse); /** 選択時のラベル色。暗い背景上で白文字。 */
-  --pt-radio-button-disabled-bg: var(--pt-color-surface-hovered); /** 無効時の背景色。操作不可を視覚的に示す。 */
-  --pt-radio-button-disabled-border: var(--pt-color-border-subtle); /** 無効時の枠線色。控えめな境界線。 */
-  --pt-radio-button-disabled-text: var(--pt-color-text-disabled); /** 無効時のラベル色。コントラストを下げて操作不可を示す。 */
-  --pt-radio-button-feedback-correct-bg: var(--pt-color-result-win-default); /** 正解時の背景色。正解・勝利を示す緑。 */
-  --pt-radio-button-feedback-correct-border: var(--pt-color-result-win-default); /** 正解時の枠線色。背景と同色。 */
-  --pt-radio-button-feedback-correct-text: var(--pt-color-text-inverse); /** 正解時のラベル色。緑背景上で白文字。 */
-  --pt-radio-button-feedback-wrong-bg: var(--pt-color-result-lose-default); /** 不正解時の背景色。不正解・敗北を示す赤。 */
-  --pt-radio-button-feedback-wrong-border: var(--pt-color-result-lose-default); /** 不正解時の枠線色。背景と同色。 */
-  --pt-radio-button-feedback-wrong-text: var(--pt-color-text-inverse); /** 不正解時のラベル色。赤背景上で白文字。 */
-  --pt-radio-button-feedback-actual-bg: var(--pt-color-surface-card); /** 正解表示時の背景色。Card背景のまま。 */
-  --pt-radio-button-feedback-actual-border: var(--pt-color-result-win-default); /** 正解表示時の枠線色。緑の枠で正解を示す。 */
-  --pt-radio-button-feedback-actual-text: var(--pt-color-result-win-default); /** 正解表示時のラベル色。緑テキストで強調。 */
-  --pt-radio-button-feedback-actual-ring: var(--pt-color-result-win-subtle); /** 正解表示時のリング色。box-shadowで外側に薄緑リング。 */
-  --pt-radio-button-focus-ring: var(--pt-color-border-focused); /** フォーカスリングの色。`outline`に適用。アクセシビリティ用。 */
-  --pt-radio-button-padding-x: var(--pt-spacing-content-md); /** 水平方向の内側余白。`padding-inline`に適用。 */
-  --pt-radio-button-padding-y: var(--pt-spacing-content-sm); /** 垂直方向の内側余白。`padding-block`に適用。よりコンパクトに。 */
-  --pt-radio-button-radius: var(--pt-semantic-border-radius-md); /** 角丸。`border-radius`に適用。Buttonと統一。 */
-  --pt-radio-button-shadow-default: var(--pt-elevation-raised); /** デフォルト時の影。軽く浮いた印象。 */
-  --pt-radio-button-shadow-selected: var(--pt-elevation-overlay); /** 選択時の影。より強調された浮き上がり。 */
-  --pt-spinner-color-primary: var(--pt-color-text-primary); /** プライマリカラー。デフォルトのスピナー色。 */
-  --pt-spinner-color-secondary: var(--pt-color-text-secondary); /** セカンダリカラー。控えめなスピナー色。 */
-  --pt-stack-gap-xs: var(--pt-spacing-gap-xs); /** 極小ギャップ。アイコンとラベルなど密接な要素間。 */
-  --pt-stack-gap-sm: var(--pt-spacing-gap-sm); /** 小ギャップ。関連性の高い要素間。 */
-  --pt-stack-gap-md: var(--pt-spacing-gap-md); /** 中ギャップ。標準的な要素間。デフォルト値。 */
-  --pt-stack-gap-lg: var(--pt-spacing-gap-lg); /** 大ギャップ。セクション内の区切り。 */
-  --pt-stack-gap-xl: var(--pt-spacing-gap-xl); /** 特大ギャップ。セクション間の明確な分割。 */
-  --pt-surface-variant-default-background: var(--pt-color-surface-card); /** デフォルト背景。白色ベース。 */
-  --pt-surface-variant-subtle-background: var(--pt-color-surface-page); /** 控えめな背景。セクション区分けに使用。 */
-  --pt-surface-variant-card-background: var(--pt-color-surface-card); /** カード背景。elevationと併用。 */
-  --pt-surface-variant-card-elevation: var(--pt-elevation-raised); /** カードの影。軽く浮いた状態。 */
-  --pt-surface-padding-sm: var(--pt-spacing-content-sm); /** 小パディング。コンパクトなコンテナ。 */
-  --pt-surface-padding-md: var(--pt-spacing-content-md); /** 中パディング。標準的なコンテナ。デフォルト値。 */
-  --pt-surface-padding-lg: var(--pt-spacing-content-lg); /** 大パディング。ゆったりしたコンテナ。 */
-  --pt-surface-radius-none: var(--pt-semantic-border-radius-none); /** 角丸なし。 */
-  --pt-surface-radius-sm: var(--pt-semantic-border-radius-sm); /** 小角丸。 */
-  --pt-surface-radius-md: var(--pt-semantic-border-radius-md); /** 中角丸。デフォルト値。 */
-  --pt-surface-radius-lg: var(--pt-semantic-border-radius-lg); /** 大角丸。 */
-  --pt-surface-radius-xl: var(--pt-semantic-border-radius-xl); /** 特大角丸。大きなコンテナやモーダル。 */
-  --pt-surface-radius-full: var(--pt-semantic-border-radius-pill); /** 完全円形/ピル形状。 */
-  --pt-surface-border-color: var(--pt-color-border-default); /** ボーダー色。 */
-  --pt-text-color-primary: var(--pt-color-text-primary); /** 主要テキスト色。`color`に適用。 */
-  --pt-text-color-secondary: var(--pt-color-text-secondary); /** 補助テキスト色。`color`に適用。 */
-  --pt-text-color-disabled: var(--pt-color-text-disabled); /** 無効化テキスト色。`color`に適用。 */
-  --pt-text-color-inverse: var(--pt-color-text-inverse); /** 反転テキスト色（暗い背景上）。`color`に適用。 */
-  --pt-text-color-danger: var(--pt-color-result-lose-default); /** 危険・エラーテキスト色。`color`に適用。 */
+  --pt-heading-accent-color: var(--pt-color-text-primary);
+  --pt-icon-color-default: var(--pt-color-text-primary);
+  --pt-icon-color-secondary: var(--pt-color-text-secondary);
+  --pt-icon-color-disabled: var(--pt-color-text-disabled);
+  --pt-radio-button-default-bg: var(--pt-color-surface-card);
+  --pt-radio-button-default-border: var(--pt-color-border-default);
+  --pt-radio-button-default-text: var(--pt-color-text-primary);
+  --pt-radio-button-hover-bg: var(--pt-color-surface-hovered);
+  --pt-radio-button-selected-text: var(--pt-color-text-inverse);
+  --pt-radio-button-disabled-bg: var(--pt-color-surface-hovered);
+  --pt-radio-button-disabled-border: var(--pt-color-border-subtle);
+  --pt-radio-button-disabled-text: var(--pt-color-text-disabled);
+  --pt-radio-button-feedback-correct-bg: var(--pt-color-result-win-default);
+  --pt-radio-button-feedback-correct-border: var(--pt-color-result-win-default);
+  --pt-radio-button-feedback-correct-text: var(--pt-color-text-inverse);
+  --pt-radio-button-feedback-wrong-bg: var(--pt-color-result-lose-default);
+  --pt-radio-button-feedback-wrong-border: var(--pt-color-result-lose-default);
+  --pt-radio-button-feedback-wrong-text: var(--pt-color-text-inverse);
+  --pt-radio-button-feedback-actual-bg: var(--pt-color-surface-card);
+  --pt-radio-button-feedback-actual-border: var(--pt-color-result-win-default);
+  --pt-radio-button-feedback-actual-text: var(--pt-color-result-win-default);
+  --pt-radio-button-feedback-actual-ring: var(--pt-color-result-win-subtle);
+  --pt-radio-button-focus-ring: var(--pt-color-border-focused);
+  --pt-radio-button-padding-x: var(--pt-spacing-content-md);
+  --pt-radio-button-padding-y: var(--pt-spacing-content-sm);
+  --pt-radio-button-radius: var(--pt-semantic-border-radius-md);
+  --pt-radio-button-shadow-default: var(--pt-elevation-raised);
+  --pt-radio-button-shadow-selected: var(--pt-elevation-overlay);
+  --pt-spinner-color-primary: var(--pt-color-text-primary);
+  --pt-spinner-color-secondary: var(--pt-color-text-secondary);
+  --pt-stack-gap-xs: var(--pt-spacing-gap-xs);
+  --pt-stack-gap-sm: var(--pt-spacing-gap-sm);
+  --pt-stack-gap-md: var(--pt-spacing-gap-md);
+  --pt-stack-gap-lg: var(--pt-spacing-gap-lg);
+  --pt-stack-gap-xl: var(--pt-spacing-gap-xl);
+  --pt-surface-variant-default-background: var(--pt-color-surface-card);
+  --pt-surface-variant-subtle-background: var(--pt-color-surface-page);
+  --pt-surface-variant-card-background: var(--pt-color-surface-card);
+  --pt-surface-variant-card-elevation: var(--pt-elevation-raised);
+  --pt-surface-padding-sm: var(--pt-spacing-content-sm);
+  --pt-surface-padding-md: var(--pt-spacing-content-md);
+  --pt-surface-padding-lg: var(--pt-spacing-content-lg);
+  --pt-surface-radius-none: var(--pt-semantic-border-radius-none);
+  --pt-surface-radius-sm: var(--pt-semantic-border-radius-sm);
+  --pt-surface-radius-md: var(--pt-semantic-border-radius-md);
+  --pt-surface-radius-lg: var(--pt-semantic-border-radius-lg);
+  --pt-surface-radius-xl: var(--pt-semantic-border-radius-xl);
+  --pt-surface-radius-full: var(--pt-semantic-border-radius-pill);
+  --pt-surface-border-color: var(--pt-color-border-default);
+  --pt-text-color-primary: var(--pt-color-text-primary);
+  --pt-text-color-secondary: var(--pt-color-text-secondary);
+  --pt-text-color-disabled: var(--pt-color-text-disabled);
+  --pt-text-color-inverse: var(--pt-color-text-inverse);
+  --pt-text-color-danger: var(--pt-color-result-lose-default);
   --pt-text-font-lg-font-family: var(--pt-typography-body-lg-font-family);
   --pt-text-font-lg-font-size: var(--pt-typography-body-lg-font-size);
   --pt-text-font-lg-font-weight: var(--pt-typography-body-lg-font-weight);
@@ -644,5 +644,5 @@
   --pt-text-label-xs-font-size: var(--pt-typography-label-xs-font-size);
   --pt-text-label-xs-font-weight: var(--pt-typography-label-xs-font-weight);
   --pt-text-label-xs-line-height: var(--pt-typography-label-xs-line-height);
-  --pt-type-chip-color-text: var(--pt-color-text-inverse); /** タイプチップのデフォルトテキスト色。`color`に適用。 */
+  --pt-type-chip-color-text: var(--pt-color-text-inverse);
 }
