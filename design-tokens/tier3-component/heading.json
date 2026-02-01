@@ -31,9 +31,9 @@
 				"$description": "アクセントバーとテキスト間のギャップ。"
 			},
 			"color": {
-				"value": "{color.gray.800}",
+				"value": "{color.text.primary}",
 				"type": "color",
-				"$description": "アクセントバーの色。プライマリカラー（ボタンと同じ）。"
+				"$description": "アクセントバーの色。primaryテキストと同じ色でブランド統一感を出す。"
 			}
 		}
 	}

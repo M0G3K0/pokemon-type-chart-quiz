@@ -486,7 +486,6 @@ $pt-chip-font-line-height-normal: $pt-font-line-height-normal; // 中・大サ�
 $pt-heading-accent-height: $pt-space-6; // アクセントバーの高さ。テキストの行高さに合わせた値。
 $pt-heading-accent-radius: $pt-radius-full; // アクセントバーの角丸。pill形状にする。
 $pt-heading-accent-gap: $pt-space-2; // アクセントバーとテキスト間のギャップ。
-$pt-heading-accent-color: $pt-color-gray-800; // アクセントバーの色。プライマリカラー（ボタンと同じ）。
 $pt-icon-size-sm: $pt-space-5; // 小サイズ (20px)。インラインアイコン、ボタン内アイコンに使用。
 $pt-icon-size-md: $pt-space-8; // 中サイズ (32px)。標準的なアイコン表示に使用。
 $pt-icon-size-lg: $pt-space-12; // 大サイズ (48px)。強調表示、空状態アイコンに使用。
@@ -549,6 +548,7 @@ $pt-grid-gap-sm: $pt-spacing-gap-sm; // 小ギャップ。コンパクトなグ�
 $pt-grid-gap-md: $pt-spacing-gap-md; // 中ギャップ。標準グリッド。デフォルト値。
 $pt-grid-gap-lg: $pt-spacing-gap-lg; // 大ギャップ。ゆったりしたグリッド。
 $pt-heading-text-color: $pt-color-text-primary; // 見出しテキストの色
+$pt-heading-accent-color: $pt-color-text-primary; // アクセントバーの色。primaryテキストと同じ色でブランド統一感を出す。
 $pt-icon-color-default: $pt-color-text-primary; // デフォルトのアイコン色。`color`に適用。
 $pt-icon-color-secondary: $pt-color-text-secondary; // 控えめなアイコン色。装飾的な用途に使用。
 $pt-icon-color-disabled: $pt-color-text-disabled; // 無効状態のアイコン色。
