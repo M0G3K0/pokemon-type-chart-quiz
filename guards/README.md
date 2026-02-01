@@ -122,10 +122,12 @@ guards/
 │   ├── guard/
 │   │   ├── cleanliness.guard.md                 # デッドコード禁止
 │   │   ├── duplication.guard.md                 # 重複コード禁止
+│   │   ├── temp-docs.guard.md                   # 一時ドキュメント管理 (NEW)
 │   │   └── test-existence.guard.md              # テスト存在必須
 │   └── rules/
 │       ├── cleanliness.rules.js
 │       ├── duplication.rules.json
+│       ├── temp-docs.rules.js                   # 一時ドキュメント検査 (NEW)
 │       └── test-existence.rules.js
 ├── velocity/                                    # 速度の憲法
 │   ├── guard/

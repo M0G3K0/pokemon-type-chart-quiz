@@ -23,15 +23,17 @@
 | `pt-{name}.ts` | ✅ | Componentクラス |
 | `pt-{name}.spec.ts` | ✅ | テストファイル |
 
-### 2. ドキュメントの存在
+### 2. ドキュメントの存在（NgDoc）
 
-すべての `pt-*` コンポーネントには対応するドキュメントが必要：
+すべての `pt-*` コンポーネントには対応する NgDoc ドキュメントが必要：
 
 ```
-docs/components/pt-{name}.md
+projects/docs/src/components/{name}/index.md
 ```
 
-**理由**: コンポーネントの使い方、プロパティ、アンチパターンを記録し、再利用性を高める。
+> **Note**: `pt-button` → `projects/docs/src/components/button/index.md`
+
+**理由**: NgDoc で自動生成されるドキュメントサイトに統合するため。
 
 ### 3. テストの最低要件
 
@@ -83,7 +85,7 @@ npm run guard:component-standards
 
 ### ドキュメント不足
 
-1. `docs/components/pt-{name}.md` を作成
+1. `projects/docs/src/components/{name}/index.md` を作成
 2. `/component-doc` ワークフローを参照
 
 ### テスト不足
