@@ -2,12 +2,12 @@ import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PokemonService } from '../../domain/pokemon.service';
 import { Pokemon } from '../../domain/pokemon.schema';
-import { CardComponent, CardHeaderComponent, CardContentComponent } from '../../ui/pt-card';
-import { StackComponent } from '../../ui/pt-stack/pt-stack';
-import { SurfaceComponent } from '../../ui/pt-surface/pt-surface';
-import { GridComponent } from '../../ui/pt-grid/pt-grid';
-import { TextComponent } from '../../ui/pt-text/pt-text';
-import { PtRadioButtonComponent, RadioButtonFeedbackState } from '../../ui/pt-radio-button';
+import { CardComponent, CardHeaderComponent, CardContentComponent } from '@ui/pt-card';
+import { StackComponent } from '@ui/pt-stack';
+import { SurfaceComponent } from '@ui/pt-surface';
+import { GridComponent } from '@ui/pt-grid';
+import { TextComponent } from '@ui/pt-text';
+import { PtRadioButtonComponent, RadioButtonFeedbackState } from '@ui/pt-radio-button';
 import { POKEMON_TYPES, getEffectiveness, PokemonType } from '../../domain/type-chart';
 import { BattleCardComponent } from './components';
 

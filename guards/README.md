@@ -93,9 +93,11 @@ guards/
 │       └── development-workflow.rules.js        # ルール定義
 ├── architecture/                                # 構造の憲法
 │   ├── guard/
-│   │   └── layer-boundaries.guard.md            # ドキュメント
+│   │   ├── layer-boundaries.guard.md            # レイヤー依存ルール
+│   │   └── ui-import-standards.guard.md         # UI import 規約 (NEW)
 │   └── rules/
-│       └── layer-boundaries.rules.js            # ルール定義
+│       ├── layer-boundaries.rules.js            # ルール定義
+│       └── ui-import-standards.rules.js         # UI import ルール (NEW)
 ├── code-quality/                                # コード品質の憲法
 │   ├── guard/
 │   │   ├── coding-standards.guard.md            # コーディング規約

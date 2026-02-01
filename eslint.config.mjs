@@ -9,6 +9,7 @@ import tseslint from "typescript-eslint";
 
 // Import custom rules from guards
 import codingStandardsRules from "./guards/code-quality/rules/coding-standards.rules.js";
+import uiImportStandards from "./guards/architecture/rules/ui-import-standards.rules.js";
 
 export default tseslint.config(
 	// Global ignores
@@ -40,6 +41,10 @@ export default tseslint.config(
 		rules: {
 			// Import custom coding standards
 			...codingStandardsRules,
+
+			// UI import standards (Issue #89)
+			// UIコンポーネントは @ui/component 形式でimportする
+			...uiImportStandards.rules,
 
 			// File size limit (Issue #31)
 			// ファイルが大きすぎると保守性が低下するため制限

@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IconComponent } from '@ui/pt-icon/pt-icon';
+import { IconComponent } from '@ui/pt-icon';
 import { AssetPathService } from '@app/core/services/asset-path.service';
 
 /**
