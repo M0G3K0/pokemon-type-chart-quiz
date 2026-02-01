@@ -1,7 +1,7 @@
 {
-	"$description": "Tier 3: Card Component Tokens. Defines styling properties for card component.",
+	"$description": "Tier 3: Card Component Tokens. Defines styling properties for card component and its compound components (header, content, footer).",
 	"card": {
-		"$description": "カードコンポーネント専用。コンテンツをグループ化するコンテナ。",
+		"$description": "カードコンポーネント専用。構造化されたコンテンツをグループ化する意味的コンテナ。",
 		"bg": {
 			"default": {
 				"value": "{color.surface.card}",
@@ -71,6 +71,24 @@
 			"value": "{semantic-border.radius.lg}",
 			"type": "borderRadius",
 			"$description": "border-radiusプロパティに適用。カードコンポーネント専用。overflow: hiddenとセットで使用。"
+		},
+		"section": {
+			"$description": "Compound Components (header/content/footer) のセクション用トークン",
+			"padding": {
+				"value": "{spacing.content.md}",
+				"type": "spacing",
+				"$description": "paddingプロパティに適用。header/content/footer各セクションの内部余白。"
+			},
+			"gap": {
+				"value": "{spacing.gap.sm}",
+				"type": "spacing",
+				"$description": "gapプロパティに適用。footer内のボタン間隔など。"
+			},
+			"separator": {
+				"value": "{color.border.subtle}",
+				"type": "color",
+				"$description": "border-colorプロパティに適用。header/footerとcontentの間の区切り線。"
+			}
 		}
 	}
 }
