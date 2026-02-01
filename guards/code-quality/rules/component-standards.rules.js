@@ -12,7 +12,7 @@ const GUARDRAIL_PATH = "guards/code-quality/guard/component-standards.guard.md";
 
 // ディレクトリ定義
 const UI_DIR = path.join(__dirname, "../../../src/app/ui");
-const DOCS_DIR = path.join(__dirname, "../../../docs/components");
+const DOCS_DIR = path.join(__dirname, "../../../projects/docs/src/components");
 
 // テストケースの検出パターン（it, test, it.todo, test.todo を認識）
 const TEST_CASE_PATTERN = /\b(it|test)(\.todo)?\s*\(/g;
@@ -63,18 +63,20 @@ function checkRequiredFiles(componentDir) {
 }
 
 /**
- * ドキュメントの存在チェック
+ * ドキュメントの存在チェック（NgDoc）
  */
 function checkDocumentation(componentDir) {
 	const errors = [];
 	const componentName = componentDir.name;
-	const docPath = path.join(DOCS_DIR, `${componentName}.md`);
+	// pt-* から pt- を除去して NgDoc のディレクトリ名にする
+	const ngDocComponentName = componentName.replace(/^pt-/, '');
+	const docPath = path.join(DOCS_DIR, ngDocComponentName, 'index.md');
 
 	if (!fs.existsSync(docPath)) {
 		errors.push({
 			type: "missing-doc",
 			component: componentName,
-			message: `Missing documentation: docs/components/${componentName}.md`,
+			message: `Missing NgDoc documentation: projects/docs/src/components/${ngDocComponentName}/index.md`,
 		});
 	}
 

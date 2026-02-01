@@ -44,12 +44,9 @@ __screenshots__/
 Thumbs.db
 .vercel
 
-
 # NgDoc files
 /ng-doc
 
-# NgDoc files
-/ng-doc
-
-# NgDoc files
-/ng-doc
+# Temporary files for PR/Issue creation
+/issue-body.md
+/pr-body.md
