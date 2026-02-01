@@ -550,6 +550,22 @@
   --pt-grid-gap-md: var(--pt-spacing-gap-md); /** 中ギャップ。標準グリッド。デフォルト値。 */
   --pt-grid-gap-lg: var(--pt-spacing-gap-lg); /** 大ギャップ。ゆったりしたグリッド。 */
   --pt-heading-text-color: var(--pt-color-text-primary); /** 見出しテキストの色 */
+  --pt-heading-font-xl-font-family: var(--pt-typography-heading-xl-font-family);
+  --pt-heading-font-xl-font-size: var(--pt-typography-heading-xl-font-size);
+  --pt-heading-font-xl-font-weight: var(--pt-typography-heading-xl-font-weight);
+  --pt-heading-font-xl-line-height: var(--pt-typography-heading-xl-line-height);
+  --pt-heading-font-lg-font-family: var(--pt-typography-heading-lg-font-family);
+  --pt-heading-font-lg-font-size: var(--pt-typography-heading-lg-font-size);
+  --pt-heading-font-lg-font-weight: var(--pt-typography-heading-lg-font-weight);
+  --pt-heading-font-lg-line-height: var(--pt-typography-heading-lg-line-height);
+  --pt-heading-font-md-font-family: var(--pt-typography-heading-md-font-family);
+  --pt-heading-font-md-font-size: var(--pt-typography-heading-md-font-size);
+  --pt-heading-font-md-font-weight: var(--pt-typography-heading-md-font-weight);
+  --pt-heading-font-md-line-height: var(--pt-typography-heading-md-line-height);
+  --pt-heading-font-sm-font-family: var(--pt-typography-heading-sm-font-family);
+  --pt-heading-font-sm-font-size: var(--pt-typography-heading-sm-font-size);
+  --pt-heading-font-sm-font-weight: var(--pt-typography-heading-sm-font-weight);
+  --pt-heading-font-sm-line-height: var(--pt-typography-heading-sm-line-height);
   --pt-heading-accent-color: var(--pt-color-text-primary); /** アクセントバーの色。primaryテキストと同じ色でブランド統一感を出す。 */
   --pt-icon-color-default: var(--pt-color-text-primary); /** デフォルトのアイコン色。`color`に適用。 */
   --pt-icon-color-secondary: var(--pt-color-text-secondary); /** 控えめなアイコン色。装飾的な用途に使用。 */
@@ -604,5 +620,29 @@
   --pt-text-color-disabled: var(--pt-color-text-disabled); /** 無効化テキスト色。`color`に適用。 */
   --pt-text-color-inverse: var(--pt-color-text-inverse); /** 反転テキスト色（暗い背景上）。`color`に適用。 */
   --pt-text-color-danger: var(--pt-color-result-lose-default); /** 危険・エラーテキスト色。`color`に適用。 */
+  --pt-text-font-lg-font-family: var(--pt-typography-body-lg-font-family);
+  --pt-text-font-lg-font-size: var(--pt-typography-body-lg-font-size);
+  --pt-text-font-lg-font-weight: var(--pt-typography-body-lg-font-weight);
+  --pt-text-font-lg-line-height: var(--pt-typography-body-lg-line-height);
+  --pt-text-font-md-font-family: var(--pt-typography-body-md-font-family);
+  --pt-text-font-md-font-size: var(--pt-typography-body-md-font-size);
+  --pt-text-font-md-font-weight: var(--pt-typography-body-md-font-weight);
+  --pt-text-font-md-line-height: var(--pt-typography-body-md-line-height);
+  --pt-text-font-sm-font-family: var(--pt-typography-body-sm-font-family);
+  --pt-text-font-sm-font-size: var(--pt-typography-body-sm-font-size);
+  --pt-text-font-sm-font-weight: var(--pt-typography-body-sm-font-weight);
+  --pt-text-font-sm-line-height: var(--pt-typography-body-sm-line-height);
+  --pt-text-label-md-font-family: var(--pt-typography-label-md-font-family);
+  --pt-text-label-md-font-size: var(--pt-typography-label-md-font-size);
+  --pt-text-label-md-font-weight: var(--pt-typography-label-md-font-weight);
+  --pt-text-label-md-line-height: var(--pt-typography-label-md-line-height);
+  --pt-text-label-sm-font-family: var(--pt-typography-label-sm-font-family);
+  --pt-text-label-sm-font-size: var(--pt-typography-label-sm-font-size);
+  --pt-text-label-sm-font-weight: var(--pt-typography-label-sm-font-weight);
+  --pt-text-label-sm-line-height: var(--pt-typography-label-sm-line-height);
+  --pt-text-label-xs-font-family: var(--pt-typography-label-xs-font-family);
+  --pt-text-label-xs-font-size: var(--pt-typography-label-xs-font-size);
+  --pt-text-label-xs-font-weight: var(--pt-typography-label-xs-font-weight);
+  --pt-text-label-xs-line-height: var(--pt-typography-label-xs-line-height);
   --pt-type-chip-color-text: var(--pt-color-text-inverse); /** タイプチップのデフォルトテキスト色。`color`に適用。 */
 }

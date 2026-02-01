@@ -2,10 +2,9 @@
  * @what pt-text component styles
  * @why 一貫したタイポグラフィを本文・ラベル・補助テキストに適用
  *
- * Typography は Tier 2 composite token を直接使用（意図的な設計）。
- * Color は Tier 3 text tokens を使用。
+ * Tier 3 準拠: すべてのトークンは text.* を参照。
  *
- * @tokens Tier 3: text.json (color only)
+ * @tokens Tier 3: text.json
  */
 
 :host {
@@ -17,48 +16,48 @@
 	margin: 0;
 	padding: 0;
 
-	// Variant: body - Tier 2 typography tokens を直接参照
+	// Variant: body - Tier 3 text.font tokens
 	&--body-lg {
-		font-family: var(--pt-typography-body-lg-font-family);
-		font-size: var(--pt-typography-body-lg-font-size);
-		font-weight: var(--pt-typography-body-lg-font-weight);
-		line-height: var(--pt-typography-body-lg-line-height);
+		font-family: var(--pt-text-font-lg-font-family);
+		font-size: var(--pt-text-font-lg-font-size);
+		font-weight: var(--pt-text-font-lg-font-weight);
+		line-height: var(--pt-text-font-lg-line-height);
 	}
 
 	&--body-md {
-		font-family: var(--pt-typography-body-md-font-family);
-		font-size: var(--pt-typography-body-md-font-size);
-		font-weight: var(--pt-typography-body-md-font-weight);
-		line-height: var(--pt-typography-body-md-line-height);
+		font-family: var(--pt-text-font-md-font-family);
+		font-size: var(--pt-text-font-md-font-size);
+		font-weight: var(--pt-text-font-md-font-weight);
+		line-height: var(--pt-text-font-md-line-height);
 	}
 
 	&--body-sm {
-		font-family: var(--pt-typography-body-sm-font-family);
-		font-size: var(--pt-typography-body-sm-font-size);
-		font-weight: var(--pt-typography-body-sm-font-weight);
-		line-height: var(--pt-typography-body-sm-line-height);
+		font-family: var(--pt-text-font-sm-font-family);
+		font-size: var(--pt-text-font-sm-font-size);
+		font-weight: var(--pt-text-font-sm-font-weight);
+		line-height: var(--pt-text-font-sm-line-height);
 	}
 
-	// Variant: label - Tier 2 typography tokens を直接参照
+	// Variant: label - Tier 3 text.label tokens
 	&--label-md {
-		font-family: var(--pt-typography-label-md-font-family);
-		font-size: var(--pt-typography-label-md-font-size);
-		font-weight: var(--pt-typography-label-md-font-weight);
-		line-height: var(--pt-typography-label-md-line-height);
+		font-family: var(--pt-text-label-md-font-family);
+		font-size: var(--pt-text-label-md-font-size);
+		font-weight: var(--pt-text-label-md-font-weight);
+		line-height: var(--pt-text-label-md-line-height);
 	}
 
 	&--label-sm {
-		font-family: var(--pt-typography-label-sm-font-family);
-		font-size: var(--pt-typography-label-sm-font-size);
-		font-weight: var(--pt-typography-label-sm-font-weight);
-		line-height: var(--pt-typography-label-sm-line-height);
+		font-family: var(--pt-text-label-sm-font-family);
+		font-size: var(--pt-text-label-sm-font-size);
+		font-weight: var(--pt-text-label-sm-font-weight);
+		line-height: var(--pt-text-label-sm-line-height);
 	}
 
 	&--label-xs {
-		font-family: var(--pt-typography-label-xs-font-family);
-		font-size: var(--pt-typography-label-xs-font-size);
-		font-weight: var(--pt-typography-label-xs-font-weight);
-		line-height: var(--pt-typography-label-xs-line-height);
+		font-family: var(--pt-text-label-xs-font-family);
+		font-size: var(--pt-text-label-xs-font-size);
+		font-weight: var(--pt-text-label-xs-font-weight);
+		line-height: var(--pt-text-label-xs-line-height);
 	}
 
 	// Color (Tier 3 text tokens)

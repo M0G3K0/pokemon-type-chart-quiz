@@ -9,6 +9,81 @@
 				"$description": "見出しテキストの色"
 			}
 		},
+		"font": {
+			"$description": "タイポグラフィ。Tier2 typography.heading.* へのエイリアス。",
+			"xl": {
+				"fontFamily": {
+					"value": "{typography.heading.xl.fontFamily}",
+					"type": "fontFamily"
+				},
+				"fontSize": {
+					"value": "{typography.heading.xl.fontSize}",
+					"type": "fontSize"
+				},
+				"fontWeight": {
+					"value": "{typography.heading.xl.fontWeight}",
+					"type": "fontWeight"
+				},
+				"lineHeight": {
+					"value": "{typography.heading.xl.lineHeight}",
+					"type": "lineHeight"
+				}
+			},
+			"lg": {
+				"fontFamily": {
+					"value": "{typography.heading.lg.fontFamily}",
+					"type": "fontFamily"
+				},
+				"fontSize": {
+					"value": "{typography.heading.lg.fontSize}",
+					"type": "fontSize"
+				},
+				"fontWeight": {
+					"value": "{typography.heading.lg.fontWeight}",
+					"type": "fontWeight"
+				},
+				"lineHeight": {
+					"value": "{typography.heading.lg.lineHeight}",
+					"type": "lineHeight"
+				}
+			},
+			"md": {
+				"fontFamily": {
+					"value": "{typography.heading.md.fontFamily}",
+					"type": "fontFamily"
+				},
+				"fontSize": {
+					"value": "{typography.heading.md.fontSize}",
+					"type": "fontSize"
+				},
+				"fontWeight": {
+					"value": "{typography.heading.md.fontWeight}",
+					"type": "fontWeight"
+				},
+				"lineHeight": {
+					"value": "{typography.heading.md.lineHeight}",
+					"type": "lineHeight"
+				}
+			},
+			"sm": {
+				"fontFamily": {
+					"value": "{typography.heading.sm.fontFamily}",
+					"type": "fontFamily"
+				},
+				"fontSize": {
+					"value": "{typography.heading.sm.fontSize}",
+					"type": "fontSize"
+				},
+				"fontWeight": {
+					"value": "{typography.heading.sm.fontWeight}",
+					"type": "fontWeight"
+				},
+				"lineHeight": {
+					"value": "{typography.heading.sm.lineHeight}",
+					"type": "lineHeight"
+				}
+			}
+		},
 		"accent": {
 			"width": {
 				"value": "6px",

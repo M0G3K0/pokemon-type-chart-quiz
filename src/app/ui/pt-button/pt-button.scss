@@ -94,15 +94,15 @@
 	}
 
 	&--ghost {
-		background-color: transparent;
-		color: var(--pt-color-text-primary);
+		background-color: var(--pt-button-ghost-bg-default);
+		color: var(--pt-button-ghost-text-default);
 
 		&:hover:not(:disabled) {
-			background-color: var(--pt-color-surface-hovered);
+			background-color: var(--pt-button-ghost-bg-hover);
 		}
 
 		&:active:not(:disabled) {
-			background-color: var(--pt-color-surface-pressed);
+			background-color: var(--pt-button-ghost-bg-pressed);
 		}
 	}
 }

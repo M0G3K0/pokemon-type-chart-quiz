@@ -34,12 +34,12 @@ import { AvatarComponent } from '@ui/pt-avatar/pt-avatar';
 			align-items: center;
 			gap: 8px;
 		}
-		.avatar-wrapper pt-avatar {
-			background-color: var(--pt-color-surface-subtle);
-			border: 1px solid var(--pt-color-border-subtle);
+		.avatar-wrapper pt-avatar ::ng-deep .pt-avatar {
+			background-color: var(--pt-color-gray-200);
 		}
 		.shape-label {
-			font-size: 12px;
+			font-size: 14px;
+			font-weight: 500;
 			color: var(--pt-color-text-secondary);
 		}
 	`,
