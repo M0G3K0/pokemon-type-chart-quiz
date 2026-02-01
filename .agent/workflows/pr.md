@@ -11,7 +11,7 @@ description: GitHub Pull Requestを作成する手順
 - **`--body "..."` で直接本文を書くことは禁止**（文字化け防止）
 - **ファイル名は `pr-body.md` に固定**
 - **PR作成前にCIが通ることを確認**
-- **絵文字は `.agent/emoji-prefixes.json` から取得**（AI出力の揺れによる文字化け防止）
+- **絵文字は Node.js スクリプト内で `.agent/emoji-prefixes.json` から取得**（文字化け防止）
 
 ---
 
@@ -35,7 +35,7 @@ description: GitHub Pull Requestを作成する手順
 | `breaking` | 破壊的変更 |
 | `wip` | 作業中 |
 
-**⚠️ AIは絵文字を直接タイプせず、Node.jsで取得すること！**
+**⚠️ AIは絵文字を直接タイプせず、Node.js child_process で取得すること！**
 
 **🚫 上記以外のprefixを使わないこと！**
 
@@ -90,22 +90,20 @@ npm test
 
 ## Step 4: PR を作成
 
-**⚠️ 絵文字はNode.jsで取得すること（文字化け防止）:**
-
-**⚠️ TTY問題を回避するため `GH_FORCE_TTY=1` を付けること:**
+**⚠️ 絵文字はNode.js child_process で取得すること（文字化け防止）:**
 
 ```bash
-# TYPE を選んだタイプに置き換え（例: feat, fix, refactor）
-EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.TYPE") && GH_FORCE_TTY=1 gh pr create --title "${EMOJI} TYPE: description here" --body-file pr-body.md
+# TYPE と TITLE を置き換え（例: feat, fix, refactor）
+node -e "const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.TYPE; const {execSync} = require('child_process'); execSync(\`gh pr create --title \"\${emoji} TYPE: TITLE\" --body-file pr-body.md\`, {stdio: 'inherit'});"
 ```
 
 **例:**
 ```bash
 # feat
-EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.feat") && GH_FORCE_TTY=1 gh pr create --title "${EMOJI} feat: add sound effects" --body-file pr-body.md
+node -e "const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.feat; const {execSync} = require('child_process'); execSync(\`gh pr create --title \"\${emoji} feat: add sound effects\" --body-file pr-body.md\`, {stdio: 'inherit'});"
 
 # fix
-EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.fix") && GH_FORCE_TTY=1 gh pr create --title "${EMOJI} fix: resolve button issue" --body-file pr-body.md
+node -e "const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.fix; const {execSync} = require('child_process'); execSync(\`gh pr create --title \"\${emoji} fix: resolve button issue\" --body-file pr-body.md\`, {stdio: 'inherit'});"
 ```
 
 ---
@@ -125,5 +123,6 @@ gh pr checks
 | 内容 | ファイル |
 |------|----------|
 | **PRテンプレート（必読）** | `.github/pull_request_template.md` |
+| **絵文字プレフィックス** | `.agent/emoji-prefixes.json` |
 | PR検証ルール | `guards/process/rules/pr-format.rules.js` |
 | ガードレール | `guards/process/guard/pr-format.guard.md` |
