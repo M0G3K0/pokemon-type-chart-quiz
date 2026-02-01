@@ -1,7 +1,7 @@
 {
-	"$description": "Tier 3: Text Component Tokens. Color tokens for pt-text component.",
+	"$description": "Tier 3: Text Component Tokens. pt-text コンポーネント専用トークン。",
 	"text": {
-		"$description": "Text component uses Tier 2 typography tokens directly for font styles. This file defines only color tokens.",
+		"$description": "Text コンポーネント。本文テキスト用のスタイリング。",
 		"color": {
 			"primary": {
 				"value": "{color.text.primary}",
@@ -29,6 +29,119 @@
 				"$description": "危険・エラーテキスト色。`color`に適用。"
 			}
 		},
-		"$note": "Typography (font-family, font-size, font-weight, line-height) is referenced directly from Tier 2 typography tokens in pt-text.scss."
+		"font": {
+			"$description": "本文タイポグラフィ。Tier2 typography.body.* へのエイリアス。",
+			"lg": {
+				"fontFamily": {
+					"value": "{typography.body.lg.fontFamily}",
+					"type": "fontFamily"
+				},
+				"fontSize": {
+					"value": "{typography.body.lg.fontSize}",
+					"type": "fontSize"
+				},
+				"fontWeight": {
+					"value": "{typography.body.lg.fontWeight}",
+					"type": "fontWeight"
+				},
+				"lineHeight": {
+					"value": "{typography.body.lg.lineHeight}",
+					"type": "lineHeight"
+				}
+			},
+			"md": {
+				"fontFamily": {
+					"value": "{typography.body.md.fontFamily}",
+					"type": "fontFamily"
+				},
+				"fontSize": {
+					"value": "{typography.body.md.fontSize}",
+					"type": "fontSize"
+				},
+				"fontWeight": {
+					"value": "{typography.body.md.fontWeight}",
+					"type": "fontWeight"
+				},
+				"lineHeight": {
+					"value": "{typography.body.md.lineHeight}",
+					"type": "lineHeight"
+				}
+			},
+			"sm": {
+				"fontFamily": {
+					"value": "{typography.body.sm.fontFamily}",
+					"type": "fontFamily"
+				},
+				"fontSize": {
+					"value": "{typography.body.sm.fontSize}",
+					"type": "fontSize"
+				},
+				"fontWeight": {
+					"value": "{typography.body.sm.fontWeight}",
+					"type": "fontWeight"
+				},
+				"lineHeight": {
+					"value": "{typography.body.sm.lineHeight}",
+					"type": "lineHeight"
+				}
+			}
+		},
+		"label": {
+			"$description": "ラベル用タイポグラフィ。Tier2 typography.label.* へのエイリアス。",
+			"md": {
+				"fontFamily": {
+					"value": "{typography.label.md.fontFamily}",
+					"type": "fontFamily"
+				},
+				"fontSize": {
+					"value": "{typography.label.md.fontSize}",
+					"type": "fontSize"
+				},
+				"fontWeight": {
+					"value": "{typography.label.md.fontWeight}",
+					"type": "fontWeight"
+				},
+				"lineHeight": {
+					"value": "{typography.label.md.lineHeight}",
+					"type": "lineHeight"
+				}
+			},
+			"sm": {
+				"fontFamily": {
+					"value": "{typography.label.sm.fontFamily}",
+					"type": "fontFamily"
+				},
+				"fontSize": {
+					"value": "{typography.label.sm.fontSize}",
+					"type": "fontSize"
+				},
+				"fontWeight": {
+					"value": "{typography.label.sm.fontWeight}",
+					"type": "fontWeight"
+				},
+				"lineHeight": {
+					"value": "{typography.label.sm.lineHeight}",
+					"type": "lineHeight"
+				}
+			},
+			"xs": {
+				"fontFamily": {
+					"value": "{typography.label.xs.fontFamily}",
+					"type": "fontFamily"
+				},
+				"fontSize": {
+					"value": "{typography.label.xs.fontSize}",
+					"type": "fontSize"
+				},
+				"fontWeight": {
+					"value": "{typography.label.xs.fontWeight}",
+					"type": "fontWeight"
+				},
+				"lineHeight": {
+					"value": "{typography.label.xs.lineHeight}",
+					"type": "lineHeight"
+				}
+			}
+		}
 	}
 }

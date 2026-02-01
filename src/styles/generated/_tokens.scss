@@ -486,7 +486,6 @@ $pt-chip-font-line-height-normal: $pt-font-line-height-normal; // 中・大サ�
 $pt-heading-accent-height: $pt-space-6; // アクセントバーの高さ。テキストの行高さに合わせた値。
 $pt-heading-accent-radius: $pt-radius-full; // アクセントバーの角丸。pill形状にする。
 $pt-heading-accent-gap: $pt-space-2; // アクセントバーとテキスト間のギャップ。
-$pt-heading-accent-color: $pt-color-gray-800; // アクセントバーの色。プライマリカラー（ボタンと同じ）。
 $pt-icon-size-sm: $pt-space-5; // 小サイズ (20px)。インラインアイコン、ボタン内アイコンに使用。
 $pt-icon-size-md: $pt-space-8; // 中サイズ (32px)。標準的なアイコン表示に使用。
 $pt-icon-size-lg: $pt-space-12; // 大サイズ (48px)。強調表示、空状態アイコンに使用。
@@ -549,6 +548,23 @@ $pt-grid-gap-sm: $pt-spacing-gap-sm; // 小ギャップ。コンパクトなグ�
 $pt-grid-gap-md: $pt-spacing-gap-md; // 中ギャップ。標準グリッド。デフォルト値。
 $pt-grid-gap-lg: $pt-spacing-gap-lg; // 大ギャップ。ゆったりしたグリッド。
 $pt-heading-text-color: $pt-color-text-primary; // 見出しテキストの色
+$pt-heading-font-xl-font-family: $pt-typography-heading-xl-font-family;
+$pt-heading-font-xl-font-size: $pt-typography-heading-xl-font-size;
+$pt-heading-font-xl-font-weight: $pt-typography-heading-xl-font-weight;
+$pt-heading-font-xl-line-height: $pt-typography-heading-xl-line-height;
+$pt-heading-font-lg-font-family: $pt-typography-heading-lg-font-family;
+$pt-heading-font-lg-font-size: $pt-typography-heading-lg-font-size;
+$pt-heading-font-lg-font-weight: $pt-typography-heading-lg-font-weight;
+$pt-heading-font-lg-line-height: $pt-typography-heading-lg-line-height;
+$pt-heading-font-md-font-family: $pt-typography-heading-md-font-family;
+$pt-heading-font-md-font-size: $pt-typography-heading-md-font-size;
+$pt-heading-font-md-font-weight: $pt-typography-heading-md-font-weight;
+$pt-heading-font-md-line-height: $pt-typography-heading-md-line-height;
+$pt-heading-font-sm-font-family: $pt-typography-heading-sm-font-family;
+$pt-heading-font-sm-font-size: $pt-typography-heading-sm-font-size;
+$pt-heading-font-sm-font-weight: $pt-typography-heading-sm-font-weight;
+$pt-heading-font-sm-line-height: $pt-typography-heading-sm-line-height;
+$pt-heading-accent-color: $pt-color-text-primary; // アクセントバーの色。primaryテキストと同じ色でブランド統一感を出す。
 $pt-icon-color-default: $pt-color-text-primary; // デフォルトのアイコン色。`color`に適用。
 $pt-icon-color-secondary: $pt-color-text-secondary; // 控えめなアイコン色。装飾的な用途に使用。
 $pt-icon-color-disabled: $pt-color-text-disabled; // 無効状態のアイコン色。
@@ -602,4 +618,28 @@ $pt-text-color-secondary: $pt-color-text-secondary; // 補助テキスト色。`
 $pt-text-color-disabled: $pt-color-text-disabled; // 無効化テキスト色。`color`に適用。
 $pt-text-color-inverse: $pt-color-text-inverse; // 反転テキスト色（暗い背景上）。`color`に適用。
 $pt-text-color-danger: $pt-color-result-lose-default; // 危険・エラーテキスト色。`color`に適用。
+$pt-text-font-lg-font-family: $pt-typography-body-lg-font-family;
+$pt-text-font-lg-font-size: $pt-typography-body-lg-font-size;
+$pt-text-font-lg-font-weight: $pt-typography-body-lg-font-weight;
+$pt-text-font-lg-line-height: $pt-typography-body-lg-line-height;
+$pt-text-font-md-font-family: $pt-typography-body-md-font-family;
+$pt-text-font-md-font-size: $pt-typography-body-md-font-size;
+$pt-text-font-md-font-weight: $pt-typography-body-md-font-weight;
+$pt-text-font-md-line-height: $pt-typography-body-md-line-height;
+$pt-text-font-sm-font-family: $pt-typography-body-sm-font-family;
+$pt-text-font-sm-font-size: $pt-typography-body-sm-font-size;
+$pt-text-font-sm-font-weight: $pt-typography-body-sm-font-weight;
+$pt-text-font-sm-line-height: $pt-typography-body-sm-line-height;
+$pt-text-label-md-font-family: $pt-typography-label-md-font-family;
+$pt-text-label-md-font-size: $pt-typography-label-md-font-size;
+$pt-text-label-md-font-weight: $pt-typography-label-md-font-weight;
+$pt-text-label-md-line-height: $pt-typography-label-md-line-height;
+$pt-text-label-sm-font-family: $pt-typography-label-sm-font-family;
+$pt-text-label-sm-font-size: $pt-typography-label-sm-font-size;
+$pt-text-label-sm-font-weight: $pt-typography-label-sm-font-weight;
+$pt-text-label-sm-line-height: $pt-typography-label-sm-line-height;
+$pt-text-label-xs-font-family: $pt-typography-label-xs-font-family;
+$pt-text-label-xs-font-size: $pt-typography-label-xs-font-size;
+$pt-text-label-xs-font-weight: $pt-typography-label-xs-font-weight;
+$pt-text-label-xs-line-height: $pt-typography-label-xs-line-height;
 $pt-type-chip-color-text: $pt-color-text-inverse; // タイプチップのデフォルトテキスト色。`color`に適用。
