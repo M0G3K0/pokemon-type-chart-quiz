@@ -29,6 +29,113 @@ title: Guidelines
 | **pt-cardの置き換え** | カードはヘッダー/フッター構造を持つ | `pt-card` |
 | **レイアウト制御** | 配置はSurfaceの責務外 | `pt-stack`, `pt-grid` |
 
+---
+
+## Variant 選択ガイド
+
+### Default
+
+**使用する場面:**
+- **標準的な白背景コンテナ**
+- コンテンツを視覚的にグループ化
+- ほとんどの場面で推奨
+
+**使用しない場面:**
+- 親と同じ色（無意味になる）
+
+```html
+<pt-surface variant="default" padding="md">
+  <!-- 白背景のコンテナ -->
+</pt-surface>
+```
+
+### Subtle
+
+**使用する場面:**
+- **ページ背景と同系色でのセクション分け**
+- サイドバー、補足情報エリア
+- 控えめな視覚的分離
+
+**使用しない場面:**
+- 強調したいコンテンツ（目立たない）
+
+```html
+<pt-surface variant="subtle" padding="lg">
+  <!-- 薄いグレー背景 -->
+</pt-surface>
+```
+
+### Card
+
+**使用する場面:**
+- **影付きで浮いた印象が必要**
+- pt-cardの構造が不要だがカード風にしたい
+- ドラッグ可能なアイテムなど
+
+**使用しない場面:**
+- Header/Footer 構造が必要（pt-card を使用）
+
+```html
+<pt-surface variant="card" padding="md" radius="lg">
+  <!-- 影付き、浮いた印象 -->
+</pt-surface>
+```
+
+### Ghost
+
+**使用する場面:**
+- **親の背景を透過させたい**
+- パディングや角丸だけ適用したい
+- 視覚的なボックスを見せたくない
+
+**使用しない場面:**
+- パディングも角丸も不要（意味がない）
+
+```html
+<pt-surface variant="ghost" padding="md">
+  <!-- 透明背景、パディングのみ適用 -->
+</pt-surface>
+```
+
+---
+
+## Padding 選択ガイド
+
+| サイズ | 値 | 用途 |
+|--------|------|------|
+| `none` | 0 | パディング不要（角丸のみなど） |
+| `sm` | 8px | コンパクトなコンテナ |
+| `md` | 16px | 標準（デフォルト） |
+| `lg` | 24px | ゆったりしたコンテナ |
+
+---
+
+## Radius 選択ガイド
+
+| サイズ | 値 | 用途 |
+|--------|------|------|
+| `none` | 0 | 角丸なし |
+| `sm` | 4px | 控えめな角丸 |
+| `md` | 8px | 標準 |
+| `lg` | 12px | カード風 |
+| `xl` | 16px | 大きなコンテナ |
+| `full` | 9999px | ピル形状 |
+
+---
+
+## pt-card との使い分け
+
+> 参照: [Surface/Card 責務分離](../../decisions/surface-card-responsibility.md)
+
+| 判断基準 | 選択 |
+|----------|------|
+| 単純な背景ボックス | `pt-surface` |
+| Header/Content/Footer 構造 | `pt-card` |
+| 柔軟なパディング・角丸 | `pt-surface` |
+| デフォルトで影が欲しい | `pt-card` |
+
+---
+
 ## Accessibility
 
 - Surfaceは視覚的なコンテナであり、ARIA属性不要

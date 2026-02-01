@@ -30,6 +30,75 @@ title: Guidelines
 | **異なるサイズの要素** | Gridは均等配分が前提 | `pt-stack` + CSS |
 | **複雑なレイアウト** | 12カラムシステム等 | CSS直接記述 |
 
+---
+
+## Columns 選択ガイド
+
+| カラム数 | 用途 |
+|----------|------|
+| `1` | モバイルフォールバック（通常 `smColumns` と併用） |
+| `2` | 2択、ペア表示、偶数個の均等配置 |
+| `3` | カードリスト、ギャラリー |
+| `4` | ダッシュボード、密なリスト |
+| `6` | 細かいグリッド、アイコンパレット |
+
+### 要素数に応じた列数の決め方
+
+| 要素数 | 推奨列数 | 理由 |
+|--------|---------|------|
+| 2個 | `2` | 1行に収まる |
+| 3個 | `3` または `1` | 3列で1行、または縦積み |
+| 4個 | `2` または `4` | 2×2 または 1×4 |
+| 5個以上 | `2`〜`4` | 画面幅と要素の重要度による |
+
+### 使用例
+
+```html
+<!-- 2択 -->
+<pt-grid [columns]="2" gap="md">
+  <pt-radio-button>選択肢A</pt-radio-button>
+  <pt-radio-button>選択肢B</pt-radio-button>
+</pt-grid>
+
+<!-- 4択（2×2配置） -->
+<pt-grid [columns]="2" gap="md">
+  <pt-radio-button>選択肢A</pt-radio-button>
+  <pt-radio-button>選択肢B</pt-radio-button>
+  <pt-radio-button>選択肢C</pt-radio-button>
+  <pt-radio-button>選択肢D</pt-radio-button>
+</pt-grid>
+
+<!-- レスポンシブ: モバイル2列 → デスクトップ4列 -->
+<pt-grid [columns]="2" [smColumns]="4" gap="lg">
+  @for (item of items; track item.id) {
+    <pt-card>{{ item.name }}</pt-card>
+  }
+</pt-grid>
+```
+
+---
+
+## Gap 選択ガイド
+
+| サイズ | 値 | 用途 |
+|--------|------|------|
+| `sm` | 8px | 密なグリッド |
+| `md` | 16px | 標準（デフォルト） |
+| `lg` | 24px | ゆったりしたグリッド |
+
+---
+
+## pt-stack との使い分け
+
+| 判断基準 | 選択 |
+|----------|------|
+| 規則的なn列配置 | `pt-grid` |
+| 縦/横の一列配置 | `pt-stack` |
+| 均等幅のカード並べ | `pt-grid` |
+| 異なるサイズの要素 | `pt-stack` |
+
+---
+
 ## Accessibility
 
 - グリッド自体にはARIA属性不要

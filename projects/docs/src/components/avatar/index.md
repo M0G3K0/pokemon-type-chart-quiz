@@ -27,6 +27,96 @@ title: Guidelines
 | **SVGアイコン** | アイコンはアバターとは責務が異なる | `pt-icon`を使用 |
 | **背景色・シャドウが必要** | 装飾はアバターの責務外 | `pt-surface`でラップ |
 
+---
+
+## Shape 選択ガイド
+
+> 参照: [Avatar/Heading 設計ガイド](../../decisions/avatar-heading-guide.md)
+
+### Circle
+
+**使用する場面:**
+- **ユーザーアバター**（SNSプロフィールなど）
+- 円形に切り抜きたい画像
+- 人物・キャラクターの顔写真
+
+**使用しない場面:**
+- ピクセルアート（シャープなエッジが失われる）
+- 透明背景画像（円形が見えにくい）
+
+```html
+<pt-avatar src="user.jpg" shape="circle" size="md"></pt-avatar>
+```
+
+### Rounded
+
+**使用する場面:**
+- **サムネイル画像**
+- モダンな印象を与えたい
+- 角丸で柔らかい印象が必要
+
+**使用しない場面:**
+- ピクセルアート
+- 完全な円形が必要な場合
+
+```html
+<pt-avatar src="thumbnail.jpg" shape="rounded" size="lg"></pt-avatar>
+```
+
+### Square
+
+**使用する場面:**
+- **ピクセルアート・ドット絵**
+- シャープなエッジを保持したい
+- レトロゲーム風の表現
+
+**使用しない場面:**
+- 人物写真（固い印象になる）
+
+```html
+<!-- ✅ ポケモンスプライト向け推奨設定 -->
+<pt-avatar 
+  [src]="pokemon.imageUrl"
+  shape="square" 
+  size="lg"
+  [pixelated]="true">
+</pt-avatar>
+```
+
+---
+
+## Size 選択ガイド
+
+| サイズ | 値 | 用途 |
+|--------|------|------|
+| `sm` | 32px | リスト内のアイコン、インライン表示 |
+| `md` | 48px | 標準的なアバター、カード内サブ画像 |
+| `lg` | 80px | カード内メイン画像、プロフィール |
+| `xl` | 120px | フルスクリーンプロフィール、ヒーロー画像 |
+
+---
+
+## 透明背景画像の注意
+
+ポケモンスプライトなど**透明背景**を持つ画像では、`shape` プロパティ（circle/rounded/square）の違いが見えにくくなります。
+
+### NgDoc Demo での対策
+
+NgDoc の Examples では、背景色付きの `::ng-deep` スタイルでラップすることで、各 shape の違いを視覚的に確認できるようにしています：
+
+```scss
+::ng-deep pt-avatar {
+  background-color: var(--pt-color-gray-200);
+}
+```
+
+### 本番コードでの対策
+
+- `pt-surface` でラップして背景色を付与
+- または透明背景でない画像（JPEGなど）を使用
+
+---
+
 ## Accessibility
 
 - `alt`属性は**必須**です（アクセシビリティのため）

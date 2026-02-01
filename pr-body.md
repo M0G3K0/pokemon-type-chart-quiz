@@ -1,23 +1,21 @@
 ## 💡 概要
 
-RadioButtonの縦方向余白を調整し、よりコンパクトなレイアウトを実現。
+Phase 3e の実装として、Avatar と Heading コンポーネントの設計ガイドラインを作成し、トークン参照の整合性を修正しました。
 
 ## 📝 変更内容
 
-### トークン変更
-- `--pt-radio-button-padding-y`: `spacing.content.md` → `spacing.content.sm`
-
-### 理由
-- 縦方向の余白が大きすぎるという報告 (#108) への対応
-- Quiz選択肢がよりコンパクトに表示されるように
+- **avatar-heading-guide.md 新規作成**: Shape/Level/Size の使い分けガイドライン
+- **heading.json トークン参照修正**: `color.gray.800` → `color.text.primary` (セマンティック参照)
+- **ポケモン画像の推奨設定追加**: `shape="square"` + `pixelated="true"`
+- **Heading level/size 分離設計の意図を文書化**
 
 ## 🔗 関連Issue
 
-- Partially addresses #108 (comprehensive UI component quality review)
+Partially addresses #108 (コンポーネント品質改善)
 
 ## 📷 スクリーンショット（該当する場合）
 
-N/A
+視覚的な変更はありません（トークン参照の修正とドキュメント追加のみ）
 
 ## ✅ チェックリスト
 
@@ -30,9 +28,19 @@ N/A
 
 ## 📌 補足事項
 
-選択時の色問題については、トークン設定自体は適切（inverse色が指定されている）。実際のアプリで確認が必要。
+### Avatar Shape ガイドライン
 
----
+| Shape | 推奨用途 |
+|-------|----------|
+| `circle` | 人物アイコン、SNSアバター |
+| `rounded` | サムネイル、写真 |
+| `square` | ピクセルアート、**ポケモン画像** |
+
+### Heading Level/Size 分離
+
+セマンティックレベル（アクセシビリティ）と視覚的サイズを分離し、柔軟なスタイリングが可能。
+
+--- 
 
 ## 📝 PRタイトルの命名規則:
 - `type: description` の形式にすること（Conventional Commits）
@@ -58,6 +66,7 @@ N/A
 例: `feat: add sound effects and toggle switch`
 
 ## 📖 レビュー用語集
+<!-- レビュー時によく使う用語の意味 -->
 
 | 用語 | 意味 | 説明 |
 |------|------|------|
