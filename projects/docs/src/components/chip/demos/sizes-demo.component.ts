@@ -10,7 +10,7 @@ import { CHIP_SIZES, ChipSize } from '@ui/pt-chip/pt-chip.types';
     @for (size of sizes; track size) {
       <pt-chip 
         [size]="size"
-        [bgColor]="'var(--pt-color-gray-600)'"
+        [bgColor]="'var(--pt-color-surface-tertiary)'"
         [textColor]="'var(--pt-color-text-inverse)'"
         rounded="md">
         {{ size }}

@@ -10,7 +10,7 @@ import { CHIP_ROUNDED, ChipRounded } from '@ui/pt-chip/pt-chip.types';
     @for (rounded of roundedVariants; track rounded) {
       <pt-chip 
         [rounded]="rounded"
-        [bgColor]="'var(--pt-color-pokemon-fire-500)'"
+        [bgColor]="'var(--pt-color-accent-primary)'"
         size="md">
         {{ rounded }}
       </pt-chip>

@@ -7,7 +7,7 @@ import { ChipComponent } from '@ui/pt-chip/pt-chip';
   imports: [ChipComponent],
   template: `
     <pt-chip 
-      [bgColor]="'var(--pt-color-gray-300)'"
+      [bgColor]="'var(--pt-color-surface-secondary)'"
       [textColor]="'var(--pt-color-text-primary)'"
       rounded="md"
       size="md">
