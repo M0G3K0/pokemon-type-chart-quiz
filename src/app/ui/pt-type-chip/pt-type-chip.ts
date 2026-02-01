@@ -1,5 +1,5 @@
 import { Component, Input, inject } from '@angular/core';
-import { ChipComponent } from '@ui/pt-chip/pt-chip';
+import { ChipComponent } from '@ui/pt-chip';
 import { PokemonType } from '@domain/type-chart';
 import { AssetPathService } from '@app/core/services/asset-path.service';
 
