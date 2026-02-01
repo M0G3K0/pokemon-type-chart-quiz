@@ -10,6 +10,22 @@
 @failure  必須セクションが一つでも欠けている場合、Issueに自動コメントが投稿され、修正を促される
 ```
 
+## タイトル命名規則
+
+Issueタイトルは以下の形式に従うこと：
+
+```
+<絵文字> <type>: <description>
+```
+
+例: `✨ feat: add sound effects`
+
+### 絵文字プレフィックス（推奨・可能な限り使用）
+
+- 絵文字は `.agent/emoji-prefixes.json` から取得すること
+- 文字化けを防ぐため、Node.js child_process を使用して gh CLI を呼び出すこと
+- どうしても文字化けする場合のみ、絵文字なしを許容する
+
 ## 実装
 
 - 検証スクリプト: `scripts/validate-issue-content.js`
@@ -35,3 +51,4 @@
 - [ISSUE_TEMPLATE/bug_report.md](../../.github/ISSUE_TEMPLATE/bug_report.md)
 - [ISSUE_TEMPLATE/feature_request.md](../../.github/ISSUE_TEMPLATE/feature_request.md)
 - [ISSUE_TEMPLATE/refactor_task.md](../../.github/ISSUE_TEMPLATE/refactor_task.md)
+
