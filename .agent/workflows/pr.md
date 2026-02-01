@@ -12,6 +12,8 @@ description: GitHub Pull Requestを作成する手順
 - **ファイル名は `pr-body.md` に固定**
 - **PR作成前にCIが通ることを確認**
 - **絵文字は Node.js スクリプト内で `.agent/emoji-prefixes.json` から取得**（文字化け防止）
+- **絵文字プレフィックスはなるべく付ける**（文字化けする場合のみ省略可）
+- **PR作成後は必ず絵文字の文字化けを確認する**（Step 5 参照）
 
 ---
 
@@ -108,7 +110,28 @@ node -e "const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefi
 
 ---
 
-## Step 5: CIを確認
+## Step 5: 絵文字の文字化け確認（必須！）
+
+PR作成後、**必ず**タイトルの絵文字が正しく表示されているか確認してください：
+
+// turbo
+```bash
+gh pr view --json title
+```
+
+**確認ポイント:**
+- ✅ 絵文字が正しく表示されている: `"title": "✨ feat: add sound effects"`
+- ❌ 文字化けしている: `"title": "��� feat: add sound effects"`
+
+**文字化けしていた場合:**
+```bash
+# 絵文字なしでタイトルを修正
+gh pr edit <PR番号> --title "feat: add sound effects"
+```
+
+---
+
+## Step 6: CIを確認
 
 ```bash
 gh pr checks
@@ -126,3 +149,4 @@ gh pr checks
 | **絵文字プレフィックス** | `.agent/emoji-prefixes.json` |
 | PR検証ルール | `guards/process/rules/pr-format.rules.js` |
 | ガードレール | `guards/process/guard/pr-format.guard.md` |
+

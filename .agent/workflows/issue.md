@@ -12,6 +12,8 @@ description: GitHub Issueを作成する手順
 - **ファイル名は `issue-body.md` に固定**
 - **作成後は必ず警告コメントを確認**
 - **絵文字は Node.js スクリプト内で `.agent/emoji-prefixes.json` から取得**（文字化け防止）
+- **絵文字プレフィックスはなるべく付ける**（文字化けする場合のみ省略可）
+- **Issue作成後は必ず絵文字の文字化けを確認する**
 
 ---
 
@@ -74,7 +76,28 @@ node -e "const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefi
 
 ---
 
-## Step 4: 警告コメントを確認（必須！）
+## Step 4: 絵文字の文字化け確認（必須！）
+
+Issue作成後、**必ず**タイトルの絵文字が正しく表示されているか確認してください：
+
+// turbo
+```bash
+gh issue view <issue-number> --json title
+```
+
+**確認ポイント:**
+- ✅ 絵文字が正しく表示されている: `"title": "✨ feat: add sound effects"`
+- ❌ 文字化けしている: `"title": "��� feat: add sound effects"`
+
+**文字化けしていた場合:**
+```bash
+# 絵文字なしでタイトルを修正
+gh issue edit <issue-number> --title "feat: add sound effects"
+```
+
+---
+
+## Step 5: 警告コメントを確認（必須！）
 
 Issue作成後、**必ず**以下を実行してください：
 
