@@ -58,18 +58,20 @@ node scripts/validate-issue-local.js
 
 **⚠️ 絵文字はNode.jsで取得すること（文字化け防止）:**
 
+**⚠️ TTY問題を回避するため `GH_FORCE_TTY=1` を付けること:**
+
 ```bash
 # TYPE を選んだタイプに置き換え（例: feat, bug, question）
-EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.TYPE") && gh issue create --title "${EMOJI} TYPE: description here" --body-file issue-body.md
+EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.TYPE") && GH_FORCE_TTY=1 gh issue create --title "${EMOJI} TYPE: description here" --body-file issue-body.md
 ```
 
 **例:**
 ```bash
 # feat
-EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.feat") && gh issue create --title "${EMOJI} feat: add sound effects" --body-file issue-body.md
+EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.feat") && GH_FORCE_TTY=1 gh issue create --title "${EMOJI} feat: add sound effects" --body-file issue-body.md
 
 # bug
-EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.bug") && gh issue create --title "${EMOJI} bug: button not responding" --body-file issue-body.md
+EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.bug") && GH_FORCE_TTY=1 gh issue create --title "${EMOJI} bug: button not responding" --body-file issue-body.md
 ```
 
 ---
