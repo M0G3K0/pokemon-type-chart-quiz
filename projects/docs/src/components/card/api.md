@@ -15,6 +15,12 @@ route: api
 
 ---
 
+## Details
+
+{{ NgDocApi.details("src/app/ui/pt-card/pt-card.ts#CardComponent") }}
+
+---
+
 ## Related
 
 - `pt-surface`: 単純なコンテナスタイリング
