@@ -1,39 +1,35 @@
 ## 💡 概要
 
-コンポーネントの `:host` スタイルを一元管理する仕組みを構築し、ガードレールで強制するようにしました。
+GitHub CLI（`gh`）を使ったIssue/PR作成時の絵文字文字化け問題を解決。
 
-これにより：
-- **一貫性**: 全コンポーネントで同じパターンを使用
-- **保守性**: 変更が1箇所（`_component-base.scss`）で済む
-- **AI支援**: 新規コンポーネント作成時に正しいパターンを強制（CIで検証）
+`execSync` でシェル経由だと文字化けしていたのを、`spawnSync` でシェルを経由しないようにすることで解決。
 
 ## 📝 変更内容
 
-### 1. 共通Mixin追加
-- `src/styles/_component-base.scss` を新規作成
-- 4つのホストタイプMixin: `host-inline`, `host-block`, `host-image`, `host-inline-text`
+### ワークフロー更新
+- `.agent/workflows/issue.md`: `execSync` → `spawnSync` に変更
+- `.agent/workflows/pr.md`: `execSync` → `spawnSync` に変更
 
-### 2. コンポーネントリファクタリング（7ファイル）
-- `pt-button`, `pt-chip`, `pt-avatar`, `pt-heading`, `pt-text`, `pt-icon`, `pt-card`
-- `:host` 内の直接スタイル定義をMixin呼び出しに置き換え
+### 技術的な違い
 
-### 3. ガードレール追加
-- `guards/design/guard/component-base-styles.guard.md`: ドキュメント
-- `guards/design/rules/component-base-styles.rules.js`: 検証ロジック
-- `guards:validate` に統合済み
+| 方式 | 問題 |
+|------|------|
+| `execSync` + テンプレートリテラル | シェル経由で文字化け |
+| `spawnSync` + 配列引数 | シェル非経由で正常 |
 
 ## 🔗 関連Issue
 
-Closes #57
+N/A
 
 ## 📷 スクリーンショット（該当する場合）
 
-なし（スタイル出力に変更なし）
+テスト結果（Issue #130で確認済み、削除済み）:
+- `spawnSync` 使用時: ✅ `🔧 chore: test emoji with spawnSync`
 
 ## ✅ チェックリスト
 
 - [x] ビルドが成功する（`npm run build`）
-- [x] Lintエラーがない（`npm run lint:css`）
+- [x] Lintエラーがない（`npm run lint`）
 - [x] テストが通る（`npm run test`）
 - [x] コミットメッセージが規約に従っている（`feat:`, `fix:`, `chore:`など）
 - [x] ブランチ名が規約に従っている（`feature/`, `fix/`, `chore/`など）
@@ -41,8 +37,7 @@ Closes #57
 
 ## 📌 補足事項
 
-- `pt-spinner`, `pt-grid`, `pt-stack`, `pt-surface` は `:host` セレクタを使用していないため変更対象外
-- 新しいガードレールは `npm run guard:component-base-styles` で個別実行可能
+Windows環境でのGitHub CLI + 絵文字の問題を根本的に解決するための変更です。
 
 --- 
 

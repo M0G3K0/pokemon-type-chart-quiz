@@ -111,14 +111,16 @@ guards/
 │       └── component-structure.rules.js         # ファイル完全性検査
 ├── design/                                      # デザインの憲法
 │   ├── guard/
-│   │   ├── component-base-styles.guard.md       # コンポーネント基本スタイル（:host）(NEW)
+│   │   ├── component-base-styles.guard.md       # コンポーネント基本スタイル（:host）
+│   │   ├── component-token-mapping.guard.md     # コンポーネント-トークン対応 (NEW)
 │   │   ├── design-consistency.guard.md          # CSS品質ドキュメント
 │   │   ├── no-raw-tailwind.guard.md             # Tailwind直接使用禁止
 │   │   ├── tier3-only.guard.md                  # コンポーネントSCSS Tier3専用
 │   │   ├── token-existence.guard.md             # トークン存在確認
 │   │   └── token-naming.guard.md                # トークン命名規則
 │   └── rules/
-│       ├── component-base-styles.rules.js       # :host スタイル検証 (NEW)
+│       ├── component-base-styles.rules.js       # :host スタイル検証
+│       ├── component-token-mapping.rules.js     # コンポーネント-トークン検証 (NEW)
 │       ├── design-consistency.rules.js          # CSS品質ルール
 │       ├── no-raw-tailwind.rules.js             # Tailwind検出スクリプト
 │       ├── tier3-only.rules.js                  # Tier3専用ルール
