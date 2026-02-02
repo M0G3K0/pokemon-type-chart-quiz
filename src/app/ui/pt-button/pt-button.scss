@@ -3,10 +3,11 @@
  * @why デザイントークンとMixinを使用して一貫したスタイルを保証
  */
 
-@use '../../../styles/mixins/common' as mixins;
+@use 'mixins/common' as mixins;
+@use 'mixins/component-base' as base;
 
 :host {
-	display: inline-block;
+	@include base.host-inline;
 }
 
 .pt-button {

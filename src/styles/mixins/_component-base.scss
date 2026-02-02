@@ -1,0 +1,45 @@
+/**
+ * @what コンポーネントホスト要素の標準パターン
+ * @why  全コンポーネントで一貫した:host設定を保証し、重複コードを排除
+ * @guardrail guards/design/guard/component-base-styles.guard.md
+ *
+ * 使い方:
+ * ```scss
+ * @use 'component-base' as base;
+ *
+ * :host {
+ *   @include base.host-inline;
+ * }
+ * ```
+ */
+
+/* ==================================================
+   Host Display Modes
+   コンポーネントの:host要素で使用する表示モード
+   ================================================== */
+
+/// @what インラインコンポーネント用
+/// @why button, chip などのインライン要素に適用
+@mixin host-inline {
+	display: inline-block;
+}
+
+/// @what ブロックコンポーネント用
+/// @why card, heading, surface などのブロック要素に適用
+@mixin host-block {
+	display: block;
+}
+
+/// @what 画像コンポーネント用
+/// @why avatar, icon など画像を含む要素に適用
+///      line-height: 0 で画像下の余白を防止
+@mixin host-image {
+	display: inline-block;
+	line-height: 0;
+}
+
+/// @what インラインテキスト用
+/// @why text/span などのテキストラッパーに適用
+@mixin host-inline-text {
+	display: inline;
+}

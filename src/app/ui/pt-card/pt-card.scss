@@ -9,10 +9,11 @@
  * @see docs/decisions/token-strategy.md (Section 3.2)
  */
 
-@use '../../../styles/mixins/common' as mixins;
+@use 'mixins/common' as mixins;
+@use 'mixins/component-base' as base;
 
 :host {
-	display: block;
+	@include base.host-block;
 }
 
 .pt-card {

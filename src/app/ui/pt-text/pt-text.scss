@@ -7,8 +7,10 @@
  * @tokens Tier 3: text.json
  */
 
+@use 'mixins/component-base' as base;
+
 :host {
-	display: inline; // span/label はインライン、p/div ではブロック
+	@include base.host-inline-text; // span/label はインライン、p/div ではブロック
 }
 
 .pt-text {

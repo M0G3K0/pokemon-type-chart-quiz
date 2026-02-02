@@ -5,9 +5,10 @@
  * @tokens Tier 3: icon.json
  */
 
+@use 'mixins/component-base' as base;
+
 :host {
-	display: inline-block;
-	line-height: 0;
+	@include base.host-image;
 }
 
 .pt-icon {
