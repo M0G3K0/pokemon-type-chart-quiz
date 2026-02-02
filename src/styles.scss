@@ -3,10 +3,10 @@
  * @why すべてのトークンとベーススタイルを一元管理する
  */
 
-@import "tailwindcss";
+@use "tailwindcss";
 
 /* Style Dictionary generated tokens */
-@import "./styles/generated/tokens.css";
+@use "./styles/generated/tokens.css";
 
 /* ==================================================
    Global Reset & Base Styles
