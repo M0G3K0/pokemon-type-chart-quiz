@@ -1,6 +1,6 @@
 /**
  * @what Icon component styles
- * @why Provide flexible icon display using Design Tokens
+ * @why Provide flexible icon display with color support using Design Tokens
  *
  * @tokens Tier 3: icon.json
  */
@@ -14,6 +14,17 @@
 .pt-icon {
 	display: block;
 	object-fit: contain;
+
+	// CSS mask styles (for color mode)
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	mask-position: center;
+	// stylelint-disable-next-line property-no-vendor-prefix -- Safari requires -webkit prefix for mask properties
+	-webkit-mask-size: contain;
+	// stylelint-disable-next-line property-no-vendor-prefix
+	-webkit-mask-repeat: no-repeat;
+	// stylelint-disable-next-line property-no-vendor-prefix
+	-webkit-mask-position: center;
 
 	// Size variants
 	&--sm {
