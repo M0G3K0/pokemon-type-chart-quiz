@@ -11,19 +11,7 @@ import { AssetPathService } from '@app/core/services/asset-path.service';
 	imports: [IconComponent],
 	template: `
 		@for (size of sizes; track size) {
-			<div class="icon-demo-wrapper">
-				<pt-icon [src]="iconPath" [size]="size"></pt-icon>
-			</div>
-		}
-	`,
-	styles: `
-		.icon-demo-wrapper {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			padding: var(--pt-space-2);
-			background: var(--pt-color-pokemon-fire-500);
-			border-radius: var(--pt-border-radius-md);
+			<pt-icon [src]="iconPath" [size]="size" color="fire"></pt-icon>
 		}
 	`,
 })
@@ -35,4 +23,3 @@ export class IconSizesDemoComponent {
 		return this.assetPath.icon('fire');
 	}
 }
-

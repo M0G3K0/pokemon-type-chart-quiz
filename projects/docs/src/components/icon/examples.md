@@ -9,8 +9,8 @@ route: examples
 
 {{ NgDocActions.demo("IconSizesDemoComponent") }}
 
-## Type Icons
+## Colored Icons
 
-ポケモンのタイプアイコン：
+`color` プロパティでタイプカラーを直接アイコンに適用：
 
 {{ NgDocActions.demo("IconTypesDemoComponent") }}
