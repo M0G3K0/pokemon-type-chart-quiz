@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
-import { Pokemon, PokemonListSchema } from './pokemon.schema';
+import { Pokemon, parsePokemonList } from './pokemon.schema';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +11,7 @@ export class PokemonService {
 
   async getPokemons(): Promise<Pokemon[]> {
     const data = await firstValueFrom(this.http.get<unknown[]>('/pokemons.json'));
-    return PokemonListSchema.parse(data);
+    return parsePokemonList(data);
   }
 
   async getRandomPokemon(): Promise<Pokemon> {

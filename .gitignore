@@ -50,3 +50,6 @@ Thumbs.db
 # Temporary files for PR/Issue creation
 /issue-body.md
 /pr-body.md
+
+# Archived documentation (local only)
+/docs/archive/
