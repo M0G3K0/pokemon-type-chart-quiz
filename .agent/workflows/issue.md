@@ -11,7 +11,7 @@ description: GitHub Issueを作成する手順
 - **`--body "..."` で直接本文を書くことは禁止**（文字化け防止）
 - **ファイル名は `issue-body.md` に固定**
 - **作成後は必ず警告コメントを確認**
-- **絵文字は Node.js スクリプト内で `.agent/emoji-prefixes.json` から取得**（文字化け防止）
+- **絵文字は Node.js spawnSync で取得**（シェル経由を避けて文字化け防止）
 - **絵文字プレフィックスはなるべく付ける**（文字化けする場合のみ省略可）
 - **Issue作成後は必ず絵文字の文字化けを確認する**
 
@@ -29,7 +29,7 @@ description: GitHub Issueを作成する手順
 | `docs` | ドキュメント改善 |
 | `perf` | パフォーマンス問題 |
 
-**⚠️ AIは絵文字を直接タイプせず、Node.js child_process で取得すること！**
+**⚠️ AIは絵文字を直接タイプせず、Node.js spawnSync で取得すること！**
 
 **🚫 上記以外のprefixを使わないこと！**
 
@@ -58,20 +58,20 @@ node scripts/validate-issue-local.js
 
 ## Step 3: Issue を作成
 
-**⚠️ 絵文字はNode.js child_process で取得すること（文字化け防止）:**
+**⚠️ 絵文字はNode.js spawnSync で取得すること（シェル経由を避けて文字化け防止）:**
 
 ```bash
 # TYPE と TITLE を置き換え（例: feat, bug, question）
-node -e "const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.TYPE; const {execSync} = require('child_process'); execSync(\`gh issue create --title \"\${emoji} TYPE: TITLE\" --body-file issue-body.md\`, {stdio: 'inherit'});"
+node -e "const { spawnSync } = require('child_process'); const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.TYPE; const title = emoji + ' TYPE: TITLE'; spawnSync('gh', ['issue', 'create', '--title', title, '--body-file', 'issue-body.md'], { stdio: 'inherit' });"
 ```
 
 **例:**
 ```bash
 # feat
-node -e "const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.feat; const {execSync} = require('child_process'); execSync(\`gh issue create --title \"\${emoji} feat: add sound effects\" --body-file issue-body.md\`, {stdio: 'inherit'});"
+node -e "const { spawnSync } = require('child_process'); const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.feat; const title = emoji + ' feat: add sound effects'; spawnSync('gh', ['issue', 'create', '--title', title, '--body-file', 'issue-body.md'], { stdio: 'inherit' });"
 
 # bug
-node -e "const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.bug; const {execSync} = require('child_process'); execSync(\`gh issue create --title \"\${emoji} bug: button not responding\" --body-file issue-body.md\`, {stdio: 'inherit'});"
+node -e "const { spawnSync } = require('child_process'); const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.bug; const title = emoji + ' bug: button not responding'; spawnSync('gh', ['issue', 'create', '--title', title, '--body-file', 'issue-body.md'], { stdio: 'inherit' });"
 ```
 
 ---
