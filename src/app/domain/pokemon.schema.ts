@@ -16,7 +16,7 @@ export interface Pokemon {
  * @param data - Unknown data to validate
  * @returns True if data is a valid Pokemon
  */
-export function isPokemon(data: unknown): data is Pokemon {
+function isPokemon(data: unknown): data is Pokemon {
 	if (!data || typeof data !== 'object') return false;
 	const pokemon = data as Record<string, unknown>;
 	return (
