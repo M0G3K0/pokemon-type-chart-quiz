@@ -36,4 +36,11 @@ export class IconComponent {
    * @default '' (decorative icon)
    */
   @Input() alt = '';
+
+  /**
+   * Icon element classes
+   */
+  get iconClasses(): string[] {
+    return ['pt-icon', `pt-icon--${this.size}`];
+  }
 }

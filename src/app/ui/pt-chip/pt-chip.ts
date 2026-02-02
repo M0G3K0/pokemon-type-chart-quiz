@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { IconComponent } from '@ui/pt-icon';
 import { AssetPathService } from '@app/core/services/asset-path.service';
 
@@ -27,7 +28,7 @@ import { AssetPathService } from '@app/core/services/asset-path.service';
 @Component({
 	selector: 'pt-chip',
 	standalone: true,
-	imports: [IconComponent],
+	imports: [CommonModule, IconComponent],
 	templateUrl: './pt-chip.html',
 	styleUrls: ['./pt-chip.scss'],
 })
@@ -130,5 +131,20 @@ export class ChipComponent {
 	 */
 	get closeIconPath(): string {
 		return this.assetPath.icon('close');
+	}
+
+	/**
+	 * Container element classes
+	 */
+	get containerClasses(): string[] {
+		const classes = [
+			'pt-chip',
+			`pt-chip--${this.size}`,
+			`pt-chip--rounded-${this.rounded}`,
+		];
+		if (this.clickable) {
+			classes.push('pt-chip--clickable');
+		}
+		return classes;
 	}
 }

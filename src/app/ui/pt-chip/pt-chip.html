@@ -1,8 +1,4 @@
-<div class="pt-chip" [class.pt-chip--sm]="size === 'sm'" [class.pt-chip--md]="size === 'md'"
-	[class.pt-chip--lg]="size === 'lg'" [class.pt-chip--rounded-none]="rounded === 'none'"
-	[class.pt-chip--rounded-sm]="rounded === 'sm'" [class.pt-chip--rounded-md]="rounded === 'md'"
-	[class.pt-chip--rounded-full]="rounded === 'full'" [class.pt-chip--clickable]="clickable"
-	[style.background-color]="bgColor" [style.color]="textColor">
+<div [ngClass]="containerClasses" [style.background-color]="bgColor" [style.color]="textColor">
 	<!-- Leading Icon -->
 	@if (icon) {
 	<pt-icon [src]="icon" [size]="computedIconSize"></pt-icon>

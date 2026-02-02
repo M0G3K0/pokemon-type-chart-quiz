@@ -48,4 +48,17 @@ export class StackComponent {
 	 * @default 'start'
 	 */
 	@Input() justify: 'start' | 'center' | 'end' | 'between' = 'start';
+
+	/**
+	 * Container element classes
+	 */
+	get containerClasses(): string[] {
+		return [
+			'pt-stack',
+			`pt-stack--${this.direction}`,
+			`pt-stack--gap-${this.gap}`,
+			`pt-stack--align-${this.align}`,
+			`pt-stack--justify-${this.justify}`,
+		];
+	}
 }
