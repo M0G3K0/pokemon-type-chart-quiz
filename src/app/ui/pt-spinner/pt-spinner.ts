@@ -37,4 +37,15 @@ export class SpinnerComponent {
 	 * @default 'Loading...'
 	 */
 	@Input() ariaLabel = 'Loading...';
+
+	/**
+	 * Container element classes
+	 */
+	get containerClasses(): string[] {
+		return [
+			'pt-spinner',
+			`pt-spinner--${this.size}`,
+			`pt-spinner--${this.variant}`,
+		];
+	}
 }

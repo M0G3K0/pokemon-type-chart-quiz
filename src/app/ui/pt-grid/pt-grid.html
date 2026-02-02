@@ -1,9 +1,3 @@
-<div class="pt-grid" [class.pt-grid--cols-1]="columns === 1" [class.pt-grid--cols-2]="columns === 2"
-	[class.pt-grid--cols-3]="columns === 3" [class.pt-grid--cols-4]="columns === 4"
-	[class.pt-grid--cols-6]="columns === 6" [class.pt-grid--sm-cols-1]="smColumns === 1"
-	[class.pt-grid--sm-cols-2]="smColumns === 2" [class.pt-grid--sm-cols-3]="smColumns === 3"
-	[class.pt-grid--sm-cols-4]="smColumns === 4" [class.pt-grid--sm-cols-6]="smColumns === 6"
-	[class.pt-grid--gap-none]="gap === 'none'" [class.pt-grid--gap-sm]="gap === 'sm'"
-	[class.pt-grid--gap-md]="gap === 'md'" [class.pt-grid--gap-lg]="gap === 'lg'">
+<div [ngClass]="containerClasses">
 	<ng-content></ng-content>
 </div>

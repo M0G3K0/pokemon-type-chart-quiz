@@ -48,4 +48,20 @@ export class SurfaceComponent {
 	 * @default false
 	 */
 	@Input() border = false;
+
+	/**
+	 * Container element classes
+	 */
+	get containerClasses(): string[] {
+		const classes = [
+			'pt-surface',
+			`pt-surface--${this.variant}`,
+			`pt-surface--padding-${this.padding}`,
+			`pt-surface--radius-${this.radius}`,
+		];
+		if (this.border) {
+			classes.push('pt-surface--border');
+		}
+		return classes;
+	}
 }

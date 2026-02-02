@@ -147,7 +147,12 @@
             ],
             "allowedCommonJsDependencies": [
               "@ng-doc/core"
-            ]
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
