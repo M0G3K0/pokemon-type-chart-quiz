@@ -5,8 +5,10 @@
  * @tokens Tier 3: chip.json
  */
 
+@use '../../../styles/component-base' as base;
+
 :host {
-	display: inline-block;
+	@include base.host-inline;
 }
 
 .pt-chip {

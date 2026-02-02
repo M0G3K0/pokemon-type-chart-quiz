@@ -10,9 +10,10 @@
  */
 
 @use '../../../styles/mixins/common' as mixins;
+@use '../../../styles/component-base' as base;
 
 :host {
-	display: block;
+	@include base.host-block;
 }
 
 .pt-card {

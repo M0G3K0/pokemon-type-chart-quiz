@@ -5,9 +5,10 @@
  * 背景色やシャドウは使用箇所で親要素を使って対応してください。
  */
 
+@use '../../../styles/component-base' as base;
+
 :host {
-	display: inline-block;
-	line-height: 0;
+	@include base.host-image;
 }
 
 .pt-avatar {

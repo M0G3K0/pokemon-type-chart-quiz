@@ -5,8 +5,10 @@
  * Tier 3 準拠: すべてのトークンは heading.* を参照。
  */
 
+@use '../../../styles/component-base' as base;
+
 :host {
-	display: block;
+	@include base.host-block;
 }
 
 .pt-heading {

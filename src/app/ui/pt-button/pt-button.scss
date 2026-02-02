@@ -4,9 +4,10 @@
  */
 
 @use '../../../styles/mixins/common' as mixins;
+@use '../../../styles/component-base' as base;
 
 :host {
-	display: inline-block;
+	@include base.host-inline;
 }
 
 .pt-button {
