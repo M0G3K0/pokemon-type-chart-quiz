@@ -14,6 +14,8 @@ module.exports = {
 		'src/app/domain/type-chart.ts',
 		// download-icons.jsは手動スクリプト
 		'scripts/download-icons.js',
+		// fetch-type-icons.jsは手動スクリプト（ポケモンタイプアイコン取得用）
+		'scripts/fetch-type-icons.js',
 		// TODO(Issue #34): Remove when first component imports tokens
 		'src/design-system/tokens/**/*',
 		'src/styles/generated/**/*',
