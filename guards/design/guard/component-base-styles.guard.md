@@ -30,7 +30,7 @@
 **✅ 正しいパターン:**
 
 ```scss
-@use '../../../styles/component-base' as base;
+@use 'mixins/component-base' as base;
 
 :host {
   @include base.host-inline;
@@ -53,7 +53,7 @@
 **✅ 正しいパターン:**
 
 ```scss
-@use '../../../styles/component-base' as base;
+@use 'mixins/component-base' as base;
 
 :host {
   @include base.host-image;
@@ -64,7 +64,7 @@
 
 ## ホストタイプ一覧
 
-`src/styles/_component-base.scss` で定義されているMixin：
+`src/styles/mixins/_component-base.scss` で定義されているMixin：
 
 | Mixin | 用途 | 使用コンポーネント例 |
 |-------|------|---------------------|
@@ -78,7 +78,7 @@
 ## 新規コンポーネント作成時の手順
 
 1. コンポーネントの表示タイプを決定する（上記テーブル参照）
-2. SCSSファイルの冒頭に `@use '../../../styles/component-base' as base;` を追加
+2. SCSSファイルの冒頭に `@use 'mixins/component-base' as base;` を追加
 3. `:host` セレクタで適切なMixinを使用
 4. コンポーネント固有のスタイルは `.pt-xxx` クラスで定義
 
@@ -90,7 +90,7 @@
  * @why デザイントークンとMixinを使用して一貫したスタイルを保証
  */
 
-@use '../../../styles/component-base' as base;
+@use 'mixins/component-base' as base;
 
 :host {
   @include base.host-inline;
@@ -105,7 +105,7 @@
 
 ## 実装
 
-- **共通Mixin**: `src/styles/_component-base.scss`
+- **共通Mixin**: `src/styles/mixins/_component-base.scss`
 - **検証ルール**: `guards/design/rules/component-base-styles.rules.js`
 
 ---

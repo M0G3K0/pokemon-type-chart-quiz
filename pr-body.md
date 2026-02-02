@@ -1,52 +1,48 @@
 ## 💡 概要
 
-UIコンポーネントの import を **エイリアス (`@ui/`) + Barrel file (`index.ts`)** 形式に統一し、将来のミスを防ぐガードレールを追加しました。
+コンポーネントの `:host` スタイルを一元管理する仕組みを構築し、ガードレールで強制するようにしました。
+
+これにより：
+- **一貫性**: 全コンポーネントで同じパターンを使用
+- **保守性**: 変更が1箇所（`_component-base.scss`）で済む
+- **AI支援**: 新規コンポーネント作成時に正しいパターンを強制（CIで検証）
 
 ## 📝 変更内容
 
-### Barrel file 作成（11ファイル）
-- `src/app/ui/pt-avatar/index.ts`
-- `src/app/ui/pt-button/index.ts`
-- `src/app/ui/pt-chip/index.ts`
-- `src/app/ui/pt-grid/index.ts`
-- `src/app/ui/pt-heading/index.ts`
-- `src/app/ui/pt-icon/index.ts`
-- `src/app/ui/pt-spinner/index.ts`
-- `src/app/ui/pt-stack/index.ts`
-- `src/app/ui/pt-surface/index.ts`
-- `src/app/ui/pt-text/index.ts`
-- `src/app/ui/pt-type-chip/index.ts`
+### 1. 共通Mixin追加
+- `src/styles/_component-base.scss` を新規作成
+- 4つのホストタイプMixin: `host-inline`, `host-block`, `host-image`, `host-inline-text`
 
-### Import 修正
-- `quiz.container.ts`: 相対パス → `@ui/<component>` 形式
-- `battle-card.ts`: 直接参照 → barrel 形式
-- `pt-chip.ts`, `pt-type-chip.ts`: 内部 import を barrel 形式に
+### 2. コンポーネントリファクタリング（7ファイル）
+- `pt-button`, `pt-chip`, `pt-avatar`, `pt-heading`, `pt-text`, `pt-icon`, `pt-card`
+- `:host` 内の直接スタイル定義をMixin呼び出しに置き換え
 
-### ガードレール追加
-- `guards/architecture/guard/ui-import-standards.guard.md`
-- `guards/architecture/rules/ui-import-standards.rules.js`
-- ESLint に `no-restricted-imports` ルールを追加
+### 3. ガードレール追加
+- `guards/design/guard/component-base-styles.guard.md`: ドキュメント
+- `guards/design/rules/component-base-styles.rules.js`: 検証ロジック
+- `guards:validate` に統合済み
 
 ## 🔗 関連Issue
 
-Closes #89
+Closes #57
 
 ## 📷 スクリーンショット（該当する場合）
 
-N/A（コード品質改善のため）
+なし（スタイル出力に変更なし）
 
 ## ✅ チェックリスト
 
 - [x] ビルドが成功する（`npm run build`）
-- [x] Lintエラーがない（`npm run lint`）
-- [ ] テストが通る（`npm run test`）
+- [x] Lintエラーがない（`npm run lint:css`）
+- [x] テストが通る（`npm run test`）
 - [x] コミットメッセージが規約に従っている（`feat:`, `fix:`, `chore:`など）
 - [x] ブランチ名が規約に従っている（`feature/`, `fix/`, `chore/`など）
 - [x] 必要に応じてドキュメントを更新した
 
 ## 📌 補足事項
 
-今後、直接ファイル参照（`@ui/pt-xxx/pt-xxx`）や相対パス（`../../ui/pt-xxx`）を使用すると ESLint がエラーを出します。
+- `pt-spinner`, `pt-grid`, `pt-stack`, `pt-surface` は `:host` セレクタを使用していないため変更対象外
+- 新しいガードレールは `npm run guard:component-base-styles` で個別実行可能
 
 --- 
 

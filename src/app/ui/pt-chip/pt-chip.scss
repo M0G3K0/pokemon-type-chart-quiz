@@ -5,7 +5,7 @@
  * @tokens Tier 3: chip.json
  */
 
-@use '../../../styles/component-base' as base;
+@use 'mixins/component-base' as base;
 
 :host {
 	@include base.host-inline;

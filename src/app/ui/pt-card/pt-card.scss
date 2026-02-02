@@ -9,8 +9,8 @@
  * @see docs/decisions/token-strategy.md (Section 3.2)
  */
 
-@use '../../../styles/mixins/common' as mixins;
-@use '../../../styles/component-base' as base;
+@use 'mixins/common' as mixins;
+@use 'mixins/component-base' as base;
 
 :host {
 	@include base.host-block;
