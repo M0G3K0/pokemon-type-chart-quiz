@@ -11,7 +11,7 @@ description: GitHub Pull Requestを作成する手順
 - **`--body "..."` で直接本文を書くことは禁止**（文字化け防止）
 - **ファイル名は `pr-body.md` に固定**
 - **PR作成前にCIが通ることを確認**
-- **絵文字は Node.js スクリプト内で `.agent/emoji-prefixes.json` から取得**（文字化け防止）
+- **絵文字は Node.js spawnSync で取得**（シェル経由を避けて文字化け防止）
 - **絵文字プレフィックスはなるべく付ける**（文字化けする場合のみ省略可）
 - **PR作成後は必ず絵文字の文字化けを確認する**（Step 5 参照）
 
@@ -37,7 +37,7 @@ description: GitHub Pull Requestを作成する手順
 | `breaking` | 破壊的変更 |
 | `wip` | 作業中 |
 
-**⚠️ AIは絵文字を直接タイプせず、Node.js child_process で取得すること！**
+**⚠️ AIは絵文字を直接タイプせず、Node.js spawnSync で取得すること！**
 
 **🚫 上記以外のprefixを使わないこと！**
 
@@ -92,20 +92,20 @@ npm test
 
 ## Step 4: PR を作成
 
-**⚠️ 絵文字はNode.js child_process で取得すること（文字化け防止）:**
+**⚠️ 絵文字はNode.js spawnSync で取得すること（シェル経由を避けて文字化け防止）:**
 
 ```bash
 # TYPE と TITLE を置き換え（例: feat, fix, refactor）
-node -e "const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.TYPE; const {execSync} = require('child_process'); execSync(\`gh pr create --title \"\${emoji} TYPE: TITLE\" --body-file pr-body.md\`, {stdio: 'inherit'});"
+node -e "const { spawnSync } = require('child_process'); const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.TYPE; const title = emoji + ' TYPE: TITLE'; spawnSync('gh', ['pr', 'create', '--title', title, '--body-file', 'pr-body.md'], { stdio: 'inherit' });"
 ```
 
 **例:**
 ```bash
 # feat
-node -e "const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.feat; const {execSync} = require('child_process'); execSync(\`gh pr create --title \"\${emoji} feat: add sound effects\" --body-file pr-body.md\`, {stdio: 'inherit'});"
+node -e "const { spawnSync } = require('child_process'); const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.feat; const title = emoji + ' feat: add sound effects'; spawnSync('gh', ['pr', 'create', '--title', title, '--body-file', 'pr-body.md'], { stdio: 'inherit' });"
 
 # fix
-node -e "const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.fix; const {execSync} = require('child_process'); execSync(\`gh pr create --title \"\${emoji} fix: resolve button issue\" --body-file pr-body.md\`, {stdio: 'inherit'});"
+node -e "const { spawnSync } = require('child_process'); const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.fix; const title = emoji + ' fix: resolve button issue'; spawnSync('gh', ['pr', 'create', '--title', title, '--body-file', 'pr-body.md'], { stdio: 'inherit' });"
 ```
 
 ---
