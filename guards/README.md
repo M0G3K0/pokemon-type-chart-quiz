@@ -100,13 +100,15 @@ guards/
 │       └── ui-import-standards.rules.js         # UI import ルール (NEW)
 ├── code-quality/                                # コード品質の憲法
 │   ├── guard/
+│   │   ├── angular-control-flow.guard.md        # Angular 制御フロー構文 (NEW)
 │   │   ├── coding-standards.guard.md            # コーディング規約
-│   │   ├── component-standards.guard.md         # コンポーネント作成標準 (NEW)
-│   │   └── component-structure.guard.md         # ファイル構成完全性 (NEW)
+│   │   ├── component-standards.guard.md         # コンポーネント作成標準
+│   │   └── component-structure.guard.md         # ファイル構成完全性
 │   └── rules/
+│       ├── angular-control-flow.rules.js        # Angular 制御フロールール (NEW)
 │       ├── coding-standards.rules.js            # コーディング規約ルール
-│       ├── component-standards.rules.js         # コンポーネント標準検査 (NEW)
-│       └── component-structure.rules.js         # ファイル完全性検査 (NEW)
+│       ├── component-standards.rules.js         # コンポーネント標準検査
+│       └── component-structure.rules.js         # ファイル完全性検査
 ├── design/                                      # デザインの憲法
 │   ├── guard/
 │   │   ├── design-consistency.guard.md          # CSS品質ドキュメント

@@ -30,10 +30,11 @@
 					<pt-stack direction="vertical" gap="xs" align="start">
 						<pt-text variant="body-lg" weight="bold">{{ pokemon.name }}</pt-text>
 						<pt-stack direction="horizontal" gap="xs">
-							<pt-type-chip *ngFor="let t of pokemon.types; let i = index" [type]="t" size="sm"
-								rounded="sm">
-								{{ pokemon.jaTypes[i] }}
-							</pt-type-chip>
+							@for (t of pokemon.types; track t; let i = $index) {
+								<pt-type-chip [type]="t" size="sm" rounded="sm">
+									{{ pokemon.jaTypes[i] }}
+								</pt-type-chip>
+							}
 						</pt-stack>
 					</pt-stack>
 				</pt-stack>

@@ -1,5 +1,4 @@
 import { Component, Input, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Pokemon } from '@domain/pokemon.schema';
 import { PokemonType, POKEMON_TYPES_MAP } from '@domain/type-chart';
 import { TypeChipComponent } from '@ui/pt-type-chip';
@@ -20,7 +19,6 @@ import { AssetPathService } from '@app/core/services/asset-path.service';
 	selector: 'quiz-battle-card',
 	standalone: true,
 	imports: [
-		CommonModule,
 		TypeChipComponent,
 		AvatarComponent,
 		IconComponent,
