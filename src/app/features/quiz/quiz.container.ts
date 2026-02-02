@@ -92,24 +92,62 @@ export class QuizComponent implements OnInit {
   isCorrect = signal(false);
   actualEffectiveness = signal<number>(1);
 
+  /** 次の問題（事前準備） */
+  private nextPokemon: Pokemon | null = null;
+  private nextAttackType: PokemonType | null = null;
+
   constructor(private pokemonService: PokemonService) { }
 
   async ngOnInit() {
-    await this.next();
+    await this.loadNext();
+    this.showCurrentQuestion();
+    // 最初の問題を表示したら、次の問題を準備
+    this.prepareNextQuestion();
   }
 
-  async next() {
-    this.currentPokemon.set(null);
-    this.selectedChoice.set(null);
-    this.isChecked.set(false);
-    this.isCorrect.set(false);
-
+  /**
+   * 次の問題データを読み込む
+   */
+  private async loadNext(): Promise<void> {
     const pokemon = await this.pokemonService.getRandomPokemon();
     const randomAttackType = POKEMON_TYPES[Math.floor(Math.random() * POKEMON_TYPES.length)] as PokemonType;
 
-    this.currentPokemon.set(pokemon);
-    this.attackType.set(randomAttackType);
-    this.actualEffectiveness.set(getEffectiveness(randomAttackType, pokemon.types));
+    this.nextPokemon = pokemon;
+    this.nextAttackType = randomAttackType;
+
+    // 画像をプリロード
+    this.pokemonService.preloadImage(pokemon);
+  }
+
+  /**
+   * 現在の問題を表示（事前準備されたデータを使用）
+   */
+  private showCurrentQuestion(): void {
+    if (!this.nextPokemon || !this.nextAttackType) return;
+
+    this.currentPokemon.set(this.nextPokemon);
+    this.attackType.set(this.nextAttackType);
+    this.actualEffectiveness.set(getEffectiveness(this.nextAttackType, this.nextPokemon.types));
+
+    this.selectedChoice.set(null);
+    this.isChecked.set(false);
+    this.isCorrect.set(false);
+  }
+
+  /**
+   * 次の問題を事前に準備（バックグラウンド）
+   */
+  private async prepareNextQuestion(): Promise<void> {
+    await this.loadNext();
+  }
+
+  /**
+   * 次の問題へ進む
+   */
+  async next(): Promise<void> {
+    this.showCurrentQuestion();
+    // 表示したら次の問題を準備
+    this.prepareNextQuestion();
   }
 
   selectChoice(choice: number) {
