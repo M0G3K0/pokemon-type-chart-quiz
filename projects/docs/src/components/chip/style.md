@@ -3,30 +3,46 @@ title: Style
 route: style
 ---
 
-## Size Tokens
+## Design Tokens
 
-| Size | Padding | Font Size | 用途 |
-|------|---------|-----------|------|
-| `sm` | `var(--pt-space-1) var(--pt-space-2)` | `var(--pt-font-size-xs)` | インライン表示、狭いスペース |
-| `md` | `var(--pt-space-2) var(--pt-space-3)` | `var(--pt-font-size-sm)` | 標準的な使用（デフォルト） |
-| `lg` | `var(--pt-space-3) var(--pt-space-4)` | `var(--pt-font-size-base)` | 強調表示、大きなタッチターゲット |
+`pt-chip`は以下のデザイントークンを使用します。
 
-## Rounded Tokens
+### Size Tokens
 
-| Rounded | Border Radius | 用途 |
-|---------|---------------|------|
-| `none` | `0` | 直角のスタイル |
-| `sm` | `var(--pt-border-radius-sm)` | 軽く丸い角 |
-| `md` | `var(--pt-border-radius-md)` | 標準的な丸み（デフォルト） |
-| `full` | `9999px` | 完全な丸型（ピル形状） |
+| Size | Padding | Font Size | Gap |
+|------|---------|-----------|-----|
+| `sm` | `var(--pt-space-1) var(--pt-space-2)` | `var(--pt-font-size-xs)` | `var(--pt-space-1)` |
+| `md` | `var(--pt-space-2) var(--pt-space-3)` | `var(--pt-font-size-sm)` | `var(--pt-space-2)` |
+| `lg` | `var(--pt-space-3) var(--pt-space-4)` | `var(--pt-font-size-base)` | `var(--pt-space-2)` |
 
-## Design Tokens Used
+### Text Color
 
-| Property | Token | Description |
-|----------|-------|-------------|
-| Gap | `var(--pt-space-2)` | アイコンとテキスト間のスペース |
-| Font Weight | `var(--pt-font-weight-medium)` | テキストの太さ |
-| Transition | `var(--pt-motion-duration-quick)` | ホバー・クリック時のアニメーション速度 |
+| Visual Attribute | Token (Tier 2 Semantic) | Primitive Value |
+|-----------------|-------------------------|-----------------|
+| テキスト色（デフォルト） | `--pt-color-text-inverse` | `#FFFFFF` |
+
+---
+
+## Layout Specifications
+
+| Size | Height | Padding (Y × X) | Gap | Font Size |
+|------|--------|-----------------|-----|-----------|
+| `sm` | 24px | 4px × 8px | 4px | 12px |
+| `md` | 32px | 8px × 12px | 8px | 14px |
+| `lg` | 40px | 12px × 16px | 8px | 16px |
+
+---
+
+## Border Radius
+
+| Rounded | Value | Token |
+|---------|-------|-------|
+| `none` | 0 | - |
+| `sm` | 4px | `var(--pt-border-radius-sm)` |
+| `md` | 8px | `var(--pt-border-radius-md)` |
+| `full` | 9999px | - |
+
+---
 
 ## Interactive States
 
@@ -37,3 +53,11 @@ route: style
 | Active (clickable) | `opacity: 0.9` |
 | Remove button default | `opacity: 0.7` |
 | Remove button hover | `opacity: 1` |
+
+---
+
+## Related Tokens
+
+- `pt-type-chip`: Pokemon Type専用のChip（タイプカラートークンを自動適用）
+- `design-tokens/tier2-semantic/surfaces.json`: 背景色トークン
+- `design-tokens/tier2-semantic/typography.json`: フォントサイズトークン

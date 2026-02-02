@@ -57,23 +57,23 @@ title: Guidelines
 
 ---
 
-## Radius 選択ガイド
+## Rounded 選択ガイド
 
 | 角丸 | 値 | 用途 |
 |------|------|------|
+| `none` | 0 | 角なし |
 | `sm` | 4px | 控えめな角丸、シャープな印象 |
 | `md` | 8px | 標準（デフォルト） |
-| `lg` | 12px | 柔らかい印象 |
 | `full` | 9999px | ピル形状、タグ風 |
 
 ### 使用例
 
 ```html
 <!-- シャープなタグ -->
-<pt-chip radius="sm">Status</pt-chip>
+<pt-chip rounded="sm">Status</pt-chip>
 
 <!-- ピル形状のタグ -->
-<pt-chip radius="full">限定</pt-chip>
+<pt-chip rounded="full">限定</pt-chip>
 ```
 
 ---
@@ -83,7 +83,7 @@ title: Guidelines
 ### アイコンのみ
 
 ```html
-<pt-chip [iconSrc]="iconPath" size="sm"></pt-chip>
+<pt-chip [icon]="iconPath" [iconOnly]="true"></pt-chip>
 ```
 
 ### テキストのみ
@@ -95,7 +95,7 @@ title: Guidelines
 ### アイコン + テキスト
 
 ```html
-<pt-chip [iconSrc]="iconPath">ほのお</pt-chip>
+<pt-chip [icon]="iconPath">ほのお</pt-chip>
 ```
 
 ### 削除可能

@@ -25,6 +25,7 @@ export class IconPlaygroundComponent {
 	@Input() alt = '';
 
 	get iconPath(): string {
-		return this.assetPath.icon(this.iconName);
+		// NgDoc Playground may pass undefined for iconName before user selection
+		return this.assetPath.icon(this.iconName || 'fire');
 	}
 }
