@@ -11,7 +11,9 @@ description: GitHub Issueを作成する手順
 - **`--body "..."` で直接本文を書くことは禁止**（文字化け防止）
 - **ファイル名は `issue-body.md` に固定**
 - **作成後は必ず警告コメントを確認**
-- **絵文字は `.agent/emoji-prefixes.json` から取得**（AI出力の揺れによる文字化け防止）
+- **絵文字は Node.js spawnSync で取得**（シェル経由を避けて文字化け防止）
+- **絵文字プレフィックスはなるべく付ける**（文字化けする場合のみ省略可）
+- **Issue作成後は必ず絵文字の文字化けを確認する**
 
 ---
 
@@ -27,7 +29,7 @@ description: GitHub Issueを作成する手順
 | `docs` | ドキュメント改善 |
 | `perf` | パフォーマンス問題 |
 
-**⚠️ AIは絵文字を直接タイプせず、Node.jsで取得すること！**
+**⚠️ AIは絵文字を直接タイプせず、Node.js spawnSync で取得すること！**
 
 **🚫 上記以外のprefixを使わないこと！**
 
@@ -56,25 +58,46 @@ node scripts/validate-issue-local.js
 
 ## Step 3: Issue を作成
 
-**⚠️ 絵文字はNode.jsで取得すること（文字化け防止）:**
+**⚠️ 絵文字はNode.js spawnSync で取得すること（シェル経由を避けて文字化け防止）:**
 
 ```bash
-# TYPE を選んだタイプに置き換え（例: feat, bug, question）
-EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.TYPE") && gh issue create --title "${EMOJI} TYPE: description here" --body-file issue-body.md
+# TYPE と TITLE を置き換え（例: feat, bug, question）
+node -e "const { spawnSync } = require('child_process'); const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.TYPE; const title = emoji + ' TYPE: TITLE'; spawnSync('gh', ['issue', 'create', '--title', title, '--body-file', 'issue-body.md'], { stdio: 'inherit' });"
 ```
 
 **例:**
 ```bash
 # feat
-EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.feat") && gh issue create --title "${EMOJI} feat: add sound effects" --body-file issue-body.md
+node -e "const { spawnSync } = require('child_process'); const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.feat; const title = emoji + ' feat: add sound effects'; spawnSync('gh', ['issue', 'create', '--title', title, '--body-file', 'issue-body.md'], { stdio: 'inherit' });"
 
 # bug
-EMOJI=$(node -p "JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.bug") && gh issue create --title "${EMOJI} bug: button not responding" --body-file issue-body.md
+node -e "const { spawnSync } = require('child_process'); const emoji = JSON.parse(require('fs').readFileSync('.agent/emoji-prefixes.json', 'utf8')).prefixes.bug; const title = emoji + ' bug: button not responding'; spawnSync('gh', ['issue', 'create', '--title', title, '--body-file', 'issue-body.md'], { stdio: 'inherit' });"
 ```
 
 ---
 
-## Step 4: 警告コメントを確認（必須！）
+## Step 4: 絵文字の文字化け確認（必須！）
+
+Issue作成後、**必ず**タイトルの絵文字が正しく表示されているか確認してください：
+
+// turbo
+```bash
+gh issue view <issue-number> --json title
+```
+
+**確認ポイント:**
+- ✅ 絵文字が正しく表示されている: `"title": "✨ feat: add sound effects"`
+- ❌ 文字化けしている: `"title": "��� feat: add sound effects"`
+
+**文字化けしていた場合:**
+```bash
+# 絵文字なしでタイトルを修正
+gh issue edit <issue-number> --title "feat: add sound effects"
+```
+
+---
+
+## Step 5: 警告コメントを確認（必須！）
 
 Issue作成後、**必ず**以下を実行してください：
 
@@ -95,5 +118,6 @@ node scripts/check-issue-warnings.js <issue-number>
 | 内容 | ファイル |
 |------|----------|
 | **Issueテンプレート（必読）** | `.github/ISSUE_TEMPLATE/task.md` |
+| **絵文字プレフィックス** | `.agent/emoji-prefixes.json` |
 | 検証ルール | `guards/process/rules/issue-format.rules.js` |
 | ガードレール | `guards/process/guard/issue-format.guard.md` |

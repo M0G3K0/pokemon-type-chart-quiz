@@ -1,2 +1,8 @@
-<img class="pt-icon" [class.pt-icon--sm]="size === 'sm'" [class.pt-icon--md]="size === 'md'"
-	[class.pt-icon--lg]="size === 'lg'" [src]="src" [alt]="alt">
+@if (color) {
+<!-- Color mode: CSS mask -->
+<div [ngClass]="iconClasses" [style.background-color]="iconColor" [style.mask-image]="maskImageUrl"
+	[style.-webkit-mask-image]="maskImageUrl" role="img" [attr.aria-label]="alt || null"></div>
+} @else {
+<!-- Legacy mode: img tag (backward compatible) -->
+<img [ngClass]="iconClasses" [src]="src" [alt]="alt">
+}

@@ -2,40 +2,51 @@
 
 ## 💡 概要
 
-Angular の非推奨ディレクティブ構文（`*ngIf`, `*ngFor` 等）を新しい制御フロー構文（`@if`, `@for` 等）に移行し、ガードレールで強制する。
+プロダクションビルド時に初期バンドルサイズが設定上限（500kB）を超えており、警告が発生している。
 
-**背景**:
-- Angular 17+ で新しい制御フロー構文 (`@if`, `@for`, `@switch`) が導入された
-- 従来の `*ngIf`, `*ngFor`, `*ngSwitch` は非推奨（将来的に削除される可能性）
-- 新構文はテンプレートのパフォーマンスと可読性が向上
+```
+bundle initial exceeded maximum budget. Budget 500.00 kB was not met by 114.40 kB with a total of 614.40 kB.
+```
 
 ## 📝 詳細
 
-### Phase 1: 調査
-非推奨ディレクティブの一覧と新構文への対応表を作成:
+### 現状
 
-| 非推奨 | 新構文 | 備考 |
-|--------|--------|------|
-| `*ngIf` | `@if` | `else` も `@else` に |
-| `*ngFor` | `@for` | `trackBy` → `track` |
-| `*ngSwitch` | `@switch` | |
-| `[ngClass]` | `[class]` / `@if` | 条件付きクラスの場合 |
+- 現在の初期バンドルサイズ: **614.40 kB**
+- 設定上限（warning）: **500 kB**
+- 超過分: **114.40 kB**
 
-### Phase 2: ガードレール作成
-ESLint ルールを追加して、非推奨構文の使用を検出:
-- `@angular-eslint/template/prefer-control-flow` (Angular ESLint v17+)
+### 設定場所
 
-### Phase 3: リファクタリング
-既存コードを新構文に移行。
+`angular.json` の `budgets` 設定:
+```json
+{
+  "type": "initial",
+  "maximumWarning": "500kB",
+  "maximumError": "750kB"
+}
+```
+
+### 対応オプション
+
+1. **バンドルサイズを削減する**
+   - 不要な依存関係の削除
+   - Code splitting / Lazy loading の活用
+   - Tree shaking の改善
+
+2. **budget設定を緩和する**
+   - 現実的な目標値に調整（例: 700kB）
+
+3. **警告を許容する**
+   - 現状維持（エラーではないため）
 
 ## ✅ やることリスト
-- [ ] Angular 17+ 制御フロー構文の調査と対応表作成
-- [ ] `/guard` でガードレールを作成（ESLint ルール追加）
-- [ ] CI で新構文を強制（lint エラー化）
-- [ ] 既存コードのリファクタリング（`*ngIf` → `@if` 等）
-- [ ] ドキュメント更新
+
+- [ ] バンドル分析を実施（`source-map-explorer` など）
+- [ ] 主要なサイズ要因を特定
+- [ ] 対応方針を決定（削減 or 設定見直し）
+- [ ] 対応を実施
 
 ## 📷 参考資料（任意）
 
-- [Angular Built-in Control Flow](https://angular.dev/guide/templates/control-flow)
-- [Angular ESLint prefer-control-flow](https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/prefer-control-flow.md)
+N/A

@@ -48,4 +48,22 @@ export class AvatarComponent {
 
 	/** ピクセルアート用のレンダリング（レトロゲーム画像など） */
 	@Input() pixelated = false;
+
+	/** コンテナ要素のクラス一覧 */
+	get containerClasses(): string[] {
+		return [
+			'pt-avatar',
+			`pt-avatar--${this.size}`,
+			`pt-avatar--${this.shape}`,
+		];
+	}
+
+	/** 画像要素のクラス一覧 */
+	get imageClasses(): string[] {
+		const classes = ['pt-avatar__image'];
+		if (this.pixelated) {
+			classes.push('pt-avatar__image--pixelated');
+		}
+		return classes;
+	}
 }

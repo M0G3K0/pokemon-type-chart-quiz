@@ -1,6 +1,8 @@
 /**
  * @what Spinner component styles
  * @why Provide visual loading feedback using Design Tokens
+ *
+ * @tokens Tier 3: spinner.json
  */
 
 .pt-spinner {
@@ -8,37 +10,39 @@
 
 	&__circle {
 		border-radius: 50%;
-		animation: pt-spinner-rotate 0.8s linear infinite;
+		animation: pt-spinner-rotate var(--pt-spinner-animation-duration) linear infinite;
 		border-style: solid;
-		border-color: transparent;
+
+		// ドーナツ状スピナー: トラック（薄い色）+ 回転部分（濃い色）
+		border-color: var(--pt-spinner-color-track);
 	}
 
 	// Size variants
 	&--sm &__circle {
-		width: var(--spacing-4);
-		height: var(--spacing-4);
-		border-width: 2px;
+		width: var(--pt-spinner-size-sm);
+		height: var(--pt-spinner-size-sm);
+		border-width: var(--pt-spinner-border-width-sm);
 	}
 
 	&--md &__circle {
-		width: var(--spacing-10);
-		height: var(--spacing-10);
-		border-width: 3px;
+		width: var(--pt-spinner-size-md);
+		height: var(--pt-spinner-size-md);
+		border-width: var(--pt-spinner-border-width-md);
 	}
 
 	&--lg &__circle {
-		width: var(--spacing-16);
-		height: var(--spacing-16);
-		border-width: 4px;
+		width: var(--pt-spinner-size-lg);
+		height: var(--pt-spinner-size-lg);
+		border-width: var(--pt-spinner-border-width-lg);
 	}
 
 	// Color variants
 	&--primary &__circle {
-		border-top-color: var(--color-primary);
+		border-top-color: var(--pt-spinner-color-primary);
 	}
 
 	&--secondary &__circle {
-		border-top-color: var(--color-secondary);
+		border-top-color: var(--pt-spinner-color-secondary);
 	}
 }
 

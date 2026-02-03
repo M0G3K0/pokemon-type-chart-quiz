@@ -3,10 +3,11 @@
  * @why デザイントークンとMixinを使用して一貫したスタイルを保証
  */
 
-@use '../../../styles/mixins/common' as mixins;
+@use 'mixins/common' as mixins;
+@use 'mixins/component-base' as base;
 
 :host {
-	display: inline-block;
+	@include base.host-inline;
 }
 
 .pt-button {
@@ -53,28 +54,30 @@
 
 	/* === Color variants === */
 	&--primary {
-		background-color: var(--pt-color-action-primary-default);
-		color: var(--pt-color-text-inverse);
+		background-color: var(--pt-button-primary-bg-default);
+		color: var(--pt-button-primary-text-default);
 
 		&:hover:not(:disabled) {
-			background-color: var(--pt-color-action-primary-hover);
+			background-color: var(--pt-button-primary-bg-hover);
 		}
 
 		&:active:not(:disabled) {
-			background-color: var(--pt-color-action-primary-pressed);
+			background-color: var(--pt-button-primary-bg-pressed);
 		}
 	}
 
 	&--secondary {
-		background-color: var(--pt-color-action-secondary-default);
-		color: var(--pt-color-text-inverse);
+		background-color: var(--pt-button-secondary-bg-default);
+		color: var(--pt-button-secondary-text-default);
+		border: 1px solid var(--pt-button-secondary-border-default);
 
 		&:hover:not(:disabled) {
-			background-color: var(--pt-color-action-secondary-hover);
+			background-color: var(--pt-button-secondary-bg-hover);
+			border-color: var(--pt-button-secondary-border-hover);
 		}
 
 		&:active:not(:disabled) {
-			background-color: var(--pt-color-action-secondary-pressed);
+			background-color: var(--pt-button-secondary-bg-pressed);
 		}
 	}
 
@@ -92,15 +95,15 @@
 	}
 
 	&--ghost {
-		background-color: transparent;
-		color: var(--pt-color-text-primary);
+		background-color: var(--pt-button-ghost-bg-default);
+		color: var(--pt-button-ghost-text-default);
 
 		&:hover:not(:disabled) {
-			background-color: var(--pt-color-surface-hovered);
+			background-color: var(--pt-button-ghost-bg-hover);
 		}
 
 		&:active:not(:disabled) {
-			background-color: var(--pt-color-surface-pressed);
+			background-color: var(--pt-button-ghost-bg-pressed);
 		}
 	}
 }

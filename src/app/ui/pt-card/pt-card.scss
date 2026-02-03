@@ -1,35 +1,42 @@
 /**
  * @what カードコンポーネントのスタイル定義
- * @why コンテンツをグループ化するコンテナ
+ * @why コンテンツをグループ化する意味的コンテナ（Semantic Container）
+ * 
+ * 責務分離:
+ * - pt-card: 構造化されたコンテンツユニット（header/content/footer + elevation）
+ * - pt-surface: 機能的コンテナ（背景・パディング・角丸・ボーダー）
+ * 
+ * @see docs/decisions/token-strategy.md (Section 3.2)
  */
 
-@use '../../../styles/mixins/common' as mixins;
+@use 'mixins/common' as mixins;
+@use 'mixins/component-base' as base;
 
 :host {
-	display: block;
+	@include base.host-block;
 }
 
 .pt-card {
 	/* Layout */
 	overflow: hidden;
 
-	/* Visual */
-	background-color: var(--pt-color-surface-card);
-	border-radius: var(--pt-semantic-border-radius-lg);
-	border: 1px solid var(--pt-color-border-subtle);
-	box-shadow: var(--pt-elevation-raised);
+	/* Visual - Tier3 component tokens */
+	background-color: var(--pt-card-bg-default);
+	border-radius: var(--pt-card-radius);
+	border: 1px solid var(--pt-card-border-default);
+	box-shadow: var(--pt-card-shadow-raised);
 
 	/* === Size variants === */
 	&--sm {
-		padding: var(--pt-spacing-content-sm);
+		padding: var(--pt-card-padding-sm);
 	}
 
 	&--md {
-		padding: var(--pt-spacing-content-md);
+		padding: var(--pt-card-padding-md);
 	}
 
 	&--lg {
-		padding: var(--pt-spacing-content-lg);
+		padding: var(--pt-card-padding-lg);
 	}
 
 	/* Compound Components使用時はカード自体のpadding無効化 */
@@ -41,14 +48,14 @@
 
 	/* === Elevation variants === */
 	&--flat {
-		box-shadow: none;
+		box-shadow: var(--pt-card-shadow-flat);
 	}
 
 	&--raised {
-		box-shadow: var(--pt-elevation-raised);
+		box-shadow: var(--pt-card-shadow-raised);
 	}
 
 	&--overlay {
-		box-shadow: var(--pt-elevation-overlay);
+		box-shadow: var(--pt-card-shadow-overlay);
 	}
 }

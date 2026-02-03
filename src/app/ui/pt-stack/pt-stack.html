@@ -1,11 +1,3 @@
-<div class="pt-stack" [class.pt-stack--vertical]="direction === 'vertical'"
-	[class.pt-stack--horizontal]="direction === 'horizontal'" [class.pt-stack--responsive]="direction === 'responsive'"
-	[class.pt-stack--gap-none]="gap === 'none'" [class.pt-stack--gap-xs]="gap === 'xs'"
-	[class.pt-stack--gap-sm]="gap === 'sm'" [class.pt-stack--gap-md]="gap === 'md'"
-	[class.pt-stack--gap-lg]="gap === 'lg'" [class.pt-stack--gap-xl]="gap === 'xl'"
-	[class.pt-stack--align-start]="align === 'start'" [class.pt-stack--align-center]="align === 'center'"
-	[class.pt-stack--align-end]="align === 'end'" [class.pt-stack--align-stretch]="align === 'stretch'"
-	[class.pt-stack--justify-start]="justify === 'start'" [class.pt-stack--justify-center]="justify === 'center'"
-	[class.pt-stack--justify-end]="justify === 'end'" [class.pt-stack--justify-between]="justify === 'between'">
+<div [ngClass]="containerClasses">
 	<ng-content></ng-content>
 </div>

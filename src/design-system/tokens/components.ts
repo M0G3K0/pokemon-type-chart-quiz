@@ -125,11 +125,82 @@ export const components = {
       "md": "1rem",
       "lg": "1.5rem"
     },
-    "radius": "0.75rem"
+    "radius": "0.75rem",
+    "section": {
+      "padding": "1rem",
+      "gap": "0.5rem",
+      "separator": "#f3f4f6"
+    }
+  },
+  "chip": {
+    "padding": "0.25rem",
+    "gap": "0.5rem",
+    "font": {
+      "size": {
+        "sm": "0.75rem",
+        "md": "0.875rem",
+        "lg": "1rem"
+      },
+      "weight": "500",
+      "lineHeight": {
+        "tight": "1.25",
+        "normal": "1.5"
+      }
+    },
+    "radius": {
+      "none": "0",
+      "sm": "0.25rem",
+      "md": "0.5rem",
+      "full": "9999px"
+    },
+    "interaction": {
+      "transition": "200ms"
+    }
+  },
+  "grid": {
+    "columns": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "6": 6
+    },
+    "gap": {
+      "none": "0",
+      "sm": "0.5rem",
+      "md": "1rem",
+      "lg": "1.5rem"
+    }
   },
   "heading": {
     "text": {
       "color": "#1f2937"
+    },
+    "font": {
+      "xl": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "2.25rem",
+        "fontWeight": "700",
+        "lineHeight": "1.25"
+      },
+      "lg": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "1.5rem",
+        "fontWeight": "600",
+        "lineHeight": "1.25"
+      },
+      "md": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "1.25rem",
+        "fontWeight": "600",
+        "lineHeight": "1.5"
+      },
+      "sm": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "1.125rem",
+        "fontWeight": "500",
+        "lineHeight": "1.5"
+      }
     },
     "accent": {
       "width": "6px",
@@ -137,6 +208,139 @@ export const components = {
       "radius": "9999px",
       "gap": "0.5rem",
       "color": "#1f2937"
+    }
+  },
+  "icon": {
+    "size": {
+      "sm": "1.25rem",
+      "md": "2rem",
+      "lg": "3rem"
+    },
+    "color": {
+      "default": "#1f2937",
+      "secondary": "#6b7280",
+      "disabled": "#9ca3af"
+    }
+  },
+  "spinner": {
+    "size": {
+      "sm": "1rem",
+      "md": "2.5rem",
+      "lg": "4rem"
+    },
+    "border": {
+      "width": {
+        "sm": "2px",
+        "md": "3px",
+        "lg": "4px"
+      }
+    },
+    "color": {
+      "primary": "#1f2937",
+      "secondary": "#6b7280",
+      "track": "#0000001a"
+    },
+    "animation": {
+      "duration": "0.8s"
+    }
+  },
+  "stack": {
+    "gap": {
+      "none": "0",
+      "xs": "0.25rem",
+      "sm": "0.5rem",
+      "md": "1rem",
+      "lg": "1.5rem",
+      "xl": "2rem"
+    }
+  },
+  "surface": {
+    "variant": {
+      "default": {
+        "background": "#ffffff"
+      },
+      "subtle": {
+        "background": "#f9fafb"
+      },
+      "card": {
+        "background": "#ffffff",
+        "elevation": "0 1px 2px 0 rgb(0 0 0 / 0.05)"
+      },
+      "ghost": {
+        "background": "#00000000"
+      }
+    },
+    "padding": {
+      "none": "0",
+      "sm": "0.5rem",
+      "md": "1rem",
+      "lg": "1.5rem"
+    },
+    "radius": {
+      "none": "0",
+      "sm": "0.25rem",
+      "md": "0.5rem",
+      "lg": "0.75rem",
+      "xl": "1rem",
+      "full": "9999px"
+    },
+    "border": {
+      "color": "#e5e7eb",
+      "width": "1px"
+    }
+  },
+  "text": {
+    "color": {
+      "primary": "#1f2937",
+      "secondary": "#6b7280",
+      "disabled": "#9ca3af",
+      "inverse": "#ffffff",
+      "danger": "#ef4444"
+    },
+    "font": {
+      "lg": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "1.125rem",
+        "fontWeight": "400",
+        "lineHeight": "1.75"
+      },
+      "md": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "1rem",
+        "fontWeight": "400",
+        "lineHeight": "1.5"
+      },
+      "sm": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "0.875rem",
+        "fontWeight": "400",
+        "lineHeight": "1.5"
+      }
+    },
+    "label": {
+      "md": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "0.875rem",
+        "fontWeight": "500",
+        "lineHeight": "1.25"
+      },
+      "sm": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "0.75rem",
+        "fontWeight": "500",
+        "lineHeight": "1.25"
+      },
+      "xs": {
+        "fontFamily": "ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif",
+        "fontSize": "0.75rem",
+        "fontWeight": "400",
+        "lineHeight": "1.25"
+      }
+    }
+  },
+  "type-chip": {
+    "color": {
+      "text": "#ffffff"
     }
   }
 } as const;

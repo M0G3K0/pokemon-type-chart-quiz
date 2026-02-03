@@ -1,30 +1,44 @@
 /**
  * @what Icon component styles
- * @why Provide flexible icon display using Design Tokens
+ * @why Provide flexible icon display with color support using Design Tokens
+ *
+ * @tokens Tier 3: icon.json
  */
 
+@use 'mixins/component-base' as base;
+
 :host {
-	display: inline-block;
-	line-height: 0;
+	@include base.host-image;
 }
 
 .pt-icon {
 	display: block;
 	object-fit: contain;
 
+	// CSS mask styles (for color mode)
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	mask-position: center;
+	// stylelint-disable-next-line property-no-vendor-prefix -- Safari requires -webkit prefix for mask properties
+	-webkit-mask-size: contain;
+	// stylelint-disable-next-line property-no-vendor-prefix
+	-webkit-mask-repeat: no-repeat;
+	// stylelint-disable-next-line property-no-vendor-prefix
+	-webkit-mask-position: center;
+
 	// Size variants
 	&--sm {
-		width: var(--pt-space-5); // 20px
-		height: var(--pt-space-5);
+		width: var(--pt-icon-size-sm);
+		height: var(--pt-icon-size-sm);
 	}
 
 	&--md {
-		width: var(--pt-space-8); // 32px
-		height: var(--pt-space-8);
+		width: var(--pt-icon-size-md);
+		height: var(--pt-icon-size-md);
 	}
 
 	&--lg {
-		width: var(--pt-space-12); // 48px
-		height: var(--pt-space-12);
+		width: var(--pt-icon-size-lg);
+		height: var(--pt-icon-size-lg);
 	}
 }

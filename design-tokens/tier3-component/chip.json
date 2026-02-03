@@ -1,0 +1,81 @@
+{
+	"$description": "Tier 3: Chip Component Tokens. Defines sizes, spacing, and styles for pt-chip.",
+	"chip": {
+		"$description": "Chip component for compact information display.",
+		"padding": {
+			"value": "{spacing.content.xs}",
+			"type": "spacing",
+			"$description": "内側余白。`padding`に適用。"
+		},
+		"gap": {
+			"value": "{spacing.gap.sm}",
+			"type": "spacing",
+			"$description": "アイコンとテキスト間の隙間。`gap`に適用。"
+		},
+		"font": {
+			"size": {
+				"sm": {
+					"value": "{font.size.xs}",
+					"type": "fontSize",
+					"$description": "小サイズ時のフォントサイズ。"
+				},
+				"md": {
+					"value": "{font.size.sm}",
+					"type": "fontSize",
+					"$description": "中サイズ時のフォントサイズ。"
+				},
+				"lg": {
+					"value": "{font.size.md}",
+					"type": "fontSize",
+					"$description": "大サイズ時のフォントサイズ。"
+				}
+			},
+			"weight": {
+				"value": "{font.weight.medium}",
+				"type": "fontWeight",
+				"$description": "チップのフォントウェイト。"
+			},
+			"lineHeight": {
+				"tight": {
+					"value": "{font.lineHeight.tight}",
+					"type": "lineHeight",
+					"$description": "小サイズ時の行高。"
+				},
+				"normal": {
+					"value": "{font.lineHeight.normal}",
+					"type": "lineHeight",
+					"$description": "中・大サイズ時の行高。"
+				}
+			}
+		},
+		"radius": {
+			"none": {
+				"value": "0",
+				"type": "borderRadius",
+				"$description": "角丸なし。"
+			},
+			"sm": {
+				"value": "{semantic-border.radius.sm}",
+				"type": "borderRadius",
+				"$description": "小さい角丸。"
+			},
+			"md": {
+				"value": "{semantic-border.radius.md}",
+				"type": "borderRadius",
+				"$description": "標準の角丸。"
+			},
+			"full": {
+				"value": "9999px",
+				"type": "borderRadius",
+				"$description": "完全な丸み（ピル形状）。"
+			}
+		},
+		"interaction": {
+			"transition": {
+				"value": "{motion.duration.quick}",
+				"type": "duration",
+				"$description": "インタラクション時のトランジション時間。"
+			}
+		}
+	}
+}

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgClass, NgTemplateOutlet } from '@angular/common';
 
 export type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 export type HeadingSize = 'xl' | 'lg' | 'md' | 'sm';
@@ -28,7 +28,7 @@ export type HeadingSize = 'xl' | 'lg' | 'md' | 'sm';
 @Component({
 	selector: 'pt-heading',
 	standalone: true,
-	imports: [CommonModule],
+	imports: [NgClass, NgTemplateOutlet],
 	templateUrl: './pt-heading.html',
 	styleUrls: ['./pt-heading.scss'],
 })

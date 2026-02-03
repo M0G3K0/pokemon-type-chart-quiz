@@ -1,0 +1,40 @@
+{
+	"$description": "Tier 3: Icon Component Tokens. Defines sizes and colors for pt-icon.",
+	"icon": {
+		"$description": "Icon component for displaying SVG icons with consistent sizing.",
+		"size": {
+			"sm": {
+				"value": "{space.5}",
+				"type": "sizing",
+				"$description": "小サイズ (20px)。インラインアイコン、ボタン内アイコンに使用。"
+			},
+			"md": {
+				"value": "{space.8}",
+				"type": "sizing",
+				"$description": "中サイズ (32px)。標準的なアイコン表示に使用。"
+			},
+			"lg": {
+				"value": "{space.12}",
+				"type": "sizing",
+				"$description": "大サイズ (48px)。強調表示、空状態アイコンに使用。"
+			}
+		},
+		"color": {
+			"default": {
+				"value": "{color.text.primary}",
+				"type": "color",
+				"$description": "デフォルトのアイコン色。`color`に適用。"
+			},
+			"secondary": {
+				"value": "{color.text.secondary}",
+				"type": "color",
+				"$description": "控えめなアイコン色。装飾的な用途に使用。"
+			},
+			"disabled": {
+				"value": "{color.text.disabled}",
+				"type": "color",
+				"$description": "無効状態のアイコン色。"
+			}
+		}
+	}
+}

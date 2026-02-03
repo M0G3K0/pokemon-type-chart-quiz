@@ -46,4 +46,19 @@ export class GridComponent {
 	 * @default 'md'
 	 */
 	@Input() gap: GridGap = 'md';
+
+	/**
+	 * Container element classes
+	 */
+	get containerClasses(): string[] {
+		const classes = [
+			'pt-grid',
+			`pt-grid--cols-${this.columns}`,
+			`pt-grid--gap-${this.gap}`,
+		];
+		if (this.smColumns) {
+			classes.push(`pt-grid--sm-cols-${this.smColumns}`);
+		}
+		return classes;
+	}
 }

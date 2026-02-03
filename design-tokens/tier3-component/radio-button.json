@@ -147,15 +147,15 @@
 				"$description": "水平方向の内側余白。`padding-inline`に適用。"
 			},
 			"y": {
-				"value": "{spacing.content.md}",
+				"value": "{spacing.content.sm}",
 				"type": "spacing",
-				"$description": "垂直方向の内側余白。`padding-block`に適用。"
+				"$description": "垂直方向の内側余白。`padding-block`に適用。よりコンパクトに。"
 			}
 		},
 		"radius": {
-			"value": "{semantic-border.radius.xl}",
+			"value": "{semantic-border.radius.md}",
 			"type": "borderRadius",
-			"$description": "角丸。`border-radius`に適用。大きめで柔らかい印象。"
+			"$description": "角丸。`border-radius`に適用。Buttonと統一。"
 		},
 		"borderWidth": {
 			"value": "{semantic-border.width.thick}",

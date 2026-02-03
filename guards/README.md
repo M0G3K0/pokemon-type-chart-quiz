@@ -93,31 +93,49 @@ guards/
 │       └── development-workflow.rules.js        # ルール定義
 ├── architecture/                                # 構造の憲法
 │   ├── guard/
-│   │   └── layer-boundaries.guard.md            # ドキュメント
+│   │   ├── layer-boundaries.guard.md            # レイヤー依存ルール
+│   │   └── ui-import-standards.guard.md         # UI import 規約 (NEW)
 │   └── rules/
-│       └── layer-boundaries.rules.js            # ルール定義
+│       ├── layer-boundaries.rules.js            # ルール定義
+│       └── ui-import-standards.rules.js         # UI import ルール (NEW)
 ├── code-quality/                                # コード品質の憲法
 │   ├── guard/
-│   │   └── coding-standards.guard.md            # ドキュメント
+│   │   ├── angular-control-flow.guard.md        # Angular 制御フロー構文 (NEW)
+│   │   ├── coding-standards.guard.md            # コーディング規約
+│   │   ├── component-standards.guard.md         # コンポーネント作成標準
+│   │   └── component-structure.guard.md         # ファイル構成完全性
 │   └── rules/
-│       └── coding-standards.rules.js            # ルール定義
+│       ├── angular-control-flow.rules.js        # Angular 制御フロールール (NEW)
+│       ├── coding-standards.rules.js            # コーディング規約ルール
+│       ├── component-standards.rules.js         # コンポーネント標準検査
+│       └── component-structure.rules.js         # ファイル完全性検査
 ├── design/                                      # デザインの憲法
 │   ├── guard/
+│   │   ├── component-base-styles.guard.md       # コンポーネント基本スタイル（:host）
+│   │   ├── component-token-mapping.guard.md     # コンポーネント-トークン対応 (NEW)
 │   │   ├── design-consistency.guard.md          # CSS品質ドキュメント
 │   │   ├── no-raw-tailwind.guard.md             # Tailwind直接使用禁止
+│   │   ├── tier3-only.guard.md                  # コンポーネントSCSS Tier3専用
+│   │   ├── token-existence.guard.md             # トークン存在確認
 │   │   └── token-naming.guard.md                # トークン命名規則
 │   └── rules/
+│       ├── component-base-styles.rules.js       # :host スタイル検証
+│       ├── component-token-mapping.rules.js     # コンポーネント-トークン検証 (NEW)
 │       ├── design-consistency.rules.js          # CSS品質ルール
 │       ├── no-raw-tailwind.rules.js             # Tailwind検出スクリプト
+│       ├── tier3-only.rules.js                  # Tier3専用ルール
+│       ├── token-existence.rules.js             # トークン存在検査
 │       └── token-naming.rules.js                # トークン命名ルール
 ├── maintenance/                                 # 保守の憲法
 │   ├── guard/
 │   │   ├── cleanliness.guard.md                 # デッドコード禁止
 │   │   ├── duplication.guard.md                 # 重複コード禁止
+│   │   ├── temp-docs.guard.md                   # 一時ドキュメント管理 (NEW)
 │   │   └── test-existence.guard.md              # テスト存在必須
 │   └── rules/
 │       ├── cleanliness.rules.js
 │       ├── duplication.rules.json
+│       ├── temp-docs.rules.js                   # 一時ドキュメント検査 (NEW)
 │       └── test-existence.rules.js
 ├── velocity/                                    # 速度の憲法
 │   ├── guard/

@@ -8,6 +8,47 @@
 
 import StyleDictionary from 'style-dictionary';
 
+// ============================================================================
+// Custom Parser - ファイル読み込み時にメタデータを除外
+// ============================================================================
+
+/**
+ * $description などのメタデータフィールドを再帰的に除外する
+ *
+ * @why Style Dictionary v4 では複数ファイルの $description がマージ時に衝突警告を出す
+ * @how パーサー段階でメタデータを除外し、マージ前に衝突の原因を排除
+ * @benefit ソースファイルは $description を保持でき、開発者の可読性を維持
+ */
+const stripMetadataFields = (obj) => {
+	if (typeof obj !== 'object' || obj === null) {
+		return obj;
+	}
+
+	if (Array.isArray(obj)) {
+		return obj.map(stripMetadataFields);
+	}
+
+	const result = {};
+	for (const [key, value] of Object.entries(obj)) {
+		// $description と $note はドキュメント用メタデータなので除外
+		// $value, $type 等の DTCG トークン定義フィールドは保持
+		if (key === '$description' || key === '$note') {
+			continue;
+		}
+		result[key] = stripMetadataFields(value);
+	}
+	return result;
+};
+
+StyleDictionary.registerParser({
+	name: 'json-strip-metadata',
+	pattern: /\.json$/,
+	parser: ({ contents }) => {
+		const parsed = JSON.parse(contents);
+		return stripMetadataFields(parsed);
+	},
+});
+
 /**
  * ネストされたオブジェクトにトークンを設定
  */
@@ -104,11 +145,12 @@ StyleDictionary.registerFormat(
 	createCategoryFormat('effects', ['radius', 'border', 'shadow', 'duration', 'easing', 'elevation', 'semantic-border', 'motion'])
 );
 StyleDictionary.registerFormat(
-	createCategoryFormat('components', ['avatar', 'badge', 'button', 'card', 'heading'])
+	createCategoryFormat('components', ['avatar', 'badge', 'button', 'card', 'chip', 'grid', 'heading', 'icon', 'radio-button', 'spinner', 'stack', 'surface', 'text', 'type-chip'])
 );
 
 const config = {
 	source: ['design-tokens/**/*.json'],
+	parsers: ['json-strip-metadata'],
 	log: {
 		verbosity: 'verbose',
 	},
