@@ -115,6 +115,7 @@ guards/
 │   │   ├── component-token-mapping.guard.md     # コンポーネント-トークン対応 (NEW)
 │   │   ├── design-consistency.guard.md          # CSS品質ドキュメント
 │   │   ├── no-raw-tailwind.guard.md             # Tailwind直接使用禁止
+│   │   ├── space-token-10x.guard.md             # スペーストークン10倍命名 (NEW)
 │   │   ├── tier3-only.guard.md                  # コンポーネントSCSS Tier3専用
 │   │   ├── token-existence.guard.md             # トークン存在確認
 │   │   └── token-naming.guard.md                # トークン命名規則
@@ -123,6 +124,7 @@ guards/
 │       ├── component-token-mapping.rules.js     # コンポーネント-トークン検証 (NEW)
 │       ├── design-consistency.rules.js          # CSS品質ルール
 │       ├── no-raw-tailwind.rules.js             # Tailwind検出スクリプト
+│       ├── space-token-10x.rules.js             # スペーストークン10倍命名検査 (NEW)
 │       ├── tier3-only.rules.js                  # Tier3専用ルール
 │       ├── token-existence.rules.js             # トークン存在検査
 │       └── token-naming.rules.js                # トークン命名ルール
