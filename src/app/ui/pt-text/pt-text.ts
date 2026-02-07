@@ -1,12 +1,17 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {
+	type TextVariant,
+	type TextColor,
+	type TextWeight,
+	type TextTransform,
+	type TextAlign,
+	type TextElement,
+	buildTextClasses,
+} from './pt-text.logic';
 
-export type TextVariant = 'body-lg' | 'body-md' | 'body-sm' | 'label-md' | 'label-sm' | 'label-xs';
-export type TextColor = 'primary' | 'secondary' | 'disabled' | 'inverse' | 'danger';
-export type TextWeight = 'normal' | 'medium' | 'bold' | 'black';
-export type TextTransform = 'none' | 'uppercase' | 'lowercase' | 'capitalize';
-export type TextAlign = 'start' | 'center' | 'end';
-export type TextElement = 'span' | 'p' | 'div' | 'label';
+export type { TextVariant, TextColor, TextWeight, TextTransform, TextAlign, TextElement };
+export { buildTextClasses };
 
 /**
  * pt-text (Atom): 本文・ラベル・補助テキスト用のタイポグラフィコンポーネント
@@ -97,14 +102,13 @@ export class TextComponent {
 	 * 動的クラス生成
 	 */
 	get textClasses(): Record<string, boolean> {
-		return {
-			'pt-text': true,
-			[`pt-text--${this.variant}`]: true,
-			[`pt-text--color-${this.color}`]: true,
-			[`pt-text--weight-${this.weight}`]: !!this.weight,
-			[`pt-text--transform-${this.transform}`]: this.transform !== 'none',
-			'pt-text--italic': this.italic,
-			[`pt-text--align-${this.align}`]: this.align !== 'start',
-		};
+		return buildTextClasses({
+			variant: this.variant,
+			color: this.color,
+			weight: this.weight,
+			transform: this.transform,
+			italic: this.italic,
+			align: this.align,
+		});
 	}
 }
