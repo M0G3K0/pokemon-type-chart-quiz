@@ -142,6 +142,24 @@
 					"type": "lineHeight"
 				}
 			}
+		},
+		"weight": {
+			"$description": "フォントウェイトオーバーライド。font-weightの直接指定用。",
+			"normal": {
+				"value": "{font.weight.normal}",
+				"type": "fontWeight",
+				"$description": "通常ウェイト (400)。`font-weight`に適用。"
+			},
+			"medium": {
+				"value": "{font.weight.medium}",
+				"type": "fontWeight",
+				"$description": "中ウェイト (500)。`font-weight`に適用。"
+			},
+			"bold": {
+				"value": "{font.weight.bold}",
+				"type": "fontWeight",
+				"$description": "太字 (700)。`font-weight`に適用。"
+			}
 		}
 	}
 }

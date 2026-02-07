@@ -5,8 +5,8 @@
 ## @what / @why / @failure
 
 ```
-@what  デザイントークンの3層アーキテクチャに基づく使用規則を強制
-@why   Primitiveトークンの直接使用を防ぎ、デザインシステムの一貫性と保守性を維持するため
+@what  コンポーネントSCSSでTier 3トークンのみの使用を強制
+@why   Tier 1/2の直接使用を防ぎ、NgDocドキュメントの自動生成とデザインシステムの一貫性を維持するため
 @failure  Stylelintエラーとなり、CIが失敗する
 ```
 
@@ -14,28 +14,34 @@
 
 ## ルール一覧
 
-### 1. Primitiveトークン直接使用の禁止
+### 1. コンポーネントSCSSではTier 3トークンのみ使用可能
 
-UI実装（SCSS/CSS）でPrimitiveトークン（Tier 1）を直接使用することを禁止する。
+コンポーネントのSCSS（`src/app/ui/` 配下）では、自身のコンポーネントトークン（Tier 3）のみを使用する。
+Tier 1（Primitive）および Tier 2（Semantic）の直接使用は禁止。
 
-**許可されるトークン（Tier 2 / Tier 3）:**
-- `--pt-color-surface-*` (Semantic)
-- `--pt-color-text-*` (Semantic)
-- `--pt-color-action-*` (Semantic)
-- `--pt-color-border-*` (Semantic)
-- `--pt-color-result-*` (Semantic)
-- `--pt-card-*` (Component)
+**許可されるトークン（Tier 3 のみ）:**
+- `--pt-chip-*` (Component)
 - `--pt-button-*` (Component)
-- `--pt-badge-*` (Component)
+- `--pt-card-*` (Component)
+- `--pt-icon-*` (Component)
+- `--pt-text-*` (Component)
+- `--pt-spinner-*` (Component)
+- その他 `--pt-{component}-*` パターン
 
-**禁止されるトークン（Tier 1）:**
+**禁止されるトークン（Tier 1 - Primitive）:**
 - `--pt-color-gray-*`
 - `--pt-color-pokemon-*`
 - `--pt-color-lime-*`
 - `--pt-color-red-*`
-- `--pt-color-white`
-- `--pt-color-black`
+- `--pt-color-white` / `--pt-color-black`
 - `--pt-space-{number}` (例: `--pt-space-10`, `--pt-space-20`)
+
+**禁止されるトークン（Tier 2 - Semantic）:**
+- `--pt-spacing-*` (spacing.content / spacing.layout / spacing.gap)
+- `--pt-font-*` (font.size / font.weight / font.family)
+- `--pt-semantic-border-*` (semantic-border.radius / width)
+- `--pt-motion-*` (motion.duration / motion.easing)
+- `--pt-elevation-*`
 
 ### 2. トークン命名規則
 
@@ -83,22 +89,31 @@ npm run lint:css
 ## 違反時の対応
 
 1. `npm run lint:css` でエラーを確認
-2. Primitiveトークンを対応するSemantic/Componentトークンに置き換える
-3. 必要なSemantic/Componentトークンが存在しない場合は、まずトークン定義を追加する
+2. Tier 1/2トークンを対応するTier 3コンポーネントトークンに置き換える
+3. 必要なコンポーネントトークンが存在しない場合は、まず `design-tokens/tier3-component/{name}.json` にトークンを追加する
+4. `npm run tokens:build` でCSS変数を再生成
 
 ### 例
 
 ```scss
-// ❌ Bad: Primitiveトークン直接使用
+// ❌ Bad: Primitiveトークン直接使用（Tier 1）
 .my-component {
-  background-color: var(--pt-color-gray-50);
   color: var(--pt-color-gray-800);
+  padding: var(--pt-space-20);
 }
 
-// ✅ Good: Semantic/Componentトークン経由
+// ❌ Bad: Semanticトークン直接使用（Tier 2）
 .my-component {
-  background-color: var(--pt-color-surface-default);
-  color: var(--pt-color-text-primary);
+  padding: var(--pt-spacing-content-sm);
+  font-size: var(--pt-font-size-md);
+  border-radius: var(--pt-semantic-border-radius-md);
+}
+
+// ✅ Good: コンポーネントトークン経由（Tier 3）
+.my-component {
+  padding: var(--pt-button-padding-y-sm) var(--pt-button-padding-x-sm);
+  font-size: var(--pt-button-font-size-sm);
+  border-radius: var(--pt-button-radius);
 }
 ```
 

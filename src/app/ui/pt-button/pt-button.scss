@@ -15,7 +15,7 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	gap: var(--pt-spacing-content-xs);
+	gap: var(--pt-button-gap);
 	border: none;
 	cursor: pointer;
 
@@ -23,10 +23,10 @@
 	@include mixins.text-button;
 
 	/* Border */
-	border-radius: var(--pt-semantic-border-radius-md);
+	border-radius: var(--pt-button-radius);
 
 	/* Transitions */
-	transition: all var(--pt-motion-duration-quick) var(--pt-motion-easing-default);
+	transition: all var(--pt-button-interaction-duration) var(--pt-button-interaction-easing);
 
 	/* Common behaviors */
 	@include mixins.focus-ring;
@@ -35,20 +35,20 @@
 
 	/* === Size variants === */
 	&--sm {
-		padding: var(--pt-spacing-content-xs) var(--pt-spacing-content-sm);
-		font-size: var(--pt-font-size-sm);
+		padding: var(--pt-button-padding-y-sm) var(--pt-button-padding-x-sm);
+		font-size: var(--pt-button-font-size-sm);
 		min-height: 32px;
 	}
 
 	&--md {
-		padding: var(--pt-spacing-content-sm) var(--pt-spacing-content-md);
-		font-size: var(--pt-font-size-md);
+		padding: var(--pt-button-padding-y-md) var(--pt-button-padding-x-md);
+		font-size: var(--pt-button-font-size-md);
 		min-height: 40px;
 	}
 
 	&--lg {
-		padding: var(--pt-spacing-content-md) var(--pt-spacing-content-lg);
-		font-size: var(--pt-font-size-lg);
+		padding: var(--pt-button-padding-y-lg) var(--pt-button-padding-x-lg);
+		font-size: var(--pt-button-font-size-lg);
 		min-height: 48px;
 	}
 

@@ -201,6 +201,86 @@
 					"$description": "フォーカスリングの色。"
 				}
 			}
+		},
+		"gap": {
+			"value": "{spacing.content.xs}",
+			"type": "spacing",
+			"$description": "ボタン内のアイコンとラベル間のギャップ (4px)。`gap`に適用。"
+		},
+		"padding": {
+			"$description": "サイズ別のパディング。",
+			"x": {
+				"sm": {
+					"value": "{spacing.content.sm}",
+					"type": "spacing",
+					"$description": "SM横パディング (8px)。`padding-inline`に適用。"
+				},
+				"md": {
+					"value": "{spacing.content.md}",
+					"type": "spacing",
+					"$description": "MD横パディング (12px)。`padding-inline`に適用。"
+				},
+				"lg": {
+					"value": "{spacing.content.lg}",
+					"type": "spacing",
+					"$description": "LG横パディング (16px)。`padding-inline`に適用。"
+				}
+			},
+			"y": {
+				"sm": {
+					"value": "{spacing.content.xs}",
+					"type": "spacing",
+					"$description": "SM縦パディング (4px)。`padding-block`に適用。"
+				},
+				"md": {
+					"value": "{spacing.content.sm}",
+					"type": "spacing",
+					"$description": "MD縦パディング (8px)。`padding-block`に適用。"
+				},
+				"lg": {
+					"value": "{spacing.content.md}",
+					"type": "spacing",
+					"$description": "LG縦パディング (12px)。`padding-block`に適用。"
+				}
+			}
+		},
+		"font": {
+			"$description": "サイズ別のフォントサイズ。",
+			"size": {
+				"sm": {
+					"value": "{font.size.sm}",
+					"type": "fontSize",
+					"$description": "SMフォントサイズ (14px)。`font-size`に適用。"
+				},
+				"md": {
+					"value": "{font.size.md}",
+					"type": "fontSize",
+					"$description": "MDフォントサイズ (16px)。`font-size`に適用。"
+				},
+				"lg": {
+					"value": "{font.size.lg}",
+					"type": "fontSize",
+					"$description": "LGフォントサイズ (18px)。`font-size`に適用。"
+				}
+			}
+		},
+		"radius": {
+			"value": "{semantic-border.radius.md}",
+			"type": "borderRadius",
+			"$description": "ボタンの角丸 (8px)。`border-radius`に適用。"
+		},
+		"interaction": {
+			"$description": "インタラクション関連トークン。",
+			"duration": {
+				"value": "{motion.duration.quick}",
+				"type": "duration",
+				"$description": "トランジションの長さ (150ms)。`transition-duration`に適用。"
+			},
+			"easing": {
+				"value": "{motion.easing.default}",
+				"type": "other",
+				"$description": "トランジションのイージング。`transition-timing-function`に適用。"
+			}
 		}
 	}
 }

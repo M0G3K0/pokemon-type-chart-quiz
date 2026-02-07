@@ -85,20 +85,20 @@
 
 	// Weight overrides
 	&--weight-normal {
-		font-weight: var(--pt-font-weight-normal);
+		font-weight: var(--pt-text-weight-normal);
 	}
 
 	&--weight-medium {
-		font-weight: var(--pt-font-weight-medium);
+		font-weight: var(--pt-text-weight-medium);
 	}
 
 	&--weight-bold {
-		font-weight: var(--pt-font-weight-bold);
+		font-weight: var(--pt-text-weight-bold);
 	}
 
 	&--weight-black {
 		// TODO: Add --pt-font-weight-extrabold (800) or --pt-font-weight-black (900) token
-		font-weight: var(--pt-font-weight-bold); // Fallback to bold
+		font-weight: var(--pt-text-weight-bold); // Fallback to bold
 	}
 
 	// Transform
