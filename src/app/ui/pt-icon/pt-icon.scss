@@ -27,6 +27,11 @@
 	-webkit-mask-position: center;
 
 	// Size variants
+	&--xs {
+		width: var(--pt-icon-size-xs);
+		height: var(--pt-icon-size-xs);
+	}
+
 	&--sm {
 		width: var(--pt-icon-size-sm);
 		height: var(--pt-icon-size-sm);
@@ -40,5 +45,10 @@
 	&--lg {
 		width: var(--pt-icon-size-lg);
 		height: var(--pt-icon-size-lg);
+	}
+
+	&--xl {
+		width: var(--pt-icon-size-xl);
+		height: var(--pt-icon-size-xl);
 	}
 }
