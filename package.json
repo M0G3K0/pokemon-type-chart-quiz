@@ -17,7 +17,7 @@
     "unused-check": "knip",
     "fetch-data": "node scripts/fetch-pokemons.js",
     "validate-data": "tsx scripts/validate-data.ts",
-    "tokens:build": "node style-dictionary.config.mjs && node scripts/generate-types-from-tokens.mjs",
+    "tokens:build": "node style-dictionary.config.mjs && node scripts/generate-types-from-tokens.mjs && node scripts/sync-style-md-tokens.mjs",
     "prebuild": "npm run fetch-data && npm run validate-data",
     "guard:component-structure": "node guards/code-quality/rules/component-structure.rules.js",
     "guard:token-existence": "node guards/design/rules/token-existence.rules.js",

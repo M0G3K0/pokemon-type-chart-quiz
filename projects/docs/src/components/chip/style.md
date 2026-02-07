@@ -7,12 +7,14 @@ route: style
 
 `pt-chip`は以下のデザイントークンを使用します。
 
+<!-- @auto-generated:size:start -->
 ### Size Tokens
 
 | Size | Padding Token | Font Size Token |
-|------|---------------|-----------------|
+|------|------|------|
 | `sm` | `--pt-chip-padding-x-sm` (4px) | `--pt-chip-font-size-sm` (12px) |
 | `md` | `--pt-chip-padding-x-md` (6px) | `--pt-chip-font-size-md` (14px) |
+<!-- @auto-generated:size:end -->
 
 ### Other Tokens
 
@@ -41,14 +43,16 @@ route: style
 
 ---
 
-## Border Radius
+<!-- @auto-generated:radius:start -->
+### Border Radius
 
 | Rounded | Token | Value |
-|---------|-------|-------|
+|------|------|------|
 | `none` | `--pt-chip-radius-none` | 0 |
-| `sm` | `--pt-chip-radius-sm` | 4px |
-| `md` | `--pt-chip-radius-md` | 8px |
+| `sm` | `--pt-chip-radius-sm` | {semantic-border.radius.sm} |
+| `md` | `--pt-chip-radius-md` | {semantic-border.radius.md} |
 | `full` | `--pt-chip-radius-full` | 9999px |
+<!-- @auto-generated:radius:end -->
 
 ---
 
