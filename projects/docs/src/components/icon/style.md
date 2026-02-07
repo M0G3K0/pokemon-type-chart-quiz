@@ -7,21 +7,27 @@ route: style
 
 `pt-icon`は以下のデザイントークンを使用します。
 
+<!-- @auto-generated:size:start -->
 ### Size
 
 | Size | Token (Tier 3) | Reference | Value | 用途 |
-|------|----------------|-----------|-------|------|
-| `sm` | `--pt-icon-size-sm` | `{space.5}` | 20px | インライン、ボタン内 |
-| `md` | `--pt-icon-size-md` | `{space.8}` | 32px | 標準的なアイコン表示 |
-| `lg` | `--pt-icon-size-lg` | `{space.12}` | 48px | 強調表示、空状態 |
+|------|------|------|------|------|
+| `xs` | `--pt-icon-size-xs` | `{space.40}` | 16px | 1行に複数の情報要素が並ぶ場面。要素間スペースが8px以下の高密度UI |
+| `sm` | `--pt-icon-size-sm` | `{space.50}` | 20px | 通常のUI。要素間スペースが8-16px |
+| `md` | `--pt-icon-size-md` | `{space.60}` | 24px | 余白を持たせたUI。要素間スペースが16-24px |
+| `lg` | `--pt-icon-size-lg` | `{space.80}` | 32px | ユーザーの注意を引きたい単独要素。周囲に24px以上の余白 |
+| `xl` | `--pt-icon-size-xl` | `{space.120}` | 48px | 画面の主役となる単一要素。コンテンツがほぼアイコンのみ |
+<!-- @auto-generated:size:end -->
 
+<!-- @auto-generated:color:start -->
 ### Color
 
 | Variant | Token (Tier 3) | Reference | 用途 |
-|---------|----------------|-----------|------|
-| `default` | `--pt-icon-color-default` | `{color.text.primary}` | 標準のアイコン色 |
-| `secondary` | `--pt-icon-color-secondary` | `{color.text.secondary}` | 控えめな装飾用 |
-| `disabled` | `--pt-icon-color-disabled` | `{color.text.disabled}` | 無効状態 |
+|------|------|------|------|
+| `default` | `--pt-icon-color-default` | `{color.text.primary}` | デフォルトのアイコン色。`color`に適用。 |
+| `secondary` | `--pt-icon-color-secondary` | `{color.text.secondary}` | 控えめなアイコン色。装飾的な用途に使用。 |
+| `disabled` | `--pt-icon-color-disabled` | `{color.text.disabled}` | 無効状態のアイコン色。 |
+<!-- @auto-generated:color:end -->
 
 ---
 

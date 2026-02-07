@@ -7,29 +7,35 @@ route: style
 
 `pt-spinner`は以下のデザイントークンを使用します。
 
+<!-- @auto-generated:size:start -->
 ### Size
 
 | Size | Token (Tier 3) | Value | 用途 |
-|------|----------------|-------|------|
-| `sm` | `--pt-spinner-size-sm` | 16px | ボタン内、インラインローディング |
-| `md` | `--pt-spinner-size-md` | 40px | カードやセクション内 |
-| `lg` | `--pt-spinner-size-lg` | 64px | 全画面ローディング、メインコンテンツエリア |
+|------|------|------|------|
+| `sm` | `--pt-spinner-size-sm` | 16px | インライン、ボタン内のローディングに使用 |
+| `md` | `--pt-spinner-size-md` | 40px | 標準的なローディング表示に使用 |
+| `lg` | `--pt-spinner-size-lg` | 64px | フルスクリーンローディングに使用 |
+<!-- @auto-generated:size:end -->
 
+<!-- @auto-generated:border-width:start -->
 ### Border Width
 
 | Size | Token (Tier 3) | Value |
-|------|----------------|-------|
+|------|------|------|
 | `sm` | `--pt-spinner-border-width-sm` | 2px |
 | `md` | `--pt-spinner-border-width-md` | 3px |
 | `lg` | `--pt-spinner-border-width-lg` | 4px |
+<!-- @auto-generated:border-width:end -->
 
+<!-- @auto-generated:color:start -->
 ### Color
 
 | Visual Attribute | Token (Tier 3) | Reference | 用途 |
-|-----------------|----------------|-----------|------|
-| Primary | `--pt-spinner-color-primary` | `{color.text.primary}` | メインスピナー色 |
-| Secondary | `--pt-spinner-color-secondary` | `{color.text.secondary}` | 控えめなスピナー色 |
-| **Track** | `--pt-spinner-color-track` | `rgba(0, 0, 0, 0.1)` | ドーナツ背景リング |
+|------|------|------|------|
+| Primary | `--pt-spinner-color-primary` | `{color.text.primary}` | プライマリカラー。デフォルトのスピナー色。 |
+| Secondary | `--pt-spinner-color-secondary` | `{color.text.secondary}` | セカンダリカラー。控えめなスピナー色。 |
+| Track | `--pt-spinner-color-track` | `rgba(0, 0, 0, 0.1)` | トラック色。ドーナツ状スピナーの背景リング。 |
+<!-- @auto-generated:color:end -->
 
 ### Animation
 
