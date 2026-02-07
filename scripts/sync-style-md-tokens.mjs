@@ -45,10 +45,19 @@ function isLeaf(node) {
 }
 
 /**
+ * camelCase → kebab-case 変換
+ * 例: fontFamily → font-family, borderWidth → border-width, lineHeight → line-height
+ */
+function camelToKebab(str) {
+    return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+}
+
+/**
  * CSS変数名を生成: --pt-{component}-{path parts joined by -}
+ * JSONキーのcamelCaseをkebab-caseに変換（Style Dictionaryの出力と一致させる）
  */
 function cssVarName(component, pathParts) {
-    return `--pt-${component}-${pathParts.join('-')}`;
+    return `--pt-${component}-${pathParts.map(camelToKebab).join('-')}`;
 }
 
 /**

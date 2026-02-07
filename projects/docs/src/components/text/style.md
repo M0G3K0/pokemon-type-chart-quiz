@@ -23,17 +23,17 @@ route: style
 
 | Variant | FontFamily | FontSize | FontWeight | LineHeight |
 |------|------|------|------|------|
-| `lg` | `--pt-text-font-lg-fontFamily` | `--pt-text-font-lg-fontSize` | `--pt-text-font-lg-fontWeight` | `--pt-text-font-lg-lineHeight` |
-| `md` | `--pt-text-font-md-fontFamily` | `--pt-text-font-md-fontSize` | `--pt-text-font-md-fontWeight` | `--pt-text-font-md-lineHeight` |
-| `sm` | `--pt-text-font-sm-fontFamily` | `--pt-text-font-sm-fontSize` | `--pt-text-font-sm-fontWeight` | `--pt-text-font-sm-lineHeight` |
+| `lg` | `--pt-text-font-lg-font-family` | `--pt-text-font-lg-font-size` | `--pt-text-font-lg-font-weight` | `--pt-text-font-lg-line-height` |
+| `md` | `--pt-text-font-md-font-family` | `--pt-text-font-md-font-size` | `--pt-text-font-md-font-weight` | `--pt-text-font-md-line-height` |
+| `sm` | `--pt-text-font-sm-font-family` | `--pt-text-font-sm-font-size` | `--pt-text-font-sm-font-weight` | `--pt-text-font-sm-line-height` |
 
 ### Label
 
 | Variant | FontFamily | FontSize | FontWeight | LineHeight |
 |------|------|------|------|------|
-| `md` | `--pt-text-label-md-fontFamily` | `--pt-text-label-md-fontSize` | `--pt-text-label-md-fontWeight` | `--pt-text-label-md-lineHeight` |
-| `sm` | `--pt-text-label-sm-fontFamily` | `--pt-text-label-sm-fontSize` | `--pt-text-label-sm-fontWeight` | `--pt-text-label-sm-lineHeight` |
-| `xs` | `--pt-text-label-xs-fontFamily` | `--pt-text-label-xs-fontSize` | `--pt-text-label-xs-fontWeight` | `--pt-text-label-xs-lineHeight` |
+| `md` | `--pt-text-label-md-font-family` | `--pt-text-label-md-font-size` | `--pt-text-label-md-font-weight` | `--pt-text-label-md-line-height` |
+| `sm` | `--pt-text-label-sm-font-family` | `--pt-text-label-sm-font-size` | `--pt-text-label-sm-font-weight` | `--pt-text-label-sm-line-height` |
+| `xs` | `--pt-text-label-xs-font-family` | `--pt-text-label-xs-font-size` | `--pt-text-label-xs-font-weight` | `--pt-text-label-xs-line-height` |
 
 ### Weight
 

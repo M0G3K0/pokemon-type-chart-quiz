@@ -7,7 +7,6 @@ route: style
 
 `pt-surface`は以下のデザイントークンを使用します。
 
-
 <!-- @auto-generated:token-table:start -->
 ### Variant Default
 
@@ -61,36 +60,6 @@ route: style
 | `color` | `--pt-surface-border-color` | `{color.border.default}` |  | ボーダー色。 |
 | `width` | `--pt-surface-border-width` | `{semantic-border.width.default}` |  | ボーダー幅。 |
 <!-- @auto-generated:token-table:end -->
-## Padding
-
-| Size | Token (Tier 3) | Reference | Value |
-|------|----------------|-----------|-------|
-| `none` | `--pt-surface-padding-none` | `0` | 0 |
-| `sm` | `--pt-surface-padding-sm` | `{spacing.content.sm}` | 8px |
-| `md` | `--pt-surface-padding-md` | `{spacing.content.md}` | 16px |
-| `lg` | `--pt-surface-padding-lg` | `{spacing.content.lg}` | 24px |
-
----
-
-## Border Radius
-
-| Size | Token (Tier 3) | Reference | Value |
-|------|----------------|-----------|-------|
-| `none` | `--pt-surface-radius-none` | `{semantic-border.radius.none}` | 0 |
-| `sm` | `--pt-surface-radius-sm` | `{semantic-border.radius.sm}` | 4px |
-| `md` | `--pt-surface-radius-md` | `{semantic-border.radius.md}` | 8px |
-| `lg` | `--pt-surface-radius-lg` | `{semantic-border.radius.lg}` | 12px |
-| `xl` | `--pt-surface-radius-xl` | `{semantic-border.radius.xl}` | 16px |
-| `full` | `--pt-surface-radius-full` | `{semantic-border.radius.pill}` | 9999px |
-
----
-
-## Border
-
-| Property | Token (Tier 3) | Reference |
-|----------|----------------|-----------|
-| 枠線色 | `--pt-surface-border-color` | `{color.border.default}` |
-| 枠線幅 | `--pt-surface-border-width` | `{semantic-border.width.default}` |
 
 ---
 

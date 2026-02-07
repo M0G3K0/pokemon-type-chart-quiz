@@ -7,14 +7,13 @@ route: style
 
 `pt-radio-button`は以下のデザイントークンを使用します。
 
-
 <!-- @auto-generated:token-table:start -->
 ### Tokens
 
 | Key | Token | Reference | Value | Description |
 |------|------|------|------|------|
 | `radius` | `--pt-radio-button-radius` | `{semantic-border.radius.md}` |  | 角丸。`border-radius`に適用。Buttonと統一。 |
-| `borderWidth` | `--pt-radio-button-borderWidth` | `{semantic-border.width.thick}` |  | 枠線の太さ。`border-width`に適用。 |
+| `borderWidth` | `--pt-radio-button-border-width` | `{semantic-border.width.thick}` |  | 枠線の太さ。`border-width`に適用。 |
 
 ### Default
 
@@ -92,28 +91,15 @@ route: style
 | `default` | `--pt-radio-button-shadow-default` | `{elevation.raised}` |  | デフォルト時の影。軽く浮いた印象。 |
 | `selected` | `--pt-radio-button-shadow-selected` | `{elevation.overlay}` |  | 選択時の影。より強調された浮き上がり。 |
 <!-- @auto-generated:token-table:end -->
-## Layout
 
-| Visual Attribute | Token (Tier 3) | Reference | Value |
-|-----------------|----------------|-----------|-------|
-| 角丸 | `--pt-radio-button-radius` | `{semantic-border.radius.md}` | 8px |
-| パディングX | `--pt-radio-button-padding-x` | `{spacing.content.md}` | 16px |
-| パディングY | `--pt-radio-button-padding-y` | `{spacing.content.sm}` | 8px |
-| 枠線幅 | `--pt-radio-button-borderWidth` | `{semantic-border.width.thick}` | 2px |
+---
+
+## Layout
 
 ### Phase 3 での変更点
 
 - **角丸**: `radius-xl` (16px) → `radius-md` (8px) に変更。`pt-button` と統一。
 - **パディングY**: `content.md` (16px) → `content.sm` (8px) に変更。よりコンパクトに。
-
----
-
-## Shadow
-
-| State | Token (Tier 3) | Reference |
-|-------|----------------|-----------|
-| Default | `--pt-radio-button-shadow-default` | `{elevation.raised}` |
-| Selected | `--pt-radio-button-shadow-selected` | `{elevation.overlay}` |
 
 ---
 

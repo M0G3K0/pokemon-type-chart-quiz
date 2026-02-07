@@ -7,7 +7,6 @@ route: style
 
 `pt-card`は以下のデザイントークンを使用します。
 
-
 <!-- @auto-generated:token-table:start -->
 ### Tokens
 
@@ -59,17 +58,10 @@ route: style
 | `gap` | `--pt-card-section-gap` | `{spacing.gap.sm}` |  | gapプロパティに適用。footer内のボタン間隔など。 |
 | `separator` | `--pt-card-section-separator` | `{color.border.subtle}` |  | border-colorプロパティに適用。header/footerとcontentの間の区切り線。 |
 <!-- @auto-generated:token-table:end -->
-## Section Tokens (Compound Components)
 
-Phase 3d で追加された、`pt-card-header`、`pt-card-content`、`pt-card-footer` 用のトークンです。
+---
 
-| Visual Attribute | Token (Tier 3) | Reference | 用途 |
-|-----------------|----------------|-----------|------|
-| セクションパディング | `--pt-card-section-padding` | `{spacing.content.md}` (16px) | 各セクションの内部余白 |
-| セクションギャップ | `--pt-card-section-gap` | `{spacing.gap.sm}` (8px) | footer内のボタン間隔など |
-| セパレーター色 | `--pt-card-section-separator` | `{color.border.subtle}` | header/footerとcontentの区切り線 |
-
-### Padding Suppression Pattern
+## Padding Suppression Pattern
 
 Card 本体とセクションの両方にパディングがあると、二重パディング（32px）が発生します。これを防ぐため、セクション使用時は Card 本体のパディングが自動的に無効化されます：
 
