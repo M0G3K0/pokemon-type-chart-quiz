@@ -21,8 +21,8 @@ const PRIMITIVE_TOKEN_PATTERNS = [
 	// カラー: 基本色
 	'/var\\(\\s*--pt-color-white/',
 	'/var\\(\\s*--pt-color-black/',
-	// スペーシング: 数値ベース
-	'/var\\(\\s*--pt-spacing-\\d/',
+	// スペーシング: Primitive数値ベース（--pt-space-XX）
+	'/var\\(\\s*--pt-space-\\d/',
 ];
 
 /**
@@ -39,6 +39,7 @@ const PRIMITIVE_TOKEN_PATTERNS = [
  * - --pt-badge-*
  * - --pt-spacing-content-*
  * - --pt-spacing-layout-*
+ * - --pt-spacing-gap-*
  */
 
 const GUARDRAIL_PATH = 'guards/design/guard/token-naming.guard.md';
@@ -56,6 +57,12 @@ module.exports = {
 				'/border/': PRIMITIVE_TOKEN_PATTERNS,
 				'/fill/': PRIMITIVE_TOKEN_PATTERNS,
 				'/stroke/': PRIMITIVE_TOKEN_PATTERNS,
+				// スペーシング関連プロパティでPrimitiveトークンを禁止
+				'/gap/': PRIMITIVE_TOKEN_PATTERNS,
+				'/padding/': PRIMITIVE_TOKEN_PATTERNS,
+				'/margin/': PRIMITIVE_TOKEN_PATTERNS,
+				'/width/': PRIMITIVE_TOKEN_PATTERNS,
+				'/height/': PRIMITIVE_TOKEN_PATTERNS,
 			},
 			{
 				message: `Primitiveトークン禁止。Semantic/Componentを使用 (${GUARDRAIL_PATH})`,
