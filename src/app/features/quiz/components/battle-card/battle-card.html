@@ -1,44 +1,28 @@
-<pt-surface variant="subtle" padding="lg" radius="xl" [border]="true">
-	<pt-stack direction="horizontal" gap="lg" align="center" justify="center">
-		<!-- Attacker -->
-		<pt-stack direction="vertical" gap="sm" align="center">
-			<pt-text variant="label-xs" color="secondary" transform="uppercase">こうげき側 (タイプ)</pt-text>
-			<pt-surface variant="card" padding="lg" radius="xl" [border]="true" class="attacker-card">
-				<pt-stack direction="vertical" gap="sm" align="center">
-					<pt-type-chip [type]="attackType" [showIcon]="true" rounded="full" size="lg">
-					</pt-type-chip>
-					<pt-text variant="body-lg" weight="bold"
-						[style.color]="'var(--pt-color-pokemon-text-' + attackType + ')'">
-						{{ typeMap[attackType] }}
-					</pt-text>
-				</pt-stack>
-			</pt-surface>
+<pt-surface variant="card" padding="lg" radius="xl" [border]="true">
+	<pt-stack direction="vertical" gap="md" align="center">
+		<!-- 攻撃タイプ（ヘッダー） -->
+		<pt-stack direction="horizontal" gap="sm" align="center">
+			<pt-type-chip [type]="attackType" [showIcon]="true" rounded="sm" size="md">
+				{{ typeMap[attackType] }}
+			</pt-type-chip>
+			<pt-text variant="body-md" color="secondary">で攻撃</pt-text>
 		</pt-stack>
 
-		<pt-icon [src]="arrowIconPath" size="lg" class="arrow-icon"></pt-icon>
+		<!-- 区切り線 -->
+		<div class="divider"></div>
 
-		<!-- Defender -->
+		<!-- 防御側 -->
 		<pt-stack direction="vertical" gap="sm" align="center">
-			<pt-text variant="label-xs" color="secondary" transform="uppercase">ぼうぎょ側 (ポケモン)</pt-text>
-			<pt-surface variant="card" padding="md" radius="xl" [border]="true" class="defender-card">
-				<pt-stack direction="horizontal" gap="md" align="center">
-					<pt-surface variant="subtle" padding="sm" radius="lg">
-						<pt-avatar [src]="pokemon.imageUrl" [alt]="pokemon.name" size="lg" shape="rounded"
-							[pixelated]="true">
-						</pt-avatar>
-					</pt-surface>
-					<pt-stack direction="vertical" gap="xs" align="start">
-						<pt-text variant="body-lg" weight="bold">{{ pokemon.name }}</pt-text>
-						<pt-stack direction="horizontal" gap="xs">
-							@for (t of pokemon.types; track t; let i = $index) {
-								<pt-type-chip [type]="t" size="sm" rounded="sm">
-									{{ pokemon.jaTypes[i] }}
-								</pt-type-chip>
-							}
-						</pt-stack>
-					</pt-stack>
-				</pt-stack>
-			</pt-surface>
+			<pt-avatar [src]="pokemon.imageUrl" [alt]="pokemon.name" size="lg" shape="rounded" [pixelated]="true">
+			</pt-avatar>
+			<pt-text variant="body-lg" weight="bold">{{ pokemon.name }}</pt-text>
+			<pt-stack direction="horizontal" gap="xs" justify="center">
+				@for (t of pokemon.types; track t; let i = $index) {
+				<pt-type-chip [type]="t" [showIcon]="true" size="sm" rounded="sm">
+					{{ pokemon.jaTypes[i] }}
+				</pt-type-chip>
+				}
+			</pt-stack>
 		</pt-stack>
 	</pt-stack>
 </pt-surface>

@@ -1,14 +1,23 @@
 {
 	"$description": "Tier 3: Chip Component Tokens. Defines sizes, spacing, and styles for pt-chip.",
 	"chip": {
-		"$description": "Chip component for compact information display.",
+		"$description": "Chip component for compact information display. サイズ選択基準: レイアウト密度とコンポーネント整合性。同じ文脈では同じサイズを使用し、情報の重要度でサイズを変えない。",
 		"padding": {
-			"value": "{spacing.content.xs}",
-			"type": "spacing",
-			"$description": "内側余白。`padding`に適用。"
+			"x": {
+				"sm": {
+					"value": "{space.1}",
+					"type": "spacing",
+					"$description": "Small時の内側余白 (4px)。"
+				},
+				"md": {
+					"value": "{space.15}",
+					"type": "spacing",
+					"$description": "Medium時の内側余白 (6px)。"
+				}
+			}
 		},
 		"gap": {
-			"value": "{spacing.gap.sm}",
+			"value": "{spacing.gap.xs}",
 			"type": "spacing",
 			"$description": "アイコンとテキスト間の隙間。`gap`に適用。"
 		},
@@ -17,35 +26,18 @@
 				"sm": {
 					"value": "{font.size.xs}",
 					"type": "fontSize",
-					"$description": "小サイズ時のフォントサイズ。"
+					"$description": "Small時のフォントサイズ (12px)。"
 				},
 				"md": {
 					"value": "{font.size.sm}",
 					"type": "fontSize",
-					"$description": "中サイズ時のフォントサイズ。"
-				},
-				"lg": {
-					"value": "{font.size.md}",
-					"type": "fontSize",
-					"$description": "大サイズ時のフォントサイズ。"
+					"$description": "Medium時のフォントサイズ (14px)。"
 				}
 			},
 			"weight": {
 				"value": "{font.weight.medium}",
 				"type": "fontWeight",
 				"$description": "チップのフォントウェイト。"
-			},
-			"lineHeight": {
-				"tight": {
-					"value": "{font.lineHeight.tight}",
-					"type": "lineHeight",
-					"$description": "小サイズ時の行高。"
-				},
-				"normal": {
-					"value": "{font.lineHeight.normal}",
-					"type": "lineHeight",
-					"$description": "中・大サイズ時の行高。"
-				}
 			}
 		},
 		"radius": {

@@ -6,7 +6,7 @@
 @use "tailwindcss";
 
 /* Style Dictionary generated tokens */
-@use "./styles/generated/tokens.css";
+@import "./styles/generated/tokens.css";
 
 /* ==================================================
    Global Reset & Base Styles

@@ -65,7 +65,7 @@ export class ChipComponent {
 	/**
 	 * Icon size adjustment
 	 */
-	@Input() iconSize?: 'sm' | 'md' | 'lg';
+	@Input() iconSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 	/**
 	 * Trailing icon (right side, e.g., for remove button)
@@ -97,32 +97,33 @@ export class ChipComponent {
 
 	/**
 	 * Get computed icon size based on chip size
+	 * チップ内アイコンは高密度UIのため、通常より1段階小さいサイズを使用
 	 */
-	get computedIconSize(): 'sm' | 'md' | 'lg' {
+	get computedIconSize(): 'xs' | 'sm' | 'md' | 'lg' | 'xl' {
 		if (this.iconSize) {
 			return this.iconSize;
 		}
-		// Icon-only mode uses larger icons
+		// Icon-only mode uses matching icons
 		if (this.iconOnly) {
 			switch (this.size) {
 				case 'sm':
 					return 'sm';
 				case 'lg':
-					return 'lg';
+					return 'md';
 				case 'md':
 				default:
-					return 'md';
+					return 'sm';
 			}
 		}
-		// Default icon sizes based on chip size
+		// Default: チップ内はテキストと並ぶため、1段階小さいサイズ
 		switch (this.size) {
 			case 'sm':
-				return 'sm';
+				return 'xs';  // sm chip → xs icon (16px)
 			case 'lg':
-				return 'md';
+				return 'sm';  // lg chip → sm icon (20px)
 			case 'md':
 			default:
-				return 'sm';
+				return 'xs';  // md chip → xs icon (16px)
 		}
 	}
 

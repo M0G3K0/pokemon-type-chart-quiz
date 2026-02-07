@@ -19,23 +19,15 @@
 	transition: opacity var(--pt-chip-interaction-transition);
 	white-space: nowrap;
 
-	// Size variants
+	// Size variants - padding均等で iconOnly時に正方形
 	&--sm {
-		padding: var(--pt-chip-padding);
+		padding: var(--pt-chip-padding-x-sm);
 		font-size: var(--pt-chip-font-size-sm);
-		line-height: var(--pt-chip-font-line-height-tight);
 	}
 
 	&--md {
-		padding: var(--pt-chip-padding);
+		padding: var(--pt-chip-padding-x-md);
 		font-size: var(--pt-chip-font-size-md);
-		line-height: var(--pt-chip-font-line-height-normal);
-	}
-
-	&--lg {
-		padding: var(--pt-chip-padding);
-		font-size: var(--pt-chip-font-size-lg);
-		line-height: var(--pt-chip-font-line-height-normal);
 	}
 
 	// Rounded variants

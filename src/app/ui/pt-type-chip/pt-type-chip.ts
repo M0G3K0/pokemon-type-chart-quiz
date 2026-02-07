@@ -78,7 +78,7 @@ export class TypeChipComponent {
 	/**
 	 * Icon size adjustment
 	 */
-	@Input() iconSize?: 'sm' | 'md' | 'lg';
+	@Input() iconSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 	/**
 	 * Text color override

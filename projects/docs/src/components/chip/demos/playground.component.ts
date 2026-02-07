@@ -13,10 +13,10 @@ import { ChipComponent } from '@ui/pt-chip/pt-chip';
 		<pt-chip
 			[size]="size"
 			[rounded]="rounded"
-			[bgColor]="'var(--pt-color-surface-tertiary)'"
-			[textColor]="'var(--pt-color-text-inverse)'"
+			[bgColor]="'var(--pt-color-surface-pressed)'"
+			[textColor]="'var(--pt-color-text-primary)'"
 		>
-			サンプル
+			Chip
 		</pt-chip>
 	`,
 })
@@ -24,7 +24,7 @@ export class ChipPlaygroundComponent {
 	/**
 	 * Chip size
 	 */
-	@Input() size: 'sm' | 'md' | 'lg' = 'md';
+	@Input() size: 'sm' | 'md' = 'md';
 
 	/**
 	 * Border radius
