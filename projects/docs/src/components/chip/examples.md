@@ -13,7 +13,7 @@ route: examples
 
 ## Sizes
 
-3種類のサイズバリエーション（sm / md / lg）：
+2種類のサイズバリエーション（sm / md）：
 
 {{ NgDocActions.demo("ChipSizesDemoComponent") }}
 

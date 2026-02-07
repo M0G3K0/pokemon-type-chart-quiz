@@ -7,11 +7,11 @@ import { ChipComponent } from '@ui/pt-chip/pt-chip';
   imports: [ChipComponent],
   template: `
     <pt-chip 
-      [bgColor]="'var(--pt-color-surface-secondary)'"
+      [bgColor]="'var(--pt-color-surface-pressed)'"
       [textColor]="'var(--pt-color-text-primary)'"
       rounded="md"
       size="md">
-      タグ
+      Chip
     </pt-chip>
   `,
 })

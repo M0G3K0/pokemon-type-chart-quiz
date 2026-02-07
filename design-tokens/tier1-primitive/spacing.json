@@ -16,6 +16,11 @@
 			"type": "spacing",
 			"$description": "物理的な4px。グリッドの最小単位。微細な調整用。"
 		},
+		"15": {
+			"value": "0.375rem",
+			"type": "spacing",
+			"$description": "物理的な6px。コンポーネント用の中間値。"
+		},
 		"2": {
 			"value": "0.5rem",
 			"type": "spacing",

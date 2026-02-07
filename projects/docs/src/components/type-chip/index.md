@@ -11,7 +11,7 @@ title: Guidelines
 **主な特徴**:
 - **タイプカラー自動適用**: 18種類のポケモンタイプに対応
 - **アイコン自動設定**: タイプに応じたSVGアイコンを表示
-- **サイズバリエーション**: sm, md, lg
+- **サイズバリエーション**: sm, md
 - **表示モード**: アイコン+テキスト、アイコンのみ、テキストのみ
 
 ## When to use ✅
@@ -70,20 +70,19 @@ title: Guidelines
 
 ## Size 選択ガイド
 
-| サイズ | 用途 |
-|--------|------|
-| `sm` | 密なリスト、タイプ相性表のセル |
-| `md` | 標準（デフォルト）、ポケモン詳細画面 |
-| `lg` | 強調表示、クイズの選択肢 |
+| サイズ | Padding | Font | 用途 |
+|--------|---------|------|------|
+| `sm` | 4px | 12px | 密なリスト、タイプ相性表のセル |
+| `md` | 6px | 14px | 標準（デフォルト）、ポケモン詳細画面 |
 
 ### 使用例
 
 ```html
 <!-- 相性表のセル（コンパクト） -->
-<pt-type-chip variant="fire" size="sm">ほのお</pt-type-chip>
+<pt-type-chip type="fire" size="sm">ほのお</pt-type-chip>
 
-<!-- クイズの選択肢（大きめ） -->
-<pt-type-chip variant="fire" size="lg">ほのお</pt-type-chip>
+<!-- 標準 -->
+<pt-type-chip type="fire" size="md">ほのお</pt-type-chip>
 ```
 
 ---

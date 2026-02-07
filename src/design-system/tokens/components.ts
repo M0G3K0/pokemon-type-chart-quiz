@@ -17,25 +17,6 @@ export const components = {
       "square": "0.25rem"
     }
   },
-  "badge": {
-    "neutral": {
-      "bg": "#f3f4f6",
-      "text": "#1f2937"
-    },
-    "win": {
-      "bg": "#ecfccb",
-      "text": "#4d7c0f"
-    },
-    "lose": {
-      "bg": "#fee2e2",
-      "text": "#b91c1c"
-    },
-    "padding": {
-      "x": "0.5rem",
-      "y": "0.25rem"
-    },
-    "radius": "0.25rem"
-  },
   "button": {
     "primary": {
       "bg": {
@@ -133,19 +114,19 @@ export const components = {
     }
   },
   "chip": {
-    "padding": "0.25rem",
-    "gap": "0.5rem",
+    "padding": {
+      "x": {
+        "sm": "0.25rem",
+        "md": "0.375rem"
+      }
+    },
+    "gap": "0.25rem",
     "font": {
       "size": {
         "sm": "0.75rem",
-        "md": "0.875rem",
-        "lg": "1rem"
+        "md": "0.875rem"
       },
-      "weight": "500",
-      "lineHeight": {
-        "tight": "1.25",
-        "normal": "1.5"
-      }
+      "weight": "500"
     },
     "radius": {
       "none": "0",
@@ -212,9 +193,11 @@ export const components = {
   },
   "icon": {
     "size": {
+      "xs": "1rem",
       "sm": "1.25rem",
-      "md": "2rem",
-      "lg": "3rem"
+      "md": "1.5rem",
+      "lg": "2rem",
+      "xl": "3rem"
     },
     "color": {
       "default": "#1f2937",

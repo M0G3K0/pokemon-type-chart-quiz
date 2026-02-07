@@ -29,7 +29,7 @@ export class TypeChipPlaygroundComponent {
 	/**
 	 * Chip size
 	 */
-	@Input() size: 'sm' | 'md' | 'lg' = 'md';
+	@Input() size: 'sm' | 'md' = 'md';
 
 	/**
 	 * Show type icon
