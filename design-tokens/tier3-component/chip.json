@@ -5,7 +5,7 @@
 		"padding": {
 			"x": {
 				"sm": {
-					"value": "{space.1}",
+					"value": "{space.10}",
 					"type": "spacing",
 					"$description": "Small時の内側余白 (4px)。"
 				},

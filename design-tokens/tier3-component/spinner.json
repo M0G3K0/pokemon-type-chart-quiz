@@ -4,17 +4,17 @@
 		"$description": "Spinner component for loading state feedback.",
 		"size": {
 			"sm": {
-				"value": "{space.4}",
+				"value": "{space.40}",
 				"type": "sizing",
 				"$description": "小サイズ (16px)。インライン、ボタン内のローディングに使用。"
 			},
 			"md": {
-				"value": "{space.10}",
+				"value": "{space.100}",
 				"type": "sizing",
 				"$description": "中サイズ (40px)。標準的なローディング表示に使用。"
 			},
 			"lg": {
-				"value": "{space.16}",
+				"value": "{space.160}",
 				"type": "sizing",
 				"$description": "大サイズ (64px)。フルスクリーンローディングに使用。"
 			}

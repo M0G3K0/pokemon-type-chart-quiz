@@ -4,27 +4,27 @@
 		"$description": "Icon component for displaying SVG icons with consistent sizing. サイズ選択は周囲の要素間スペース（gap/margin）に基づく: 8px以下→xs, 8-16px→sm, 16-24px→md, 24px以上→lg, 単独表示→xl",
 		"size": {
 			"xs": {
-				"value": "{space.4}",
+				"value": "{space.40}",
 				"type": "sizing",
 				"$description": "コンパクト (16px)。1行に複数の情報要素が並ぶ場面。要素間スペースが8px以下の高密度UI。"
 			},
 			"sm": {
-				"value": "{space.5}",
+				"value": "{space.50}",
 				"type": "sizing",
 				"$description": "標準 (20px)。通常のUI。要素間スペースが8-16px。"
 			},
 			"md": {
-				"value": "{space.6}",
+				"value": "{space.60}",
 				"type": "sizing",
 				"$description": "ゆとり (24px)。余白を持たせたUI。要素間スペースが16-24px。"
 			},
 			"lg": {
-				"value": "{space.8}",
+				"value": "{space.80}",
 				"type": "sizing",
 				"$description": "強調 (32px)。ユーザーの注意を引きたい単独要素。周囲に24px以上の余白。"
 			},
 			"xl": {
-				"value": "{space.12}",
+				"value": "{space.120}",
 				"type": "sizing",
 				"$description": "フォーカス (48px)。画面の主役となる単一要素。コンテンツがほぼアイコンのみ。"
 			}

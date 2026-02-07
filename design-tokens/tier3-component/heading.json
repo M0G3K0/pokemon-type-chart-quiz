@@ -91,7 +91,7 @@
 				"$description": "アクセントバーの幅。視覚的なアクセントとしては十分かつ控えめなサイズ。"
 			},
 			"height": {
-				"value": "{space.6}",
+				"value": "{space.60}",
 				"type": "sizing",
 				"$description": "アクセントバーの高さ。テキストの行高さに合わせた値。"
 			},
@@ -101,7 +101,7 @@
 				"$description": "アクセントバーの角丸。pill形状にする。"
 			},
 			"gap": {
-				"value": "{space.2}",
+				"value": "{space.20}",
 				"type": "spacing",
 				"$description": "アクセントバーとテキスト間のギャップ。"
 			},

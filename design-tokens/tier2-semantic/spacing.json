@@ -4,27 +4,27 @@
 		"content": {
 			"$description": "コンテナ内余白（Inset）の目的で使用",
 			"xs": {
-				"value": "{space.1}",
+				"value": "{space.10}",
 				"type": "spacing",
 				"$description": "コンポーネント内余白の目的で使用。密集したUI用。デフォルトより狭い。"
 			},
 			"sm": {
-				"value": "{space.2}",
+				"value": "{space.20}",
 				"type": "spacing",
 				"$description": "コンポーネント内余白の目的で使用。バッジやチップなどコンパクトな要素用。"
 			},
 			"md": {
-				"value": "{space.4}",
+				"value": "{space.40}",
 				"type": "spacing",
 				"$description": "コンポーネント内余白の目的で使用。デフォルトのパディング。ボタン、入力欄。"
 			},
 			"lg": {
-				"value": "{space.6}",
+				"value": "{space.60}",
 				"type": "spacing",
 				"$description": "コンポーネント内余白の目的で使用。カードなど広い内部空間を持つ要素用。"
 			},
 			"xl": {
-				"value": "{space.8}",
+				"value": "{space.80}",
 				"type": "spacing",
 				"$description": "コンポーネント内余白の目的で使用。大きなカードやセクション用。"
 			}
@@ -32,12 +32,12 @@
 		"layout": {
 			"$description": "レイアウト構造（Stack/Page）の目的で使用",
 			"section": {
-				"value": "{space.12}",
+				"value": "{space.120}",
 				"type": "spacing",
 				"$description": "独立したコンテンツブロック同士を縦に離す距離を表す。セクション間隔。"
 			},
 			"page": {
-				"value": "{space.16}",
+				"value": "{space.160}",
 				"type": "spacing",
 				"$description": "ページ全体の左右余白を表す。コンテナのサイドパディング。"
 			}
@@ -45,27 +45,27 @@
 		"gap": {
 			"$description": "要素間の距離（Inline/Stack gap）の目的で使用",
 			"xs": {
-				"value": "{space.1}",
+				"value": "{space.10}",
 				"type": "spacing",
 				"$description": "隣接要素間の距離を表す。インラインアイコン等、非常に狭い間隔。"
 			},
 			"sm": {
-				"value": "{space.2}",
+				"value": "{space.20}",
 				"type": "spacing",
 				"$description": "隣接要素間の距離を表す。タグリスト、小さなボタン群の間隔。"
 			},
 			"md": {
-				"value": "{space.4}",
+				"value": "{space.40}",
 				"type": "spacing",
 				"$description": "隣接要素間の距離を表す。デフォルトのグリッドギャップ。カードリスト。"
 			},
 			"lg": {
-				"value": "{space.6}",
+				"value": "{space.60}",
 				"type": "spacing",
 				"$description": "隣接要素間の距離を表す。セクション内のカード間など広い間隔。"
 			},
 			"xl": {
-				"value": "{space.8}",
+				"value": "{space.80}",
 				"type": "spacing",
 				"$description": "隣接要素間の距離を表す。セクション間の明確な分割など特大の間隔。"
 			}
