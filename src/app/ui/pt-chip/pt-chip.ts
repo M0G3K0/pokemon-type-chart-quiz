@@ -17,7 +17,7 @@ import { AssetPathService } from '@app/core/services/asset-path.service';
  * <pt-chip [icon]="iconPath" [bgColor]="'var(--pt-color-pokemon-fire-500)'" rounded="full">ほのお</pt-chip>
  * 
  * <!-- Removable -->
- * <pt-chip [bgColor]="'var(--pt-color-slate-200)'" [removable]="true" (remove)="onRemove()">Filter</pt-chip>
+ * <pt-chip [bgColor]="'var(--pt-color-gray-200)'" [removable]="true" (remove)="onRemove()">Filter</pt-chip>
  * 
  * @reference
  * - Atomic Design: Molecule (Generic flexible component)
