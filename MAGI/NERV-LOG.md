@@ -43,27 +43,35 @@
 - B で Level 2 を試す → キャラ設定・ツール権限の知見を貯める → A で Level 3 へ
 - A と B は排他ではなく段階的
 
-### 技術検証: Claude Code on Windows
-- `npx @anthropic-ai/claude-code --version` → v2.1.34 確認済み
-- `claude` コマンドは PATH に未登録（グローバルインストールはされている）
-- WSL2 は未インストール（方式A の場合は必要）
-- **方式B は `.claude/agents/` にファイル置くだけなので環境構築不要**
+### 方針転換: Claude Code → Gemini CLI (2026-02-08)
+- Claude Code は **Claude Pro/Max 契約が必要**（未契約）
+- Antigravity（Google）に課金済み → **Gemini CLI なら追加コストゼロ**
+- Gemini CLI にも `.gemini/agents/*.md` でサブエージェント定義可能（実験的機能）
+- **Claude Code をアンインストール → Gemini CLI に一本化**
 
-### サブエージェント設計案
+### 技術検証: Gemini CLI on Windows ✅
+- `gemini --version` → v0.27.3
+- Google ログイン認証 → **成功**
+- サブエージェント（組み込み `codebase_investigator`）→ **動作確認済み**
+- pt-text のデザイントークン分析を実行 → Tier 3 トークンの使用状況を正確に把握
+- Windows ネイティブ対応（WSL不要）
+
+### サブエージェント配置
 
 ```
-.claude/agents/
-├── ritsuko.md    # 設計レビュー（Read, Grep, Glob のみ）
-├── misato.md     # コード品質チェック（Read, Grep, Glob, Bash）
-├── asuka.md      # テスト実行（Read, Bash）
-└── shinji.md     # 実装（全ツール） ※メイン会話で代替可能
+.gemini/agents/          ← Gemini CLI 用（実際に使用）
+├── ritsuko.md           # 設計レビュー（read_file, grep_search, find_by_name）
+├── misato.md            # コード品質（+ run_command）
+└── asuka.md             # テスト実行（+ run_command）
+
+.claude/agents/          ← 削除済み（Claude Code 未契約のため）
 ```
 
-### TODO
-- [ ] Claude Code を PATH に通す or グローバルインストール
-- [ ] `.claude/agents/` にリツコ・ミサト・アスカを定義
-- [ ] 実タスクで方式B を検証
-- [ ] 検証結果をこのログに追記
+### 残課題
+- [ ] カスタムサブエージェント（ritsuko等）が自動で呼ばれるか検証
+- [ ] settings.json の `experimentalFeatures.subAgents` が有効か確認
+- [ ] frontmatter のツール名がGemini CLI仕様に合っているか調整
+- [ ] 実タスクで ritsuko/misato/asuka を明示的に呼び出してテスト
 
 ---
 
@@ -84,4 +92,6 @@ beta/nerv-phase1: NERV 実験ブランチ。
 ## 参照リンク
 - [shogun 記事](https://zenn.dev/shio_shoppaize/articles/5fee11d03a11a1)
 - [Claude Code サブエージェント公式](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
+- [Gemini CLI サブエージェント](https://geminicli.com) ← 新規追加
 - ビジョンメモ: `tmp/dream-ai-driven-design-system.md`（git管理外）
+
