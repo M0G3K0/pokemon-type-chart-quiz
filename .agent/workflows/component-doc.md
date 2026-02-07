@@ -404,7 +404,7 @@ route: examples
 
 ## Step 7: Style タブ（style.md）
 
-**重要**: 省略せず、全トークンを記載
+**重要**: トークンテーブルは `sync-style-md-tokens.mjs` による自動生成に対応。マーカーを配置すれば `npm run tokens:build` 時に自動更新される。
 
 ```markdown
 ---
@@ -416,48 +416,24 @@ route: style
 
 `pt-[component]`は以下のデザイントークンを使用します。
 
-### [Category 1]
-
-| Visual Attribute | Token (Tier 2/3) | Primitive Value |
-|-----------------|------------------|-----------------|
-| [属性1] | `--pt-[token-name]` | `#HEXCODE` |
-| [属性2] | `--pt-[token-name]` | `#HEXCODE` |
-| [属性3] | `--pt-[token-name]` | `#HEXCODE` |
-[省略せず全て記載]
-
-### Text Color
-
-| Visual Attribute | Token | Primitive Value |
-|-----------------|-------|-----------------|
-| テキスト色 | `--pt-color-text-inverse` | `#FFFFFF` |
+<!-- @auto-generated:token-table:start -->
+<!-- @auto-generated:token-table:end -->
 
 ---
 
-## Layout Specifications
+## [手動セクション]（該当する場合のみ）
 
-| Size | Height | Padding | Gap | Font Size |
-|------|--------|---------|-----|-----------|
-| `sm` | 24px | 8px | 4px | 12px |
-| `md` | 32px | 12px | 6px | 14px |
-| `lg` | 40px | 16px | 8px | 16px |
-
----
-
-## Border Radius
-
-| Rounded | Value |
-|---------|-------|
-| `none` | 0 |
-| `sm` | 4px |
-| `md` | 8px |
-| `full` | 9999px |
+[自動生成テーブルに含まれない補足情報を記載]
+- Layout Specifications（Use Case付きの情報）
+- Interactive States（状態遷移の説明）
+- 関連コンポーネントとの比較表
 
 ---
 
 ## Related Tokens
 
 - `[関連コンポーネント]`: [参照理由]
-- `design-tokens/tier2-semantic/[file].json`: [トークン定義場所]
+- `design-tokens/tier3-component/[component].json`: コンポーネントトークン定義
 ```
 
 ---
@@ -516,7 +492,7 @@ type VariantType = 'type1' | 'type2' | ...;
 /* Demo共通スタイル */
 .ng-doc-demo > * {
   display: flex;
-  gap: var(--pt-space-3);
+  gap: var(--pt-spacing-gap-sm);
   align-items: center;
   flex-wrap: wrap;
 }
@@ -568,9 +544,9 @@ git commit -m "docs([component-name]): add component documentation"
 - [ ] 1デモ = 1観点（サイズ、形状などは分離）
 
 ### Style
-- [ ] 全トークンが省略なしで記載されている
-- [ ] Token名とPrimitive値が並んで記載されている
-- [ ] Layout Specifications（サイズ別）が記載されている
+- [ ] `<!-- @auto-generated:token-table:start/end -->` マーカーが配置されている
+- [ ] `npm run tokens:build` でテーブルが自動生成される
+- [ ] 手動セクション（Layout Specifications等）は自動テーブルと重複しない
 - [ ] アイコン命名規則は含まない（アイコンコンポーネントの責務）
 
 ### API

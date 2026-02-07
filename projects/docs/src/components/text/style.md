@@ -7,38 +7,42 @@ route: style
 
 `pt-text`は以下のデザイントークンを使用します。
 
-### Variant → Token マッピング
 
-| Variant | Typography Token |
-|---------|-----------------|
-| `body-lg` | `--pt-typography-body-lg-*` |
-| `body-md` | `--pt-typography-body-md-*` |
-| `body-sm` | `--pt-typography-body-sm-*` |
-| `label-md` | `--pt-typography-label-md-*` |
-| `label-sm` | `--pt-typography-label-sm-*` |
-| `label-xs` | `--pt-typography-label-xs-*` |
+<!-- @auto-generated:token-table:start -->
+### Color
 
-### Color Tokens
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `primary` | `--pt-text-color-primary` | `{color.text.primary}` |  | 主要テキスト色。`color`に適用。 |
+| `secondary` | `--pt-text-color-secondary` | `{color.text.secondary}` |  | 補助テキスト色。`color`に適用。 |
+| `disabled` | `--pt-text-color-disabled` | `{color.text.disabled}` |  | 無効化テキスト色。`color`に適用。 |
+| `inverse` | `--pt-text-color-inverse` | `{color.text.inverse}` |  | 反転テキスト色（暗い背景上）。`color`に適用。 |
+| `danger` | `--pt-text-color-danger` | `{color.result.lose.default}` |  | 危険・エラーテキスト色。`color`に適用。 |
 
-| Color | Token | 用途 |
-|-------|-------|------|
-| `primary` | `--pt-color-text-primary` | メインテキスト |
-| `secondary` | `--pt-color-text-secondary` | 補助テキスト |
-| `disabled` | `--pt-color-text-disabled` | 無効状態 |
-| `inverse` | `--pt-color-text-inverse` | 反転（暗い背景上） |
-| `danger` | `--pt-color-text-danger` | エラー・警告 |
+### Font
 
-### Weight Tokens
+| Variant | FontFamily | FontSize | FontWeight | LineHeight |
+|------|------|------|------|------|
+| `lg` | `--pt-text-font-lg-font-family` | `--pt-text-font-lg-font-size` | `--pt-text-font-lg-font-weight` | `--pt-text-font-lg-line-height` |
+| `md` | `--pt-text-font-md-font-family` | `--pt-text-font-md-font-size` | `--pt-text-font-md-font-weight` | `--pt-text-font-md-line-height` |
+| `sm` | `--pt-text-font-sm-font-family` | `--pt-text-font-sm-font-size` | `--pt-text-font-sm-font-weight` | `--pt-text-font-sm-line-height` |
 
-| Weight | Token | 用途 |
-|--------|-------|------|
-| `normal` | `--pt-font-weight-normal` | 通常 |
-| `medium` | `--pt-font-weight-medium` | やや強調 |
-| `bold` | `--pt-font-weight-bold` | 強調 |
-| `black` | `--pt-font-weight-black` | 最大強調 |
+### Label
 
----
+| Variant | FontFamily | FontSize | FontWeight | LineHeight |
+|------|------|------|------|------|
+| `md` | `--pt-text-label-md-font-family` | `--pt-text-label-md-font-size` | `--pt-text-label-md-font-weight` | `--pt-text-label-md-line-height` |
+| `sm` | `--pt-text-label-sm-font-family` | `--pt-text-label-sm-font-size` | `--pt-text-label-sm-font-weight` | `--pt-text-label-sm-line-height` |
+| `xs` | `--pt-text-label-xs-font-family` | `--pt-text-label-xs-font-size` | `--pt-text-label-xs-font-weight` | `--pt-text-label-xs-line-height` |
 
+### Weight
+
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `normal` | `--pt-text-weight-normal` | `{font.weight.normal}` |  | 通常ウェイト (400)。`font-weight`に適用。 |
+| `medium` | `--pt-text-weight-medium` | `{font.weight.medium}` |  | 中ウェイト (500)。`font-weight`に適用。 |
+| `bold` | `--pt-text-weight-bold` | `{font.weight.bold}` |  | 太字 (700)。`font-weight`に適用。 |
+<!-- @auto-generated:token-table:end -->
 ## Related Tokens
 
 - `design-tokens/tier2-semantic/typography.json`: タイポグラフィトークン

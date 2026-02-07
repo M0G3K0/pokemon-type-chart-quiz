@@ -7,25 +7,25 @@ route: style
 
 `pt-avatar`は以下のデザイントークンを使用します。
 
+
+<!-- @auto-generated:token-table:start -->
 ### Size
 
-| Visual Attribute | Token (Tier 3) | Primitive Value |
-|-----------------|----------------|-----------------|
-| sm サイズ | `--pt-avatar-size-sm` | `32px` |
-| md サイズ | `--pt-avatar-size-md` | `48px` |
-| lg サイズ | `--pt-avatar-size-lg` | `80px` |
-| xl サイズ | `--pt-avatar-size-xl` | `120px` |
+| Key | Token | Value | Description |
+|------|------|------|------|
+| `sm` | `--pt-avatar-size-sm` | 32px | 小サイズ。リスト内のアイコンなどに使用。 |
+| `md` | `--pt-avatar-size-md` | 48px | 中サイズ。標準的なアバター表示に使用。 |
+| `lg` | `--pt-avatar-size-lg` | 80px | 大サイズ。カード内メイン画像などに使用。 |
+| `xl` | `--pt-avatar-size-xl` | 120px | 特大サイズ。プロフィール画面などに使用。 |
 
-### Border Radius
+### Radius
 
-| Visual Attribute | Token (Tier 3) | Reference |
-|-----------------|----------------|-----------|
-| circle (円形) | `--pt-avatar-radius-circle` | `{radius.full}` |
-| rounded (角丸) | `--pt-avatar-radius-rounded` | `{radius.lg}` |
-| square (小さい角丸) | `--pt-avatar-radius-square` | `{radius.sm}` |
-
----
-
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `circle` | `--pt-avatar-radius-circle` | `{radius.full}` |  | 完全な円形。ユーザーアバター用。 |
+| `rounded` | `--pt-avatar-radius-rounded` | `{radius.lg}` |  | 角丸。サムネイル用。 |
+| `square` | `--pt-avatar-radius-square` | `{radius.sm}` |  | 小さい角丸。ピクセルアート用。 |
+<!-- @auto-generated:token-table:end -->
 ## Layout Specifications
 
 | Size | Dimensions | Use Case |

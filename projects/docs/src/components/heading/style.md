@@ -7,11 +7,32 @@ route: style
 
 `pt-heading`は以下のデザイントークンを使用します。
 
-### Text Color
+<!-- @auto-generated:token-table:start -->
+### Text
 
-| Visual Attribute | Token (Tier 3) | Reference |
-|-----------------|----------------|-----------|
-| テキスト色 | `--pt-heading-text-color` | `{color.text.primary}` |
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `color` | `--pt-heading-text-color` | `{color.text.primary}` |  | 見出しテキストの色 |
+
+### Font
+
+| Variant | FontFamily | FontSize | FontWeight | LineHeight |
+|------|------|------|------|------|
+| `xl` | `--pt-heading-font-xl-font-family` | `--pt-heading-font-xl-font-size` | `--pt-heading-font-xl-font-weight` | `--pt-heading-font-xl-line-height` |
+| `lg` | `--pt-heading-font-lg-font-family` | `--pt-heading-font-lg-font-size` | `--pt-heading-font-lg-font-weight` | `--pt-heading-font-lg-line-height` |
+| `md` | `--pt-heading-font-md-font-family` | `--pt-heading-font-md-font-size` | `--pt-heading-font-md-font-weight` | `--pt-heading-font-md-line-height` |
+| `sm` | `--pt-heading-font-sm-font-family` | `--pt-heading-font-sm-font-size` | `--pt-heading-font-sm-font-weight` | `--pt-heading-font-sm-line-height` |
+
+### Accent
+
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `width` | `--pt-heading-accent-width` |  | 6px | アクセントバーの幅。視覚的なアクセントとしては十分かつ控えめなサイズ。 |
+| `height` | `--pt-heading-accent-height` | `{space.60}` |  | アクセントバーの高さ。テキストの行高さに合わせた値。 |
+| `radius` | `--pt-heading-accent-radius` | `{radius.full}` |  | アクセントバーの角丸。pill形状にする。 |
+| `gap` | `--pt-heading-accent-gap` | `{space.20}` |  | アクセントバーとテキスト間のギャップ。 |
+| `color` | `--pt-heading-accent-color` | `{color.text.primary}` |  | アクセントバーの色。primaryテキストと同じ色でブランド統一感を出す。 |
+<!-- @auto-generated:token-table:end -->
 
 ---
 
@@ -21,32 +42,12 @@ Phase 3e で導入された **Typography Alias Pattern** により、`pt-heading
 
 これにより **100% Tier 3 Isolation** を達成し、コンポーネントが直接 Tier 2 トークンを参照することを防いでいます。
 
-### Size Tokens
-
-| Size | Font Family | Font Size | Font Weight | Line Height |
-|------|-------------|-----------|-------------|-------------|
-| `xl` | `--pt-heading-font-xl-fontFamily` | `--pt-heading-font-xl-fontSize` | `--pt-heading-font-xl-fontWeight` | `--pt-heading-font-xl-lineHeight` |
-| `lg` | `--pt-heading-font-lg-fontFamily` | `--pt-heading-font-lg-fontSize` | `--pt-heading-font-lg-fontWeight` | `--pt-heading-font-lg-lineHeight` |
-| `md` | `--pt-heading-font-md-fontFamily` | `--pt-heading-font-md-fontSize` | `--pt-heading-font-md-fontWeight` | `--pt-heading-font-md-lineHeight` |
-| `sm` | `--pt-heading-font-sm-fontFamily` | `--pt-heading-font-sm-fontSize` | `--pt-heading-font-sm-fontWeight` | `--pt-heading-font-sm-lineHeight` |
-
-### Tier 2 Reference
-
-各 Tier 3 トークンは対応する Tier 2 `typography.heading.*` を参照：
-
-| Tier 3 Token | → | Tier 2 Reference |
-|--------------|---|------------------|
-| `heading.font.xl.fontSize` | → | `{typography.heading.xl.fontSize}` |
-| `heading.font.lg.fontSize` | → | `{typography.heading.lg.fontSize}` |
-| `heading.font.md.fontSize` | → | `{typography.heading.md.fontSize}` |
-| `heading.font.sm.fontSize` | → | `{typography.heading.sm.fontSize}` |
-
 ---
 
 ## Level → Size 自動推論
 
 | Level | Default Size | HTML Element |
-|-------|--------------|--------------|
+|-------|--------------|--------------| 
 | 1 | `xl` | `<h1>` |
 | 2 | `lg` | `<h2>` |
 | 3 | `md` | `<h3>` |
@@ -59,14 +60,6 @@ Phase 3e で導入された **Typography Alias Pattern** により、`pt-heading
 ## Accent Bar
 
 アクセントバーはセクションの開始を視覚的に強調します。
-
-| Visual Attribute | Token (Tier 3) | Value |
-|-----------------|----------------|-------|
-| バーの幅 | `--pt-heading-accent-width` | `6px` |
-| バーの高さ | `--pt-heading-accent-height` | `{space.6}` |
-| バーの角丸 | `--pt-heading-accent-radius` | `{radius.full}` |
-| バーとテキスト間隔 | `--pt-heading-accent-gap` | `{space.2}` |
-| バーの色 | `--pt-heading-accent-color` | `{color.text.primary}` |
 
 > **Note**: Phase 3e で `accent.color` が `{color.primary}` から `{color.text.primary}` に変更されました。これによりブランドカラーとの統一感が強化されています。
 

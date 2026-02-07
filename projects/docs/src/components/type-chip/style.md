@@ -7,37 +7,14 @@ route: style
 
 `pt-type-chip`は以下のデザイントークンを使用します。
 
-### Background Color
 
-| Visual Attribute | Token (Tier 2 Semantic) | Primitive Value |
-|-----------------|-------------------------|-----------------|
-| normal背景 | `--pt-color-pokemon-normal-500` | `#A8A77A` |
-| fire背景 | `--pt-color-pokemon-fire-500` | `#EE8130` |
-| water背景 | `--pt-color-pokemon-water-500` | `#6390F0` |
-| electric背景 | `--pt-color-pokemon-electric-500` | `#F7D02C` |
-| grass背景 | `--pt-color-pokemon-grass-500` | `#7AC74C` |
-| ice背景 | `--pt-color-pokemon-ice-500` | `#96D9D6` |
-| fighting背景 | `--pt-color-pokemon-fighting-500` | `#C22E28` |
-| poison背景 | `--pt-color-pokemon-poison-500` | `#A33EA1` |
-| ground背景 | `--pt-color-pokemon-ground-500` | `#E2BF65` |
-| flying背景 | `--pt-color-pokemon-flying-500` | `#A98FF3` |
-| psychic背景 | `--pt-color-pokemon-psychic-500` | `#F95587` |
-| bug背景 | `--pt-color-pokemon-bug-500` | `#A6B91A` |
-| rock背景 | `--pt-color-pokemon-rock-500` | `#B6A136` |
-| ghost背景 | `--pt-color-pokemon-ghost-500` | `#735797` |
-| dragon背景 | `--pt-color-pokemon-dragon-500` | `#6F35FC` |
-| dark背景 | `--pt-color-pokemon-dark-500` | `#705746` |
-| steel背景 | `--pt-color-pokemon-steel-500` | `#B7B7CE` |
-| fairy背景 | `--pt-color-pokemon-fairy-500` | `#D685AD` |
+<!-- @auto-generated:token-table:start -->
+### Color
 
-### Text Color
-
-| Visual Attribute | Token (Tier 2 Semantic) | Primitive Value |
-|-----------------|-------------------------|-----------------|
-| テキスト色 | `--pt-color-text-inverse` | `#FFFFFF` |
-
----
-
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `text` | `--pt-type-chip-color-text` | `{color.text.inverse}` |  | タイプチップのデフォルトテキスト色。`color`に適用。 |
+<!-- @auto-generated:token-table:end -->
 ## Layout Specifications
 
 `pt-chip`から継承されるサイズ仕様：
