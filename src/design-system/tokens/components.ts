@@ -82,6 +82,31 @@ export const components = {
         "default": "#00000000",
         "focus": "#4b5563"
       }
+    },
+    "gap": "0.25rem",
+    "padding": {
+      "x": {
+        "sm": "0.5rem",
+        "md": "1rem",
+        "lg": "1.5rem"
+      },
+      "y": {
+        "sm": "0.25rem",
+        "md": "0.5rem",
+        "lg": "1rem"
+      }
+    },
+    "font": {
+      "size": {
+        "sm": "0.875rem",
+        "md": "1rem",
+        "lg": "1.125rem"
+      }
+    },
+    "radius": "0.5rem",
+    "interaction": {
+      "duration": "200ms",
+      "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
     }
   },
   "card": {
@@ -319,6 +344,11 @@ export const components = {
         "fontWeight": "400",
         "lineHeight": "1.25"
       }
+    },
+    "weight": {
+      "normal": "400",
+      "medium": "500",
+      "bold": "700"
     }
   },
   "type-chip": {
