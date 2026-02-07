@@ -35,7 +35,7 @@ UI実装（SCSS/CSS）でPrimitiveトークン（Tier 1）を直接使用する�
 - `--pt-color-red-*`
 - `--pt-color-white`
 - `--pt-color-black`
-- `--pt-spacing-{number}`
+- `--pt-space-{number}` (例: `--pt-space-10`, `--pt-space-20`)
 
 ### 2. トークン命名規則
 
