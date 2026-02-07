@@ -1,9 +1,15 @@
 /**
- * NgDoc style.md Token Table Auto-Sync
+ * NgDoc style.md Token Table Auto-Sync (v2: Convention over Configuration)
  *
- * @what  トークンJSONからstyle.mdのトークンテーブルを自動更新する
+ * @what  Tier 3 JSONからstyle.mdのトークンテーブルを自動生成する
  * @why   トークン変更時にNgDocドキュメントの手動更新漏れを防ぐ
  * @failure  style.mdのトークンテーブルがトークンJSONと不整合になることを防止
+ *
+ * v2 変更点:
+ *   - COMPONENT_TABLE_CONFIGS / rowMapper を廃止
+ *   - JSON構造を再帰走査して自動でテーブルを推論
+ *   - マーカーは1つだけ: <!-- @auto-generated:token-table:start/end -->
+ *   - 全コンポーネントを自動検出（Tier 3 JSON があれば処理）
  */
 
 import fs from 'fs';
@@ -21,215 +27,317 @@ const START_MARKER = '<!-- @auto-generated:token-table:start -->';
 const END_MARKER = '<!-- @auto-generated:token-table:end -->';
 
 // ============================================================================
-// Configuration: コンポーネントごとのテーブル定義
+// JSON → Markdown テーブル自動推論
 // ============================================================================
 
 /**
- * @typedef {Object} TableConfig
- * @property {string} id - マーカーID（style.md内で一意）
- * @property {string} tokenPath - トークンJSON内のパス（ドット区切り）
- * @property {string[]} columns - テーブルカラム定義
- * @property {function} rowMapper - キーとトークンオブジェクトから行を生成
+ * ノードがリーフ（トークン定義）かどうかを判定
+ * リーフ = { value: ..., type: ... } を持つオブジェクト
  */
-
-/**
- * CSS変数名を生成（トークンパスからプレフィックス付き変数名を構築）
- */
-function cssVar(component, ...parts) {
-    return `\`--pt-${component}-${parts.join('-')}\``;
+function isLeaf(node) {
+    return (
+        node &&
+        typeof node === 'object' &&
+        'value' in node &&
+        'type' in node &&
+        typeof node.value !== 'object'
+    );
 }
 
 /**
- * 参照値を取得（{xxx.yyy} 形式）
+ * CSS変数名を生成: --pt-{component}-{path parts joined by -}
  */
-function refValue(token) {
-    if (!token || !token.value) return '';
-    return `\`${token.value}\``;
+function cssVarName(component, pathParts) {
+    return `--pt-${component}-${pathParts.join('-')}`;
 }
 
 /**
- * $descriptionからpx値を抽出
+ * value を表示用にフォーマット
+ *   - {xxx.yyy} 形式 → そのまま（参照）
+ *   - それ以外 → 直値
  */
-function extractPxFromDesc(token) {
-    if (!token || !token.$description) return '';
-    const match = token.$description.match(/(\d+px)/);
+function formatValue(value) {
+    if (value === undefined || value === null) return '';
+    const str = String(value);
+    return str;
+}
+
+/**
+ * $description から「CSSプロパティ名」を抽出
+ * 例: "ボタンの背景色。`background-color`に適用。" → "background-color"
+ */
+function extractCssProp(desc) {
+    if (!desc) return '';
+    const match = desc.match(/`([a-z-]+)`に適用/);
     return match ? match[1] : '';
 }
 
 /**
- * $descriptionから用途を抽出（。より前の部分）
+ * JSON を再帰走査し、テーブルセクションを収集する
+ *
+ * 戦略:
+ *   1. 子がすべてリーフ → 1つのテーブル（各子が1行）
+ *   2. 子がすべてグループで、各グループの子構成が同じ → サイズバリアントテーブル
+ *   3. 子が混在 or 異なる構造 → 各子を再帰
+ *
+ * @param {object} node - 現在のJSONノード
+ * @param {string} component - コンポーネント名（CSS変数プレフィックス）
+ * @param {string[]} currentPath - 現在のパス
+ * @param {string} sectionTitle - セクションタイトル
+ * @returns {Array<{title: string, markdown: string}>}
  */
-function extractUsageFromDesc(token) {
-    if (!token || !token.$description) return '';
-    // 最初の文は「概要 (値)。」形式が多いので、2番目以降を取得
-    const parts = token.$description.split('。').filter(Boolean);
-    if (parts.length > 1) return parts.slice(1).join('。').trim();
-    return '';
-}
+function collectTables(node, component, currentPath = [], sectionTitle = '') {
+    if (!node || typeof node !== 'object') return [];
 
-// コンポーネント別テーブル設定
-const COMPONENT_TABLE_CONFIGS = {
-    chip: {
-        tokenFile: 'chip.json',
-        rootKey: 'chip',
-        docsDir: 'chip',
-        tables: [
-            {
-                id: 'size',
-                title: '### Size Tokens',
-                tokenPath: 'padding.x',
-                columns: ['Size', 'Padding Token', 'Font Size Token'],
-                rowMapper: (key, _token, rootObj) => {
-                    const padding = rootObj.padding?.x?.[key];
-                    const fontSize = rootObj.font?.size?.[key];
-                    const padVal = padding ? extractPxFromDesc(padding) : '';
-                    const fontVal = fontSize ? extractPxFromDesc(fontSize) : '';
-                    return `| \`${key}\` | ${cssVar('chip', 'padding-x', key)} (${padVal}) | ${cssVar('chip', 'font-size', key)} (${fontVal}) |`;
-                },
-            },
-            {
-                id: 'radius',
-                title: '### Border Radius',
-                tokenPath: 'radius',
-                columns: ['Rounded', 'Token', 'Value'],
-                rowMapper: (key, token) => {
-                    const val = token.value.startsWith('{') ? extractPxFromDesc(token) || token.value : token.value;
-                    return `| \`${key}\` | ${cssVar('chip', 'radius', key)} | ${val} |`;
-                },
-            },
-        ],
-    },
-    icon: {
-        tokenFile: 'icon.json',
-        rootKey: 'icon',
-        docsDir: 'icon',
-        tables: [
-            {
-                id: 'size',
-                title: '### Size',
-                tokenPath: 'size',
-                columns: ['Size', 'Token (Tier 3)', 'Reference', 'Value', '用途'],
-                rowMapper: (key, token) => {
-                    const px = extractPxFromDesc(token);
-                    const usage = extractUsageFromDesc(token);
-                    return `| \`${key}\` | ${cssVar('icon', 'size', key)} | ${refValue(token)} | ${px} | ${usage} |`;
-                },
-            },
-            {
-                id: 'color',
-                title: '### Color',
-                tokenPath: 'color',
-                columns: ['Variant', 'Token (Tier 3)', 'Reference', '用途'],
-                rowMapper: (key, token) => {
-                    const desc = token.$description || '';
-                    return `| \`${key}\` | ${cssVar('icon', 'color', key)} | ${refValue(token)} | ${desc} |`;
-                },
-            },
-        ],
-    },
-    spinner: {
-        tokenFile: 'spinner.json',
-        rootKey: 'spinner',
-        docsDir: 'spinner',
-        tables: [
-            {
-                id: 'size',
-                title: '### Size',
-                tokenPath: 'size',
-                columns: ['Size', 'Token (Tier 3)', 'Value', '用途'],
-                rowMapper: (key, token) => {
-                    const px = extractPxFromDesc(token);
-                    const usage = extractUsageFromDesc(token);
-                    return `| \`${key}\` | ${cssVar('spinner', 'size', key)} | ${px} | ${usage} |`;
-                },
-            },
-            {
-                id: 'border-width',
-                title: '### Border Width',
-                tokenPath: 'border.width',
-                columns: ['Size', 'Token (Tier 3)', 'Value'],
-                rowMapper: (key, token) => {
-                    return `| \`${key}\` | ${cssVar('spinner', 'border-width', key)} | ${token.value} |`;
-                },
-            },
-            {
-                id: 'color',
-                title: '### Color',
-                tokenPath: 'color',
-                columns: ['Visual Attribute', 'Token (Tier 3)', 'Reference', '用途'],
-                rowMapper: (key, token) => {
-                    const desc = token.$description || '';
-                    return `| ${key.charAt(0).toUpperCase() + key.slice(1)} | ${cssVar('spinner', 'color', key)} | ${refValue(token)} | ${desc} |`;
-                },
-            },
-        ],
-    },
-};
+    const childKeys = Object.keys(node).filter((k) => !k.startsWith('$'));
+    if (childKeys.length === 0) return [];
 
-// ============================================================================
-// Generator Logic
-// ============================================================================
+    // 全子要素を分類
+    const leafChildren = {};
+    const groupChildren = {};
 
-function getByPath(obj, dotPath) {
-    return dotPath.split('.').reduce((cur, key) => {
-        if (cur && typeof cur === 'object' && key in cur) return cur[key];
-        return undefined;
-    }, obj);
-}
+    for (const key of childKeys) {
+        const child = node[key];
+        if (isLeaf(child)) {
+            leafChildren[key] = child;
+        } else if (child && typeof child === 'object') {
+            groupChildren[key] = child;
+        }
+    }
 
-function extractKeys(obj) {
-    if (!obj || typeof obj !== 'object') return [];
-    return Object.keys(obj).filter((k) => !k.startsWith('$'));
+    const leafKeys = Object.keys(leafChildren);
+    const groupKeys = Object.keys(groupChildren);
+
+    const tables = [];
+
+    // ケース1: 全子がリーフ → フラットテーブル
+    if (leafKeys.length > 0 && groupKeys.length === 0) {
+        const title = sectionTitle || pathToTitle(currentPath);
+        tables.push({
+            title: `### ${title}`,
+            markdown: generateFlatTable(leafChildren, component, currentPath),
+        });
+        return tables;
+    }
+
+    // ケース2: 全子がグループ → サイズバリアントテーブルの可能性
+    if (leafKeys.length === 0 && groupKeys.length > 0) {
+        // 各グループの子構成が同じか確認（サイズバリアントパターン）
+        if (isVariantPattern(groupChildren)) {
+            const title = sectionTitle || pathToTitle(currentPath);
+            tables.push({
+                title: `### ${title}`,
+                markdown: generateVariantTable(groupChildren, component, currentPath),
+            });
+            return tables;
+        }
+
+        // 異なる構造 → 各子を再帰
+        for (const key of groupKeys) {
+            const childTitle = pathToTitle([...currentPath, key]);
+            const sub = collectTables(groupChildren[key], component, [...currentPath, key], childTitle);
+            tables.push(...sub);
+        }
+        return tables;
+    }
+
+    // ケース3: 混在 → リーフだけのテーブル + グループを再帰
+    if (leafKeys.length > 0) {
+        const title = sectionTitle || pathToTitle(currentPath);
+        tables.push({
+            title: `### ${title}`,
+            markdown: generateFlatTable(leafChildren, component, currentPath),
+        });
+    }
+    for (const key of groupKeys) {
+        const childTitle = pathToTitle([...currentPath, key]);
+        const sub = collectTables(groupChildren[key], component, [...currentPath, key], childTitle);
+        tables.push(...sub);
+    }
+    return tables;
 }
 
 /**
- * テーブルのMarkdownを生成
+ * パスからセクションタイトルを生成
+ * 例: ['padding', 'x'] → "Padding X"
  */
-function generateTable(tableConfig, rootObj) {
-    const tokenObj = getByPath(rootObj, tableConfig.tokenPath);
-    const keys = extractKeys(tokenObj);
-    if (keys.length === 0) return null;
+function pathToTitle(parts) {
+    if (parts.length === 0) return 'Tokens';
+    return parts.map((p) => p.charAt(0).toUpperCase() + p.slice(1)).join(' ');
+}
 
+/**
+ * サイズバリアントパターン かどうか判定
+ * 条件: 各グループの直下の子キー構成が（$除き）おおよそ同じ
+ */
+function isVariantPattern(groups) {
+    const keys = Object.keys(groups);
+    if (keys.length < 2) return false;
+
+    // 各グループの子キー（リーフのみ）を取得
+    const childKeysList = keys.map((k) => {
+        const child = groups[k];
+        if (!child || typeof child !== 'object') return [];
+        return Object.keys(child)
+            .filter((ck) => !ck.startsWith('$') && isLeaf(child[ck]))
+            .sort();
+    });
+
+    // 全グループの子キーが同一か
+    const first = JSON.stringify(childKeysList[0]);
+    return childKeysList.every((ks) => JSON.stringify(ks) === first);
+}
+
+// ============================================================================
+// テーブル生成
+// ============================================================================
+
+/**
+ * フラットテーブル: リーフ群 → Markdown テーブル
+ * | Key | Token | Value | Description |
+ */
+function generateFlatTable(leaves, component, parentPath) {
+    const keys = Object.keys(leaves);
     const lines = [];
-    lines.push(tableConfig.title);
-    lines.push('');
 
-    // ヘッダー
-    const header = `| ${tableConfig.columns.join(' | ')} |`;
-    const separator = `|${tableConfig.columns.map(() => '------').join('|')}|`;
-    lines.push(header);
-    lines.push(separator);
+    // 列構成を決定
+    const hasRef = keys.some((k) => String(leaves[k].value).startsWith('{'));
+    const hasDesc = keys.some((k) => leaves[k].$description);
 
-    // 行
+    const columns = ['Key', 'Token'];
+    if (hasRef) columns.push('Reference');
+    columns.push('Value');
+    if (hasDesc) columns.push('Description');
+
+    lines.push(`| ${columns.join(' | ')} |`);
+    lines.push(`|${columns.map(() => '------').join('|')}|`);
+
     for (const key of keys) {
-        const token = tokenObj[key];
-        lines.push(tableConfig.rowMapper(key, token, rootObj));
+        const token = leaves[key];
+        const varName = cssVarName(component, [...parentPath, key]);
+        const value = formatValue(token.value);
+        const isRef = String(value).startsWith('{');
+
+        const cells = [`\`${key}\``, `\`${varName}\``];
+        if (hasRef) cells.push(isRef ? `\`${value}\`` : '');
+        cells.push(isRef ? extractDirectValue(token) : `${value}`);
+        if (hasDesc) cells.push(token.$description || '');
+
+        lines.push(`| ${cells.join(' | ')} |`);
     }
 
     return lines.join('\n');
 }
 
 /**
- * style.md内のマーカー間を置換
+ * $description や value から直値を推定
  */
-function replaceMarkerContent(content, tableId, newContent) {
-    const startTag = `<!-- @auto-generated:${tableId}:start -->`;
-    const endTag = `<!-- @auto-generated:${tableId}:end -->`;
+function extractDirectValue(token) {
+    if (!token) return '';
+    // $descriptionからpx値
+    if (token.$description) {
+        const match = token.$description.match(/(\d+(?:\.\d+)?px)/);
+        if (match) return match[1];
+    }
+    // 参照でないならvalue そのもの
+    if (!String(token.value).startsWith('{')) return String(token.value);
+    return '';
+}
 
-    const startIdx = content.indexOf(startTag);
-    const endIdx = content.indexOf(endTag);
+/**
+ * バリアントテーブル: 同構造のグループ群 → クロステーブル
+ * 例: padding.x = { sm: {value}, md: {value} } → Size | Token | Value
+ */
+function generateVariantTable(groups, component, parentPath) {
+    const variantKeys = Object.keys(groups);
+    const firstGroup = groups[variantKeys[0]];
+    const propKeys = Object.keys(firstGroup).filter(
+        (k) => !k.startsWith('$') && isLeaf(firstGroup[k])
+    );
+
+    const lines = [];
+
+    // 列構成: Variant | property1 Token | property2 Token | ...
+    if (propKeys.length === 1) {
+        // 単一プロパティ → シンプルテーブル
+        const columns = ['Variant', 'Token', 'Value', 'Description'];
+        lines.push(`| ${columns.join(' | ')} |`);
+        lines.push(`|${columns.map(() => '------').join('|')}|`);
+
+        for (const variant of variantKeys) {
+            const token = groups[variant][propKeys[0]];
+            if (!isLeaf(token)) continue;
+            const varName = cssVarName(component, [...parentPath, variant, propKeys[0]]);
+            const value = formatValue(token.value);
+            const desc = token.$description || '';
+            lines.push(`| \`${variant}\` | \`${varName}\` | ${value} | ${desc} |`);
+        }
+    } else {
+        // 複数プロパティ → 各プロパティの列
+        const columns = ['Variant', ...propKeys.map((p) => p.charAt(0).toUpperCase() + p.slice(1))];
+        lines.push(`| ${columns.join(' | ')} |`);
+        lines.push(`|${columns.map(() => '------').join('|')}|`);
+
+        for (const variant of variantKeys) {
+            const cells = [`\`${variant}\``];
+            for (const prop of propKeys) {
+                const token = groups[variant][prop];
+                if (isLeaf(token)) {
+                    const varName = cssVarName(component, [...parentPath, variant, prop]);
+                    cells.push(`\`${varName}\``);
+                } else {
+                    cells.push('');
+                }
+            }
+            lines.push(`| ${cells.join(' | ')} |`);
+        }
+    }
+
+    return lines.join('\n');
+}
+
+// ============================================================================
+// style.md マーカー置換
+// ============================================================================
+
+/**
+ * style.md 内の統合マーカー間を置換
+ */
+function replaceMarkerContent(content, newContent) {
+    const startIdx = content.indexOf(START_MARKER);
+    const endIdx = content.indexOf(END_MARKER);
 
     if (startIdx === -1 || endIdx === -1) {
         return { content, replaced: false };
     }
 
-    const before = content.substring(0, startIdx + startTag.length);
+    const before = content.substring(0, startIdx + START_MARKER.length);
     const after = content.substring(endIdx);
 
     return {
         content: `${before}\n${newContent}\n${after}`,
         replaced: true,
     };
+}
+
+// ============================================================================
+// コンポーネント自動検出 & docs ディレクトリ名マッピング
+// ============================================================================
+
+/**
+ * Tier 3 JSON ファイル名からdocsディレクトリ名を推定
+ * JSON rootKey はキャメルケース（radioButton）、docs は kebab-case（radio-button）
+ */
+function jsonNameToDocsDir(jsonBaseName) {
+    // JSONファイル名がそのまま docs ディレクトリ名
+    return jsonBaseName;
+}
+
+/**
+ * JSON の root key を取得
+ */
+function getRootKey(jsonData) {
+    return Object.keys(jsonData).find((k) => !k.startsWith('$'));
 }
 
 // ============================================================================
@@ -240,49 +348,61 @@ console.log('\n🔄 Syncing token tables to style.md...\n');
 
 let hasError = false;
 let updatedCount = 0;
+let skippedCount = 0;
 
-for (const [componentName, config] of Object.entries(COMPONENT_TABLE_CONFIGS)) {
-    const tokenFilePath = path.join(TOKENS_DIR, config.tokenFile);
-    const styleMdPath = path.join(DOCS_DIR, config.docsDir, 'style.md');
+// Tier 3 JSON を自動検出
+const jsonFiles = fs.readdirSync(TOKENS_DIR).filter((f) => f.endsWith('.json'));
 
-    if (!fs.existsSync(tokenFilePath)) {
-        console.error(`  ❌ Token file not found: ${config.tokenFile}`);
-        hasError = true;
-        continue;
-    }
+for (const jsonFile of jsonFiles) {
+    const baseName = jsonFile.replace('.json', '');
+    const docsDir = jsonNameToDocsDir(baseName);
+    const tokenFilePath = path.join(TOKENS_DIR, jsonFile);
+    const styleMdPath = path.join(DOCS_DIR, docsDir, 'style.md');
 
     if (!fs.existsSync(styleMdPath)) {
-        console.warn(`  ⚠️  style.md not found for ${componentName}, skipping`);
+        console.log(`  ⏭️  No style.md: ${docsDir}/`);
+        skippedCount++;
         continue;
     }
 
-    const tokenData = JSON.parse(fs.readFileSync(tokenFilePath, 'utf8'));
-    const rootObj = tokenData[config.rootKey];
-    let styleMd = fs.readFileSync(styleMdPath, 'utf8');
-    let anyReplaced = false;
-
-    for (const tableConfig of config.tables) {
-        const tableContent = generateTable(tableConfig, rootObj);
-        if (!tableContent) continue;
-
-        const result = replaceMarkerContent(styleMd, tableConfig.id, tableContent);
-        if (result.replaced) {
-            styleMd = result.content;
-            anyReplaced = true;
-        } else {
-            console.warn(`  ⚠️  Markers for "${tableConfig.id}" not found in ${componentName}/style.md`);
-        }
+    const jsonData = JSON.parse(fs.readFileSync(tokenFilePath, 'utf8'));
+    const rootKey = getRootKey(jsonData);
+    if (!rootKey) {
+        console.warn(`  ⚠️  No root key found in ${jsonFile}`);
+        continue;
     }
 
-    if (anyReplaced) {
-        const original = fs.readFileSync(styleMdPath, 'utf8');
-        if (original !== styleMd) {
-            fs.writeFileSync(styleMdPath, styleMd, 'utf8');
-            console.log(`  ✅ Updated: ${componentName}/style.md`);
-            updatedCount++;
-        } else {
-            console.log(`  ⏭️  No changes: ${componentName}/style.md`);
-        }
+    const rootObj = jsonData[rootKey];
+    const component = baseName; // CSS変数のプレフィックス
+
+    // テーブルを自動生成
+    const tables = collectTables(rootObj, component);
+    if (tables.length === 0) {
+        console.log(`  ⏭️  No tables generated: ${docsDir}/`);
+        skippedCount++;
+        continue;
+    }
+
+    // 全テーブルを結合
+    const allTablesContent = tables.map((t) => `${t.title}\n\n${t.markdown}`).join('\n\n');
+
+    // style.md を読み込んでマーカー置換
+    let styleMd = fs.readFileSync(styleMdPath, 'utf8');
+
+    const result = replaceMarkerContent(styleMd, allTablesContent);
+    if (!result.replaced) {
+        console.log(`  ⏭️  No markers in: ${docsDir}/style.md`);
+        skippedCount++;
+        continue;
+    }
+
+    // 変更あれば書き出し
+    if (styleMd !== result.content) {
+        fs.writeFileSync(styleMdPath, result.content, 'utf8');
+        console.log(`  ✅ Updated: ${docsDir}/style.md (${tables.length} table(s))`);
+        updatedCount++;
+    } else {
+        console.log(`  ⏭️  No changes: ${docsDir}/style.md`);
     }
 }
 
@@ -290,5 +410,7 @@ if (hasError) {
     console.error('\n❌ Some sync operations failed.');
     process.exit(1);
 } else {
-    console.log(`\n✅ Token table sync completed. (${updatedCount} file(s) updated)`);
+    console.log(
+        `\n✅ Token table sync completed. (${updatedCount} updated, ${skippedCount} skipped)`
+    );
 }

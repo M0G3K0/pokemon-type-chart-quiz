@@ -7,44 +7,40 @@ route: style
 
 `pt-spinner`は以下のデザイントークンを使用します。
 
-<!-- @auto-generated:size:start -->
+
+
+
+<!-- @auto-generated:token-table:start -->
 ### Size
 
-| Size | Token (Tier 3) | Value | 用途 |
-|------|------|------|------|
-| `sm` | `--pt-spinner-size-sm` | 16px | インライン、ボタン内のローディングに使用 |
-| `md` | `--pt-spinner-size-md` | 40px | 標準的なローディング表示に使用 |
-| `lg` | `--pt-spinner-size-lg` | 64px | フルスクリーンローディングに使用 |
-<!-- @auto-generated:size:end -->
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `sm` | `--pt-spinner-size-sm` | `{space.40}` | 16px | 小サイズ (16px)。インライン、ボタン内のローディングに使用。 |
+| `md` | `--pt-spinner-size-md` | `{space.100}` | 40px | 中サイズ (40px)。標準的なローディング表示に使用。 |
+| `lg` | `--pt-spinner-size-lg` | `{space.160}` | 64px | 大サイズ (64px)。フルスクリーンローディングに使用。 |
 
-<!-- @auto-generated:border-width:start -->
 ### Border Width
 
-| Size | Token (Tier 3) | Value |
-|------|------|------|
-| `sm` | `--pt-spinner-border-width-sm` | 2px |
-| `md` | `--pt-spinner-border-width-md` | 3px |
-| `lg` | `--pt-spinner-border-width-lg` | 4px |
-<!-- @auto-generated:border-width:end -->
+| Key | Token | Value | Description |
+|------|------|------|------|
+| `sm` | `--pt-spinner-border-width-sm` | 2px | 小サイズ時のボーダー幅。 |
+| `md` | `--pt-spinner-border-width-md` | 3px | 中サイズ時のボーダー幅。 |
+| `lg` | `--pt-spinner-border-width-lg` | 4px | 大サイズ時のボーダー幅。 |
 
-<!-- @auto-generated:color:start -->
 ### Color
 
-| Visual Attribute | Token (Tier 3) | Reference | 用途 |
-|------|------|------|------|
-| Primary | `--pt-spinner-color-primary` | `{color.text.primary}` | プライマリカラー。デフォルトのスピナー色。 |
-| Secondary | `--pt-spinner-color-secondary` | `{color.text.secondary}` | セカンダリカラー。控えめなスピナー色。 |
-| Track | `--pt-spinner-color-track` | `rgba(0, 0, 0, 0.1)` | トラック色。ドーナツ状スピナーの背景リング。 |
-<!-- @auto-generated:color:end -->
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `primary` | `--pt-spinner-color-primary` | `{color.text.primary}` |  | プライマリカラー。デフォルトのスピナー色。 |
+| `secondary` | `--pt-spinner-color-secondary` | `{color.text.secondary}` |  | セカンダリカラー。控えめなスピナー色。 |
+| `track` | `--pt-spinner-color-track` |  | rgba(0, 0, 0, 0.1) | トラック色。ドーナツ状スピナーの背景リング。 |
 
 ### Animation
 
-| Property | Token (Tier 3) | Value |
-|----------|----------------|-------|
-| Duration | `--pt-spinner-animation-duration` | 0.8s |
-
----
-
+| Key | Token | Value | Description |
+|------|------|------|------|
+| `duration` | `--pt-spinner-animation-duration` | 0.8s | 1回転にかかる時間。 |
+<!-- @auto-generated:token-table:end -->
 ## Visual Design
 
 ### ドーナツ形状

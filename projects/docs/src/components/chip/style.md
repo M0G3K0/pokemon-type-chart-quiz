@@ -7,28 +7,48 @@ route: style
 
 `pt-chip`は以下のデザイントークンを使用します。
 
-<!-- @auto-generated:size:start -->
-### Size Tokens
+<!-- @auto-generated:token-table:start -->
+### Tokens
 
-| Size | Padding Token | Font Size Token |
-|------|------|------|
-| `sm` | `--pt-chip-padding-x-sm` (4px) | `--pt-chip-font-size-sm` (12px) |
-| `md` | `--pt-chip-padding-x-md` (6px) | `--pt-chip-font-size-md` (14px) |
-<!-- @auto-generated:size:end -->
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `gap` | `--pt-chip-gap` | `{spacing.gap.xs}` |  | アイコンとテキスト間の隙間。`gap`に適用。 |
 
-### Other Tokens
+### Padding X
 
-| Property | Token | Value |
-|----------|-------|-------|
-| Gap | `--pt-chip-gap` | 4px |
-| Font Weight | `--pt-chip-font-weight` | 500 |
-| Transition | `--pt-chip-interaction-transition` | 150ms |
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `sm` | `--pt-chip-padding-x-sm` | `{space.10}` | 4px | Small時の内側余白 (4px)。 |
+| `md` | `--pt-chip-padding-x-md` | `{space.15}` | 6px | Medium時の内側余白 (6px)。 |
 
-### Text Color
+### Font
 
-| Visual Attribute | Token | Primitive Value |
-|-----------------|-------|-----------------|
-| テキスト色（デフォルト） | `--pt-color-text-inverse` | `#FFFFFF` |
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `weight` | `--pt-chip-font-weight` | `{font.weight.medium}` |  | チップのフォントウェイト。 |
+
+### Font Size
+
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `sm` | `--pt-chip-font-size-sm` | `{font.size.xs}` | 12px | Small時のフォントサイズ (12px)。 |
+| `md` | `--pt-chip-font-size-md` | `{font.size.sm}` | 14px | Medium時のフォントサイズ (14px)。 |
+
+### Radius
+
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `none` | `--pt-chip-radius-none` |  | 0 | 角丸なし。 |
+| `sm` | `--pt-chip-radius-sm` | `{semantic-border.radius.sm}` |  | 小さい角丸。 |
+| `md` | `--pt-chip-radius-md` | `{semantic-border.radius.md}` |  | 標準の角丸。 |
+| `full` | `--pt-chip-radius-full` |  | 9999px | 完全な丸み（ピル形状）。 |
+
+### Interaction
+
+| Key | Token | Reference | Value | Description |
+|------|------|------|------|------|
+| `transition` | `--pt-chip-interaction-transition` | `{motion.duration.quick}` |  | インタラクション時のトランジション時間。 |
+<!-- @auto-generated:token-table:end -->
 
 ---
 
@@ -43,19 +63,6 @@ route: style
 
 ---
 
-<!-- @auto-generated:radius:start -->
-### Border Radius
-
-| Rounded | Token | Value |
-|------|------|------|
-| `none` | `--pt-chip-radius-none` | 0 |
-| `sm` | `--pt-chip-radius-sm` | {semantic-border.radius.sm} |
-| `md` | `--pt-chip-radius-md` | {semantic-border.radius.md} |
-| `full` | `--pt-chip-radius-full` | 9999px |
-<!-- @auto-generated:radius:end -->
-
----
-
 ## Interactive States
 
 | State | Style |
@@ -63,29 +70,6 @@ route: style
 | Default | `opacity: 1` |
 | Hover (clickable) | `opacity: 0.8` |
 | Active (clickable) | `opacity: 0.9` |
-
----
-
-## CSS Variables (Generated)
-
-```css
-/* Padding - 縦横均等で適用 */
---pt-chip-padding-x-sm: var(--pt-space-1);   /* 4px */
---pt-chip-padding-x-md: var(--pt-space-15);  /* 6px */
-
-/* Font Size */
---pt-chip-font-size-sm: var(--pt-font-size-xs);  /* 12px */
---pt-chip-font-size-md: var(--pt-font-size-sm);  /* 14px */
-
-/* Gap */
---pt-chip-gap: var(--pt-spacing-gap-xs);  /* 4px */
-
-/* Border Radius */
---pt-chip-radius-none: 0;
---pt-chip-radius-sm: var(--pt-semantic-border-radius-sm);  /* 4px */
---pt-chip-radius-md: var(--pt-semantic-border-radius-md);  /* 8px */
---pt-chip-radius-full: 9999px;
-```
 
 ---
 
