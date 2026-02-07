@@ -149,16 +149,6 @@ docs/issue番号-description
 chore/issue番号-description
 ```
 
-### 🔴 NERV ブランチ戦略
-
-```
-main: 通常の開発。NERV関連はマージしない。
-beta/nerv-phase1: NERV Phase 0-1 のお試しブランチ。
-
-マージ条件: Level 2（デュアルエージェント）の技術的フィージビリティ確認後。
-不可能な場合: MAGI/ とワークフロー変更のみ cherry-pick を検討。
-```
-
 ---
 
 ## 4. ワークフロー一覧
