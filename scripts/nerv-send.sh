@@ -19,8 +19,10 @@ case "${AGENT_NAME}" in
   ritsuko)   WINDOW=2 ;;
   shinji)    WINDOW=3 ;;
   misato)    WINDOW=4 ;;
-  asuka)     WINDOW=5 ;;
-  rei)       WINDOW=6 ;;
+  kaworu)    WINDOW=5 ;;
+  asuka)     WINDOW=6 ;;
+  kaji)      WINDOW=7 ;;
+  rei)       WINDOW=8 ;;
   *)
     echo "❌ Unknown agent: ${AGENT_NAME}"
     exit 1
