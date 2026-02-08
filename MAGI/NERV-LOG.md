@@ -67,11 +67,56 @@
 .claude/agents/          ← 削除済み（Claude Code 未契約のため）
 ```
 
-### 残課題
-- [ ] カスタムサブエージェント（ritsuko等）が自動で呼ばれるか検証
-- [ ] settings.json の `experimentalFeatures.subAgents` が有効か確認
-- [ ] frontmatter のツール名がGemini CLI仕様に合っているか調整
-- [ ] 実タスクで ritsuko/misato/asuka を明示的に呼び出してテスト
+### Level 2 検証結果 ✅ (2026-02-08)
+
+#### ✅ 成功
+- **リツコ**: 設計レビューサブエージェントが正常動作。Tier 3 トークン遵守を正確に検証
+  - ペルソナ: 報告形式で `🔬 リツコ: MAGIに照会……` が出力され、`「パターン確認、問題ありません」` と報告
+- **アスカ**: テスト担当サブエージェント。ペルソナは反映（「テスト結果を教えてくれれば、アスカが責任を持って報告してあげるから、早くしなさい！」）
+
+#### ⚠️ 制約
+- **非対話モード (`-p`) では `run_shell_command` が無効** — テスト実行にはインタラクティブモードが必要
+- **ペルソナは最終報告時のみ** — 中間分析はGeminiデフォルト口調。system prompt 強化で改善余地
+
+#### 🔧 ツール名のトラブルシューティング
+- `GrepTool`, `GlobTool` → ❌ 無効（Claude Code 形式）
+- `read_many_files` → ❌ 無効（サブエージェントでは利用不可）
+- 正しいツール名（ソースコード `tool-names.ts` から確認）:
+
+```
+read_file, grep_search, glob, list_directory, run_shell_command,
+write_file, replace, google_web_search, web_fetch, save_memory,
+write_todos, activate_skill, ask_user
+```
+
+#### 設定
+- `~/.gemini/settings.json` に `"experimental": { "enableAgents": true }` 必要
+- プロジェクトレベル `.gemini/settings.json` にも同設定
+
+### Phase 2 → Phase 3 への移行判定
+- **Level 2 フィージビリティ: ✅ 確認完了**
+- カスタムサブエージェントは動作する
+- ペルソナ・ツール制限・報告形式すべて機能
+- **Level 3 に進む条件は満たされた**
+
+---
+
+## Phase 3: Level 3 準備 🔄 (2026-02-08〜)
+
+### アーキテクチャ
+```
+Level 3: WSL2 + tmux + Gemini CLI
+  将軍（ユーザー） → YAML → 家老（メインエージェント）
+  家老 → タスク分解 → 足軽×N（並列エージェント）
+  足軽 = ritsuko / misato / asuka の独立プロセス
+```
+
+### TODO
+- [ ] WSL2 インストール
+- [ ] WSL 内に Node.js + Gemini CLI セットアップ
+- [ ] tmux インストール・設定
+- [ ] 将軍-家老-足軽 構造の実装
+- [ ] 実タスクで全体動作検証
 
 ---
 
@@ -82,9 +127,8 @@ main: 通常の開発。NERV関連はマージしない。
 beta/nerv-phase1: NERV 実験ブランチ。
 
 マージ条件:
-  Level 2 の技術的フィージビリティ確認後。
-  価値ありなら MAGI/ とワークフロー変更のみ cherry-pick でマージ。
-  価値なしならブランチごと破棄。
+  Level 2 の技術的フィージビリティ確認後。 ← ✅ 完了
+  Level 3 の構築が安定したら MAGI/ とワークフロー変更のみ cherry-pick。
 ```
 
 ---
@@ -92,6 +136,8 @@ beta/nerv-phase1: NERV 実験ブランチ。
 ## 参照リンク
 - [shogun 記事](https://zenn.dev/shio_shoppaize/articles/5fee11d03a11a1)
 - [Claude Code サブエージェント公式](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
-- [Gemini CLI サブエージェント](https://geminicli.com) ← 新規追加
+- [Gemini CLI サブエージェント](https://geminicli.com)
+- [Gemini CLI ソースコード tool-names.ts](https://github.com/google-gemini/gemini-cli/blob/main/packages/core/src/tools/tool-names.ts)
 - ビジョンメモ: `tmp/dream-ai-driven-design-system.md`（git管理外）
+
 

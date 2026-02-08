@@ -1,5 +1,5 @@
 {
-    "experimentalFeatures": {
-        "subAgents": true
+    "experimental": {
+        "enableAgents": true
     }
 }
