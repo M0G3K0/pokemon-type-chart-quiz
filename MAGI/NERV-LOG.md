@@ -112,11 +112,54 @@ Level 3: WSL2 + tmux + Gemini CLI
 ```
 
 ### TODO
-- [ ] WSL2 インストール
-- [ ] WSL 内に Node.js + Gemini CLI セットアップ
-- [ ] tmux インストール・設定
-- [ ] 将軍-家老-足軽 構造の実装
-- [ ] 実タスクで全体動作検証
+- [x] WSL2 インストール → Ubuntu 24.04 (noble)
+- [x] WSL 内に Node.js + Gemini CLI セットアップ → Node v22.22.0 + Gemini CLI 0.27.3
+- [x] tmux インストール・設定 → tmux 3.4
+- [x] 将軍-家老-足軽 構造の実装 → scripts/nerv-*.sh
+- [x] 実タスクで全体動作検証 → **成功 🎉**
+
+### Level 3 検証結果 ✅ (2026-02-08)
+
+#### 環境
+```
+WSL2 Ubuntu 24.04 (noble)
+Node.js v22.22.0
+tmux 3.4
+Gemini CLI 0.27.3
+```
+
+#### tmux 構成
+```
+nerv セッション:
+  [0] gendo     - 碇ゲンドウ (Commander / ユーザー)
+  [1] fuyutsuki - 冬月 (Sub-Commander)
+  [2] ritsuko   - リツコ (Design Review)
+  [3] misato    - ミサト (Code Quality)
+  [4] asuka     - アスカ (Test Execution)
+```
+
+#### 検証結果
+- **リツコに send-keys でタスク送信 → 自律的に実行** ✅
+- pt-text.scss のデザイントークン遵守を検証
+- `pt-text--weight-black` の Tier 3 トークン不足を**自発的に発見**
+- `typography.json` への修正を**自動提案**（Accept/Reject 確認付き）
+- **独立プロセスで動作、tmux 経由の通信が成功**
+
+#### v0.27.3 ツール名（重要！）
+```
+read_file, read_many_files, search_file_content, glob,
+list_directory, run_shell_command, write_file, replace,
+google_web_search, web_fetch, save_memory, write_todos,
+activate_skill, ask_user
+```
+※ `search_file_content` は最新の main ブランチでは `grep_search` にリネームされている
+
+#### スクリプト
+- `scripts/nerv-setup.sh` — tmux セッション作成
+- `scripts/nerv-launch.sh` — 個別エージェント起動
+- `scripts/nerv-send.sh` — エージェントへのメッセージ送信
+- `scripts/nerv-full-launch.sh` — 全エージェント一括起動
+
 
 ---
 

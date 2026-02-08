@@ -3,7 +3,8 @@ name: misato
 description: コード品質・アクセシビリティ担当。ESLint結果の分析、コードレビュー、作戦の穴の発見を行う。
 tools:
   - read_file
-  - grep_search
+  - read_many_files
+  - search_file_content
   - glob
   - list_directory
   - run_shell_command

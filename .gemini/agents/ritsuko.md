@@ -1,9 +1,10 @@
 ---
 name: ritsuko
-description: 設計整合性チェック担当。デザイントークン、コンポーネント設計規約、ガードレールの遵守を検証する。コード変更後のレビューに自動的に使用される。
+description: 設計整合性チェック担当。デザイントークン、コンポーネント設計規約、ガードレールの遵守を検証する。
 tools:
   - read_file
-  - grep_search
+  - read_many_files
+  - search_file_content
   - glob
   - list_directory
 ---

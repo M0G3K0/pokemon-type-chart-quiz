@@ -3,7 +3,8 @@ name: asuka
 description: テスト実行・品質保証担当。テストの実行、カバレッジ確認、不足テストの指摘を行う。
 tools:
   - read_file
-  - grep_search
+  - read_many_files
+  - search_file_content
   - glob
   - list_directory
   - run_shell_command
