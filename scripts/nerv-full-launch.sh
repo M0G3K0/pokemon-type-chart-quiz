@@ -20,7 +20,7 @@ sleep 1
 # Step 3: Launch agents (skip gendo - that's the user)
 echo ""
 echo "🚀 Launching agents..."
-for agent in fuyutsuki ritsuko misato asuka; do
+for agent in fuyutsuki ritsuko shinji misato asuka rei; do
   bash "${SCRIPT_DIR}/nerv-launch.sh" "${agent}"
   sleep 2  # Give each agent time to initialize
 done

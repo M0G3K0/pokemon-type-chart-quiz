@@ -17,8 +17,10 @@ case "${AGENT_NAME}" in
   gendo)     WINDOW=0 ;;
   fuyutsuki) WINDOW=1 ;;
   ritsuko)   WINDOW=2 ;;
-  misato)    WINDOW=3 ;;
-  asuka)     WINDOW=4 ;;
+  shinji)    WINDOW=3 ;;
+  misato)    WINDOW=4 ;;
+  asuka)     WINDOW=5 ;;
+  rei)       WINDOW=6 ;;
   *)
     echo "❌ Unknown agent: ${AGENT_NAME}"
     exit 1

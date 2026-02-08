@@ -27,12 +27,14 @@ mkdir -p "${QUEUE_DIR}/reports"
 # Kill existing session if present
 tmux kill-session -t "${SESSION_NAME}" 2>/dev/null || true
 
-# Create tmux session with 4 windows
+# Create tmux session with 7 windows
 # Window 0: 碇ゲンドウ (Commander / User input)
 # Window 1: 冬月 (Sub-Commander / Coordinator)
 # Window 2: リツコ (Design Review)
-# Window 3: ミサト (Code Quality)
-# Window 4: アスカ (Test Execution)
+# Window 3: シンジ (Implementation)
+# Window 4: ミサト (Code Review)
+# Window 5: アスカ (Test Execution)
+# Window 6: レイ (Process Guard)
 
 echo "📡 Creating NERV tmux session..."
 
@@ -42,29 +44,33 @@ tmux new-session -d -s "${SESSION_NAME}" -n "gendo" -c "${PROJECT_PATH}"
 # Create additional windows
 tmux new-window -t "${SESSION_NAME}" -n "fuyutsuki" -c "${PROJECT_PATH}"
 tmux new-window -t "${SESSION_NAME}" -n "ritsuko" -c "${PROJECT_PATH}"
+tmux new-window -t "${SESSION_NAME}" -n "shinji" -c "${PROJECT_PATH}"
 tmux new-window -t "${SESSION_NAME}" -n "misato" -c "${PROJECT_PATH}"
 tmux new-window -t "${SESSION_NAME}" -n "asuka" -c "${PROJECT_PATH}"
+tmux new-window -t "${SESSION_NAME}" -n "rei" -c "${PROJECT_PATH}"
 
 # Set status bar with NERV theme
 tmux set-option -t "${SESSION_NAME}" status-style "bg=#800020,fg=white"
 tmux set-option -t "${SESSION_NAME}" status-left " 🔺 NERV "
 tmux set-option -t "${SESSION_NAME}" status-right " %H:%M "
 
-echo "✅ NERV session created with 5 windows"
+echo "✅ NERV session created with 7 windows"
 echo ""
 echo "🖥️  Window layout:"
 echo "   [0] gendo     - 碇ゲンドウ (Commander)"
 echo "   [1] fuyutsuki - 冬月 (Sub-Commander)"
-echo "   [2] ritsuko   - リツコ (Design Review)"
-echo "   [3] misato    - ミサト (Code Quality)"
-echo "   [4] asuka     - アスカ (Test Execution)"
+echo "   [2] ritsuko   - 🔬 リツコ (Design Guard)"
+echo "   [3] shinji    - 🔺 シンジ (Implementor)"
+echo "   [4] misato    - 🎖️ ミサト (Code Reviewer)"
+echo "   [5] asuka     - 🔥 アスカ (Test Guard)"
+echo "   [6] rei       - 🔵 レイ (Process Guard)"
 echo ""
 echo "📂 Queue directory: ${QUEUE_DIR}"
 echo ""
 echo "🚀 To start:"
 echo "   1. Attach to session:  tmux attach -t nerv"
-echo "   2. Switch windows:     Ctrl+B, [0-4]"
+echo "   2. Switch windows:     Ctrl+B, [0-6]"
 echo "   3. Start agents in each window:"
-echo "      Window 1-4: gemini"
+echo "      Window 1-6: gemini"
 echo ""
 echo "🔺 NERV System Ready."
