@@ -130,12 +130,14 @@ Gemini CLI 0.27.3
 
 #### tmux 構成
 ```
-nerv セッション:
+nerv セッション (7ウィンドウ):
   [0] gendo     - 碇ゲンドウ (Commander / ユーザー)
-  [1] fuyutsuki - 冬月 (Sub-Commander)
-  [2] ritsuko   - リツコ (Design Review)
-  [3] misato    - ミサト (Code Quality)
-  [4] asuka     - アスカ (Test Execution)
+  [1] fuyutsuki - 冬月 (Sub-Commander / Coordinator)
+  [2] ritsuko   - 🔬 リツコ (Design Guard)
+  [3] shinji    - 🔺 シンジ (Implementor)
+  [4] misato    - 🎖️ ミサト (Code Reviewer)
+  [5] asuka     - 🔥 アスカ (Test Guard)
+  [6] rei       - 🔵 レイ (Process Guard)
 ```
 
 #### 検証結果
