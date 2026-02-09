@@ -31,7 +31,6 @@ import { AssetPathService } from '@app/core/services/asset-path.service';
       [textColor]="textColor"
       [rounded]="rounded"
       [size]="size"
-      [clickable]="clickable"
       [iconSize]="iconSize">
       <ng-content></ng-content>
     </pt-chip>
@@ -68,12 +67,6 @@ export class TypeChipComponent {
 	 * @default 'md'
 	 */
 	@Input() rounded: 'none' | 'sm' | 'md' | 'full' = 'md';
-
-	/**
-	 * Whether the chip is clickable
-	 * @default false
-	 */
-	@Input() clickable = false;
 
 	/**
 	 * Icon size adjustment

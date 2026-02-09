@@ -28,6 +28,4 @@ describe('TypeChipComponent', () => {
 	it.todo('should forward size prop to pt-chip');
 
 	it.todo('should forward rounded prop to pt-chip');
-
-	it.todo('should forward clickable prop to pt-chip');
 });

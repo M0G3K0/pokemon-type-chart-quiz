@@ -8,16 +8,4 @@
 	<span class="pt-chip__text">
 		<ng-content></ng-content>
 	</span>
-
-	<!-- Trailing Icon (optional) -->
-	@if (trailingIcon) {
-	<pt-icon [src]="trailingIcon" size="sm"></pt-icon>
-	}
-
-	<!-- Remove Button (optional) -->
-	@if (removable) {
-	<button (click)="remove.emit()" class="pt-chip__remove" type="button" aria-label="Remove">
-		<pt-icon [src]="closeIconPath" size="sm"></pt-icon>
-	</button>
-	}
 </div>

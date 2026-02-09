@@ -21,13 +21,9 @@ describe('ChipComponent', () => {
 
 	it.todo('should render both icon and text');
 
-	it.todo('should emit remove event when remove button is clicked');
-
 	it.todo('should apply size classes correctly');
 
 	it.todo('should apply rounded classes correctly');
-
-	it.todo('should apply clickable class when clickable is true');
 
 	it.todo('should compute icon size based on chip size');
 
