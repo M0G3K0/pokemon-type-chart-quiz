@@ -13,7 +13,6 @@
 **主な特徴**:
 - **柔軟な構成**: アイコンのみ、テキストのみ、アイコン+テキストの全パターンに対応
 - **カスタマイズ可能**: 背景色、テキスト色、角の丸み、サイズを自由に設定
-- **インタラクティブ**: クリック可能状態、削除ボタン機能をサポート
 - **デザイントークン対応**: 全スタイルがDesign Tokensに基づいて実装
 
 ---
@@ -23,7 +22,6 @@
 | シチュエーション | 説明 |
 |------------------|------|
 | **タグ・ラベル表示** | カテゴリー、ステータス、属性などの小さな情報を表示する |
-| **フィルタの視覚化** | 選択中のフィルタ条件を可視化し、削除可能にする |
 | **コンパクトな選択肢** | 限定的な選択肢を小さなスペースに表示 |
 | **アイコン+テキストの組み合わせ** | アイコンで直感的に理解でき、テキストで詳細を補足 |
 
@@ -52,15 +50,7 @@
 | `rounded` | `'none' \| 'sm' \| 'md' \| 'full'` | `'md'` | 角の丸み |
 | `icon` | `string \| undefined` | - | 左側に表示するアイコンのパス |
 | `iconSize` | `'sm' \| 'md' \| 'lg' \| undefined` | - | アイコンサイズの上書き（未指定時は`size`に応じて自動調整） |
-| `trailingIcon` | `string \| undefined` | - | 右側に表示するアイコンのパス |
-| `clickable` | `boolean` | `false` | クリック可能状態にするか |
-| `removable` | `boolean` | `false` | 削除ボタン（×）を表示するか |
-
-### Events
-
-| Event | Type | Description |
-|-------|------|-------------|
-| `remove` | `EventEmitter<void>` | 削除ボタンがクリックされた時に発火 |
+| `iconOnly` | `boolean` | `false` | アイコンのみモード（均等パディングで正方形になる） |
 
 ### Size Tokens
 
@@ -84,8 +74,6 @@
 ## Accessibility
 
 - **セマンティック**: テキストコンテンツは`<span>`でラップされ、スクリーンリーダーで読み上げられる
-- **削除ボタン**: `aria-label="Remove"`属性を持ち、キーボード操作可能
-- **フォーカス表示**: 削除ボタンは`:focus-visible`で明確なアウトラインを表示
 - **色のコントラスト**: `textColor`はデフォルトで`var(--pt-color-text-inverse)`を使用し、背景とのコントラストを確保
 
 ---
@@ -126,52 +114,9 @@
 </pt-chip>
 ```
 
-### 削除可能なフィルタChip
-
-```html
-<pt-chip 
-  [bgColor]="'var(--pt-color-slate-200)'"
-  [textColor]="'var(--pt-color-text-primary)'"
-  [removable]="true"
-  (remove)="onRemoveFilter()"
-  size="sm">
-  フィルタ: ほのおタイプ
-</pt-chip>
-```
-
-### クリック可能なChip
-
-```html
-<pt-chip 
-  [bgColor]="'var(--pt-color-primary-500)'"
-  [clickable]="true"
-  (click)="onChipClick()"
-  rounded="full">
-  クリック可能
-</pt-chip>
-```
-
 ---
 
 ## Design Patterns
-
-### Filter Tag Pattern
-
-フィルタの選択状態を表示し、ユーザーが簡単に削除できるパターン：
-
-```html
-<div class="filter-container">
-  <pt-chip 
-    *ngFor="let filter of activeFilters"
-    [bgColor]="'var(--pt-color-slate-200)'"
-    [textColor]="'var(--pt-color-text-primary)'"
-    [removable]="true"
-    (remove)="removeFilter(filter)"
-    size="sm">
-    {{ filter.label }}
-  </pt-chip>
-</div>
-```
 
 ### Icon-First Pattern
 

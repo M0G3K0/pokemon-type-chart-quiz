@@ -1,7 +1,6 @@
-import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IconComponent } from '@ui/pt-icon';
-import { AssetPathService } from '@app/core/services/asset-path.service';
 
 /**
  * Chip component for displaying compact information units
@@ -16,8 +15,8 @@ import { AssetPathService } from '@app/core/services/asset-path.service';
  * <!-- Icon + Text -->
  * <pt-chip [icon]="iconPath" [bgColor]="'var(--pt-color-pokemon-fire-500)'" rounded="full">ほのお</pt-chip>
  * 
- * <!-- Removable -->
- * <pt-chip [bgColor]="'var(--pt-color-gray-200)'" [removable]="true" (remove)="onRemove()">Filter</pt-chip>
+ * <!-- With trailing icon -->
+ * <pt-chip [icon]="iconPath" [bgColor]="'var(--pt-color-pokemon-fire-500)'" rounded="full">ほのお</pt-chip>
  * 
  * @reference
  * - Atomic Design: Molecule (Generic flexible component)
@@ -33,7 +32,6 @@ import { AssetPathService } from '@app/core/services/asset-path.service';
 	styleUrls: ['./pt-chip.scss'],
 })
 export class ChipComponent {
-	private readonly assetPath = inject(AssetPathService);
 	/**
 	 * Chip size
 	 * @default 'md'
@@ -68,32 +66,10 @@ export class ChipComponent {
 	@Input() iconSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 	/**
-	 * Trailing icon (right side, e.g., for remove button)
-	 */
-	@Input() trailingIcon?: string;
-
-	/**
-	 * Whether the chip is clickable
-	 * @default false
-	 */
-	@Input() clickable = false;
-
-	/**
-	 * Whether the chip is removable (shows × button)
-	 * @default false
-	 */
-	@Input() removable = false;
-
-	/**
 	 * Icon-only mode (square chip with uniform padding)
 	 * @default false
 	 */
 	@Input() iconOnly = false;
-
-	/**
-	 * Remove event emitter
-	 */
-	@Output() remove = new EventEmitter<void>();
 
 	/**
 	 * Get computed icon size based on chip size
@@ -128,24 +104,13 @@ export class ChipComponent {
 	}
 
 	/**
-	 * Get the close icon path (for remove button)
-	 */
-	get closeIconPath(): string {
-		return this.assetPath.icon('close');
-	}
-
-	/**
 	 * Container element classes
 	 */
 	get containerClasses(): string[] {
-		const classes = [
+		return [
 			'pt-chip',
 			`pt-chip--${this.size}`,
 			`pt-chip--rounded-${this.rounded}`,
 		];
-		if (this.clickable) {
-			classes.push('pt-chip--clickable');
-		}
-		return classes;
 	}
 }

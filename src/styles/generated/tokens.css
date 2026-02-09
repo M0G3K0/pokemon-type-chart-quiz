@@ -553,7 +553,6 @@
   --pt-chip-gap: var(--pt-spacing-gap-xs);
   --pt-chip-radius-sm: var(--pt-semantic-border-radius-sm);
   --pt-chip-radius-md: var(--pt-semantic-border-radius-md);
-  --pt-chip-interaction-transition: var(--pt-motion-duration-quick);
   --pt-grid-gap-sm: var(--pt-spacing-gap-sm);
   --pt-grid-gap-md: var(--pt-spacing-gap-md);
   --pt-grid-gap-lg: var(--pt-spacing-gap-lg);

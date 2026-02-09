@@ -61,13 +61,6 @@
 				"type": "borderRadius",
 				"$description": "完全な丸み（ピル形状）。"
 			}
-		},
-		"interaction": {
-			"transition": {
-				"value": "{motion.duration.quick}",
-				"type": "duration",
-				"$description": "インタラクション時のトランジション時間。"
-			}
 		}
 	}
 }

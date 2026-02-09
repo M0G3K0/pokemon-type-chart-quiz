@@ -16,7 +16,6 @@
 	align-items: center;
 	gap: var(--pt-chip-gap);
 	font-weight: var(--pt-chip-font-weight);
-	transition: opacity var(--pt-chip-interaction-transition);
 	white-space: nowrap;
 
 	// Size variants - padding均等で iconOnly時に正方形
@@ -47,19 +46,6 @@
 		border-radius: var(--pt-chip-radius-full);
 	}
 
-	// Clickable state
-	&--clickable {
-		cursor: pointer;
-
-		&:hover {
-			opacity: 0.8;
-		}
-
-		&:active {
-			opacity: 0.9;
-		}
-	}
-
 	// Text content
 	&__text {
 		line-height: normal;
@@ -67,31 +53,6 @@
 		// Only show text if ng-content exists
 		&:empty {
 			display: none;
-		}
-	}
-
-	// Remove button
-	&__remove {
-		background: transparent;
-		border: none;
-		padding: 0;
-		margin: 0;
-		cursor: pointer;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		color: inherit;
-		opacity: 0.7;
-		transition: opacity var(--pt-chip-interaction-transition);
-
-		&:hover {
-			opacity: 1;
-		}
-
-		&:focus-visible {
-			outline: 2px solid currentcolor;
-			outline-offset: 2px;
-			border-radius: var(--pt-chip-radius-sm);
 		}
 	}
 }

@@ -42,12 +42,6 @@ route: style
 | `sm` | `--pt-chip-radius-sm` | `{semantic-border.radius.sm}` |  | 小さい角丸。 |
 | `md` | `--pt-chip-radius-md` | `{semantic-border.radius.md}` |  | 標準の角丸。 |
 | `full` | `--pt-chip-radius-full` |  | 9999px | 完全な丸み（ピル形状）。 |
-
-### Interaction
-
-| Key | Token | Reference | Value | Description |
-|------|------|------|------|------|
-| `transition` | `--pt-chip-interaction-transition` | `{motion.duration.quick}` |  | インタラクション時のトランジション時間。 |
 <!-- @auto-generated:token-table:end -->
 
 ---
