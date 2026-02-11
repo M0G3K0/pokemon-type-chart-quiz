@@ -6,7 +6,7 @@ title: Guidelines
 
 ## Overview
 
-`pt-type-chip`は、`pt-chip`をラップしたOrganism（ドメイン特化）コンポーネントです。タイプ名を指定するだけで、適切な背景色（`--pt-color-pokemon-{type}-500`）とアイコンパス（`/icons/{type}.svg`）が自動的に設定されます。
+`pt-type-chip`は、`pt-chip`をラップしたOrganism（ドメイン特化）コンポーネントです。タイプ名を指定するだけで、Tier 3 トークン（`--pt-type-chip-color-{type}-bg/text`）から適切な背景色・テキスト色がCSS変数経由で注入され、アイコンパス（`/icons/{type}.svg`）が自動的に設定されます。
 
 **主な特徴**:
 - **タイプカラー自動適用**: 18種類のポケモンタイプに対応
@@ -117,8 +117,9 @@ pt-type-chip (Organism - Domain Wrapper)
         └── pt-icon (Atom)
 ```
 
-`pt-type-chip`は以下の値を自動計算：
-- **bgColor**: `var(--pt-color-pokemon-${type}-500)`
+`pt-type-chip`は以下の値をTier 3トークンから自動注入：
+- **--pt-chip-bg**: `var(--pt-type-chip-color-{type}-bg)` （type-chip.jsonで定義）
+- **--pt-chip-text**: `var(--pt-type-chip-color-{type}-text)` （type-chip.jsonで定義）
 - **iconPath**: `/icons/${type}.svg`
 
 ---
@@ -130,7 +131,7 @@ pt-type-chip (Organism - Domain Wrapper)
 | ポケモンタイプを表示 | `pt-type-chip` |
 | 汎用タグ/ラベル | `pt-chip` |
 | タイプカラー自動適用 | `pt-type-chip` |
-| カスタム背景色が必要 | `pt-chip` |
+| カスタム背景色が必要 | `pt-chip`（CSS変数で注入） |
 
 ---
 

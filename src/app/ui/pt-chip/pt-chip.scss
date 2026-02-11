@@ -1,6 +1,7 @@
 /**
  * @what Chip component styles
  * @why Provide flexible compact information display using Design Tokens
+ * @color-injection 色は --pt-chip-bg / --pt-chip-text で外部（ラッパー）から注入される
  *
  * @tokens Tier 3: chip.json
  */
@@ -17,6 +18,10 @@
 	gap: var(--pt-chip-gap);
 	font-weight: var(--pt-chip-font-weight);
 	white-space: nowrap;
+
+	// 色はCSS変数で外部から注入される
+	background-color: var(--pt-chip-bg);
+	color: var(--pt-chip-text);
 
 	// Size variants - padding均等で iconOnly時に正方形
 	&--sm {

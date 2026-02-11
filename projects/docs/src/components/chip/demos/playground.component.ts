@@ -13,12 +13,16 @@ import { ChipComponent } from '@ui/pt-chip/pt-chip';
 		<pt-chip
 			[size]="size"
 			[rounded]="rounded"
-			[bgColor]="'var(--pt-color-surface-pressed)'"
-			[textColor]="'var(--pt-color-text-primary)'"
 		>
 			Chip
 		</pt-chip>
 	`,
+	styles: [`
+		:host {
+			--pt-chip-bg: var(--pt-color-surface-pressed);
+			--pt-chip-text: var(--pt-color-text-primary);
+		}
+	`],
 })
 export class ChipPlaygroundComponent {
 	/**

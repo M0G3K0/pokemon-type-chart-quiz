@@ -10,13 +10,17 @@ import { CHIP_SIZES, ChipSize } from '@ui/pt-chip/pt-chip.types';
     @for (size of sizes; track size) {
       <pt-chip 
         [size]="size"
-        [bgColor]="'var(--pt-color-surface-pressed)'"
-        [textColor]="'var(--pt-color-text-primary)'"
         rounded="md">
         {{ size }}
       </pt-chip>
     }
   `,
+  styles: [`
+    :host {
+      --pt-chip-bg: var(--pt-color-surface-pressed);
+      --pt-chip-text: var(--pt-color-text-primary);
+    }
+  `],
 })
 export class ChipSizesDemoComponent {
   readonly sizes: ChipSize[] = CHIP_SIZES;

@@ -1,10 +1,13 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, Input, inject, HostBinding } from '@angular/core';
 import { ChipComponent } from '@ui/pt-chip';
 import { PokemonType } from '@domain/type-chart';
 import { AssetPathService } from '@app/core/services/asset-path.service';
 
 /**
- * Pokemon Type Chip component (Semantic Wrapper)
+ * Pokemon Type Chip component (SDK Wrapper)
+ * 
+ * pt-chip をラップし、Pokemon タイプに基づく色を Tier 3 トークンで自動適用する。
+ * 色は type-chip.json で一元管理され、NgDoc に自動反映される。
  * 
  * @example
  * <!-- Icon only -->
@@ -19,6 +22,7 @@ import { AssetPathService } from '@app/core/services/asset-path.service';
  * @reference
  * - Atomic Design: Organism (Domain-specific wrapper)
  * - Wraps pt-chip with Pokemon Type semantics
+ * - Colors defined in: design-tokens/tier3-component/type-chip.json
  */
 @Component({
 	selector: 'pt-type-chip',
@@ -27,8 +31,6 @@ import { AssetPathService } from '@app/core/services/asset-path.service';
 	template: `
     <pt-chip
       [icon]="showIcon ? iconPath : undefined"
-      [bgColor]="bgColor"
-      [textColor]="textColor"
       [rounded]="rounded"
       [size]="size"
       [iconSize]="iconSize">
@@ -74,10 +76,20 @@ export class TypeChipComponent {
 	@Input() iconSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 	/**
-	 * Text color override
-	 * @default 'var(--pt-color-text-inverse)'
+	 * Inject --pt-chip-bg CSS variable from Tier 3 type-chip token
 	 */
-	@Input() textColor = 'var(--pt-color-text-inverse)';
+	@HostBinding('style.--pt-chip-bg')
+	get chipBg(): string {
+		return `var(--pt-type-chip-color-${this.type}-bg)`;
+	}
+
+	/**
+	 * Inject --pt-chip-text CSS variable from Tier 3 type-chip token
+	 */
+	@HostBinding('style.--pt-chip-text')
+	get chipText(): string {
+		return `var(--pt-type-chip-color-${this.type}-text)`;
+	}
 
 	/**
 	 * Get icon path for the Pokemon type
@@ -85,12 +97,4 @@ export class TypeChipComponent {
 	get iconPath(): string {
 		return this.assetPath.icon(this.type);
 	}
-
-	/**
-	 * Get background color for the Pokemon type
-	 */
-	get bgColor(): string {
-		return `var(--pt-color-pokemon-${this.type}-500)`;
-	}
 }
-

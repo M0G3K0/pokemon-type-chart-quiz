@@ -7,12 +7,16 @@ import { ChipComponent } from '@ui/pt-chip/pt-chip';
   imports: [ChipComponent],
   template: `
     <pt-chip 
-      [bgColor]="'var(--pt-color-surface-pressed)'"
-      [textColor]="'var(--pt-color-text-primary)'"
       rounded="md"
       size="md">
       Chip
     </pt-chip>
   `,
+  styles: [`
+    :host {
+      --pt-chip-bg: var(--pt-color-surface-pressed);
+      --pt-chip-text: var(--pt-color-text-primary);
+    }
+  `],
 })
 export class ChipBasicDemoComponent { }
