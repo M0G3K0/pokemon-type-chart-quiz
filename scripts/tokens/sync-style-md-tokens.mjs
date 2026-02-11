@@ -21,7 +21,10 @@ const __dirname = path.dirname(__filename);
 const PROJECT_ROOT = path.resolve(__dirname, '../..');
 
 const TOKENS_DIR = path.join(PROJECT_ROOT, 'design-tokens/tier3-component');
-const DOCS_DIR = path.join(PROJECT_ROOT, 'projects/docs/src/components');
+const DOCS_DIRS = [
+    path.join(PROJECT_ROOT, 'projects/docs/src/components'),
+    path.join(PROJECT_ROOT, 'projects/docs/src/poke-sdk'),
+];
 
 const START_MARKER = '<!-- @auto-generated:token-table:start -->';
 const END_MARKER = '<!-- @auto-generated:token-table:end -->';
@@ -366,9 +369,18 @@ for (const jsonFile of jsonFiles) {
     const baseName = jsonFile.replace('.json', '');
     const docsDir = jsonNameToDocsDir(baseName);
     const tokenFilePath = path.join(TOKENS_DIR, jsonFile);
-    const styleMdPath = path.join(DOCS_DIR, docsDir, 'style.md');
 
-    if (!fs.existsSync(styleMdPath)) {
+    // 複数の docs ディレクトリから style.md を検索
+    let styleMdPath = null;
+    for (const docsRoot of DOCS_DIRS) {
+        const candidate = path.join(docsRoot, docsDir, 'style.md');
+        if (fs.existsSync(candidate)) {
+            styleMdPath = candidate;
+            break;
+        }
+    }
+
+    if (!styleMdPath) {
         console.log(`  ⏭️  No style.md: ${docsDir}/`);
         skippedCount++;
         continue;

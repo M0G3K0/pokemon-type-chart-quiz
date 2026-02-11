@@ -12,7 +12,10 @@ const GUARDRAIL_PATH = "guards/code-quality/guard/component-standards.guard.md";
 
 // ディレクトリ定義
 const UI_DIR = path.join(__dirname, "../../../src/app/ui");
-const DOCS_DIR = path.join(__dirname, "../../../projects/docs/src/components");
+const DOCS_DIRS = [
+	path.join(__dirname, "../../../projects/docs/src/components"),
+	path.join(__dirname, "../../../projects/docs/src/poke-sdk"),
+];
 
 // テストケースの検出パターン（it, test, it.todo, test.todo を認識）
 const TEST_CASE_PATTERN = /\b(it|test)(\.todo)?\s*\(/g;
@@ -70,13 +73,18 @@ function checkDocumentation(componentDir) {
 	const componentName = componentDir.name;
 	// pt-* から pt- を除去して NgDoc のディレクトリ名にする
 	const ngDocComponentName = componentName.replace(/^pt-/, '');
-	const docPath = path.join(DOCS_DIR, ngDocComponentName, 'index.md');
 
-	if (!fs.existsSync(docPath)) {
+	// 複数の docs ディレクトリから index.md を検索
+	const found = DOCS_DIRS.some((docsDir) => {
+		const docPath = path.join(docsDir, ngDocComponentName, 'index.md');
+		return fs.existsSync(docPath);
+	});
+
+	if (!found) {
 		errors.push({
 			type: "missing-doc",
 			component: componentName,
-			message: `Missing NgDoc documentation: projects/docs/src/components/${ngDocComponentName}/index.md`,
+			message: `Missing NgDoc documentation for ${ngDocComponentName} (searched: components/, poke-sdk/)`,
 		});
 	}
 
