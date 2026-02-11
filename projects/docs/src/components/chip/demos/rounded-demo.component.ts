@@ -10,13 +10,17 @@ import { CHIP_ROUNDED, ChipRounded } from '@ui/pt-chip/pt-chip.types';
     @for (rounded of roundedVariants; track rounded) {
       <pt-chip 
         [rounded]="rounded"
-        [bgColor]="'var(--pt-color-surface-pressed)'"
-        [textColor]="'var(--pt-color-text-primary)'"
         size="md">
         {{ rounded }}
       </pt-chip>
     }
   `,
+  styles: [`
+    :host {
+      --pt-chip-bg: var(--pt-color-surface-pressed);
+      --pt-chip-text: var(--pt-color-text-primary);
+    }
+  `],
 })
 export class ChipRoundedDemoComponent {
   readonly roundedVariants: ChipRounded[] = CHIP_ROUNDED;

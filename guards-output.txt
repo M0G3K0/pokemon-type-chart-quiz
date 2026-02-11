@@ -1,0 +1,65 @@
+
+> pokemon-type-chart-quiz@0.0.0 guards:validate
+> node guards/meta/rules/guardrail-format.rules.js && node guards/design/rules/no-raw-tailwind.rules.js && node guards/code-quality/rules/component-structure.rules.js && node guards/design/rules/token-existence.rules.js && node guards/code-quality/rules/component-standards.rules.js && node guards/design/rules/component-base-styles.rules.js && node guards/design/rules/component-token-mapping.rules.js && node guards/design/rules/space-token-10x.rules.js && node guards/maintenance/rules/temp-docs.rules.js
+
+🛡️ Validating guardrail files...
+
+✅ architecture\guard\layer-boundaries.guard.md
+✅ architecture\guard\ui-import-standards.guard.md
+✅ code-quality\guard\angular-control-flow.guard.md
+✅ code-quality\guard\coding-standards.guard.md
+✅ code-quality\guard\component-standards.guard.md
+✅ code-quality\guard\component-structure.guard.md
+✅ design\guard\component-base-styles.guard.md
+✅ design\guard\component-token-mapping.guard.md
+✅ design\guard\design-consistency.guard.md
+✅ design\guard\no-raw-tailwind.guard.md
+✅ design\guard\space-token-10x.guard.md
+✅ design\guard\token-existence.guard.md
+✅ design\guard\token-naming.guard.md
+✅ maintenance\guard\cleanliness.guard.md
+✅ maintenance\guard\duplication.guard.md
+✅ maintenance\guard\temp-docs.guard.md
+✅ maintenance\guard\test-existence.guard.md
+✅ meta\guard\guardrail-format.guard.md
+✅ process\guard\development-workflow.guard.md
+✅ process\guard\issue-format.guard.md
+✅ process\guard\post-creation-check.guard.md
+✅ process\guard\pr-format.guard.md
+✅ ux\guard\lazy-loading.guard.md
+✅ value\guard\analytics.guard.md
+✅ velocity\guard\performance.guard.md
+
+✅ All 25 guardrail files are valid.
+🛡️ Tailwind クラス使用チェック中...
+
+✅ Tailwind クラス使用なし
+
+🛡️ Checking component structure completeness...
+
+📦 Found 13 pt-* component(s)
+
+✅ All pt-* components have required files.
+🛡️ Checking CSS token existence...
+
+📦 Found 686 defined token(s)
+
+📂 Scanning 17 SCSS file(s)
+
+✅ All CSS token references are valid.
+🛡️ Checking component creation standards...
+
+📦 Found 13 pt-* component(s)
+
+✅ All pt-* components meet creation standards.
+✅ component-base-styles: 全コンポーネントが正しいパターンを使用しています
+🛡️ Checking component-token mapping...
+
+📦 Found 13 component(s)
+📄 Found 13 token file(s)
+
+✅ All components and tokens are properly mapped.
+🛡️ Checking space token 10x naming convention...
+
+✅ All space tokens follow 10x naming convention.
+✅ ドキュメント配置チェック: OK

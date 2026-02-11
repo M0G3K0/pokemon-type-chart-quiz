@@ -5,24 +5,17 @@ import { IconComponent } from '@ui/pt-icon';
 /**
  * Chip component for displaying compact information units
  * 
+ * 色はCSS変数 `--pt-chip-bg` / `--pt-chip-text` で外部から注入される。
+ * このコンポーネントは「形」のみを担当し、色の決定権は持たない。
+ * 
  * @example
- * <!-- Icon only (square) -->
- * <pt-chip [icon]="iconPath" [bgColor]="'var(--pt-color-pokemon-fire-500)'" rounded="full" [iconOnly]="true"></pt-chip>
- * 
- * <!-- Text only -->
- * <pt-chip [bgColor]="'var(--pt-color-pokemon-fire-500)'" size="sm">ほのお</pt-chip>
- * 
- * <!-- Icon + Text -->
- * <pt-chip [icon]="iconPath" [bgColor]="'var(--pt-color-pokemon-fire-500)'" rounded="full">ほのお</pt-chip>
- * 
- * <!-- With trailing icon -->
- * <pt-chip [icon]="iconPath" [bgColor]="'var(--pt-color-pokemon-fire-500)'" rounded="full">ほのお</pt-chip>
+ * <!-- pt-type-chip 等のラッパーコンポーネント経由で使用 -->
+ * <pt-type-chip [type]="'fire'" [showIcon]="true">ほのお</pt-type-chip>
  * 
  * @reference
  * - Atomic Design: Molecule (Generic flexible component)
  * - Material Design 3 Chips: https://m3.material.io/components/chips/overview
  * - GitHub Primer Labels: https://primer.style/components/label
- * - SmartHR Tag: https://smarthr.design/products/components/tag/
  */
 @Component({
 	selector: 'pt-chip',
@@ -37,17 +30,6 @@ export class ChipComponent {
 	 * @default 'md'
 	 */
 	@Input() size: 'sm' | 'md' | 'lg' = 'md';
-
-	/**
-	 * Background color (CSS variable or color code)
-	 */
-	@Input() bgColor?: string;
-
-	/**
-	 * Text color (CSS variable or color code)
-	 * @default 'var(--pt-color-text-inverse)'
-	 */
-	@Input() textColor = 'var(--pt-color-text-inverse)';
 
 	/**
 	 * Border radius

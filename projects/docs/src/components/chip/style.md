@@ -12,6 +12,8 @@ route: style
 
 | Key | Token | Reference | Value | Description |
 |------|------|------|------|------|
+| `bg` | `--pt-chip-bg` | `{color.surface.pressed}` |  | チップの背景色デフォルト値。ラッパー（pt-type-chip等）がCSS変数で上書きする。 |
+| `text` | `--pt-chip-text` | `{color.text.primary}` |  | チップのテキスト色デフォルト値。ラッパー（pt-type-chip等）がCSS変数で上書きする。 |
 | `gap` | `--pt-chip-gap` | `{spacing.gap.xs}` |  | アイコンとテキスト間の隙間。`gap`に適用。 |
 
 ### Padding X

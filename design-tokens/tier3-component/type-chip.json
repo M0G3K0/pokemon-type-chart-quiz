@@ -1,15 +1,224 @@
 {
-	"$description": "Tier 3: Type Chip Component Tokens. Pokemon type-specific chip tokens extending pt-chip.",
+	"$description": "Tier 3: Type Chip Component Tokens. Defines color pairs for pt-type-chip (Pokemon type-specific chip).",
 	"type-chip": {
-		"$description": "Pokemon type chip component. Semantic wrapper with type-specific colors.",
+		"$description": "Pokemon Type Chip のカラー定義。各タイプごとに背景色とテキスト色をペアで管理し、コントラストを保証する。",
 		"color": {
-			"$description": "Type chip uses Pokemon type semantic colors from Tier 2",
-			"text": {
-				"value": "{color.text.inverse}",
-				"type": "color",
-				"$description": "タイプチップのデフォルトテキスト色。`color`に適用。"
+			"normal": {
+				"bg": {
+					"value": "{color.pokemon.normal.500}",
+					"type": "color",
+					"$description": "ノーマルタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "ノーマルタイプのテキスト色。"
+				}
+			},
+			"fire": {
+				"bg": {
+					"value": "{color.pokemon.fire.500}",
+					"type": "color",
+					"$description": "ほのおタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "ほのおタイプのテキスト色。"
+				}
+			},
+			"water": {
+				"bg": {
+					"value": "{color.pokemon.water.500}",
+					"type": "color",
+					"$description": "みずタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "みずタイプのテキスト色。"
+				}
+			},
+			"electric": {
+				"bg": {
+					"value": "{color.pokemon.electric.500}",
+					"type": "color",
+					"$description": "でんきタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "でんきタイプのテキスト色。"
+				}
+			},
+			"grass": {
+				"bg": {
+					"value": "{color.pokemon.grass.500}",
+					"type": "color",
+					"$description": "くさタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "くさタイプのテキスト色。"
+				}
+			},
+			"ice": {
+				"bg": {
+					"value": "{color.pokemon.ice.500}",
+					"type": "color",
+					"$description": "こおりタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "こおりタイプのテキスト色。"
+				}
+			},
+			"fighting": {
+				"bg": {
+					"value": "{color.pokemon.fighting.500}",
+					"type": "color",
+					"$description": "かくとうタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "かくとうタイプのテキスト色。"
+				}
+			},
+			"poison": {
+				"bg": {
+					"value": "{color.pokemon.poison.500}",
+					"type": "color",
+					"$description": "どくタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "どくタイプのテキスト色。"
+				}
+			},
+			"ground": {
+				"bg": {
+					"value": "{color.pokemon.ground.500}",
+					"type": "color",
+					"$description": "じめんタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "じめんタイプのテキスト色。"
+				}
+			},
+			"flying": {
+				"bg": {
+					"value": "{color.pokemon.flying.500}",
+					"type": "color",
+					"$description": "ひこうタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "ひこうタイプのテキスト色。"
+				}
+			},
+			"psychic": {
+				"bg": {
+					"value": "{color.pokemon.psychic.500}",
+					"type": "color",
+					"$description": "エスパータイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "エスパータイプのテキスト色。"
+				}
+			},
+			"bug": {
+				"bg": {
+					"value": "{color.pokemon.bug.500}",
+					"type": "color",
+					"$description": "むしタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "むしタイプのテキスト色。"
+				}
+			},
+			"rock": {
+				"bg": {
+					"value": "{color.pokemon.rock.500}",
+					"type": "color",
+					"$description": "いわタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "いわタイプのテキスト色。"
+				}
+			},
+			"ghost": {
+				"bg": {
+					"value": "{color.pokemon.ghost.500}",
+					"type": "color",
+					"$description": "ゴーストタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "ゴーストタイプのテキスト色。"
+				}
+			},
+			"dragon": {
+				"bg": {
+					"value": "{color.pokemon.dragon.500}",
+					"type": "color",
+					"$description": "ドラゴンタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "ドラゴンタイプのテキスト色。"
+				}
+			},
+			"dark": {
+				"bg": {
+					"value": "{color.pokemon.dark.500}",
+					"type": "color",
+					"$description": "あくタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "あくタイプのテキスト色。"
+				}
+			},
+			"steel": {
+				"bg": {
+					"value": "{color.pokemon.steel.500}",
+					"type": "color",
+					"$description": "はがねタイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "はがねタイプのテキスト色。"
+				}
+			},
+			"fairy": {
+				"bg": {
+					"value": "{color.pokemon.fairy.500}",
+					"type": "color",
+					"$description": "フェアリータイプの背景色。"
+				},
+				"text": {
+					"value": "{color.text.inverse}",
+					"type": "color",
+					"$description": "フェアリータイプのテキスト色。"
+				}
 			}
-		},
-		"$note": "Background colors are dynamically set based on Pokemon type using --pt-color-pokemon-{type}-500 from Tier 2."
+		}
 	}
 }

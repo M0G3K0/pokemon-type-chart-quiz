@@ -2,51 +2,30 @@
 
 ## 💡 概要
 
-プロダクションビルド時に初期バンドルサイズが設定上限（500kB）を超えており、警告が発生している。
+NgDocのサイドバーナビゲーションで、SDK層のコンポーネント（`pt-type-chip`等）を「Components」カテゴリから「Poke SDK」カテゴリに移動する。
 
-```
-bundle initial exceeded maximum budget. Budget 500.00 kB was not met by 114.40 kB with a total of 614.40 kB.
-```
+汎用UIコンポーネント（Molecule）とプロダクト固有のSDKコンポーネント（Organism）をナビゲーション上でも明確に分離する。
 
 ## 📝 詳細
 
 ### 現状
+- 全コンポーネントが「Components」カテゴリ配下にフラットに並んでいる
+- `pt-type-chip`（Organism/SDK）と`pt-chip`（Molecule/汎用）の区別がつかない
 
-- 現在の初期バンドルサイズ: **614.40 kB**
-- 設定上限（warning）: **500 kB**
-- 超過分: **114.40 kB**
+### あるべき姿
+- **Components**: 汎用UIコンポーネント（`pt-chip`, `pt-button`, `pt-icon` 等）
+- **Poke SDK**: プロダクト固有のラッパー（`pt-type-chip` 等、今後増える可能性あり）
 
-### 設定場所
-
-`angular.json` の `budgets` 設定:
-```json
-{
-  "type": "initial",
-  "maximumWarning": "500kB",
-  "maximumError": "750kB"
-}
-```
-
-### 対応オプション
-
-1. **バンドルサイズを削減する**
-   - 不要な依存関係の削除
-   - Code splitting / Lazy loading の活用
-   - Tree shaking の改善
-
-2. **budget設定を緩和する**
-   - 現実的な目標値に調整（例: 700kB）
-
-3. **警告を許容する**
-   - 現状維持（エラーではないため）
+### 変更対象
+- `projects/docs/src/components/type-chip/ng-doc.page.ts` の `category` を変更
+- 必要に応じて新しい `NgDocCategory` を作成
 
 ## ✅ やることリスト
-
-- [ ] バンドル分析を実施（`source-map-explorer` など）
-- [ ] 主要なサイズ要因を特定
-- [ ] 対応方針を決定（削減 or 設定見直し）
-- [ ] 対応を実施
+- [ ] 「Poke SDK」カテゴリの `NgDocCategory` を作成
+- [ ] `pt-type-chip` の `ng-doc.page.ts` で category を変更
+- [ ] サイドバーの表示順序を確認
+- [ ] ビルド確認
 
 ## 📷 参考資料（任意）
 
-N/A
+Issue #96 の議論で提起された設計方針に基づく。
