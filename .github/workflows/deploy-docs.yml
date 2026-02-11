@@ -8,6 +8,7 @@ on:
       - 'projects/docs/**'
       - 'src/app/ui/**'
       - 'src/styles/**'
+      - 'design-tokens/**'
       - '.github/workflows/deploy-docs.yml'
   workflow_dispatch:
 
