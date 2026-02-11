@@ -11,7 +11,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { REQUIRED_SECTIONS, GUARDRAIL_PATH } = require("../guards/process/rules/issue-format.rules");
+const { REQUIRED_SECTIONS, GUARDRAIL_PATH } = require("../../guards/process/rules/issue-format.rules");
 
 const ISSUE_BODY_PATH = path.join(process.cwd(), 'issue-body.md');
 

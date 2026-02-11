@@ -17,7 +17,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { REQUIRED_SECTIONS, GUARDRAIL_PATH } = require("../guards/process/rules/pr-format.rules");
+const { REQUIRED_SECTIONS, GUARDRAIL_PATH } = require("../../guards/process/rules/pr-format.rules");
 
 const PR_BODY_PATH = path.join(process.cwd(), 'pr-body.md');
 
