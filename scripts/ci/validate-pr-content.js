@@ -1,4 +1,4 @@
-const { REQUIRED_SECTIONS, GUARDRAIL_PATH } = require("../guards/process/rules/pr-format.rules");
+const { REQUIRED_SECTIONS, GUARDRAIL_PATH } = require("../../guards/process/rules/pr-format.rules");
 
 const prBody = process.env.PR_BODY || "";
 const prTitle = process.env.PR_TITLE || "";

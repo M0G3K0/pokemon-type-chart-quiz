@@ -2,10 +2,10 @@
  * Issue作成後にGitHub Actionsの警告コメントを確認するスクリプト
  * 
  * 使い方:
- *   node scripts/check-issue-warnings.js <issue-number>
+ *   node scripts/ci/check-issue-warnings.js <issue-number>
  * 
  * 例:
- *   node scripts/check-issue-warnings.js 18
+ *   node scripts/ci/check-issue-warnings.js 18
  * 
  * GitHub Actionsがテンプレート違反を検出すると、botがIssueにコメントを投稿します。
  * このスクリプトはそのコメントの有無を確認し、警告があれば表示します。
@@ -17,7 +17,7 @@ const issueNumber = process.argv[2];
 
 if (!issueNumber) {
 	console.error('❌ Issue番号を指定してください');
-	console.log('   使い方: node scripts/check-issue-warnings.js <issue-number>');
+	console.log('   使い方: node scripts/ci/check-issue-warnings.js <issue-number>');
 	process.exit(1);
 }
 
@@ -61,7 +61,7 @@ try {
 		console.log('   3. または: gh issue edit ' + issueNumber + ' --body-file issue-body.md');
 		console.log('');
 		console.log('💡 ローカルで事前検証:');
-		console.log('   node scripts/validate-issue-local.js');
+		console.log('   node scripts/ci/validate-issue-local.js');
 		process.exit(1);
 	}
 

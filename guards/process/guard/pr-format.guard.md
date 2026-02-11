@@ -28,7 +28,7 @@ PRタイトルは以下の形式に従うこと：
 
 ## 実装
 
-- 検証スクリプト: `scripts/validate-pr-content.js`
+- 検証スクリプト: `scripts/ci/validate-pr-content.js`
 - 必要セクションの定義: `guards/process/rules/pr-format.rules.js`
 
 ## 違反時の対応

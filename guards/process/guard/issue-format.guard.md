@@ -28,7 +28,7 @@ Issueタイトルは以下の形式に従うこと：
 
 ## 実装
 
-- 検証スクリプト: `scripts/validate-issue-content.js`
+- 検証スクリプト: `scripts/ci/validate-issue-content.js`
 - 必要セクションの定義: `guards/process/rules/issue-format.rules.js`
 - GitHub Actions: `.github/workflows/issue-validation.yml`
 

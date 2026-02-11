@@ -13,11 +13,10 @@ module.exports = {
 		// type-chartはランタイムで使用（静的解析では検出されない）
 		'src/app/domain/type-chart.ts',
 		// download-icons.jsは手動スクリプト
-		'scripts/download-icons.js',
+		'scripts/data/download-icons.js',
 		// fetch-type-icons.jsは手動スクリプト（ポケモンタイプアイコン取得用）
-		'scripts/fetch-type-icons.js',
-		// TODO(Issue #34): Remove when first component imports tokens
-		'src/design-system/tokens/**/*',
+		'scripts/data/fetch-type-icons.js',
+		// TODO(Issue #34): Remove when generated tokens are no longer needed
 		'src/styles/generated/**/*',
 
 		// ─────────────────────────────────────────────────────────────────────

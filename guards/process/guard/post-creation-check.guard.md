@@ -31,7 +31,7 @@ Issue作成後、以下のいずれかで確認すること：
 gh issue view <issue-number> --comments
 
 # 方法2: スクリプトで確認
-node scripts/check-issue-warnings.js <issue-number>
+node scripts/ci/check-issue-warnings.js <issue-number>
 ```
 
 ### 2. 警告コメントがあれば修正
@@ -47,15 +47,15 @@ node scripts/check-issue-warnings.js <issue-number>
 Issue作成前に `issue-body.md` を検証：
 
 ```bash
-node scripts/validate-issue-local.js [bug|feature|refactor]
+node scripts/ci/validate-issue-local.js [bug|feature|refactor]
 ```
 
 ---
 
 ## 実装
 
-- 確認スクリプト: `scripts/check-issue-warnings.js`
-- ローカル検証: `scripts/validate-issue-local.js`
+- 確認スクリプト: `scripts/ci/check-issue-warnings.js`
+- ローカル検証: `scripts/ci/validate-issue-local.js`
 - CI検証: `.github/workflows/issue-validation.yml`
 
 ---
@@ -75,9 +75,9 @@ node scripts/validate-issue-local.js [bug|feature|refactor]
 
 ```
 1. issue-body.md を作成
-2. node scripts/validate-issue-local.js でローカル検証
+2. node scripts/ci/validate-issue-local.js でローカル検証
 3. gh issue create --body-file issue-body.md ...
-4. node scripts/check-issue-warnings.js <number> で確認
+4. node scripts/ci/check-issue-warnings.js <number> で確認
 5. 警告があれば修正して再確認
 ```
 

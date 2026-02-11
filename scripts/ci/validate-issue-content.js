@@ -1,4 +1,4 @@
-const { REQUIRED_SECTIONS, GUARDRAIL_PATH } = require("../guards/process/rules/issue-format.rules");
+const { REQUIRED_SECTIONS, GUARDRAIL_PATH } = require("../../guards/process/rules/issue-format.rules");
 
 const issueBody = process.env.ISSUE_BODY || "";
 const issueTitle = process.env.ISSUE_TITLE || "";
