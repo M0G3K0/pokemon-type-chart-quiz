@@ -93,7 +93,7 @@ export default tseslint.config(
 
 	// Relaxed rules for design token / style files
 	{
-		files: ["src/design-system/**", "src/styles/**"],
+		files: ["src/styles/**"],
 		rules: {
 			"@typescript-eslint/no-magic-numbers": "off",
 			"max-lines": "off",
