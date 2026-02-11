@@ -2,7 +2,7 @@
  * ローカルで issue-body.md を検証するスクリプト
  * 
  * 使い方:
- *   node scripts/validate-issue-local.js
+ *   node scripts/ci/validate-issue-local.js
  * 
  * 必須セクション:
  *   - ## 💡 概要

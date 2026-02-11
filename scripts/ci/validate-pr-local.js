@@ -2,7 +2,7 @@
  * ローカルで pr-body.md を検証するスクリプト
  * 
  * 使い方:
- *   node scripts/validate-pr-local.js
+ *   node scripts/ci/validate-pr-local.js
  * 
  * 必須セクション:
  *   - ## 💡 概要
