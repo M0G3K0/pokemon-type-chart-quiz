@@ -81,8 +81,6 @@ pokemon-type-chart-quiz/
 │   │   ├── domain/          # ドメインロジック（純粋関数）
 │   │   ├── features/        # 機能モジュール（画面単位）
 │   │   └── ui/              # 汎用 UI コンポーネント（pt-* 系）
-│   ├── design-system/
-│   │   └── tokens/          # 自動生成 TypeScript 定数（色、スペース等）
 │   └── styles/
 │       ├── generated/         # 自動生成 CSS/SCSS トークン（Style Dictionary）
 │       └── mixins/            # 共通 SCSS ミックスイン

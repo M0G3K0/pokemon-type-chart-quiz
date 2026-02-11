@@ -16,8 +16,7 @@ module.exports = {
 		'scripts/data/download-icons.js',
 		// fetch-type-icons.jsは手動スクリプト（ポケモンタイプアイコン取得用）
 		'scripts/data/fetch-type-icons.js',
-		// TODO(Issue #34): Remove when first component imports tokens
-		'src/design-system/tokens/**/*',
+		// TODO(Issue #34): Remove when generated tokens are no longer needed
 		'src/styles/generated/**/*',
 
 		// ─────────────────────────────────────────────────────────────────────
