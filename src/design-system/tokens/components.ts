@@ -158,9 +158,6 @@ export const components = {
       "sm": "0.25rem",
       "md": "0.5rem",
       "full": "9999px"
-    },
-    "interaction": {
-      "transition": "200ms"
     }
   },
   "grid": {

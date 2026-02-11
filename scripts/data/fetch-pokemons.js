@@ -43,9 +43,9 @@ const CONFIG = {
 	jaLanguageCodes: ['ja-hrkt', 'ja'],
 
 	// ファイルパス
-	outputPath: path.join(__dirname, '../public/pokemons.json'),
-	progressPath: path.join(__dirname, '../.pokemon-fetch-progress.json'),
-	errorLogPath: path.join(__dirname, '../.pokemon-fetch-errors.json'),
+	outputPath: path.join(__dirname, '../../public/pokemons.json'),
+	progressPath: path.join(__dirname, '../../.pokemon-fetch-progress.json'),
+	errorLogPath: path.join(__dirname, '../../.pokemon-fetch-errors.json'),
 };
 
 // ============================================================================

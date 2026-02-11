@@ -70,7 +70,7 @@ const TYPES = [
 ];
 
 const BASE_URL = 'https://raw.githubusercontent.com/partywhale/pokemon-type-icons/main/icons';
-const OUTPUT_DIR = path.join(__dirname, '..', 'public', 'icons');
+const OUTPUT_DIR = path.join(__dirname, '..', '..', 'public', 'icons');
 
 /**
  * Fetch SVG content from URL

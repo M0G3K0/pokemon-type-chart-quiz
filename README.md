@@ -48,8 +48,9 @@ pokemon-type-chart-quiz/
 │   ├── tier2-semantic/    # Tier 2: 意味的トークン（テキスト色、ボーダー）
 │   └── tier3-component/   # Tier 3: コンポーネント固有トークン
 │
-├── docs/                # コンポーネント設計ドキュメント（内部参照用）
-│   └── components/        # 各コンポーネントの設計書
+├── docs/                # 一時ドキュメント置き場
+│   ├── temp/              # 進行中タスクの計画書
+│   └── archive/           # 完了済みドキュメントのアーカイブ
 │
 ├── guards/              # カスタムガードレール（自動品質チェック）
 │   ├── architecture/      # アーキテクチャ制約
@@ -70,6 +71,9 @@ pokemon-type-chart-quiz/
 │   └── pokemons.json      # ポケモンデータ
 │
 ├── scripts/             # ビルド・自動化スクリプト
+│   ├── ci/                # CI/ローカル検証
+│   ├── data/              # データ取得・バリデーション
+│   └── tokens/            # デザイントークン生成・同期
 │
 ├── src/                 # アプリケーションソース
 │   ├── app/

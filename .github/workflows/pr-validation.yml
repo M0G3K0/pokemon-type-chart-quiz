@@ -28,7 +28,7 @@ jobs:
         env:
           PR_BODY: ${{ github.event.pull_request.body }}
           PR_TITLE: ${{ github.event.pull_request.title }}
-        run: node scripts/validate-pr-content.js
+        run: node scripts/ci/validate-pr-content.js
       - name: Unused code check
         run: npm run unused-check
       - name: Build

@@ -20,7 +20,7 @@ jobs:
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
         run: |
-          OUTPUT=$(node scripts/validate-issue-content.js 2>&1) || EXIT_CODE=$?
+          OUTPUT=$(node scripts/ci/validate-issue-content.js 2>&1) || EXIT_CODE=$?
           echo "$OUTPUT"
           
           # Extract comment body if validation failed

@@ -8,7 +8,7 @@ const types = [
 ];
 
 async function downloadIcons() {
-	const iconDir = path.join(__dirname, '../public/icons');
+	const iconDir = path.join(__dirname, '../../public/icons');
 	if (!fs.existsSync(iconDir)) fs.mkdirSync(iconDir, { recursive: true });
 
 	for (const type of types) {
