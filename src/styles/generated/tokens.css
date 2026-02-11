@@ -568,6 +568,8 @@
   --pt-card-section-padding: var(--pt-spacing-content-md);
   --pt-card-section-gap: var(--pt-spacing-gap-sm);
   --pt-card-section-separator: var(--pt-color-border-subtle);
+  --pt-chip-bg: var(--pt-color-surface-pressed);
+  --pt-chip-text: var(--pt-color-text-primary);
   --pt-chip-gap: var(--pt-spacing-gap-xs);
   --pt-chip-radius-sm: var(--pt-semantic-border-radius-sm);
   --pt-chip-radius-md: var(--pt-semantic-border-radius-md);

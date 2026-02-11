@@ -2,6 +2,16 @@
 	"$description": "Tier 3: Chip Component Tokens. Defines sizes, spacing, and styles for pt-chip.",
 	"chip": {
 		"$description": "Chip component for compact information display. サイズ選択基準: レイアウト密度とコンポーネント整合性。同じ文脈では同じサイズを使用し、情報の重要度でサイズを変えない。",
+		"bg": {
+			"value": "{color.surface.pressed}",
+			"type": "color",
+			"$description": "チップの背景色デフォルト値。ラッパー（pt-type-chip等）がCSS変数で上書きする。"
+		},
+		"text": {
+			"value": "{color.text.primary}",
+			"type": "color",
+			"$description": "チップのテキスト色デフォルト値。ラッパー（pt-type-chip等）がCSS変数で上書きする。"
+		},
 		"padding": {
 			"x": {
 				"sm": {
