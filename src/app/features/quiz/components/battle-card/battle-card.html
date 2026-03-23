@@ -1,28 +1,28 @@
-<pt-surface variant="card" padding="lg" radius="xl" [border]="true">
-	<pt-stack direction="vertical" gap="md" align="center">
+<orb-surface variant="card" padding="lg" radius="xl" [border]="true">
+	<orb-stack direction="vertical" gap="md" align="center">
 		<!-- 攻撃タイプ（ヘッダー） -->
-		<pt-stack direction="horizontal" gap="sm" align="center">
+		<orb-stack direction="horizontal" gap="sm" align="center">
 			<pt-type-chip [type]="attackType" [showIcon]="true" rounded="sm" size="md">
 				{{ typeMap[attackType] }}
 			</pt-type-chip>
-			<pt-text variant="body-md" color="secondary">で攻撃</pt-text>
-		</pt-stack>
+			<orb-text variant="body-md" color="secondary">で攻撃</orb-text>
+		</orb-stack>
 
 		<!-- 区切り線 -->
 		<div class="divider"></div>
 
 		<!-- 防御側 -->
-		<pt-stack direction="vertical" gap="sm" align="center">
-			<pt-avatar [src]="pokemon.imageUrl" [alt]="pokemon.name" size="lg" shape="rounded" [pixelated]="true">
-			</pt-avatar>
-			<pt-text variant="body-lg" weight="bold">{{ pokemon.name }}</pt-text>
-			<pt-stack direction="horizontal" gap="xs" justify="center">
+		<orb-stack direction="vertical" gap="sm" align="center">
+			<orb-avatar [src]="pokemon.imageUrl" [alt]="pokemon.name" size="lg" shape="rounded" [pixelated]="true">
+			</orb-avatar>
+			<orb-text variant="body-lg" weight="bold">{{ pokemon.name }}</orb-text>
+			<orb-stack direction="horizontal" gap="xs" justify="center">
 				@for (t of pokemon.types; track t; let i = $index) {
 				<pt-type-chip [type]="t" [showIcon]="true" size="sm" rounded="sm">
 					{{ pokemon.jaTypes[i] }}
 				</pt-type-chip>
 				}
-			</pt-stack>
-		</pt-stack>
-	</pt-stack>
-</pt-surface>
+			</orb-stack>
+		</orb-stack>
+	</orb-stack>
+</orb-surface>

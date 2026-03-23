@@ -2,10 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Pokemon } from '@domain/pokemon.schema';
 import { PokemonType, POKEMON_TYPES_MAP } from '@domain/type-chart';
 import { TypeChipComponent } from '@ui/pt-type-chip';
-import { AvatarComponent } from '@ui/pt-avatar';
-import { StackComponent } from '@ui/pt-stack';
-import { SurfaceComponent } from '@ui/pt-surface';
-import { TextComponent } from '@ui/pt-text';
+import { AvatarComponent, StackComponent, SurfaceComponent, TextComponent } from '@m0g3k0/ui';
 
 /**
  * Quiz画面のバトルカード（攻撃側・防御側エリア）
