@@ -15,12 +15,6 @@
       ],
       "@m0g3k0/ui": [
         "./node_modules/@m0g3k0/ui/dist/ui"
-      ],
-      "@ng-doc/generated": [
-        "./ng-doc/docs/index.ts"
-      ],
-      "@ng-doc/generated/*": [
-        "./ng-doc/docs/*"
       ]
     },
     "strict": true,
@@ -48,9 +42,6 @@
     },
     {
       "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/docs/tsconfig.app.json"
     }
   ]
 }

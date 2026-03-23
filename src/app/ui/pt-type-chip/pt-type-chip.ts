@@ -1,12 +1,12 @@
 import { Component, Input, inject, HostBinding } from '@angular/core';
-import { ChipComponent } from '@ui/pt-chip';
+import { ChipComponent } from '@m0g3k0/ui';
 import { PokemonType } from '@domain/type-chart';
 import { AssetPathService } from '@app/core/services/asset-path.service';
 
 /**
  * Pokemon Type Chip component (SDK Wrapper)
  * 
- * pt-chip をラップし、Pokemon タイプに基づく色を Tier 3 トークンで自動適用する。
+ * orb-chip をラップし、Pokemon タイプに基づく色を Tier 3 トークンで自動適用する。
  * 色は type-chip.json で一元管理され、NgDoc に自動反映される。
  * 
  * @example
@@ -21,7 +21,7 @@ import { AssetPathService } from '@app/core/services/asset-path.service';
  * 
  * @reference
  * - Atomic Design: Organism (Domain-specific wrapper)
- * - Wraps pt-chip with Pokemon Type semantics
+ * - Wraps orb-chip with Pokemon Type semantics
  * - Colors defined in: design-tokens/tier3-component/type-chip.json
  */
 @Component({
@@ -29,13 +29,13 @@ import { AssetPathService } from '@app/core/services/asset-path.service';
 	standalone: true,
 	imports: [ChipComponent],
 	template: `
-    <pt-chip
+    <orb-chip
       [icon]="showIcon ? iconPath : undefined"
       [rounded]="rounded"
       [size]="size"
       [iconSize]="iconSize">
       <ng-content></ng-content>
-    </pt-chip>
+    </orb-chip>
   `,
 	styles: [`
     :host {
@@ -78,7 +78,7 @@ export class TypeChipComponent {
 	/**
 	 * Inject --pt-chip-bg CSS variable from Tier 3 type-chip token
 	 */
-	@HostBinding('style.--pt-chip-bg')
+	@HostBinding('style.--orb-chip-bg')
 	get chipBg(): string {
 		return `var(--pt-type-chip-color-${this.type}-bg)`;
 	}
@@ -86,7 +86,7 @@ export class TypeChipComponent {
 	/**
 	 * Inject --pt-chip-text CSS variable from Tier 3 type-chip token
 	 */
-	@HostBinding('style.--pt-chip-text')
+	@HostBinding('style.--orb-chip-text')
 	get chipText(): string {
 		return `var(--pt-type-chip-color-${this.type}-text)`;
 	}

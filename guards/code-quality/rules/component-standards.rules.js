@@ -67,28 +67,11 @@ function checkRequiredFiles(componentDir) {
 
 /**
  * ドキュメントの存在チェック（NgDoc）
+ * NOTE: NgDoc は orbiter (@m0g3k0/ui) に移行済み。
+ * コンポーネントドキュメントは orbiter 側で管理するため、ここではスキップ。
  */
-function checkDocumentation(componentDir) {
-	const errors = [];
-	const componentName = componentDir.name;
-	// pt-* から pt- を除去して NgDoc のディレクトリ名にする
-	const ngDocComponentName = componentName.replace(/^pt-/, '');
-
-	// 複数の docs ディレクトリから index.md を検索
-	const found = DOCS_DIRS.some((docsDir) => {
-		const docPath = path.join(docsDir, ngDocComponentName, 'index.md');
-		return fs.existsSync(docPath);
-	});
-
-	if (!found) {
-		errors.push({
-			type: "missing-doc",
-			component: componentName,
-			message: `Missing NgDoc documentation for ${ngDocComponentName} (searched: components/, poke-sdk/)`,
-		});
-	}
-
-	return errors;
+function checkDocumentation(_componentDir) {
+	return [];
 }
 
 /**
