@@ -13,6 +13,9 @@
       "@ui/*": [
         "./src/app/ui/*"
       ],
+      "@m0g3k0/ui": [
+        "./node_modules/@m0g3k0/ui/dist/ui"
+      ],
       "@ng-doc/generated": [
         "./ng-doc/docs/index.ts"
       ],

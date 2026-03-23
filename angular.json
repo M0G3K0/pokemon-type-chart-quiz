@@ -30,6 +30,7 @@
               }
             ],
             "styles": [
+              "node_modules/@m0g3k0/ui/dist/styles/tokens.css",
               "src/styles.scss"
             ],
             "stylePreprocessorOptions": {

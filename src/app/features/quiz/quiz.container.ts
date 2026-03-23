@@ -1,11 +1,7 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { PokemonService } from '../../domain/pokemon.service';
 import { Pokemon } from '../../domain/pokemon.schema';
-import { CardComponent, CardHeaderComponent, CardContentComponent } from '@ui/pt-card';
-import { StackComponent } from '@ui/pt-stack';
-import { SurfaceComponent } from '@ui/pt-surface';
-import { GridComponent } from '@ui/pt-grid';
-import { TextComponent } from '@ui/pt-text';
+import { CardComponent, CardHeaderComponent, CardContentComponent, StackComponent, SurfaceComponent, GridComponent, TextComponent } from '@m0g3k0/ui';
 import { PtRadioButtonComponent, RadioButtonFeedbackState } from '@ui/pt-radio-button';
 import { POKEMON_TYPES, getEffectiveness, PokemonType } from '../../domain/type-chart';
 import { BattleCardComponent } from './components';
@@ -28,17 +24,17 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
     BattleCardComponent,
   ],
   template: `
-    <pt-surface variant="ghost" padding="lg" class="quiz-container">
+    <orb-surface variant="ghost" padding="lg" class="quiz-container">
       @if (currentPokemon(); as pokemon) {
-        <pt-card>
-          <pt-card-header>
-            <pt-stack direction="horizontal" justify="between" align="center">
-              <pt-text variant="label-xs" color="secondary" transform="uppercase" [italic]="true">Phase 0: Battle Trial</pt-text>
-              <pt-text variant="label-md" weight="bold">Lv. 100</pt-text>
-            </pt-stack>
-          </pt-card-header>
-          <pt-card-content>
-            <pt-stack direction="vertical" gap="lg" align="stretch">
+        <orb-card>
+          <orb-card-header>
+            <orb-stack direction="horizontal" justify="between" align="center">
+              <orb-text variant="label-xs" color="secondary" transform="uppercase" [italic]="true">Phase 0: Battle Trial</orb-text>
+              <orb-text variant="label-md" weight="bold">Lv. 100</orb-text>
+            </orb-stack>
+          </orb-card-header>
+          <orb-card-content>
+            <orb-stack direction="vertical" gap="lg" align="stretch">
               
               <!-- 攻撃側・防御側エリア -->
               <quiz-battle-card 
@@ -47,7 +43,7 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
               </quiz-battle-card>
 
               <!-- 選択肢 -->
-              <pt-grid [columns]="2" [smColumns]="3" gap="md">
+              <orb-grid [columns]="2" [smColumns]="3" gap="md">
                 @for (choice of choices; track choice) {
                   <pt-radio-button
                     [value]="choice"
@@ -56,20 +52,20 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
                     [disabled]="isChecked()"
                     (radioSelect)="selectChoice(choice)"
                   >
-                    <pt-text variant="body-lg" weight="bold">{{ choice }}</pt-text>
-                    <pt-text variant="label-xs" color="secondary">倍</pt-text>
+                    <orb-text variant="body-lg" weight="bold">{{ choice }}</orb-text>
+                    <orb-text variant="label-xs" color="secondary">倍</orb-text>
                   </pt-radio-button>
                 }
-              </pt-grid>
+              </orb-grid>
 
-            </pt-stack>
-          </pt-card-content>
-        </pt-card>
+            </orb-stack>
+          </orb-card-content>
+        </orb-card>
       } @else {
         <!-- ローディング状態 -->
-        <pt-surface variant="ghost" class="loading-placeholder"></pt-surface>
+        <orb-surface variant="ghost" class="loading-placeholder"></orb-surface>
       }
-    </pt-surface>
+    </orb-surface>
   `,
   styles: [`
     .quiz-container {
