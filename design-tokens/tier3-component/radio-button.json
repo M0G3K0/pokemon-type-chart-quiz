@@ -110,9 +110,9 @@
 			"actual": {
 				"$description": "Actual correct answer indication (when user selected wrong)",
 				"bg": {
-					"value": "{color.surface.card}",
+					"value": "{color.result.win.subtle}",
 					"type": "color",
-					"$description": "正解表示時の背景色。Card背景のまま。"
+					"$description": "正解表示時の背景色。薄緑背景で正解位置を視覚的に強調。"
 				},
 				"border": {
 					"value": "{color.result.win.default}",

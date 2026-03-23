@@ -1,8 +1,8 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { PokemonService } from '../../domain/pokemon.service';
 import { Pokemon } from '../../domain/pokemon.schema';
-import { CardComponent, CardHeaderComponent, CardContentComponent, StackComponent, SurfaceComponent, GridComponent, TextComponent } from '@m0g3k0/ui';
-import { PtRadioButtonComponent, RadioButtonFeedbackState } from '@ui/pt-radio-button';
+import { CardComponent, CardHeaderComponent, CardContentComponent, StackComponent, SurfaceComponent, GridComponent, TextComponent, PtRadioButtonComponent } from '@m0g3k0/ui';
+import type { RadioButtonFeedbackState } from '@m0g3k0/ui';
 import { POKEMON_TYPES, getEffectiveness, PokemonType } from '../../domain/type-chart';
 import { BattleCardComponent } from './components';
 
@@ -45,7 +45,7 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
               <!-- 選択肢 -->
               <orb-grid [columns]="2" [smColumns]="3" gap="md">
                 @for (choice of choices; track choice) {
-                  <pt-radio-button
+                  <orb-radio-button
                     [value]="choice"
                     [selected]="selectedChoice() === choice"
                     [feedbackState]="getChoiceFeedbackState(choice)"
@@ -54,7 +54,7 @@ const AUTO_ADVANCE_DELAY_MS = 1000;
                   >
                     <orb-text variant="body-lg" weight="bold">{{ choice }}</orb-text>
                     <orb-text variant="label-xs" color="secondary">倍</orb-text>
-                  </pt-radio-button>
+                  </orb-radio-button>
                 }
               </orb-grid>
 
